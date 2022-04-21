@@ -1,5 +1,6 @@
 {
   "name": "@design-component/root",
+  "private": false,
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
