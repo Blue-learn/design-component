@@ -14,7 +14,7 @@ const Template = (args: ButtonProps) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  label: "Primary Button",
+  label: "Primary Button X",
   type: ButtonType.Primary,
 };
 export const PrimaryLoading = Template.bind({});
