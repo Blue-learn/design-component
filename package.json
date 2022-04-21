@@ -1,6 +1,20 @@
 {
   "name": "@design-component/root",
   "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blue-learn/design-component.git"
+  },
+  "keywords": [],
+  "author": "Soumya Ranjan Sethy<soumya@bluelearn.in>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blue-learn/design-component/issues"
+  },
+  "homepage": "https://github.com/Blue-learn/design-component#readme",
+  "description": "Component Library for Web and Mobile",
   "workspaces": [
     "packages/**"
   ],
@@ -25,6 +39,5 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-native-web": "^0.17.5"
-  },
-  "dependencies": {}
+  }
 }

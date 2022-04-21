@@ -7,14 +7,22 @@
     "build": "tsc",
     "dev": "tsc -w"
   },
-  "dependencies": {
-  },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "@types/react": "^17.0.38",
     "react": "^17.0.2",
     "react-native": "^0.67.1",
     "typescript": "^4.5.5"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@design-component"
+  },
+  "repository": "git@github.com:Blue-learn/design-component.git"
 }
