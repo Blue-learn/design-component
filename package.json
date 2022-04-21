@@ -1,6 +1,5 @@
 {
   "name": "@design-component/root",
-  "private": true,
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
@@ -15,9 +14,6 @@
   },
   "homepage": "https://github.com/Blue-learn/design-component#readme",
   "description": "Component Library for Web and Mobile",
-  "workspaces": [
-    "packages/**"
-  ],
   "scripts": {
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
