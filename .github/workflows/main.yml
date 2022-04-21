@@ -24,7 +24,5 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@Blue-learn"
           always-auth: true
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ env.NODE_AUTH_TOKEN }}" > ~/.npmrc
-      - run: yarn
       - run: npm version patch
       - run: npm publish
