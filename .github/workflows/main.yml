@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: 16
           cache: yarn
+          registry-url: https:npm.pkg.github.com/
+          scope: "@Blue-learn"
       - run: yarn
-      - run: yarn build
+      - run: yarn publish
       - uses: int128/release-typescript-action@v1
