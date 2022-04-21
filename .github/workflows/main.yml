@@ -21,6 +21,7 @@ jobs:
           cache: yarn
           registry-url: https://npm.pkg.github.com/
           scope: "@Blue-learn"
+          always-auth: true
       - run: yarn
       - run: yarn publish
         env:
