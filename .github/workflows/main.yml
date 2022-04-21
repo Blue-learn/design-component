@@ -1,31 +1,23 @@
-image: node:14.18.0
+name: release
 
-stages:
-  - lint
-  - test
+on:
+  pull_request:
+    paths:
+      - .github/workflows/main.yml
+  push:
+    branches:
+      - main
+    tags:
+      - v*
 
-cache:
-  paths:
-    - node_modules
-
-before_script:
-  - node -v
-
-lint:
-  stage: lint
-  script:
-
-  only:
-    - merge_requests
-
-testing:
-  stage: test
-  script:
-    - cd ./packages/component
-    - npm cache clean --force
-    - npm i
-    - node -v
-
-  only:
-    - merge_requests
-  coverage: '/Statements.*?(\d+(?:\.\d+)?)%/'
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+      - run: yarn
+      - uses: int128/release-typescript-action@v1
