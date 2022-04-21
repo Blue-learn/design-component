@@ -24,5 +24,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@Blue-learn"
           always-auth: true
+      - run: echo ${{env.NODE_AUTH_TOKEN}}
       - run: npm version patch
       - run: npm publish
