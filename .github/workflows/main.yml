@@ -22,7 +22,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@Blue-learn"
           always-auth: true
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - run: yarn
       - run: yarn publish
         env:
