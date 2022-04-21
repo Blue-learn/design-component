@@ -7,7 +7,6 @@ import { ButtonProps, ButtonType } from "@design-component/schema";
  */
 
 
-//Test Build
 const Button: React.FunctionComponent<ButtonProps> = ({
   label = "Button",
   type = ButtonType.Primary,
