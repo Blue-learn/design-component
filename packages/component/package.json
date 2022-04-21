@@ -22,7 +22,7 @@
   "license": "ISC",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@design-component"
+    "registry": "https://npm.pkg.github.com/@Blue-learn"
   },
   "repository": "git@github.com:Blue-learn/design-component.git"
 }
