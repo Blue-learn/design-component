@@ -21,7 +21,7 @@
   "scripts": {
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
+    "build-storybook": "build-storybook -o docs-build",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build"
   },
