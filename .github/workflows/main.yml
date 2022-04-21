@@ -23,4 +23,5 @@ jobs:
           scope: "@Blue-learn"
       - run: yarn
       - run: yarn publish
-      - uses: int128/release-typescript-action@v1
+        env:
+            NODE_AUTH_TOKEN: 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
