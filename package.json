@@ -1,10 +1,14 @@
 {
-  "name": "@design-component/root",
-  "version": "1.0.0",
+  "name": "@Blue-learn/design-component",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Blue-learn"
+  },
+  "version": "1.0.7",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Blue-learn/design-component.git"
+    "url": "git+https://github.com/Blue-learn/design-component.git",
+    "directory": "@Blue-learn/design-component"
   },
   "keywords": [],
   "author": "Soumya Ranjan Sethy<soumya@bluelearn.in>",
