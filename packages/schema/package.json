@@ -1,13 +1,12 @@
 {
   "name": "@design-component/schema",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w"
   },
-  "dependencies": {},
   "devDependencies": {
     "typescript": "^4.5.5"
   }
