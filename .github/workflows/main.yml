@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 16
           cache: yarn
-          registry-url: https:npm.pkg.github.com/
+          registry-url: https://npm.pkg.github.com/
           scope: "@Blue-learn"
       - run: yarn
       - run: yarn publish
