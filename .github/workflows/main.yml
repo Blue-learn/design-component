@@ -16,10 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - name: setup git config
-      - run: |
-            git config user.name "GitHub Actions Bot"
-            git config user.email "<>"
         env:
           NODE_AUTH_TOKEN: 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
         with:
@@ -29,5 +25,8 @@ jobs:
           scope: "@Blue-learn"
           always-auth: true
       - run: echo ${{env.NODE_AUTH_TOKEN}}
+      - run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
       - run: npm version patch
       - run: npm publish
