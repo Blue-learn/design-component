@@ -1,5 +1,5 @@
 {
-    "name": "@Blue-learn/design-component",
+    "name": "@blue-learn/design-component",
     "private": false,
     "workspaces": [
         "packages/**"
