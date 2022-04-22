@@ -1,6 +1,6 @@
 {
-  "name": "@design-component/component",
-  "version": "3.0.15",
+  "name": "@blue-learn/component",
+  "version": "3.0.16",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -20,14 +20,5 @@
   "author": "Soumya Sethy<soumya@bluelearn.in>",
   "license": "ISC",
   "description": "",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/blue-learn/",
-    "@Blue-learn:registry": "https://github.com/xlue-learn/design-component.git"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/blue-learn/design-component.git",
-    "directory": "packages/component"
-  },
-  "gitHead": "c4f1f036226545a565432e2fb590e03ea6db59e1"
+  "gitHead": "1b483f1e1e4ca832100d79920cb934cda7fb35b4"
 }
