@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/design-schema",
-  "version": "3.0.13",
+  "version": "3.0.14",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -10,5 +10,5 @@
   "devDependencies": {
     "typescript": "^4.5.5"
   },
-  "gitHead": "3c89948cdffd75cad551b7935ae7bee60bd7f68e"
+  "gitHead": "bc6ec2226fd8a71a6554229bc8dfcd727ebafd2c"
 }
