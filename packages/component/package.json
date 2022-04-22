@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/design-component",
-  "version": "3.0.17",
+  "version": "3.0.18",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -20,5 +20,5 @@
   "author": "Soumya Sethy<soumya@bluelearn.in>",
   "license": "ISC",
   "description": "",
-  "gitHead": "126aad8343190f19fbde13a590bd57df8d3705d3"
+  "gitHead": "c5018fd796bead97ea23228f64a7abe5e8b740e2"
 }
