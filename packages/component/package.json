@@ -1,5 +1,5 @@
 {
-  "name": "component",
+  "name": "@design-component/component",
   "version": "1.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -21,7 +21,7 @@
   "license": "ISC",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@Blue-learn/design-component"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
