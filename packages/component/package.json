@@ -27,5 +27,6 @@
     "type": "git",
     "url": "git@github.com:Blue-learn/design-component.git",
     "directory": "packages/component"
-  }
+  },
+  "gitHead": "d457c86d636c7b8842698a8fd4dbb038580ee8d2"
 }
