@@ -1,6 +1,6 @@
 {
-  "name": "@design-component/component",
-  "version": "3.0.6",
+  "name": "@Blue-learn/design-component",
+  "version": "3.0.7",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -28,5 +28,5 @@
     "url": "https://github.com/Blue-learn/design-component.git",
     "directory": "packages/component"
   },
-  "gitHead": "38a3385b4592fde0433736ca0725bbe45ee5ce83"
+  "gitHead": "5e31b7166602845f2f493dab82d6d3c190ec0d51"
 }
