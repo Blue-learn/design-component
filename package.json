@@ -1,9 +1,6 @@
 {
     "name": "@blue-learn/design-component",
     "private": false,
-    "workspaces": [
-        "packages/**"
-    ],
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/@Blue-learn"
     },
