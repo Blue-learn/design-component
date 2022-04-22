@@ -5,7 +5,7 @@
         "packages/**"
     ],
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/Blue-learn"
+        "registry": "https://npm.pkg.github.com/@Blue-learn"
     },
     "version": "1.0.2",
     "main": "index.js",
