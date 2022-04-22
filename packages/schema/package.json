@@ -1,6 +1,6 @@
 {
   "name": "@design-component/schema",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -10,5 +10,5 @@
   "devDependencies": {
     "typescript": "^4.5.5"
   },
-  "gitHead": "5e31b7166602845f2f493dab82d6d3c190ec0d51"
+  "gitHead": "f49ce0ee4463549330d9f662f310a7b6cd4b2449"
 }
