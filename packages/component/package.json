@@ -1,6 +1,6 @@
 {
   "name": "@design-component/component",
-  "version": "3.0.14",
+  "version": "3.0.15",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -26,8 +26,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xlue-learn/design-component.git",
+    "url": "https://github.com/blue-learn/design-component.git",
     "directory": "packages/component"
   },
-  "gitHead": "bc6ec2226fd8a71a6554229bc8dfcd727ebafd2c"
+  "gitHead": "c4f1f036226545a565432e2fb590e03ea6db59e1"
 }
