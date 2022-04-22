@@ -1,6 +1,6 @@
 {
   "name": "@design-component/component",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -21,12 +21,12 @@
   "license": "ISC",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/@Blue-learn"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Blue-learn/design-component.git",
     "directory": "packages/component"
   },
-  "gitHead": "3579fd1c837ef10321874b04e4a9b4ed475f3dd5"
+  "gitHead": "38a3385b4592fde0433736ca0725bbe45ee5ce83"
 }
