@@ -1,6 +1,6 @@
 {
-  "name": "@design-component/component",
-  "version": "1.0.2",
+  "name": "component",
+  "version": "1.2.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -17,11 +17,15 @@
     "lib": "lib"
   },
   "keywords": [],
-  "author": "",
+  "author": "Soumya Sethy<soumya@bluelearn.in>",
   "license": "ISC",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@Blue-learn"
+    "registry": "https://npm.pkg.github.com/@Blue-learn/design-component"
   },
-  "repository": "git@github.com:Blue-learn/design-component.git"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Blue-learn/design-component.git",
+    "directory": "packages/component"
+  }
 }

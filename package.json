@@ -1,44 +1,40 @@
 {
-    "name": "@blue-learn/design-component",
-    "private": false,
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@Blue-learn"
-    },
-    "version": "1.0.2",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Blue-learn/design-component.git",
-        "directory": "@Blue-learn/design-component"
-    },
-    "keywords": [],
-    "author": "Soumya Ranjan Sethy<soumya@bluelearn.in>",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Blue-learn/design-component/issues"
-    },
-    "homepage": "https://github.com/Blue-learn/design-component#readme",
-    "description": "Component Library for Web and Mobile",
-    "scripts": {
-        "storybook-init": "npx sb init -f --type react",
-        "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook",
-        "bootstrap": "lerna bootstrap",
-        "build": "lerna run build"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.16.12",
-        "@storybook/addon-actions": "^6.4.22",
-        "@storybook/addon-essentials": "^6.4.22",
-        "@storybook/addon-links": "^6.4.22",
-        "@storybook/addon-react-native-web": "^0.0.18",
-        "@storybook/react": "^6.4.22",
-        "babel-loader": "^8.2.3",
-        "babel-plugin-react-native-web": "^0.17.5",
-        "lerna": "^4.0.0",
-        "prettier": "2.5.1",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-native-web": "^0.17.5"
-    }
+  "name": "@blue-learn/design-component",
+  "workspaces": ["packages/**"],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Blue-learn"
+  },
+  "repository": "ssh://git@github.com:Blue-learn/design-component.git",
+  "version": "1.0.2",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Soumya Sethy<soumya@bluelearn.in>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blue-learn/design-component/issues"
+  },
+  "homepage": "https://github.com/Blue-learn/design-component#readme",
+  "description": "Component Library for Web and Mobile",
+  "scripts": {
+    "storybook-init": "npx sb init -f --type react",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/addon-react-native-web": "^0.0.18",
+    "@storybook/react": "^6.4.22",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-react-native-web": "^0.17.5",
+    "lerna": "^4.0.0",
+    "prettier": "2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-native-web": "^0.17.5"
+  }
 }
