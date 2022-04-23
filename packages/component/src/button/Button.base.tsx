@@ -44,6 +44,10 @@ const ButtonBase: React.FunctionComponent<ButtonBaseProps> = ({
   const buttonThemeProps: ButtonThemeProps = theme.button[ButtonType.Filled];
   const colorMapping: ColorTokensMap = theme.colors;
 
+  /**
+   * use type, size, buttonThemePros, colorMapping to full customise base component
+   * */
+
   return (
     <Pressable
       style={[styles.container, { backgroundColor: colorMapping[bgColor] }]}
