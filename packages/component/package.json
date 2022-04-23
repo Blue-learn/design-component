@@ -1,6 +1,6 @@
 {
   "name": "@design-component/component",
-  "version": "6.0.5",
+  "version": "6.0.6",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -20,5 +20,5 @@
   "author": "Soumya Sethy<soumya@bluelearn.in>",
   "license": "ISC",
   "description": "",
-  "gitHead": "ceb19e4c51c37f874f9abf76760f241f9c3c1d2a"
+  "gitHead": "f2fab8bd061ae90b7c75c4f490c92ad5081c4f48"
 }
