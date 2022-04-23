@@ -15,24 +15,24 @@ const Template = (args: ButtonProps) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   label: "Primary Button X",
-  type: ButtonType.Primary,
+  type: ButtonType.Filled,
 };
 export const PrimaryLoading = Template.bind({});
 PrimaryLoading.args = {
   label: "Primary Loading Button",
   loading: true,
-  type: ButtonType.Primary,
+  type: ButtonType.Filled,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "Secondary Button",
   loading: false,
-  type: ButtonType.Secondary,
+  type: ButtonType.SoftFilled,
 };
 export const SecondaryLoading = Template.bind({});
 SecondaryLoading.args = {
   label: "Secondary Loading Button",
   loading: true,
-  type: ButtonType.Secondary,
+  type: ButtonType.SoftFilled,
 };
