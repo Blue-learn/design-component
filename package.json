@@ -1,9 +1,11 @@
 {
-  "name": "@blue-learn/design-component",
-  "workspaces": ["packages/**"],
+  "name": "@design-component/root",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Blue-learn"
+    "access": "public"
   },
+  "workspaces": [
+    "packages/**"
+  ],
   "repository": "ssh://git@github.com:Blue-learn/design-component.git",
   "version": "1.0.2",
   "main": "index.js",
