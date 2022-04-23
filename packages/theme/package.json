@@ -1,6 +1,6 @@
 {
   "name": "@design-component/theme",
-  "version": "5.1.3",
+  "version": "5.1.4",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
@@ -14,9 +14,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Blue-learn/design-component.git"
@@ -31,5 +28,5 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "6130851e6c7741bd7b965887699e36d15e4abf0e"
+  "gitHead": "ceb19e4c51c37f874f9abf76760f241f9c3c1d2a"
 }
