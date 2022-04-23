@@ -22,7 +22,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "bootstrap": "npx lerna bootstrap",
-    "build": "npx lerna run build"
+    "build": "npx lerna run build",
+    "publish-all": "lerna publish --force-publish"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
