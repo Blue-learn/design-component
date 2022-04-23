@@ -1,0 +1,4 @@
+//registry.npmjs.org/:_authToken=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
+_auth = <Basic_Authentication_Header>
+email = soumya@bluelearn.in
+always-auth = true
