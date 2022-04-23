@@ -1,40 +1,42 @@
-import React, { memo } from "react";
+import React, { memo } from 'react';
 import {
-  ButtonProps,
-  ButtonSize,
-  ButtonType,
-  ButtonTypeTokens,
-} from "@design-component/schema";
-import { ButtonBase } from "./Button.base";
+	ButtonProps,
+	ButtonSize,
+	ButtonType,
+	ButtonTypeTokens,
+} from '@design-component/schema';
+import { ButtonBase } from './Button.base';
 
 /**
  * Primary UI component for user interaction
  */
 
-const Button: React.FunctionComponent<ButtonProps> = ({
-  type,
-  onPress = () => {},
-  ...props
-}) => {
-  /**
-   *  logic -> base-component(...props)
-   * */
-  switch (type) {
-    case ButtonTypeTokens.BigFilled:
-      return (
-        <ButtonBase type={ButtonType.Filled} size={ButtonSize.Big} {...props} />
-      );
-    case ButtonTypeTokens.SmallFilled:
-      return (
-        <ButtonBase
-          type={ButtonType.Filled}
-          size={ButtonSize.Small}
-          {...props}
-        />
-      );
-    default:
-      return <></>;
-  }
+const Button: React.FunctionComponent<
+	ButtonProps
+> = ({ type, onPress = () => {}, ...props }) => {
+	/**
+	 *  logic -> base-component(...props)
+	 * */
+	switch (type) {
+		case ButtonTypeTokens.BigFilled:
+			return (
+				<ButtonBase
+					type={ButtonType.Filled}
+					size={ButtonSize.Big}
+					{...props}
+				/>
+			);
+		case ButtonTypeTokens.SmallFilled:
+			return (
+				<ButtonBase
+					type={ButtonType.Filled}
+					size={ButtonSize.Small}
+					{...props}
+				/>
+			);
+		default:
+			return <></>;
+	}
 };
 
 export default memo(Button);
