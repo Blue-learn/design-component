@@ -1,2 +1,6 @@
 import Button from "./Button";
-export { Button as Component };
+import ButtonShimmer from "./Button.shimmer";
+
+Button.Shimmer = ButtonShimmer;
+
+export { Button };
