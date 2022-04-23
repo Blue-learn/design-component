@@ -22,19 +22,13 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   switch (type) {
     case ButtonTypeTokens.BigFilled:
       return (
-        <ButtonBase
-          type={ButtonType.Filled}
-          size={ButtonSize.Big}
-          onPress={onPress}
-          {...props}
-        />
+        <ButtonBase type={ButtonType.Filled} size={ButtonSize.Big} {...props} />
       );
     case ButtonTypeTokens.SmallFilled:
       return (
         <ButtonBase
           type={ButtonType.Filled}
           size={ButtonSize.Small}
-          onPress={onPress}
           {...props}
         />
       );
