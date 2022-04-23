@@ -1,6 +1,6 @@
 {
   "name": "@design-component/schema",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "27310bfb48ee5d82c5547f33c17c2a83948ac52a"
+  "gitHead": "04b8748dbaf26b0f48e8aa2e8b62d8eceaf72eb4"
 }
