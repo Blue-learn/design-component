@@ -2,7 +2,7 @@
   "name": "@design-component/schema",
   "version": "3.0.18",
   "description": "> TODO: description",
-  "author": "soumyasethy <sethy.soumyaranjan@gmail.com>",
+  "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
   "license": "ISC",
   "main": "lib/index.js",
