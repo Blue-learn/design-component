@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
     right: 8,
   },
 });
-
+/**
+ * Raw Component with Derived props + Theme
+ */
 const ButtonBase: React.FunctionComponent<ButtonBaseProps> = ({
   onPress,
   label = "Button",
