@@ -19,8 +19,8 @@
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "bootstrap": "lerna bootstrap",
-    "build": "lerna run build"
+    "bootstrap": "npx lerna bootstrap",
+    "build": "npx lerna run build"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
