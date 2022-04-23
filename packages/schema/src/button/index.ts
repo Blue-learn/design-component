@@ -24,11 +24,7 @@ export type ButtonProps = {
   /**
    * Button Type default ButtonType.Filled
    */
-  type: ButtonType;
-  /**
-   * Button Type default ButtonSize.Big
-   */
-  size: ButtonSize;
+  type: ButtonTypeTokens;
   /**
    * Button Loading State default false
    */

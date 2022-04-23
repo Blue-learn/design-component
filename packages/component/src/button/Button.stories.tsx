@@ -1,6 +1,10 @@
 import React from "react";
 import Button from "./Button";
-import { ButtonProps, ButtonType } from "@design-component/schema";
+import {
+  ButtonProps,
+  ButtonType,
+  ButtonTypeTokens,
+} from "@design-component/schema";
 
 export default {
   title: "Example/Button",
@@ -21,18 +25,18 @@ export const PrimaryLoading = Template.bind({});
 PrimaryLoading.args = {
   label: "Primary Loading Button",
   loading: true,
-  type: ButtonType.Filled,
+  type: ButtonTypeTokens.BigFilled,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "Secondary Button",
   loading: false,
-  type: ButtonType.SoftFilled,
+  type: ButtonTypeTokens.SmallFilled,
 };
 export const SecondaryLoading = Template.bind({});
 SecondaryLoading.args = {
   label: "Secondary Loading Button",
   loading: true,
-  type: ButtonType.SoftFilled,
+  type: ButtonTypeTokens.SmallFilled,
 };

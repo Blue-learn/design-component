@@ -4,10 +4,17 @@ import {
   ButtonSize,
   ButtonThemeProps,
   ButtonType,
+  ButtonTypeTokens,
   ColorTokens,
   ColorTokensMap,
 } from "@design-component/schema";
-import { Pressable, Text, StyleSheet, ActivityIndicator } from "react-native";
+import {
+  Pressable,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+  View,
+} from "react-native";
 import ThemeProvider from "@design-component/theme";
 const styles = StyleSheet.create({
   container: {
