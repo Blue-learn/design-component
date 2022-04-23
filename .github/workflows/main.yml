@@ -1,32 +1,30 @@
 name: release
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/main.yml
-  push:
-    branches:
-      - main
-    tags:
-      - v*
+    pull_request:
+        paths:
+            - .github/workflows/main.yml
+    push:
+        branches:
+            - main
+        tags:
+            - v*
 
 jobs:
-  tag:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          node-version: 16
-          cache: yarn
-          registry-url: https://npm.pkg.github.com/
-          scope: "@Blue-learn"
-          always-auth: true
-      - run: echo ${{env.NODE_AUTH_TOKEN}}
-      - run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-      - run: npm version patch
-      - run: npm publish
+    tag:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+              with:
+                  node-version: 16
+                  cache: yarn
+                  registry-url: "https://registry.npmjs.org"
+                  scope: "@blue-learn"
+            - run: |
+                  git config user.name "GitHub Actions Bot"
+                  git config user.email "<>"
+            - run: npm version patch
+            - run: npm publish
