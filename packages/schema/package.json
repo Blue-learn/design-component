@@ -20,7 +20,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "version-bump": "npm version patch",
+    "publish": "npm publish"
   },
   "devDependencies": {
     "typescript": "^4.5.5"
