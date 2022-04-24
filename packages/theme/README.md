@@ -1,11 +1,11 @@
-# `@design-component/theme`
+# `@blue-learn/theme`
 
 > TODO: description
 
 ## Usage
 
 ```
-const theme = require('@design-component/theme');
+const theme = require('@blue-learn/theme');
 
 // TODO: DEMONSTRATE API
 ```

@@ -2,6 +2,6 @@
 
 const theme = require('..');
 
-describe('@design-component/theme', () => {
+describe('@blue-learn/theme', () => {
 	it('needs tests');
 });

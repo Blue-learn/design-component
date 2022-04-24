@@ -3,7 +3,7 @@ import {
   ButtonTypeTokens,
   ButtonTypeTokensMap,
   ColorTokens,
-} from "@design-component/schema";
+} from "@blue-learn/schema";
 
 export const buttonTypeTokensMap: ButtonTypeTokensMap = {
   [ButtonTypeTokens.BigFilled]: {

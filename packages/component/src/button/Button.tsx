@@ -4,7 +4,7 @@ import {
 	ButtonSize,
 	ButtonType,
 	ButtonTypeTokens,
-} from '@design-component/schema';
+} from '@blue-learn/schema';
 import { ButtonBase } from './Button.base';
 
 /**

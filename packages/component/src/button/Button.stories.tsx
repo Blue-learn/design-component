@@ -4,7 +4,7 @@ import {
 	ButtonProps,
 	ButtonType,
 	ButtonTypeTokens,
-} from '@design-component/schema';
+} from '@blue-learn/schema';
 
 export default {
 	title: 'Example/Button',

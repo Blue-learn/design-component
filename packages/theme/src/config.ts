@@ -1,4 +1,4 @@
-import { ButtonTypeTokensMap, ColorTokensMap } from '@design-component/schema';
+import { ButtonTypeTokensMap, ColorTokensMap } from '@blue-learn/schema';
 
 export type ThemeTokens = {
 	colors: ColorTokensMap;

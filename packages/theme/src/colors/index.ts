@@ -1,4 +1,4 @@
-import { ColorTokens, ColorTokensMap } from "@design-component/schema";
+import { ColorTokens, ColorTokensMap } from "@blue-learn/schema";
 
 export const colorTokensMap: ColorTokensMap = {
   [ColorTokens.White]: "#FFFFFF",

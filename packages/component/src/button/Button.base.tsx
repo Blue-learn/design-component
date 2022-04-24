@@ -7,7 +7,7 @@ import {
 	ButtonTypeTokens,
 	ColorTokens,
 	ColorTokensMap,
-} from '@design-component/schema';
+} from '@blue-learn/schema';
 import {
 	Pressable,
 	Text,
@@ -15,7 +15,7 @@ import {
 	ActivityIndicator,
 	View,
 } from 'react-native';
-import ThemeProvider from '@design-component/theme';
+import ThemeProvider from '@blue-learn/theme';
 const styles = StyleSheet.create({
 	container: {
 		height: 50,
