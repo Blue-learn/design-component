@@ -1,5 +1,5 @@
 {
-  "name": "@design-component/root",
+  "name": "@blue-learn/design-component",
   "publishConfig": {
     "access": "public"
   },
