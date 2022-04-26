@@ -3,13 +3,10 @@ import { WidgetItem } from '@blue-learn/schema';
 import _noop from 'lodash-es/noop';
 import _get from 'lodash-es/get';
 import { WidgetRegistry } from './registry';
+import { TapAction } from '@blue-learn/schema';
 
 const renderItem = (item: WidgetItem) => {
-	const type = _get(
-		item,
-		'widgetType',
-		_get(item, 'type'),
-	);
+	const type = _get(item, 'type');
 	const Element = WidgetRegistry[type];
 	return (
 		<Element.Component
@@ -18,17 +15,7 @@ const renderItem = (item: WidgetItem) => {
 		/>
 	);
 };
-export type TapAction = {
-	type: string;
-	data: any;
-};
 
-export type WidgetProps = {
-	renderItem?(item: WidgetItem): any;
-	isVisible?: boolean;
-	modelUpdateWrapper?(prop: Function): Function;
-	performAction?(action: TapAction): void;
-};
 const performAction = async (
 	action: TapAction,
 ) => {
