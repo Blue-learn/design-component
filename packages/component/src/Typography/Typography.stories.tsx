@@ -18,4 +18,8 @@ export const Primary = Template.bind({});
 Primary.args = {
 	value:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+	fontSize: 'xl',
+	fontWeight: 'bold',
+	textTransform: 'uppercase',
+	textDecorationLine: 'lineThrough',
 };

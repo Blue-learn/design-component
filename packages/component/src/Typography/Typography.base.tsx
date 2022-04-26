@@ -6,6 +6,8 @@ import {
 	ColorTokensMap,
 	FontTokens,
 	TypographyBaseProps,
+	TypographyDecoration,
+	TypographyTransform,
 } from '@blue-learn/schema';
 
 /**
@@ -16,9 +18,11 @@ const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
 	value = 'Lorem ipsum dolor sit amet.',
-	color = ColorTokens.Black,
+	color = ColorTokens.Grey_70,
 	fontSize = FontTokens.sm,
 	fontWeight = 400,
+	textDecorationLine = TypographyDecoration.none,
+	textTransform = TypographyTransform.none,
 	fontFamily,
 	letterSpacing,
 }) => {
@@ -34,6 +38,8 @@ const TypographyBase: React.FunctionComponent<
 				fontWeight: fontWeight,
 				color: colorMapping[color],
 				fontSize: FontTokens[fontSize],
+				textTransform: textTransform,
+				textDecorationLine: textDecorationLine,
 			}}
 		>
 			{value}

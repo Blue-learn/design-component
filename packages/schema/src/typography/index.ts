@@ -5,19 +5,24 @@ export type TypographyProps = {};
 
 export type TypographyBaseProps = {
 	value: String;
-	type?: TypographyType;
 	color?: ColorTokens;
 	fontSize?: FontTokens;
 	fontWeight?: number;
 	fontFamily?: string;
 	letterSpacing?: number;
+	textDecorationLine?: TypographyDecoration;
+	textTransform?: TypographyTransform;
 };
 
-export declare enum TypographyType {
-	normal = 'normal',
-	bold = 'bold',
-	semibold = 'semibold',
+export enum TypographyDecoration {
+	none = 'none',
 	underline = 'underline',
-	strikeThrough = 'strikeThrough',
-	UpperCase = 'upperCase',
+	lineThrough = 'line-through',
+}
+
+export enum TypographyTransform {
+	none = 'none',
+	uppercase = 'uppercase',
+	lowercase = 'lowercase',
+	capitalize = 'capitalize',
 }
