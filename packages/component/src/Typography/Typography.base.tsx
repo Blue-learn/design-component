@@ -23,8 +23,8 @@ const TypographyBase: React.FunctionComponent<
 	fontWeight = 400,
 	textDecorationLine = TypographyDecoration.none,
 	textTransform = TypographyTransform.none,
-	fontFamily,
-	letterSpacing,
+	fontFamily = 'Open Sans',
+	letterSpacing = 0,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
@@ -35,11 +35,13 @@ const TypographyBase: React.FunctionComponent<
 	return (
 		<Text
 			style={{
+				fontFamily: fontFamily,
 				fontWeight: fontWeight,
 				color: colorMapping[color],
 				fontSize: FontTokens[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
+				letterSpacing: letterSpacing,
 			}}
 		>
 			{value}

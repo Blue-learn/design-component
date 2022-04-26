@@ -22,4 +22,5 @@ Primary.args = {
 	fontWeight: 'bold',
 	textTransform: 'uppercase',
 	textDecorationLine: 'lineThrough',
+	letterSpacing: 0,
 };
