@@ -1,4 +1,11 @@
-import { TypographyProps } from '@blue-learn/schema';
+import {
+	FontFamilyTokens,
+	FontTokens,
+	FontWeightTokens,
+	TypographyDecoration,
+	TypographyProps,
+	TypographyTransform,
+} from '@blue-learn/schema';
 import React from 'react';
 import Typography from './Typography';
 
@@ -6,7 +13,7 @@ export default {
 	title: 'Example/Typography',
 	component: Typography,
 	argTypes: {
-		value: 'Lorem ipsum dolor sit.',
+		label: 'Lorem ipsum dolor sit.',
 	},
 };
 
@@ -16,11 +23,11 @@ const Template = (args: TypographyProps) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-	value:
+	label:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	fontSize: 'xl',
-	fontWeight: 'bold',
-	textTransform: 'uppercase',
-	textDecorationLine: 'lineThrough',
-	letterSpacing: 0,
+	fontSize: FontTokens.sm,
+	fontWeight: FontWeightTokens.normal,
+	textTransform: TypographyTransform.uppercase,
+	textDecorationLine:
+		TypographyDecoration.underline,
 };
