@@ -14,7 +14,7 @@ export enum FontTokens {
 }
 
 export enum FontFamilyTokens {
-	'open-sans' = 'open-sans',
+	'openSans' = 'open-sans',
 }
 
 export type FontFamilyTokensMap = {

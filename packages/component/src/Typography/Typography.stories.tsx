@@ -1,5 +1,4 @@
 import {
-	FontFamilyTokens,
 	FontTokens,
 	FontWeightTokens,
 	TypographyDecoration,

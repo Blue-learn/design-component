@@ -9,7 +9,6 @@ import {
 export enum inputTypeToken {
 	default = 'default',
 	chat = 'chat',
-	focused = 'focused',
 	disabled = 'disabled',
 	success = 'success',
 	error = 'error',

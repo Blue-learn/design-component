@@ -21,10 +21,10 @@ const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
 	label = 'Lorem ipsum dolor sit amet',
-	color = ColorTokens.Grey_80,
+	color = ColorTokens.Black,
 	fontSize = FontTokens.sm,
 	fontWeight = FontWeightTokens.normal,
-	fontFamily = FontFamilyTokens['open-sans'],
+	fontFamily = FontFamilyTokens.openSans,
 	textDecorationLine = TypographyDecoration.none,
 	textTransform = TypographyTransform.none,
 }) => {

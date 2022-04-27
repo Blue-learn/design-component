@@ -44,7 +44,7 @@ const ButtonBase: React.FunctionComponent<
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
 
-	console.log(paddingVertical);
+	console.log(borderRadius);
 
 	return (
 		<Pressable
