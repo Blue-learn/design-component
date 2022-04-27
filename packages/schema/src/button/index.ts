@@ -1,4 +1,7 @@
-import { ColorTokens, ColorTokensMap } from '../colors';
+import {
+	ColorTokens,
+	ColorTokensMap,
+} from '../colors';
 
 export enum ButtonType {
 	Filled = 'FILLED',

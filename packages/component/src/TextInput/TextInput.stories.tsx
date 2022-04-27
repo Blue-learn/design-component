@@ -1,4 +1,7 @@
-import { TextInputProps } from '@blue-learn/schema';
+import {
+	inputTypeToken,
+	TextInputProps,
+} from '@blue-learn/schema';
 import React from 'react';
 import TextInput from './TextInput';
 
@@ -6,7 +9,7 @@ export default {
 	title: 'Example/TextInput',
 	component: TextInput,
 	argTypes: {
-		// value: 'Lorem ipsum dolor sit.',
+		inputType: inputTypeToken.default,
 	},
 };
 
@@ -14,24 +17,7 @@ const Template = (args: TextInputProps) => (
 	<TextInput {...args} />
 );
 
-export const PrimaryInput = Template.bind({});
-PrimaryInput.args = {
-	placeholder: 'Enter text',
-	// value:
-	// 	'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	// fontSize: 'xl',
-	// fontWeight: 'bold',
-	// textTransform: 'uppercase',
-	// textDecorationLine: 'lineThrough',
-};
-
-export const ChatInput = Template.bind({});
-ChatInput.args = {
-	placeholder: 'Type your message here',
-	// value:
-	// 	'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	// fontSize: 'xl',
-	// fontWeight: 'bold',
-	// textTransform: 'uppercase',
-	// textDecorationLine: 'lineThrough',
+export const Input = Template.bind({});
+Input.args = {
+	inputType: inputTypeToken.chat,
 };
