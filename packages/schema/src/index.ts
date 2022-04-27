@@ -2,5 +2,4 @@ export * from './button';
 export * from './typography';
 export * from './colors';
 export * from './cornerRadius';
-export * from './FontSize';
-export * from './TextInput';
+export * from './TextStyle';

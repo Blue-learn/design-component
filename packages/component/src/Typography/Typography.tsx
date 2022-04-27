@@ -12,7 +12,7 @@ const Typography: React.FunctionComponent<
 	/**
 	 *  logic -> base-component(...props)
 	 * */
-	return <TypographyBase value={''} {...props} />;
+	return <TypographyBase {...props} />;
 };
 
 export default memo(Typography);

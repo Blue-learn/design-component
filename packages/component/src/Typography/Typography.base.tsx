@@ -4,7 +4,10 @@ import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokens,
 	ColorTokensMap,
+	FontFamilyTokens,
+	FontFamilyTokensMap,
 	FontTokens,
+	FontWeightTokens,
 	TypographyBaseProps,
 	TypographyDecoration,
 	TypographyTransform,
@@ -17,32 +20,34 @@ import {
 const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
-	value = 'Lorem ipsum dolor sit amet.',
-	color = ColorTokens.Grey_70,
+	label = 'Lorem ipsum dolor sit amet',
+	color = ColorTokens.Grey_80,
 	fontSize = FontTokens.sm,
-	fontWeight = 400,
+	fontWeight = FontWeightTokens.normal,
+	fontFamily = FontFamilyTokens['open-sans'],
 	textDecorationLine = TypographyDecoration.none,
 	textTransform = TypographyTransform.none,
-	fontFamily,
-	letterSpacing,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
 		theme.colors;
+	const fontFamilyMapping: FontFamilyTokensMap =
+		theme.fontFamily;
 	/**
-	 * use fontSize,fontWeight to full customise base component
+	 * use fontSize,fontWeight, textDecorationLine, textTransform to full customise base component
 	 * */
 	return (
 		<Text
 			style={{
-				fontWeight: fontWeight,
+				fontFamily: fontFamilyMapping[fontFamily],
+				fontWeight: FontWeightTokens[fontWeight],
 				color: colorMapping[color],
-				fontSize: FontTokens[fontSize],
+				fontSize: fontSize,
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}
 		>
-			{value}
+			{label}
 		</Text>
 	);
 };

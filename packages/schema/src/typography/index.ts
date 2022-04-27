@@ -1,15 +1,18 @@
 import { ColorTokens } from '../colors';
-import { FontTokens } from '../FontSize';
+import {
+	FontFamilyTokens,
+	FontTokens,
+	FontWeightTokens,
+} from '../TextStyle';
 
 export type TypographyProps = {};
 
 export type TypographyBaseProps = {
-	value: String;
+	label?: String;
 	color?: ColorTokens;
 	fontSize?: FontTokens;
-	fontWeight?: number;
-	fontFamily?: string;
-	letterSpacing?: number;
+	fontWeight?: FontWeightTokens;
+	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: TypographyDecoration;
 	textTransform?: TypographyTransform;
 };
