@@ -1,15 +1,13 @@
 export enum ColorTokens {
 	White = 'white',
-	Grey_10 = 'grey-10',
-	Grey_20 = 'grey-20',
-	Grey_30 = 'grey-30',
-	Grey_40 = 'grey-40',
 	Grey_50 = 'grey-50',
-	Grey_60 = 'grey-60',
-	Grey_70 = 'grey-70',
-	Grey_80 = 'grey-80',
-	Grey_90 = 'grey-90',
 	Grey_100 = 'grey-100',
+	Grey_200 = 'grey-200',
+	Grey_300 = 'grey-300',
+	Grey_400 = 'grey-400',
+	Grey_500 = 'grey-500',
+	Grey_600 = 'grey-600',
+	Grey_700 = 'grey-700',
 	Black = 'black',
 	Interaction_10 = 'interaction-10',
 	Interaction_20 = 'interaction-20',
@@ -50,18 +48,8 @@ export enum ColorTokens {
 	 * @deprecated
 	 */
 	Negative_100 = 'negative-100',
-	Warning_10 = 'warning-10',
-	Warning_20 = 'warning-20',
-	Warning_30 = 'warning-30',
-	Warning_40 = 'warning-40',
 	Warning_50 = 'warning-50',
-	Warning_60 = 'warning-60',
-	Warning_70 = 'warning-70',
-	Warning_80 = 'warning-80',
-	Warning_90 = 'warning-90',
-	/**
-	 * @deprecated
-	 */
+	Warning_200 = 'warning-20',
 	Warning_100 = 'warning-100',
 	Highlight_10 = 'highlight-10',
 	Highlight_20 = 'highlight-20',
@@ -108,32 +96,26 @@ export enum ColorTokens {
 	Yellow_70 = 'yellow-70',
 	Yellow_80 = 'yellow-80',
 	Yellow_90 = 'yellow-90',
-	Orange_10 = 'orange-10',
-	Orange_20 = 'orange-20',
-	Orange_30 = 'orange-30',
-	Orange_40 = 'orange-40',
 	Orange_50 = 'orange-50',
-	Orange_60 = 'orange-60',
-	Orange_70 = 'orange-70',
-	Orange_80 = 'orange-80',
-	Orange_90 = 'orange-90',
-	/**
-	 * @deprecated
-	 */
 	Orange_100 = 'orange-100',
-	Blue_10 = 'blue-10',
-	Blue_20 = 'blue-20',
-	Blue_30 = 'blue-30',
-	Blue_40 = 'blue-40',
+	Orange_200 = 'orange-200',
+	Orange_300 = 'orange-300',
+	Orange_400 = 'orange-400',
+	Orange_500 = 'orange-500',
+	Orange_600 = 'orange-600',
+	Orange_700 = 'orange-700',
+	Orange_800 = 'orange-800',
+	Orange_900 = 'orange-900',
 	Blue_50 = 'blue-50',
-	Blue_60 = 'blue-60',
-	Blue_70 = 'blue-70',
-	Blue_80 = 'blue-80',
-	Blue_90 = 'blue-90',
-	/**
-	 * @deprecated
-	 */
 	Blue_100 = 'blue-100',
+	Blue_200 = 'blue-200',
+	Blue_300 = 'blue-300',
+	Blue_400 = 'blue-400',
+	Blue_500 = 'blue-500',
+	Blue_600 = 'blue-600',
+	Blue_700 = 'blue-700',
+	Blue_800 = 'blue-800',
+	Blue_900 = 'blue-900',
 	Teal_10 = 'teal-10',
 	Teal_20 = 'teal-20',
 	Teal_30 = 'teal-30',
@@ -223,6 +205,12 @@ export enum ColorTokens {
 	 * @deprecated
 	 */
 	Indigo_100 = 'indigo-100',
+	Success_50 = 'success-50',
+	Success_200 = 'success-20',
+	Success_100 = 'success-100',
+	Error_50 = 'error-50',
+	Error_200 = 'error-20',
+	Error_100 = 'error-100',
 }
 
 export type ColorTokensMap = {

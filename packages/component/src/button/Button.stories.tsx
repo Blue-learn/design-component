@@ -4,7 +4,9 @@ import {
 	ButtonProps,
 	ButtonType,
 	ButtonTypeTokens,
+	WIDGET,
 } from '@blue-learn/schema';
+import { CommonWidgetProps } from '../mock';
 
 export default {
 	title: 'Example/Button',
@@ -14,7 +16,12 @@ export default {
 	},
 };
 
-const Template = (args: ButtonProps) => <Button {...args} />;
+const Template = (args: ButtonProps) =>
+	CommonWidgetProps.renderItem({
+		id: 'id____',
+		type: WIDGET.BUTTON,
+		props: { ...args, label: 'Hello World' },
+	});
 
 export const Primary = Template.bind({});
 Primary.args = {

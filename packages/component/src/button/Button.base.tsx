@@ -31,18 +31,22 @@ const styles = StyleSheet.create({
 /**
  * Raw Component with Derived props + Theme
  */
-const ButtonBase: React.FunctionComponent<ButtonBaseProps> = ({
+const ButtonBase: React.FunctionComponent<
+	ButtonBaseProps
+> = ({
 	onPress,
 	label = 'Button',
 	type = ButtonType.Filled,
 	size = ButtonSize.Big,
 	loading = false,
-	bgColor = ColorTokens.Blue_60,
+	bgColor = ColorTokens.Blue_50,
 	labelColor = ColorTokens.Black,
 }) => {
 	const theme = ThemeProvider.getTheme();
-	const buttonThemeProps: ButtonThemeProps = theme.button[ButtonType.Filled];
-	const colorMapping: ColorTokensMap = theme.colors;
+	const buttonThemeProps: ButtonThemeProps =
+		theme.button[ButtonType.Filled];
+	const colorMapping: ColorTokensMap =
+		theme.colors;
 
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -50,12 +54,23 @@ const ButtonBase: React.FunctionComponent<ButtonBaseProps> = ({
 
 	return (
 		<Pressable
-			style={[styles.container, { backgroundColor: colorMapping[bgColor] }]}
+			style={[
+				styles.container,
+				{ backgroundColor: colorMapping[bgColor] },
+			]}
 			onPress={onPress}
 		>
-			<Text style={{ color: colorMapping[labelColor] }}>{label}</Text>
+			<Text
+				style={{ color: colorMapping[labelColor] }}
+			>
+				{label}
+			</Text>
 			{loading && (
-				<ActivityIndicator style={styles.indicator} animating color={bgColor} />
+				<ActivityIndicator
+					style={styles.indicator}
+					animating
+					color={bgColor}
+				/>
 			)}
 		</Pressable>
 	);
