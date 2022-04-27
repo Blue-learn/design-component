@@ -1,8 +1,8 @@
 export enum ShadowTypeTokens {
-	ShadowLow = 'shadow-low',
-	ShadowMedium = 'shadow-medium',
-	ShadowHigh = 'shadow-high',
-	ShadowHighUp = 'shadow-high-up',
+	E1 = 'E1',
+	E2 = 'E2',
+	E3 = 'E3',
+	E5 = 'E5',
 }
 export type ShadowThemeProps = {
 	elevation: number;

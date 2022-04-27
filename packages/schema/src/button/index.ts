@@ -2,6 +2,7 @@ import {
 	ColorTokens,
 	ColorTokensMap,
 } from '../colors';
+import { CornerRadiusTokens } from '../cornerRadius';
 
 export enum ButtonType {
 	Filled = 'FILLED',
@@ -11,7 +12,8 @@ export enum ButtonType {
 	Elevated = 'Elevated',
 }
 export enum ButtonSize {
-	Big = 'BIG',
+	Large = 'LARGE',
+	Medium = 'MEDIUM',
 	Small = 'SMALL',
 	IconOnly = 'ICON-ONLY',
 }
@@ -46,15 +48,15 @@ export type ButtonBaseProps = {
 	 * Button Label default Button
 	 */
 	label: String;
-	labelColor?: ColorTokens;
+	labelColor?: string;
 	iconName?: string;
 	iconColor?: ColorTokens;
 	iconAlignment?: 'left' | 'right';
-	bgColor?: ColorTokens;
-	borderColor?: ColorTokens;
-	borderRadius?: any;
-	shadow?: any;
-
+	bgColor?: string;
+	borderColor?: string;
+	borderRadius?: number;
+	elevation?: any;
+	paddingVertical: number;
 	/**
 	 * Button Type default ButtonType.Filled
 	 */
@@ -76,14 +78,35 @@ export type ButtonBaseProps = {
 export type ButtonThemeProps = {
 	size?: ButtonSize;
 	borderRadius: number;
-	textColor: ColorTokens;
-	bgColor: ColorTokens;
+	textColor: string;
+	bgColor: string;
+	paddingVertical: number;
 };
 
 //--todo add more Diff Combination for Button
 export enum ButtonTypeTokens {
-	BigFilled = 'big-filled',
+	LargeFilled = 'large-filled',
+	MediumFilled = 'medium-filled',
 	SmallFilled = 'small-filled',
+	IconFilled = 'icon-filled',
+	LargeSoftFilled = 'large-soft-filled',
+	MediumSoftFilled = 'medium-soft-filled',
+	SmallSoftFilled = 'small-soft-filled',
+	IconSoftFilled = 'icon-soft-filled',
+	LargeOutline = 'large-outline',
+	MediumOutline = 'medium-outline',
+	SmallOutline = 'small-outline',
+	IconOutline = 'icon-outline',
+	LargeGhost = 'large-ghost',
+	MediumGhost = 'medium-ghost',
+	SmallGhost = 'small-ghost',
+	IconGhost = 'icon-ghost',
+	LargeElevated = 'large-elevated',
+	MediumElevated = 'medium-elevated',
+	SmallElevated = 'small-elevated',
+	IconElevated = 'icon-elevated',
+	// FloatingAction = 'floating-action',
+	// Interaction = 'interaction',
 }
 
 /**
