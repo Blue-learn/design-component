@@ -1,10 +1,8 @@
 export enum CornerRadiusTokens {
-	CornerSharp = 'corner-sharp',
-	CornerSmall = 'corner-s',
-	CornerBase = 'corner-base',
-	CornerLarge = 'corner-l',
-	Corner_X_Large = 'corner-xl',
-	Corner_Circular = 'corner-circular',
+	BR1 = 'BR1',
+	BR2 = 'BR2',
+	BR3 = 'BR3',
+	BR4 = 'BR4',
 }
 
 export type CornerRadiusTokensMap = {

@@ -14,29 +14,23 @@ export default {
 	},
 };
 
-const Template = (args: ButtonProps) => <Button {...args} />;
+const Template = (args: ButtonProps) => (
+	<Button {...args} />
+);
 
-export const Primary = Template.bind({});
-Primary.args = {
-	label: 'Primary Button X',
-	type: ButtonType.Filled,
-};
-export const PrimaryLoading = Template.bind({});
-PrimaryLoading.args = {
-	label: 'Primary Loading Button',
-	loading: true,
-	type: ButtonTypeTokens.BigFilled,
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-	label: 'Secondary Button',
+export const ButtonTypes = Template.bind({});
+ButtonTypes.args = {
+	label: 'All Buttons',
 	loading: false,
-	type: ButtonTypeTokens.SmallFilled,
+	type: ButtonTypeTokens.LargeFilled,
 };
-export const SecondaryLoading = Template.bind({});
-SecondaryLoading.args = {
-	label: 'Secondary Loading Button',
-	loading: true,
-	type: ButtonTypeTokens.SmallFilled,
+ButtonTypes.argTypes = {
+	type: {
+		control: 'select',
+		options: [
+			...Object.values(ButtonTypeTokens).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
 };
