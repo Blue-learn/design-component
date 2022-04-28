@@ -6,7 +6,7 @@ import {
 	ColorTokensMap,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
-	FontTokens,
+	FontSizeTokens,
 	FontWeightTokens,
 	TypographyBaseProps,
 	TypographyDecorationToken,
@@ -22,7 +22,7 @@ const TypographyBase: React.FunctionComponent<
 > = ({
 	label = 'Lorem ipsum dolor sit amet',
 	color = ColorTokens.Black,
-	fontSize = FontTokens.sm,
+	fontSize = FontSizeTokens.sm,
 	fontWeight = FontWeightTokens.normal,
 	fontFamily = FontFamilyTokens.openSans,
 	textDecorationLine = TypographyDecorationToken.none,

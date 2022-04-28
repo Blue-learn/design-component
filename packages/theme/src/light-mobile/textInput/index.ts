@@ -4,7 +4,7 @@ import {
 	inputTypeToken,
 	SpaceTypeTokens,
 	InputTypeTokensMap,
-	FontTokens,
+	FontSizeTokens,
 } from '@blue-learn/schema';
 import { borderRadiusTypeTokensMap } from '../cornerRadius';
 import { spaceTypeTokensMap } from '../space';
@@ -12,7 +12,7 @@ import { spaceTypeTokensMap } from '../space';
 export const inputTypeTokensMap: InputTypeTokensMap =
 	{
 		[inputTypeToken.default]: {
-			size: FontTokens.md,
+			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Grey_200,
@@ -24,7 +24,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 		[inputTypeToken.chat]: {
-			size: FontTokens.md,
+			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.White,
 			borderColor: ColorTokens.Transparent,
@@ -36,7 +36,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 		[inputTypeToken.disabled]: {
-			size: FontTokens.md,
+			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_100,
 			bgColor: ColorTokens.White,
 			borderColor: ColorTokens.Grey_100,
@@ -48,7 +48,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 		[inputTypeToken.success]: {
-			size: FontTokens.md,
+			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.White,
 			borderColor: ColorTokens.Success_100,
@@ -60,7 +60,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 		[inputTypeToken.error]: {
-			size: FontTokens.md,
+			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.White,
 			borderColor: ColorTokens.Error_100,

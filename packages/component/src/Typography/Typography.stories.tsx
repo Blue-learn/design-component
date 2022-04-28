@@ -1,5 +1,5 @@
 import {
-	FontTokens,
+	FontSizeTokens,
 	FontWeightTokens,
 	TypographyDecorationToken,
 	TypographyProps,
@@ -24,7 +24,7 @@ export const Primary = Template.bind({});
 Primary.args = {
 	label:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	fontSize: FontTokens.sm,
+	fontSize: FontSizeTokens.sm,
 	fontWeight: FontWeightTokens.normal,
 	textTransform:
 		TypographyTransformToken.uppercase,

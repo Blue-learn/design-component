@@ -40,7 +40,7 @@ export type TextInputBaseProps = {
 };
 
 export type InputThemeProps = {
-	size?: FontTokens;
+	size?: FontSizeTokens;
 	borderRadius?: number;
 	borderColor?: ColorTokens;
 	color?: ColorTokens;
