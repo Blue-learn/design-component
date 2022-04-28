@@ -1,4 +1,4 @@
-import { ShimmerProps } from '@design-components/customer-schema';
+import { ShimmerProps } from '@blue-learn/schema';
 import React from 'react';
 import { Shimmer } from './Shimmer';
 
