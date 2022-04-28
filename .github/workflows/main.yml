@@ -26,5 +26,8 @@ jobs:
             - run: |
                   git config user.name "GitHub Actions Bot"
                   git config user.email "<>"
-            - run: lerna run build --include-dependencies --stream
+            - run: cd packages/schema && npm run build
+            - run: cd ../theme && npm run build
+            - run: cd ../component && npm run build
+#            - run: lerna run build --include-dependencies --stream
             - run: lerna publish minor --force-publish --ci
