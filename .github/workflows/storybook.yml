@@ -1,10 +1,10 @@
-name: Build and Deploy
+name: Storybook
 on:
 #  push:
 #    paths: ["../packages/component/src/**"] # Trigger the action only when files change in the folders defined here
   push:
     branches:
-      - main
+      - textinput
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
