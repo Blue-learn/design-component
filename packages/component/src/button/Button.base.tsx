@@ -4,7 +4,7 @@ import {
 	ButtonType,
 	ColorTokens,
 	CornerRadiusTokens,
-	FontTokens,
+	FontSizeTokens,
 	TypographyDecorationToken,
 	TypographyTransformToken,
 } from '@blue-learn/schema';
@@ -63,7 +63,7 @@ const ButtonBase: React.FunctionComponent<
 			<Typography
 				color={labelColor}
 				label={label}
-				fontSize={FontTokens.xl}
+				fontSize={FontSizeTokens.xl}
 				textDecorationLine={
 					TypographyDecorationToken.none
 				}

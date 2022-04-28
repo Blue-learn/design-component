@@ -5,7 +5,6 @@ import {
 	ButtonThemeProps,
 	ButtonType,
 	ButtonTypeTokens,
-	ColorTokens,
 	ColorTokensMap,
 } from '@blue-learn/schema';
 import { ButtonBase } from './Button.base';
