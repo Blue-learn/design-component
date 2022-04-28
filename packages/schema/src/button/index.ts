@@ -48,7 +48,7 @@ export type ButtonBaseProps = {
 	/**
 	 * Button Label default Button
 	 */
-	label: String;
+	label?: String;
 	labelColor?: string;
 	iconName?: string;
 	iconColor?: ColorTokens;
@@ -82,6 +82,7 @@ export type ButtonThemeProps = {
 	labelColor: ColorTokens;
 	bgColor: ColorTokens;
 	paddingVertical: SpaceTypeTokens;
+	borderColor?: ColorTokens;
 };
 
 //--todo add more Diff Combination for Button

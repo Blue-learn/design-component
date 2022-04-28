@@ -24,6 +24,8 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 	},
 	indicator: {
+		// position: 'absolute',
+		// right: 8,
 		marginLeft: 8,
 	},
 });
@@ -40,6 +42,7 @@ const ButtonBase: React.FunctionComponent<
 	labelColor = ColorTokens.Black,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = CornerRadiusTokens.BR4,
+	borderColor,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -49,6 +52,9 @@ const ButtonBase: React.FunctionComponent<
 
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
+
+	const borderColorValue =
+		theme.colors[borderColor];
 
 	const backgroundColorValue =
 		theme.colors[bgColor];
@@ -67,23 +73,33 @@ const ButtonBase: React.FunctionComponent<
 					backgroundColor: backgroundColorValue,
 					borderRadius: borderRadiusValue,
 					paddingVertical: paddingValue,
+					borderColor: borderColorValue,
+					borderWidth: borderColor ? 1 : 0,
+					// shadowOffset: {
+					// 	width: 1,
+					// 	height: 2,
+					// },
+					// shadowOpacity: 0.3,
+					// shadowRadius: 2,
 				},
 			]}
 			onPress={onPress}
 		>
-			<Text
-				style={{
-					color: labelColorValue,
-					fontWeight: 600,
-				}}
-			>
-				{label}
-			</Text>
+			{label && (
+				<Text
+					style={{
+						color: labelColorValue,
+						fontWeight: 600,
+					}}
+				>
+					{label}
+				</Text>
+			)}
 			{loading && (
 				<ActivityIndicator
 					style={styles.indicator}
 					animating
-					color='#fff'
+					color={labelColorValue}
 				/>
 			)}
 		</Pressable>
