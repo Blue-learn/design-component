@@ -27,4 +27,4 @@ jobs:
                   git config user.name "GitHub Actions Bot"
                   git config user.email "<>"
             - run: lerna version patch
-            - run: lerna publish
+            - run: lerna publish minor --force-publish
