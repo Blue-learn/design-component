@@ -3,6 +3,7 @@ import {
 	ColorTokensMap,
 } from '../colors';
 import { CornerRadiusTokens } from '../cornerRadius';
+import { SpaceTypeTokens } from '../space';
 
 export enum ButtonType {
 	Filled = 'FILLED',
@@ -52,19 +53,19 @@ export type ButtonBaseProps = {
 	iconName?: string;
 	iconColor?: ColorTokens;
 	iconAlignment?: 'left' | 'right';
-	bgColor?: string;
-	borderColor?: string;
-	borderRadius?: number;
+	bgColor?: ColorTokens;
+	borderColor?: ColorTokens;
+	borderRadius?: CornerRadiusTokens;
 	elevation?: any;
-	paddingVertical: number;
+	paddingVertical: SpaceTypeTokens;
 	/**
 	 * Button Type default ButtonType.Filled
 	 */
-	type: ButtonType;
+	// type: ButtonType;
 	/**
 	 * Button Type default ButtonSize.Big
 	 */
-	size: ButtonSize;
+	// size: ButtonSize;
 	/**
 	 * Button Loading State default false
 	 */
@@ -77,10 +78,10 @@ export type ButtonBaseProps = {
 
 export type ButtonThemeProps = {
 	size?: ButtonSize;
-	borderRadius: number;
-	textColor: string;
-	bgColor: string;
-	paddingVertical: number;
+	borderRadius: CornerRadiusTokens;
+	labelColor: ColorTokens;
+	bgColor: ColorTokens;
+	paddingVertical: SpaceTypeTokens;
 };
 
 //--todo add more Diff Combination for Button

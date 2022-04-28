@@ -16,9 +16,6 @@ export default {
 	},
 };
 
-// const Template = (args: ButtonProps) => (
-// 	<Button {...args} />
-// );
 const Template = (args: ButtonProps) =>
 	CommonWidgetProps.renderItem({
 		id: 'id____',
@@ -26,13 +23,13 @@ const Template = (args: ButtonProps) =>
 		props: { ...args, label: 'Hello World' },
 	});
 
-export const ButtonTypes = Template.bind({});
-ButtonTypes.args = {
+export const Large = Template.bind({});
+Large.args = {
 	label: 'All Buttons',
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
 };
-ButtonTypes.argTypes = {
+Large.argTypes = {
 	type: {
 		control: 'select',
 		options: [

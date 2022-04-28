@@ -3,7 +3,9 @@ import {
 	ButtonSize,
 	ButtonType,
 	ColorTokens,
+	ColorTokensMap,
 	CornerRadiusTokens,
+	CornerRadiusTokensMap,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import {
@@ -12,6 +14,7 @@ import {
 	StyleSheet,
 	Text,
 } from 'react-native';
+import ThemeProvider from '@blue-learn/theme';
 
 const styles = StyleSheet.create({
 	container: {
@@ -32,33 +35,48 @@ const ButtonBase: React.FunctionComponent<
 > = ({
 	onPress,
 	label = 'Button',
-	type = ButtonType.Filled,
-	size = ButtonSize.Medium,
 	loading = false,
 	bgColor = ColorTokens.Blue_600,
 	labelColor = ColorTokens.Black,
 	borderRadius = CornerRadiusTokens.BR4,
-	paddingVertical = 8,
+	paddingVertical = CornerRadiusTokens.BR4,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
 
-	console.log(paddingVertical);
+	const theme = ThemeProvider.getTheme();
+
+	const borderRadiusValue =
+		theme.borderRadius[borderRadius];
+
+	const backgroundColorValue =
+		theme.colors[bgColor];
+
+	const labelColorValue: ColorTokensMap =
+		theme.colors[labelColor];
+
+	const paddingValue: ColorTokensMap =
+		theme.space[paddingVertical];
 
 	return (
 		<Pressable
 			style={[
 				styles.container,
 				{
-					backgroundColor: bgColor,
-					borderRadius,
-					paddingVertical,
+					backgroundColor: backgroundColorValue,
+					borderRadius: borderRadiusValue,
+					paddingVertical: paddingValue,
 				},
 			]}
 			onPress={onPress}
 		>
-			<Text style={{ color: labelColor }}>
+			<Text
+				style={{
+					color: labelColorValue,
+					fontWeight: 600,
+				}}
+			>
 				{label}
 			</Text>
 			{loading && (
