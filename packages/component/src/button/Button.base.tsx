@@ -3,7 +3,6 @@ import {
 	ButtonSize,
 	ButtonType,
 	ColorTokens,
-	ColorTokensMap,
 	CornerRadiusTokens,
 	FontTokens,
 	TypographyDecorationToken,
@@ -17,7 +16,6 @@ import {
 	Text,
 } from 'react-native';
 import Typography from '../Typography/Typography';
-import ThemeProvider from '@blue-learn/theme';
 
 const styles = StyleSheet.create({
 	container: {
@@ -50,11 +48,6 @@ const ButtonBase: React.FunctionComponent<
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
 
-	// console.log(ColorTokens.labelColor);
-	const theme = ThemeProvider.getTheme();
-	const colorMapping: ColorTokensMap =
-		theme.colors;
-	console.log(colorMapping[labelColor]);
 	return (
 		<Pressable
 			style={[
@@ -68,7 +61,7 @@ const ButtonBase: React.FunctionComponent<
 			onPress={onPress}
 		>
 			<Typography
-				color={colorMapping[labelColor]}
+				color={labelColor}
 				label={label}
 				fontSize={FontTokens.xl}
 				textDecorationLine={

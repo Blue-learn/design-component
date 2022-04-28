@@ -48,7 +48,7 @@ export type ButtonBaseProps = {
 	 * Button Label default Button
 	 */
 	label: String;
-	labelColor?: string;
+	labelColor?: ColorTokens;
 	iconName?: string;
 	iconColor?: ColorTokens;
 	iconAlignment?: 'left' | 'right';
@@ -78,7 +78,7 @@ export type ButtonBaseProps = {
 export type ButtonThemeProps = {
 	size?: ButtonSize;
 	borderRadius: number;
-	labelColor: string;
+	labelColor: ColorTokens;
 	bgColor: string;
 	paddingVertical: number;
 };

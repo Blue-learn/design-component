@@ -36,7 +36,6 @@ const TypographyBase: React.FunctionComponent<
 	/**
 	 * use fontSize,fontWeight, textDecorationLine, textTransform to full customise base component
 	 * */
-	console.log('text', colorMapping[color]);
 	return (
 		<Text
 			style={{
