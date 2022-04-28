@@ -1,5 +1,6 @@
 node_modules
 lib
 .idea
+storybook-static
 yarn-error.log
 /package-lock.json
