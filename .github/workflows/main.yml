@@ -26,9 +26,15 @@ jobs:
             - run: |
                   git config user.name "GitHub Actions Bot"
                   git config user.email "<>"
+
+            - name: Install Dependency
+            - run: npm install
+            - name: Building Schema
             - run: cd packages/schema && npm run build
-            - run: pwd
+            - name: Building Theme
             - run: cd packages/theme && npm run build
+            - name: Building Component
             - run: cd packages/component && npm run build
 #            - run: lerna run build --include-dependencies --stream
+            - name: Publish
             - run: lerna publish minor --force-publish --ci
