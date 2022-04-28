@@ -1,5 +1,4 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
 import {
 	FontFamilyTokens,
 	FontTokens,
@@ -32,7 +31,24 @@ export type TextInputBaseProps = {
 	color?: ColorTokens;
 	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: number;
 	borderColor?: ColorTokens;
 	borderWidth?: number;
+	paddingVertical?: number;
+};
+
+export type InputThemeProps = {
+	size?: FontTokens;
+	borderRadius?: number;
+	borderColor?: ColorTokens;
+	color?: ColorTokens;
+	bgColor?: ColorTokens;
+	paddingVertical?: number;
+};
+
+/**
+ * Internal Props for Theme
+ * */
+export type InputTypeTokensMap = {
+	[key in inputTypeToken]: InputThemeProps;
 };

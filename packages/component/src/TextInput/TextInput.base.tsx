@@ -10,6 +10,8 @@ import {
 	FontFamilyTokens,
 	FontFamilyTokensMap,
 	CornerRadiusTokens,
+	SpaceTypeTokens,
+	SpaceTypeTokensMap,
 } from '@blue-learn/schema';
 
 /**
@@ -20,15 +22,15 @@ const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps
 > = ({
 	placeholder = 'lorem ipsum',
-	// borderRadius = CornerRadiusTokens.BR4,
+	borderRadius = CornerRadiusTokens.BR4,
+	borderColor = ColorTokens.Grey_200,
 	color = ColorTokens.Black,
-	borderColor = ColorTokens.Black,
 	isDisabled = false,
 	size = FontTokens.md,
-	bgColor = ColorTokens.Transparent,
+	bgColor = ColorTokens.White,
 	fontWeight = FontWeightTokens.normal,
 	fontFamily = FontFamilyTokens.openSans,
-	borderWidth = 0,
+	paddingVertical = SpaceTypeTokens.LG,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -38,26 +40,32 @@ const TextInputBase: React.FunctionComponent<
 	const fontFamilyMapping: FontFamilyTokensMap =
 		theme.fontFamily;
 
+	const spaceTokenMapping: SpaceTypeTokensMap =
+		theme.spaces;
+
 	/**
 	 * use fontSize,fontWeight to full customise base component
 	 * */
+	console.log(isDisabled);
 
 	return (
 		<TextInput
 			isDisabled={isDisabled}
+			editable={!isDisabled}
 			placeholder={placeholder}
 			style={{
 				flex: 1,
 				color: colorMapping[color],
-				borderWidth: borderWidth,
 				fontSize: size,
-				backgroundColor: colorMapping[bgColor],
-				borderColor: colorMapping[borderColor],
 				fontWeight: FontWeightTokens[fontWeight],
 				fontFamily: fontFamilyMapping[fontFamily],
-				// borderRadius: borderRadius,
-				paddingHorizontal: '12px',
-				paddingVertical: '8px',
+				borderRadius: borderRadius,
+				paddingHorizontal:
+					spaceTokenMapping[SpaceTypeTokens.LG],
+				paddingVertical:
+					spaceTokenMapping[SpaceTypeTokens.LG],
+				borderColor: colorMapping[borderColor],
+				borderWidth: 1,
 			}}
 			textAlign='vertical'
 			{...props}

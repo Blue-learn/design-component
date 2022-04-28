@@ -19,5 +19,16 @@ const Template = (args: TextInputProps) => (
 
 export const Input = Template.bind({});
 Input.args = {
-	inputType: inputTypeToken.chat,
+	inputType: inputTypeToken.default,
+};
+
+Input.argTypes = {
+	inputType: {
+		control: { type: 'radio' },
+		options: [
+			...Object.values(inputTypeToken).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
 };
