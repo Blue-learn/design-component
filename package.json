@@ -17,13 +17,17 @@
   },
   "homepage": "https://github.com/Blue-learn/design-component#readme",
   "description": "Component Library for Web and Mobile",
+  "storybook": {
+    "url": "https://blue-learn.github.io/design-component/"
+  },
   "scripts": {
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -- -o docs",
     "bootstrap": "npx lerna bootstrap",
     "build": "lerna run build",
-    "publish-all": "lerna publish --force-publish"
+    "publish-all": "lerna publish --force-publish",
+    "check-pending-publish": "npm run lerna updated"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
