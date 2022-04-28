@@ -14,7 +14,7 @@ import ThemeProvider from '@blue-learn/theme';
 /**
  * Primary UI component for user interaction
  */
-
+/** Build test **/
 const Button: React.FunctionComponent<
 	ButtonProps
 > = ({ type, onPress = () => {}, ...props }) => {
