@@ -5,25 +5,33 @@ import {
 	FontWeightTokens,
 } from '../TextStyle';
 
-export type TypographyProps = {};
-
 export type TypographyBaseProps = {
 	label?: String;
 	color?: ColorTokens;
 	fontSize?: FontTokens;
 	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
-	textDecorationLine?: TypographyDecoration;
-	textTransform?: TypographyTransform;
+	textDecorationLine?: TypographyDecorationToken;
+	textTransform?: TypographyTransformToken;
 };
 
-export enum TypographyDecoration {
+export type TypographyProps = {
+	label?: String;
+	color?: ColorTokens;
+	fontSize?: FontTokens;
+	fontWeight?: FontWeightTokens;
+	fontFamily?: FontFamilyTokens;
+	textDecorationLine?: TypographyDecorationToken;
+	textTransform?: TypographyTransformToken;
+};
+
+export enum TypographyDecorationToken {
 	none = 'none',
 	underline = 'underline',
 	lineThrough = 'line-through',
 }
 
-export enum TypographyTransform {
+export enum TypographyTransformToken {
 	none = 'none',
 	uppercase = 'uppercase',
 	lowercase = 'lowercase',

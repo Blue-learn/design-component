@@ -1,9 +1,9 @@
 import {
 	FontTokens,
 	FontWeightTokens,
-	TypographyDecoration,
+	TypographyDecorationToken,
 	TypographyProps,
-	TypographyTransform,
+	TypographyTransformToken,
 } from '@blue-learn/schema';
 import React from 'react';
 import Typography from './Typography';
@@ -26,7 +26,8 @@ Primary.args = {
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
 	fontSize: FontTokens.sm,
 	fontWeight: FontWeightTokens.normal,
-	textTransform: TypographyTransform.uppercase,
+	textTransform:
+		TypographyTransformToken.uppercase,
 	textDecorationLine:
-		TypographyDecoration.underline,
+		TypographyDecorationToken.underline,
 };

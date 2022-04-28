@@ -3,8 +3,6 @@ import {
 	inputTypeToken,
 	ColorTokens,
 	ColorTokensMap,
-	CornerRadiusTokens,
-	cornerRadiusTokensMap,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -22,6 +20,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		overflow: 'hidden',
+		borderWidth: 1,
 	},
 });
 
@@ -42,20 +41,19 @@ const TextInput: React.FunctionComponent<
 	const findType = (type) => {
 		switch (type) {
 			case inputTypeToken.success:
-				return ColorTokens.Green_50;
+				return ColorTokens.Success_100;
 			case inputTypeToken.error:
-				return ColorTokens.Red_50;
-			case inputTypeToken.focused:
-				return ColorTokens.Grey_30;
+				return ColorTokens.Error_100;
 			case inputTypeToken.default:
-				return ColorTokens.Grey_20;
+				return ColorTokens.Grey_200;
 			case inputTypeToken.disabled:
-				return ColorTokens.Grey_10;
+				return ColorTokens.Grey_100;
 			default:
 				return ColorTokens.Black;
 		}
 	};
 	const borderColor = findType(inputType);
+
 	if (leftElement || rightElement) {
 		return (
 			<View
@@ -63,13 +61,12 @@ const TextInput: React.FunctionComponent<
 					styles.container,
 					{
 						borderColor: colorMapping[borderColor],
-						borderWidth: 1,
 						backgroundColor:
 							colorMapping[ColorTokens.Blue_50],
-						borderRadius:
-							inputType === 'chat'
-								? cornerRadiusTokensMap['corner-circular']
-								: cornerRadiusTokensMap['corner-sharp'],
+						// borderRadius:
+						// 	inputType === 'chat'
+						// 		? cornerRadiusTokensMap['corner-circular']
+						// 		: cornerRadiusTokensMap['corner-sharp'],
 					},
 				]}
 			>
@@ -85,11 +82,10 @@ const TextInput: React.FunctionComponent<
 					styles.container,
 					{
 						borderColor: colorMapping[borderColor],
-						borderWidth: 1,
-						borderRadius:
-							inputType === 'chat'
-								? cornerRadiusTokensMap['corner-circular']
-								: cornerRadiusTokensMap['corner-sharp'],
+						// borderRadius:
+						// 	inputType === 'chat'
+						// 		? cornerRadiusTokensMap['corner-circular']
+						// 		: cornerRadiusTokensMap['corner-sharp'],
 					},
 				]}
 			>

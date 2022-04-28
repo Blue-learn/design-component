@@ -78,7 +78,7 @@ export type ButtonBaseProps = {
 export type ButtonThemeProps = {
 	size?: ButtonSize;
 	borderRadius: number;
-	textColor: string;
+	labelColor: string;
 	bgColor: string;
 	paddingVertical: number;
 };

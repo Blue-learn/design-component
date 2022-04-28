@@ -10,7 +10,16 @@ import { CommonWidgetProps } from '../mock';
 
 export default {
 	title: 'Example/Button',
-	component: Button,
+	component: CommonWidgetProps.renderItem({
+		type: WIDGET.BUTTON,
+		id: 'button',
+		props: {
+			label: 'All Buttons',
+			loading: false,
+			type: ButtonTypeTokens.LargeFilled,
+		},
+	}),
+
 	argTypes: {
 		label: 'Default Button',
 	},

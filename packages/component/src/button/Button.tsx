@@ -23,7 +23,7 @@ const Button: React.FunctionComponent<
 	 * */
 	const theme = ThemeProvider.getTheme();
 	const buttonThemeProps: ButtonThemeProps =
-		theme.button[ButtonTypeTokens.LargeFilled];
+		theme.button[type];
 	const colorMapping: ColorTokensMap =
 		theme.colors;
 

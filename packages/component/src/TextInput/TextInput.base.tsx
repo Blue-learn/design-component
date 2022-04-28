@@ -3,15 +3,13 @@ import { TextInput } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokensMap,
-	CornerRadiusTokens,
 	TextInputBaseProps,
-	CornerRadiusTokensMap,
 	ColorTokens,
 	FontTokens,
 	FontWeightTokens,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
-	cornerRadiusTokensMap,
+	CornerRadiusTokens,
 } from '@blue-learn/schema';
 
 /**
@@ -22,16 +20,14 @@ const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps
 > = ({
 	placeholder = 'lorem ipsum',
-	borderRadius = cornerRadiusTokensMap[
-		'corner-sharp'
-	],
+	// borderRadius = CornerRadiusTokens.BR4,
 	color = ColorTokens.Black,
 	borderColor = ColorTokens.Black,
 	isDisabled = false,
 	size = FontTokens.md,
 	bgColor = ColorTokens.Transparent,
 	fontWeight = FontWeightTokens.normal,
-	fontFamily = FontFamilyTokens['open-sans'],
+	fontFamily = FontFamilyTokens.openSans,
 	borderWidth = 0,
 	...props
 }) => {
@@ -45,6 +41,7 @@ const TextInputBase: React.FunctionComponent<
 	/**
 	 * use fontSize,fontWeight to full customise base component
 	 * */
+
 	return (
 		<TextInput
 			isDisabled={isDisabled}
@@ -58,7 +55,7 @@ const TextInputBase: React.FunctionComponent<
 				borderColor: colorMapping[borderColor],
 				fontWeight: FontWeightTokens[fontWeight],
 				fontFamily: fontFamilyMapping[fontFamily],
-				borderRadius: borderRadius,
+				// borderRadius: borderRadius,
 				paddingHorizontal: '12px',
 				paddingVertical: '8px',
 			}}

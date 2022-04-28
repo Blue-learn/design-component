@@ -18,7 +18,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -29,7 +29,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.MD],
@@ -40,7 +40,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.SM],
@@ -51,7 +51,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -62,7 +62,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -73,7 +73,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -84,7 +84,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -95,7 +95,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -106,7 +106,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -117,7 +117,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -128,7 +128,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -139,7 +139,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -150,7 +150,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -161,7 +161,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -172,7 +172,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -183,7 +183,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -194,7 +194,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -205,7 +205,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -216,7 +216,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
@@ -227,7 +227,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				borderRadiusTypeTokensMap[
 					CornerRadiusTokens.BR4
 				],
-			labelColor: colorTokensMap[ColorTokens.White],
+			labelColor: ColorTokens.White,
 			bgColor: colorTokensMap[ColorTokens.Blue_600],
 			paddingVertical:
 				spaceTypeTokensMap[SpaceTypeTokens.LG],
