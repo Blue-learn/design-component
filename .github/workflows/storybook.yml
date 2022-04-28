@@ -1,10 +1,10 @@
-name: Build and Deploy
+name: storybook
 on:
 #  push:
 #    paths: ["../packages/component/src/**"] # Trigger the action only when files change in the folders defined here
   push:
     branches:
-      - main
+      - textinput
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -15,8 +15,8 @@ jobs:
           persist-credentials: false
       - name: Install and Build 🔧
         run: | # Install npm packages and build the Storybook files
-          yarn
-          yarn build-storybook
+          npm ci
+          npm run build-storybook
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:

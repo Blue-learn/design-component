@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './Button';
 import {
 	ButtonProps,
-	ButtonType,
 	ButtonTypeTokens,
 	WIDGET,
 } from '@blue-learn/schema';
@@ -33,7 +32,7 @@ export const ButtonTypes = Template.bind({});
 ButtonTypes.args = {
 	label: 'All Buttons',
 	loading: false,
-	type: ButtonTypeTokens.LargeFilled,
+	type: ButtonTypeTokens.SmallFilled,
 };
 ButtonTypes.argTypes = {
 	type: {

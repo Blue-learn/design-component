@@ -1,9 +1,9 @@
 import { ColorTokens } from '../colors';
 import {
 	FontFamilyTokens,
-	FontTokens,
+	FontSizeTokens,
 	FontWeightTokens,
-} from '../TextStyle';
+} from '../typography';
 
 export enum inputTypeToken {
 	default = 'default',
@@ -18,7 +18,9 @@ export type TextInputProps = {
 	/**
 	 * If given, adds the provided element to the left/right of the input.
 	 */
+	// --todo
 	leftElement?: JSX.Element | JSX.Element[];
+	// --todo
 	rightElement?: JSX.Element | JSX.Element[];
 };
 
@@ -26,7 +28,7 @@ export type TextInputBaseProps = {
 	// shadow?: any;
 	placeholder?: string;
 	isDisabled?: boolean;
-	size?: FontTokens;
+	size?: FontSizeTokens;
 	bgColor?: ColorTokens;
 	color?: ColorTokens;
 	fontWeight?: FontWeightTokens;

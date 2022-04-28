@@ -5,7 +5,6 @@ import {
 	ButtonThemeProps,
 	ButtonType,
 	ButtonTypeTokens,
-	ColorTokens,
 	ColorTokensMap,
 } from '@blue-learn/schema';
 import { ButtonBase } from './Button.base';
@@ -14,7 +13,7 @@ import ThemeProvider from '@blue-learn/theme';
 /**
  * Primary UI component for user interaction
  */
-
+/** Build test **/
 const Button: React.FunctionComponent<
 	ButtonProps
 > = ({ type, onPress = () => {}, ...props }) => {
