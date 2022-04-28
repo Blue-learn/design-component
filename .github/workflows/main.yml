@@ -20,11 +20,21 @@ jobs:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
               with:
                   node-version: 16
-                  cache: yarn
+                  cache: npm
                   registry-url: "https://registry.npmjs.org"
                   scope: "@blue-learn"
             - run: |
                   git config user.name "GitHub Actions Bot"
                   git config user.email "<>"
-            - run: npm version patch
-            - run: npm publish
+
+            - name: Install Dependency
+            - run: npm install
+            - name: Building Schema
+            - run: cd packages/schema && npm run build
+            - name: Building Theme
+            - run: cd packages/theme && npm run build
+            - name: Building Component
+            - run: cd packages/component && npm run build
+#            - run: lerna run build --include-dependencies --stream
+            - name: Publish
+            - run: lerna publish minor --force-publish --ci
