@@ -1,13 +1,10 @@
+import React, { memo } from 'react';
 import {
 	ButtonBaseProps,
-	ButtonSize,
-	ButtonType,
 	ColorTokens,
 	ColorTokensMap,
 	CornerRadiusTokens,
-	CornerRadiusTokensMap,
 } from '@blue-learn/schema';
-import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
@@ -29,6 +26,7 @@ const styles = StyleSheet.create({
 		marginLeft: 8,
 	},
 });
+
 /**
  * Raw Component with Derived props + Theme
  */

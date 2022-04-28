@@ -1,12 +1,7 @@
 import React, { memo } from 'react';
 import {
 	ButtonProps,
-	ButtonSize,
 	ButtonThemeProps,
-	ButtonType,
-	ButtonTypeTokens,
-	ColorTokens,
-	ColorTokensMap,
 } from '@blue-learn/schema';
 import { ButtonBase } from './Button.base';
 import ThemeProvider from '@blue-learn/theme';

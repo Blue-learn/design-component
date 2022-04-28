@@ -14,14 +14,12 @@ import { spaceTypeTokensMap } from '../space';
 export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
 		[ButtonTypeTokens.LargeFilled]: {
-			// size: ButtonSize.Large,
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.White,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.LG,
 		},
 		[ButtonTypeTokens.MediumFilled]: {
-			// size: ButtonSize.Medium,
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.White,
 			bgColor: ColorTokens.Blue_600,

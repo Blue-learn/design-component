@@ -1,7 +1,4 @@
-import {
-	ColorTokens,
-	ColorTokensMap,
-} from '../colors';
+import { ColorTokens } from '../colors';
 import { CornerRadiusTokens } from '../cornerRadius';
 import { SpaceTypeTokens } from '../space';
 
@@ -59,14 +56,6 @@ export type ButtonBaseProps = {
 	elevation?: any;
 	paddingVertical: SpaceTypeTokens;
 	/**
-	 * Button Type default ButtonType.Filled
-	 */
-	// type: ButtonType;
-	/**
-	 * Button Type default ButtonSize.Big
-	 */
-	// size: ButtonSize;
-	/**
 	 * Button Loading State default false
 	 */
 	loading?: boolean;
@@ -77,7 +66,6 @@ export type ButtonBaseProps = {
 };
 
 export type ButtonThemeProps = {
-	size?: ButtonSize;
 	borderRadius: CornerRadiusTokens;
 	labelColor: ColorTokens;
 	bgColor: ColorTokens;
