@@ -20,7 +20,7 @@ jobs:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
               with:
                   node-version: 16
-                  cache: yarn
+                  cache: npm
                   registry-url: "https://registry.npmjs.org"
                   scope: "@blue-learn"
             - run: |
