@@ -9,8 +9,8 @@ import {
 	FontSizeTokens,
 	FontWeightTokens,
 	TypographyBaseProps,
-	TypographyDecorationToken,
-	TypographyTransformToken,
+	FontDecorationToken,
+	FontTransformToken,
 } from '@blue-learn/schema';
 
 /**
@@ -25,8 +25,8 @@ const TypographyBase: React.FunctionComponent<
 	fontSize = FontSizeTokens.sm,
 	fontWeight = FontWeightTokens.normal,
 	fontFamily = FontFamilyTokens.openSans,
-	textDecorationLine = TypographyDecorationToken.none,
-	textTransform = TypographyTransformToken.none,
+	textDecorationLine = FontDecorationToken.none,
+	textTransform = FontTransformToken.none,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
@@ -36,13 +36,14 @@ const TypographyBase: React.FunctionComponent<
 	/**
 	 * use fontSize,fontWeight, textDecorationLine, textTransform to full customise base component
 	 * */
+
 	return (
 		<Text
 			style={{
 				fontFamily: fontFamilyMapping[fontFamily],
 				fontWeight: FontWeightTokens[fontWeight],
 				color: colorMapping[color],
-				fontSize: fontSize,
+				fontSize: FontSizeTokens[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}

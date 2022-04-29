@@ -15,6 +15,7 @@ const Typography: React.FunctionComponent<
 	/**
 	 *  logic -> base-component(...props)
 	 * */
+
 	return <TypographyBase {...props} />;
 };
 

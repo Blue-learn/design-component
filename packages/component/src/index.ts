@@ -1,3 +1,3 @@
 export * as Button from './button';
-export * as Typography from './Typography';
-export * as TextInput from './TextInput';
+export * as Typography from './typography';
+export * as TextInput from './textInput';
