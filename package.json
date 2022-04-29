@@ -27,7 +27,7 @@
     "bootstrap": "npx lerna bootstrap",
     "build": "lerna run build",
     "publish-force": "lerna publish --force-publish -ci",
-    "publish-git": "lerna publish from-git --yes",
+    "publish-git": "lerna publish from-git --yes --force-publish",
     "publish-pending": "lerna updated",
     "build-storybook-docs": "build-storybook --docs"
   },
