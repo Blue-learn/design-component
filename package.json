@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "homepage": "https://github.com/Blue-learn/design-component#readme",
+  "homepage": "https://blue-learn.github.io/design-component/",
   "description": "Component Library for Web and Mobile",
   "storybook": {
     "url": "https://blue-learn.github.io/design-component/"
@@ -24,12 +24,11 @@
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "publish-force": "lerna publish --cd-version patch --force-publish --y",
-    "publish-git": "lerna publish from-git --yes --force-publish",
-    "publish-pending": "lerna updated",
-    "build-storybook-docs": "build-storybook --docs"
+    "git-remove-tags": "git tag -l | xargs -n 1 git push --delete origin"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
@@ -38,6 +37,7 @@
     "@storybook/addon-links": "^6.4.22",
     "@storybook/addon-react-native-web": "^0.0.18",
     "@storybook/react": "^6.4.22",
+    "@storybook/storybook-deployer": "^2.8.11",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.17.5",
     "lerna": "^4.0.0",
@@ -45,5 +45,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-native-web": "^0.17.5"
+  },
+  "storybook-deployer": {
+    "gitUsername": "BL-GitBot",
+    "gitEmail": "github@bluelearn.in",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
   }
 }

@@ -2,7 +2,7 @@ name: Storybook
 on:
   push:
     branches:
-      - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
+      - main
 
 jobs:
   build-and-deploy:
@@ -10,13 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
-
       - run:  npm run bootstrap
       - run:  lerna run build
       - run:  npm run build-storybook
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
-        with:
-          branch: storybook-static
-          folder: storybook-static
+      - run:  npm run deploy-storybook -- --ci

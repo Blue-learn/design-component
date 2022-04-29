@@ -1,9 +1,9 @@
 name: release
 
 on:
-    pull_request:
-        paths:
-            - .github/workflows/main.yml
+#    pull_request:
+#        paths:
+#            - .github/workflows/main.yml
 #    push:
 #        branches:
 #            - main
@@ -26,9 +26,6 @@ jobs:
             - run: |
                   git config user.name "GitHub Actions Bot"
                   git config user.email "<>"
-
             - run: npm run bootstrap
-
             - run: npm run build
-
             - run: npm run publish-force
