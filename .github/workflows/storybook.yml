@@ -13,18 +13,26 @@ jobs:
 
       - name: Build Schema
         run: |
+          pwd
           cd packages/schema
           npm run build
+          pwd
+
       - name: Build Theme
         run: |
+          pwd
+          ls
           cd ..
           cd theme
           npm run build
+          pwd
+
       - name: Build Component
         run: |
           cd ..
           cd component
           npm run build
+
       - name: Build Storybook
         run: |
           cd ..
