@@ -4,3 +4,5 @@ lib
 storybook-static
 yarn-error.log
 docs
+package-lock.json
+yarn-lock.json

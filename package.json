@@ -21,14 +21,14 @@
     "url": "https://blue-learn.github.io/design-component/"
   },
   "scripts": {
-    "storybook-init": "npx sb init -f --type react",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
+    "clean": "sh scripts/clean.sh",
+    "setup": "npm i",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "publish-force": "lerna publish --cd-version patch --force-publish --y",
-    "git-remove-tags": "git tag -l | xargs -n 1 git push --delete origin"
+    "publish": "lerna publish --cd-version patch --force-publish --y",
+    "storybook-start": "start-storybook -p 6006",
+    "storybook-build": "build-storybook",
+    "storybook-deploy": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
