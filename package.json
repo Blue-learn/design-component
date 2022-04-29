@@ -23,7 +23,7 @@
   "scripts": {
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -- -o docs",
+    "build-storybook": "build-storybook",
     "bootstrap": "npx lerna bootstrap",
     "build": "lerna run build",
     "publish-all": "lerna publish --force-publish",
