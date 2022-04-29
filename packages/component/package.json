@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/component",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -10,8 +10,8 @@
     "publish": "npm publish"
   },
   "devDependencies": {
-    "@blue-learn/schema": "^0.0.5",
-    "@blue-learn/theme": "^0.0.5",
+    "@blue-learn/schema": "^0.0.6",
+    "@blue-learn/theme": "^0.0.6",
     "@types/react": "^17.0.38",
     "react": "^17.0.2",
     "react-native": "^0.67.1",
