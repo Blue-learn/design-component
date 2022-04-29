@@ -14,10 +14,7 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Blue-learn/design-component.git"
-  },
+  "repository": "ssh://git@github.com:Blue-learn/design-component.git",
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
