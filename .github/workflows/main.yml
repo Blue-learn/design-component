@@ -28,13 +28,10 @@ jobs:
                   git config user.email "<>"
 
             - name: Install Dependency
-            - run: npm install
-            - name: Building Schema
-            - run: cd packages/schema && npm run build
-            - name: Building Theme
-            - run: cd packages/theme && npm run build
-            - name: Building Component
-            - run: cd packages/component && npm run build
-#            - run: lerna run build --include-dependencies --stream
+            - run: npm run bootstrap
+
+            - name: Build
+            - run: npm run build
+
             - name: Publish
-            - run: lerna publish minor --force-publish --ci
+            - run: npm run publish-force

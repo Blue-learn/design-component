@@ -24,9 +24,9 @@
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "bootstrap": "npx lerna bootstrap",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "publish-force": "lerna publish --force-publish -ci",
+    "publish-force": "lerna publish --cd-version patch --force-publish --y",
     "publish-git": "lerna publish from-git --yes --force-publish",
     "publish-pending": "lerna updated",
     "build-storybook-docs": "build-storybook --docs"
