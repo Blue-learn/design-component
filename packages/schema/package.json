@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
-  "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
+  "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/schema#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
