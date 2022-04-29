@@ -5,8 +5,8 @@ import {
 	ColorTokens,
 	CornerRadiusTokens,
 	FontSizeTokens,
-	TypographyDecorationToken,
-	TypographyTransformToken,
+	FontDecorationToken,
+	FontTransformToken,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import {
@@ -15,7 +15,7 @@ import {
 	StyleSheet,
 	Text,
 } from 'react-native';
-import Typography from '../Typography/Typography';
+import Typography from '../typography/Typography';
 
 const styles = StyleSheet.create({
 	container: {
@@ -64,12 +64,8 @@ const ButtonBase: React.FunctionComponent<
 				color={labelColor}
 				label={label}
 				fontSize={FontSizeTokens.xl}
-				textDecorationLine={
-					TypographyDecorationToken.none
-				}
-				textTransform={
-					TypographyTransformToken.uppercase
-				}
+				textDecorationLine={FontDecorationToken.none}
+				textTransform={FontTransformToken.uppercase}
 			/>
 			{loading && (
 				<ActivityIndicator

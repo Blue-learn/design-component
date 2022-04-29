@@ -1,12 +1,12 @@
 import { ColorTokens } from '../colors';
 
-export enum TypographyDecorationToken {
+export enum FontDecorationToken {
 	none = 'none',
 	underline = 'underline',
 	lineThrough = 'line-through',
 }
 
-export enum TypographyTransformToken {
+export enum FontTransformToken {
 	none = 'none',
 	uppercase = 'uppercase',
 	lowercase = 'lowercase',
@@ -48,8 +48,8 @@ export type TypographyBaseProps = {
 	fontSize?: FontSizeTokens;
 	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
-	textDecorationLine?: TypographyDecorationToken;
-	textTransform?: TypographyTransformToken;
+	textDecorationLine?: FontDecorationToken;
+	textTransform?: FontTransformToken;
 };
 
 export type TypographyProps = {
@@ -58,6 +58,6 @@ export type TypographyProps = {
 	fontSize?: FontSizeTokens;
 	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
-	textDecorationLine?: TypographyDecorationToken;
-	textTransform?: TypographyTransformToken;
+	textDecorationLine?: FontDecorationToken;
+	textTransform?: FontTransformToken;
 };
