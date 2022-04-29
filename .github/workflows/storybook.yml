@@ -11,18 +11,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
-      - name: Install and Build
+      - name: Build Schema
         run: |
           cd packages/schema
           npm run build
+      - name: Build Theme
+        run: |
           cd ..
           cd theme
           npm run build
+      - name: Build Component
+        run: |
           cd ..
           cd component
           npm run build
+      - name: Build Storybook
+        run: |
           cd ..
-          cd ..         
+          cd ..           
           npm run build-storybook
 
       - name: Deploy
