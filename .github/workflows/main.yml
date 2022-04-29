@@ -30,6 +30,9 @@ jobs:
             - name: Install Dependency
             - run: npm run bootstrap
 
+            - name: Copy node_module
+            - run: cp -a node_modules/. packages/theme/node_modules/
+
             - name: Build
             - run: npm run build
 
