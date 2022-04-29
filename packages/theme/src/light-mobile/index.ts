@@ -5,6 +5,7 @@ import { FontFamilyTokensMap } from '../FontFamily';
 import { spaceTypeTokensMap } from './space';
 import { borderRadiusTypeTokensMap } from './cornerRadius';
 import { inputTypeTokensMap } from './textInput';
+import { topBarTypeTokensMap } from './topbar';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -13,4 +14,5 @@ export const lightMobileTheme: ThemeTokens = {
 	borderRadius: borderRadiusTypeTokensMap,
 	spaces: spaceTypeTokensMap,
 	textInput: inputTypeTokensMap,
+	topBar: topBarTypeTokensMap,
 };

@@ -56,11 +56,11 @@ const TextInput: React.FunctionComponent<
 			>
 				{leftElement ? leftElement : null}
 				<TextInputBase
-					{...props}
-					{...buttonThemeProps}
 					isDisabled={
 						inputType === inputTypeToken.disabled
 					}
+					{...buttonThemeProps}
+					{...props}
 				/>
 				{rightElement ? rightElement : null}
 			</View>
@@ -79,11 +79,11 @@ const TextInput: React.FunctionComponent<
 				]}
 			>
 				<TextInputBase
-					{...props}
-					{...buttonThemeProps}
 					isDisabled={
 						inputType === inputTypeToken.disabled
 					}
+					{...buttonThemeProps}
+					{...props}
 				/>
 			</View>
 		);
