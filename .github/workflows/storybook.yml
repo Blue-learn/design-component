@@ -14,8 +14,6 @@ jobs:
       - name: Install and Build
         run: |
           cd packages/schema && npm run build
-          cd packages/theme && npm run build
-          cd packages/component && npm run build
           npm run build-storybook
 
       - name: Deploy
