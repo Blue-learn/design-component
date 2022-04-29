@@ -13,7 +13,16 @@ jobs:
 
       - name: Install and Build
         run: |
-          cd packages/schema && npm run build
+          cd packages/schema
+          npm run build
+          cd ..
+          cd theme
+          npm run build
+          cd ..
+          cd component
+          npm run build
+          cd ..
+          cd ..         
           npm run build-storybook
 
       - name: Deploy
