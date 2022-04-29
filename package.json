@@ -23,11 +23,12 @@
   "scripts": {
     "storybook-init": "npx sb init -f --type react",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -V",
+    "build-storybook": "build-storybook",
     "bootstrap": "npx lerna bootstrap",
     "build": "lerna run build",
-    "publish-all": "lerna publish --force-publish",
-    "check-pending-publish": "npm run lerna updated",
+    "publish-force": "lerna publish --force-publish -ci",
+    "publish-git": "lerna publish from-git --yes",
+    "publish-pending": "lerna updated",
     "build-storybook-docs": "build-storybook --docs"
   },
   "devDependencies": {
