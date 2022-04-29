@@ -11,7 +11,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: false,
 			rightIcon2: true,
 			cta: false,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.mainpageWithTwoicon]: {
@@ -20,7 +20,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: true,
 			rightIcon2: true,
 			cta: false,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.mainpageNestedTab]: {
@@ -29,7 +29,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: false,
 			rightIcon2: false,
 			cta: false,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.subpage]: {
@@ -38,7 +38,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: false,
 			rightIcon2: true,
 			cta: false,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.subpageWithTwoIcon]: {
@@ -47,7 +47,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: true,
 			rightIcon2: true,
 			cta: false,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.subpageWithCta]: {
@@ -56,7 +56,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: false,
 			rightIcon2: false,
 			cta: true,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.subpageWithCtaAndIcon]: {
@@ -65,7 +65,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: false,
 			rightIcon2: true,
 			cta: true,
-			Avatar: false,
+			avatar: false,
 			subTitle: false,
 		},
 		[topBarTypeToken.subpageWithSubTitle]: {
@@ -74,7 +74,7 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 			rightIcon1: true,
 			rightIcon2: true,
 			cta: false,
-			Avatar: false,
+			avatar: false,
 			subTitle: true,
 		},
 		[topBarTypeToken.subpageWithSubTitleNestedTab]:
@@ -84,27 +84,27 @@ export const topBarTypeTokensMap: TopBarTypeTokensMap =
 				rightIcon1: true,
 				rightIcon2: true,
 				cta: false,
-				Avatar: false,
+				avatar: false,
 				subTitle: true,
 			},
-		[topBarTypeToken.subpageWithSubTitleAndAvatar]:
+		[topBarTypeToken.subpageWithSubTitleAndavatar]:
 			{
 				nestedTab: false,
 				leftIcon: true,
 				rightIcon1: true,
 				rightIcon2: true,
 				cta: false,
-				Avatar: true,
+				avatar: true,
 				subTitle: true,
 			},
-		[topBarTypeToken.subpageWithSubTitleAndAvatarAndOneIcon]:
+		[topBarTypeToken.subpageWithSubTitleAndavatarAndOneIcon]:
 			{
 				nestedTab: false,
 				leftIcon: true,
 				rightIcon1: false,
 				rightIcon2: true,
 				cta: false,
-				Avatar: true,
+				avatar: true,
 				subTitle: true,
 			},
 	};

@@ -11,6 +11,7 @@ import {
 	TypographyBaseProps,
 	FontDecorationToken,
 	FontTransformToken,
+	FontSizeTokensMap,
 } from '@blue-learn/schema';
 
 /**
@@ -43,7 +44,7 @@ const TypographyBase: React.FunctionComponent<
 				fontFamily: fontFamilyMapping[fontFamily],
 				fontWeight: FontWeightTokens[fontWeight],
 				color: colorMapping[color],
-				fontSize: FontSizeTokens[fontSize],
+				fontSize: FontSizeTokensMap[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}

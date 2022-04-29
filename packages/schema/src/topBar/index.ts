@@ -8,8 +8,8 @@ export enum topBarTypeToken {
 	subpageWithCtaAndIcon = 'subpageWithCtaAndIcon',
 	subpageWithSubTitle = 'subpageWithTitle',
 	subpageWithSubTitleNestedTab = 'subpageWithTitleNestedTab',
-	subpageWithSubTitleAndAvatar = 'subpageWithSubTitleAndAvatar',
-	subpageWithSubTitleAndAvatarAndOneIcon = 'subpageWithSubTitleAndAvatarAndOneIcon',
+	subpageWithSubTitleAndavatar = 'subpageWithSubTitleAndavatar',
+	subpageWithSubTitleAndavatarAndOneIcon = 'subpageWithSubTitleAndavatarAndOneIcon',
 }
 
 export type TopBarProps = {
@@ -22,7 +22,7 @@ export type TopBarBaseProps = {
 	rightIcon1?: boolean;
 	rightIcon2?: boolean;
 	cta?: boolean;
-	Avatar?: boolean;
+	avatar?: boolean;
 	subTitle?: boolean;
 	label?: string;
 	subTitleLabel?: string;
@@ -35,7 +35,7 @@ export type topBarThemeProps = {
 	rightIcon1?: boolean;
 	rightIcon2?: boolean;
 	cta?: boolean;
-	Avatar?: boolean;
+	avatar?: boolean;
 	subTitle?: boolean;
 };
 

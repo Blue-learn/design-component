@@ -1,29 +1,30 @@
-import { TopBarProps } from '@blue-learn/schema';
+import {
+	ColorTokensMap,
+	TopBarProps,
+	topBarThemeProps,
+} from '@blue-learn/schema';
 import React, { memo } from 'react';
-import { StyleSheet } from 'react-native';
 import TopBarBase from './TopBar.base';
+import ThemeProvider from '@blue-learn/theme';
 
 /**
  * Primary UI component for user interaction
  */
 
-const styles = StyleSheet.create({
-	// container: {
-	// 	display: 'flex',
-	// 	flexDirection: 'row',
-	// 	alignItems: 'center',
-	// 	justifyContent: 'space-between',
-	// 	overflow: 'hidden',
-	// },
-});
-
 const TopBar: React.FunctionComponent<
 	TopBarProps
-> = ({ topBarType }) => {
+> = ({ topBarType, ...props }) => {
+	const theme = ThemeProvider.getTheme();
+	const colorMapping: ColorTokensMap =
+		theme.colors;
+	const topBarThemeProps: topBarThemeProps =
+		theme.topBar[topBarType];
 	/**
 	 *  logic -> base-component(...props)
 	 * */
-	return <TopBarBase />;
+	return (
+		<TopBarBase {...topBarThemeProps} {...props} />
+	);
 };
 
 export default memo(TopBar);
