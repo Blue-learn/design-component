@@ -27,6 +27,7 @@ export type TopBarBaseProps = {
 	label?: string;
 	subTitleLabel?: string;
 	ctaLabel?: string;
+	avatarUrl?: string;
 };
 
 export type topBarThemeProps = {
