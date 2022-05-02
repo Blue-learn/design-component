@@ -3,4 +3,6 @@ lib
 .idea
 storybook-static
 yarn-error.log
-/package-lock.json
+docs
+package-lock.json
+yarn-lock.json

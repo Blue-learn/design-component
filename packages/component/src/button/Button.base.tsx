@@ -1,21 +1,17 @@
+import React, { memo } from 'react';
 import {
 	ButtonBaseProps,
-	ButtonSize,
-	ButtonType,
 	ColorTokens,
+	ColorTokensMap,
 	CornerRadiusTokens,
-	FontSizeTokens,
-	FontDecorationToken,
-	FontTransformToken,
 } from '@blue-learn/schema';
-import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
 	StyleSheet,
 	Text,
 } from 'react-native';
-import Typography from '../typography/Typography';
+import ThemeProvider from '@blue-learn/theme';
 
 const styles = StyleSheet.create({
 	container: {
@@ -25,9 +21,12 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 	},
 	indicator: {
+		// position: 'absolute',
+		// right: 8,
 		marginLeft: 8,
 	},
 });
+
 /**
  * Raw Component with Derived props + Theme
  */
@@ -36,42 +35,69 @@ const ButtonBase: React.FunctionComponent<
 > = ({
 	onPress,
 	label = 'Button',
-	type = ButtonType.Filled,
-	size = ButtonSize.Medium,
 	loading = false,
 	bgColor = ColorTokens.Blue_600,
-	labelColor = ColorTokens.White,
+	labelColor = ColorTokens.Black,
 	borderRadius = CornerRadiusTokens.BR4,
-	paddingVertical = 8,
+	paddingVertical = CornerRadiusTokens.BR4,
+	borderColor,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
+
+	const theme = ThemeProvider.getTheme();
+
+	const borderRadiusValue =
+		theme.borderRadius[borderRadius];
+
+	const borderColorValue =
+		theme.colors[borderColor];
+
+	const backgroundColorValue =
+		theme.colors[bgColor];
+
+	const labelColorValue: ColorTokensMap =
+		theme.colors[labelColor];
+
+	const paddingValue: ColorTokensMap =
+		theme.space[paddingVertical];
 
 	return (
 		<Pressable
 			style={[
 				styles.container,
 				{
-					backgroundColor: bgColor,
-					borderRadius,
-					paddingVertical,
+					backgroundColor: backgroundColorValue,
+					borderRadius: borderRadiusValue,
+					paddingVertical: paddingValue,
+					borderColor: borderColorValue,
+					borderWidth: borderColor ? 1 : 0,
+					// shadowOffset: {
+					// 	width: 1,
+					// 	height: 2,
+					// },
+					// shadowOpacity: 0.3,
+					// shadowRadius: 2,
 				},
 			]}
 			onPress={onPress}
 		>
-			<Typography
-				color={labelColor}
-				label={label}
-				fontSize={FontSizeTokens.xl}
-				textDecorationLine={FontDecorationToken.none}
-				textTransform={FontTransformToken.uppercase}
-			/>
+			{label && (
+				<Text
+					style={{
+						color: labelColorValue,
+						fontWeight: 600,
+					}}
+				>
+					{label}
+				</Text>
+			)}
 			{loading && (
 				<ActivityIndicator
 					style={styles.indicator}
 					animating
-					color='#fff'
+					color={labelColorValue}
 				/>
 			)}
 		</Pressable>
