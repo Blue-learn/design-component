@@ -4,8 +4,6 @@ import { buttonTypeTokensMap } from './button';
 import { borderRadiusTypeTokensMap } from './cornerRadius';
 import { spaceTypeTokensMap } from './space';
 import { FontFamilyTokensMap } from '../FontFamily';
-import { spaceTypeTokensMap } from './space';
-import { borderRadiusTypeTokensMap } from './cornerRadius';
 import { inputTypeTokensMap } from './textInput';
 
 export const lightMobileTheme: ThemeTokens = {
@@ -14,7 +12,6 @@ export const lightMobileTheme: ThemeTokens = {
 	borderRadius: borderRadiusTypeTokensMap,
 	space: spaceTypeTokensMap,
 	fontFamily: FontFamilyTokensMap,
-	borderRadius: borderRadiusTypeTokensMap,
 	spaces: spaceTypeTokensMap,
 	textInput: inputTypeTokensMap,
 };

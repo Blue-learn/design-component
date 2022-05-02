@@ -14,7 +14,6 @@ export type ThemeTokens = {
 	space: SpaceTypeTokensMap;
 	fontFamily: FontFamilyTokensMap;
 	spaces: SpaceTypeTokensMap;
-	borderRadius: CornerRadiusTokensMap;
 	textInput: InputTypeTokensMap;
 };
 
