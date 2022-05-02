@@ -14,19 +14,38 @@ export enum FontTransformToken {
 }
 
 export enum FontSizeTokens {
-	'2xs' = 10,
-	'xs' = 12,
-	'sm' = 14,
-	'md' = 16,
-	'lg' = 18,
-	'xl' = 20,
-	'2xl' = 24,
-	'3xl' = 28,
-	'4xl' = 32,
-	'5xl' = 40,
-	'6xl' = 48,
-	'7xl' = 60,
+	'2xs' = '2xs',
+	'xs' = 'xs',
+	'sm' = 'sm',
+	'md' = 'md',
+	'lg' = 'lg',
+	'xl' = 'xl',
+	'2xl' = '2xl',
+	'3xl' = '3xl',
+	'4xl' = '4xl',
+	'5xl' = '5xl',
+	'6xl' = '6xl',
+	'7xl' = '7xl',
 }
+
+export type FontSizeTokensMap = {
+	[key in FontFamilyTokens]: string;
+};
+
+export const FontSizeTokensMap = {
+	[FontSizeTokens['2xs']]: 10,
+	[FontSizeTokens['xs']]: 12,
+	[FontSizeTokens['sm']]: 14,
+	[FontSizeTokens['md']]: 16,
+	[FontSizeTokens['lg']]: 18,
+	[FontSizeTokens['xl']]: 20,
+	[FontSizeTokens['2xl']]: 24,
+	[FontSizeTokens['3xl']]: 28,
+	[FontSizeTokens['4xl']]: 32,
+	[FontSizeTokens['5xl']]: 40,
+	[FontSizeTokens['6xl']]: 48,
+	[FontSizeTokens['7xl']]: 60,
+};
 
 export enum FontFamilyTokens {
 	'openSans' = 'open-sans',
