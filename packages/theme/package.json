@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/theme",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
@@ -22,7 +22,7 @@
     "publish": "npm publish"
   },
   "devDependencies": {
-    "@blue-learn/schema": "^0.0.5",
+    "@blue-learn/schema": "^0.0.6",
     "typescript": "^4.5.5"
   },
   "bugs": {
