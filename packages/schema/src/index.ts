@@ -4,6 +4,7 @@ export * from './typography';
 export * from './colors';
 export * from './cornerRadius';
 export * from './space';
+export * from './textInput';
 export * from './enums';
 export * from './types';
-export * from './TextStyle';
+export * from './space';

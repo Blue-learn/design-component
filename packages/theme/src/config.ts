@@ -4,6 +4,7 @@ import {
 	CornerRadiusTokensMap,
 	SpaceTypeTokensMap,
 	FontFamilyTokensMap,
+	InputTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -12,6 +13,8 @@ export type ThemeTokens = {
 	borderRadius: CornerRadiusTokensMap;
 	space: SpaceTypeTokensMap;
 	fontFamily: FontFamilyTokensMap;
+	spaces: SpaceTypeTokensMap;
+	textInput: InputTypeTokensMap;
 };
 
 export enum THEMES {
