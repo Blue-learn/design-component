@@ -24,10 +24,11 @@ const Template = (args: CardProps) =>
 
 export const CardTest = Template.bind({});
 CardTest.args = {
-	heading: 'asd',
-	description: 'asdasd',
+	heading: '',
+	description: '',
 	loading: false,
 	type: CardTypeTokens.Normal,
+	onButtonPress: null,
 };
 CardTest.argTypes = {
 	type: {

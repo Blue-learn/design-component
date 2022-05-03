@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 const CardBase: React.FunctionComponent<
 	CardBaseProps
 > = ({
-	onButtonPress,
+	onButtonPress = ()=>{},
 	heading = '',
 	description = '',
 	headingColor = '#2D3748',
@@ -122,6 +122,7 @@ const CardBase: React.FunctionComponent<
 			<Button
 				label = {heading ? "Completed" : "Add Headline"}
 				type = {heading ? ButtonTypeTokens.MediumOutline : ButtonTypeTokens.MediumSoftFilled}
+				onPress = {onButtonPress}
 			/>
 			{loading && (
 				<ActivityIndicator
