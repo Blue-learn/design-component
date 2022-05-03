@@ -1,5 +1,6 @@
 export * from './shimmer';
 export * from './button';
+export * from './card';
 export * from './typography';
 export * from './colors';
 export * from './cornerRadius';

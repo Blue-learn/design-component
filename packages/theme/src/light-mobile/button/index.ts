@@ -80,7 +80,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.White,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.MD,
 			borderColor: ColorTokens.Grey_200,
 		},
 		[ButtonTypeTokens.SmallOutline]: {
@@ -88,7 +88,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.White,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.SM,
 			borderColor: ColorTokens.Grey_200,
 		},
 		[ButtonTypeTokens.IconOutline]: {
