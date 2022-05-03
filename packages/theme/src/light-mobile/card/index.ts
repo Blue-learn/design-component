@@ -18,6 +18,6 @@ export const cardTypeTokensMap: CardTypeTokensMap =
 		[CardTypeTokens.Normal]: {
 			borderRadius: CornerRadiusTokens.BR1,
 			bgColor: ColorTokens.Grey_50,
-			padding: SpaceTypeTokens.LG,
+			padding: SpaceTypeTokens.XL,
 		}
 	};
