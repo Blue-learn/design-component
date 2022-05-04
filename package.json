@@ -25,7 +25,7 @@
     "setup": "npm i",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "publish": "lerna publish --cd-version patch --force-publish --y --no-verify-access",
+    "publish": "lerna publish --canary --force-publish  --y",
     "storybook-start": "start-storybook -p 6006",
     "storybook-build": "build-storybook",
     "storybook-deploy": "storybook-to-ghpages"

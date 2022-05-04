@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/schema",
-  "version": "0.0.5",
+  "version": "0.0.11",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/schema#readme",
@@ -19,7 +19,7 @@
     "build": "tsc",
     "dev": "tsc -w",
     "version-bump": "npm version patch",
-    "publish": "npm publish"
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "typescript": "^4.5.5"
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "5de798a7cdad617e7c33ba10e9aaab16cef0e285",
+  "gitHead": "816853082542b624317fd220e296267213e8f3ed",
   "publishConfig": {
     "access": "public"
   }
