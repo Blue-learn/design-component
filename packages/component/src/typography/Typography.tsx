@@ -1,4 +1,7 @@
-import { TypographyProps } from '@blue-learn/schema';
+import {
+	TypographyBaseProps,
+	TypographyProps,
+} from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { TypographyBase } from './Typography.base';
 
@@ -12,6 +15,7 @@ const Typography: React.FunctionComponent<
 	/**
 	 *  logic -> base-component(...props)
 	 * */
+
 	return <TypographyBase {...props} />;
 };
 

@@ -6,11 +6,12 @@ import {
 	ColorTokensMap,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
-	FontTokens,
+	FontSizeTokens,
 	FontWeightTokens,
 	TypographyBaseProps,
-	TypographyDecoration,
-	TypographyTransform,
+	FontDecorationToken,
+	FontTransformToken,
+	FontSizeTokensMap,
 } from '@blue-learn/schema';
 
 /**
@@ -21,12 +22,12 @@ const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
 	label = 'Lorem ipsum dolor sit amet',
-	color = ColorTokens.Grey_50,
-	fontSize = FontTokens.sm,
+	color = ColorTokens.Black,
+	fontSize = FontSizeTokens.sm,
 	fontWeight = FontWeightTokens.normal,
-	fontFamily = FontFamilyTokens['open-sans'],
-	textDecorationLine = TypographyDecoration.none,
-	textTransform = TypographyTransform.none,
+	fontFamily = FontFamilyTokens.openSans,
+	textDecorationLine = FontDecorationToken.none,
+	textTransform = FontTransformToken.none,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
@@ -36,13 +37,14 @@ const TypographyBase: React.FunctionComponent<
 	/**
 	 * use fontSize,fontWeight, textDecorationLine, textTransform to full customise base component
 	 * */
+
 	return (
 		<Text
 			style={{
 				fontFamily: fontFamilyMapping[fontFamily],
 				fontWeight: FontWeightTokens[fontWeight],
 				color: colorMapping[color],
-				fontSize: fontSize,
+				fontSize: FontSizeTokensMap[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}

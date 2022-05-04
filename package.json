@@ -21,13 +21,14 @@
     "url": "https://blue-learn.github.io/design-component/"
   },
   "scripts": {
-    "storybook-init": "npx sb init -f --type react",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -- -o docs",
-    "bootstrap": "npx lerna bootstrap",
+    "clean": "sh scripts/clean.sh",
+    "setup": "npm i",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "publish-all": "lerna publish --force-publish",
-    "check-pending-publish": "npm run lerna updated"
+    "publish": "lerna publish --canary --force-publish  --y",
+    "storybook-start": "start-storybook -p 6006",
+    "storybook-build": "build-storybook",
+    "storybook-deploy": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
@@ -36,6 +37,7 @@
     "@storybook/addon-links": "^6.4.22",
     "@storybook/addon-react-native-web": "^0.0.18",
     "@storybook/react": "^6.4.22",
+    "@storybook/storybook-deployer": "^2.8.11",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.17.5",
     "lerna": "^4.0.0",
@@ -43,5 +45,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-native-web": "^0.17.5"
+  },
+  "storybook-deployer": {
+    "gitUsername": "BL-GitBot",
+    "gitEmail": "github@bluelearn.in",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
   }
 }

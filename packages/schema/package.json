@@ -1,9 +1,9 @@
 {
   "name": "@blue-learn/schema",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
-  "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
+  "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/schema#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,15 +14,12 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Blue-learn/design-component.git"
-  },
+  "repository": "ssh://git@github.com:Blue-learn/design-component.git",
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
     "version-bump": "npm version patch",
-    "publish": "npm publish"
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "typescript": "^4.5.5"
@@ -30,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "da289e25ca9abdcdb700d1db655f186ed1eb42fc",
+  "gitHead": "816853082542b624317fd220e296267213e8f3ed",
   "publishConfig": {
     "access": "public"
   }
