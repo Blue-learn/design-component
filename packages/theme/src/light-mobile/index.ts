@@ -4,6 +4,7 @@ import { buttonTypeTokensMap } from './button';
 import { borderRadiusTypeTokensMap } from './cornerRadius';
 import { spaceTypeTokensMap } from './space';
 import { FontFamilyTokensMap } from '../FontFamily';
+import { shadowTypeTokensMap } from './shadow';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -11,4 +12,5 @@ export const lightMobileTheme: ThemeTokens = {
 	borderRadius: borderRadiusTypeTokensMap,
 	space: spaceTypeTokensMap,
 	fontFamily: FontFamilyTokensMap,
+	shadow: shadowTypeTokensMap,
 };

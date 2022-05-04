@@ -7,3 +7,4 @@ export * from './space';
 export * from './enums';
 export * from './types';
 export * from './TextStyle';
+export * from './shadow';
