@@ -8,3 +8,4 @@ export * from './textInput';
 export * from './enums';
 export * from './types';
 export * from './space';
+export * from './chatCard';
