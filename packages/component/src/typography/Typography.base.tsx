@@ -28,6 +28,7 @@ const TypographyBase: React.FunctionComponent<
 	fontFamily = FontFamilyTokens.openSans,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
+	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
@@ -48,6 +49,7 @@ const TypographyBase: React.FunctionComponent<
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}
+			{...props}
 		>
 			{label}
 		</Text>

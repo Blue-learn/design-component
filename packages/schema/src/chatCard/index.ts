@@ -25,6 +25,7 @@ export type ChatCardBaseProps = {
 	labelColor?: ColorTokens;
 	nameText?: string;
 	avatarUrl?: string;
+	timeStamp?: string;
 	borderRadius?: number;
 	padding?: number;
 	linkUrl?: string;

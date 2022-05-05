@@ -21,7 +21,8 @@ export const TextBox = Template.bind({});
 TextBox.args = {
 	label:
 		'Are bro how was the video? Hope you had fun watching it. It was wildd',
-	type: ChatCardTypeTokens.sender,
+	type: ChatCardTypeTokens.receiver,
+	timeStamp: '12:00 AM',
 };
 
 TextBox.argTypes = {
