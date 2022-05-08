@@ -7,6 +7,6 @@ export * from './space';
 export * from './textInput';
 export * from './enums';
 export * from './types';
-export * from './TextStyle';
+// export * from './TextStyle';
 export * from './shadow';
 export * from './space';
