@@ -17,6 +17,7 @@ export type ThemeTokens = {
 	shadow: ShadowTypeTokensMap;
 	spaces: SpaceTypeTokensMap;
 	textInput: InputTypeTokensMap;
+	icon: any;
 };
 
 export enum THEMES {

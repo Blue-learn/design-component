@@ -37,7 +37,7 @@ const ButtonBase: React.FunctionComponent<
 	onPress,
 	label = 'Button',
 	loading = false,
-	bgColor = ColorTokens.Blue_600,
+	bgColor = ColorTokens.Aqua_10,
 	labelColor = ColorTokens.Black,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = CornerRadiusTokens.BR4,

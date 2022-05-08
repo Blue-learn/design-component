@@ -50,5 +50,9 @@
     "gitUsername": "BL-GitBot",
     "gitEmail": "github@bluelearn.in",
     "commitMessage": "Deploy Storybook to GitHub Pages"
+  },
+  "dependencies": {
+    "react-native-svg": "^12.3.0",
+    "react-native-svg-web": "^1.0.9"
   }
 }
