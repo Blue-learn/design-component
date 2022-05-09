@@ -10,3 +10,4 @@ export * from './types';
 // export * from './TextStyle';
 export * from './shadow';
 export * from './space';
+export * from './icon';

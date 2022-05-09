@@ -6,6 +6,8 @@ import {
 	FontFamilyTokensMap,
 	ShadowTypeTokensMap,
 	InputTypeTokensMap,
+	IconTypeTokensMap,
+	IconSizeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -17,6 +19,8 @@ export type ThemeTokens = {
 	shadow: ShadowTypeTokensMap;
 	spaces: SpaceTypeTokensMap;
 	textInput: InputTypeTokensMap;
+	icon: IconTypeTokensMap;
+	iconSize: IconSizeTokensMap;
 };
 
 export enum THEMES {
