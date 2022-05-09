@@ -28,12 +28,16 @@ const TypographyBase: React.FunctionComponent<
 	fontFamily = FontFamilyTokens.openSans,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
+	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
 		theme.colors;
 	const fontFamilyMapping: FontFamilyTokensMap =
 		theme.fontFamily;
+
+	const fontSizeMapping: FontSizeTokensMap =
+		theme.fontSize;
 	/**
 	 * use fontSize,fontWeight, textDecorationLine, textTransform to full customise base component
 	 * */
@@ -44,10 +48,11 @@ const TypographyBase: React.FunctionComponent<
 				fontFamily: fontFamilyMapping[fontFamily],
 				fontWeight: FontWeightTokens[fontWeight],
 				color: colorMapping[color],
-				fontSize: FontSizeTokensMap[fontSize],
+				fontSize: fontSizeMapping[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}
+			{...props}
 		>
 			{label}
 		</Text>
