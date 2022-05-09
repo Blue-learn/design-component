@@ -9,7 +9,7 @@ import { SpaceTypeTokens } from '../space';
 export type IconProps = {
 	name: string;
 
-	size?: number;
+	size?: IconSizeTokens;
 
 	color?: ColorTokens;
 };
@@ -19,9 +19,28 @@ export enum IconTokens {
 	Edit = 'edit',
 }
 
+export enum IconSizeTokens {
+	'2xs' = '2xs',
+	'xs' = 'xs',
+	'sm' = 'sm',
+	'md' = 'md',
+	'lg' = 'lg',
+	'xl' = 'xl',
+	'2xl' = '2xl',
+	'3xl' = '3xl',
+	'4xl' = '4xl',
+	'5xl' = '5xl',
+	'6xl' = '6xl',
+	'7xl' = '7xl',
+}
+
+export type IconSizeTokensMap = {
+	[key in IconSizeTokens]: number;
+};
+
 /**
  * Internal Props for Theme
  * */
 export type IconTypeTokensMap = {
-	[key in IconTokens]: any;
+	[key in IconTokens]: IconProps;
 };

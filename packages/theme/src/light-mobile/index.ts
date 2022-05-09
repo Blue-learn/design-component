@@ -6,7 +6,10 @@ import { spaceTypeTokensMap } from './space';
 import { FontFamilyTokensMap } from '../FontFamily';
 import { shadowTypeTokensMap } from './shadow';
 import { inputTypeTokensMap } from './textInput';
-import { iconTokensMap } from '../icons';
+import {
+	IconSizeTokensMap,
+	iconTokensMap,
+} from '../icons';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -18,4 +21,5 @@ export const lightMobileTheme: ThemeTokens = {
 	spaces: spaceTypeTokensMap,
 	textInput: inputTypeTokensMap,
 	icon: iconTokensMap,
+	iconSize: IconSizeTokensMap,
 };

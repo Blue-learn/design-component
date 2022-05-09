@@ -5,14 +5,15 @@ import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokens,
 	IconProps,
+	IconSizeTokens,
 } from '@blue-learn/schema';
 import { memo } from 'react';
 
 const Icon: React.FunctionComponent<
 	IconProps
 > = ({
-	name = 'chat',
-	size = 24,
+	name,
+	size = IconSizeTokens['2xl'],
 	color = ColorTokens.Black,
 }) => {
 	/**
@@ -22,7 +23,15 @@ const Icon: React.FunctionComponent<
 
 	const Icon = theme.icon[name];
 
-	return <Icon size={size} color={color} />;
+	const icon_size = theme.iconSize[size];
+
+	const icon_color = theme.colors[color];
+
+	if (!name) return <></>;
+
+	return (
+		<Icon size={icon_size} color={icon_color} />
+	);
 };
 
 export default memo(Icon);
