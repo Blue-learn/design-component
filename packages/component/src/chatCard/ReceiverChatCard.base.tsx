@@ -8,6 +8,7 @@ import {
 	SpaceTypeTokens,
 	SpaceTypeTokensMap,
 	FontDecorationToken,
+	FontWeightTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -19,8 +20,11 @@ import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
 
 const styles = StyleSheet.create({
-	container: {},
-	imageConteiner: {
+	row: {
+		flexDirection: 'row',
+		alignItems: 'center',
+	},
+	imageContainer: {
 		alignSelf: 'center',
 		height: 180,
 		width: 135,
@@ -41,6 +45,11 @@ const styles = StyleSheet.create({
 		height: 36,
 		width: 36,
 	},
+	avatar: {
+		height: 24,
+		width: 24,
+		borderRadius: 12,
+	},
 });
 
 /**
@@ -54,8 +63,8 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	labelColor = ColorTokens.Grey_500,
 	borderRadius = CornerRadiusTokens.BR2,
 	padding = SpaceTypeTokens.MD,
-	avatarUrl,
-	nameText,
+	avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
+	nameText = 'lorem ipsum',
 	timeStamp,
 	imageUrl,
 	videoThumbnailUrl,
@@ -82,7 +91,6 @@ const ReceiverChatCardBase: React.FunctionComponent<
 		<View>
 			<View
 				style={[
-					styles.container,
 					{
 						backgroundColor: backgroundColorValue,
 						borderRadius: borderRadiusValue,
@@ -92,6 +100,37 @@ const ReceiverChatCardBase: React.FunctionComponent<
 					},
 				]}
 			>
+				{nameText && (
+					<View
+						style={[
+							styles.row,
+							{
+								marginBottom:
+									theme.space[SpaceTypeTokens.MD],
+							},
+						]}
+					>
+						<Image
+							source={{
+								uri: avatarUrl,
+							}}
+							resizeMode='cover'
+							style={[
+								styles.avatar,
+								{
+									marginRight:
+										theme.space[SpaceTypeTokens.MD],
+								},
+							]}
+						/>
+						<Typography
+							label={nameText}
+							color={ColorTokens.Grey_400}
+							fontSize={FontSizeTokens.xs}
+							fontWeight={FontWeightTokens['semi-bold']}
+						/>
+					</View>
+				)}
 				{imageUrl && (
 					<TouchableOpacity onPres={onPress}>
 						<Image
@@ -100,7 +139,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							}}
 							resizeMode='cover'
 							style={[
-								styles.imageConteiner,
+								styles.imageContainer,
 								{
 									marginBottom: label
 										? theme.space[SpaceTypeTokens.SM]
@@ -135,7 +174,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							}}
 							resizeMode='cover'
 							style={[
-								styles.imageConteiner,
+								styles.imageContainer,
 								{
 									marginBottom: label
 										? theme.space[SpaceTypeTokens.SM]
