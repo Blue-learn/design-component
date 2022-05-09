@@ -1,3 +1,5 @@
 export enum WIDGET {
-    BUTTON ='BUTTON'
+	BUTTON = 'BUTTON',
+	SPACE = 'SPACE',
+	ICON = 'ICON',
 }
