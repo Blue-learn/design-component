@@ -1,15 +1,11 @@
 import {
-	ButtonSize,
-	ButtonType,
 	ButtonTypeTokens,
 	ButtonTypeTokensMap,
 	ColorTokens,
 	CornerRadiusTokens,
+	ShadowTypeTokens,
 	SpaceTypeTokens,
 } from '@blue-learn/schema';
-import { colorTokensMap } from '../../colors';
-import { borderRadiusTypeTokensMap } from '../cornerRadius';
-import { spaceTypeTokensMap } from '../space';
 
 export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
@@ -18,6 +14,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.White,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.LG,
+			shadow: null,
 		},
 		[ButtonTypeTokens.MediumFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
@@ -80,7 +77,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.White,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.MD,
 			borderColor: ColorTokens.Grey_200,
 		},
 		[ButtonTypeTokens.SmallOutline]: {
@@ -88,7 +85,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.White,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.SM,
 			borderColor: ColorTokens.Grey_200,
 		},
 		[ButtonTypeTokens.IconOutline]: {
@@ -111,14 +108,14 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: null,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.MD,
 		},
 		[ButtonTypeTokens.SmallGhost]: {
 			// size: ButtonSize.Large,
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: null,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.SM,
 		},
 		[ButtonTypeTokens.IconGhost]: {
 			// size: ButtonSize.Large,
@@ -133,20 +130,23 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.LG,
+			shadow: ShadowTypeTokens.E1,
 		},
 		[ButtonTypeTokens.MediumElevated]: {
 			// size: ButtonSize.Large,
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.MD,
+			shadow: ShadowTypeTokens.E1,
 		},
 		[ButtonTypeTokens.SmallElevated]: {
 			// size: ButtonSize.Large,
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
-			paddingVertical: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.SM,
+			shadow: ShadowTypeTokens.E1,
 		},
 		[ButtonTypeTokens.IconElevated]: {
 			// size: ButtonSize.Large,
@@ -154,5 +154,6 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.LG,
+			shadow: ShadowTypeTokens.E1,
 		},
 	};
