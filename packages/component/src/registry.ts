@@ -4,6 +4,6 @@ import { WIDGET } from '@blue-learn/schema';
 const registry = {
 	[WIDGET.BUTTON]: Button,
 	[WIDGET.SPACE]: Space,
-  [WIDGET.ICON]: Icon,
-  
+	[WIDGET.ICON]: Icon,
+};
 export { registry as WidgetRegistry };
