@@ -8,11 +8,13 @@ import {
 	InputTypeTokensMap,
 	IconTypeTokensMap,
 	IconSizeTokensMap,
+	ChipTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
 	colors: ColorTokensMap;
 	button: ButtonTypeTokensMap;
+	chip: ChipTypeTokensMap;
 	borderRadius: CornerRadiusTokensMap;
 	space: SpaceTypeTokensMap;
 	fontFamily: FontFamilyTokensMap;

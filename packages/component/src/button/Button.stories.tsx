@@ -9,7 +9,7 @@ import {
 import { CommonWidgetProps } from '../mock';
 
 export default {
-	title: 'Example/Button',
+	title: 'Atoms/Button',
 	component: Button,
 	argTypes: {
 		label: 'Default Button',
@@ -20,14 +20,14 @@ const Template = (args: ButtonProps) =>
 	CommonWidgetProps.renderItem({
 		id: 'id____',
 		type: WIDGET.BUTTON,
-		props: { ...args, label: 'Hello World' },
+		props: { ...args },
 	});
 
 export const Large = Template.bind({});
 Large.args = {
 	label: 'All Buttons',
 	loading: false,
-	type: ButtonTypeTokens.LargeFilled,
+	type: ButtonTypeTokens.MediumFilled,
 };
 Large.argTypes = {
 	type: {

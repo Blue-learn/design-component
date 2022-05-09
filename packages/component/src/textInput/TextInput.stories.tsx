@@ -6,7 +6,7 @@ import React from 'react';
 import TextInput from './TextInput';
 
 export default {
-	title: 'Example/textInput',
+	title: 'Atoms/TextInput',
 	component: TextInput,
 	argTypes: {
 		inputType: inputTypeToken.default,

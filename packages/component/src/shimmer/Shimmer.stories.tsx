@@ -3,10 +3,12 @@ import React from 'react';
 import { Shimmer } from './Shimmer';
 
 export default {
-	title: 'Shimmer',
+	title: 'Atoms/Shimmer',
 	component: Shimmer,
 };
-const Template = (args: ShimmerProps) => <Shimmer {...args} />;
+const Template = (args: ShimmerProps) => (
+	<Shimmer {...args} />
+);
 export const Default = Template.bind({});
 Default.args = {
 	width: 400,
