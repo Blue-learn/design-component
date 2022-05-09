@@ -25,9 +25,11 @@ const TypographyBase: React.FunctionComponent<
 	color = ColorTokens.Black,
 	fontSize = FontSizeTokens.sm,
 	fontWeight = FontWeightTokens.normal,
-	fontFamily = FontFamilyTokens.openSans,
+	fontFamily = FontFamilyTokens.manropeRegular,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
+	ellipsizeMode,
+	numberOfLines,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();

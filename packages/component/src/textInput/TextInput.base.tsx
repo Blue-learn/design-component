@@ -29,7 +29,7 @@ const TextInputBase: React.FunctionComponent<
 	size = FontSizeTokens.md,
 	bgColor = ColorTokens.White,
 	fontWeight = FontWeightTokens.normal,
-	fontFamily = FontFamilyTokens.openSans,
+	fontFamily = FontFamilyTokens.manropeRegular,
 	paddingVertical = SpaceTypeTokens.LG,
 	...props
 }) => {
@@ -46,7 +46,6 @@ const TextInputBase: React.FunctionComponent<
 	/**
 	 * use fontSize,fontWeight to full customise base component
 	 * */
-	console.log(isDisabled);
 
 	return (
 		<TextInput

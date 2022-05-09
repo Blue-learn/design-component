@@ -5,5 +5,9 @@ import {
 
 export const fontFamilyTokensMap: FontFamilyTokensMap =
 	{
-		[FontFamilyTokens.openSans]: 'Open Sans',
+		[FontFamilyTokens.manropeRegular]:
+			'Manrope-Regular',
+		[FontFamilyTokens.manropeSemiBold]:
+			'Manrope-SemiBold',
+		[FontFamilyTokens.manropeBold]: 'Manrope-Bold',
 	};
