@@ -1,17 +1,18 @@
-import React, { memo } from 'react';
 import {
 	ButtonBaseProps,
 	ColorTokens,
 	ColorTokensMap,
 	CornerRadiusTokens,
+	ShadowThemeProps,
 } from '@blue-learn/schema';
+import ThemeProvider from '@blue-learn/theme';
+import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
 	StyleSheet,
 	Text,
 } from 'react-native';
-import ThemeProvider from '@blue-learn/theme';
 
 const styles = StyleSheet.create({
 	container: {
@@ -36,10 +37,11 @@ const ButtonBase: React.FunctionComponent<
 	onPress,
 	label = 'Button',
 	loading = false,
-	bgColor = ColorTokens.Blue_600,
+	bgColor = ColorTokens.Aqua_10,
 	labelColor = ColorTokens.Black,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = CornerRadiusTokens.BR4,
+	shadow,
 	borderColor,
 }) => {
 	/**
@@ -63,6 +65,9 @@ const ButtonBase: React.FunctionComponent<
 	const paddingValue: ColorTokensMap =
 		theme.space[paddingVertical];
 
+	const shadowValue: ShadowThemeProps =
+		theme.shadow[shadow];
+
 	return (
 		<Pressable
 			style={[
@@ -73,12 +78,13 @@ const ButtonBase: React.FunctionComponent<
 					paddingVertical: paddingValue,
 					borderColor: borderColorValue,
 					borderWidth: borderColor ? 1 : 0,
-					// shadowOffset: {
-					// 	width: 1,
-					// 	height: 2,
-					// },
-					// shadowOpacity: 0.3,
-					// shadowRadius: 2,
+					shadowOffset: shadowValue?.shadowOffset || {
+						height: 0,
+						width: 0,
+					},
+					shadowOpacity:
+						shadowValue?.shadowOpacity || 0,
+					shadowRadius: shadowValue?.shadowRadius || 0,
 				},
 			]}
 			onPress={onPress}

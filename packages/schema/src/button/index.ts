@@ -1,5 +1,6 @@
 import { ColorTokens } from '../colors';
 import { CornerRadiusTokens } from '../cornerRadius';
+import { ShadowTypeTokens } from '../shadow';
 import { SpaceTypeTokens } from '../space';
 
 export enum ButtonType {
@@ -53,7 +54,7 @@ export type ButtonBaseProps = {
 	bgColor?: ColorTokens;
 	borderColor?: ColorTokens;
 	borderRadius?: CornerRadiusTokens;
-	elevation?: any;
+	shadow?: ShadowTypeTokens;
 	paddingVertical: SpaceTypeTokens;
 	/**
 	 * Button Loading State default false
@@ -71,6 +72,7 @@ export type ButtonThemeProps = {
 	bgColor: ColorTokens;
 	paddingVertical: SpaceTypeTokens;
 	borderColor?: ColorTokens;
+	shadow?: ShadowTypeTokens;
 };
 
 //--todo add more Diff Combination for Button
