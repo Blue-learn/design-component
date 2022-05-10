@@ -1,8 +1,10 @@
 import {
+	IconSizeTokens,
 	inputTypeToken,
 	TextInputProps,
 } from '@blue-learn/schema';
 import React from 'react';
+import Icon from '../icon/Icon';
 import TextInput from './TextInput';
 
 export default {
@@ -23,6 +25,29 @@ Input.args = {
 };
 
 Input.argTypes = {
+	inputType: {
+		control: { type: 'radio' },
+		options: [
+			...Object.values(inputTypeToken).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
+};
+
+export const InputWithIcon = Template.bind({});
+
+InputWithIcon.args = {
+	inputType: inputTypeToken.chat,
+	leftElement: (
+		<Icon name='search' size={IconSizeTokens.sm} />
+	),
+	rightElement: (
+		<Icon name='cross' size={IconSizeTokens.lg} />
+	),
+};
+
+InputWithIcon.argTypes = {
 	inputType: {
 		control: { type: 'radio' },
 		options: [

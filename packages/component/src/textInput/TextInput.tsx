@@ -1,9 +1,10 @@
 import {
 	TextInputProps,
 	inputTypeToken,
-	ColorTokens,
 	ColorTokensMap,
 	InputThemeProps,
+	SpaceTypeTokensMap,
+	SpaceTypeTokens,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -16,11 +17,10 @@ import ThemeProvider from '@blue-learn/theme';
 
 const styles = StyleSheet.create({
 	container: {
-		display: 'flex',
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		overflow: 'hidden',
+		borderWidth: 1,
 	},
 });
 
@@ -41,16 +41,25 @@ const TextInput: React.FunctionComponent<
 	const buttonThemeProps: InputThemeProps =
 		theme.textInput[inputType];
 
+	const spaceTokenMapping: SpaceTypeTokensMap =
+		theme.spaces;
+
 	if (leftElement || rightElement) {
 		return (
 			<View
 				style={[
 					styles.container,
 					{
-						backgroundColor: ColorTokens.Transparent,
+						backgroundColor:
+							colorMapping[buttonThemeProps.bgColor],
 						borderRadius: buttonThemeProps.borderRadius,
 						borderColor: buttonThemeProps.borderColor,
-						borderWidth: 1,
+						paddingLeft: leftElement
+							? spaceTokenMapping[SpaceTypeTokens.LG]
+							: 0,
+						paddingRight: rightElement
+							? spaceTokenMapping[SpaceTypeTokens.LG]
+							: 0,
 					},
 				]}
 			>
