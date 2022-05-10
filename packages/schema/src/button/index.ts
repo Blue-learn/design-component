@@ -32,7 +32,10 @@ export type ButtonProps = {
 	 */
 	type: ButtonTypeTokens;
 	iconName?: IconTokens;
+	// Default iconAlignment - left
 	iconAlignment?: 'left' | 'right';
+	// Default width - content
+	width?: 'full' | 'content';
 	/**
 	 * Button Loading State default false
 	 */
@@ -61,6 +64,8 @@ export type ButtonBaseProps = {
 	shadow?: ShadowTypeTokens;
 	paddingVertical: SpaceTypeTokens;
 	fontSize?: FontSizeTokens;
+	width?: 'full' | 'content';
+	paddingHorizontal: SpaceTypeTokens;
 	/**
 	 * Button Loading State default false
 	 */
@@ -79,6 +84,7 @@ export type ButtonThemeProps = {
 	borderColor?: ColorTokens;
 	shadow?: ShadowTypeTokens;
 	fontSize?: FontSizeTokens;
+	paddingHorizontal: SpaceTypeTokens;
 };
 
 //--todo add more Diff Combination for Button

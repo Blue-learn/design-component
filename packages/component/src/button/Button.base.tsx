@@ -16,6 +16,7 @@ import {
 	Pressable,
 	StyleSheet,
 	Text,
+	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
@@ -25,13 +26,7 @@ const styles = StyleSheet.create({
 	container: {
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: '100%',
 		flexDirection: 'row',
-	},
-	indicator: {
-		// position: 'absolute',
-		// right: 8,
-		marginLeft: 8,
 	},
 });
 
@@ -53,6 +48,8 @@ const ButtonBase: React.FunctionComponent<
 	fontSize = FontSizeTokens.lg,
 	iconAlignment = 'left',
 	iconName,
+	width = 'content',
+	paddingHorizontal = SpaceTypeTokens['4XL'],
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -77,70 +74,87 @@ const ButtonBase: React.FunctionComponent<
 	const shadowValue: ShadowThemeProps =
 		theme.shadow[shadow];
 
+	const paddingHorizontalValue =
+		theme.space[paddingHorizontal];
+
 	return (
-		<Pressable
-			style={[
-				styles.container,
-				{
-					backgroundColor: backgroundColorValue,
-					borderRadius: borderRadiusValue,
-					paddingVertical: paddingValue,
-					borderColor: borderColorValue,
-					borderWidth: borderColor ? 1 : 0,
-					shadowOffset: shadowValue?.shadowOffset || {
-						height: 0,
-						width: 0,
-					},
-					shadowOpacity:
-						shadowValue?.shadowOpacity || 0,
-					shadowRadius: shadowValue?.shadowRadius || 0,
-				},
-			]}
-			onPress={onPress}
+		<View
+			style={
+				width === 'content'
+					? {
+							justifyContent: 'flex-start',
+							alignItems: 'flex-start',
+					  }
+					: {}
+			}
 		>
-			{iconAlignment === 'left' &&
-				!loading &&
-				iconName && (
-					<>
-						<Icon
-							name={iconName}
-							size={fontSize as any}
-							color={labelColor}
-						/>
-						<Space size={8} />
-					</>
+			<Pressable
+				style={[
+					styles.container,
+					{
+						backgroundColor: backgroundColorValue,
+						borderRadius: borderRadiusValue,
+						paddingVertical: paddingValue,
+						borderColor: borderColorValue,
+						borderWidth: borderColor ? 1 : 0,
+						shadowOffset: shadowValue?.shadowOffset || {
+							height: 0,
+							width: 0,
+						},
+						shadowOpacity:
+							shadowValue?.shadowOpacity || 0,
+						shadowRadius:
+							shadowValue?.shadowRadius || 0,
+						paddingHorizontal: paddingHorizontalValue,
+					},
+				]}
+				onPress={onPress}
+			>
+				{iconAlignment === 'left' &&
+					!loading &&
+					iconName && (
+						<>
+							<Icon
+								name={iconName}
+								size={fontSize as any}
+								color={labelColor}
+							/>
+							{label && <Space size={8} />}
+						</>
+					)}
+
+				{label && (
+					<Typography
+						label={label}
+						color={labelColor}
+						fontWeight={FontWeightTokens['semi-bold']}
+						fontSize={fontSize}
+					/>
 				)}
 
-			{label && (
-				<Typography
-					label={label}
-					color={labelColor}
-					fontWeight={FontWeightTokens['semi-bold']}
-					fontSize={fontSize}
-				/>
-			)}
-
-			{loading && (
-				<ActivityIndicator
-					style={styles.indicator}
-					animating
-					color={labelColorValue}
-				/>
-			)}
-
-			{iconAlignment === 'right' &&
-				iconName &&
-				!loading && (
-					<>
-						<Space size={8} />
-						<Icon
-							name={iconName}
-							size={fontSize as any}
-							color={labelColor}
-						/>
-					</>
+				{loading && (
+					<ActivityIndicator
+						style={{ marginLeft: label ? 8 : 0 }}
+						animating
+						color={labelColorValue}
+					/>
 				)}
-		</Pressable>
+
+				{iconAlignment === 'right' &&
+					iconName &&
+					!loading && (
+						<>
+							{label && <Space size={8} />}
+
+							<Icon
+								name={iconName}
+								size={fontSize as any}
+								color={labelColor}
+							/>
+						</>
+					)}
+			</Pressable>
+		</View>
 	);
 };
 export default memo(ButtonBase);
