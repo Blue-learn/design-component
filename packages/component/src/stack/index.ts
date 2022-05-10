@@ -1,2 +1,3 @@
 import HStack from './HStack';
-export { HStack };
+import VStack from './VStack';
+export { HStack, VStack };
