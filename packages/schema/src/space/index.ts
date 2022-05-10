@@ -6,9 +6,9 @@ export enum SpaceTypeTokens {
 	XL = 'xl',
 }
 
-// export type BaseSpaceProps = {
-// 	size: number;
-// };
+export type SpaceProps = {
+	size: number;
+};
 
 export type SpaceTypeTokensMap = {
 	[key in SpaceTypeTokens]: number;

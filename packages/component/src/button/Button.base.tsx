@@ -1,17 +1,25 @@
-import React, { memo } from 'react';
 import {
 	ButtonBaseProps,
 	ColorTokens,
 	ColorTokensMap,
 	CornerRadiusTokens,
+	FontSizeTokens,
+	FontWeightTokens,
+	IconSizeTokens,
+	ShadowThemeProps,
+	SpaceTypeTokens,
 } from '@blue-learn/schema';
+import ThemeProvider from '@blue-learn/theme';
+import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
 	StyleSheet,
 	Text,
 } from 'react-native';
-import ThemeProvider from '@blue-learn/theme';
+import Icon from '../icon/Icon';
+import Space from '../space/Space';
+import Typography from '../typography/Typography';
 
 const styles = StyleSheet.create({
 	container: {
@@ -34,13 +42,17 @@ const ButtonBase: React.FunctionComponent<
 	ButtonBaseProps
 > = ({
 	onPress,
-	label = 'Button',
+	label,
 	loading = false,
-	bgColor = ColorTokens.Blue_600,
+	bgColor = ColorTokens.Aqua_10,
 	labelColor = ColorTokens.Black,
 	borderRadius = CornerRadiusTokens.BR4,
-	paddingVertical = CornerRadiusTokens.BR4,
+	paddingVertical = SpaceTypeTokens.LG,
+	shadow,
 	borderColor,
+	fontSize = FontSizeTokens.lg,
+	iconAlignment = 'left',
+	iconName,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -57,11 +69,13 @@ const ButtonBase: React.FunctionComponent<
 	const backgroundColorValue =
 		theme.colors[bgColor];
 
-	const labelColorValue: ColorTokensMap =
-		theme.colors[labelColor];
+	const labelColorValue = theme.colors[labelColor];
 
-	const paddingValue: ColorTokensMap =
+	const paddingValue =
 		theme.space[paddingVertical];
+
+	const shadowValue: ShadowThemeProps =
+		theme.shadow[shadow];
 
 	return (
 		<Pressable
@@ -73,26 +87,39 @@ const ButtonBase: React.FunctionComponent<
 					paddingVertical: paddingValue,
 					borderColor: borderColorValue,
 					borderWidth: borderColor ? 1 : 0,
-					// shadowOffset: {
-					// 	width: 1,
-					// 	height: 2,
-					// },
-					// shadowOpacity: 0.3,
-					// shadowRadius: 2,
+					shadowOffset: shadowValue?.shadowOffset || {
+						height: 0,
+						width: 0,
+					},
+					shadowOpacity:
+						shadowValue?.shadowOpacity || 0,
+					shadowRadius: shadowValue?.shadowRadius || 0,
 				},
 			]}
 			onPress={onPress}
 		>
+			{iconAlignment === 'left' &&
+				!loading &&
+				iconName && (
+					<>
+						<Icon
+							name={iconName}
+							size={fontSize as any}
+							color={labelColor}
+						/>
+						<Space size={8} />
+					</>
+				)}
+
 			{label && (
-				<Text
-					style={{
-						color: labelColorValue,
-						fontWeight: 600,
-					}}
-				>
-					{label}
-				</Text>
+				<Typography
+					label={label}
+					color={labelColor}
+					fontWeight={FontWeightTokens['semi-bold']}
+					fontSize={fontSize}
+				/>
 			)}
+
 			{loading && (
 				<ActivityIndicator
 					style={styles.indicator}
@@ -100,6 +127,19 @@ const ButtonBase: React.FunctionComponent<
 					color={labelColorValue}
 				/>
 			)}
+
+			{iconAlignment === 'right' &&
+				iconName &&
+				!loading && (
+					<>
+						<Space size={8} />
+						<Icon
+							name={iconName}
+							size={fontSize as any}
+							color={labelColor}
+						/>
+					</>
+				)}
 		</Pressable>
 	);
 };
