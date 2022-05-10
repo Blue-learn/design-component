@@ -22,7 +22,7 @@ const StackBase: React.FunctionComponent<
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
 
-	if (childrenTemplate.length > 0) {
+	if (childrenTemplate?.length > 0) {
 		return (
 			<>
 				{childrenTemplate.map((item) => {

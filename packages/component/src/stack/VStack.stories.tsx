@@ -1,44 +1,39 @@
-import {
-	HStackProps,
-	WIDGET,
-} from '@blue-learn/schema';
+import { HStackProps } from '@blue-learn/schema';
 import React from 'react';
 import { View } from 'react-native';
-import { CommonWidgetProps } from '../mock';
-import HStack from './HStack';
+import { VStack } from './VStack';
 
 export default {
-	title: 'Example/Stack/HStack',
-	component: HStack,
+	title: 'Example/Stack/VStack',
+	component: VStack,
 };
 
 const Template = (args: HStackProps) => (
-	<HStack {...args}>
+	<VStack {...args}>
 		<View
 			style={{
 				backgroundColor: '#000',
 				height: 50,
-				width: 50,
-				marginRight: 4,
+				width: 100,
 			}}
 		/>
 		<View
 			style={{
 				backgroundColor: '#000',
 				height: 10,
-				width: 50,
-				marginRight: 4,
+				width: 120,
+				marginTop: 4,
 			}}
 		/>
 		<View
 			style={{
 				backgroundColor: '#000',
 				height: 80,
-				width: 50,
-				marginRight: 4,
+				width: 150,
+				marginTop: 4,
 			}}
 		/>
-	</HStack>
+	</VStack>
 );
 
 // const Template = (args: HStackProps) =>
@@ -65,9 +60,9 @@ const Template = (args: HStackProps) => (
 // 		},
 // 	});
 
-export const HStackComponent = Template.bind({});
+export const VStackComponent = Template.bind({});
 
-HStackComponent.argTypes = {
+VStackComponent.argTypes = {
 	justifyContent: {
 		control: 'select',
 		options: [
