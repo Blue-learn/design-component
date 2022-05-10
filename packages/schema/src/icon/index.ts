@@ -17,6 +17,12 @@ export type IconProps = {
 export enum IconTokens {
 	Chat = 'chat',
 	Edit = 'edit',
+	Search = 'search',
+	Upload = 'upload',
+	Attachment = 'attachment',
+	Back = 'back',
+	PlusCircle = 'plus-circle',
+	Cross = 'cross',
 }
 
 export enum IconSizeTokens {

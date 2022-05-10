@@ -29,26 +29,13 @@ export enum FontSizeTokens {
 }
 
 export type FontSizeTokensMap = {
-	[key in FontFamilyTokens]: string;
-};
-
-export const FontSizeTokensMap = {
-	[FontSizeTokens['2xs']]: 10,
-	[FontSizeTokens['xs']]: 12,
-	[FontSizeTokens['sm']]: 14,
-	[FontSizeTokens['md']]: 16,
-	[FontSizeTokens['lg']]: 18,
-	[FontSizeTokens['xl']]: 20,
-	[FontSizeTokens['2xl']]: 24,
-	[FontSizeTokens['3xl']]: 28,
-	[FontSizeTokens['4xl']]: 32,
-	[FontSizeTokens['5xl']]: 40,
-	[FontSizeTokens['6xl']]: 48,
-	[FontSizeTokens['7xl']]: 60,
+	[key in FontSizeTokens]: number;
 };
 
 export enum FontFamilyTokens {
-	'openSans' = 'open-sans',
+	manropeSemiBold = 'Manrope-SemiBold',
+	manropeBold = 'Manrope-Bold',
+	manropeRegular = 'Manrope-Regular',
 }
 
 export type FontFamilyTokensMap = {
@@ -61,6 +48,13 @@ export enum FontWeightTokens {
 	'semi-bold' = 600,
 }
 
+export enum EllipsizeModeTokens {
+	head = 'head',
+	middle = 'middle',
+	tail = 'tail',
+	clip = 'clip',
+}
+
 export type TypographyBaseProps = {
 	label?: String;
 	color?: ColorTokens;
@@ -69,6 +63,8 @@ export type TypographyBaseProps = {
 	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: FontDecorationToken;
 	textTransform?: FontTransformToken;
+	ellipsizeMode?: EllipsizeModeTokens;
+	numberOfLines?: number;
 };
 
 export type TypographyProps = {
@@ -79,4 +75,6 @@ export type TypographyProps = {
 	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: FontDecorationToken;
 	textTransform?: FontTransformToken;
+	ellipsizeMode?: EllipsizeModeTokens;
+	numberOfLines?: number;
 };
