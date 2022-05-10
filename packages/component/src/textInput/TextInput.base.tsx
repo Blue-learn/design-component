@@ -58,13 +58,11 @@ const TextInputBase: React.FunctionComponent<
 				fontSize: size,
 				fontWeight: FontWeightTokens[fontWeight],
 				fontFamily: fontFamilyMapping[fontFamily],
-				borderRadius: borderRadius,
 				paddingHorizontal:
 					spaceTokenMapping[SpaceTypeTokens.LG],
 				paddingVertical:
 					spaceTokenMapping[SpaceTypeTokens.LG],
-				borderColor: colorMapping[borderColor],
-				borderWidth: 1,
+				outlineWidth: 0,
 			}}
 			textAlign='vertical'
 			{...props}
