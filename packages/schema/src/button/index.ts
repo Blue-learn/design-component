@@ -1,7 +1,9 @@
 import { ColorTokens } from '../colors';
 import { CornerRadiusTokens } from '../cornerRadius';
+import { IconTokens } from '../icon';
 import { ShadowTypeTokens } from '../shadow';
 import { SpaceTypeTokens } from '../space';
+import { FontSizeTokens } from '../typography';
 
 export enum ButtonType {
 	Filled = 'FILLED',
@@ -24,11 +26,13 @@ export type ButtonProps = {
 	/**
 	 * Button Label default Button
 	 */
-	label: String;
+	label?: String;
 	/**
 	 * Button Type default ButtonType.Filled
 	 */
 	type: ButtonTypeTokens;
+	iconName?: IconTokens;
+	iconAlignment?: 'left' | 'right';
 	/**
 	 * Button Loading State default false
 	 */
@@ -47,8 +51,8 @@ export type ButtonBaseProps = {
 	 * Button Label default Button
 	 */
 	label?: String;
-	labelColor?: string;
-	iconName?: string;
+	labelColor?: ColorTokens;
+	iconName?: IconTokens;
 	iconColor?: ColorTokens;
 	iconAlignment?: 'left' | 'right';
 	bgColor?: ColorTokens;
@@ -56,6 +60,7 @@ export type ButtonBaseProps = {
 	borderRadius?: CornerRadiusTokens;
 	shadow?: ShadowTypeTokens;
 	paddingVertical: SpaceTypeTokens;
+	fontSize?: FontSizeTokens;
 	/**
 	 * Button Loading State default false
 	 */
@@ -73,6 +78,7 @@ export type ButtonThemeProps = {
 	paddingVertical: SpaceTypeTokens;
 	borderColor?: ColorTokens;
 	shadow?: ShadowTypeTokens;
+	fontSize?: FontSizeTokens;
 };
 
 //--todo add more Diff Combination for Button

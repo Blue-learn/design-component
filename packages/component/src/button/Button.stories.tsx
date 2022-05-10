@@ -4,6 +4,7 @@ import {
 	ButtonProps,
 	ButtonType,
 	ButtonTypeTokens,
+	IconTokens,
 	WIDGET,
 } from '@blue-learn/schema';
 import { CommonWidgetProps } from '../mock';
@@ -20,7 +21,9 @@ const Template = (args: ButtonProps) =>
 	CommonWidgetProps.renderItem({
 		id: 'id____',
 		type: WIDGET.BUTTON,
-		props: { ...args, label: 'Hello World' },
+		props: {
+			...args,
+		},
 	});
 
 export const Large = Template.bind({});
@@ -37,5 +40,19 @@ Large.argTypes = {
 				(k) => typeof k === 'string',
 			),
 		],
+	},
+	iconName: {
+		control: 'select',
+		options: [
+			null,
+			...Object.values(IconTokens).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
+	iconAlignment: {
+		control: 'radio',
+		options: ['left', 'right'],
+		default: 'left',
 	},
 };
