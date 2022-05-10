@@ -1,8 +1,8 @@
 node_modules
 lib
 .idea
-storybook-static
 yarn-error.log
 docs
 package-lock.json
 yarn-lock.json
+/storybook-static/
