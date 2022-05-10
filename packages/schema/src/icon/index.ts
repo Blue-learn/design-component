@@ -23,6 +23,8 @@ export enum IconTokens {
 	Back = 'back',
 	PlusCircle = 'plus-circle',
 	Cross = 'cross',
+	ThreeDot = 'three-dot',
+	Download = 'download',
 }
 
 export enum IconSizeTokens {

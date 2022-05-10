@@ -13,6 +13,8 @@ import {
 	FontSizeTokens,
 	FontTransformToken,
 	FontWeightTokens,
+	IconSizeTokens,
+	IconTokens,
 	SpaceTypeTokens,
 	SpaceTypeTokensMap,
 	TopBarBaseProps,
@@ -20,6 +22,8 @@ import {
 import Typography from '../typography/Typography';
 import ThemeProvider from '@blue-learn/theme';
 import Button from '../button/Button';
+import Icon from '../icon/Icon';
+import Space from '../space/Space';
 
 /**
  * Raw Component with Derived props + Theme
@@ -79,14 +83,13 @@ const TopBarBase: React.FunctionComponent<
 				<View style={styles.rowContainer}>
 					{leftIcon ? (
 						<View
-							style={[
-								styles.icon,
-								{
-									marginRight:
-										spaceTokenMapping[SpaceTypeTokens.XL],
-								},
-							]}
-						/>
+							style={{
+								marginRight:
+									spaceTokenMapping[SpaceTypeTokens.XL],
+							}}
+						>
+							<Icon name={IconTokens.Back} />
+						</View>
 					) : null}
 					{avatar ? (
 						<Image
@@ -119,34 +122,30 @@ const TopBarBase: React.FunctionComponent<
 					</View>
 				</View>
 
-				<View style={styles.row}>
+				<View style={[styles.row]}>
 					{cta ? (
 						<Button
 							label={ctaLabel}
-							type={ButtonTypeTokens.SmallSoftFilled}
+							type={ButtonTypeTokens.SmallFilled}
 						/>
 					) : null}
 					{rightIcon1 ? (
 						<View
-							style={[
-								styles.icon,
-								{
-									marginHorizontal:
-										spaceTokenMapping[SpaceTypeTokens.MD],
-								},
-							]}
-						/>
+							style={{
+								flexDirection: 'row',
+								alignItems: 'center',
+							}}
+						>
+							<Icon
+								name={IconTokens.Chat}
+								color={ColorTokens.Blue_600}
+								size={IconSizeTokens.xl}
+							/>
+							<Space size={16} />
+						</View>
 					) : null}
 					{rightIcon2 ? (
-						<View
-							style={[
-								styles.icon,
-								{
-									marginHorizontal:
-										spaceTokenMapping[SpaceTypeTokens.MD],
-								},
-							]}
-						/>
+						<Icon name={IconTokens.ThreeDot} />
 					) : null}
 				</View>
 			</View>

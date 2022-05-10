@@ -12,6 +12,8 @@ import Search from '@blue-learn/component/src/icon/icon-list/Search';
 import Attachment from '@blue-learn/component/src/icon/icon-list/Attachment';
 import Back from '@blue-learn/component/src/icon/icon-list/Back';
 import Cross from '@blue-learn/component/src/icon/icon-list/Cross';
+import ThreeDot from '@blue-learn/component/src/icon/icon-list/ThreeDot';
+import Download from '@blue-learn/component/src/icon/icon-list/Download';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -22,6 +24,8 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Back]: Back,
 	[IconTokens.PlusCircle]: PlusCircle,
 	[IconTokens.Cross]: Cross,
+	[IconTokens.ThreeDot]: ThreeDot,
+	[IconTokens.Download]: Download,
 };
 
 export const IconSizeTokensMap = {
