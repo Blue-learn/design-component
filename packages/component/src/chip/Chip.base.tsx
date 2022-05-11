@@ -8,14 +8,20 @@ import {
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
-import { StyleSheet, View } from 'react-native';
+import {
+	StyleSheet,
+	View,
+	Pressable,
+	Text,
+} from 'react-native';
 
 const styles = StyleSheet.create({
 	container: {
+		marginEnd: 8,
+		marginBottom: 8,
+		paddingHorizontal: 24,
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: '100%',
-		flexDirection: 'row',
 	},
 });
 
@@ -24,7 +30,7 @@ const ChipBase: React.FunctionComponent<
 > = ({
 	onChange,
 	type = ChipTypeTokens.DEFAULT,
-	label = 'Chip',
+	label = 'Chips',
 	bgColor = ColorTokens.Blue_400,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = SpaceTypeTokens.MD,
@@ -48,10 +54,11 @@ const ChipBase: React.FunctionComponent<
 		theme.space[paddingVertical];
 
 	return (
-		<View
+		<Pressable
 			style={[
 				styles.container,
 				{
+					userSelect: 'none',
 					transition: 0.3,
 					borderRadius: borderRadiusValue,
 					backgroundColor: backgroundColorValue,
@@ -61,10 +68,10 @@ const ChipBase: React.FunctionComponent<
 					borderColor: borderColorValue,
 				},
 			]}
-			onChange={onChange}
+			onPress={onChange}
 		>
-			{label}
-		</View>
+			<Text>{label}</Text>
+		</Pressable>
 	);
 };
 

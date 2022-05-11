@@ -1,2 +1,2 @@
-import Chip from './Chip';
-export { Chip as Component };
+import Chips from './Chips';
+export { Chips as Component };

@@ -1,32 +1,35 @@
 import React from 'react';
-import Chip from './Chip';
+import Chips from './Chips';
 import {
-	ChipProps,
+	ChipsProps,
 	ChipTypeTokens,
 	WIDGET,
 } from '@blue-learn/schema';
 import { CommonWidgetProps } from '../mock';
 
 export default {
-	title: 'Atoms/Chip',
-	component: Chip,
-	argTypes: {
-		label: 'Default Chip',
-	},
+	title: 'Atoms/Chips',
+	component: Chips,
 };
 
-const Template = (args: ChipProps) =>
+const Template = (args: ChipsProps) =>
 	CommonWidgetProps.renderItem({
 		id: 'id____',
-		type: WIDGET.CHIP,
-		props: { ...args },
+		type: WIDGET.CHIPS,
+		props: {
+			...args,
+			options: [
+				{ value: 1, label: 'Foo' },
+				{ value: 2, label: 'Bar' },
+			],
+		},
 	});
 
 export const Default = Template.bind({});
 Default.args = {
-	input: false,
-	label: 'Chip label',
+	selectable: false,
 };
+
 // Default.argTypes = {
 // 	type: {
 // 		control: 'select',
@@ -37,9 +40,16 @@ Default.args = {
 // 		],
 // 	},
 // };
-export const Input = Template.bind({});
-Input.args = {
-	input: true,
-	label: 'Chip label',
-	checked: false,
+
+export const SelectableSingle = Template.bind({});
+SelectableSingle.args = {
+	selectable: true,
+	multiple: false,
+};
+export const SelectableMultiple = Template.bind(
+	{},
+);
+SelectableMultiple.args = {
+	selectable: true,
+	multiple: true,
 };

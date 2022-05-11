@@ -9,17 +9,31 @@ import { CornerRadiusTokens } from '../cornerRadius';
 import { ShadowTypeTokens } from '../shadow';
 import { SpaceTypeTokens } from '../space';
 
+export type ChipOption = {
+	value: unknown;
+	label: ReactNode;
+};
+
+export type ChipsProps = {
+	selectable?: false;
+	multiple?: boolean;
+	options?: ChipOption[];
+	selected: ChipOption | ChipOption[];
+	onValueChange?: Function;
+};
+
 export enum ChipTypeTokens {
 	DEFAULT = 'default',
 	CHECKED = 'checked',
 	UNCHECKED = 'unchecked',
 }
 
-export interface ChipBaseProps {
+export type ChipBaseProps = {
 	type: ChipTypeTokens;
 	label: ReactNode;
 	checked?: boolean;
-	onChange?(currentValue: unknown): Function;
+	value?: unknown;
+	onChange?: Function;
 
 	// theme props
 	labelColor?: ColorTokens;
@@ -28,14 +42,7 @@ export interface ChipBaseProps {
 	borderRadius?: CornerRadiusTokens;
 	shadow?: ShadowTypeTokens;
 	paddingVertical?: SpaceTypeTokens;
-}
-
-export interface ChipProps {
-	input: boolean;
-	label: ReactNode;
-	checked?: boolean;
-	onChange?(currentValue: unknown): Function;
-}
+};
 
 export type ChipThemeProps = {
 	labelColor: ColorTokens;
