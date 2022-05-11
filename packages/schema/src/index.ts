@@ -13,3 +13,4 @@ export * from './space';
 export * from './icon';
 export * from './stack';
 export * from './avatar';
+export * from './tabs';
