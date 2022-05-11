@@ -12,3 +12,4 @@ export * from './shadow';
 export * from './space';
 export * from './icon';
 export * from './stack';
+export * from './avatar';

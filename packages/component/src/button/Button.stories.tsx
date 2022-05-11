@@ -55,4 +55,9 @@ Large.argTypes = {
 		options: ['left', 'right'],
 		default: 'left',
 	},
+	width: {
+		control: 'radio',
+		options: ['content', 'full'],
+		default: 'content',
+	},
 };

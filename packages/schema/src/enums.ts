@@ -4,4 +4,5 @@ export enum WIDGET {
 	ICON = 'ICON',
 	HSTACK = 'HSTACK',
 	VSTACK = 'VSTACK',
+	AVATAR = 'AVATAR',
 }
