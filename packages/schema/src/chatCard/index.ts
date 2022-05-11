@@ -17,6 +17,7 @@ export type ChatCardProps = {
 	audioUrl?: string;
 	videoThumbnailUrl?: string;
 	onPress?: Function;
+	fileType?: string;
 };
 
 export type ChatCardBaseProps = {
@@ -33,4 +34,5 @@ export type ChatCardBaseProps = {
 	audioUrl?: string;
 	videoThumbnailUrl?: string;
 	onPress?: Function;
+	fileType?: string;
 };

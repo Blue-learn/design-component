@@ -7,8 +7,10 @@ import {
 	ChatCardBaseProps,
 	SpaceTypeTokens,
 	FontWeightTokens,
-	FontFamilyTokens,
 	FontTransformToken,
+	EllipsizeModeTokens,
+	IconTokens,
+	IconSizeTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -17,6 +19,8 @@ import {
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
+import Icon from '../icon/Icon';
+import Space from '../space/Space';
 
 const styles = StyleSheet.create({
 	rowContainer: {
@@ -38,6 +42,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 	labelColor = ColorTokens.Grey_500,
 	borderRadius = CornerRadiusTokens.BR2,
 	padding = SpaceTypeTokens.MD,
+	nameText = 'lorem ipsum',
 	imageUrl,
 	fileType,
 	linkUrl,
@@ -72,10 +77,11 @@ const ReplyChatCardBase: React.FunctionComponent<
 			<View style={{ width: '75%' }}>
 				<View style={{ paddingBottom: 4 }}>
 					<Typography
+						label={nameText}
 						fontWeight={FontWeightTokens['semi-bold']}
 						fontSize={FontSizeTokens.xs}
 						color={ColorTokens.Grey_400}
-						ellipsizeMode='tail'
+						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
 				</View>
@@ -84,7 +90,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						label={label}
 						color={labelColor}
 						fontSize={FontSizeTokens['2xs']}
-						ellipsizeMode='tail'
+						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
 				) : (
@@ -94,17 +100,14 @@ const ReplyChatCardBase: React.FunctionComponent<
 							alignItems: 'center',
 						}}
 					>
-						<View
-							style={{
-								height: 10,
-								width: 10,
-								marginRight: 6,
-								backgroundColor:
-									theme.colors[ColorTokens.Grey_400],
-							}}
+						<Icon
+							name={IconTokens.Attachment}
+							color={ColorTokens.Grey_400}
+							size={IconSizeTokens['2xs']}
 						/>
+						<Space size={4} />
 						<Typography
-							label={fileType}
+							label={fileType || label}
 							color={labelColor}
 							textTransform={
 								FontTransformToken.capitalize
@@ -119,7 +122,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						label={linkUrl}
 						color={labelColor}
 						fontSize={FontSizeTokens['2xs']}
-						ellipsizeMode='tail'
+						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
 				)}

@@ -11,3 +11,5 @@ export * from './shadow';
 export * from './space';
 export * from './chatCard';
 export * from './icon';
+export * from './stack';
+export * from './avatar';

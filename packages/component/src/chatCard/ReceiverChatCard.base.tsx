@@ -9,6 +9,8 @@ import {
 	SpaceTypeTokensMap,
 	FontDecorationToken,
 	FontWeightTokens,
+	ButtonTypeTokens,
+	IconTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -18,6 +20,7 @@ import {
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
+import Button from '../button/Button';
 
 const styles = StyleSheet.create({
 	row: {
@@ -39,11 +42,12 @@ const styles = StyleSheet.create({
 	},
 	videoPlayBtn: {
 		position: 'absolute',
-		alignSelf: 'center',
-		top: 72,
-		borderRadius: 20,
-		height: 36,
-		width: 36,
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	avatar: {
 		height: 24,
@@ -71,6 +75,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	audioUrl,
 	linkUrl,
 	onPress,
+	fileType,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -182,30 +187,23 @@ const ReceiverChatCardBase: React.FunctionComponent<
 								},
 							]}
 						/>
-						<TouchableOpacity
-							onPress={onPress}
-							style={[
-								styles.videoPlayBtn,
-								{
-									backgroundColor:
-										theme.colors[ColorTokens.Blue_100],
-								},
-							]}
-						></TouchableOpacity>
+						<View style={styles.videoPlayBtn}>
+							<Button
+								type={ButtonTypeTokens.IconElevated}
+								iconName={IconTokens.Play}
+								onPress={onPress}
+							/>
+						</View>
 					</View>
 				)}
 				{audioUrl && (
 					<View>
-						<TouchableOpacity
+						<Button
+							type={ButtonTypeTokens.IconElevated}
+							iconName={IconTokens.Play}
 							onPress={onPress}
-							style={[
-								styles.videoPlayBtn,
-								{
-									backgroundColor:
-										theme.colors[ColorTokens.Blue_100],
-								},
-							]}
-						></TouchableOpacity>
+						/>
+						<Typography label={fileType} />
 					</View>
 				)}
 				{linkUrl && (

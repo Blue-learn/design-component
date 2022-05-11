@@ -4,12 +4,13 @@ import {
 	FontDecorationToken,
 	TypographyProps,
 	FontTransformToken,
+	EllipsizeModeTokens,
 } from '@blue-learn/schema';
 import React from 'react';
 import Typography from './Typography';
 
 export default {
-	title: 'Example/Typography',
+	title: 'Example/typography',
 	component: Typography,
 	argTypes: {
 		label: 'Lorem ipsum dolor sit.',
@@ -29,6 +30,8 @@ Primary.args = {
 	textTransform: FontTransformToken.uppercase,
 	textDecorationLine:
 		FontDecorationToken.underline,
+	ellipsizeMode: EllipsizeModeTokens.tail,
+	numberOfLines: 0,
 };
 
 Primary.argTypes = {
@@ -60,6 +63,14 @@ Primary.argTypes = {
 		control: 'select',
 		options: [
 			...Object.values(FontDecorationToken).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
+	ellipsizeMode: {
+		control: 'select',
+		options: [
+			...Object.values(EllipsizeModeTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],
