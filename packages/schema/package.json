@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/schema",
-  "version": "0.0.11",
+  "version": "0.0.4-alpha",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/schema#readme",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "816853082542b624317fd220e296267213e8f3ed",
+  "gitHead": "9a4d1fe38471da90d83a99e1bd392f9d3a18844e",
   "publishConfig": {
     "access": "public"
   }
