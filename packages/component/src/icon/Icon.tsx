@@ -1,13 +1,11 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import ChatIcon from './icon-list/Chat';
+import React, { memo } from 'react';
 import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokens,
 	IconProps,
 	IconSizeTokens,
 } from '@blue-learn/schema';
-import { memo } from 'react';
+import { iconTokensMap } from './IconRegistry';
 
 const Icon: React.FunctionComponent<
 	IconProps
@@ -21,7 +19,7 @@ const Icon: React.FunctionComponent<
 	 * */
 	const theme = ThemeProvider.getTheme();
 
-	const Icon = theme.icon[name];
+	const Icon = iconTokensMap[name];
 
 	const icon_size = theme.iconSize[size];
 
