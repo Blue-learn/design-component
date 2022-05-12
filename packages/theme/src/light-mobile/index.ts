@@ -7,10 +7,7 @@ import { fontFamilyTokensMap } from '../fontFamily';
 import { inputTypeTokensMap } from './textInput';
 import { fontSizeTokensMap } from '../typography';
 import { shadowTypeTokensMap } from './shadow';
-import {
-	IconSizeTokensMap,
-	iconTokensMap,
-} from '../icons';
+import { IconSizeTokensMap } from '../icons';
 import { avatarTypeTokensMap } from './avatar';
 
 export const lightMobileTheme: ThemeTokens = {
@@ -23,7 +20,6 @@ export const lightMobileTheme: ThemeTokens = {
 	textInput: inputTypeTokensMap,
 	fontSize: fontSizeTokensMap,
 	shadow: shadowTypeTokensMap,
-	icon: iconTokensMap,
 	iconSize: IconSizeTokensMap,
 	avatarSize: avatarTypeTokensMap,
 };
