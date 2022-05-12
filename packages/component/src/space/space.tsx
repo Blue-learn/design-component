@@ -1,7 +1,6 @@
-import React from 'react';
-import { memo } from 'react';
-import { View, Text } from 'react-native';
 import { SpaceProps } from '@blue-learn/schema';
+import React, { memo } from 'react';
+import { View } from 'react-native';
 
 const Space: React.FunctionComponent<
 	SpaceProps
