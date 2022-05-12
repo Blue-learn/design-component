@@ -18,6 +18,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
+    "copy": "sh scripts/copy-dev.sh",
     "version-bump": "npm version patch",
     "publish": "npm publish --access public"
   },
@@ -28,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "5dc873f627276ac2aee5f4929a5ca9fbc8c32c1b",
+  "gitHead": "2906c283dd6a2c1683176c45124bd61b9422ac56",
   "publishConfig": {
     "access": "public"
   }
