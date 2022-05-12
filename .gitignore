@@ -3,6 +3,5 @@ lib
 .idea
 yarn-error.log
 docs
-package-lock.json
-yarn-lock.json
+lerna-debug.log
 /storybook-static/
