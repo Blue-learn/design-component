@@ -1,11 +1,9 @@
 import {
 	ButtonBaseProps,
 	ColorTokens,
-	ColorTokensMap,
 	CornerRadiusTokens,
 	FontSizeTokens,
 	FontWeightTokens,
-	IconSizeTokens,
 	ShadowThemeProps,
 	SpaceTypeTokens,
 } from '@blue-learn/schema';
@@ -15,7 +13,6 @@ import {
 	ActivityIndicator,
 	Pressable,
 	StyleSheet,
-	Text,
 	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
@@ -127,7 +124,7 @@ const ButtonBase: React.FunctionComponent<
 					<Typography
 						label={label}
 						color={labelColor}
-						fontWeight={FontWeightTokens['semi-bold']}
+						fontWeight={FontWeightTokens.bold}
 						fontSize={fontSize}
 					/>
 				)}

@@ -1,28 +1,4 @@
-import {
-	IconSizeTokens,
-	IconTokens,
-	IconTypeTokensMap,
-} from '@blue-learn/schema';
-
-import Chat from '@blue-learn/component/src/icon/icon-list/Chat';
-import Edit from '@blue-learn/component/src/icon/icon-list/Edit';
-import Upload from '@blue-learn/component/src/icon/icon-list/Upload';
-import PlusCircle from '@blue-learn/component/src/icon/icon-list/PlusCircle';
-import Search from '@blue-learn/component/src/icon/icon-list/Search';
-import Attachment from '@blue-learn/component/src/icon/icon-list/Attachment';
-import Back from '@blue-learn/component/src/icon/icon-list/Back';
-import Cross from '@blue-learn/component/src/icon/icon-list/Cross';
-
-export const iconTokensMap: IconTypeTokensMap = {
-	[IconTokens.Chat]: Chat,
-	[IconTokens.Edit]: Edit,
-	[IconTokens.Search]: Search,
-	[IconTokens.Upload]: Upload,
-	[IconTokens.Attachment]: Attachment,
-	[IconTokens.Back]: Back,
-	[IconTokens.PlusCircle]: PlusCircle,
-	[IconTokens.Cross]: Cross,
-};
+import { IconSizeTokens } from '@blue-learn/schema';
 
 export const IconSizeTokensMap = {
 	[IconSizeTokens['2xs']]: 10,

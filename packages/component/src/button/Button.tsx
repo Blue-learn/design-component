@@ -21,7 +21,11 @@ const Button: React.FunctionComponent<
 		theme.button[type];
 
 	return (
-		<ButtonBase {...buttonThemeProps} {...props} />
+		<ButtonBase
+			onPress={onPress}
+			{...buttonThemeProps}
+			{...props}
+		/>
 	);
 };
 

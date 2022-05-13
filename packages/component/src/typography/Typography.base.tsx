@@ -28,7 +28,7 @@ const TypographyBase: React.FunctionComponent<
 	fontFamily = FontFamilyTokens.manropeRegular,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
-	ellipsizeMode,
+	ellipSizeMode,
 	numberOfLines,
 	...props
 }) => {

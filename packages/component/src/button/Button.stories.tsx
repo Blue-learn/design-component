@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './Button';
 import {
 	ButtonProps,
-	ButtonType,
 	ButtonTypeTokens,
 	IconTokens,
 	WIDGET,
@@ -14,6 +13,11 @@ export default {
 	component: Button,
 	argTypes: {
 		label: 'Default Button',
+	},
+	parameters: {
+		actions: {
+			handles: ['click .btn'],
+		},
 	},
 };
 
@@ -60,4 +64,5 @@ Large.argTypes = {
 		options: ['content', 'full'],
 		default: 'content',
 	},
+	onPress: { action: 'clicked' },
 };
