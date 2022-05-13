@@ -1,23 +1,19 @@
 import * as React from 'react';
-import Svg, { Path } from 'react-native-svg';
 
 function EditIcon(props) {
 	return (
-		<Svg
+		<svg
 			width={props.size}
 			height={props.size}
-			viewBox='0 0 19 18'
+			viewBox='0 0 16 16'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
-			{...props}
 		>
-			<Path
-				fillRule='evenodd'
-				clipRule='evenodd'
-				d='M16.06.59l1.35 1.35c.79.78.79 2.05 0 2.83L4.18 18H0v-4.18L10.4 3.41 13.23.59c.78-.78 2.05-.78 2.83 0zM2 16l1.41.06 9.82-9.83-1.41-1.41L2 14.64V16z'
+			<path
+				d='M9.75482 3.18925L12.8095 6.24397L3.41629 15.6372H0.361572V12.5825L9.75482 3.18925ZM10.824 2.1201L12.5804 0.36364L15.6352 3.41836L13.8787 5.17482L10.824 2.1201Z'
 				fill={props.color}
 			/>
-		</Svg>
+		</svg>
 	);
 }
 
