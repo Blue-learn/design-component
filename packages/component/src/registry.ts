@@ -5,7 +5,8 @@ import {
 	HStack,
 	VStack,
 	Avatar,
-} from '../src';
+} from './index';
+
 import { WIDGET } from '@blue-learn/schema';
 
 const registry = {

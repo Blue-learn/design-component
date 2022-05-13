@@ -1,5 +1,10 @@
-import { Theme, THEMES, ThemeTokens } from './config';
+import {
+	Theme,
+	THEMES,
+	ThemeTokens,
+} from './config';
 import { lightMobileTheme } from './light-mobile';
+export * from './config';
 
 const themeTypes: Theme = {
 	[THEMES.LIGHT_MOBILE]: lightMobileTheme,
@@ -11,7 +16,9 @@ const ThemeProvider = () => {
 	let _initialized = false;
 	const initialize = (type: THEMES) => {
 		if (!_initialized) {
-			_theme = themeTypes[type] || themeTypes[THEMES.LIGHT_MOBILE];
+			_theme =
+				themeTypes[type] ||
+				themeTypes[THEMES.LIGHT_MOBILE];
 			_initialized = true;
 		}
 	};

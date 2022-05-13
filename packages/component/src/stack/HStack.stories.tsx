@@ -1,10 +1,10 @@
 import {
 	HStackProps,
-	WIDGET,
+	// WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import { View } from 'react-native';
-import { CommonWidgetProps } from '../mock';
+// import { CommonWidgetProps } from '../mock';
 import HStack from './HStack';
 
 export default {

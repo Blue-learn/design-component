@@ -25,6 +25,7 @@
     "setup": "npm i",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "copy": "lerna run copy",
     "publish": "lerna publish --canary --force-publish  --y",
     "storybook-start": "start-storybook -p 6006",
     "storybook-build": "build-storybook",
