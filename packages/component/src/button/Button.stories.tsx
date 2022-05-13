@@ -14,6 +14,11 @@ export default {
 	argTypes: {
 		label: 'Default Button',
 	},
+	parameters: {
+		actions: {
+			handles: ['click .btn'],
+		},
+	},
 };
 
 const Template = (args: ButtonProps) =>
@@ -59,4 +64,5 @@ Large.argTypes = {
 		options: ['content', 'full'],
 		default: 'content',
 	},
+	onPress: { action: 'clicked' },
 };
