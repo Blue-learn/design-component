@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/component",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "ssh://git@github.com:Blue-learn/design-component.git",
@@ -12,8 +12,8 @@
     "publish": "npm publish --access public"
   },
   "devDependencies": {
-    "@blue-learn/schema": "^0.0.13",
-    "@blue-learn/theme": "^0.0.13",
+    "@blue-learn/schema": "^0.0.14",
+    "@blue-learn/theme": "^0.0.14",
     "@types/react": "^17.0.38",
     "react": "^17.0.2",
     "react-native": "^0.67.1",
@@ -26,7 +26,7 @@
   "author": "Soumya Sethy<soumya@bluelearn.in>",
   "license": "ISC",
   "description": "",
-  "gitHead": "5dc873f627276ac2aee5f4929a5ca9fbc8c32c1b",
+  "gitHead": "6c9b1c4e3c122f016d5ad9c26f83c0031931c7fe",
   "publishConfig": {
     "access": "public"
   },

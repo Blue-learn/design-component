@@ -11,6 +11,7 @@ import Back from './icon-list/Back';
 import PlusCircle from './icon-list/PlusCircle';
 import Cross from './icon-list/Cross';
 import Check2 from './icon-list/Check2';
+import ThreeDots from './icon-list/ThreeDots';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -22,4 +23,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.PlusCircle]: PlusCircle,
 	[IconTokens.Cross]: Cross,
 	[IconTokens.CheckTwo]: Check2,
+	[IconTokens.ThreeDots]: ThreeDots,
 };
