@@ -2,6 +2,7 @@ import {
 	ButtonBaseProps,
 	ColorTokens,
 	CornerRadiusTokens,
+	FontFamilyTokens,
 	FontSizeTokens,
 	FontWeightTokens,
 	ShadowThemeProps,
@@ -124,7 +125,9 @@ const ButtonBase: React.FunctionComponent<
 					<Typography
 						label={label}
 						color={labelColor}
-						fontWeight={FontWeightTokens.bold}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
 						fontSize={fontSize}
 					/>
 				)}
