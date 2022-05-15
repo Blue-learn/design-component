@@ -1,7 +1,4 @@
-import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
-import { ShadowTypeTokens } from '../shadow';
-import { SpaceTypeTokens } from '../space';
+import {ColorTokens} from '../colors';
 
 /**
  * exposed to outside as props
@@ -23,6 +20,7 @@ export enum IconTokens {
 	Back = 'back',
 	PlusCircle = 'plus-circle',
 	Cross = 'cross',
+	ThreeDots = 'three-dots',
 }
 
 export enum IconSizeTokens {
