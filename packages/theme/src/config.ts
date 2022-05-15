@@ -25,6 +25,7 @@ export type ThemeTokens = {
 	avatarSize: AvatarTypeTokensMap;
 };
 
+export * from './light-mobile/divider';
 export enum THEMES {
 	LIGHT_MOBILE = 'light-mobile',
 	DARK_MOBILE = 'dark-mobile',
