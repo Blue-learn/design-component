@@ -1,6 +1,6 @@
 {
   "name": "@blue-learn/theme",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "> TODO: description",
   "author": "soumyasethy <soumya@bluelearn.in>",
   "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
@@ -23,13 +23,13 @@
     "publish": "npm publish --access public"
   },
   "devDependencies": {
-    "@blue-learn/schema": "^0.0.13",
+    "@blue-learn/schema": "^0.0.14",
     "typescript": "^4.5.5"
   },
   "bugs": {
     "url": "https://github.com/Blue-learn/design-component/issues"
   },
-  "gitHead": "2906c283dd6a2c1683176c45124bd61b9422ac56",
+  "gitHead": "6c9b1c4e3c122f016d5ad9c26f83c0031931c7fe",
   "publishConfig": {
     "access": "public"
   }
