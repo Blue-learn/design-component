@@ -1,4 +1,4 @@
-import {ColorTokens} from '../colors';
+import { ColorTokens } from '../colors';
 
 /**
  * exposed to outside as props
@@ -20,12 +20,15 @@ export enum IconTokens {
 	Back = 'back',
 	PlusCircle = 'plus-circle',
 	Cross = 'cross',
+	CheckTwo = 'check-two',
 	ThreeDots = 'three-dots',
 	LocationPin = 'location-pin',
 	RightArrow = 'right-arrow',
 	DownArrow = 'down-arrow',
 	Quotes = 'quotes',
 	Plus = 'plus',
+	Shuffle = 'shuffle',
+	MinusCircle = 'minus-circle',
 	InfoStatic = 'info-static',
 }
 
