@@ -3,7 +3,7 @@ import React from 'react';
 import { Shimmer } from './Shimmer';
 
 export default {
-	title: 'Atoms/Shimmer',
+	title: 'Example/Shimmer',
 	component: Shimmer,
 };
 const Template = (args: ShimmerProps) => (

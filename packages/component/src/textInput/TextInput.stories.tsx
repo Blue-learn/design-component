@@ -8,7 +8,7 @@ import Icon from '../icon/Icon';
 import TextInput from './TextInput';
 
 export default {
-	title: 'Atoms/TextInput',
+	title: 'Example/TextInput',
 	component: TextInput,
 	argTypes: {
 		inputType: inputTypeToken.default,

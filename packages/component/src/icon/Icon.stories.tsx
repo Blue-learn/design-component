@@ -9,7 +9,7 @@ import React from 'react';
 import Icon from './Icon';
 
 export default {
-	title: 'Atoms/Icon',
+	title: 'Example/Icon',
 	component: Icon,
 	color: '#fff',
 };

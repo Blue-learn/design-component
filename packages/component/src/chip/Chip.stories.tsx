@@ -8,7 +8,7 @@ import {
 import { CommonWidgetProps } from '../mock';
 
 export default {
-	title: 'Atoms/Chips',
+	title: 'Example/Chips',
 	component: Chips,
 };
 
