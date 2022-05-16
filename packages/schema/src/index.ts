@@ -14,3 +14,5 @@ export * from './icon';
 export * from './stack';
 export * from './avatar';
 export * from './tabs';
+export * from './divider';
+

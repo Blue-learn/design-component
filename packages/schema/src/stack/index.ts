@@ -25,6 +25,7 @@ export interface StackBaseProps {
 	bgColor?: ColorTokens;
 	borderRadius?: CornerRadiusTokens;
 	childrenTemplate?: WidgetItem[];
+	children: JSX.Element[] | JSX.Element
 }
 
 export interface HStackProps {
@@ -34,6 +35,7 @@ export interface HStackProps {
 	bgColor?: ColorTokens;
 	borderRadius?: CornerRadiusTokens;
 	childrenTemplate?: WidgetItem[];
+	children: JSX.Element[] | JSX.Element
 }
 
 export interface VStackProps {
@@ -43,4 +45,5 @@ export interface VStackProps {
 	bgColor?: ColorTokens;
 	borderRadius?: CornerRadiusTokens;
 	childrenTemplate?: WidgetItem[];
+	children: JSX.Element[] | JSX.Element
 }
