@@ -18,6 +18,7 @@ import DownArrow from './icon-list/DownArrow';
 import Quotes from './icon-list/Quotes';
 import Plus from './icon-list/Plus';
 import Shuffle from './icon-list/Shuffle';
+import MinusCircle from './icon-list/MinusCircle';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -36,4 +37,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Quotes]: Quotes,
 	[IconTokens.Plus]: Plus,
 	[IconTokens.Shuffle]: Shuffle,
+	[IconTokens.MinusCircle]: MinusCircle,
 };

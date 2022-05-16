@@ -28,6 +28,7 @@ export enum IconTokens {
 	Quotes = 'quotes',
 	Plus = 'plus',
 	Shuffle = 'shuffle',
+	MinusCircle = 'minus-circle',
 }
 
 export enum IconSizeTokens {
