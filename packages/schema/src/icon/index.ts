@@ -22,6 +22,11 @@ export enum IconTokens {
 	Cross = 'cross',
 	CheckTwo = 'check-two',
 	ThreeDots = 'three-dots',
+	LocationPin = 'location-pin',
+	RightArrow = 'right-arrow',
+	DownArrow = 'down-arrow',
+	Quotes = 'quotes',
+	Plus = 'plus',
 }
 
 export enum IconSizeTokens {

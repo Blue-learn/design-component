@@ -1,4 +1,4 @@
-import { HStackProps } from '@blue-learn/schema';
+import { StackBaseProps } from '@blue-learn/schema';
 import React from 'react';
 import { View } from 'react-native';
 import { VStack } from './VStack';
@@ -8,7 +8,7 @@ export default {
 	component: VStack,
 };
 
-const Template = (args: HStackProps) => (
+const Template = (args: StackBaseProps) => (
 	<VStack {...args}>
 		<View
 			style={{

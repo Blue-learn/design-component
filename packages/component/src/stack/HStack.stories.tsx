@@ -1,7 +1,4 @@
-import {
-	HStackProps,
-	// WIDGET,
-} from '@blue-learn/schema';
+import { StackBaseProps } from '@blue-learn/schema';
 import React from 'react';
 import { View } from 'react-native';
 // import { CommonWidgetProps } from '../mock';
@@ -12,7 +9,7 @@ export default {
 	component: HStack,
 };
 
-const Template = (args: HStackProps) => (
+const Template = (args: StackBaseProps) => (
 	<HStack {...args}>
 		<View
 			style={{

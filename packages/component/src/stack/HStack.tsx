@@ -1,9 +1,8 @@
-import { HStackProps } from '@blue-learn/schema';
-import React from 'react';
-import { memo } from 'react';
+import {StackBaseProps} from '@blue-learn/schema';
+import React, {memo} from 'react';
 import StackBase from './Stack.base';
 
-const HStack: React.FC<HStackProps> = (props) => {
+const HStack: React.FC<StackBaseProps> = (props) => {
 	return <StackBase direction='row' {...props} />;
 };
 
