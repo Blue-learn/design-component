@@ -5,8 +5,8 @@ import {
 	HStack,
 	VStack,
 	Avatar,
-} from './index';
-
+	Tabs,
+} from '../src';
 import { WIDGET } from '@blue-learn/schema';
 
 const registry = {
@@ -16,5 +16,6 @@ const registry = {
 	[WIDGET.HSTACK]: HStack,
 	[WIDGET.VSTACK]: VStack,
 	[WIDGET.AVATAR]: Avatar,
+	[WIDGET.TABS]: Tabs,
 };
 export { registry as WidgetRegistry };

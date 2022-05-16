@@ -1,6 +1,6 @@
-import {StackBaseProps,} from '@blue-learn/schema';
+import { StackBaseProps } from '@blue-learn/schema';
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 // import { CommonWidgetProps } from '../mock';
 import HStack from './HStack';
 
