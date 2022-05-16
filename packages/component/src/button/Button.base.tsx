@@ -2,6 +2,7 @@ import {
 	ButtonBaseProps,
 	ColorTokens,
 	CornerRadiusTokens,
+	FontFamilyTokens,
 	FontSizeTokens,
 	FontWeightTokens,
 	ShadowThemeProps,
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'row',
+		userSelect: 'none',
 	},
 });
 

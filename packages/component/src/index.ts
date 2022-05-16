@@ -5,5 +5,6 @@ export * as Space from './space';
 export * as Icon from './icon';
 export * from './stack';
 export * as Avatar from './avatar';
+export * as Tabs from './tabs';
 export * from './mock';
 export * from './registry';
