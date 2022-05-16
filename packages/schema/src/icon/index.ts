@@ -26,6 +26,7 @@ export enum IconTokens {
 	DownArrow = 'down-arrow',
 	Quotes = 'quotes',
 	Plus = 'plus',
+	InfoStatic = 'info-static',
 }
 
 export enum IconSizeTokens {

@@ -2,19 +2,15 @@ import {
 	ButtonBaseProps,
 	ColorTokens,
 	CornerRadiusTokens,
+	FontFamilyTokens,
 	FontSizeTokens,
 	FontWeightTokens,
 	ShadowThemeProps,
 	SpaceTypeTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
-import React, { memo } from 'react';
-import {
-	ActivityIndicator,
-	Pressable,
-	StyleSheet,
-	View,
-} from 'react-native';
+import React, {memo} from 'react';
+import {ActivityIndicator, Pressable, StyleSheet, View,} from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
@@ -124,8 +120,8 @@ const ButtonBase: React.FunctionComponent<
 					<Typography
 						label={label}
 						color={labelColor}
-						fontWeight={FontWeightTokens.bold}
 						fontSize={fontSize}
+						fontFamily={FontFamilyTokens.manropeSemiBold}
 					/>
 				)}
 
