@@ -1,14 +1,7 @@
-import {
-	ColorTokens,
-	DividerProps,
-	SpaceTypeTokens,
-} from '@blue-learn/schema';
-import ThemeProvider, {
-	DividerColor,
-	THEMES,
-} from '@blue-learn/theme';
-import React, { memo } from 'react';
-import { View } from 'react-native';
+import {DividerProps,} from '@blue-learn/schema';
+import ThemeProvider, {DividerColor,} from '@blue-learn/theme';
+import React, {memo} from 'react';
+import {View} from 'react-native';
 
 const Divider: React.FunctionComponent<
 	DividerProps

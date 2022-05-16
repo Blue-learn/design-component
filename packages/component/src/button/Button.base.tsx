@@ -125,10 +125,10 @@ const ButtonBase: React.FunctionComponent<
 					<Typography
 						label={label}
 						color={labelColor}
+						fontSize={fontSize}
 						fontFamily={
 							FontFamilyTokens.manropeSemiBold
 						}
-						fontSize={fontSize}
 					/>
 				)}
 
