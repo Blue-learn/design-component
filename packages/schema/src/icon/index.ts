@@ -27,6 +27,7 @@ export enum IconTokens {
 	DownArrow = 'down-arrow',
 	Quotes = 'quotes',
 	Plus = 'plus',
+	Shuffle = 'shuffle',
 }
 
 export enum IconSizeTokens {
