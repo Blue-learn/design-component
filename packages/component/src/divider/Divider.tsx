@@ -30,7 +30,8 @@ const Divider: React.FunctionComponent<
 				style={{
 					backgroundColor: theme.colors[color],
 					height: thickness,
-					marginVertical: theme.space[marginVertical],
+					marginVertical:
+						theme.space[marginVertical] | 0,
 
 					width: '100%',
 				}}
