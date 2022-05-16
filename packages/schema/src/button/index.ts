@@ -36,6 +36,7 @@ export type ButtonProps = {
 	iconAlignment?: 'left' | 'right';
 	// Default width - content
 	width?: 'full' | 'content';
+	labelColor?: ColorTokens;
 	/**
 	 * Button Loading State default false
 	 */

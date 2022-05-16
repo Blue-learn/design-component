@@ -17,33 +17,21 @@ export type alignItemsValues =
 	| 'flex-end'
 	| 'center';
 
-export interface StackBaseProps {
+interface StackProps {
+	justifyContent?: justifyContentValues;
+	alignItems?: alignItemsValues;
+	wrap?: boolean;
+	bgColor?: ColorTokens;
+	borderRadius?: CornerRadiusTokens;
+	childrenTemplate?: WidgetItem[];
+	children: JSX.Element[] | JSX.Element
+	flexGrow?: number,
+	width?: string | number,
+	height?: string | number
+}
+
+export interface StackBaseProps extends StackProps{
 	direction?: 'row' | 'column';
-	justifyContent?: justifyContentValues;
-	alignItems?: alignItemsValues;
-	wrap?: boolean;
-	bgColor?: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
-	childrenTemplate?: WidgetItem[];
-	children: JSX.Element[] | JSX.Element
 }
 
-export interface HStackProps {
-	justifyContent?: justifyContentValues;
-	alignItems?: alignItemsValues;
-	wrap?: boolean;
-	bgColor?: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
-	childrenTemplate?: WidgetItem[];
-	children: JSX.Element[] | JSX.Element
-}
 
-export interface VStackProps {
-	justifyContent?: justifyContentValues;
-	alignItems?: alignItemsValues;
-	wrap?: boolean;
-	bgColor?: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
-	childrenTemplate?: WidgetItem[];
-	children: JSX.Element[] | JSX.Element
-}

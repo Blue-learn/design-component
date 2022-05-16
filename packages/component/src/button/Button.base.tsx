@@ -37,7 +37,7 @@ const ButtonBase: React.FunctionComponent<
 	label,
 	loading = false,
 	bgColor = ColorTokens.Aqua_10,
-	labelColor = ColorTokens.Black,
+	labelColor = ColorTokens.Grey_500,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = SpaceTypeTokens.LG,
 	shadow,
