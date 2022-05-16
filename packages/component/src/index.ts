@@ -4,3 +4,7 @@ export * as Icon from './icon';
 export * as Space from './space';
 export * as TextInput from './textInput';
 export * as Typography from './typography';
+export * from './stack';
+export * as Avatar from './avatar';
+export * from './mock';
+export * from './registry';

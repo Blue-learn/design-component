@@ -4,13 +4,12 @@ import { buttonTypeTokensMap } from './button';
 import { chipTypeTokensMap } from './chip';
 import { borderRadiusTypeTokensMap } from './cornerRadius';
 import { spaceTypeTokensMap } from './space';
-import { FontFamilyTokensMap } from '../FontFamily';
-import { shadowTypeTokensMap } from './shadow';
+import { fontFamilyTokensMap } from '../fontFamily';
 import { inputTypeTokensMap } from './textInput';
-import {
-	IconSizeTokensMap,
-	iconTokensMap,
-} from '../icons';
+import { fontSizeTokensMap } from '../typography';
+import { shadowTypeTokensMap } from './shadow';
+import { IconSizeTokensMap } from '../icons';
+import { avatarTypeTokensMap } from './avatar';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -18,10 +17,11 @@ export const lightMobileTheme: ThemeTokens = {
 	chip: chipTypeTokensMap,
 	borderRadius: borderRadiusTypeTokensMap,
 	space: spaceTypeTokensMap,
-	fontFamily: FontFamilyTokensMap,
-	shadow: shadowTypeTokensMap,
+	fontFamily: fontFamilyTokensMap,
 	spaces: spaceTypeTokensMap,
 	textInput: inputTypeTokensMap,
-	icon: iconTokensMap,
+	fontSize: fontSizeTokensMap,
+	shadow: shadowTypeTokensMap,
 	iconSize: IconSizeTokensMap,
+	avatarSize: avatarTypeTokensMap,
 };

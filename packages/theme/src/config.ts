@@ -1,14 +1,15 @@
 import {
+	AvatarTypeTokensMap,
 	ButtonTypeTokensMap,
 	ColorTokensMap,
 	CornerRadiusTokensMap,
-	SpaceTypeTokensMap,
 	FontFamilyTokensMap,
-	ShadowTypeTokensMap,
-	InputTypeTokensMap,
-	IconTypeTokensMap,
+	FontSizeTokensMap,
 	IconSizeTokensMap,
 	ChipTypeTokensMap,
+	InputTypeTokensMap,
+	ShadowTypeTokensMap,
+	SpaceTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -18,11 +19,12 @@ export type ThemeTokens = {
 	borderRadius: CornerRadiusTokensMap;
 	space: SpaceTypeTokensMap;
 	fontFamily: FontFamilyTokensMap;
+	fontSize: FontSizeTokensMap;
 	shadow: ShadowTypeTokensMap;
 	spaces: SpaceTypeTokensMap;
 	textInput: InputTypeTokensMap;
-	icon: IconTypeTokensMap;
 	iconSize: IconSizeTokensMap;
+	avatarSize: AvatarTypeTokensMap;
 };
 
 export enum THEMES {

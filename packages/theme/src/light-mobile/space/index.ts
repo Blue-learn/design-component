@@ -10,4 +10,7 @@ export const spaceTypeTokensMap: SpaceTypeTokensMap =
 		[SpaceTypeTokens.MD]: 8,
 		[SpaceTypeTokens.LG]: 12,
 		[SpaceTypeTokens.XL]: 16,
+		[SpaceTypeTokens['2XL']]: 20,
+		[SpaceTypeTokens['3XL']]: 24,
+		[SpaceTypeTokens['4XL']]: 28,
 	};

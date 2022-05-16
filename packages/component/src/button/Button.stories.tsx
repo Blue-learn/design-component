@@ -2,8 +2,8 @@ import React from 'react';
 import Button from './Button';
 import {
 	ButtonProps,
-	ButtonType,
 	ButtonTypeTokens,
+	IconTokens,
 	WIDGET,
 } from '@blue-learn/schema';
 import { CommonWidgetProps } from '../mock';
@@ -14,13 +14,20 @@ export default {
 	argTypes: {
 		label: 'Default Button',
 	},
+	parameters: {
+		actions: {
+			handles: ['click .btn'],
+		},
+	},
 };
 
 const Template = (args: ButtonProps) =>
 	CommonWidgetProps.renderItem({
 		id: 'id____',
 		type: WIDGET.BUTTON,
-		props: { ...args },
+		props: {
+			...args,
+		},
 	});
 
 export const Large = Template.bind({});
@@ -38,4 +45,24 @@ Large.argTypes = {
 			),
 		],
 	},
+	iconName: {
+		control: 'select',
+		options: [
+			null,
+			...Object.values(IconTokens).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
+	iconAlignment: {
+		control: 'radio',
+		options: ['left', 'right'],
+		default: 'left',
+	},
+	width: {
+		control: 'radio',
+		options: ['content', 'full'],
+		default: 'content',
+	},
+	onPress: { action: 'clicked' },
 };
