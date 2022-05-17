@@ -75,7 +75,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.LargeOutline]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.LG,
 			fontSize: FontSizeTokens.lg,
 			borderColor: ColorTokens.Grey_200,
@@ -84,7 +84,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.MediumOutline]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.MD,
 			fontSize: FontSizeTokens.md,
 			borderColor: ColorTokens.Grey_200,
@@ -93,7 +93,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.SmallOutline]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.SM,
 			fontSize: FontSizeTokens.sm,
 			borderColor: ColorTokens.Grey_200,
@@ -102,7 +102,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.IconOutline]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.LG,
 			borderColor: ColorTokens.Grey_200,
 			paddingHorizontal: SpaceTypeTokens.LG,
