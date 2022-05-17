@@ -9,8 +9,13 @@ import {
 	SpaceTypeTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
-import React, {memo} from 'react';
-import {ActivityIndicator, Pressable, StyleSheet, View,} from 'react-native';
+import React, { memo } from 'react';
+import {
+	ActivityIndicator,
+	Pressable,
+	StyleSheet,
+	View,
+} from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
@@ -121,7 +126,9 @@ const ButtonBase: React.FunctionComponent<
 						label={label}
 						color={labelColor}
 						fontSize={fontSize}
-						fontFamily={FontFamilyTokens.manropeSemiBold}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
 					/>
 				)}
 

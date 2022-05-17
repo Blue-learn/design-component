@@ -29,7 +29,7 @@ const TypographyBase: React.FunctionComponent<
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
 	ellipSizeMode,
-	numberOfLines,
+	numberOfLines = 0,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -54,6 +54,7 @@ const TypographyBase: React.FunctionComponent<
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
 			}}
+			numberOfLines={numberOfLines}
 			{...props}
 		>
 			{label}
