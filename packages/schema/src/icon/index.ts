@@ -27,6 +27,10 @@ export enum IconTokens {
 	Quotes = 'quotes',
 	Plus = 'plus',
 	InfoStatic = 'info-static',
+	Calendar = 'calendar',
+	Cake = 'cake',
+	BriefCase = 'briefcase',
+	Book = 'briefcase',
 }
 
 export enum IconSizeTokens {

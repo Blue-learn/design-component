@@ -17,6 +17,10 @@ import DownArrow from "./icon-list/DownArrow";
 import Quotes from "./icon-list/Quotes";
 import Plus from "./icon-list/Plus";
 import InfoStatic from "./icon-list/InfoStatic";
+import Calendar from "./icon-list/Calendar";
+import Cake from "./icon-list/Cake";
+import BriefCase from "./icon-list/BriefCase";
+import Book from "./icon-list/Book";
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -34,4 +38,8 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Quotes]: Quotes,
 	[IconTokens.Plus]: Plus,
 	[IconTokens.InfoStatic]: InfoStatic,
+	[IconTokens.Calendar]: Calendar,
+	[IconTokens.Cake]: Cake,
+	[IconTokens.BriefCase]: BriefCase,
+	[IconTokens.Book]: Book,
 };
