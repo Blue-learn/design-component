@@ -135,8 +135,8 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
 			bgColor: null,
-			paddingVertical: SpaceTypeTokens.LG,
-			paddingHorizontal: SpaceTypeTokens.LG,
+			paddingVertical: SpaceTypeTokens.SM,
+			paddingHorizontal: SpaceTypeTokens.SM,
 		},
 		[ButtonTypeTokens.LargeElevated]: {
 			borderRadius: CornerRadiusTokens.BR4,
