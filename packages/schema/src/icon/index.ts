@@ -34,6 +34,7 @@ export enum IconTokens {
 	Cake = 'cake',
 	BriefCase = 'briefcase',
 	Book = 'briefcase',
+	Notification = 'notification',
 }
 
 export enum IconSizeTokens {

@@ -24,6 +24,7 @@ import Book from './icon-list/Book';
 import Check2 from './icon-list/Check2';
 import Shuffle from './icon-list/Shuffle';
 import MinusCircle from './icon-list/MinusCircle';
+import Notification from './icon-list/Notification';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -48,4 +49,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Cake]: Cake,
 	[IconTokens.BriefCase]: BriefCase,
 	[IconTokens.Book]: Book,
+	[IconTokens.Notification]: Notification,
 };
