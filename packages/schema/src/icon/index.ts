@@ -33,7 +33,10 @@ export enum IconTokens {
 	Calendar = 'calendar',
 	Cake = 'cake',
 	BriefCase = 'briefcase',
-	Book = 'briefcase',
+	Book = 'book',
+	DoubleMessage = 'double-message',
+	Info = 'info',
+	Lighting = 'lighting',
 }
 
 export enum IconSizeTokens {
