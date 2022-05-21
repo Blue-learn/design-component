@@ -24,9 +24,10 @@ import Book from './icon-list/Book';
 import Check2 from './icon-list/Check2';
 import Shuffle from './icon-list/Shuffle';
 import MinusCircle from './icon-list/MinusCircle';
-import DoubleMessage from "./icon-list/DoubleMessage";
-import Info from "./icon-list/Info";
-import Lighting from "./icon-list/Lighting";
+import DoubleMessage from './icon-list/DoubleMessage';
+import Info from './icon-list/Info';
+import Lighting from './icon-list/Lighting';
+import Notification from './icon-list/Notification';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -54,4 +55,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.DoubleMessage]: DoubleMessage,
 	[IconTokens.Info]: Info,
 	[IconTokens.Lighting]: Lighting,
+	[IconTokens.Notification]: Notification,
 };

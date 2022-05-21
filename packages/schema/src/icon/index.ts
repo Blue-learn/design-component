@@ -37,6 +37,7 @@ export enum IconTokens {
 	DoubleMessage = 'double-message',
 	Info = 'info',
 	Lighting = 'lighting',
+	Notification = 'notification',
 }
 
 export enum IconSizeTokens {
