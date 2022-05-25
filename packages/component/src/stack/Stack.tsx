@@ -8,6 +8,11 @@ import {
 import React, { memo } from 'react';
 import { View } from 'react-native';
 
+/**
+ * @description
+ * Stack supports children as React Component and widgetItems as WidgetItem [order by children -> widgetItems]
+ * Note: renderItem should be passed to render WidgetItem
+ * */
 const Stack: React.FC<
 	StackProp & WidgetProps
 > = ({
