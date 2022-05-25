@@ -24,7 +24,6 @@ const Stack: React.FC<
 				flexDirection: type,
 				justifyContent: alignX,
 				alignItems: alignY,
-				backgroundColor: 'red',
 			}}
 		>
 			{children}
