@@ -27,9 +27,10 @@ const Stack: React.FC<
 			}}
 		>
 			{children}
-			{widgetItems.map((widgetItem: WidgetItem) =>
-				renderItem(widgetItem),
-			)}
+			{renderItem &&
+				widgetItems.map((widgetItem: WidgetItem) =>
+					renderItem(widgetItem),
+				)}
 		</View>
 	);
 };
