@@ -21,36 +21,13 @@ const Template = (args: StackProp) => {
 	return CommonWidgetProps.renderItem({
 		id: 'test_id',
 		type: WIDGET.STACK,
-		props: {
-			type: StackType.row,
-			alignX: StackAlignType.flexStart,
-			alignY: StackAlignType.flexStart,
-			children: [
-				<View
-					style={{
-						backgroundColor: '#000',
-						height: 50,
-						width: 100,
-					}}
-				/>,
-			],
-			renderItem: CommonWidgetProps.renderItem,
-			widgetItems: [
-				{
-					id: 'button',
-					type: WIDGET.BUTTON,
-					props: {
-						label: 'hello stack',
-					},
-				},
-			],
-		},
+		props: { ...args },
 	});
 
 	/**
 	 *  Static way
 	 * */
-	return (
+	/*	return (
 		<Stack {...args}>
 			<View
 				style={{
@@ -76,16 +53,35 @@ const Template = (args: StackProp) => {
 				}}
 			/>
 		</Stack>
-	);
+	);*/
 };
 
 export const StackComponent = Template.bind({});
 
 StackComponent.args = {
-	type: StackType.column,
+	type: StackType.row,
 	alignX: StackAlignType.flexStart,
 	alignY: StackAlignType.flexStart,
-	children: [],
+	renderItem: CommonWidgetProps.renderItem,
+	children: [
+		<View
+			style={{
+				backgroundColor: '#000',
+				height: 50,
+				width: 100,
+			}}
+		/>,
+	],
+
+	widgetItems: [
+		{
+			id: 'button',
+			type: WIDGET.BUTTON,
+			props: {
+				label: 'hello stack',
+			},
+		},
+	],
 };
 StackComponent.argTypes = {
 	type: {
