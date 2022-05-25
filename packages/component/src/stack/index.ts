@@ -1,3 +1,2 @@
-import HStack from './HStack';
-import VStack from './VStack';
-export { HStack, VStack };
+import Stack from './Stack';
+export { Stack as Component };

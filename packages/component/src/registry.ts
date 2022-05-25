@@ -2,8 +2,9 @@ import {
 	Button,
 	Space,
 	Icon,
-	HStack,
-	VStack,
+	// HStack,
+	// VStack,
+	Stack,
 	Avatar,
 	Tabs,
 } from '../src';
@@ -13,8 +14,9 @@ const registry = {
 	[WIDGET.BUTTON]: Button,
 	[WIDGET.SPACE]: Space,
 	[WIDGET.ICON]: Icon,
-	[WIDGET.HSTACK]: HStack,
-	[WIDGET.VSTACK]: VStack,
+	// [WIDGET.HSTACK]: HStack,
+	// [WIDGET.VSTACK]: VStack,
+	[WIDGET.STACK]: Stack,
 	[WIDGET.AVATAR]: Avatar,
 	[WIDGET.TABS]: Tabs,
 };

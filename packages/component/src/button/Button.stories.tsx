@@ -30,13 +30,13 @@ const Template = (args: ButtonProps) =>
 		},
 	});
 
-export const Large = Template.bind({});
-Large.args = {
+export const ButtonStory = Template.bind({});
+ButtonStory.args = {
 	label: 'All Buttons',
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
 };
-Large.argTypes = {
+ButtonStory.argTypes = {
 	type: {
 		control: 'select',
 		options: [
