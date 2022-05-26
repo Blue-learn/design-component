@@ -5,6 +5,7 @@ import {
 	TypographyProps,
 	FontTransformToken,
 	EllipsizeModeTokens,
+	TextAlignTokens,
 } from '@blue-learn/schema';
 import React from 'react';
 import Typography from './Typography';
@@ -47,6 +48,14 @@ Primary.argTypes = {
 		control: 'select',
 		options: [
 			...Object.values(FontWeightTokens).filter(
+				(k) => typeof k === 'string',
+			),
+		],
+	},
+	textAlign: {
+		control: 'select',
+		options: [
+			...Object.values(TextAlignTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],

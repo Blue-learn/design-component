@@ -12,6 +12,7 @@ import {
 	FontDecorationToken,
 	FontTransformToken,
 	FontSizeTokensMap,
+	TextAlignTokens,
 } from '@blue-learn/schema';
 
 /**
@@ -22,12 +23,13 @@ const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
 	label = 'Lorem ipsum dolor sit amet',
-	color = ColorTokens.Black,
+	color = ColorTokens.Grey_500,
 	fontSize = FontSizeTokens.sm,
 	fontWeight = FontWeightTokens.normal,
 	fontFamily = FontFamilyTokens.manropeRegular,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
+	textAlign = TextAlignTokens.auto,
 	ellipsizeMode,
 	numberOfLines = 0,
 	...props
@@ -53,6 +55,7 @@ const TypographyBase: React.FunctionComponent<
 				fontSize: fontSizeMapping[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
+				textAlign: textAlign,
 			}}
 			numberOfLines={numberOfLines}
 			{...props}

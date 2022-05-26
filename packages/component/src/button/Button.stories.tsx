@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './Button';
 import {
 	ButtonProps,
-	ButtonType,
 	ButtonTypeTokens,
 	IconTokens,
 	WIDGET,
@@ -15,6 +14,11 @@ export default {
 	argTypes: {
 		label: 'Default Button',
 	},
+	parameters: {
+		actions: {
+			handles: ['click .btn'],
+		},
+	},
 };
 
 const Template = (args: ButtonProps) =>
@@ -26,13 +30,13 @@ const Template = (args: ButtonProps) =>
 		},
 	});
 
-export const Large = Template.bind({});
-Large.args = {
+export const ButtonStory = Template.bind({});
+ButtonStory.args = {
 	label: 'All Buttons',
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
 };
-Large.argTypes = {
+ButtonStory.argTypes = {
 	type: {
 		control: 'select',
 		options: [
@@ -60,4 +64,5 @@ Large.argTypes = {
 		options: ['content', 'full'],
 		default: 'content',
 	},
+	onPress: { action: 'clicked' },
 };

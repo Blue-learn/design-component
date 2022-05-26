@@ -1,15 +1,14 @@
 import {
+	AvatarTypeTokensMap,
 	ButtonTypeTokensMap,
 	ColorTokensMap,
 	CornerRadiusTokensMap,
-	SpaceTypeTokensMap,
 	FontFamilyTokensMap,
-	ShadowTypeTokensMap,
-	InputTypeTokensMap,
 	FontSizeTokensMap,
-	IconTypeTokensMap,
 	IconSizeTokensMap,
-	AvatarTypeTokensMap,
+	InputTypeTokensMap,
+	ShadowTypeTokensMap,
+	SpaceTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -22,11 +21,11 @@ export type ThemeTokens = {
 	shadow: ShadowTypeTokensMap;
 	spaces: SpaceTypeTokensMap;
 	textInput: InputTypeTokensMap;
-	icon: IconTypeTokensMap;
 	iconSize: IconSizeTokensMap;
 	avatarSize: AvatarTypeTokensMap;
 };
 
+export * from './light-mobile/divider';
 export enum THEMES {
 	LIGHT_MOBILE = 'light-mobile',
 	DARK_MOBILE = 'dark-mobile',

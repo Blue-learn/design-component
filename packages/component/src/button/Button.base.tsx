@@ -1,11 +1,10 @@
 import {
 	ButtonBaseProps,
 	ColorTokens,
-	ColorTokensMap,
 	CornerRadiusTokens,
+	FontFamilyTokens,
 	FontSizeTokens,
 	FontWeightTokens,
-	IconSizeTokens,
 	ShadowThemeProps,
 	SpaceTypeTokens,
 } from '@blue-learn/schema';
@@ -15,7 +14,6 @@ import {
 	ActivityIndicator,
 	Pressable,
 	StyleSheet,
-	Text,
 	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
@@ -40,7 +38,7 @@ const ButtonBase: React.FunctionComponent<
 	label,
 	loading = false,
 	bgColor = ColorTokens.Aqua_10,
-	labelColor = ColorTokens.Black,
+	labelColor = ColorTokens.Grey_500,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = SpaceTypeTokens.LG,
 	shadow,
@@ -127,8 +125,10 @@ const ButtonBase: React.FunctionComponent<
 					<Typography
 						label={label}
 						color={labelColor}
-						fontWeight={FontWeightTokens['semi-bold']}
 						fontSize={fontSize}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
 					/>
 				)}
 

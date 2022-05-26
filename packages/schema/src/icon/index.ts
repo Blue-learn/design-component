@@ -1,7 +1,4 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
-import { ShadowTypeTokens } from '../shadow';
-import { SpaceTypeTokens } from '../space';
 
 /**
  * exposed to outside as props
@@ -24,6 +21,24 @@ export enum IconTokens {
 	PlusCircle = 'plus-circle',
 	Cross = 'cross',
 	Play = 'play',
+	CheckTwo = 'check-two',
+	ThreeDots = 'three-dots',
+	LocationPin = 'location-pin',
+	RightArrow = 'right-arrow',
+	DownArrow = 'down-arrow',
+	Quotes = 'quotes',
+	Plus = 'plus',
+	Shuffle = 'shuffle',
+	MinusCircle = 'minus-circle',
+	InfoStatic = 'info-static',
+	Calendar = 'calendar',
+	Cake = 'cake',
+	BriefCase = 'briefcase',
+	Book = 'book',
+	DoubleMessage = 'double-message',
+	Info = 'info',
+	Lighting = 'lighting',
+	Notification = 'notification',
 }
 
 export enum IconSizeTokens {

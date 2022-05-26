@@ -7,7 +7,7 @@
     "packages/**"
   ],
   "repository": "ssh://git@github.com:Blue-learn/design-component.git",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "index.js",
   "keywords": [],
   "author": "Soumya Sethy<soumya@bluelearn.in>",
@@ -25,6 +25,7 @@
     "setup": "npm i",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "copy": "lerna run copy",
     "publish": "lerna publish --canary --force-publish  --y",
     "storybook-start": "start-storybook -p 6006",
     "storybook-build": "build-storybook",

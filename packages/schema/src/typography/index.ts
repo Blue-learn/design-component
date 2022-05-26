@@ -15,11 +15,11 @@ export enum FontTransformToken {
 
 export enum FontSizeTokens {
 	'2xs' = '2xs',
-	'xs' = 'xs',
-	'sm' = 'sm',
-	'md' = 'md',
-	'lg' = 'lg',
-	'xl' = 'xl',
+	xs = 'xs',
+	sm = 'sm',
+	md = 'md',
+	lg = 'lg',
+	xl = 'xl',
 	'2xl' = '2xl',
 	'3xl' = '3xl',
 	'4xl' = '4xl',
@@ -43,9 +43,9 @@ export type FontFamilyTokensMap = {
 };
 
 export enum FontWeightTokens {
-	'normal' = 400,
-	'bold' = 800,
-	'semi-bold' = 600,
+	normal = 400,
+	bold = 800,
+	semiBold = 600,
 }
 
 export enum EllipsizeModeTokens {
@@ -53,6 +53,14 @@ export enum EllipsizeModeTokens {
 	middle = 'middle',
 	tail = 'tail',
 	clip = 'clip',
+}
+
+export enum TextAlignTokens {
+	auto = 'auto',
+	left = 'left',
+	right = 'right',
+	center = 'center',
+	justify = 'justify',
 }
 
 export type TypographyBaseProps = {
@@ -65,6 +73,7 @@ export type TypographyBaseProps = {
 	textTransform?: FontTransformToken;
 	ellipsizeMode?: EllipsizeModeTokens;
 	numberOfLines?: number;
+	textAlign?: TextAlignTokens;
 };
 
 export type TypographyProps = {
@@ -77,4 +86,5 @@ export type TypographyProps = {
 	textTransform?: FontTransformToken;
 	ellipsizeMode?: EllipsizeModeTokens;
 	numberOfLines?: number;
+	textAlign?: TextAlignTokens;
 };
