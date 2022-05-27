@@ -1,4 +1,7 @@
-import { WIDGET } from '@blue-learn/schema';
+import {
+	WIDGET,
+	WidgetRegistry,
+} from '@blue-learn/schema';
 import {
 	Button,
 	Space,
@@ -7,12 +10,13 @@ import {
 	Avatar,
 	Tabs,
 	Divider,
+	Typography,
+	TextInput,
 } from './index';
 
-type WidgetRegistryType = {
-	[key in WIDGET]: any;
-};
-const registry: WidgetRegistryType = {
+const registry: WidgetRegistry = {
+	[WIDGET.TEXT]: Typography,
+	[WIDGET.INPUT]: TextInput,
 	[WIDGET.BUTTON]: Button,
 	[WIDGET.STACK]: Stack,
 	[WIDGET.SPACE]: Space,
