@@ -1,23 +1,24 @@
+import { WIDGET } from '@blue-learn/schema';
 import {
 	Button,
 	Space,
 	Icon,
-	// HStack,
-	// VStack,
 	Stack,
 	Avatar,
 	Tabs,
-} from '../src';
-import { WIDGET } from '@blue-learn/schema';
+	Divider,
+} from './index';
 
-const registry = {
+type WidgetRegistryType = {
+	[key in WIDGET]: any;
+};
+const registry: WidgetRegistryType = {
 	[WIDGET.BUTTON]: Button,
+	[WIDGET.STACK]: Stack,
 	[WIDGET.SPACE]: Space,
 	[WIDGET.ICON]: Icon,
-	// [WIDGET.HSTACK]: HStack,
-	// [WIDGET.VSTACK]: VStack,
-	[WIDGET.STACK]: Stack,
 	[WIDGET.AVATAR]: Avatar,
 	[WIDGET.TABS]: Tabs,
+	[WIDGET.DIVIDER]: Divider,
 };
 export { registry as WidgetRegistry };

@@ -12,8 +12,8 @@
     "publish": "npm publish --access public"
   },
   "devDependencies": {
-    "@blue-learn/schema": "^0.0.14",
-    "@blue-learn/theme": "^0.0.14",
+    "@blue-learn/schema": "^0.0.13",
+    "@blue-learn/theme": "^0.0.13",
     "@types/react": "^17.0.38",
     "react": "^17.0.2",
     "react-native": "^0.67.1",

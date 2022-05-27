@@ -10,7 +10,7 @@ export enum SpaceTypeTokens {
 }
 
 export type SpaceProps = {
-	size: number;
+	size?: number;
 };
 
 export type SpaceTypeTokensMap = {

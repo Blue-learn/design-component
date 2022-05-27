@@ -1,8 +1,4 @@
-import {
-	inputTypeToken,
-	SpaceProps,
-	TextInputProps,
-} from '@blue-learn/schema';
+import { SpaceProps } from '@blue-learn/schema';
 import React from 'react';
 import { Space } from './Space';
 import { View } from 'react-native';
