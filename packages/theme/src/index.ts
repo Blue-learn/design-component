@@ -3,12 +3,13 @@ import {
 	THEMES,
 	ThemeTokens,
 } from './config';
+import { darkMobileTheme } from './dark-mobile';
 import { lightMobileTheme } from './light-mobile';
 export * from './config';
 
 const themeTypes: Theme = {
 	[THEMES.LIGHT_MOBILE]: lightMobileTheme,
-	[THEMES.DARK_MOBILE]: lightMobileTheme,
+	[THEMES.DARK_MOBILE]: darkMobileTheme,
 };
 
 const ThemeProvider = () => {
