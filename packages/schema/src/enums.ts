@@ -1,16 +1,11 @@
 export enum WIDGET {
+	TEXT = 'TEXT',
+	INPUT = 'INPUT',
 	BUTTON = 'BUTTON',
 	SPACE = 'SPACE',
 	ICON = 'ICON',
-	/**@deprecated
-	 *
-	 */
-	HSTACK = 'HSTACK',
-	/**@deprecated
-	 *
-	 */
-	VSTACK = 'VSTACK',
 	STACK = 'STACK',
 	AVATAR = 'AVATAR',
 	TABS = 'TABS',
+	DIVIDER = 'DIVIDER',
 }

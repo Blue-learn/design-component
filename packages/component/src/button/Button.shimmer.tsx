@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Shimmer } from '../shimmer/Shimmer';
 
 const ButtonShimmer: React.FunctionComponent =

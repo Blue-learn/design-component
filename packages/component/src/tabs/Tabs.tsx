@@ -1,6 +1,15 @@
-import {ColorTokens, FontSizeTokens, SpaceTypeTokens, TabsProps,} from '@blue-learn/schema';
-import React, {memo, useState,} from 'react';
-import {ScrollView, StyleSheet, View,} from 'react-native';
+import {
+	ColorTokens,
+	FontSizeTokens,
+	SpaceTypeTokens,
+	TabsProps,
+} from '@blue-learn/schema';
+import React, { memo, useState } from 'react';
+import {
+	ScrollView,
+	StyleSheet,
+	View,
+} from 'react-native';
 import ButtonBase from '../button/Button.base';
 
 // const reducer = (

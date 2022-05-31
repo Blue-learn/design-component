@@ -7,7 +7,12 @@ const Space: React.FunctionComponent<
 	SpaceProps
 > = ({ size = 2 }) => {
 	return (
-		<View style={{ width: size, height: size }} />
+		<View
+			style={{
+				width: size,
+				height: size,
+			}}
+		/>
 	);
 };
 

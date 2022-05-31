@@ -3,7 +3,7 @@ import { WIDGET } from './enums';
 type NormalWidgetItem = {
 	id: string;
 	type: WIDGET;
-	props: any;
+	props?: any;
 };
 export type WidgetItem = NormalWidgetItem;
 export type WidgetProps = {
@@ -15,4 +15,9 @@ export type WidgetProps = {
 export type TapAction = {
 	type: string;
 	data: any;
+};
+export type WidgetRegistry = {
+	[key: string]: {
+		Component?: any;
+	};
 };
