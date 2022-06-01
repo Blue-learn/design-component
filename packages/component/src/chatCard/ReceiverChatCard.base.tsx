@@ -11,6 +11,10 @@ import {
 	FontWeightTokens,
 	ButtonTypeTokens,
 	IconTokens,
+	avatarSizeTokens,
+	StackType,
+	StackAlignType,
+	FontFamilyTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -21,6 +25,9 @@ import {
 import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
 import Button from '../button/Button';
+import Stack from '../stack/Stack';
+import Space from '../space/Space';
+import Avatar from '../avatar/Avatar';
 
 const styles = StyleSheet.create({
 	row: {
@@ -30,7 +37,7 @@ const styles = StyleSheet.create({
 	imageContainer: {
 		alignSelf: 'center',
 		height: 180,
-		width: 135,
+		width: 136,
 	},
 	imageDetailsContainer: {
 		opacity: 0.8,
@@ -63,7 +70,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	ChatCardBaseProps
 > = ({
 	label,
-	bgColor = ColorTokens.White,
+	bgColor = ColorTokens.Grey_50,
 	labelColor = ColorTokens.Grey_500,
 	borderRadius = CornerRadiusTokens.BR2,
 	padding = SpaceTypeTokens.MD,
@@ -106,36 +113,27 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				]}
 			>
 				{nameText && (
-					<View
-						style={[
-							styles.row,
-							{
-								marginBottom:
-									theme.space[SpaceTypeTokens.MD],
-							},
-						]}
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
 					>
-						<Image
-							source={{
-								uri: avatarUrl,
-							}}
-							resizeMode='cover'
-							style={[
-								styles.avatar,
-								{
-									marginRight:
-										theme.space[SpaceTypeTokens.MD],
-								},
-							]}
+						<Avatar
+							uri={avatarUrl}
+							size={avatarSizeTokens.SM}
+							borderRadius={CornerRadiusTokens.BR4}
 						/>
+						<Space size={8} />
 						<Typography
 							label={nameText}
 							color={ColorTokens.Grey_400}
 							fontSize={FontSizeTokens.xs}
-							fontWeight={FontWeightTokens['semi-bold']}
+							fontFamily={
+								FontFamilyTokens.manropeSemiBold
+							}
 						/>
-					</View>
+					</Stack>
 				)}
+				<Space size={8} />
 				{imageUrl && (
 					<TouchableOpacity onPres={onPress}>
 						<Image
@@ -143,14 +141,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 								uri: imageUrl[0],
 							}}
 							resizeMode='cover'
-							style={[
-								styles.imageContainer,
-								{
-									marginBottom: label
-										? theme.space[SpaceTypeTokens.SM]
-										: 0,
-								},
-							]}
+							style={[styles.imageContainer]}
 						/>
 						{imageUrl.length > 1 && (
 							<View
@@ -159,7 +150,6 @@ const ReceiverChatCardBase: React.FunctionComponent<
 									{
 										backgroundColor:
 											theme.colors[ColorTokens.Grey_600],
-										bottom: theme.space[SpaceTypeTokens.SM],
 									},
 								]}
 							>
@@ -178,14 +168,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 								uri: videoThumbnailUrl,
 							}}
 							resizeMode='cover'
-							style={[
-								styles.imageContainer,
-								{
-									marginBottom: label
-										? theme.space[SpaceTypeTokens.SM]
-										: 0,
-								},
-							]}
+							style={styles.imageContainer}
 						/>
 						<View style={styles.videoPlayBtn}>
 							<Button
@@ -219,11 +202,18 @@ const ReceiverChatCardBase: React.FunctionComponent<
 					</TouchableOpacity>
 				)}
 				{label && (
-					<Typography
-						label={label}
-						color={labelColor}
-						fontSize={FontSizeTokens.sm}
-					/>
+					<Stack>
+						<Space
+							size={
+								imageUrl || videoThumbnailUrl ? 4 : 0
+							}
+						/>
+						<Typography
+							label={label}
+							color={labelColor}
+							fontSize={FontSizeTokens.sm}
+						/>
+					</Stack>
 				)}
 			</View>
 			<Typography

@@ -1,11 +1,11 @@
 import {
 	FontSizeTokens,
-	FontWeightTokens,
 	FontDecorationToken,
 	TypographyProps,
 	FontTransformToken,
 	EllipsizeModeTokens,
 	TextAlignTokens,
+	FontFamilyTokens,
 } from '@blue-learn/schema';
 import React from 'react';
 import Typography from './Typography';
@@ -27,7 +27,8 @@ Primary.args = {
 	label:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
 	fontSize: FontSizeTokens.sm,
-	fontWeight: FontWeightTokens.normal,
+	fontFamily: FontFamilyTokens.manropeRegular,
+	textAlign: TextAlignTokens.auto,
 	textTransform: FontTransformToken.uppercase,
 	textDecorationLine:
 		FontDecorationToken.underline,
@@ -44,10 +45,10 @@ Primary.argTypes = {
 			),
 		],
 	},
-	fontWeight: {
+	fontFamily: {
 		control: 'select',
 		options: [
-			...Object.values(FontWeightTokens).filter(
+			...Object.values(FontFamilyTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],

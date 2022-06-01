@@ -11,6 +11,9 @@ import {
 	EllipsizeModeTokens,
 	IconTokens,
 	IconSizeTokens,
+	StackType,
+	StackAlignType,
+	avatarSizeTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -21,6 +24,8 @@ import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
+import Stack from '../stack/Stack';
+import Avatar from '../avatar/Avatar';
 
 const styles = StyleSheet.create({
 	rowContainer: {
@@ -65,17 +70,19 @@ const ReplyChatCardBase: React.FunctionComponent<
 
 	return (
 		<View
-			style={[
-				styles.rowContainer,
-				{
-					backgroundColor: backgroundColorValue,
-					borderRadius: borderRadiusValue,
-					padding: paddingValue,
-				},
-			]}
+			style={{
+				backgroundColor: backgroundColorValue,
+				borderRadius: borderRadiusValue,
+				padding: paddingValue,
+				width: '80%',
+			}}
 		>
-			<View style={{ width: '75%' }}>
-				<View style={{ paddingBottom: 4 }}>
+			<Stack
+				type={StackType.row}
+				alignX={StackAlignType.spaceBetween}
+				alignY={StackAlignType.center}
+			>
+				<View style={{ width: '75%' }}>
 					<Typography
 						label={nameText}
 						fontWeight={FontWeightTokens['semi-bold']}
@@ -84,73 +91,60 @@ const ReplyChatCardBase: React.FunctionComponent<
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
-				</View>
-				{!label ? (
-					<Typography
-						label={label}
-						color={labelColor}
-						fontSize={FontSizeTokens['2xs']}
-						ellipsizeMode={EllipsizeModeTokens.tail}
-						numberOfLines={1}
-					/>
-				) : (
-					<View
-						style={{
-							flexDirection: 'row',
-							alignItems: 'center',
-						}}
-					>
-						<Icon
-							name={IconTokens.Attachment}
-							color={ColorTokens.Grey_400}
-							size={IconSizeTokens['2xs']}
-						/>
-						<Space size={4} />
+					<Space size={4} />
+					{!label ? (
 						<Typography
-							label={fileType || label}
+							label={label}
 							color={labelColor}
-							textTransform={
-								FontTransformToken.capitalize
-							}
 							fontSize={FontSizeTokens['2xs']}
+							ellipsizeMode={EllipsizeModeTokens.tail}
 							numberOfLines={1}
 						/>
-					</View>
-				)}
-				{linkUrl && (
-					<Typography
-						label={linkUrl}
-						color={labelColor}
-						fontSize={FontSizeTokens['2xs']}
-						ellipsizeMode={EllipsizeModeTokens.tail}
-						numberOfLines={1}
+					) : (
+						<Stack
+							type={StackType.row}
+							alignY={StackAlignType.center}
+						>
+							<Icon
+								name={IconTokens.Attachment}
+								color={ColorTokens.Grey_400}
+								size={IconSizeTokens['2xs']}
+							/>
+							<Space size={4} />
+							<Typography
+								label={fileType || label}
+								color={labelColor}
+								textTransform={
+									FontTransformToken.capitalize
+								}
+								fontSize={FontSizeTokens['2xs']}
+								numberOfLines={1}
+							/>
+						</Stack>
+					)}
+					{linkUrl && (
+						<Typography
+							label={linkUrl}
+							color={labelColor}
+							fontSize={FontSizeTokens['2xs']}
+							ellipsizeMode={EllipsizeModeTokens.tail}
+							numberOfLines={1}
+						/>
+					)}
+				</View>
+				{imageUrl && imageUrl?.length > 0 && (
+					<Avatar
+						uri={imageUrl[0]}
+						size={avatarSizeTokens.MD}
 					/>
 				)}
-			</View>
-			{imageUrl && imageUrl?.length > 0 && (
-				<Image
-					source={{
-						uri: imageUrl,
-					}}
-					style={{
-						height: 32,
-						width: 32,
-						marginHorizontal: 4,
-					}}
-				/>
-			)}
-			{videoThumbnailUrl && (
-				<Image
-					source={{
-						uri: videoThumbnailUrl,
-					}}
-					style={{
-						height: 32,
-						width: 32,
-						marginHorizontal: 4,
-					}}
-				/>
-			)}
+				{videoThumbnailUrl && (
+					<Avatar
+						uri={videoThumbnailUrl}
+						size={avatarSizeTokens.MD}
+					/>
+				)}
+			</Stack>
 		</View>
 	);
 };
