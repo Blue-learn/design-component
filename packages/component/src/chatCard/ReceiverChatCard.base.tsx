@@ -15,11 +15,12 @@ import {
 	StackType,
 	StackAlignType,
 	FontFamilyTokens,
+	ImageSizeTokens,
+	IconSizeTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
 	View,
-	Image,
 	TouchableOpacity,
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
@@ -28,6 +29,8 @@ import Button from '../button/Button';
 import Stack from '../stack/Stack';
 import Space from '../space/Space';
 import Avatar from '../avatar/Avatar';
+import Image from '../image/Image';
+import Icon from '../icon/Icon';
 
 const styles = StyleSheet.create({
 	row: {
@@ -41,8 +44,8 @@ const styles = StyleSheet.create({
 	},
 	imageDetailsContainer: {
 		opacity: 0.8,
+		bottom: 0,
 		position: 'absolute',
-		height: 30,
 		width: '100%',
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -77,7 +80,10 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
 	nameText = 'lorem ipsum',
 	timeStamp,
-	imageUrl,
+	imageUrl = [
+		'https://reactnative.dev/img/tiny_logo.png',
+		'https://reactnative.dev/img/tiny_logo.png',
+	],
 	videoThumbnailUrl,
 	audioUrl,
 	linkUrl,
@@ -107,8 +113,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						backgroundColor: backgroundColorValue,
 						borderRadius: borderRadiusValue,
 						padding: paddingValue,
-						marginBottom:
-							theme.space[SpaceTypeTokens.SM],
+						width: '80%',
 					},
 				]}
 			>
@@ -136,13 +141,13 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				<Space size={8} />
 				{imageUrl && (
 					<TouchableOpacity onPres={onPress}>
-						<Image
-							source={{
-								uri: imageUrl[0],
-							}}
-							resizeMode='cover'
-							style={[styles.imageContainer]}
-						/>
+						<Stack alignY={StackAlignType.center}>
+							<Image
+								uri={imageUrl[0]}
+								size={ImageSizeTokens.xxl}
+							/>
+						</Stack>
+
 						{imageUrl.length > 1 && (
 							<View
 								style={[
@@ -153,22 +158,21 @@ const ReceiverChatCardBase: React.FunctionComponent<
 									},
 								]}
 							>
+								<Space size={8} />
 								<Typography
 									label={`+ ${imageUrl.length - 1} more`}
 									color={ColorTokens.White}
 								/>
+								<Space size={8} />
 							</View>
 						)}
 					</TouchableOpacity>
 				)}
 				{videoThumbnailUrl && (
-					<View>
+					<Stack>
 						<Image
-							source={{
-								uri: videoThumbnailUrl,
-							}}
-							resizeMode='cover'
-							style={styles.imageContainer}
+							uri={videoThumbnailUrl}
+							size={ImageSizeTokens.xxl}
 						/>
 						<View style={styles.videoPlayBtn}>
 							<Button
@@ -177,17 +181,43 @@ const ReceiverChatCardBase: React.FunctionComponent<
 								onPress={onPress}
 							/>
 						</View>
-					</View>
+					</Stack>
 				)}
 				{audioUrl && (
-					<View>
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
 						<Button
 							type={ButtonTypeTokens.IconElevated}
 							iconName={IconTokens.Play}
+							labelColor={ColorTokens.Grey_500}
 							onPress={onPress}
 						/>
-						<Typography label={fileType} />
-					</View>
+						<Space size={8} />
+						<Stack>
+							<Stack
+								type={StackType.row}
+								alignY={StackAlignType.center}
+							>
+								<Icon
+									name={IconTokens.Mic}
+									size={IconSizeTokens.xs}
+								/>
+								<Space size={4} />
+								<Typography
+									label={'Voice Message'}
+									fontSize={FontSizeTokens.xs}
+								/>
+							</Stack>
+							<Space size={4} />
+							<Typography
+								label={'0:05'}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_400}
+							/>
+						</Stack>
+					</Stack>
 				)}
 				{linkUrl && (
 					<TouchableOpacity onPress={onPress}>
@@ -216,6 +246,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 					</Stack>
 				)}
 			</View>
+			<Space size={4} />
 			<Typography
 				label={timeStamp}
 				color={ColorTokens.Grey_300}

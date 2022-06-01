@@ -39,6 +39,12 @@ export enum IconTokens {
 	Info = 'info',
 	Lighting = 'lighting',
 	Notification = 'notification',
+	Download = 'download',
+	Mic = 'mic',
+	PDF = 'pdf',
+	Gallery = 'gallery',
+	Video = 'video',
+	SendSolid = 'send-solid',
 }
 
 export enum IconSizeTokens {

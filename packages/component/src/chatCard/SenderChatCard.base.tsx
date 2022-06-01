@@ -7,15 +7,25 @@ import {
 	ChatCardBaseProps,
 	SpaceTypeTokens,
 	FontDecorationToken,
+	ImageSizeTokens,
+	ButtonTypeTokens,
+	IconTokens,
+	StackType,
+	StackAlignType,
+	IconSizeTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
 	View,
 	TouchableOpacity,
-	Image,
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
+import Stack from '../stack/Stack';
+import Image from '../image/Image';
+import Button from '../button/Button';
+import Space from '../space/Space';
+import Icon from '../icon/Icon';
 
 const styles = StyleSheet.create({
 	imageContainer: {
@@ -87,27 +97,18 @@ const SenderChatCardBase: React.FunctionComponent<
 						backgroundColor: backgroundColorValue,
 						borderRadius: borderRadiusValue,
 						padding: paddingValue,
-						marginBottom:
-							theme.space[SpaceTypeTokens.SM],
+						width: '80%',
 					},
 				]}
 			>
 				{imageUrl && (
 					<TouchableOpacity onPres={onPress}>
-						<Image
-							source={{
-								uri: imageUrl[0],
-							}}
-							resizeMode='cover'
-							style={[
-								styles.imageContainer,
-								{
-									marginBottom: label
-										? theme.space[SpaceTypeTokens.SM]
-										: 0,
-								},
-							]}
-						/>
+						<Stack alignY={StackAlignType.center}>
+							<Image
+								uri={imageUrl[0]}
+								size={ImageSizeTokens.xxl}
+							/>
+						</Stack>
 						{imageUrl.length > 1 && (
 							<View
 								style={[
@@ -115,14 +116,15 @@ const SenderChatCardBase: React.FunctionComponent<
 									{
 										backgroundColor:
 											theme.colors[ColorTokens.Grey_600],
-										bottom: theme.space[SpaceTypeTokens.SM],
 									},
 								]}
 							>
+								<Space size={8} />
 								<Typography
 									label={`+ ${imageUrl.length - 1} more`}
 									color={ColorTokens.White}
 								/>
+								<Space size={8} />
 							</View>
 						)}
 					</TouchableOpacity>
@@ -130,44 +132,53 @@ const SenderChatCardBase: React.FunctionComponent<
 				{videoThumbnailUrl && (
 					<View>
 						<Image
-							source={{
-								uri: videoThumbnailUrl,
-							}}
-							resizeMode='cover'
-							style={[
-								styles.imageContainer,
-								{
-									marginBottom: label
-										? theme.space[SpaceTypeTokens.SM]
-										: 0,
-								},
-							]}
+							uri={videoThumbnailUrl}
+							size={ImageSizeTokens.xxl}
 						/>
-						<TouchableOpacity
-							onPress={onPress}
-							style={[
-								styles.videoPlayBtn,
-								{
-									backgroundColor:
-										theme.colors[ColorTokens.Blue_100],
-								},
-							]}
-						></TouchableOpacity>
+						<View style={styles.videoPlayBtn}>
+							<Button
+								type={ButtonTypeTokens.IconElevated}
+								iconName={IconTokens.Play}
+								onPress={onPress}
+							/>
+						</View>
 					</View>
 				)}
 				{audioUrl && (
-					<View>
-						<TouchableOpacity
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Button
+							type={ButtonTypeTokens.IconElevated}
+							iconName={IconTokens.Play}
+							labelColor={ColorTokens.Grey_500}
 							onPress={onPress}
-							style={[
-								styles.videoPlayBtn,
-								{
-									backgroundColor:
-										theme.colors[ColorTokens.Blue_100],
-								},
-							]}
-						></TouchableOpacity>
-					</View>
+						/>
+						<Space size={8} />
+						<Stack>
+							<Stack
+								type={StackType.row}
+								alignY={StackAlignType.center}
+							>
+								<Icon
+									name={IconTokens.Attachment}
+									size={IconSizeTokens.xs}
+								/>
+								<Space size={4} />
+								<Typography
+									label={'Voice Message'}
+									fontSize={FontSizeTokens.xs}
+								/>
+							</Stack>
+							<Space size={4} />
+							<Typography
+								label={'0:05'}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_400}
+							/>
+						</Stack>
+					</Stack>
 				)}
 				{linkUrl && (
 					<TouchableOpacity onPress={onPress}>
@@ -189,6 +200,7 @@ const SenderChatCardBase: React.FunctionComponent<
 					/>
 				)}
 			</View>
+			<Space size={4} />
 			<Typography
 				label={timeStamp}
 				color={ColorTokens.Grey_300}

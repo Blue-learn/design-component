@@ -14,18 +14,16 @@ import {
 	StackType,
 	StackAlignType,
 	avatarSizeTokens,
+	ImageSizeTokens,
 } from '@blue-learn/schema';
-import {
-	StyleSheet,
-	View,
-	Image,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Stack from '../stack/Stack';
 import Avatar from '../avatar/Avatar';
+import Image from '../image/Image';
 
 const styles = StyleSheet.create({
 	rowContainer: {
@@ -133,15 +131,15 @@ const ReplyChatCardBase: React.FunctionComponent<
 					)}
 				</View>
 				{imageUrl && imageUrl?.length > 0 && (
-					<Avatar
+					<Image
 						uri={imageUrl[0]}
-						size={avatarSizeTokens.MD}
+						size={ImageSizeTokens.sm}
 					/>
 				)}
 				{videoThumbnailUrl && (
-					<Avatar
+					<Image
 						uri={videoThumbnailUrl}
-						size={avatarSizeTokens.MD}
+						size={ImageSizeTokens.sm}
 					/>
 				)}
 			</Stack>

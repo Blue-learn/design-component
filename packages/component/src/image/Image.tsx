@@ -32,6 +32,7 @@ const Image: React.FunctionComponent<
 			source={{
 				uri,
 			}}
+			resizeMode='cover'
 		/>
 	);
 };
