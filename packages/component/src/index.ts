@@ -7,5 +7,6 @@ export * as Stack from './stack';
 export * as Avatar from './avatar';
 export * as Tabs from './tabs';
 export * as Divider from './divider';
+export * as Image from './image';
 export * from './mock';
 export * from './registry';
