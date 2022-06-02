@@ -221,7 +221,7 @@ const SenderChatCardBase: React.FunctionComponent<
 	};
 
 	return (
-		<Stack>
+		<Stack alignY={StackAlignType.flexEnd}>
 			<Space size={8} />
 			<View
 				style={[
