@@ -45,6 +45,7 @@ export enum IconTokens {
 	Gallery = 'gallery',
 	Video = 'video',
 	SendSolid = 'send-solid',
+	RightAngle = 'right-angle',
 }
 
 export enum IconSizeTokens {

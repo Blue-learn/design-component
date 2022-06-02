@@ -1,14 +1,12 @@
 import React, { memo } from 'react';
 import {
 	ColorTokens,
-	ColorTokensMap,
 	CornerRadiusTokens,
 	FontSizeTokens,
 	ChatCardBaseProps,
 	SpaceTypeTokens,
 	SpaceTypeTokensMap,
 	FontDecorationToken,
-	FontWeightTokens,
 	ButtonTypeTokens,
 	IconTokens,
 	avatarSizeTokens,
@@ -17,6 +15,7 @@ import {
 	FontFamilyTokens,
 	ImageSizeTokens,
 	IconSizeTokens,
+	PreviewData,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -31,6 +30,7 @@ import Space from '../space/Space';
 import Avatar from '../avatar/Avatar';
 import Image from '../image/Image';
 import Icon from '../icon/Icon';
+import LinkPreview from '../linkPreview/LinkPreview';
 
 const styles = StyleSheet.create({
 	row: {
@@ -227,14 +227,14 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	};
 
 	return (
-		<View>
+		<Stack>
+			<Space size={8} />
 			<View
 				style={[
 					{
 						backgroundColor: backgroundColorValue,
 						borderRadius: borderRadiusValue,
 						padding: paddingValue,
-						width: '80%',
 					},
 				]}
 			>
@@ -256,6 +256,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							FontFamilyTokens.manropeSemiBold
 						}
 					/>
+					<Space size={8} />
 				</Stack>
 				<Space size={8} />
 				{renderSwitch()}
@@ -276,10 +277,57 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						<Space
 							size={file && file?.file_id ? 4 : 0}
 						/>
-						<Typography
-							label={label}
-							color={labelColor}
-							fontSize={FontSizeTokens.sm}
+						<LinkPreview
+							text={label as string}
+							renderLinkPreview={(payload: {
+								aspectRatio?: number | undefined;
+								containerWidth: number;
+								previewData?: PreviewData | undefined;
+							}) => {
+								if (payload.previewData?.link) {
+									return (
+										<Stack>
+											<Typography
+												label={label}
+												color={labelColor}
+												fontSize={FontSizeTokens.xs}
+											/>
+											<Space size={8} />
+											<Image
+												size={ImageSizeTokens.xxl}
+												uri={payload.previewData?.image?.url}
+											/>
+											<Space size={8} />
+											<Stack>
+												<Typography
+													label={payload.previewData?.title}
+													color={labelColor}
+													fontFamily={
+														FontFamilyTokens.manropeSemiBold
+													}
+													fontSize={FontSizeTokens.xs}
+												/>
+												<Space size={4} />
+												<Typography
+													label={
+														payload.previewData?.description
+													}
+													color={labelColor}
+													fontSize={FontSizeTokens['2xs']}
+												/>
+											</Stack>
+										</Stack>
+									);
+								} else {
+									return (
+										<Typography
+											label={label}
+											color={labelColor}
+											fontSize={FontSizeTokens.sm}
+										/>
+									);
+								}
+							}}
 						/>
 					</Stack>
 				)}
@@ -290,7 +338,8 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				color={ColorTokens.Grey_300}
 				fontSize={FontSizeTokens.xs}
 			/>
-		</View>
+			<Space size={8} />
+		</Stack>
 	);
 };
 

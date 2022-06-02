@@ -17,13 +17,13 @@ type File = {
 
 export type ChatCardProps = {
 	type: ChatCardTypeTokens;
-	label?: string;
+	label?: string | null;
 	nameText?: string;
 	avatarUrl?: string;
 	timeStamp?: string;
 	linkUrl?: string;
 	onPress?: Function;
-	file?: File;
+	file?: File | null;
 };
 
 export type ChatCardBaseProps = {

@@ -34,8 +34,8 @@ import Mic from './icon-list/Mic';
 import PDF from './icon-list/PDF';
 import Gallery from './icon-list/Gallery';
 import Video from './icon-list/Video';
-import Icon from './Icon';
 import SendSolid from './icon-list/SendSolid';
+import RightAngle from './icon-list/RightAngle';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -71,4 +71,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Gallery]: Gallery,
 	[IconTokens.Video]: Video,
 	[IconTokens.SendSolid]: SendSolid,
+	[IconTokens.RightAngle]: RightAngle,
 };

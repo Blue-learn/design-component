@@ -15,22 +15,13 @@ import {
 	StackAlignType,
 	ImageSizeTokens,
 } from '@blue-learn/schema';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import { Typography } from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Stack from '../stack/Stack';
 import Image from '../image/Image';
-
-const styles = StyleSheet.create({
-	rowContainer: {
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'space-between',
-		width: '100%',
-	},
-});
 
 /**
  * Raw Component with Derived props + Theme
@@ -44,7 +35,6 @@ const ReplyChatCardBase: React.FunctionComponent<
 	borderRadius = CornerRadiusTokens.BR2,
 	padding = SpaceTypeTokens.MD,
 	nameText = 'lorem ipsum',
-	linkUrl,
 	file,
 }) => {
 	/**
@@ -59,11 +49,13 @@ const ReplyChatCardBase: React.FunctionComponent<
 	const backgroundColorValue =
 		theme.colors[bgColor];
 
-	const paddingValue: ColorTokensMap =
-		theme.space[padding];
+	const paddingVertical = theme.space[padding];
+
+	const paddingHorizontal =
+		theme.space[SpaceTypeTokens.LG];
 
 	const renderImage = () => {
-		switch (file.file_type) {
+		switch (file?.file_type) {
 			case 'IMAGE':
 				return (
 					<Image
@@ -82,7 +74,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 	};
 
 	const renderFileType = () => {
-		switch (file.file_type) {
+		switch (file?.file_type) {
 			case 'IMAGE':
 				return (
 					<Stack
@@ -181,20 +173,27 @@ const ReplyChatCardBase: React.FunctionComponent<
 	};
 
 	return (
-		<View
-			style={{
-				backgroundColor: backgroundColorValue,
-				borderRadius: borderRadiusValue,
-				padding: paddingValue,
-				width: '80%',
-			}}
+		<Stack
+			type={StackType.row}
+			alignX={StackAlignType.spaceBetween}
+			alignY={StackAlignType.center}
 		>
-			<Stack
-				type={StackType.row}
-				alignX={StackAlignType.spaceBetween}
-				alignY={StackAlignType.center}
+			<View
+				style={{
+					backgroundColor: backgroundColorValue,
+					borderRadius: borderRadiusValue,
+					paddingVertical: paddingVertical,
+					paddingHorizontal: paddingHorizontal,
+					alignSelf: 'flex-start',
+					maxWidth: '100%',
+				}}
 			>
-				<View style={{ width: '75%' }}>
+				<View
+					style={{
+						maxWidth: file?.file_id ? '75%' : '100%',
+						alignSelf: 'flex-start',
+					}}
+				>
 					<Typography
 						label={nameText}
 						fontWeight={FontWeightTokens['semi-bold']}
@@ -204,30 +203,21 @@ const ReplyChatCardBase: React.FunctionComponent<
 						numberOfLines={1}
 					/>
 					<Space size={4} />
-					{!label ? (
+					{label ? (
 						<Typography
 							label={label}
 							color={labelColor}
 							fontSize={FontSizeTokens['2xs']}
 							ellipsizeMode={EllipsizeModeTokens.tail}
-							numberOfLines={1}
+							numberOfLines={2}
 						/>
 					) : (
 						renderFileType()
 					)}
-					{linkUrl && (
-						<Typography
-							label={linkUrl}
-							color={labelColor}
-							fontSize={FontSizeTokens['2xs']}
-							ellipsizeMode={EllipsizeModeTokens.tail}
-							numberOfLines={1}
-						/>
-					)}
 				</View>
 				{renderImage()}
-			</Stack>
-		</View>
+			</View>
+		</Stack>
 	);
 };
 export default memo(ReplyChatCardBase);

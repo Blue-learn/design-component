@@ -20,7 +20,7 @@ const Template = (args: ChatCardProps) => (
 export const TextBox = Template.bind({});
 TextBox.args = {
 	label:
-		'Are bro how was the video? Hope you had fun watching it. It was wildd',
+		'This link https://github.com/flyerhq can be extracted from the text',
 	type: ChatCardTypeTokens.receiver,
 	timeStamp: '12:00 AM',
 };

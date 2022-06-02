@@ -13,6 +13,8 @@ import {
 	StackType,
 	StackAlignType,
 	IconSizeTokens,
+	FontFamilyTokens,
+	PreviewData,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -26,6 +28,7 @@ import Image from '../image/Image';
 import Button from '../button/Button';
 import Space from '../space/Space';
 import Icon from '../icon/Icon';
+import LinkPreview from '../linkPreview/LinkPreview';
 
 const styles = StyleSheet.create({
 	imageContainer: {
@@ -218,14 +221,14 @@ const SenderChatCardBase: React.FunctionComponent<
 	};
 
 	return (
-		<View>
+		<Stack>
+			<Space size={8} />
 			<View
 				style={[
 					{
 						backgroundColor: backgroundColorValue,
 						borderRadius: borderRadiusValue,
 						padding: paddingValue,
-						width: '80%',
 					},
 				]}
 			>
@@ -243,11 +246,63 @@ const SenderChatCardBase: React.FunctionComponent<
 					</TouchableOpacity>
 				)}
 				{label && (
-					<Typography
-						label={label}
-						color={labelColor}
-						fontSize={FontSizeTokens.sm}
-					/>
+					<Stack>
+						<Space
+							size={file && file?.file_id ? 4 : 0}
+						/>
+						<LinkPreview
+							text={label as string}
+							renderLinkPreview={(payload: {
+								aspectRatio?: number | undefined;
+								containerWidth: number;
+								previewData?: PreviewData | undefined;
+							}) => {
+								if (payload.previewData?.link) {
+									return (
+										<Stack>
+											<Typography
+												label={label}
+												color={labelColor}
+												fontSize={FontSizeTokens.xs}
+											/>
+											<Space size={8} />
+											<Image
+												size={ImageSizeTokens.xxl}
+												uri={payload.previewData?.image?.url}
+											/>
+											<Space size={8} />
+											<Stack>
+												<Typography
+													label={payload.previewData?.title}
+													color={labelColor}
+													fontFamily={
+														FontFamilyTokens.manropeSemiBold
+													}
+													fontSize={FontSizeTokens.xs}
+												/>
+												<Space size={4} />
+												<Typography
+													label={
+														payload.previewData?.description
+													}
+													color={labelColor}
+													fontSize={FontSizeTokens['2xs']}
+												/>
+											</Stack>
+										</Stack>
+									);
+								} else {
+									return (
+										<Typography
+											label={label}
+											color={labelColor}
+											fontSize={FontSizeTokens.sm}
+										/>
+									);
+								}
+							}}
+						/>
+					</Stack>
 				)}
 			</View>
 			<Space size={4} />
@@ -256,7 +311,8 @@ const SenderChatCardBase: React.FunctionComponent<
 				color={ColorTokens.Grey_300}
 				fontSize={FontSizeTokens.xs}
 			/>
-		</View>
+			<Space size={8} />
+		</Stack>
 	);
 };
 
