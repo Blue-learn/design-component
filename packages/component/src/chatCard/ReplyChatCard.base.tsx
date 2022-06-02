@@ -13,7 +13,6 @@ import {
 	IconSizeTokens,
 	StackType,
 	StackAlignType,
-	avatarSizeTokens,
 	ImageSizeTokens,
 } from '@blue-learn/schema';
 import { StyleSheet, View } from 'react-native';
@@ -22,7 +21,6 @@ import { Typography } from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Stack from '../stack/Stack';
-import Avatar from '../avatar/Avatar';
 import Image from '../image/Image';
 
 const styles = StyleSheet.create({
@@ -46,10 +44,8 @@ const ReplyChatCardBase: React.FunctionComponent<
 	borderRadius = CornerRadiusTokens.BR2,
 	padding = SpaceTypeTokens.MD,
 	nameText = 'lorem ipsum',
-	imageUrl,
-	fileType,
 	linkUrl,
-	videoThumbnailUrl,
+	file,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -65,6 +61,124 @@ const ReplyChatCardBase: React.FunctionComponent<
 
 	const paddingValue: ColorTokensMap =
 		theme.space[padding];
+
+	const renderImage = () => {
+		switch (file.file_type) {
+			case 'IMAGE':
+				return (
+					<Image
+						uri={file.file_url}
+						size={ImageSizeTokens.sm}
+					/>
+				);
+			case 'VIDEO':
+				<Image
+					uri={file.video_thumbnail}
+					size={ImageSizeTokens.sm}
+				/>;
+			default:
+				break;
+		}
+	};
+
+	const renderFileType = () => {
+		switch (file.file_type) {
+			case 'IMAGE':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Icon
+							name={IconTokens.Gallery}
+							color={ColorTokens.Grey_400}
+							size={IconSizeTokens['2xs']}
+						/>
+						<Space size={4} />
+						<Typography
+							label={file.file_type || label}
+							color={labelColor}
+							textTransform={
+								FontTransformToken.capitalize
+							}
+							fontSize={FontSizeTokens['2xs']}
+							numberOfLines={1}
+						/>
+					</Stack>
+				);
+			case 'VIDEO':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Icon
+							name={IconTokens.Video}
+							color={ColorTokens.Grey_400}
+							size={IconSizeTokens['2xs']}
+						/>
+						<Space size={4} />
+						<Typography
+							label={file.file_type || label}
+							color={labelColor}
+							textTransform={
+								FontTransformToken.capitalize
+							}
+							fontSize={FontSizeTokens['2xs']}
+							numberOfLines={1}
+						/>
+					</Stack>
+				);
+			case 'AUDIO':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Icon
+							name={IconTokens.Mic}
+							color={ColorTokens.Grey_400}
+							size={IconSizeTokens['2xs']}
+						/>
+						<Space size={4} />
+						<Typography
+							label={'Voice Message'}
+							color={labelColor}
+							textTransform={
+								FontTransformToken.capitalize
+							}
+							fontSize={FontSizeTokens['2xs']}
+							numberOfLines={1}
+						/>
+					</Stack>
+				);
+			case 'FILE':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Icon
+							name={IconTokens.PDF}
+							color={ColorTokens.Grey_400}
+							size={IconSizeTokens['2xs']}
+						/>
+						<Space size={4} />
+						<Typography
+							label={file.file_name}
+							color={labelColor}
+							textTransform={
+								FontTransformToken.capitalize
+							}
+							fontSize={FontSizeTokens['2xs']}
+							numberOfLines={1}
+						/>
+					</Stack>
+				);
+			default:
+				break;
+		}
+	};
 
 	return (
 		<View
@@ -99,26 +213,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							numberOfLines={1}
 						/>
 					) : (
-						<Stack
-							type={StackType.row}
-							alignY={StackAlignType.center}
-						>
-							<Icon
-								name={IconTokens.Attachment}
-								color={ColorTokens.Grey_400}
-								size={IconSizeTokens['2xs']}
-							/>
-							<Space size={4} />
-							<Typography
-								label={fileType || label}
-								color={labelColor}
-								textTransform={
-									FontTransformToken.capitalize
-								}
-								fontSize={FontSizeTokens['2xs']}
-								numberOfLines={1}
-							/>
-						</Stack>
+						renderFileType()
 					)}
 					{linkUrl && (
 						<Typography
@@ -130,18 +225,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						/>
 					)}
 				</View>
-				{imageUrl && imageUrl?.length > 0 && (
-					<Image
-						uri={imageUrl[0]}
-						size={ImageSizeTokens.sm}
-					/>
-				)}
-				{videoThumbnailUrl && (
-					<Image
-						uri={videoThumbnailUrl}
-						size={ImageSizeTokens.sm}
-					/>
-				)}
+				{renderImage()}
 			</Stack>
 		</View>
 	);

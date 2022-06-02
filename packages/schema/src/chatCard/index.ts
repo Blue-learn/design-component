@@ -6,18 +6,24 @@ export enum ChatCardTypeTokens {
 	reply = 'reply',
 }
 
+type File = {
+	file_id: number;
+	file_type: string;
+	file_url: string;
+	video_thumbnail?: string;
+	file_name?: string;
+	file_size?: number;
+};
+
 export type ChatCardProps = {
-	type?: ChatCardTypeTokens;
+	type: ChatCardTypeTokens;
 	label?: string;
 	nameText?: string;
 	avatarUrl?: string;
 	timeStamp?: string;
 	linkUrl?: string;
-	imageUrl?: string[];
-	audioUrl?: string;
-	videoThumbnailUrl?: string;
 	onPress?: Function;
-	fileType?: string;
+	file?: File;
 };
 
 export type ChatCardBaseProps = {
@@ -30,9 +36,6 @@ export type ChatCardBaseProps = {
 	borderRadius?: number;
 	padding?: number;
 	linkUrl?: string;
-	imageUrl?: string[];
-	audioUrl?: string;
-	videoThumbnailUrl?: string;
 	onPress?: Function;
-	fileType?: string;
+	file?: File;
 };

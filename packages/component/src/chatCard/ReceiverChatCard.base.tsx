@@ -80,15 +80,9 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
 	nameText = 'lorem ipsum',
 	timeStamp,
-	imageUrl = [
-		'https://reactnative.dev/img/tiny_logo.png',
-		'https://reactnative.dev/img/tiny_logo.png',
-	],
-	videoThumbnailUrl,
-	audioUrl,
+	file,
 	linkUrl,
 	onPress,
-	fileType,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -105,50 +99,21 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	const paddingValue: SpaceTypeTokensMap =
 		theme.space[padding];
 
-	return (
-		<View>
-			<View
-				style={[
-					{
-						backgroundColor: backgroundColorValue,
-						borderRadius: borderRadiusValue,
-						padding: paddingValue,
-						width: '80%',
-					},
-				]}
-			>
-				{nameText && (
-					<Stack
-						type={StackType.row}
-						alignY={StackAlignType.center}
-					>
-						<Avatar
-							uri={avatarUrl}
-							size={avatarSizeTokens.SM}
-							borderRadius={CornerRadiusTokens.BR4}
-						/>
-						<Space size={8} />
-						<Typography
-							label={nameText}
-							color={ColorTokens.Grey_400}
-							fontSize={FontSizeTokens.xs}
-							fontFamily={
-								FontFamilyTokens.manropeSemiBold
-							}
-						/>
-					</Stack>
-				)}
-				<Space size={8} />
-				{imageUrl && (
-					<TouchableOpacity onPres={onPress}>
+	const renderSwitch = () => {
+		switch (file?.file_type) {
+			case 'IMAGE':
+				return (
+					<TouchableOpacity onPress={onPress}>
 						<Stack alignY={StackAlignType.center}>
 							<Image
-								uri={imageUrl[0]}
+								uri={file?.file_url}
 								size={ImageSizeTokens.xxl}
 							/>
 						</Stack>
-
-						{imageUrl.length > 1 && (
+						{/* {file?.file_url?.length > 0 && (
+						render a image[0]
+						)} 
+						 {file?.file_url?.length > 1 && (
 							<View
 								style={[
 									styles.imageDetailsContainer,
@@ -160,18 +125,21 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							>
 								<Space size={8} />
 								<Typography
-									label={`+ ${imageUrl.length - 1} more`}
+									label={`+ ${
+										file?.file_url?.length - 1
+									} more`}
 									color={ColorTokens.White}
 								/>
 								<Space size={8} />
 							</View>
-						)}
+						)}  */}
 					</TouchableOpacity>
-				)}
-				{videoThumbnailUrl && (
+				);
+			case 'VIDEO':
+				return (
 					<Stack>
 						<Image
-							uri={videoThumbnailUrl}
+							uri={file.video_thumbnail}
 							size={ImageSizeTokens.xxl}
 						/>
 						<View style={styles.videoPlayBtn}>
@@ -182,8 +150,9 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							/>
 						</View>
 					</Stack>
-				)}
-				{audioUrl && (
+				);
+			case 'AUDIO':
+				return (
 					<Stack
 						type={StackType.row}
 						alignY={StackAlignType.center}
@@ -218,7 +187,78 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							/>
 						</Stack>
 					</Stack>
-				)}
+				);
+
+			case 'FILE':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+						alignX={StackAlignType.spaceBetween}
+					>
+						<Icon name={IconTokens.PDF} />
+						<Space size={8} />
+						<Stack>
+							<Typography
+								label={file.file_name}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_500}
+							/>
+							<Typography
+								label={
+									Math.round(file.file_size / 1024) +
+									' KB •' +
+									file.file_type
+								}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_500}
+							/>
+						</Stack>
+						<Space size={8} />
+						<Button
+							type={ButtonTypeTokens.IconGhost}
+							onPress={onPress}
+						/>
+					</Stack>
+				);
+			default:
+				break;
+		}
+	};
+
+	return (
+		<View>
+			<View
+				style={[
+					{
+						backgroundColor: backgroundColorValue,
+						borderRadius: borderRadiusValue,
+						padding: paddingValue,
+						width: '80%',
+					},
+				]}
+			>
+				<Stack
+					type={StackType.row}
+					alignY={StackAlignType.center}
+				>
+					<Avatar
+						uri={avatarUrl}
+						size={avatarSizeTokens.SM}
+						borderRadius={CornerRadiusTokens.BR4}
+					/>
+					<Space size={8} />
+					<Typography
+						label={nameText}
+						color={ColorTokens.Grey_400}
+						fontSize={FontSizeTokens.xs}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
+					/>
+				</Stack>
+				<Space size={8} />
+				{renderSwitch()}
 				{linkUrl && (
 					<TouchableOpacity onPress={onPress}>
 						<Typography
@@ -234,9 +274,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				{label && (
 					<Stack>
 						<Space
-							size={
-								imageUrl || videoThumbnailUrl ? 4 : 0
-							}
+							size={file && file?.file_id ? 4 : 0}
 						/>
 						<Typography
 							label={label}

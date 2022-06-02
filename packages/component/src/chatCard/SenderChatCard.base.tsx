@@ -68,11 +68,9 @@ const SenderChatCardBase: React.FunctionComponent<
 	borderRadius = CornerRadiusTokens.BR2,
 	padding = SpaceTypeTokens.MD,
 	timeStamp,
-	imageUrl,
-	videoThumbnailUrl,
-	audioUrl,
 	linkUrl,
 	onPress,
+	file,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -89,6 +87,136 @@ const SenderChatCardBase: React.FunctionComponent<
 	const paddingValue: ColorTokensMap =
 		theme.space[padding];
 
+	const renderSwitch = () => {
+		switch (file?.file_type) {
+			case 'IMAGE':
+				return (
+					<TouchableOpacity onPress={onPress}>
+						<Stack alignY={StackAlignType.center}>
+							<Image
+								uri={file?.file_url}
+								size={ImageSizeTokens.xxl}
+							/>
+						</Stack>
+						{/* {file?.file_url?.length > 0 && (
+						render a image[0]
+						)} 
+						 {file?.file_url?.length > 1 && (
+							<View
+								style={[
+									styles.imageDetailsContainer,
+									{
+										backgroundColor:
+											theme.colors[ColorTokens.Grey_600],
+									},
+								]}
+							>
+								<Space size={8} />
+								<Typography
+									label={`+ ${
+										file?.file_url?.length - 1
+									} more`}
+									color={ColorTokens.White}
+								/>
+								<Space size={8} />
+							</View>
+						)}  */}
+					</TouchableOpacity>
+				);
+			case 'VIDEO':
+				return (
+					<Stack>
+						<Image
+							uri={file.video_thumbnail}
+							size={ImageSizeTokens.xxl}
+						/>
+						<View style={styles.videoPlayBtn}>
+							<Button
+								type={ButtonTypeTokens.IconElevated}
+								iconName={IconTokens.Play}
+								onPress={onPress}
+							/>
+						</View>
+					</Stack>
+				);
+			case 'AUDIO':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Button
+							type={ButtonTypeTokens.IconElevated}
+							iconName={IconTokens.Play}
+							labelColor={ColorTokens.Grey_100}
+							onPress={onPress}
+						/>
+						<Space size={8} />
+						<Stack>
+							<Stack
+								type={StackType.row}
+								alignY={StackAlignType.center}
+							>
+								<Icon
+									name={IconTokens.Mic}
+									size={IconSizeTokens.xs}
+									color={ColorTokens.Grey_100}
+								/>
+								<Space size={4} />
+								<Typography
+									label={'Voice Message'}
+									fontSize={FontSizeTokens.xs}
+									color={ColorTokens.Grey_100}
+								/>
+							</Stack>
+							<Space size={4} />
+							<Typography
+								label={'0:05'}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_200}
+							/>
+						</Stack>
+					</Stack>
+				);
+
+			case 'FILE':
+				return (
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+						alignX={StackAlignType.spaceBetween}
+					>
+						<Icon name={IconTokens.PDF} />
+						<Space size={8} />
+						<Stack>
+							<Typography
+								label={file.file_name}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_100}
+							/>
+							<Typography
+								label={
+									Math.round(file.file_size / 1024) +
+									' KB •' +
+									file.file_type
+								}
+								fontSize={FontSizeTokens['2xs']}
+								color={ColorTokens.Grey_100}
+							/>
+						</Stack>
+						<Space size={8} />
+						<Button
+							type={ButtonTypeTokens.IconGhost}
+							onPress={onPress}
+							labelColor={ColorTokens.Grey_100}
+						/>
+					</Stack>
+				);
+			default:
+				break;
+		}
+	};
+
 	return (
 		<View>
 			<View
@@ -101,85 +229,7 @@ const SenderChatCardBase: React.FunctionComponent<
 					},
 				]}
 			>
-				{imageUrl && (
-					<TouchableOpacity onPres={onPress}>
-						<Stack alignY={StackAlignType.center}>
-							<Image
-								uri={imageUrl[0]}
-								size={ImageSizeTokens.xxl}
-							/>
-						</Stack>
-						{imageUrl.length > 1 && (
-							<View
-								style={[
-									styles.imageDetailsContainer,
-									{
-										backgroundColor:
-											theme.colors[ColorTokens.Grey_600],
-									},
-								]}
-							>
-								<Space size={8} />
-								<Typography
-									label={`+ ${imageUrl.length - 1} more`}
-									color={ColorTokens.White}
-								/>
-								<Space size={8} />
-							</View>
-						)}
-					</TouchableOpacity>
-				)}
-				{videoThumbnailUrl && (
-					<View>
-						<Image
-							uri={videoThumbnailUrl}
-							size={ImageSizeTokens.xxl}
-						/>
-						<View style={styles.videoPlayBtn}>
-							<Button
-								type={ButtonTypeTokens.IconElevated}
-								iconName={IconTokens.Play}
-								onPress={onPress}
-							/>
-						</View>
-					</View>
-				)}
-				{audioUrl && (
-					<Stack
-						type={StackType.row}
-						alignY={StackAlignType.center}
-					>
-						<Button
-							type={ButtonTypeTokens.IconElevated}
-							iconName={IconTokens.Play}
-							labelColor={ColorTokens.Grey_500}
-							onPress={onPress}
-						/>
-						<Space size={8} />
-						<Stack>
-							<Stack
-								type={StackType.row}
-								alignY={StackAlignType.center}
-							>
-								<Icon
-									name={IconTokens.Attachment}
-									size={IconSizeTokens.xs}
-								/>
-								<Space size={4} />
-								<Typography
-									label={'Voice Message'}
-									fontSize={FontSizeTokens.xs}
-								/>
-							</Stack>
-							<Space size={4} />
-							<Typography
-								label={'0:05'}
-								fontSize={FontSizeTokens['2xs']}
-								color={ColorTokens.Grey_400}
-							/>
-						</Stack>
-					</Stack>
-				)}
+				{renderSwitch()}
 				{linkUrl && (
 					<TouchableOpacity onPress={onPress}>
 						<Typography
