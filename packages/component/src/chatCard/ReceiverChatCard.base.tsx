@@ -4,8 +4,6 @@ import {
 	CornerRadiusTokens,
 	FontSizeTokens,
 	ChatCardBaseProps,
-	SpaceTypeTokens,
-	SpaceTypeTokensMap,
 	FontDecorationToken,
 	ButtonTypeTokens,
 	IconTokens,
@@ -75,6 +73,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	label,
 	bgColor,
 	labelColor,
+	userLabelColor,
 	borderRadius,
 	padding,
 	avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
@@ -231,7 +230,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						<Space size={8} />
 						<Typography
 							label={nameText}
-							color={ColorTokens.Grey_400}
+							color={userLabelColor}
 							fontSize={FontSizeTokens.xs}
 							fontFamily={
 								FontFamilyTokens.manropeSemiBold

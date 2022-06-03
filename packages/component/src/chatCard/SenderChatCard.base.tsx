@@ -1,11 +1,8 @@
 import React, { memo } from 'react';
 import {
 	ColorTokens,
-	ColorTokensMap,
-	CornerRadiusTokens,
 	FontSizeTokens,
 	ChatCardBaseProps,
-	SpaceTypeTokens,
 	FontDecorationToken,
 	ImageSizeTokens,
 	ButtonTypeTokens,

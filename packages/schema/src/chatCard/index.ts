@@ -34,6 +34,7 @@ export type ChatCardBaseProps = {
 	label?: string;
 	bgColor?: ColorTokens;
 	labelColor?: ColorTokens;
+	userLabelColor?: ColorTokens;
 	nameText?: string;
 	avatarUrl?: string;
 	timeStamp?: string;
@@ -48,6 +49,7 @@ export type ChatCardBaseProps = {
 
 export type ChatCardThemeProps = {
 	labelColor: ColorTokens;
+	userLabelColor?: ColorTokens;
 	bgColor: ColorTokens;
 	borderRadius?: CornerRadiusTokens;
 	padding?: SpaceTypeTokens;

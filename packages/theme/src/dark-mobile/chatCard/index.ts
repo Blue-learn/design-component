@@ -10,6 +10,7 @@ export const darkChatCardTypeTokenMap: ChatCardTypeTokensMap =
 		[ChatCardTypeTokens.receiver]: {
 			...chatCardTypeTokenMap.receiver,
 			labelColor: ColorTokens.Grey_100,
+			userLabelColor: ColorTokens.Grey_200,
 			bgColor: ColorTokens.Grey_600,
 		},
 		[ChatCardTypeTokens.sender]: {
@@ -20,6 +21,7 @@ export const darkChatCardTypeTokenMap: ChatCardTypeTokensMap =
 		[ChatCardTypeTokens.reply]: {
 			...chatCardTypeTokenMap.reply,
 			labelColor: ColorTokens.Grey_200,
+			userLabelColor: ColorTokens.Grey_200,
 			bgColor: ColorTokens.Grey_600,
 		},
 	};

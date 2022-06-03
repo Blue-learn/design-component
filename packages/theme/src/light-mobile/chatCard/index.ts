@@ -10,6 +10,7 @@ export const chatCardTypeTokenMap: ChatCardTypeTokensMap =
 	{
 		[ChatCardTypeTokens.receiver]: {
 			labelColor: ColorTokens.Grey_500,
+			userLabelColor: ColorTokens.Grey_400,
 			bgColor: ColorTokens.Grey_50,
 			padding: SpaceTypeTokens.MD,
 			borderRadius: CornerRadiusTokens.BR2,
@@ -22,6 +23,7 @@ export const chatCardTypeTokenMap: ChatCardTypeTokensMap =
 		},
 		[ChatCardTypeTokens.reply]: {
 			labelColor: ColorTokens.Grey_400,
+			userLabelColor: ColorTokens.Grey_400,
 			bgColor: ColorTokens.Grey_100,
 			padding: SpaceTypeTokens.MD,
 			borderRadius: CornerRadiusTokens.BR2,
