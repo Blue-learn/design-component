@@ -12,6 +12,7 @@ import {
 	FontDecorationToken,
 	FontTransformToken,
 	FontSizeTokensMap,
+	TextAlignTokens,
 } from '@blue-learn/schema';
 
 /**
@@ -28,7 +29,8 @@ const TypographyBase: React.FunctionComponent<
 	fontFamily = FontFamilyTokens.manropeRegular,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
-	ellipSizeMode,
+	textAlign = TextAlignTokens.auto,
+	ellipsizeMode,
 	numberOfLines = 0,
 	...props
 }) => {
@@ -53,6 +55,7 @@ const TypographyBase: React.FunctionComponent<
 				fontSize: fontSizeMapping[fontSize],
 				textTransform: textTransform,
 				textDecorationLine: textDecorationLine,
+				textAlign: textAlign,
 			}}
 			numberOfLines={numberOfLines}
 			{...props}

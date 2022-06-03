@@ -20,6 +20,7 @@ export enum IconTokens {
 	Back = 'back',
 	PlusCircle = 'plus-circle',
 	Cross = 'cross',
+	Play = 'play',
 	CheckTwo = 'check-two',
 	ThreeDots = 'three-dots',
 	LocationPin = 'location-pin',
@@ -38,6 +39,13 @@ export enum IconTokens {
 	Info = 'info',
 	Lighting = 'lighting',
 	Notification = 'notification',
+	Download = 'download',
+	Mic = 'mic',
+	PDF = 'pdf',
+	Gallery = 'gallery',
+	Video = 'video',
+	SendSolid = 'send-solid',
+	RightAngle = 'right-angle',
 }
 
 export enum IconSizeTokens {

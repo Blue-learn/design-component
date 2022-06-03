@@ -9,6 +9,7 @@ import { fontSizeTokensMap } from '../typography';
 import { shadowTypeTokensMap } from './shadow';
 import { IconSizeTokensMap } from '../icons';
 import { avatarTypeTokensMap } from './avatar';
+import { imageTypeTokensMap } from './image';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -22,4 +23,5 @@ export const lightMobileTheme: ThemeTokens = {
 	shadow: shadowTypeTokensMap,
 	iconSize: IconSizeTokensMap,
 	avatarSize: avatarTypeTokensMap,
+	imageSize: imageTypeTokensMap,
 };

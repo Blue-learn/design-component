@@ -55,6 +55,14 @@ export enum EllipsizeModeTokens {
 	clip = 'clip',
 }
 
+export enum TextAlignTokens {
+	auto = 'auto',
+	left = 'left',
+	right = 'right',
+	center = 'center',
+	justify = 'justify',
+}
+
 export type TypographyBaseProps = {
 	label?: String;
 	color?: ColorTokens;
@@ -63,8 +71,9 @@ export type TypographyBaseProps = {
 	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: FontDecorationToken;
 	textTransform?: FontTransformToken;
-	ellipSizeMode?: EllipsizeModeTokens;
+	ellipsizeMode?: EllipsizeModeTokens;
 	numberOfLines?: number;
+	textAlign?: TextAlignTokens;
 };
 
 export type TypographyProps = {
@@ -75,6 +84,7 @@ export type TypographyProps = {
 	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: FontDecorationToken;
 	textTransform?: FontTransformToken;
-	ellipSizeMode?: EllipsizeModeTokens;
+	ellipsizeMode?: EllipsizeModeTokens;
 	numberOfLines?: number;
+	textAlign?: TextAlignTokens;
 };

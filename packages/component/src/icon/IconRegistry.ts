@@ -28,6 +28,14 @@ import DoubleMessage from './icon-list/DoubleMessage';
 import Info from './icon-list/Info';
 import Lighting from './icon-list/Lighting';
 import Notification from './icon-list/Notification';
+import Play from './icon-list/Play';
+import Download from './icon-list/Download';
+import Mic from './icon-list/Mic';
+import PDF from './icon-list/PDF';
+import Gallery from './icon-list/Gallery';
+import Video from './icon-list/Video';
+import SendSolid from './icon-list/SendSolid';
+import RightAngle from './icon-list/RightAngle';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -56,4 +64,12 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Info]: Info,
 	[IconTokens.Lighting]: Lighting,
 	[IconTokens.Notification]: Notification,
+	[IconTokens.Play]: Play,
+	[IconTokens.Download]: Download,
+	[IconTokens.Mic]: Mic,
+	[IconTokens.PDF]: PDF,
+	[IconTokens.Gallery]: Gallery,
+	[IconTokens.Video]: Video,
+	[IconTokens.SendSolid]: SendSolid,
+	[IconTokens.RightAngle]: RightAngle,
 };
