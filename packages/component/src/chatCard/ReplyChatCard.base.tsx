@@ -30,10 +30,10 @@ const ReplyChatCardBase: React.FunctionComponent<
 	ChatCardBaseProps
 > = ({
 	label = 'Are bro how was the video? Hope you had fun watching it. It was wildd',
-	bgColor = ColorTokens.Grey_100,
-	labelColor = ColorTokens.Grey_500,
-	borderRadius = CornerRadiusTokens.BR2,
-	padding = SpaceTypeTokens.MD,
+	bgColor,
+	labelColor,
+	borderRadius,
+	padding,
 	nameText = 'lorem ipsum',
 	file,
 }) => {

@@ -10,6 +10,7 @@ import { shadowTypeTokensMap } from './shadow';
 import { IconSizeTokensMap } from '../icons';
 import { avatarTypeTokensMap } from './avatar';
 import { imageTypeTokensMap } from './image';
+import { chatCardTypeTokenMap } from './chatCard';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -17,11 +18,11 @@ export const lightMobileTheme: ThemeTokens = {
 	borderRadius: borderRadiusTypeTokensMap,
 	space: spaceTypeTokensMap,
 	fontFamily: fontFamilyTokensMap,
-	spaces: spaceTypeTokensMap,
 	textInput: inputTypeTokensMap,
 	fontSize: fontSizeTokensMap,
 	shadow: shadowTypeTokensMap,
 	iconSize: IconSizeTokensMap,
 	avatarSize: avatarTypeTokensMap,
 	imageSize: imageTypeTokensMap,
+	chatCard: chatCardTypeTokenMap,
 };

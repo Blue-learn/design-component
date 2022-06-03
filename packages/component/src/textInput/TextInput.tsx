@@ -42,7 +42,7 @@ const TextInput: React.FunctionComponent<
 		theme.textInput[inputType];
 
 	const spaceTokenMapping: SpaceTypeTokensMap =
-		theme.spaces;
+		theme.space;
 
 	if (leftElement || rightElement) {
 		return (

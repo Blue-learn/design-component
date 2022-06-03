@@ -73,10 +73,10 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	ChatCardBaseProps
 > = ({
 	label,
-	bgColor = ColorTokens.Grey_50,
-	labelColor = ColorTokens.Grey_500,
-	borderRadius = CornerRadiusTokens.BR2,
-	padding = SpaceTypeTokens.MD,
+	bgColor,
+	labelColor,
+	borderRadius,
+	padding,
 	avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
 	nameText = 'lorem ipsum',
 	timeStamp,
@@ -98,8 +98,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	const backgroundColorValue =
 		theme.colors[bgColor];
 
-	const paddingValue: SpaceTypeTokensMap =
-		theme.space[padding];
+	const paddingValue = theme.space[padding];
 
 	const renderSwitch = () => {
 		switch (file?.file_type) {

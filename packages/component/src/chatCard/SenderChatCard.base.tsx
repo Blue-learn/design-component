@@ -66,10 +66,10 @@ const SenderChatCardBase: React.FunctionComponent<
 	ChatCardBaseProps
 > = ({
 	label = 'Are bro how was the video? Hope you had fun watching it. It was wildd',
-	bgColor = ColorTokens.Blue_600,
-	labelColor = ColorTokens.Grey_50,
-	borderRadius = CornerRadiusTokens.BR2,
-	padding = SpaceTypeTokens.MD,
+	bgColor,
+	labelColor,
+	borderRadius,
+	padding,
 	timeStamp,
 	linkUrl,
 	onPress,
@@ -88,8 +88,7 @@ const SenderChatCardBase: React.FunctionComponent<
 	const backgroundColorValue =
 		theme.colors[bgColor];
 
-	const paddingValue: ColorTokensMap =
-		theme.space[padding];
+	const paddingValue = theme.space[padding];
 
 	const renderSwitch = () => {
 		switch (file?.file_type) {

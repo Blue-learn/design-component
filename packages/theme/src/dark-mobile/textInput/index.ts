@@ -1,74 +1,34 @@
 import {
 	ColorTokens,
-	CornerRadiusTokens,
 	inputTypeToken,
-	SpaceTypeTokens,
 	InputTypeTokensMap,
-	FontSizeTokens,
 } from '@blue-learn/schema';
-import { borderRadiusTypeTokensMap } from '../../light-mobile/cornerRadius';
-import { spaceTypeTokensMap } from '../../light-mobile/space';
+import { inputTypeTokensMap } from '../../light-mobile/textInput';
 
-export const inputTypeTokensMap: InputTypeTokensMap =
+export const darkInputTypeTokensMap: InputTypeTokensMap =
 	{
 		[inputTypeToken.default]: {
-			size: FontSizeTokens.md,
-			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.Transparent,
-			borderColor: ColorTokens.Grey_200,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
+			...inputTypeTokensMap.default,
+			color: ColorTokens.Grey_100,
 		},
 		[inputTypeToken.chat]: {
-			size: FontSizeTokens.md,
-			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.White,
-			borderColor: ColorTokens.Transparent,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR4
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
+			...inputTypeTokensMap.chat,
+			color: ColorTokens.Grey_100,
+			bgColor: ColorTokens.Grey_600,
 		},
 		[inputTypeToken.disabled]: {
-			size: FontSizeTokens.md,
+			...inputTypeTokensMap.disabled,
 			color: ColorTokens.Grey_100,
-			bgColor: ColorTokens.White,
 			borderColor: ColorTokens.Grey_100,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 		[inputTypeToken.success]: {
-			size: FontSizeTokens.md,
-			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.White,
+			...inputTypeTokensMap.success,
+			color: ColorTokens.Grey_100,
 			borderColor: ColorTokens.Success_100,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 		[inputTypeToken.error]: {
-			size: FontSizeTokens.md,
-			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.White,
+			...inputTypeTokensMap.error,
+			color: ColorTokens.Grey_100,
 			borderColor: ColorTokens.Error_100,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
 		},
 	};

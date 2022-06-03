@@ -26,7 +26,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 		[inputTypeToken.chat]: {
 			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Grey_50,
 			borderColor: ColorTokens.Transparent,
 			borderRadius:
 				borderRadiusTypeTokensMap[
@@ -38,7 +38,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 		[inputTypeToken.disabled]: {
 			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_100,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Grey_100,
 			borderRadius:
 				borderRadiusTypeTokensMap[
@@ -50,7 +50,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 		[inputTypeToken.success]: {
 			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Success_100,
 			borderRadius:
 				borderRadiusTypeTokensMap[
@@ -62,7 +62,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 		[inputTypeToken.error]: {
 			size: FontSizeTokens.md,
 			color: ColorTokens.Grey_500,
-			bgColor: ColorTokens.White,
+			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Error_100,
 			borderRadius:
 				borderRadiusTypeTokensMap[
