@@ -23,7 +23,9 @@ export type ChatCardProps = {
 	timeStamp?: string;
 	linkUrl?: string;
 	onPress?: Function;
+	onPressProfile?: Function;
 	file?: File | null;
+	duration?: string;
 };
 
 export type ChatCardBaseProps = {
@@ -37,5 +39,7 @@ export type ChatCardBaseProps = {
 	padding?: number;
 	linkUrl?: string;
 	onPress?: Function;
+	onPressProfile?: Function;
 	file?: File;
+	duration?: string;
 };

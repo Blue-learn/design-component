@@ -65,7 +65,11 @@ const ReplyChatCardBase: React.FunctionComponent<
 				);
 			case 'VIDEO':
 				<Image
-					uri={file.video_thumbnail}
+					uri={
+						file.video_thumbnail
+							? file.video_thumbnail
+							: 'https://images.unsplash.com/photo-1614671493799-293d07f5cd70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+					}
 					size={ImageSizeTokens.sm}
 				/>;
 			default:

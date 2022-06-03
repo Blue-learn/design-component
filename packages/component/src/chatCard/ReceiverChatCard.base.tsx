@@ -83,6 +83,8 @@ const ReceiverChatCardBase: React.FunctionComponent<
 	file,
 	linkUrl,
 	onPress,
+	onPressProfile,
+	duration,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -103,43 +105,22 @@ const ReceiverChatCardBase: React.FunctionComponent<
 		switch (file?.file_type) {
 			case 'IMAGE':
 				return (
-					<TouchableOpacity onPress={onPress}>
-						<Stack alignY={StackAlignType.center}>
-							<Image
-								uri={file?.file_url}
-								size={ImageSizeTokens.xxl}
-							/>
-						</Stack>
-						{/* {file?.file_url?.length > 0 && (
-						render a image[0]
-						)} 
-						 {file?.file_url?.length > 1 && (
-							<View
-								style={[
-									styles.imageDetailsContainer,
-									{
-										backgroundColor:
-											theme.colors[ColorTokens.Grey_600],
-									},
-								]}
-							>
-								<Space size={8} />
-								<Typography
-									label={`+ ${
-										file?.file_url?.length - 1
-									} more`}
-									color={ColorTokens.White}
-								/>
-								<Space size={8} />
-							</View>
-						)}  */}
-					</TouchableOpacity>
+					<Stack alignY={StackAlignType.center}>
+						<Image
+							uri={file?.file_url}
+							size={ImageSizeTokens.xxl}
+						/>
+					</Stack>
 				);
 			case 'VIDEO':
 				return (
 					<Stack>
 						<Image
-							uri={file.video_thumbnail}
+							uri={
+								file.video_thumbnail
+									? file.video_thumbnail
+									: 'https://images.unsplash.com/photo-1614671493799-293d07f5cd70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+							}
 							size={ImageSizeTokens.xxl}
 						/>
 						<View style={styles.videoPlayBtn}>
@@ -181,7 +162,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							</Stack>
 							<Space size={4} />
 							<Typography
-								label={'0:05'}
+								label={duration}
 								fontSize={FontSizeTokens['2xs']}
 								color={ColorTokens.Grey_400}
 							/>
@@ -238,28 +219,34 @@ const ReceiverChatCardBase: React.FunctionComponent<
 					},
 				]}
 			>
-				<Stack
-					type={StackType.row}
-					alignY={StackAlignType.center}
-				>
-					<Avatar
-						uri={avatarUrl}
-						size={avatarSizeTokens.SM}
-						borderRadius={CornerRadiusTokens.BR4}
-					/>
-					<Space size={8} />
-					<Typography
-						label={nameText}
-						color={ColorTokens.Grey_400}
-						fontSize={FontSizeTokens.xs}
-						fontFamily={
-							FontFamilyTokens.manropeSemiBold
-						}
-					/>
-					<Space size={8} />
-				</Stack>
+				<TouchableOpacity onPress={onPressProfile}>
+					<Stack
+						type={StackType.row}
+						alignY={StackAlignType.center}
+					>
+						<Avatar
+							uri={avatarUrl}
+							size={avatarSizeTokens.SM}
+							borderRadius={CornerRadiusTokens.BR4}
+						/>
+						<Space size={8} />
+						<Typography
+							label={nameText}
+							color={ColorTokens.Grey_400}
+							fontSize={FontSizeTokens.xs}
+							fontFamily={
+								FontFamilyTokens.manropeSemiBold
+							}
+						/>
+						<Space size={8} />
+					</Stack>
+				</TouchableOpacity>
+
 				<Space size={8} />
-				{renderSwitch()}
+				<TouchableOpacity onPress={onPress}>
+					{renderSwitch()}
+				</TouchableOpacity>
+
 				{linkUrl && (
 					<TouchableOpacity onPress={onPress}>
 						<Typography
@@ -345,3 +332,27 @@ const ReceiverChatCardBase: React.FunctionComponent<
 
 export default memo(ReceiverChatCardBase);
 export { ReceiverChatCardBase };
+
+// {file?.file_url?.length > 0 && (
+// 	render a image[0]
+// 	)}
+//  {file?.file_url?.length > 1 && (
+// 	<View
+// 		style={[
+// 			styles.imageDetailsContainer,
+// 			{
+// 				backgroundColor:
+// 					theme.colors[ColorTokens.Grey_600],
+// 			},
+// 		]}
+// 	>
+// 		<Space size={8} />
+// 		<Typography
+// 			label={`+ ${
+// 				file?.file_url?.length - 1
+// 			} more`}
+// 			color={ColorTokens.White}
+// 		/>
+// 		<Space size={8} />
+// 	</View>
+// )}
