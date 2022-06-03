@@ -9,6 +9,7 @@ import {
 	InputTypeTokensMap,
 	ShadowTypeTokensMap,
 	SpaceTypeTokensMap,
+	ImageTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -23,6 +24,7 @@ export type ThemeTokens = {
 	textInput: InputTypeTokensMap;
 	iconSize: IconSizeTokensMap;
 	avatarSize: AvatarTypeTokensMap;
+	imageSize: ImageTypeTokensMap;
 };
 
 export * from './light-mobile/divider';
