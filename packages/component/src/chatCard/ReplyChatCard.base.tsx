@@ -1,8 +1,6 @@
 import React, { memo } from 'react';
 import {
 	ColorTokens,
-	ColorTokensMap,
-	CornerRadiusTokens,
 	FontSizeTokens,
 	ChatCardBaseProps,
 	SpaceTypeTokens,
@@ -30,10 +28,11 @@ const ReplyChatCardBase: React.FunctionComponent<
 	ChatCardBaseProps
 > = ({
 	label = 'Are bro how was the video? Hope you had fun watching it. It was wildd',
-	bgColor = ColorTokens.Grey_100,
-	labelColor = ColorTokens.Grey_500,
-	borderRadius = CornerRadiusTokens.BR2,
-	padding = SpaceTypeTokens.MD,
+	bgColor,
+	labelColor,
+	userLabelColor,
+	borderRadius,
+	padding,
 	nameText = 'lorem ipsum',
 	file,
 }) => {
@@ -202,7 +201,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						label={nameText}
 						fontWeight={FontWeightTokens['semi-bold']}
 						fontSize={FontSizeTokens.xs}
-						color={ColorTokens.Grey_400}
+						color={userLabelColor}
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>

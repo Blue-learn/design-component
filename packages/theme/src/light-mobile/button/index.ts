@@ -12,7 +12,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
 		[ButtonTypeTokens.LargeFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
-			labelColor: ColorTokens.White,
+			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.LG,
 			fontSize: FontSizeTokens.lg,
@@ -20,7 +20,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		},
 		[ButtonTypeTokens.MediumFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
-			labelColor: ColorTokens.White,
+			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.MD,
 			fontSize: FontSizeTokens.md,
@@ -28,7 +28,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		},
 		[ButtonTypeTokens.SmallFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
-			labelColor: ColorTokens.White,
+			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.SM,
 			fontSize: FontSizeTokens.sm,
@@ -36,7 +36,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		},
 		[ButtonTypeTokens.IconFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
-			labelColor: ColorTokens.White,
+			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.LG,
 			paddingHorizontal: SpaceTypeTokens.LG,
@@ -110,7 +110,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.LargeGhost]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: null,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.LG,
 			fontSize: FontSizeTokens.lg,
 			paddingHorizontal: SpaceTypeTokens['4XL'],
@@ -118,7 +118,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.MediumGhost]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: null,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.MD,
 			fontSize: FontSizeTokens.md,
 			paddingHorizontal: SpaceTypeTokens['3XL'],
@@ -126,7 +126,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.SmallGhost]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: null,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.SM,
 			fontSize: FontSizeTokens.sm,
 			paddingHorizontal: SpaceTypeTokens.XL,
@@ -134,7 +134,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 		[ButtonTypeTokens.IconGhost]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Blue_600,
-			bgColor: null,
+			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.SM,
 			paddingHorizontal: SpaceTypeTokens.SM,
 		},

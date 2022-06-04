@@ -41,7 +41,7 @@ const TextInputBase: React.FunctionComponent<
 		theme.fontFamily;
 
 	const spaceTokenMapping: SpaceTypeTokensMap =
-		theme.spaces;
+		theme.space;
 
 	/**
 	 * use fontSize,fontWeight to full customise base component
