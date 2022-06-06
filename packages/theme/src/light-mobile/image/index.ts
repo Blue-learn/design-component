@@ -11,5 +11,6 @@ export const imageTypeTokensMap: ImageTypeTokensMap =
 		[ImageSizeTokens.lg]: 72,
 		[ImageSizeTokens.xl]: 96,
 		[ImageSizeTokens.xxl]: 128,
-		[ImageSizeTokens.post]: '100%',
+		[ImageSizeTokens.xxxl]: 180,
+		[ImageSizeTokens.full]: '100%',
 	};
