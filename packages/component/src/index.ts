@@ -10,5 +10,6 @@ export * as Tabs from './tabs';
 export * as Divider from './divider';
 export * as Image from './image';
 export * as LinkPreview from './linkPreview';
+export * as DiscussionCard from './discussionCard';
 export * from './mock';
 export * from './registry';
