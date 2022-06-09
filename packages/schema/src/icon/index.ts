@@ -46,6 +46,8 @@ export enum IconTokens {
 	Video = 'video',
 	SendSolid = 'send-solid',
 	RightAngle = 'right-angle',
+	Fire = 'fire',
+	Newspaper = 'newspaper',
 }
 
 export enum IconSizeTokens {
