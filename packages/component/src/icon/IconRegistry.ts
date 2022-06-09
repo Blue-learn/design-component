@@ -36,6 +36,8 @@ import Gallery from './icon-list/Gallery';
 import Video from './icon-list/Video';
 import SendSolid from './icon-list/SendSolid';
 import RightAngle from './icon-list/RightAngle';
+import Fire from './icon-list/Fire';
+import NewsPaper from './icon-list/NewsPaper';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -72,4 +74,6 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Video]: Video,
 	[IconTokens.SendSolid]: SendSolid,
 	[IconTokens.RightAngle]: RightAngle,
+	[IconTokens.Fire]: Fire,
+	[IconTokens.Newspaper]: NewsPaper,
 };
