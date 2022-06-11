@@ -48,6 +48,7 @@ export enum IconTokens {
 	RightAngle = 'right-angle',
 	Fire = 'fire',
 	Newspaper = 'newspaper',
+	Share = 'share',
 }
 
 export enum IconSizeTokens {

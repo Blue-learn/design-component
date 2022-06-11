@@ -38,6 +38,7 @@ import SendSolid from './icon-list/SendSolid';
 import RightAngle from './icon-list/RightAngle';
 import Fire from './icon-list/Fire';
 import NewsPaper from './icon-list/NewsPaper';
+import Share from './icon-list/Share';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -76,4 +77,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.RightAngle]: RightAngle,
 	[IconTokens.Fire]: Fire,
 	[IconTokens.Newspaper]: NewsPaper,
+	[IconTokens.Share]: Share,
 };
