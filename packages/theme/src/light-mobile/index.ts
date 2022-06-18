@@ -3,9 +3,12 @@ import { colorTokensMap } from '../colors';
 import { buttonTypeTokensMap } from './button';
 import { borderRadiusTypeTokensMap } from './cornerRadius';
 import { spaceTypeTokensMap } from './space';
-import { fontFamilyTokensMap } from '../fontFamily';
 import { inputTypeTokensMap } from './textInput';
-import { fontSizeTokensMap } from '../typography';
+import {
+	fontSizeTokensMap,
+	fontFamilyTokensMap,
+	typographyTypeTokensMap,
+} from './typography';
 import { shadowTypeTokensMap } from './shadow';
 import { IconSizeTokensMap } from '../icons';
 import { avatarTypeTokensMap } from './avatar';
@@ -25,4 +28,5 @@ export const lightMobileTheme: ThemeTokens = {
 	avatarSize: avatarTypeTokensMap,
 	imageSize: imageTypeTokensMap,
 	chatCard: chatCardTypeTokenMap,
+	typography: typographyTypeTokensMap,
 };
