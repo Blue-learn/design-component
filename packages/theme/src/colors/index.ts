@@ -168,4 +168,5 @@ export const colorTokensMap: ColorTokensMap = {
 	[ColorTokens.Error_50]: '#F5A3A3',
 	[ColorTokens.Error_100]: '#E93C3C',
 	[ColorTokens.Error_200]: '#B71515',
+	[ColorTokens.Google]: '#4285F4',
 };

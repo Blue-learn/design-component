@@ -7,6 +7,9 @@ import { buttonTypeTokensMap } from '../../light-mobile/button';
 
 export const darkButtonTypeTokensMap: ButtonTypeTokensMap =
 	{
+		[ButtonTypeTokens.GoogleLargeFilled]: {
+			...buttonTypeTokensMap['GoogleLargeFilled'],
+		},
 		[ButtonTypeTokens.LargeFilled]: {
 			...buttonTypeTokensMap['large-filled'],
 			labelColor: ColorTokens.Grey_500,

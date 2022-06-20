@@ -10,6 +10,14 @@ import {
 
 export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
+		[ButtonTypeTokens.GoogleLargeFilled]: {
+			borderRadius: CornerRadiusTokens.BR1,
+			labelColor: ColorTokens.White,
+			bgColor: ColorTokens.Google,
+			paddingVertical: SpaceTypeTokens.XS,
+			fontSize: FontSizeTokens.lg,
+			paddingHorizontal: SpaceTypeTokens.XS,
+		},
 		[ButtonTypeTokens.LargeFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Grey_50,

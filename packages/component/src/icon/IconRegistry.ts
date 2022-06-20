@@ -39,6 +39,7 @@ import RightAngle from './icon-list/RightAngle';
 import Fire from './icon-list/Fire';
 import NewsPaper from './icon-list/NewsPaper';
 import Share from './icon-list/Share';
+import Google from './icon-list/Google';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -78,4 +79,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Fire]: Fire,
 	[IconTokens.Newspaper]: NewsPaper,
 	[IconTokens.Share]: Share,
+	[IconTokens.Google]: Google,
 };
