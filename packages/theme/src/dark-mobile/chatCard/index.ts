@@ -3,23 +3,23 @@ import {
 	ChatCardTypeTokensMap,
 	ColorTokens,
 } from '@blue-learn/schema';
-import { chatCardTypeTokenMap } from '../../light-mobile/chatCard';
+import { chatCardTypeTokenMap as lightChatCardTypeTokenMap } from '../../light-mobile/chatCard';
 
-export const darkChatCardTypeTokenMap: ChatCardTypeTokensMap =
+export const chatCardTypeTokenMap: ChatCardTypeTokensMap =
 	{
 		[ChatCardTypeTokens.receiver]: {
-			...chatCardTypeTokenMap.receiver,
+			...lightChatCardTypeTokenMap.receiver,
 			labelColor: ColorTokens.Grey_100,
 			userLabelColor: ColorTokens.Grey_200,
 			bgColor: ColorTokens.Grey_600,
 		},
 		[ChatCardTypeTokens.sender]: {
-			...chatCardTypeTokenMap.sender,
+			...lightChatCardTypeTokenMap.sender,
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Blue_900,
 		},
 		[ChatCardTypeTokens.reply]: {
-			...chatCardTypeTokenMap.reply,
+			...lightChatCardTypeTokenMap.reply,
 			labelColor: ColorTokens.Grey_200,
 			userLabelColor: ColorTokens.Grey_200,
 			bgColor: ColorTokens.Grey_600,

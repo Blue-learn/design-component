@@ -4,7 +4,7 @@ import {
 	TypographyTypeTokens,
 } from '@blue-learn/schema';
 
-export const darkTypographyTypeTokensMap: TypographyTypeTokensMap =
+export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
 		[TypographyTypeTokens.primary]: {
 			color: ColorTokens.Grey_100,

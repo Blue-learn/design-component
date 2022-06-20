@@ -3,106 +3,116 @@ import {
 	ButtonTypeTokensMap,
 	ColorTokens,
 } from '@blue-learn/schema';
-import { buttonTypeTokensMap } from '../../light-mobile/button';
+import { buttonTypeTokensMap as lightButtonTypeTokensMap } from '../../light-mobile/button';
 
-export const darkButtonTypeTokensMap: ButtonTypeTokensMap =
+export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
 		[ButtonTypeTokens.GoogleLargeFilled]: {
-			...buttonTypeTokensMap['GoogleLargeFilled'],
+			...lightButtonTypeTokensMap[
+				'GoogleLargeFilled'
+			],
 		},
 		[ButtonTypeTokens.LargeFilled]: {
-			...buttonTypeTokensMap['large-filled'],
+			...lightButtonTypeTokensMap['large-filled'],
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.MediumFilled]: {
-			...buttonTypeTokensMap['medium-filled'],
+			...lightButtonTypeTokensMap['medium-filled'],
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.SmallFilled]: {
-			...buttonTypeTokensMap['small-filled'],
+			...lightButtonTypeTokensMap['small-filled'],
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.IconFilled]: {
-			...buttonTypeTokensMap['icon-filled'],
+			...lightButtonTypeTokensMap['icon-filled'],
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.LargeSoftFilled]: {
-			...buttonTypeTokensMap['large-soft-filled'],
+			...lightButtonTypeTokensMap[
+				'large-soft-filled'
+			],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.MediumSoftFilled]: {
-			...buttonTypeTokensMap['medium-soft-filled'],
+			...lightButtonTypeTokensMap[
+				'medium-soft-filled'
+			],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.SmallSoftFilled]: {
-			...buttonTypeTokensMap['small-soft-filled'],
+			...lightButtonTypeTokensMap[
+				'small-soft-filled'
+			],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.IconSoftFilled]: {
-			...buttonTypeTokensMap['icon-soft-filled'],
+			...lightButtonTypeTokensMap[
+				'icon-soft-filled'
+			],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.LargeOutline]: {
-			...buttonTypeTokensMap['large-outline'],
+			...lightButtonTypeTokensMap['large-outline'],
 			labelColor: ColorTokens.Blue_300,
 			borderColor: ColorTokens.Grey_400,
 		},
 		[ButtonTypeTokens.MediumOutline]: {
-			...buttonTypeTokensMap['medium-outline'],
+			...lightButtonTypeTokensMap['medium-outline'],
 			labelColor: ColorTokens.Blue_300,
 			borderColor: ColorTokens.Grey_400,
 		},
 		[ButtonTypeTokens.SmallOutline]: {
-			...buttonTypeTokensMap['small-outline'],
+			...lightButtonTypeTokensMap['small-outline'],
 			labelColor: ColorTokens.Blue_300,
 			borderColor: ColorTokens.Grey_400,
 		},
 		[ButtonTypeTokens.IconOutline]: {
-			...buttonTypeTokensMap['icon-outline'],
+			...lightButtonTypeTokensMap['icon-outline'],
 			labelColor: ColorTokens.Blue_300,
 			borderColor: ColorTokens.Grey_400,
 		},
 		[ButtonTypeTokens.LargeGhost]: {
-			...buttonTypeTokensMap['large-ghost'],
+			...lightButtonTypeTokensMap['large-ghost'],
 			labelColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.MediumGhost]: {
-			...buttonTypeTokensMap['medium-ghost'],
+			...lightButtonTypeTokensMap['medium-ghost'],
 			labelColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.SmallGhost]: {
-			...buttonTypeTokensMap['small-ghost'],
+			...lightButtonTypeTokensMap['small-ghost'],
 			labelColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.IconGhost]: {
-			...buttonTypeTokensMap['icon-ghost'],
+			...lightButtonTypeTokensMap['icon-ghost'],
 			labelColor: ColorTokens.Blue_300,
 		},
 		[ButtonTypeTokens.LargeElevated]: {
-			...buttonTypeTokensMap['large-elevated'],
+			...lightButtonTypeTokensMap['large-elevated'],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.MediumElevated]: {
-			...buttonTypeTokensMap['medium-elevated'],
+			...lightButtonTypeTokensMap['medium-elevated'],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.SmallElevated]: {
-			...buttonTypeTokensMap['small-elevated'],
+			...lightButtonTypeTokensMap['small-elevated'],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},
 		[ButtonTypeTokens.IconElevated]: {
-			...buttonTypeTokensMap['icon-elevated'],
+			...lightButtonTypeTokensMap['icon-elevated'],
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_500,
 		},

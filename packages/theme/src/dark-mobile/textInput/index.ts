@@ -3,31 +3,31 @@ import {
 	inputTypeToken,
 	InputTypeTokensMap,
 } from '@blue-learn/schema';
-import { inputTypeTokensMap } from '../../light-mobile/textInput';
+import { inputTypeTokensMap as lightInputTypeTokensMap } from '../../light-mobile/textInput';
 
-export const darkInputTypeTokensMap: InputTypeTokensMap =
+export const inputTypeTokensMap: InputTypeTokensMap =
 	{
 		[inputTypeToken.default]: {
-			...inputTypeTokensMap.default,
+			...lightInputTypeTokensMap.default,
 			color: ColorTokens.Grey_100,
 		},
 		[inputTypeToken.chat]: {
-			...inputTypeTokensMap.chat,
+			...lightInputTypeTokensMap.chat,
 			color: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_600,
 		},
 		[inputTypeToken.disabled]: {
-			...inputTypeTokensMap.disabled,
+			...lightInputTypeTokensMap.disabled,
 			color: ColorTokens.Grey_100,
 			borderColor: ColorTokens.Grey_100,
 		},
 		[inputTypeToken.success]: {
-			...inputTypeTokensMap.success,
+			...lightInputTypeTokensMap.success,
 			color: ColorTokens.Grey_100,
 			borderColor: ColorTokens.Success_100,
 		},
 		[inputTypeToken.error]: {
-			...inputTypeTokensMap.error,
+			...lightInputTypeTokensMap.error,
 			color: ColorTokens.Grey_100,
 			borderColor: ColorTokens.Error_100,
 		},
