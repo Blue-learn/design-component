@@ -1,9 +1,10 @@
-import React from 'react';
 import Button from './Button';
 import {
 	ButtonProps,
 	ButtonTypeTokens,
+	IconSizeTokens,
 	IconTokens,
+	StackAlignType,
 	WIDGET,
 } from '@blue-learn/schema';
 import { CommonWidgetProps } from '../mock';
@@ -35,6 +36,10 @@ ButtonStory.args = {
 	label: 'All Buttons',
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
+	icon: {
+		name: IconTokens.RightArrow,
+		size: IconSizeTokens.xs,
+	},
 };
 ButtonStory.argTypes = {
 	type: {
@@ -45,6 +50,10 @@ ButtonStory.argTypes = {
 			),
 		],
 	},
+	icon: {
+		control: 'object',
+		options: [...Object.values(IconTokens)],
+	},
 	iconName: {
 		control: 'select',
 		options: [
@@ -53,6 +62,10 @@ ButtonStory.argTypes = {
 				(k) => typeof k === 'string',
 			),
 		],
+	},
+	flex: {
+		control: 'select',
+		options: [...Object.values(StackAlignType)],
 	},
 	iconAlignment: {
 		control: 'radio',

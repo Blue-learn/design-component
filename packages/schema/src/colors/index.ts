@@ -211,6 +211,7 @@ export enum ColorTokens {
 	Error_50 = 'error-50',
 	Error_200 = 'error-20',
 	Error_100 = 'error-100',
+	Google = 'google',
 }
 
 export type ColorTokensMap = {

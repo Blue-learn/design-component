@@ -3,10 +3,11 @@ import {
 	ColorTokens,
 	CornerRadiusTokens,
 	FontFamilyTokens,
-	FontSizeTokens,
-	FontWeightTokens,
+	IconSizeTokens,
 	ShadowThemeProps,
 	SpaceTypeTokens,
+	StackAlignType,
+	TextAlignTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
@@ -22,7 +23,6 @@ import Typography from '../typography/Typography';
 
 const styles = StyleSheet.create({
 	container: {
-		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'row',
 	},
@@ -37,17 +37,19 @@ const ButtonBase: React.FunctionComponent<
 	onPress,
 	label,
 	loading = false,
-	bgColor = ColorTokens.Aqua_10,
+	bgColor = ColorTokens.Blue_600,
 	labelColor = ColorTokens.Grey_500,
 	borderRadius = CornerRadiusTokens.BR4,
 	paddingVertical = SpaceTypeTokens.LG,
 	shadow,
 	borderColor,
-	fontSize = FontSizeTokens.lg,
-	iconAlignment = 'left',
+	fontSize,
+	iconAlignment = 'right',
 	iconName,
 	width = 'content',
+	icon,
 	paddingHorizontal = SpaceTypeTokens['4XL'],
+	flex = StackAlignType.center,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -104,32 +106,45 @@ const ButtonBase: React.FunctionComponent<
 						shadowRadius:
 							shadowValue?.shadowRadius || 0,
 						paddingHorizontal: paddingHorizontalValue,
+						justifyContent: flex,
 					},
 				]}
 				onPress={onPress}
 			>
 				{iconAlignment === 'left' &&
 					!loading &&
-					iconName && (
+					(iconName || icon) && (
 						<>
 							<Icon
-								name={iconName}
-								size={fontSize as any}
-								color={labelColor}
+								{...icon}
+								name={iconName || icon.name}
+								size={
+									icon?.size || IconSizeTokens[fontSize]
+								}
+								color={labelColor || icon.color}
 							/>
 							{label && <Space size={8} />}
 						</>
 					)}
 
 				{label && (
-					<Typography
-						label={label}
-						color={labelColor}
-						fontSize={fontSize}
-						fontFamily={
-							FontFamilyTokens.manropeSemiBold
+					<View
+						style={
+							flex == StackAlignType.spaceBetween
+								? { flex: 1 }
+								: {}
 						}
-					/>
+					>
+						<Typography
+							label={label}
+							color={labelColor}
+							fontSize={fontSize}
+							textAlign={TextAlignTokens.center}
+							fontFamily={
+								FontFamilyTokens.manropeSemiBold
+							}
+						/>
+					</View>
 				)}
 
 				{loading && (
@@ -141,15 +156,17 @@ const ButtonBase: React.FunctionComponent<
 				)}
 
 				{iconAlignment === 'right' &&
-					iconName &&
+					(iconName || icon) &&
 					!loading && (
 						<>
 							{label && <Space size={8} />}
-
 							<Icon
-								name={iconName}
-								size={fontSize as any}
-								color={labelColor}
+								{...icon}
+								name={iconName || icon?.name}
+								size={
+									icon?.size || IconSizeTokens[fontSize]
+								}
+								color={labelColor || icon?.color}
 							/>
 						</>
 					)}

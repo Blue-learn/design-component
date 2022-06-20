@@ -63,6 +63,16 @@ export enum TextAlignTokens {
 	justify = 'justify',
 }
 
+export enum TypographyTypeTokens {
+	primary = 'primary',
+	secondary = 'secondary',
+	placeholder = 'placeholder',
+}
+
+export type TypographyThemeProps = {
+	color?: ColorTokens;
+};
+
 export type TypographyBaseProps = {
 	label?: String;
 	color?: ColorTokens;
@@ -87,4 +97,9 @@ export type TypographyProps = {
 	ellipsizeMode?: EllipsizeModeTokens;
 	numberOfLines?: number;
 	textAlign?: TextAlignTokens;
+	type?: TypographyTypeTokens;
+};
+
+export type TypographyTypeTokensMap = {
+	[key in TypographyTypeTokens]: TypographyThemeProps;
 };

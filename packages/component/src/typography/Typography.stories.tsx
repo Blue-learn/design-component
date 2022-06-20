@@ -6,6 +6,7 @@ import {
 	EllipsizeModeTokens,
 	TextAlignTokens,
 	FontFamilyTokens,
+	TypographyTypeTokens,
 } from '@blue-learn/schema';
 import React from 'react';
 import Typography from './Typography';
@@ -28,15 +29,17 @@ Primary.args = {
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
 	fontSize: FontSizeTokens.sm,
 	fontFamily: FontFamilyTokens.manropeRegular,
-	textAlign: TextAlignTokens.auto,
-	textTransform: FontTransformToken.uppercase,
-	textDecorationLine:
-		FontDecorationToken.underline,
 	ellipsizeMode: EllipsizeModeTokens.tail,
 	numberOfLines: 0,
 };
 
 Primary.argTypes = {
+	type: {
+		control: 'select',
+		options: [
+			...Object.values(TypographyTypeTokens),
+		],
+	},
 	fontSize: {
 		control: 'select',
 		options: [
@@ -47,42 +50,26 @@ Primary.argTypes = {
 	},
 	fontFamily: {
 		control: 'select',
-		options: [
-			...Object.values(FontFamilyTokens).filter(
-				(k) => typeof k === 'string',
-			),
-		],
+		options: [...Object.values(FontFamilyTokens)],
 	},
 	textAlign: {
 		control: 'select',
-		options: [
-			...Object.values(TextAlignTokens).filter(
-				(k) => typeof k === 'string',
-			),
-		],
+		options: [...Object.values(TextAlignTokens)],
 	},
 	textTransform: {
 		control: 'select',
-		options: [
-			...Object.values(FontTransformToken).filter(
-				(k) => typeof k === 'string',
-			),
-		],
+		options: [...Object.values(FontTransformToken)],
 	},
 	textDecorationLine: {
 		control: 'select',
 		options: [
-			...Object.values(FontDecorationToken).filter(
-				(k) => typeof k === 'string',
-			),
+			...Object.values(FontDecorationToken),
 		],
 	},
 	ellipsizeMode: {
 		control: 'select',
 		options: [
-			...Object.values(EllipsizeModeTokens).filter(
-				(k) => typeof k === 'string',
-			),
+			...Object.values(EllipsizeModeTokens),
 		],
 	},
 };

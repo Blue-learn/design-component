@@ -49,6 +49,7 @@ export enum IconTokens {
 	Fire = 'fire',
 	Newspaper = 'newspaper',
 	Share = 'share',
+	Google = 'google',
 }
 
 export enum IconSizeTokens {

@@ -10,12 +10,20 @@ import {
 
 export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
+		[ButtonTypeTokens.GoogleLargeFilled]: {
+			borderRadius: CornerRadiusTokens.BR1,
+			labelColor: ColorTokens.White,
+			bgColor: ColorTokens.Google,
+			paddingVertical: SpaceTypeTokens.XS,
+			fontSize: FontSizeTokens.lg,
+			paddingHorizontal: SpaceTypeTokens.XS,
+		},
 		[ButtonTypeTokens.LargeFilled]: {
 			borderRadius: CornerRadiusTokens.BR4,
 			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.LG,
-			fontSize: FontSizeTokens.lg,
+			fontSize: FontSizeTokens.md,
 			paddingHorizontal: SpaceTypeTokens['4XL'],
 		},
 		[ButtonTypeTokens.MediumFilled]: {
@@ -23,7 +31,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.MD,
-			fontSize: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			paddingHorizontal: SpaceTypeTokens['3XL'],
 		},
 		[ButtonTypeTokens.SmallFilled]: {
@@ -31,7 +39,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Grey_50,
 			bgColor: ColorTokens.Blue_600,
 			paddingVertical: SpaceTypeTokens.SM,
-			fontSize: FontSizeTokens.sm,
+			fontSize: FontSizeTokens.xs,
 			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 		[ButtonTypeTokens.IconFilled]: {
@@ -46,7 +54,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.LG,
-			fontSize: FontSizeTokens.lg,
+			fontSize: FontSizeTokens.md,
 			paddingHorizontal: SpaceTypeTokens['4XL'],
 		},
 		[ButtonTypeTokens.MediumSoftFilled]: {
@@ -54,7 +62,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.MD,
-			fontSize: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			paddingHorizontal: SpaceTypeTokens['3XL'],
 		},
 		[ButtonTypeTokens.SmallSoftFilled]: {
@@ -62,7 +70,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.SM,
-			fontSize: FontSizeTokens.sm,
+			fontSize: FontSizeTokens.xs,
 			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 		[ButtonTypeTokens.IconSoftFilled]: {
@@ -77,7 +85,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.LG,
-			fontSize: FontSizeTokens.lg,
+			fontSize: FontSizeTokens.md,
 			borderColor: ColorTokens.Grey_200,
 			paddingHorizontal: SpaceTypeTokens['4XL'],
 		},
@@ -86,7 +94,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.MD,
-			fontSize: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			borderColor: ColorTokens.Grey_200,
 			paddingHorizontal: SpaceTypeTokens['3XL'],
 		},
@@ -95,7 +103,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.SM,
-			fontSize: FontSizeTokens.sm,
+			fontSize: FontSizeTokens.xs,
 			borderColor: ColorTokens.Grey_200,
 			paddingHorizontal: SpaceTypeTokens.XL,
 		},
@@ -112,7 +120,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.LG,
-			fontSize: FontSizeTokens.lg,
+			fontSize: FontSizeTokens.md,
 			paddingHorizontal: SpaceTypeTokens['4XL'],
 		},
 		[ButtonTypeTokens.MediumGhost]: {
@@ -120,7 +128,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.MD,
-			fontSize: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			paddingHorizontal: SpaceTypeTokens['3XL'],
 		},
 		[ButtonTypeTokens.SmallGhost]: {
@@ -128,7 +136,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SpaceTypeTokens.SM,
-			fontSize: FontSizeTokens.sm,
+			fontSize: FontSizeTokens.xs,
 			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 		[ButtonTypeTokens.IconGhost]: {
@@ -143,7 +151,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.LG,
-			fontSize: FontSizeTokens.lg,
+			fontSize: FontSizeTokens.md,
 			shadow: ShadowTypeTokens.E1,
 			paddingHorizontal: SpaceTypeTokens['4XL'],
 		},
@@ -152,7 +160,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.MD,
-			fontSize: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			shadow: ShadowTypeTokens.E1,
 			paddingHorizontal: SpaceTypeTokens['3XL'],
 		},
@@ -161,7 +169,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			labelColor: ColorTokens.Blue_600,
 			bgColor: ColorTokens.Blue_100,
 			paddingVertical: SpaceTypeTokens.SM,
-			fontSize: FontSizeTokens.sm,
+			fontSize: FontSizeTokens.xs,
 			shadow: ShadowTypeTokens.E1,
 			paddingHorizontal: SpaceTypeTokens.XL,
 		},

@@ -11,6 +11,7 @@ import {
 	SpaceTypeTokensMap,
 	ImageTypeTokensMap,
 	ChatCardTypeTokensMap,
+	TypographyTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -26,6 +27,7 @@ export type ThemeTokens = {
 	avatarSize: AvatarTypeTokensMap;
 	imageSize: ImageTypeTokensMap;
 	chatCard: ChatCardTypeTokensMap;
+	typography: TypographyTypeTokensMap;
 };
 
 export * from './light-mobile/divider';
