@@ -1,36 +1,48 @@
 import React, { memo } from 'react';
-import { TextInput } from 'react-native';
+import {
+	TextInput,
+	View,
+	StyleSheet,
+} from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokensMap,
 	TextInputBaseProps,
 	ColorTokens,
 	FontSizeTokens,
-	FontWeightTokens,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
 	CornerRadiusTokens,
 	SpaceTypeTokens,
 	SpaceTypeTokensMap,
+	FontSizeTokensMap,
 } from '@blue-learn/schema';
 
 /**
  * Raw Component with Derived props + Theme
  */
+const styles = StyleSheet.create({
+	container: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		borderWidth: 1,
+	},
+});
 
 const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps
 > = ({
 	placeholder = 'lorem ipsum',
-	borderRadius = CornerRadiusTokens.BR4,
+	borderRadius = CornerRadiusTokens.BR1,
 	borderColor = ColorTokens.Grey_200,
-	color = ColorTokens.Black,
+	color = ColorTokens.Grey_500,
 	isDisabled = false,
-	size = FontSizeTokens.md,
-	bgColor = ColorTokens.White,
-	fontWeight = FontWeightTokens.normal,
+	fontSize = FontSizeTokens.sm,
+	bgColor = ColorTokens.Transparent,
 	fontFamily = FontFamilyTokens.manropeRegular,
 	paddingVertical = SpaceTypeTokens.LG,
+	paddingHorizontal = SpaceTypeTokens.XL,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -43,30 +55,41 @@ const TextInputBase: React.FunctionComponent<
 	const spaceTokenMapping: SpaceTypeTokensMap =
 		theme.space;
 
-	/**
-	 * use fontSize,fontWeight to full customise base component
-	 * */
+	const fontSizeMapping: FontSizeTokensMap =
+		theme.fontSize;
+
+	const borderRadiusValue =
+		theme.borderRadius[borderRadius];
 
 	return (
-		<TextInput
-			isDisabled={isDisabled}
-			editable={!isDisabled}
-			placeholder={placeholder}
-			style={{
-				flex: 1,
-				color: colorMapping[color],
-				fontSize: size,
-				fontWeight: FontWeightTokens[fontWeight],
-				fontFamily: fontFamilyMapping[fontFamily],
-				paddingHorizontal:
-					spaceTokenMapping[SpaceTypeTokens.LG],
-				paddingVertical:
-					spaceTokenMapping[SpaceTypeTokens.LG],
-				outlineWidth: 0,
-			}}
-			textAlign='vertical'
-			{...props}
-		/>
+		<View
+			style={[
+				styles.container,
+				{
+					borderColor: colorMapping[borderColor],
+					borderRadius: borderRadiusValue,
+				},
+			]}
+		>
+			<TextInput
+				isDisabled={isDisabled}
+				editable={!isDisabled}
+				placeholder={placeholder}
+				style={{
+					flex: 1,
+					color: colorMapping[color],
+					fontSize: fontSizeMapping[fontSize],
+					fontFamily: fontFamilyMapping[fontFamily],
+					paddingHorizontal:
+						spaceTokenMapping[paddingHorizontal],
+					paddingVertical:
+						spaceTokenMapping[paddingVertical],
+				}}
+				textAlignVertical='top'
+				// textAlign='vertical'
+				{...props}
+			/>
+		</View>
 	);
 };
 export default memo(TextInputBase);

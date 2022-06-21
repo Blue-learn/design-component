@@ -6,69 +6,43 @@ import {
 	InputTypeTokensMap,
 	FontSizeTokens,
 } from '@blue-learn/schema';
-import { borderRadiusTypeTokensMap } from '../cornerRadius';
-import { spaceTypeTokensMap } from '../space';
 
 export const inputTypeTokensMap: InputTypeTokensMap =
 	{
 		[inputTypeToken.default]: {
-			size: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Grey_200,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
+			borderRadius: CornerRadiusTokens.BR1,
+			paddingVertical: SpaceTypeTokens.LG,
+			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 		[inputTypeToken.chat]: {
-			size: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Grey_50,
 			borderColor: ColorTokens.Transparent,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR4
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
-		},
-		[inputTypeToken.disabled]: {
-			size: FontSizeTokens.md,
-			color: ColorTokens.Grey_100,
-			bgColor: ColorTokens.Transparent,
-			borderColor: ColorTokens.Grey_100,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
+			borderRadius: CornerRadiusTokens.BR4,
+			paddingVertical: SpaceTypeTokens.LG,
+			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 		[inputTypeToken.success]: {
-			size: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Success_100,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
+			borderRadius: CornerRadiusTokens.BR1,
+			paddingVertical: SpaceTypeTokens.LG,
+			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 		[inputTypeToken.error]: {
-			size: FontSizeTokens.md,
+			fontSize: FontSizeTokens.sm,
 			color: ColorTokens.Grey_500,
 			bgColor: ColorTokens.Transparent,
 			borderColor: ColorTokens.Error_100,
-			borderRadius:
-				borderRadiusTypeTokensMap[
-					CornerRadiusTokens.BR1
-				],
-			paddingVertical:
-				spaceTypeTokensMap[SpaceTypeTokens.LG],
+			borderRadius: CornerRadiusTokens.BR1,
+			paddingVertical: SpaceTypeTokens.LG,
+			paddingHorizontal: SpaceTypeTokens.XL,
 		},
 	};
