@@ -9,7 +9,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 	{
 		[ButtonTypeTokens.GoogleLargeFilled]: {
 			...buttonTypeTokensMapLight[
-				'GoogleLargeFilled'
+				'google-large-filled'
 			],
 		},
 		[ButtonTypeTokens.LargeFilled]: {
