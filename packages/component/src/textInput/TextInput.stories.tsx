@@ -1,8 +1,12 @@
 import {
+	ColorTokens,
+	IconSizeTokens,
+	IconTokens,
 	inputTypeToken,
 	TextInputProps,
 } from '@blue-learn/schema';
 import React from 'react';
+import Icon from '../icon/Icon';
 import TextInput from './TextInput';
 
 export default {
@@ -23,6 +27,12 @@ Input.args = {
 	type: inputTypeToken.default,
 	title: 'Title',
 	caption: 'This is a caption',
+	icon: (
+		<Icon
+			name={IconTokens.Chat}
+			size={IconSizeTokens.lg}
+		/>
+	),
 };
 
 Input.argTypes = {

@@ -1,3 +1,4 @@
+import { AvatarProps } from '../avatar';
 import { ColorTokens } from '../colors';
 import { CornerRadiusTokens } from '../cornerRadius';
 import { IconProps } from '../icon';
@@ -39,7 +40,8 @@ export type TextInputProps = {
 	numberOfLines?: number;
 	isDisabled?: boolean;
 	iconAlignment?: 'left' | 'right';
-	icon?: IconProps;
+	icon?: JSX.Element | JSX.Element[];
+	avatar?: AvatarProps;
 };
 
 export type TextInputBaseProps = {
@@ -54,7 +56,8 @@ export type TextInputBaseProps = {
 	numberOfLines?: number;
 	isDisabled?: boolean;
 	iconAlignment?: 'left' | 'right';
-	icon?: IconProps;
+	icon?: JSX.Element | JSX.Element[];
+	avatar?: AvatarProps;
 	fontSize?: FontSizeTokens;
 	bgColor?: ColorTokens;
 	color?: ColorTokens;

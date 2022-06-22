@@ -46,6 +46,7 @@ const TextInputBase: React.FunctionComponent<
 	fontFamily = FontFamilyTokens.manropeRegular,
 	paddingVertical = SpaceTypeTokens.LG,
 	paddingHorizontal = SpaceTypeTokens.XL,
+	iconAlignment = 'right',
 	title,
 	caption,
 	icon,
@@ -94,6 +95,13 @@ const TextInputBase: React.FunctionComponent<
 					},
 				]}
 			>
+				<Space
+					size={
+						icon && iconAlignment === 'left' ? 12 : 0
+					}
+				/>
+				{iconAlignment === 'left' &&
+					(icon ? icon : null)}
 				<TextInput
 					isDisabled={isDisabled}
 					editable={!isDisabled}
@@ -110,6 +118,13 @@ const TextInputBase: React.FunctionComponent<
 					}}
 					textAlignVertical='top'
 					{...props}
+				/>
+				{iconAlignment === 'right' &&
+					(icon ? icon : null)}
+				<Space
+					size={
+						icon && iconAlignment === 'right' ? 12 : 0
+					}
 				/>
 			</View>
 
