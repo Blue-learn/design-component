@@ -50,6 +50,7 @@ export enum IconTokens {
 	Newspaper = 'newspaper',
 	Share = 'share',
 	Google = 'google',
+	Messages = 'messages',
 }
 
 export enum IconSizeTokens {
