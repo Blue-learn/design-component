@@ -29,6 +29,8 @@ export enum keyboardTypeToken {
 export type TextInputProps = {
 	type?: inputTypeToken;
 	value?: string;
+	title?: string;
+	caption?: string;
 	placeholder?: string;
 	onChangeText?: Function;
 	keyboardType?: keyboardTypeToken;
@@ -42,6 +44,8 @@ export type TextInputProps = {
 
 export type TextInputBaseProps = {
 	value?: string;
+	title?: string;
+	caption?: string;
 	placeholder?: string;
 	onChangeText?: Function;
 	keyboardType?: keyboardTypeToken;
