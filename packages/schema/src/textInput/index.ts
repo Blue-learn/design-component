@@ -1,4 +1,9 @@
+import { AvatarProps } from '../avatar';
 import { ColorTokens } from '../colors';
+import { CornerRadiusTokens } from '../cornerRadius';
+import { IconProps } from '../icon';
+import { ShadowTypeTokens } from '../shadow';
+import { SpaceTypeTokens } from '../space';
 import {
 	FontFamilyTokens,
 	FontSizeTokens,
@@ -8,49 +13,75 @@ import {
 export enum inputTypeToken {
 	default = 'default',
 	chat = 'chat',
-	disabled = 'disabled',
 	success = 'success',
 	error = 'error',
 }
 
+export enum keyboardTypeToken {
+	default = 'default',
+	numberPad = 'number-pad',
+	decimalPad = 'decimal-pad',
+	numeric = 'numeric',
+	email = 'email-address',
+	phone = 'phone-pad',
+	url = 'url',
+}
+
 export type TextInputProps = {
-	inputType?: inputTypeToken;
-	/**
-	 * If given, adds the provided element to the left/right of the input.
-	 */
-	// --todo
-	leftElement?: JSX.Element | JSX.Element[];
-	// --todo
-	rightElement?: JSX.Element | JSX.Element[];
+	type?: inputTypeToken;
+	value?: string;
+	title?: string;
+	caption?: string;
+	placeholder?: string;
+	onChangeText?: Function;
+	keyboardType?: keyboardTypeToken;
+	maxLength?: number;
+	multiline?: boolean;
+	numberOfLines?: number;
+	isDisabled?: boolean;
+	iconAlignment?: 'left' | 'right';
+	icon?: JSX.Element | JSX.Element[];
+	avatar?: AvatarProps;
 };
 
 export type TextInputBaseProps = {
-	// shadow?: any;
+	value?: string;
+	title?: string;
+	caption?: string;
 	placeholder?: string;
+	onChangeText?: Function;
+	keyboardType?: keyboardTypeToken;
+	maxLength?: number;
+	multiline?: boolean;
+	numberOfLines?: number;
 	isDisabled?: boolean;
-	size?: FontSizeTokens;
+	iconAlignment?: 'left' | 'right';
+	icon?: JSX.Element | JSX.Element[];
+	avatar?: AvatarProps;
+	fontSize?: FontSizeTokens;
 	bgColor?: ColorTokens;
 	color?: ColorTokens;
 	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
-	borderRadius?: number;
+	borderRadius?: CornerRadiusTokens;
 	borderColor?: ColorTokens;
-	borderWidth?: number;
-	paddingVertical?: number;
+	paddingVertical?: SpaceTypeTokens;
+	paddingHorizontal?: SpaceTypeTokens;
+	shadow?: ShadowTypeTokens;
 };
 
 export type InputThemeProps = {
-	size?: FontSizeTokens;
-	borderRadius?: number;
+	fontSize?: FontSizeTokens;
+	borderRadius?: CornerRadiusTokens;
 	borderColor?: ColorTokens;
 	color?: ColorTokens;
+	placeholderTextColor?: ColorTokens;
 	bgColor?: ColorTokens;
-	paddingVertical?: number;
+	paddingVertical?: SpaceTypeTokens;
+	paddingHorizontal?: SpaceTypeTokens;
+	shadow?: ShadowTypeTokens;
 };
 
-/**
- * Internal Props for Theme
- * */
 export type InputTypeTokensMap = {
 	[key in inputTypeToken]: InputThemeProps;
 };

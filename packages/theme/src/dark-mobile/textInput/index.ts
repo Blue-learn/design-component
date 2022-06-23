@@ -10,16 +10,12 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 		[inputTypeToken.default]: {
 			...inputTypeTokensMapLight.default,
 			color: ColorTokens.Grey_100,
+			borderColor: ColorTokens.Grey_400,
 		},
 		[inputTypeToken.chat]: {
 			...inputTypeTokensMapLight.chat,
 			color: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_600,
-		},
-		[inputTypeToken.disabled]: {
-			...inputTypeTokensMapLight.disabled,
-			color: ColorTokens.Grey_100,
-			borderColor: ColorTokens.Grey_100,
 		},
 		[inputTypeToken.success]: {
 			...inputTypeTokensMapLight.success,

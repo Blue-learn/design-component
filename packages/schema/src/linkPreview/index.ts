@@ -1,8 +1,3 @@
-import {
-	StyleProp,
-	TouchableWithoutFeedbackProps,
-	ViewStyle,
-} from 'react-native';
 export interface PreviewData {
 	description?: string;
 	image?: PreviewDataImage;
@@ -22,11 +17,11 @@ export interface Size {
 }
 
 export interface LinkPreviewProps {
-	containerStyle?: StyleProp<ViewStyle>;
+	containerStyle?: any;
 	enableAnimation?: boolean;
 	header?: string;
-	metadataContainerStyle?: StyleProp<ViewStyle>;
-	metadataTextContainerStyle?: StyleProp<ViewStyle>;
+	metadataContainerStyle?: any;
+	metadataTextContainerStyle?: any;
 	onPreviewDataFetched?: (
 		previewData: PreviewData,
 	) => void;
@@ -52,6 +47,6 @@ export interface LinkPreviewProps {
 	renderTitle?: (title: string) => React.ReactNode;
 	requestTimeout?: number;
 	text: string;
-	textContainerStyle?: StyleProp<ViewStyle>;
-	touchableWithoutFeedbackProps?: TouchableWithoutFeedbackProps;
+	textContainerStyle?: any;
+	touchableWithoutFeedbackProps?: any;
 }

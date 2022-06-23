@@ -1,36 +1,55 @@
 import React, { memo } from 'react';
-import { TextInput } from 'react-native';
+import {
+	TextInput,
+	View,
+	StyleSheet,
+} from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokensMap,
 	TextInputBaseProps,
 	ColorTokens,
 	FontSizeTokens,
-	FontWeightTokens,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
 	CornerRadiusTokens,
 	SpaceTypeTokens,
 	SpaceTypeTokensMap,
+	FontSizeTokensMap,
 } from '@blue-learn/schema';
+import Stack from '../stack/Stack';
+import Typography from '../typography/Typography';
+import Space from '../space/Space';
 
 /**
  * Raw Component with Derived props + Theme
  */
+const styles = StyleSheet.create({
+	container: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		borderWidth: 1,
+	},
+});
 
 const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps
 > = ({
 	placeholder = 'lorem ipsum',
-	borderRadius = CornerRadiusTokens.BR4,
+	borderRadius = CornerRadiusTokens.BR1,
 	borderColor = ColorTokens.Grey_200,
-	color = ColorTokens.Black,
+	color = ColorTokens.Grey_500,
 	isDisabled = false,
-	size = FontSizeTokens.md,
-	bgColor = ColorTokens.White,
-	fontWeight = FontWeightTokens.normal,
+	fontSize = FontSizeTokens.sm,
+	bgColor = ColorTokens.Transparent,
 	fontFamily = FontFamilyTokens.manropeRegular,
 	paddingVertical = SpaceTypeTokens.LG,
+	paddingHorizontal = SpaceTypeTokens.XL,
+	iconAlignment = 'right',
+	title,
+	caption,
+	icon,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -43,30 +62,85 @@ const TextInputBase: React.FunctionComponent<
 	const spaceTokenMapping: SpaceTypeTokensMap =
 		theme.space;
 
-	/**
-	 * use fontSize,fontWeight to full customise base component
-	 * */
+	const fontSizeMapping: FontSizeTokensMap =
+		theme.fontSize;
+
+	const borderRadiusValue =
+		theme.borderRadius[borderRadius];
 
 	return (
-		<TextInput
-			isDisabled={isDisabled}
-			editable={!isDisabled}
-			placeholder={placeholder}
-			style={{
-				flex: 1,
-				color: colorMapping[color],
-				fontSize: size,
-				fontWeight: FontWeightTokens[fontWeight],
-				fontFamily: fontFamilyMapping[fontFamily],
-				paddingHorizontal:
-					spaceTokenMapping[SpaceTypeTokens.LG],
-				paddingVertical:
-					spaceTokenMapping[SpaceTypeTokens.LG],
-				outlineWidth: 0,
-			}}
-			textAlign='vertical'
-			{...props}
-		/>
+		<Stack>
+			{title ? (
+				<Stack>
+					<Typography
+						label={title}
+						fontSize={fontSize}
+						color={color}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
+					/>
+					<Space size={8} />
+				</Stack>
+			) : (
+				<></>
+			)}
+
+			<View
+				style={[
+					styles.container,
+					{
+						borderColor: colorMapping[borderColor],
+						borderRadius: borderRadiusValue,
+					},
+				]}
+			>
+				<Space
+					size={
+						icon && iconAlignment === 'left' ? 12 : 0
+					}
+				/>
+				{iconAlignment === 'left' &&
+					(icon ? icon : null)}
+				<TextInput
+					isDisabled={isDisabled}
+					editable={!isDisabled}
+					placeholder={placeholder}
+					style={{
+						flex: 1,
+						color: colorMapping[color],
+						fontSize: fontSizeMapping[fontSize],
+						fontFamily: fontFamilyMapping[fontFamily],
+						paddingHorizontal:
+							spaceTokenMapping[paddingHorizontal],
+						paddingVertical:
+							spaceTokenMapping[paddingVertical],
+					}}
+					textAlignVertical='top'
+					{...props}
+				/>
+				{iconAlignment === 'right' &&
+					(icon ? icon : null)}
+				<Space
+					size={
+						icon && iconAlignment === 'right' ? 12 : 0
+					}
+				/>
+			</View>
+
+			{caption ? (
+				<Stack>
+					<Space size={8} />
+					<Typography
+						label={caption}
+						fontSize={FontSizeTokens.xs}
+						color={color}
+					/>
+				</Stack>
+			) : (
+				<></>
+			)}
+		</Stack>
 	);
 };
 export default memo(TextInputBase);
