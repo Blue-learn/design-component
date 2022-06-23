@@ -9,6 +9,7 @@ export * as Avatar from './avatar';
 export * as Tabs from './tabs';
 export * as Divider from './divider';
 export * as Image from './image';
+export * as Lottie from './lottie';
 export * as LinkPreview from './linkPreview';
 export * from './mock';
 export * from './registry';

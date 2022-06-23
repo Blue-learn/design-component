@@ -17,3 +17,4 @@ export * from './tabs';
 export * from './divider';
 export * from './image';
 export * from './linkPreview';
+export * from './lottie';
