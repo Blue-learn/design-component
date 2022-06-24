@@ -8,4 +8,5 @@ export enum WIDGET {
 	AVATAR = 'AVATAR',
 	TABS = 'TABS',
 	DIVIDER = 'DIVIDER',
+	CARD = 'CARD',
 }

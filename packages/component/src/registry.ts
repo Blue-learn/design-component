@@ -12,6 +12,7 @@ import {
 	Divider,
 	Typography,
 	TextInput,
+	Card,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -24,5 +25,6 @@ const registry: WidgetRegistry = {
 	[WIDGET.AVATAR]: Avatar,
 	[WIDGET.TABS]: Tabs,
 	[WIDGET.DIVIDER]: Divider,
+	[WIDGET.CARD]: Card,
 };
 export { registry as WidgetRegistry };
