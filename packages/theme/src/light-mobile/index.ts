@@ -14,6 +14,7 @@ import { IconSizeTokensMap } from '../icons';
 import { avatarTypeTokensMap } from './avatar';
 import { imageTypeTokensMap } from './image';
 import { chatCardTypeTokenMap } from './chatCard';
+import { progessIndicatorTypeTokensMap } from './progressIndicator';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -29,4 +30,5 @@ export const lightMobileTheme: ThemeTokens = {
 	imageSize: imageTypeTokensMap,
 	chatCard: chatCardTypeTokenMap,
 	typography: typographyTypeTokensMap,
+	progressIndicator: progessIndicatorTypeTokensMap,
 };
