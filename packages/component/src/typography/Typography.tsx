@@ -1,6 +1,7 @@
 import {
 	TypographyProps,
 	TypographyThemeProps,
+	TypographyTypeTokens,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { TypographyBase } from './Typography.base';
@@ -18,7 +19,9 @@ const Typography: React.FunctionComponent<
 	 * */
 	const theme = ThemeProvider.getTheme();
 	const typographyThemeProps: TypographyThemeProps =
-		theme.typography[type];
+		theme.typography[
+			type || TypographyTypeTokens.primary
+		];
 
 	return (
 		<TypographyBase
