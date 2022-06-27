@@ -34,6 +34,26 @@ const ProgressIndicatorBase: React.FunctionComponent<
 
 	const heightValue = theme.space[height];
 
+	const renderIndicator = (
+		_: any,
+		index: number,
+	) => {
+		return (
+			<>
+				<View
+					style={{
+						flex: 1,
+						height: heightValue,
+						borderRadius: borderRadiusValue,
+						backgroundColor: colorMapping[color],
+						opacity: index <= activeIndex ? 1 : 0.3,
+					}}
+				/>
+				<Space size={index + 1 == size ? 0 : 4} />
+			</>
+		);
+	};
+
 	return (
 		<Stack
 			type={StackType.row}
@@ -41,20 +61,7 @@ const ProgressIndicatorBase: React.FunctionComponent<
 			alignX={StackAlignType.spaceBetween}
 		>
 			{Array.from({ length: size }).map(
-				(_, index) => (
-					<>
-						<View
-							style={{
-								flex: 1,
-								height: heightValue,
-								borderRadius: borderRadiusValue,
-								backgroundColor: colorMapping[color],
-								opacity: index <= activeIndex ? 1 : 0.3,
-							}}
-						/>
-						<Space size={index + 1 == size ? 0 : 4} />
-					</>
-				),
+				renderIndicator,
 			)}
 		</Stack>
 	);

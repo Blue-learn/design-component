@@ -76,24 +76,15 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 			{header?.children}
 			{renderItem &&
 				header?.widgetItems?.length > 0 &&
-				header?.widgetItems.map(
-					(widgetItem: WidgetItem) =>
-						renderItem(widgetItem),
-				)}
+				header?.widgetItems.map(renderItem)}
 			{body?.children}
 			{renderItem &&
 				body?.widgetItems?.length > 0 &&
-				body?.widgetItems.map(
-					(widgetItem: WidgetItem) =>
-						renderItem(widgetItem),
-				)}
+				body?.widgetItems.map(renderItem)}
 			{footer?.children}
 			{renderItem &&
 				footer?.widgetItems?.length > 0 &&
-				footer?.widgetItems.map(
-					(widgetItem: WidgetItem) =>
-						renderItem(widgetItem),
-				)}
+				footer?.widgetItems.map(renderItem)}
 		</View>
 	);
 };
