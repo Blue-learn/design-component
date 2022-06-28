@@ -22,10 +22,11 @@
   },
   "scripts": {
     "clean": "sh scripts/clean.sh",
-    "setup": "npm i",
+    "setup": "npm i --legacy-peer-deps",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "copy": "lerna run copy",
+    "copy-watcher": "node chokidar.js",
     "publish": "lerna publish --canary --force-publish  --y",
     "storybook-start": "start-storybook -p 6006",
     "storybook-build": "build-storybook",
@@ -45,7 +46,8 @@
     "prettier": "2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native-web": "^0.17.5"
+    "react-native-web": "^0.17.5",
+    "chokidar": "^3.5.3"
   },
   "storybook-deployer": {
     "gitUsername": "BL-GitBot",
