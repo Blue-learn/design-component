@@ -12,6 +12,7 @@ import {
 	ImageTypeTokensMap,
 	ChatCardTypeTokensMap,
 	TypographyTypeTokensMap,
+	ProgressIndicatorTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -28,6 +29,7 @@ export type ThemeTokens = {
 	imageSize: ImageTypeTokensMap;
 	chatCard: ChatCardTypeTokensMap;
 	typography: TypographyTypeTokensMap;
+	progressIndicator: ProgressIndicatorTypeTokensMap;
 };
 
 export * from './light-mobile/divider';
