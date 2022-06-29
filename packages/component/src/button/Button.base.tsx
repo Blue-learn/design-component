@@ -6,7 +6,10 @@ import {
 	IconSizeTokens,
 	ShadowThemeProps,
 	SpaceTypeTokens,
-	StackAlignType,
+	StackAlignItems,
+	StackJustifyContent,
+	StackProp,
+	StackType,
 	TextAlignTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
@@ -16,11 +19,11 @@ import {
 	ActivityIndicator,
 	Pressable,
 	StyleSheet,
-	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
+import { Component as Stack } from '../stack';
 
 const styles = StyleSheet.create({
 	container: {
@@ -50,9 +53,13 @@ const ButtonBase: React.FunctionComponent<
 	width = 'content',
 	icon,
 	paddingHorizontal = SpaceTypeTokens['4XL'],
-	flex = StackAlignType.center,
 	performAction,
 	action,
+	stack = {
+		type: StackType.row,
+		justifyContent: StackJustifyContent.center,
+		alignItems: StackAlignItems.center,
+	},
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -80,79 +87,71 @@ const ButtonBase: React.FunctionComponent<
 	const paddingHorizontalValue =
 		theme.space[paddingHorizontal];
 
+	const styleProps = React.useMemo(
+		() => ({
+			backgroundColor: backgroundColorValue,
+			borderRadius: borderRadiusValue,
+			paddingVertical: paddingValue,
+			borderColor: borderColorValue,
+			borderWidth: borderColor ? 1 : 0,
+			shadowOffset: shadowValue?.shadowOffset || {
+				height: 0,
+				width: 0,
+			},
+			shadowOpacity: shadowValue?.shadowOpacity || 0,
+			shadowRadius: shadowValue?.shadowRadius || 0,
+			paddingHorizontal: paddingHorizontalValue,
+		}),
+		[
+			borderRadiusValue,
+			borderColorValue,
+			backgroundColorValue,
+			labelColorValue,
+			paddingValue,
+			shadowValue,
+			paddingHorizontalValue,
+		],
+	);
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			performAction &&
+			performAction(action);
+	};
+	const _renderIcon = React.useMemo(
+		() => (
+			<Icon
+				{...icon}
+				name={iconName || icon.name}
+				size={icon?.size || IconSizeTokens[fontSize]}
+				color={labelColor || icon.color}
+			/>
+		),
+		[icon, fontSize],
+	);
 	return (
 		<Pressable
-			onPress={() => {
-				onPress && onPress();
-				action &&
-					performAction &&
-					performAction(action);
-			}}
-			style={
-				width === 'content'
-					? {
-							justifyContent: 'flex-start',
-							alignItems: 'flex-start',
-					  }
-					: {}
-			}
+			onPress={handleAction}
+			style={styleProps}
 		>
-			<View
-				style={[
-					styles.container,
-					{
-						backgroundColor: backgroundColorValue,
-						borderRadius: borderRadiusValue,
-						paddingVertical: paddingValue,
-						borderColor: borderColorValue,
-						borderWidth: borderColor ? 1 : 0,
-						shadowOffset: shadowValue?.shadowOffset || {
-							height: 0,
-							width: 0,
-						},
-						shadowOpacity:
-							shadowValue?.shadowOpacity || 0,
-						shadowRadius:
-							shadowValue?.shadowRadius || 0,
-						paddingHorizontal: paddingHorizontalValue,
-						justifyContent: flex,
-					},
-				]}
-			>
+			<Stack {...stack}>
 				{iconAlignment === 'left' &&
 					!loading &&
-					(iconName || icon) && (
-						<>
-							<Icon
-								{...icon}
-								name={iconName || icon.name}
-								size={
-									icon?.size || IconSizeTokens[fontSize]
-								}
-								color={labelColor || icon.color}
-							/>
-							{label && <Space size={8} />}
-						</>
-					)}
-
+					(iconName || icon) &&
+					_renderIcon}
+				{iconAlignment === 'left' && label && (
+					<Space size={8} />
+				)}
 				{label && (
-					<View
-						style={
-							flex == StackAlignType.spaceBetween
-								? { flex: 1 }
-								: {}
+					<Typography
+						label={label}
+						color={labelColor}
+						fontSize={fontSize}
+						textAlign={TextAlignTokens.center}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
 						}
-					>
-						<Typography
-							label={label}
-							color={labelColor}
-							fontSize={fontSize}
-							textAlign={TextAlignTokens.center}
-							fontFamily={
-								FontFamilyTokens.manropeSemiBold
-							}
-						/>
-					</View>
+					/>
 				)}
 
 				{loading && (
@@ -163,22 +162,14 @@ const ButtonBase: React.FunctionComponent<
 					/>
 				)}
 
+				{iconAlignment === 'right' && label && (
+					<Space size={8} />
+				)}
 				{iconAlignment === 'right' &&
 					(iconName || icon) &&
-					!loading && (
-						<>
-							{label && <Space size={8} />}
-							<Icon
-								{...icon}
-								name={iconName || icon?.name}
-								size={
-									icon?.size || IconSizeTokens[fontSize]
-								}
-								color={labelColor || icon?.color}
-							/>
-						</>
-					)}
-			</View>
+					!loading &&
+					_renderIcon}
+			</Stack>
 		</Pressable>
 	);
 };

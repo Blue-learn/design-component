@@ -19,7 +19,7 @@ const renderItem = (item: WidgetItem) => {
 const performAction = async (
 	action: TapAction,
 ) => {
-	console.log('action performed', action);
+	console.log('mocked action performed', action);
 };
 
 export const CommonWidgetProps = {
@@ -27,4 +27,9 @@ export const CommonWidgetProps = {
 	isVisible: true,
 	modelUpdateWrapper: (fn: Function) => _noop,
 	performAction,
+	action: {
+		mockAction: function mockAction() {
+			console.warn('Mock Action triggered');
+		},
+	},
 };

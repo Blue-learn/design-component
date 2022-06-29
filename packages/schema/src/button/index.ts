@@ -3,7 +3,10 @@ import { CornerRadiusTokens } from '../cornerRadius';
 import { IconProps, IconTokens } from '../icon';
 import { ShadowTypeTokens } from '../shadow';
 import { SpaceTypeTokens } from '../space';
-import { StackAlignType } from '../stack';
+import {
+	StackAlignType,
+	StackProp,
+} from '../stack';
 import { FontSizeTokens } from '../typography';
 
 /**
@@ -41,6 +44,9 @@ export type ButtonProps = {
 	onPress?: Function;
 	/**
 	 * Button flex accepts the stack align types
+	 */
+	/** @deprecated
+	 *
 	 */
 	flex?: StackAlignType;
 };
@@ -83,6 +89,7 @@ export type ButtonBaseProps = {
 	 * Button flex accepts the stack align types
 	 */
 	flex?: StackAlignType;
+	stack?: StackProp;
 };
 
 export type ButtonThemeProps = {
