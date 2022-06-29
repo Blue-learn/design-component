@@ -13,6 +13,10 @@ import {
 	Typography,
 	TextInput,
 	Card,
+	ChatCard,
+	Image,
+	ProgressIndicator,
+	LinkPreview,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -26,5 +30,9 @@ const registry: WidgetRegistry = {
 	[WIDGET.TABS]: Tabs,
 	[WIDGET.DIVIDER]: Divider,
 	[WIDGET.CARD]: Card,
+	[WIDGET.CHATCARD]: ChatCard,
+	[WIDGET.IMAGE]: Image,
+	[WIDGET.LINKPREVIEW]: LinkPreview,
+	[WIDGET.PROGRESSINDICATOR]: ProgressIndicator,
 };
 export { registry as WidgetRegistry };
