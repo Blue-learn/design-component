@@ -16,5 +16,7 @@ export * from './avatar';
 export * from './tabs';
 export * from './divider';
 export * from './image';
+export * from './card';
+export * from './progressIndicator';
 export * from './linkPreview';
 export * from './lottie';

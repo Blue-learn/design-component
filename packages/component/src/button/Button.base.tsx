@@ -8,6 +8,7 @@ import {
 	SpaceTypeTokens,
 	StackAlignType,
 	TextAlignTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
  * Raw Component with Derived props + Theme
  */
 const ButtonBase: React.FunctionComponent<
-	ButtonBaseProps
+	ButtonBaseProps & WidgetProps
 > = ({
 	onPress,
 	label,
@@ -50,6 +51,8 @@ const ButtonBase: React.FunctionComponent<
 	icon,
 	paddingHorizontal = SpaceTypeTokens['4XL'],
 	flex = StackAlignType.center,
+	performAction,
+	action,
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -78,7 +81,13 @@ const ButtonBase: React.FunctionComponent<
 		theme.space[paddingHorizontal];
 
 	return (
-		<View
+		<Pressable
+			onPress={() => {
+				onPress && onPress();
+				action &&
+					performAction &&
+					performAction(action);
+			}}
 			style={
 				width === 'content'
 					? {
@@ -88,7 +97,7 @@ const ButtonBase: React.FunctionComponent<
 					: {}
 			}
 		>
-			<Pressable
+			<View
 				style={[
 					styles.container,
 					{
@@ -109,7 +118,6 @@ const ButtonBase: React.FunctionComponent<
 						justifyContent: flex,
 					},
 				]}
-				onPress={onPress}
 			>
 				{iconAlignment === 'left' &&
 					!loading &&
@@ -170,8 +178,8 @@ const ButtonBase: React.FunctionComponent<
 							/>
 						</>
 					)}
-			</Pressable>
-		</View>
+			</View>
+		</Pressable>
 	);
 };
 export default memo(ButtonBase);

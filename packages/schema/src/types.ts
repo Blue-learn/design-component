@@ -11,10 +11,13 @@ export type WidgetProps = {
 	isVisible?: boolean;
 	modelUpdateWrapper?(prop: Function): Function;
 	performAction?(action: TapAction): void;
+	action?: TapAction;
 };
-export type TapAction = {
+export type TapAction<DataType = any> = {
 	type: string;
-	data: any;
+	data: DataType extends object
+		? { [k in keyof DataType]: DataType[k] }
+		: any;
 };
 export type WidgetRegistry = {
 	[key: string]: {

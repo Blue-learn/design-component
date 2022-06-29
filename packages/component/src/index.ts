@@ -10,6 +10,8 @@ export * as Tabs from './tabs';
 export * as Divider from './divider';
 export * as Image from './image';
 export * as Lottie from './lottie';
+export * as Card from './card';
+export * as ProgressIndicator from './progressIndicator';
 export * as LinkPreview from './linkPreview';
 export * from './mock';
 export * from './registry';

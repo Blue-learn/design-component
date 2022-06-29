@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import {
 	ButtonProps,
 	ButtonThemeProps,
+	WidgetProps,
 } from '@blue-learn/schema';
 import { ButtonBase } from './Button.base';
 import ThemeProvider from '@blue-learn/theme';
@@ -11,8 +12,14 @@ import ThemeProvider from '@blue-learn/theme';
  */
 
 const Button: React.FunctionComponent<
-	ButtonProps
-> = ({ type, onPress = () => {}, ...props }) => {
+	ButtonProps & WidgetProps
+> = ({
+	type,
+	onPress = () => {
+		console.warn('OnPress Props missing');
+	},
+	...props
+}) => {
 	/**
 	 *  logic -> base-component(...props)
 	 * */
