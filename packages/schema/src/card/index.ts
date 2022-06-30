@@ -1,5 +1,6 @@
 import { ColorTokens } from '../colors';
 import { CornerRadiusTokens } from '../cornerRadius';
+import { GradientProps } from '../gradient';
 import { ShadowTypeTokens } from '../shadow';
 import { SpaceTypeTokens } from '../space';
 import { StackAlignType } from '../stack';
@@ -30,8 +31,10 @@ export type CardProps = {
 	paddingHorizontal?: SpaceTypeTokens;
 	paddingVertical?: SpaceTypeTokens;
 	bgColor?: ColorTokens;
-	/** @description  bgColor -> for adding background color to the card
+	/** 
+	@description  bgColor -> for adding background color to the card
 	 */
+	gradient?: GradientProps;
 	borderRadius?: CornerRadiusTokens;
 	/** @description  borderRadius -> for adding border radius to the card
 	 */
