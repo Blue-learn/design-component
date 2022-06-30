@@ -41,6 +41,7 @@ import NewsPaper from './icon-list/NewsPaper';
 import Share from './icon-list/Share';
 import Google from './icon-list/Google';
 import Messages from './icon-list/Messages';
+import Bluelearn from './icon-list/Bluelearn';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -82,4 +83,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Share]: Share,
 	[IconTokens.Google]: Google,
 	[IconTokens.Messages]: Messages,
+	[IconTokens.Bluelearn]: Bluelearn,
 };
