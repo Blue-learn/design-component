@@ -1,5 +1,7 @@
 import {
+	StackAlignItems,
 	StackAlignType,
+	StackJustifyContent,
 	StackProp,
 	StackType,
 	WIDGET,
@@ -23,45 +25,14 @@ const Template = (args: StackProp) => {
 		type: WIDGET.STACK,
 		props: { ...args },
 	});
-
-	/**
-	 *  Static way
-	 * */
-	/*	return (
-		<Stack {...args}>
-			<View
-				style={{
-					backgroundColor: '#000',
-					height: 50,
-					width: 100,
-				}}
-			/>
-			<View
-				style={{
-					backgroundColor: '#000',
-					height: 10,
-					width: 120,
-					marginTop: 4,
-				}}
-			/>
-			<View
-				style={{
-					backgroundColor: '#000',
-					height: 80,
-					width: 150,
-					marginTop: 4,
-				}}
-			/>
-		</Stack>
-	);*/
 };
 
 export const StackComponent = Template.bind({});
 
 StackComponent.args = {
 	type: StackType.row,
-	alignX: StackAlignType.flexStart,
-	alignY: StackAlignType.flexStart,
+	justifyContent: StackJustifyContent.center,
+	alignItems: StackAlignItems.center,
 	renderItem: CommonWidgetProps.renderItem,
 	children: [
 		<View
@@ -88,12 +59,14 @@ StackComponent.argTypes = {
 		control: 'select',
 		options: [...Object.values(StackType)],
 	},
-	alignX: {
+	justifyContent: {
 		control: 'select',
-		options: [...Object.values(StackAlignType)],
+		options: [
+			...Object.values(StackJustifyContent),
+		],
 	},
-	alignY: {
+	alignItems: {
 		control: 'select',
-		options: [...Object.values(StackAlignType)],
+		options: [...Object.values(StackAlignItems)],
 	},
 };

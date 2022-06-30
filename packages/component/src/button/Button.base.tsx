@@ -119,15 +119,17 @@ const ButtonBase: React.FunctionComponent<
 			performAction(action);
 	};
 	const _renderIcon = React.useMemo(
-		() => (
-			<Icon
-				{...icon}
-				name={iconName || icon.name}
-				size={icon?.size || IconSizeTokens[fontSize]}
-				color={labelColor || icon.color}
-			/>
-		),
-		[icon, fontSize],
+		() =>
+			!loading &&
+			(iconName || icon) && (
+				<Icon
+					{...icon}
+					name={iconName || icon.name}
+					size={icon?.size || IconSizeTokens[fontSize]}
+					color={labelColor || icon.color}
+				/>
+			),
+		[icon, fontSize, iconName],
 	);
 	return (
 		<Pressable
@@ -135,10 +137,7 @@ const ButtonBase: React.FunctionComponent<
 			style={styleProps}
 		>
 			<Stack {...stack}>
-				{iconAlignment === 'left' &&
-					!loading &&
-					(iconName || icon) &&
-					_renderIcon}
+				{iconAlignment === 'left' && _renderIcon}
 				{iconAlignment === 'left' && label && (
 					<Space size={8} />
 				)}
