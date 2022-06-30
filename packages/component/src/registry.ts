@@ -17,6 +17,8 @@ import {
 	Image,
 	ProgressIndicator,
 	LinkPreview,
+	Lottie,
+	Gradient,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -34,5 +36,7 @@ const registry: WidgetRegistry = {
 	[WIDGET.IMAGE]: Image,
 	[WIDGET.LINKPREVIEW]: LinkPreview,
 	[WIDGET.PROGRESSINDICATOR]: ProgressIndicator,
+	[WIDGET.LOTTIE]: Lottie,
+	[WIDGET.GRADIENT]: Gradient,
 };
 export { registry as WidgetRegistry };

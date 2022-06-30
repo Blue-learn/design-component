@@ -1,13 +1,14 @@
 import {
 	CardProps,
+	ColorTokens,
 	ShadowThemeProps,
 	SpaceTypeTokens,
-	WidgetItem,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
-import { View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
+import Gradient from '../gradient/Gradient';
+import { View } from 'react-native';
 
 /**
  * @description
@@ -30,6 +31,11 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 	paddingVertical = SpaceTypeTokens.LG,
 	borderRadius = SpaceTypeTokens.LG,
 	shadow,
+	gradient = {
+		colors: [],
+		start: { x: 0, y: 0 },
+		end: { x: 1, y: 0 },
+	},
 	renderItem,
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -55,7 +61,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 		theme.space[paddingHorizontal || padding.right];
 
 	return (
-		<View
+		<Gradient
 			style={{
 				justifyContent: flex,
 				backgroundColor: backgroundColor,
@@ -72,6 +78,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 				paddingRight: paddingRight,
 				borderRadius: borderRadiusValue,
 			}}
+			{...gradient}
 		>
 			{header?.children}
 			{renderItem &&
@@ -85,7 +92,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 			{renderItem &&
 				footer?.widgetItems?.length > 0 &&
 				footer?.widgetItems.map(renderItem)}
-		</View>
+		</Gradient>
 	);
 };
 

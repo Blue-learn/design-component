@@ -63,6 +63,12 @@ CardComponent.args = {
 		),
 	},
 	bgColor: ColorTokens.Grey_600,
+	gradient: {
+		colors: [
+			ColorTokens.Blue_300,
+			ColorTokens.Blue_600,
+		],
+	},
 	padding: {
 		top: SpaceTypeTokens.LG,
 		bottom: SpaceTypeTokens.LG,
