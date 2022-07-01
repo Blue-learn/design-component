@@ -15,7 +15,7 @@ export type WidgetProps = {
 };
 export type TapAction<DataType = any> = {
 	type: string;
-	data: DataType extends object
+	payload: DataType extends object
 		? { [k in keyof DataType]: DataType[k] }
 		: any;
 };
