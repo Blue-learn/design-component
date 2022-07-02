@@ -25,6 +25,9 @@ const Gradient: React.FC<
 	end = { x: 1, y: 0 },
 	renderItem,
 	style,
+	onPress,
+	action,
+	performAction,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -35,6 +38,13 @@ const Gradient: React.FC<
 		return map;
 	}, [colors]);
 
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			performAction &&
+			performAction(action);
+	};
+
 	return (
 		//@ts-ignore
 		<LinearGradient
@@ -42,6 +52,7 @@ const Gradient: React.FC<
 			end={end}
 			colors={colorsMap}
 			style={style}
+			onPress={handleAction}
 		>
 			{children}
 			{renderItem && widgetItems.map(renderItem)}

@@ -51,6 +51,7 @@ export enum IconTokens {
 	Share = 'share',
 	Google = 'google',
 	Messages = 'messages',
+	Dot = 'dot',
 }
 
 export enum IconSizeTokens {

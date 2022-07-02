@@ -19,6 +19,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 	header = { children: <></>, widgetItems: [] },
 	body = { children: <></>, widgetItems: [] },
 	footer = { children: <></>, widgetItems: [] },
+	onPress,
 	flex,
 	bgColor,
 	padding = {
@@ -62,6 +63,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 
 	return (
 		<Gradient
+			onPress={onPress}
 			style={{
 				justifyContent: flex,
 				backgroundColor: backgroundColor,

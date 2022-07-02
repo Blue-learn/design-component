@@ -18,6 +18,7 @@ export type GradientProps = {
 	/** @description widgetItem -> used for Dynamic Render Component of WidgetItem->{id,type,props}
 	 * */
 	widgetItems?: WidgetItem[];
+	onPress?: Function;
 	colors?: ColorTokens[];
 	start?: GradientCoordinates;
 	end?: GradientCoordinates;

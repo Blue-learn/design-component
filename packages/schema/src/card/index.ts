@@ -44,4 +44,8 @@ export type CardProps = {
 	flex?: StackAlignType;
 	/** @description flex -> align in primary Axis
 	 * */
+	onPress?: Function;
+	/**
+	 * Button onPress accepts function
+	 */
 };
