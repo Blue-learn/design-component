@@ -21,3 +21,4 @@ export * from './progressIndicator';
 export * from './linkPreview';
 export * from './lottie';
 export * from './gradient';
+export * from './ripple';
