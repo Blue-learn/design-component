@@ -19,3 +19,4 @@ export * from './image';
 export * from './card';
 export * from './progressIndicator';
 export * from './linkPreview';
+export * from './chip';

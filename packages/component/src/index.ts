@@ -12,5 +12,6 @@ export * as Image from './image';
 export * as Card from './card';
 export * as ProgressIndicator from './progressIndicator';
 export * as LinkPreview from './linkPreview';
+export * as Chip from './chip';
 export * from './mock';
 export * from './registry';
