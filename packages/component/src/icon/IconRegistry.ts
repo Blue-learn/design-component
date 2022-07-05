@@ -42,6 +42,7 @@ import Share from './icon-list/Share';
 import Google from './icon-list/Google';
 import Messages from './icon-list/Messages';
 import Star from './icon-list/Star';
+import Sparkling from './icon-list/Sparkling';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -84,4 +85,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Google]: Google,
 	[IconTokens.Messages]: Messages,
 	[IconTokens.Star]: Star,
+	[IconTokens.Sparkling]: Sparkling,
 };

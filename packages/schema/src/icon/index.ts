@@ -52,6 +52,7 @@ export enum IconTokens {
 	Google = 'google',
 	Messages = 'messages',
 	Star = 'star',
+	Sparkling = 'sparkling',
 }
 
 export enum IconSizeTokens {
