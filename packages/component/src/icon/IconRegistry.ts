@@ -43,6 +43,8 @@ import Google from './icon-list/Google';
 import Messages from './icon-list/Messages';
 import Star from './icon-list/Star';
 import Sparkling from './icon-list/Sparkling';
+import Bookmark from './icon-list/Bookmark';
+import BookmarkFilled from './icon-list/BookmarkFilled';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -86,4 +88,6 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Messages]: Messages,
 	[IconTokens.Star]: Star,
 	[IconTokens.Sparkling]: Sparkling,
+	[IconTokens.Bookmark]: Bookmark,
+	[IconTokens.BookmarkFilled]: BookmarkFilled,
 };
