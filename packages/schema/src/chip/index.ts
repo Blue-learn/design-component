@@ -6,7 +6,7 @@ import { FontSizeTokens } from '../typography';
 
 export type ChipProps = {
 	/**
-	 * Button Label default Button
+	 * default lable Chip
 	 */
 	label?: String;
 	/**
