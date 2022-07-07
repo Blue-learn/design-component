@@ -55,6 +55,7 @@ export enum IconTokens {
 	Sparkling = 'sparkling',
 	Bookmark = 'bookmark',
 	BookmarkFilled = 'bookmark-filled',
+	Page = 'page',
 }
 
 export enum IconSizeTokens {
