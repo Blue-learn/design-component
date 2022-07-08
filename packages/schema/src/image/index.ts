@@ -1,29 +1,29 @@
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
 
 export enum AspectRatioToken {
-	'16:9' = 16 / 9,
-	'9:16' = 9 / 16,
-	'4:3' = 4 / 3,
-	'3:4' = 3 / 4,
-	'1:1' = 1,
-	'2:1' = 2,
+	A16_9 = 16 / 9,
+	A9_16 = 9 / 16,
+	A4_3 = 4 / 3,
+	A3_4 = 3 / 4,
+	A1_1 = 1,
+	A2_1 = 2,
 }
 export interface ImageProps {
 	size?: ImageSizeTokens;
-	uri?: string;
-	borderRadius?: CornerRadiusTokens;
+	uri: string;
+	borderRadius?: BorderRadiusTokens;
 	aspectRatio?: AspectRatioToken;
 }
 
 export enum ImageSizeTokens {
-	xs = 'xs',
-	sm = 'sm',
-	md = 'md',
-	lg = 'lg',
-	xl = 'xl',
-	xxl = 'xxl',
-	xxxl = 'xxxl',
-	full = 'full',
+	XS = 'XS',
+	SM = 'SM',
+	MD = 'MD',
+	LG = 'LG',
+	XL = 'XL',
+	XXL = 'XXL',
+	XXXL = 'XXXL',
+	FULL = 'full',
 }
 
 export type ImageTypeTokensMap = {

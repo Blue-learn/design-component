@@ -27,7 +27,7 @@ export const Primary = Template.bind({});
 Primary.args = {
 	label:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	fontSize: FontSizeTokens.sm,
+	fontSize: FontSizeTokens.SM,
 	fontFamily: FontFamilyTokens.manropeRegular,
 	ellipsizeMode: EllipsizeModeTokens.tail,
 	numberOfLines: 0,

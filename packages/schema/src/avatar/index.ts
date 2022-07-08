@@ -1,10 +1,10 @@
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
 import { ColorTokens } from '../colors';
 
 export interface AvatarProps {
 	size: avatarSizeTokens;
 	uri: string;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
 	borderColor?: ColorTokens;
 	borderWidth?: number;
 }
@@ -14,13 +14,13 @@ export interface AvatarGroupProps {
 }
 
 export enum avatarSizeTokens {
-	XS = 'xs',
-	SM = 'sm',
-	MD = 'md',
-	LG = 'lg',
-	XL = 'xl',
-	'2XL' = '2xl',
-	'3XL' = '3xl',
+	XS = 'XS',
+	SM = 'SM',
+	MD = 'MD',
+	LG = 'LG',
+	XL = 'XL',
+	XXL = 'XXL',
+	XXXL = 'XXL',
 }
 
 export type AvatarTypeTokensMap = {

@@ -20,18 +20,18 @@ export const fontFamilyTokensMap: FontFamilyTokensMap =
 
 export const fontSizeTokensMap: FontSizeTokensMap =
 	{
-		[FontSizeTokens['2xs']]: 10,
-		[FontSizeTokens['xs']]: 12,
-		[FontSizeTokens['sm']]: 14,
-		[FontSizeTokens['md']]: 16,
-		[FontSizeTokens['lg']]: 18,
-		[FontSizeTokens['xl']]: 20,
-		[FontSizeTokens['2xl']]: 24,
-		[FontSizeTokens['3xl']]: 28,
-		[FontSizeTokens['4xl']]: 32,
-		[FontSizeTokens['5xl']]: 40,
-		[FontSizeTokens['6xl']]: 48,
-		[FontSizeTokens['7xl']]: 60,
+		[FontSizeTokens.XXS]: 10,
+		[FontSizeTokens.XS]: 12,
+		[FontSizeTokens.SM]: 14,
+		[FontSizeTokens.MD]: 16,
+		[FontSizeTokens.LG]: 18,
+		[FontSizeTokens.XL]: 20,
+		[FontSizeTokens.XXL]: 24,
+		[FontSizeTokens.XXXL]: 28,
+		[FontSizeTokens.XXXXL]: 32,
+		[FontSizeTokens.XXXXXL]: 40,
+		[FontSizeTokens.XXXXXXL]: 48,
+		[FontSizeTokens.XXXXXXXL]: 60,
 	};
 
 export const typographyTypeTokensMap: TypographyTypeTokensMap =

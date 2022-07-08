@@ -2,7 +2,7 @@ import {
 	ButtonTypeTokens,
 	CardProps,
 	ColorTokens,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	StackAlignType,
 	WIDGET,
 } from '@blue-learn/schema';
@@ -64,10 +64,10 @@ CardComponent.args = {
 	},
 	bgColor: ColorTokens.Grey_600,
 	padding: {
-		top: SpaceTypeTokens.LG,
-		bottom: SpaceTypeTokens.LG,
-		left: SpaceTypeTokens.XL,
-		right: SpaceTypeTokens.XL,
+		top: SizeTypeTokens.LG,
+		bottom: SizeTypeTokens.LG,
+		left: SizeTypeTokens.XL,
+		right: SizeTypeTokens.XL,
 	},
 	flex: StackAlignType.flexStart,
 };
@@ -83,7 +83,7 @@ CardComponent.argTypes = {
 	paddingHorizontal: {
 		control: 'select',
 		options: [
-			...Object.values(SpaceTypeTokens).filter(
+			...Object.values(SizeTypeTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],
@@ -91,7 +91,7 @@ CardComponent.argTypes = {
 	paddingVertical: {
 		control: 'select',
 		options: [
-			...Object.values(SpaceTypeTokens).filter(
+			...Object.values(SizeTypeTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],

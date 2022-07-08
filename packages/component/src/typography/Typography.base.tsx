@@ -24,7 +24,7 @@ const TypographyBase: React.FunctionComponent<
 > = ({
 	label = 'Lorem ipsum dolor sit amet',
 	color = ColorTokens.Grey_500,
-	fontSize = FontSizeTokens.sm,
+	fontSize = FontSizeTokens.SM,
 	fontWeight = FontWeightTokens.normal,
 	fontFamily = FontFamilyTokens.manropeRegular,
 	textDecorationLine = FontDecorationToken.none,

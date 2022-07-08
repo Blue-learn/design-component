@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import {
 	ColorTokens,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	FontSizeTokens,
 	ChatCardBaseProps,
 	FontDecorationToken,
@@ -106,7 +106,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 					<Stack alignY={StackAlignType.center}>
 						<Image
 							uri={file?.file_url}
-							size={ImageSizeTokens.xxl}
+							size={ImageSizeTokens.XXL}
 						/>
 					</Stack>
 				);
@@ -119,7 +119,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 									? file.video_thumbnail
 									: 'https://images.unsplash.com/photo-1614671493799-293d07f5cd70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 							}
-							size={ImageSizeTokens.xxl}
+							size={ImageSizeTokens.XXL}
 						/>
 						<View style={styles.videoPlayBtn}>
 							<Button
@@ -150,18 +150,18 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							>
 								<Icon
 									name={IconTokens.Mic}
-									size={IconSizeTokens.xs}
+									size={IconSizeTokens.XS}
 								/>
 								<Space size={4} />
 								<Typography
 									label={'Voice Message'}
-									fontSize={FontSizeTokens.xs}
+									fontSize={FontSizeTokens.XS}
 								/>
 							</Stack>
 							<Space size={4} />
 							<Typography
 								label={duration}
-								fontSize={FontSizeTokens['2xs']}
+								fontSize={FontSizeTokens.XXS}
 								color={ColorTokens.Grey_400}
 							/>
 						</Stack>
@@ -180,7 +180,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						<Stack>
 							<Typography
 								label={file.file_name}
-								fontSize={FontSizeTokens['2xs']}
+								fontSize={FontSizeTokens.XXS}
 								color={ColorTokens.Grey_500}
 							/>
 							<Typography
@@ -189,7 +189,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 									' KB •' +
 									file.file_type
 								}
-								fontSize={FontSizeTokens['2xs']}
+								fontSize={FontSizeTokens.XXS}
 								color={ColorTokens.Grey_500}
 							/>
 						</Stack>
@@ -225,13 +225,13 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						<Avatar
 							uri={avatarUrl}
 							size={avatarSizeTokens.SM}
-							borderRadius={CornerRadiusTokens.BR4}
+							borderRadius={BorderRadiusTokens.BR4}
 						/>
 						<Space size={8} />
 						<Typography
 							label={nameText}
 							color={userLabelColor}
-							fontSize={FontSizeTokens.xs}
+							fontSize={FontSizeTokens.XS}
 							fontFamily={
 								FontFamilyTokens.manropeSemiBold
 							}
@@ -250,7 +250,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						<Typography
 							label={linkUrl}
 							color={ColorTokens.Blue_600}
-							fontSize={FontSizeTokens.sm}
+							fontSize={FontSizeTokens.SM}
 							textDecorationLine={
 								FontDecorationToken.underline
 							}
@@ -275,11 +275,11 @@ const ReceiverChatCardBase: React.FunctionComponent<
 											<Typography
 												label={label}
 												color={labelColor}
-												fontSize={FontSizeTokens.xs}
+												fontSize={FontSizeTokens.XS}
 											/>
 											<Space size={8} />
 											<Image
-												size={ImageSizeTokens.xxl}
+												size={ImageSizeTokens.XXL}
 												uri={payload.previewData?.image?.url}
 											/>
 											<Space size={8} />
@@ -290,7 +290,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 													fontFamily={
 														FontFamilyTokens.manropeSemiBold
 													}
-													fontSize={FontSizeTokens.xs}
+													fontSize={FontSizeTokens.XS}
 												/>
 												<Space size={4} />
 												<Typography
@@ -298,7 +298,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 														payload.previewData?.description
 													}
 													color={labelColor}
-													fontSize={FontSizeTokens['2xs']}
+													fontSize={FontSizeTokens.XXS}
 												/>
 											</Stack>
 										</Stack>
@@ -308,7 +308,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 										<Typography
 											label={label}
 											color={labelColor}
-											fontSize={FontSizeTokens.sm}
+											fontSize={FontSizeTokens.SM}
 										/>
 									);
 								}
@@ -321,7 +321,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 			<Typography
 				label={timeStamp}
 				color={ColorTokens.Grey_300}
-				fontSize={FontSizeTokens.xs}
+				fontSize={FontSizeTokens.XS}
 			/>
 			<Space size={8} />
 		</Stack>

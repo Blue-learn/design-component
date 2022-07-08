@@ -5,20 +5,19 @@ import {
 } from 'react-native';
 import {
 	AspectRatioToken,
+	BorderRadiusTokens,
 	ImageProps,
 	ImageSizeTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 
-const { width } = Dimensions.get('window');
-
 const Image: React.FunctionComponent<
 	ImageProps
 > = ({
-	size = ImageSizeTokens.lg,
+	size = ImageSizeTokens.LG,
 	uri,
-	borderRadius = 0,
-	aspectRatio = AspectRatioToken['1:1'],
+	borderRadius = BorderRadiusTokens.BR0,
+	aspectRatio = AspectRatioToken.A1_1,
 }) => {
 	const theme = ThemeProvider.getTheme();
 

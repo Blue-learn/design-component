@@ -2,7 +2,7 @@ import {
 	AvatarProps,
 	avatarSizeTokens,
 	ColorTokens,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	IconProps,
 } from '@blue-learn/schema';
 import React from 'react';
@@ -34,7 +34,7 @@ AvatarComponent.argTypes = {
 	},
 	borderRadius: {
 		control: 'select',
-		options: [...Object.values(CornerRadiusTokens)],
+		options: [...Object.values(BorderRadiusTokens)],
 	},
 	borderColor: {
 		control: 'select',

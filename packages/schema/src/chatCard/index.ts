@@ -1,6 +1,6 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
-import { SpaceTypeTokens } from '../space';
+import { BorderRadiusTokens } from '../borderRadius';
+import { SizeTypeTokens } from '../size';
 
 export enum ChatCardTypeTokens {
 	sender = 'sender',
@@ -38,8 +38,8 @@ export type ChatCardBaseProps = {
 	nameText?: string;
 	avatarUrl?: string;
 	timeStamp?: string;
-	borderRadius?: CornerRadiusTokens;
-	padding?: SpaceTypeTokens;
+	borderRadius?: BorderRadiusTokens;
+	padding?: SizeTypeTokens;
 	linkUrl?: string;
 	onPress?: Function;
 	onPressProfile?: Function;
@@ -51,8 +51,8 @@ export type ChatCardThemeProps = {
 	labelColor: ColorTokens;
 	userLabelColor?: ColorTokens;
 	bgColor: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
-	padding?: SpaceTypeTokens;
+	borderRadius?: BorderRadiusTokens;
+	padding?: SizeTypeTokens;
 };
 
 export type ChatCardTypeTokensMap = {

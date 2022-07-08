@@ -1,5 +1,5 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
 import { WidgetItem } from '../types';
 
 /** @deprecated
@@ -31,7 +31,7 @@ interface StackProps {
 	alignItems?: alignItemsValues;
 	wrap?: boolean;
 	bgColor?: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
 	childrenTemplate?: WidgetItem[];
 	children: JSX.Element[] | JSX.Element;
 	flexGrow?: number;

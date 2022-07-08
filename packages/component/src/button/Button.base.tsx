@@ -1,11 +1,12 @@
 import {
 	ButtonBaseProps,
 	ColorTokens,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	FontFamilyTokens,
+	IconAlignmentTokens,
 	IconSizeTokens,
 	ShadowThemeProps,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	StackAlignType,
 	TextAlignTokens,
 } from '@blue-learn/schema';
@@ -39,8 +40,8 @@ const ButtonBase: React.FunctionComponent<
 	loading = false,
 	bgColor = ColorTokens.Blue_600,
 	labelColor = ColorTokens.Grey_500,
-	borderRadius = CornerRadiusTokens.BR4,
-	paddingVertical = SpaceTypeTokens.LG,
+	borderRadius = BorderRadiusTokens.BR4,
+	paddingVertical = SizeTypeTokens.LG,
 	shadow,
 	borderColor,
 	fontSize,
@@ -48,7 +49,7 @@ const ButtonBase: React.FunctionComponent<
 	iconName,
 	width = 'content',
 	icon,
-	paddingHorizontal = SpaceTypeTokens['4XL'],
+	paddingHorizontal = SizeTypeTokens.XXXXL,
 	flex = StackAlignType.center,
 }) => {
 	/**
@@ -111,7 +112,8 @@ const ButtonBase: React.FunctionComponent<
 				]}
 				onPress={onPress}
 			>
-				{iconAlignment === 'left' &&
+				{(iconAlignment === 'left' ||
+					icon?.align === IconAlignmentTokens.left) &&
 					!loading &&
 					(iconName || icon) && (
 						<>
@@ -155,7 +157,8 @@ const ButtonBase: React.FunctionComponent<
 					/>
 				)}
 
-				{iconAlignment === 'right' &&
+				{(iconAlignment === 'right' ||
+					icon?.align === IconAlignmentTokens.right) &&
 					(iconName || icon) &&
 					!loading && (
 						<>

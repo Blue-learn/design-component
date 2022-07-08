@@ -1,8 +1,8 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
 import { IconProps, IconTokens } from '../icon';
 import { ShadowTypeTokens } from '../shadow';
-import { SpaceTypeTokens } from '../space';
+import { SizeTypeTokens } from '../size';
 import { StackAlignType } from '../stack';
 import { FontSizeTokens } from '../typography';
 
@@ -27,6 +27,9 @@ export type ButtonProps = {
 	 */
 	iconName?: IconTokens;
 	// Default iconAlignment - right
+	/**
+	 * @deprecated
+	 */
 	iconAlignment?: 'left' | 'right';
 	// Default width - content
 	width?: 'full' | 'content';
@@ -65,12 +68,12 @@ export type ButtonBaseProps = {
 	iconAlignment?: 'left' | 'right';
 	bgColor?: ColorTokens;
 	borderColor?: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
 	shadow?: ShadowTypeTokens;
-	paddingVertical: SpaceTypeTokens;
+	paddingVertical: SizeTypeTokens;
 	fontSize?: FontSizeTokens;
 	width?: 'full' | 'content';
-	paddingHorizontal: SpaceTypeTokens;
+	paddingHorizontal: SizeTypeTokens;
 	/**
 	 * Button Loading State default false
 	 */
@@ -86,14 +89,14 @@ export type ButtonBaseProps = {
 };
 
 export type ButtonThemeProps = {
-	borderRadius: CornerRadiusTokens;
+	borderRadius: BorderRadiusTokens;
 	labelColor: ColorTokens;
 	bgColor: ColorTokens;
-	paddingVertical: SpaceTypeTokens;
+	paddingVertical: SizeTypeTokens;
 	borderColor?: ColorTokens;
 	shadow?: ShadowTypeTokens;
 	fontSize?: FontSizeTokens;
-	paddingHorizontal: SpaceTypeTokens;
+	paddingHorizontal: SizeTypeTokens;
 };
 
 //--todo add more Diff Combination for Button

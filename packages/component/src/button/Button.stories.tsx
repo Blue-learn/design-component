@@ -38,7 +38,7 @@ ButtonStory.args = {
 	type: ButtonTypeTokens.LargeFilled,
 	icon: {
 		name: IconTokens.RightArrow,
-		size: IconSizeTokens.xs,
+		size: IconSizeTokens.XS,
 	},
 };
 ButtonStory.argTypes = {

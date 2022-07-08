@@ -2,14 +2,14 @@ import React from 'react';
 import { Image } from 'react-native';
 import {
 	AvatarProps,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 
 const Avatar: React.FC<AvatarProps> = ({
 	size,
 	uri,
-	borderRadius = CornerRadiusTokens.BR4,
+	borderRadius = BorderRadiusTokens.BR4,
 	borderWidth,
 	borderColor,
 }) => {

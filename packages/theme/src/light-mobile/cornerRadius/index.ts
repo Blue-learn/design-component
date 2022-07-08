@@ -1,12 +1,13 @@
 import {
-	CornerRadiusTokensMap,
-	CornerRadiusTokens,
+	BorderRadiusTokensMap,
+	BorderRadiusTokens,
 } from '@blue-learn/schema';
 
-export const borderRadiusTypeTokensMap: CornerRadiusTokensMap =
+export const borderRadiusTypeTokensMap: BorderRadiusTokensMap =
 	{
-		[CornerRadiusTokens.BR1]: 8,
-		[CornerRadiusTokens.BR2]: 12,
-		[CornerRadiusTokens.BR3]: 16,
-		[CornerRadiusTokens.BR4]: 1000,
+		[BorderRadiusTokens.BR0]: 0,
+		[BorderRadiusTokens.BR1]: 8,
+		[BorderRadiusTokens.BR2]: 12,
+		[BorderRadiusTokens.BR3]: 16,
+		[BorderRadiusTokens.BR4]: 1000,
 	};

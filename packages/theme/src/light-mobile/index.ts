@@ -2,7 +2,7 @@ import { ThemeTokens } from '../config';
 import { colorTokensMap } from '../colors';
 import { buttonTypeTokensMap } from './button';
 import { borderRadiusTypeTokensMap } from './cornerRadius';
-import { spaceTypeTokensMap } from './space';
+import { sizeTypeTokensMap } from './space';
 import { inputTypeTokensMap } from './textInput';
 import {
 	fontSizeTokensMap,
@@ -10,7 +10,7 @@ import {
 	typographyTypeTokensMap,
 } from './typography';
 import { shadowTypeTokensMap } from './shadow';
-import { IconSizeTokensMap } from '../icons';
+import { IconSizeTokensMap } from './icons';
 import { avatarTypeTokensMap } from './avatar';
 import { imageTypeTokensMap } from './image';
 import { chatCardTypeTokenMap } from './chatCard';
@@ -20,7 +20,7 @@ export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
 	button: buttonTypeTokensMap,
 	borderRadius: borderRadiusTypeTokensMap,
-	space: spaceTypeTokensMap,
+	space: sizeTypeTokensMap,
 	fontFamily: fontFamilyTokensMap,
 	textInput: inputTypeTokensMap,
 	fontSize: fontSizeTokensMap,
