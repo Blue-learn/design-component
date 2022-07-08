@@ -10,6 +10,6 @@ export const avatarTypeTokensMap: AvatarTypeTokensMap =
 		[avatarSizeTokens.MD]: 32,
 		[avatarSizeTokens.LG]: 40,
 		[avatarSizeTokens.XL]: 48,
-		[avatarSizeTokens['2XL']]: 80,
-		[avatarSizeTokens['3XL']]: 100,
+		[avatarSizeTokens.XXL]: 80,
+		[avatarSizeTokens.XXXL]: 100,
 	};

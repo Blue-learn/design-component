@@ -42,6 +42,10 @@ const config: StorybookConfig = {
 			...config.resolve.alias,
 			'react-native$': 'react-native-web',
 			'react-native-svg': 'react-native-svg-web',
+			'lottie-react-native':
+				'react-native-web-lottie',
+			'react-native-linear-gradient':
+				'react-native-web-linear-gradient',
 		};
 		return config;
 	},

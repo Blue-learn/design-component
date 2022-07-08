@@ -61,6 +61,7 @@ export enum IconTokens {
 	Messages = 'messages',
 	Star = 'star',
 	Sparkling = 'sparkling',
+	Bluelearn = 'bluelearn',
 }
 
 export enum IconSizeTokens {

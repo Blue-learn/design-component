@@ -7,33 +7,28 @@ import {
 	IconSizeTokens,
 	ShadowThemeProps,
 	SizeTypeTokens,
-	StackAlignType,
+	StackAlignItems,
+	StackJustifyContent,
+	StackType,
 	TextAlignTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
-	StyleSheet,
-	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
-
-const styles = StyleSheet.create({
-	container: {
-		alignItems: 'center',
-		flexDirection: 'row',
-	},
-});
+import { Component as Stack } from '../stack';
 
 /**
  * Raw Component with Derived props + Theme
  */
 const ButtonBase: React.FunctionComponent<
-	ButtonBaseProps
+	ButtonBaseProps & WidgetProps
 > = ({
 	onPress,
 	label,
@@ -50,7 +45,13 @@ const ButtonBase: React.FunctionComponent<
 	width = 'content',
 	icon,
 	paddingHorizontal = SizeTypeTokens.XXXXL,
-	flex = StackAlignType.center,
+	performAction,
+	action,
+	stack = {
+		type: StackType.row,
+		justifyContent: StackJustifyContent.center,
+		alignItems: StackAlignItems.center,
+	},
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -78,75 +79,72 @@ const ButtonBase: React.FunctionComponent<
 	const paddingHorizontalValue =
 		theme.space[paddingHorizontal];
 
+	const styleProps = React.useMemo(
+		() => ({
+			backgroundColor: backgroundColorValue,
+			borderRadius: borderRadiusValue,
+			paddingVertical: paddingValue,
+			borderColor: borderColorValue,
+			borderWidth: borderColor ? 1 : 0,
+			shadowOffset: shadowValue?.shadowOffset || {
+				height: 0,
+				width: 0,
+			},
+			shadowOpacity: shadowValue?.shadowOpacity || 0,
+			shadowRadius: shadowValue?.shadowRadius || 0,
+			paddingHorizontal: paddingHorizontalValue,
+		}),
+		[
+			borderRadiusValue,
+			borderColorValue,
+			backgroundColorValue,
+			labelColorValue,
+			paddingValue,
+			shadowValue,
+			paddingHorizontalValue,
+		],
+	);
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			performAction &&
+			performAction(action);
+	};
+	const _renderIcon = React.useMemo(
+		() =>
+			!loading &&
+			(iconName || icon) && (
+				<Icon
+					{...icon}
+					name={iconName || icon.name}
+					size={icon?.size || IconSizeTokens[fontSize]}
+					color={labelColor || icon.color}
+				/>
+			),
+		[icon, fontSize, iconName],
+	);
 	return (
-		<View
-			style={
-				width === 'content'
-					? {
-							justifyContent: 'flex-start',
-							alignItems: 'flex-start',
-					  }
-					: {}
-			}
+		<Pressable
+			onPress={handleAction}
+			style={styleProps}
 		>
-			<Pressable
-				style={[
-					styles.container,
-					{
-						backgroundColor: backgroundColorValue,
-						borderRadius: borderRadiusValue,
-						paddingVertical: paddingValue,
-						borderColor: borderColorValue,
-						borderWidth: borderColor ? 1 : 0,
-						shadowOffset: shadowValue?.shadowOffset || {
-							height: 0,
-							width: 0,
-						},
-						shadowOpacity:
-							shadowValue?.shadowOpacity || 0,
-						shadowRadius:
-							shadowValue?.shadowRadius || 0,
-						paddingHorizontal: paddingHorizontalValue,
-						justifyContent: flex,
-					},
-				]}
-				onPress={onPress}
-			>
+			<Stack {...stack}>
 				{(iconAlignment === 'left' ||
 					icon?.align === IconAlignmentTokens.left) &&
-					!loading &&
-					(iconName || icon) && (
-						<>
-							<Icon
-								{...icon}
-								name={iconName || icon.name}
-								size={
-									icon?.size || IconSizeTokens[fontSize]
-								}
-								color={labelColor || icon.color}
-							/>
-							{label && <Space size={8} />}
-						</>
-					)}
-
+					_renderIcon}
+				{iconAlignment === 'left' && label && (
+					<Space size={8} />
+				)}
 				{label && (
-					<View
-						style={
-							flex == StackAlignType.spaceBetween
-								? { flex: 1 }
-								: {}
+					<Typography
+						label={label}
+						color={labelColor}
+						fontSize={fontSize}
+						textAlign={TextAlignTokens.center}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
 						}
-					>
-						<Typography
-							label={label}
-							color={labelColor}
-							fontSize={fontSize}
-							textAlign={TextAlignTokens.center}
-							fontFamily={
-								FontFamilyTokens.manropeSemiBold
-							}
-						/>
-					</View>
+					/>
 				)}
 
 				{loading && (
@@ -160,21 +158,10 @@ const ButtonBase: React.FunctionComponent<
 				{(iconAlignment === 'right' ||
 					icon?.align === IconAlignmentTokens.right) &&
 					(iconName || icon) &&
-					!loading && (
-						<>
-							{label && <Space size={8} />}
-							<Icon
-								{...icon}
-								name={iconName || icon?.name}
-								size={
-									icon?.size || IconSizeTokens[fontSize]
-								}
-								color={labelColor || icon?.color}
-							/>
-						</>
-					)}
-			</Pressable>
-		</View>
+					!loading &&
+					_renderIcon}
+			</Stack>
+		</Pressable>
 	);
 };
 export default memo(ButtonBase);

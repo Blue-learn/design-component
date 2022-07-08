@@ -2,24 +2,24 @@ import {
 	AvatarTypeTokensMap,
 	ButtonTypeTokensMap,
 	ColorTokensMap,
-	CornerRadiusTokensMap,
 	FontFamilyTokensMap,
 	FontSizeTokensMap,
 	IconSizeTokensMap,
 	InputTypeTokensMap,
 	ShadowTypeTokensMap,
-	SpaceTypeTokensMap,
 	ImageTypeTokensMap,
 	ChatCardTypeTokensMap,
 	TypographyTypeTokensMap,
 	ProgressIndicatorTypeTokensMap,
+	BorderRadiusTokensMap,
+	SizeTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
 	colors: ColorTokensMap;
 	button: ButtonTypeTokensMap;
-	borderRadius: CornerRadiusTokensMap;
-	space: SpaceTypeTokensMap;
+	borderRadius: BorderRadiusTokensMap;
+	space: SizeTypeTokensMap;
 	fontFamily: FontFamilyTokensMap;
 	fontSize: FontSizeTokensMap;
 	shadow: ShadowTypeTokensMap;
