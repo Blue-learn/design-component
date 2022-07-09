@@ -23,7 +23,7 @@ export enum ImageSizeTokens {
 	XL = 'XL',
 	XXL = 'XXL',
 	XXXL = 'XXXL',
-	FULL = 'full',
+	FULL = 'FULL',
 }
 
 export type ImageTypeTokensMap = {

@@ -1,3 +1,11 @@
-import { ColorTokens } from '@blue-learn/schema';
+import {
+	DividerSizeTokens,
+	DividerSizeTokensMap,
+} from '@blue-learn/schema';
 
-export const DividerColor = ColorTokens.Grey_200;
+export const dividerSizeTypeTokensMap: DividerSizeTokensMap =
+	{
+		[DividerSizeTokens.SM]: 1,
+		[DividerSizeTokens.MD]: 2,
+		[DividerSizeTokens.LG]: 4,
+	};

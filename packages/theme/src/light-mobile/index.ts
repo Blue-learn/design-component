@@ -1,7 +1,7 @@
 import { ThemeTokens } from '../config';
 import { colorTokensMap } from '../colors';
 import { buttonTypeTokensMap } from './button';
-import { borderRadiusTypeTokensMap } from './cornerRadius';
+import { borderRadiusTypeTokensMap } from './borderRadius';
 import { sizeTypeTokensMap } from './space';
 import { inputTypeTokensMap } from './textInput';
 import {
@@ -15,6 +15,7 @@ import { avatarTypeTokensMap } from './avatar';
 import { imageTypeTokensMap } from './image';
 import { chatCardTypeTokenMap } from './chatCard';
 import { progessIndicatorTypeTokensMap } from './progressIndicator';
+import { dividerSizeTypeTokensMap } from './divider';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -31,4 +32,5 @@ export const lightMobileTheme: ThemeTokens = {
 	chatCard: chatCardTypeTokenMap,
 	typography: typographyTypeTokensMap,
 	progressIndicator: progessIndicatorTypeTokensMap,
+	dividerSize: dividerSizeTypeTokensMap,
 };

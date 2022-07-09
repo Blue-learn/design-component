@@ -7,7 +7,6 @@ import {
 import React, { memo } from 'react';
 import ThemeProvider from '@blue-learn/theme';
 import Gradient from '../gradient/Gradient';
-import { View } from 'react-native';
 
 /**
  * @description
