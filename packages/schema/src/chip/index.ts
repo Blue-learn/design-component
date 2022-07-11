@@ -1,10 +1,25 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
 import { IconProps } from '../icon';
-import { SpaceTypeTokens } from '../space';
+import { OpacityTypeTokens } from '../opacity';
+import { PaddingProps } from '../padding';
 import { FontSizeTokens } from '../typography';
 
-export type ChipProps = {
+export enum StateTypeTokens {
+	default = 'default',
+	notSelected = 'notSelected',
+	selected = 'selected',
+	disabled = 'disabled',
+	loading = 'loading',
+	error = 'error',
+	success = 'success',
+}
+
+export type ChipItemProps = {
+	state?:
+		| StateTypeTokens.selected
+		| StateTypeTokens.notSelected
+		| StateTypeTokens.disabled;
 	/**
 	 * default lable Chip
 	 */
@@ -13,20 +28,15 @@ export type ChipProps = {
 	 * Default Icon null
 	 */
 	icon?: IconProps;
-	/**
-	Default iconAlignment - right
-    */
-	iconAlignment?: 'left' | 'right';
+
 	bgColor?: ColorTokens;
 	labelColor?: ColorTokens;
 	fontSize?: FontSizeTokens;
-	borderRadius?: CornerRadiusTokens;
-	padding?: {
-		top?: SpaceTypeTokens;
-		bottom?: SpaceTypeTokens;
-		left?: SpaceTypeTokens;
-		right?: SpaceTypeTokens;
-	};
-	paddingHorizontal?: SpaceTypeTokens;
-	paddingVertical?: SpaceTypeTokens;
+	borderRadius?: BorderRadiusTokens;
+	opacity?: OpacityTypeTokens;
+	padding?: PaddingProps;
+};
+
+export type ChipProps = {
+	data?: ChipItemProps[];
 };
