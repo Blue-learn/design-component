@@ -132,9 +132,9 @@ const ButtonBase: React.FunctionComponent<
 				{(iconAlignment === 'left' ||
 					icon?.align === IconAlignmentTokens.left) &&
 					_renderIcon}
-				{iconAlignment === 'left' && label && (
-					<Space size={8} />
-				)}
+				{(iconAlignment === 'left' ||
+					icon?.align === IconAlignmentTokens.left) &&
+					label && <Space size={8} />}
 				{label && (
 					<Typography
 						label={label}
@@ -155,6 +155,9 @@ const ButtonBase: React.FunctionComponent<
 					/>
 				)}
 
+				{(iconAlignment === 'right' ||
+					icon?.align === IconAlignmentTokens.right) &&
+					label && <Space size={8} />}
 				{(iconAlignment === 'right' ||
 					icon?.align === IconAlignmentTokens.right) &&
 					(iconName || icon) &&
