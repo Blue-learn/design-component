@@ -6,7 +6,6 @@ import { SizeTypeTokens } from '../size';
 import {
 	FontFamilyTokens,
 	FontSizeTokens,
-	FontWeightTokens,
 } from '../typography';
 import { IconProps } from '../icon';
 
@@ -59,7 +58,6 @@ export type TextInputBaseProps = {
 	fontSize?: FontSizeTokens;
 	bgColor?: ColorTokens;
 	color?: ColorTokens;
-	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
 	borderRadius?: BorderRadiusTokens;
 	borderColor?: ColorTokens;

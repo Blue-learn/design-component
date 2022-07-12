@@ -2,12 +2,8 @@ import React, { memo } from 'react';
 import { Text } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import {
-	ColorTokens,
 	ColorTokensMap,
-	FontFamilyTokens,
 	FontFamilyTokensMap,
-	FontSizeTokens,
-	FontWeightTokens,
 	TypographyBaseProps,
 	FontDecorationToken,
 	FontTransformToken,
@@ -23,10 +19,9 @@ const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
 	label = 'Lorem ipsum dolor sit amet',
-	color = ColorTokens.Grey_500,
-	fontSize = FontSizeTokens.SM,
-	fontWeight = FontWeightTokens.normal,
-	fontFamily = FontFamilyTokens.manropeRegular,
+	color,
+	fontSize,
+	fontFamily,
 	textDecorationLine = FontDecorationToken.none,
 	textTransform = FontTransformToken.none,
 	textAlign = TextAlignTokens.auto,
@@ -42,15 +37,11 @@ const TypographyBase: React.FunctionComponent<
 
 	const fontSizeMapping: FontSizeTokensMap =
 		theme.fontSize;
-	/**
-	 * use fontSize,fontWeight, textDecorationLine, textTransform to full customise base component
-	 * */
 
 	return (
 		<Text
 			style={{
 				fontFamily: fontFamilyMapping[fontFamily],
-				fontWeight: FontWeightTokens[fontWeight],
 				color: colorMapping[color],
 				fontSize: fontSizeMapping[fontSize],
 				textTransform: textTransform,

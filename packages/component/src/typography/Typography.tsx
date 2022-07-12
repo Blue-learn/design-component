@@ -13,15 +13,16 @@ import ThemeProvider from '@blue-learn/theme';
 
 const Typography: React.FunctionComponent<
 	TypographyProps
-> = ({ type, ...props }) => {
+> = ({
+	type = TypographyTypeTokens.DEFAULT,
+	...props
+}) => {
 	/**
 	 *  logic -> base-component(...props)
 	 * */
 	const theme = ThemeProvider.getTheme();
 	const typographyThemeProps: TypographyThemeProps =
-		theme.typography[
-			type || TypographyTypeTokens.primary
-		];
+		theme.typography[type];
 
 	return (
 		<TypographyBase

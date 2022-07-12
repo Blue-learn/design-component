@@ -36,13 +36,79 @@ export const fontSizeTokensMap: FontSizeTokensMap =
 
 export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
+		[TypographyTypeTokens.DEFAULT]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.H6]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XS,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H5]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H4]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.MD,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H3]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.LG,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H2]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XL,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H1]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXL,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.B7]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXS,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B6]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XS,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B5]: {
+			color: ColorTokens.Grey_400,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B4]: {
+			color: ColorTokens.Grey_400,
+			fontSize: FontSizeTokens.MD,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.P5]: {
+			color: ColorTokens.Grey_300,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
 		[TypographyTypeTokens.primary]: {
 			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 		[TypographyTypeTokens.secondary]: {
 			color: ColorTokens.Grey_400,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 		[TypographyTypeTokens.placeholder]: {
 			color: ColorTokens.Grey_300,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 	};
