@@ -62,41 +62,39 @@ const Chip: React.FC<ChipItemProps> = ({
 		];
 
 	return (
-		<Stack>
-			<View
-				style={{
-					flexDirection: 'row',
-					alignItems: 'center',
-					backgroundColor: backgroundColor,
-					borderRadius: borderRadiusValue,
-					paddingTop: paddingTop,
-					paddingBottom: paddingBottom,
-					paddingLeft: paddingLeft,
-					paddingRight: paddingRight,
-				}}
-			>
-				{icon?.align === IconAlignmentTokens.left &&
-					icon?.name && (
-						<>
-							<Icon {...icon} />
-							{label && <Space size={4} />}
-						</>
-					)}
-				<Typography
-					label={label}
-					fontSize={fontSize}
-					fontFamily={FontFamilyTokens.manropeSemiBold}
-					color={labelColor}
-				/>
-				{icon?.align === IconAlignmentTokens.right &&
-					icon?.name && (
-						<>
-							{label && <Space size={4} />}
-							<Icon {...icon} />
-						</>
-					)}
-			</View>
-		</Stack>
+		<View
+			style={{
+				flexDirection: 'row',
+				alignItems: 'center',
+				backgroundColor: backgroundColor,
+				borderRadius: borderRadiusValue,
+				paddingTop: paddingTop,
+				paddingBottom: paddingBottom,
+				paddingLeft: paddingLeft,
+				paddingRight: paddingRight,
+			}}
+		>
+			{icon?.align === IconAlignmentTokens.left &&
+				icon?.name && (
+					<>
+						<Icon {...icon} />
+						{label && <Space size={4} />}
+					</>
+				)}
+			<Typography
+				label={label}
+				fontSize={fontSize}
+				fontFamily={FontFamilyTokens.manropeSemiBold}
+				color={labelColor}
+			/>
+			{icon?.align === IconAlignmentTokens.right &&
+				icon?.name && (
+					<>
+						{label && <Space size={4} />}
+						<Icon {...icon} />
+					</>
+				)}
+		</View>
 	);
 };
 

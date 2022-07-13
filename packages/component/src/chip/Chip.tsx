@@ -9,6 +9,7 @@ import {
 import ChipBase from './Chip.base';
 import _map from 'lodash-es/map';
 import Stack from '../stack/Stack';
+import Space from '../space/Space';
 
 /**
  * Primary UI component for user interaction
@@ -27,9 +28,17 @@ const Chip: React.FunctionComponent<
 			alignItems={StackAlignItems.center}
 			justifyContent={StackJustifyContent.flexStart}
 		>
-			{_map(props.data, (item: ChipItemProps) => (
-				<ChipBase {...item} />
-			))}
+			{_map(
+				props.data,
+				(item: ChipItemProps, index: number) => [
+					<ChipBase {...item} />,
+					<Space
+						size={
+							index === props?.data?.length - 1 ? 0 : 8
+						}
+					/>,
+				],
+			)}
 		</Stack>
 	);
 };
