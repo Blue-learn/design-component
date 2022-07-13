@@ -14,6 +14,8 @@ import {
 	BorderRadiusTokensMap,
 	SizeTypeTokensMap,
 	DividerSizeTokensMap,
+	LottieSizeTokensMap,
+	AspectRatioTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -28,10 +30,12 @@ export type ThemeTokens = {
 	iconSize: IconSizeTokensMap;
 	avatarSize: AvatarTypeTokensMap;
 	imageSize: ImageTypeTokensMap;
+	aspectRatio: AspectRatioTokensMap;
 	chatCard: ChatCardTypeTokensMap;
 	typography: TypographyTypeTokensMap;
 	progressIndicator: ProgressIndicatorTypeTokensMap;
 	dividerSize: DividerSizeTokensMap;
+	lottieSize: LottieSizeTokensMap;
 };
 
 export * from './light-mobile/divider';

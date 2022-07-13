@@ -12,10 +12,14 @@ import {
 import { shadowTypeTokensMap } from './shadow';
 import { IconSizeTokensMap } from './icons';
 import { avatarTypeTokensMap } from './avatar';
-import { imageTypeTokensMap } from './image';
+import {
+	aspectRationTokensMap,
+	imageTypeTokensMap,
+} from './image';
 import { chatCardTypeTokenMap } from './chatCard';
 import { progessIndicatorTypeTokensMap } from './progressIndicator';
 import { dividerSizeTypeTokensMap } from './divider';
+import { lottieSizeTokensMap } from './lottie';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -29,8 +33,10 @@ export const lightMobileTheme: ThemeTokens = {
 	iconSize: IconSizeTokensMap,
 	avatarSize: avatarTypeTokensMap,
 	imageSize: imageTypeTokensMap,
+	aspectRatio: aspectRationTokensMap,
 	chatCard: chatCardTypeTokenMap,
 	typography: typographyTypeTokensMap,
 	progressIndicator: progessIndicatorTypeTokensMap,
 	dividerSize: dividerSizeTypeTokensMap,
+	lottieSize: lottieSizeTokensMap,
 };
