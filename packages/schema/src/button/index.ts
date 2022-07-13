@@ -35,7 +35,7 @@ export type ButtonProps = {
 	 */
 	iconAlignment?: 'left' | 'right';
 	// Default width - content
-	width?: 'full' | 'content';
+	width?: ButtonWidthTypeToken;
 	labelColor?: ColorTokens;
 	/**
 	 * Button Loading State default false
@@ -53,6 +53,11 @@ export type ButtonProps = {
 	 */
 	flex?: StackAlignType;
 };
+
+export enum ButtonWidthTypeToken {
+	FULL = 'FULL',
+	CONTENT = 'CONTENT',
+}
 /**
  * Only exposed to Main Component as Base props
  */
@@ -78,7 +83,7 @@ export type ButtonBaseProps = {
 	shadow?: ShadowTypeTokens;
 	paddingVertical: SizeTypeTokens;
 	fontSize?: FontSizeTokens;
-	width?: 'full' | 'content';
+	width?: ButtonWidthTypeToken;
 	paddingHorizontal: SizeTypeTokens;
 	/**
 	 * Button Loading State default false

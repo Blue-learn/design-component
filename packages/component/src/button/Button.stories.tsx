@@ -2,6 +2,7 @@ import Button from './Button';
 import {
 	ButtonProps,
 	ButtonTypeTokens,
+	ButtonWidthTypeToken,
 	IconSizeTokens,
 	IconTokens,
 	StackAlignType,
@@ -73,9 +74,10 @@ ButtonStory.argTypes = {
 		default: 'left',
 	},
 	width: {
-		control: 'radio',
-		options: ['content', 'full'],
-		default: 'content',
+		control: 'select',
+		options: [
+			...Object.values(ButtonWidthTypeToken),
+		],
 	},
 	onPress: { action: 'clicked' },
 };

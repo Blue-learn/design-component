@@ -12,12 +12,14 @@ import {
 	StackType,
 	TextAlignTokens,
 	WidgetProps,
+	ButtonWidthTypeToken,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
+	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
@@ -42,7 +44,7 @@ const ButtonBase: React.FunctionComponent<
 	fontSize,
 	iconAlignment = 'right',
 	iconName,
-	width = 'content',
+	width = ButtonWidthTypeToken.CONTENT,
 	icon,
 	paddingHorizontal = SizeTypeTokens.XXXXL,
 	performAction,
@@ -90,6 +92,10 @@ const ButtonBase: React.FunctionComponent<
 				height: 0,
 				width: 0,
 			},
+			alignSelf:
+				width === ButtonWidthTypeToken.CONTENT
+					? 'flex-start'
+					: {},
 			shadowOpacity: shadowValue?.shadowOpacity || 0,
 			shadowRadius: shadowValue?.shadowRadius || 0,
 			paddingHorizontal: paddingHorizontalValue,
@@ -102,6 +108,7 @@ const ButtonBase: React.FunctionComponent<
 			paddingValue,
 			shadowValue,
 			paddingHorizontalValue,
+			width,
 		],
 	);
 	const handleAction = () => {
@@ -124,47 +131,51 @@ const ButtonBase: React.FunctionComponent<
 		[icon, fontSize, iconName],
 	);
 	return (
-		<Pressable
-			onPress={handleAction}
-			style={styleProps}
-		>
-			<Stack {...stack}>
-				{(iconAlignment === 'left' ||
-					icon?.align === IconAlignmentTokens.left) &&
-					_renderIcon}
-				{(iconAlignment === 'left' ||
-					icon?.align === IconAlignmentTokens.left) &&
-					label && <Space size={8} />}
-				{label && (
-					<Typography
-						label={label}
-						color={labelColor}
-						fontSize={fontSize}
-						textAlign={TextAlignTokens.center}
-						fontFamily={
-							FontFamilyTokens.manropeSemiBold
-						}
-					/>
-				)}
+		<View>
+			<Pressable
+				onPress={handleAction}
+				style={styleProps}
+			>
+				<Stack {...stack}>
+					{(iconAlignment === 'left' ||
+						icon?.align === IconAlignmentTokens.left) &&
+						_renderIcon}
+					{(iconAlignment === 'left' ||
+						icon?.align === IconAlignmentTokens.left) &&
+						label && <Space size={8} />}
+					{label && (
+						<Typography
+							label={label}
+							color={labelColor}
+							fontSize={fontSize}
+							textAlign={TextAlignTokens.center}
+							fontFamily={
+								FontFamilyTokens.manropeSemiBold
+							}
+						/>
+					)}
 
-				{loading && (
-					<ActivityIndicator
-						style={{ marginLeft: label ? 8 : 0 }}
-						animating
-						color={labelColorValue}
-					/>
-				)}
+					{loading && (
+						<ActivityIndicator
+							style={{ marginLeft: label ? 8 : 0 }}
+							animating
+							color={labelColorValue}
+						/>
+					)}
 
-				{(iconAlignment === 'right' ||
-					icon?.align === IconAlignmentTokens.right) &&
-					label && <Space size={8} />}
-				{(iconAlignment === 'right' ||
-					icon?.align === IconAlignmentTokens.right) &&
-					(iconName || icon) &&
-					!loading &&
-					_renderIcon}
-			</Stack>
-		</Pressable>
+					{(iconAlignment === 'right' ||
+						icon?.align ===
+							IconAlignmentTokens.right) &&
+						label && <Space size={8} />}
+					{(iconAlignment === 'right' ||
+						icon?.align ===
+							IconAlignmentTokens.right) &&
+						(iconName || icon) &&
+						!loading &&
+						_renderIcon}
+				</Stack>
+			</Pressable>
+		</View>
 	);
 };
 export default memo(ButtonBase);
