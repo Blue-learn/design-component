@@ -46,6 +46,7 @@ import Sparkling from './icon-list/Sparkling';
 import Bookmark from './icon-list/Bookmark';
 import BookmarkFilled from './icon-list/BookmarkFilled';
 import Page from './icon-list/Page';
+import InfoFilled from './icon-list/InfoFilled';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -72,6 +73,7 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Book]: Book,
 	[IconTokens.DoubleMessage]: DoubleMessage,
 	[IconTokens.Info]: Info,
+	[IconTokens.InfoFilled]: InfoFilled,
 	[IconTokens.Lighting]: Lighting,
 	[IconTokens.Notification]: Notification,
 	[IconTokens.Play]: Play,
