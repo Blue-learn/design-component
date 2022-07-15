@@ -6,7 +6,7 @@ export enum AvatarTypeTokens {
 	MULTIPLE = 'MULTIPLE',
 }
 export interface AvatarProps {
-	size: avatarSizeTokens;
+	size: AvatarSizeTokens;
 	uri?: string;
 	uris?: string[];
 	borderRadius?: BorderRadiusTokens;
@@ -16,7 +16,7 @@ export interface AvatarProps {
 }
 
 export interface AvatarBaseProps {
-	size: avatarSizeTokens;
+	size: AvatarSizeTokens;
 	uri: string;
 	overlap?: boolean;
 	borderRadius?: BorderRadiusTokens;
@@ -24,7 +24,7 @@ export interface AvatarBaseProps {
 	borderWidth?: number;
 }
 
-export enum avatarSizeTokens {
+export enum AvatarSizeTokens {
 	XS = 'XS',
 	SM = 'SM',
 	MD = 'MD',
@@ -35,5 +35,5 @@ export enum avatarSizeTokens {
 }
 
 export type AvatarTypeTokensMap = {
-	[key in avatarSizeTokens]: number;
+	[key in AvatarSizeTokens]: number;
 };

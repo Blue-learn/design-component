@@ -7,7 +7,7 @@ import {
 	FontDecorationToken,
 	ButtonTypeTokens,
 	IconTokens,
-	avatarSizeTokens,
+	AvatarSizeTokens,
 	StackType,
 	StackAlignType,
 	FontFamilyTokens,
@@ -224,7 +224,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 					>
 						<Avatar
 							uri={avatarUrl}
-							size={avatarSizeTokens.SM}
+							size={AvatarSizeTokens.SM}
 							borderRadius={BorderRadiusTokens.BR4}
 						/>
 						<Space size={8} />

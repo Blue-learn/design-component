@@ -1,6 +1,6 @@
 import {
 	AvatarProps,
-	avatarSizeTokens,
+	AvatarSizeTokens,
 	ColorTokens,
 	BorderRadiusTokens,
 	AvatarTypeTokens,
@@ -12,7 +12,7 @@ export default {
 	title: 'Example/Avatar',
 	component: Avatar,
 	uri: 'https://reactnative.dev/img/tiny_logo.png',
-	size: avatarSizeTokens.LG,
+	size: AvatarSizeTokens.LG,
 };
 
 const Template = (args: AvatarProps) => (
@@ -30,7 +30,7 @@ AvatarComponent.args = {
 	],
 	uri: 'https://reactnative.dev/img/tiny_logo.png',
 	type: AvatarTypeTokens.MULTIPLE,
-	size: avatarSizeTokens.LG,
+	size: AvatarSizeTokens.LG,
 	borderWidth: 3,
 	borderColor: ColorTokens.Grey_100,
 };
@@ -38,7 +38,7 @@ AvatarComponent.args = {
 AvatarComponent.argTypes = {
 	size: {
 		control: 'select',
-		options: [...Object.values(avatarSizeTokens)],
+		options: [...Object.values(AvatarSizeTokens)],
 	},
 	type: {
 		control: 'select',
