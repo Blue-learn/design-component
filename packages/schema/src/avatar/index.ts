@@ -1,16 +1,27 @@
 import { BorderRadiusTokens } from '../borderRadius';
 import { ColorTokens } from '../colors';
 
+export enum AvatarTypeTokens {
+	SINGLE = 'SINGLE',
+	MULTIPLE = 'MULTIPLE',
+}
 export interface AvatarProps {
 	size: avatarSizeTokens;
-	uri: string;
+	uri?: string;
+	uris?: string[];
 	borderRadius?: BorderRadiusTokens;
 	borderColor?: ColorTokens;
 	borderWidth?: number;
+	type?: AvatarTypeTokens;
 }
 
-export interface AvatarGroupProps {
-	uris: string[];
+export interface AvatarBaseProps {
+	size: avatarSizeTokens;
+	uri: string;
+	overlap?: boolean;
+	borderRadius?: BorderRadiusTokens;
+	borderColor?: ColorTokens;
+	borderWidth?: number;
 }
 
 export enum avatarSizeTokens {

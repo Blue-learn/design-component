@@ -3,7 +3,7 @@ import {
 	avatarSizeTokens,
 	ColorTokens,
 	BorderRadiusTokens,
-	IconProps,
+	AvatarTypeTokens,
 } from '@blue-learn/schema';
 import React from 'react';
 import { Avatar } from './Avatar';
@@ -22,15 +22,27 @@ const Template = (args: AvatarProps) => (
 export const AvatarComponent = Template.bind({});
 
 AvatarComponent.args = {
+	uris: [
+		'https://reactnative.dev/img/tiny_logo.png',
+		'https://reactnative.dev/img/tiny_logo.png',
+		'https://reactnative.dev/img/tiny_logo.png',
+		'https://reactnative.dev/img/tiny_logo.png',
+	],
 	uri: 'https://reactnative.dev/img/tiny_logo.png',
+	type: AvatarTypeTokens.MULTIPLE,
 	size: avatarSizeTokens.LG,
-	borderWidth: 0,
+	borderWidth: 3,
+	borderColor: ColorTokens.Grey_100,
 };
 
 AvatarComponent.argTypes = {
 	size: {
 		control: 'select',
 		options: [...Object.values(avatarSizeTokens)],
+	},
+	type: {
+		control: 'select',
+		options: [...Object.values(AvatarTypeTokens)],
 	},
 	borderRadius: {
 		control: 'select',
