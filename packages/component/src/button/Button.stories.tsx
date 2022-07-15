@@ -3,6 +3,7 @@ import {
 	ButtonProps,
 	ButtonTypeTokens,
 	ButtonWidthTypeToken,
+	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	StackAlignType,
@@ -38,8 +39,9 @@ ButtonStory.args = {
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
 	icon: {
-		name: IconTokens.RightArrow,
-		size: IconSizeTokens.XS,
+		name: IconTokens.Google,
+		size: IconSizeTokens.MD,
+		align: IconAlignmentTokens.left,
 	},
 };
 ButtonStory.argTypes = {

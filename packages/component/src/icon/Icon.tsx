@@ -25,8 +25,6 @@ const Icon: React.FunctionComponent<
 
 	const icon_color = theme.colors[color];
 
-	console.log(name);
-
 	if (!name) return <></>;
 
 	return (

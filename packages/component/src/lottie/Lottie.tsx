@@ -1,6 +1,9 @@
 import React from 'react';
 import LottieView from 'lottie-react-native';
-import { LottieProps } from '@blue-learn/schema';
+import {
+	AspectRatioToken,
+	LottieProps,
+} from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 
 const Lottie: React.FunctionComponent<
@@ -9,7 +12,7 @@ const Lottie: React.FunctionComponent<
 	uri,
 	size,
 	autoplay = true,
-	aspectRatio,
+	aspectRatio = AspectRatioToken.A1_1,
 	loop = true,
 }) => {
 	const theme = ThemeProvider.getTheme();

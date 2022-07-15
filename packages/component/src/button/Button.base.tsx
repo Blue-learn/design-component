@@ -19,6 +19,7 @@ import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
+	Platform,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
@@ -41,7 +42,7 @@ const ButtonBase: React.FunctionComponent<
 	shadow,
 	borderColor,
 	fontSize,
-	iconAlignment = 'right',
+	iconAlignment,
 	iconName,
 	width = ButtonWidthTypeToken.CONTENT,
 	icon,
@@ -91,10 +92,6 @@ const ButtonBase: React.FunctionComponent<
 				height: 0,
 				width: 0,
 			},
-			width:
-				width === ButtonWidthTypeToken.CONTENT
-					? 'fit-content'
-					: '100%',
 			shadowOpacity: shadowValue?.shadowOpacity || 0,
 			shadowRadius: shadowValue?.shadowRadius || 0,
 			paddingHorizontal: paddingHorizontalValue,
@@ -110,6 +107,25 @@ const ButtonBase: React.FunctionComponent<
 			width,
 		],
 	);
+
+	const widthStyleProps = React.useMemo(
+		() =>
+			Platform.OS === 'web'
+				? {
+						width:
+							width === ButtonWidthTypeToken.CONTENT
+								? 'fit-content'
+								: '100%',
+				  }
+				: {
+						alignSelf:
+							width === ButtonWidthTypeToken.CONTENT
+								? 'flex-start'
+								: 'stretch',
+				  },
+		[width],
+	);
+
 	const handleAction = () => {
 		onPress && onPress();
 		action &&
@@ -132,7 +148,7 @@ const ButtonBase: React.FunctionComponent<
 	return (
 		<Pressable
 			onPress={handleAction}
-			style={styleProps}
+			style={[styleProps, widthStyleProps]}
 		>
 			<Stack {...stack}>
 				{(iconAlignment === 'left' ||
