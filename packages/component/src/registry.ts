@@ -19,6 +19,7 @@ import {
 	LinkPreview,
 	Lottie,
 	Gradient,
+	Chip,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -38,5 +39,6 @@ const registry: WidgetRegistry = {
 	[WIDGET.PROGRESSINDICATOR]: ProgressIndicator,
 	[WIDGET.LOTTIE]: Lottie,
 	[WIDGET.GRADIENT]: Gradient,
+	[WIDGET.CHIP]: Chip,
 };
 export { registry as WidgetRegistry };

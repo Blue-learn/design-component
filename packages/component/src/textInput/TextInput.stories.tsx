@@ -30,7 +30,7 @@ Input.args = {
 	icon: (
 		<Icon
 			name={IconTokens.Chat}
-			size={IconSizeTokens.lg}
+			size={IconSizeTokens.LG}
 		/>
 	),
 };

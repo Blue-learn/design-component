@@ -1,6 +1,6 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
-import { SpaceTypeTokens } from '../space';
+import { BorderRadiusTokens } from '../borderRadius';
+import { SizeTypeTokens } from '../size';
 import { StackAlignType } from '../stack';
 
 export enum ProgressIndicatorTypeTokens {
@@ -20,8 +20,8 @@ export type ProgressIndicatorProps = {
 
 export type ProgressIndicatorThemeProps = {
 	color: ColorTokens;
-	borderRadius: CornerRadiusTokens;
-	height: SpaceTypeTokens;
+	borderRadius: BorderRadiusTokens;
+	height: SizeTypeTokens;
 };
 
 export type ProgressIndicatorTypeTokensMap = {

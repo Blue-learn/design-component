@@ -1,36 +1,29 @@
 import {
 	ButtonBaseProps,
 	ColorTokens,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	FontFamilyTokens,
+	IconAlignmentTokens,
 	IconSizeTokens,
 	ShadowThemeProps,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
-	StackProp,
 	StackType,
 	TextAlignTokens,
 	WidgetProps,
+	ButtonWidthTypeToken,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
-	StyleSheet,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
 import { Component as Stack } from '../stack';
-
-const styles = StyleSheet.create({
-	container: {
-		alignItems: 'center',
-		flexDirection: 'row',
-	},
-});
 
 /**
  * Raw Component with Derived props + Theme
@@ -43,16 +36,16 @@ const ButtonBase: React.FunctionComponent<
 	loading = false,
 	bgColor = ColorTokens.Blue_600,
 	labelColor = ColorTokens.Grey_500,
-	borderRadius = CornerRadiusTokens.BR4,
-	paddingVertical = SpaceTypeTokens.LG,
+	borderRadius = BorderRadiusTokens.BR4,
+	paddingVertical = SizeTypeTokens.LG,
 	shadow,
 	borderColor,
 	fontSize,
 	iconAlignment = 'right',
 	iconName,
-	width = 'content',
+	width = ButtonWidthTypeToken.CONTENT,
 	icon,
-	paddingHorizontal = SpaceTypeTokens['4XL'],
+	paddingHorizontal = SizeTypeTokens.XXXXL,
 	performAction,
 	action,
 	stack = {
@@ -98,6 +91,10 @@ const ButtonBase: React.FunctionComponent<
 				height: 0,
 				width: 0,
 			},
+			width:
+				width === ButtonWidthTypeToken.CONTENT
+					? 'fit-content'
+					: '100%',
 			shadowOpacity: shadowValue?.shadowOpacity || 0,
 			shadowRadius: shadowValue?.shadowRadius || 0,
 			paddingHorizontal: paddingHorizontalValue,
@@ -110,6 +107,7 @@ const ButtonBase: React.FunctionComponent<
 			paddingValue,
 			shadowValue,
 			paddingHorizontalValue,
+			width,
 		],
 	);
 	const handleAction = () => {
@@ -137,10 +135,12 @@ const ButtonBase: React.FunctionComponent<
 			style={styleProps}
 		>
 			<Stack {...stack}>
-				{iconAlignment === 'left' && _renderIcon}
-				{iconAlignment === 'left' && label && (
-					<Space size={8} />
-				)}
+				{(iconAlignment === 'left' ||
+					icon?.align === IconAlignmentTokens.left) &&
+					_renderIcon}
+				{(iconAlignment === 'left' ||
+					icon?.align === IconAlignmentTokens.left) &&
+					label && <Space size={8} />}
 				{label && (
 					<Typography
 						label={label}
@@ -161,10 +161,11 @@ const ButtonBase: React.FunctionComponent<
 					/>
 				)}
 
-				{iconAlignment === 'right' && label && (
-					<Space size={8} />
-				)}
-				{iconAlignment === 'right' &&
+				{(iconAlignment === 'right' ||
+					icon?.align === IconAlignmentTokens.right) &&
+					label && <Space size={8} />}
+				{(iconAlignment === 'right' ||
+					icon?.align === IconAlignmentTokens.right) &&
 					(iconName || icon) &&
 					!loading &&
 					_renderIcon}

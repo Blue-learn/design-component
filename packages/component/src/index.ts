@@ -13,6 +13,7 @@ export * as Lottie from './lottie';
 export * as Card from './card';
 export * as ProgressIndicator from './progressIndicator';
 export * as LinkPreview from './linkPreview';
+export * as Chip from './chip';
 export * as Gradient from './gradient';
 export * from './mock';
 export * from './registry';

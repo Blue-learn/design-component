@@ -1,7 +1,7 @@
 import {
 	ColorTokens,
 	FontSizeTokens,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	TabsProps,
 } from '@blue-learn/schema';
 import React, { memo, useState } from 'react';
@@ -58,10 +58,10 @@ const Tabs: React.FunctionComponent<
 					const isActive = i == activeTab;
 					return (
 						<ButtonBase
-							paddingHorizontal={SpaceTypeTokens.XL}
-							paddingVertical={SpaceTypeTokens.MD}
+							paddingHorizontal={SizeTypeTokens.XL}
+							paddingVertical={SizeTypeTokens.MD}
 							labelColor={ColorTokens.Grey_500}
-							fontSize={FontSizeTokens.md}
+							fontSize={FontSizeTokens.MD}
 							bgColor={
 								isActive
 									? ColorTokens.Blue_100

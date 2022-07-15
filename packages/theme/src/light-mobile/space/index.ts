@@ -1,16 +1,16 @@
 import {
-	SpaceTypeTokens,
-	SpaceTypeTokensMap,
+	SizeTypeTokens,
+	SizeTypeTokensMap,
 } from '@blue-learn/schema';
 
-export const spaceTypeTokensMap: SpaceTypeTokensMap =
+export const sizeTypeTokensMap: SizeTypeTokensMap =
 	{
-		[SpaceTypeTokens.XS]: 2,
-		[SpaceTypeTokens.SM]: 4,
-		[SpaceTypeTokens.MD]: 8,
-		[SpaceTypeTokens.LG]: 12,
-		[SpaceTypeTokens.XL]: 16,
-		[SpaceTypeTokens['2XL']]: 20,
-		[SpaceTypeTokens['3XL']]: 24,
-		[SpaceTypeTokens['4XL']]: 28,
+		[SizeTypeTokens.XS]: 2,
+		[SizeTypeTokens.SM]: 4,
+		[SizeTypeTokens.MD]: 8,
+		[SizeTypeTokens.LG]: 12,
+		[SizeTypeTokens.XL]: 16,
+		[SizeTypeTokens.XXL]: 20,
+		[SizeTypeTokens.XXXL]: 24,
+		[SizeTypeTokens.XXXXL]: 28,
 	};
