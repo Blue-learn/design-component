@@ -1,15 +1,15 @@
 import {
-	avatarSizeTokens,
+	AvatarSizeTokens,
 	AvatarTypeTokensMap,
 } from '@blue-learn/schema';
 
 export const avatarTypeTokensMap: AvatarTypeTokensMap =
 	{
-		[avatarSizeTokens.XS]: 20,
-		[avatarSizeTokens.SM]: 24,
-		[avatarSizeTokens.MD]: 32,
-		[avatarSizeTokens.LG]: 40,
-		[avatarSizeTokens.XL]: 48,
-		[avatarSizeTokens['2XL']]: 80,
-		[avatarSizeTokens['3XL']]: 100,
+		[AvatarSizeTokens.XS]: 20,
+		[AvatarSizeTokens.SM]: 24,
+		[AvatarSizeTokens.MD]: 32,
+		[AvatarSizeTokens.LG]: 40,
+		[AvatarSizeTokens.XL]: 48,
+		[AvatarSizeTokens.XXL]: 80,
+		[AvatarSizeTokens.XXXL]: 100,
 	};

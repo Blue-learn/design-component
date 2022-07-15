@@ -1,16 +1,16 @@
 import {
 	ColorTokens,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	ProgressIndicatorTypeTokens,
 	ProgressIndicatorTypeTokensMap,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 } from '@blue-learn/schema';
 
 export const progessIndicatorTypeTokensMap: ProgressIndicatorTypeTokensMap =
 	{
 		[ProgressIndicatorTypeTokens.default]: {
 			color: ColorTokens.Blue_600,
-			borderRadius: CornerRadiusTokens.BR4,
-			height: SpaceTypeTokens.MD,
+			borderRadius: BorderRadiusTokens.BR4,
+			height: SizeTypeTokens.MD,
 		},
 	};

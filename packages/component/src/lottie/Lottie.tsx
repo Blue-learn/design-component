@@ -1,21 +1,35 @@
 import React from 'react';
 import LottieView from 'lottie-react-native';
 import { LottieProps } from '@blue-learn/schema';
+import ThemeProvider from '@blue-learn/theme';
 
 const Lottie: React.FunctionComponent<
 	LottieProps
-> = ({ uri, width, height }) => {
-	if (!uri) return <></>;
+> = ({
+	uri,
+	size,
+	autoplay = true,
+	aspectRatio,
+	loop = true,
+}) => {
+	const theme = ThemeProvider.getTheme();
+
+	const sizeValue = theme.lottieSize[size];
+	const aspectRatioValue =
+		theme.aspectRatio[aspectRatio];
+
+	if (!uri && !size) return <></>;
 
 	return (
 		<LottieView
 			source={uri}
 			style={{
-				height: height,
-				width: width,
+				width: sizeValue,
+				height: 'auto',
+				aspectRatio: aspectRatioValue,
 			}}
-			autoPlay
-			loop
+			autoPlay={autoplay}
+			loop={loop}
 		/>
 	);
 };

@@ -1,14 +1,12 @@
 import {
 	CardProps,
-	ColorTokens,
 	ShadowThemeProps,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import ThemeProvider from '@blue-learn/theme';
 import Gradient from '../gradient/Gradient';
-import { View } from 'react-native';
 
 /**
  * @description
@@ -22,14 +20,14 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 	flex,
 	bgColor,
 	padding = {
-		top: SpaceTypeTokens.LG,
-		right: SpaceTypeTokens.LG,
-		left: SpaceTypeTokens.LG,
-		bottom: SpaceTypeTokens.LG,
+		top: SizeTypeTokens.LG,
+		right: SizeTypeTokens.LG,
+		left: SizeTypeTokens.LG,
+		bottom: SizeTypeTokens.LG,
 	},
-	paddingHorizontal = SpaceTypeTokens.LG,
-	paddingVertical = SpaceTypeTokens.LG,
-	borderRadius = SpaceTypeTokens.LG,
+	paddingHorizontal = SizeTypeTokens.LG,
+	paddingVertical = SizeTypeTokens.LG,
+	borderRadius = SizeTypeTokens.LG,
 	shadow,
 	gradient = {
 		colors: [],

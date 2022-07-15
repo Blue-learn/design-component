@@ -1,8 +1,8 @@
 import { ThemeTokens } from '../config';
 import { colorTokensMap } from '../colors';
 import { buttonTypeTokensMap } from './button';
-import { borderRadiusTypeTokensMap } from './cornerRadius';
-import { spaceTypeTokensMap } from './space';
+import { borderRadiusTypeTokensMap } from './borderRadius';
+import { sizeTypeTokensMap } from './space';
 import { inputTypeTokensMap } from './textInput';
 import {
 	fontSizeTokensMap,
@@ -10,17 +10,22 @@ import {
 	typographyTypeTokensMap,
 } from './typography';
 import { shadowTypeTokensMap } from './shadow';
-import { IconSizeTokensMap } from '../icons';
+import { IconSizeTokensMap } from './icons';
 import { avatarTypeTokensMap } from './avatar';
-import { imageTypeTokensMap } from './image';
+import {
+	aspectRationTokensMap,
+	imageTypeTokensMap,
+} from './image';
 import { chatCardTypeTokenMap } from './chatCard';
 import { progessIndicatorTypeTokensMap } from './progressIndicator';
+import { dividerSizeTypeTokensMap } from './divider';
+import { lottieSizeTokensMap } from './lottie';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
 	button: buttonTypeTokensMap,
 	borderRadius: borderRadiusTypeTokensMap,
-	space: spaceTypeTokensMap,
+	space: sizeTypeTokensMap,
 	fontFamily: fontFamilyTokensMap,
 	textInput: inputTypeTokensMap,
 	fontSize: fontSizeTokensMap,
@@ -28,7 +33,10 @@ export const lightMobileTheme: ThemeTokens = {
 	iconSize: IconSizeTokensMap,
 	avatarSize: avatarTypeTokensMap,
 	imageSize: imageTypeTokensMap,
+	aspectRatio: aspectRationTokensMap,
 	chatCard: chatCardTypeTokenMap,
 	typography: typographyTypeTokensMap,
 	progressIndicator: progessIndicatorTypeTokensMap,
+	dividerSize: dividerSizeTypeTokensMap,
+	lottieSize: lottieSizeTokensMap,
 };

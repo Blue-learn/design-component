@@ -11,7 +11,7 @@ const Icon: React.FunctionComponent<
 	IconProps
 > = ({
 	name,
-	size = IconSizeTokens.lg,
+	size = IconSizeTokens.LG,
 	color = ColorTokens.Grey_500,
 }) => {
 	/**
@@ -24,6 +24,8 @@ const Icon: React.FunctionComponent<
 	const icon_size = theme.iconSize[size];
 
 	const icon_color = theme.colors[color];
+
+	console.log(name);
 
 	if (!name) return <></>;
 

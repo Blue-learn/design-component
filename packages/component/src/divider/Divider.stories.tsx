@@ -1,11 +1,8 @@
 import {
-	AvatarProps,
-	avatarSizeTokens,
 	ColorTokens,
-	CornerRadiusTokens,
 	DividerProps,
-	IconProps,
-	SpaceTypeTokens,
+	SizeTypeTokens,
+	DividerSizeTokens,
 } from '@blue-learn/schema';
 import React from 'react';
 import { Divider } from './Divider';
@@ -22,26 +19,30 @@ const Template = (args: DividerProps) => (
 export const DividerComponent = Template.bind({});
 
 DividerComponent.args = {
-	thickness: 1,
+	size: DividerSizeTokens.MD,
+	margin: {
+		vertical: SizeTypeTokens.SM,
+		horizontal: SizeTypeTokens.SM,
+	},
 };
 
 DividerComponent.argTypes = {
-	marginVertical: {
+	size: {
 		control: 'select',
-		options: [
-			null,
-			...Object.values(SpaceTypeTokens),
-		],
+		options: [...Object.values(DividerSizeTokens)],
 	},
-	paddingHorizontal: {
-		control: 'select',
-		options: [
-			null,
-			...Object.values(SpaceTypeTokens),
-		],
+	margin: {
+		vertical: {
+			control: 'select',
+			options: [...Object.values(SizeTypeTokens)],
+		},
+		horizontal: {
+			control: 'select',
+			options: [...Object.values(SizeTypeTokens)],
+		},
 	},
 	color: {
 		control: 'select',
-		options: [null, ...Object.values(ColorTokens)],
+		options: [...Object.values(ColorTokens)],
 	},
 };
