@@ -8,7 +8,6 @@ import {
 	SpaceTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
-	StackProp,
 	StackType,
 	TextAlignTokens,
 	WidgetProps,
