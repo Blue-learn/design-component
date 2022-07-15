@@ -36,11 +36,11 @@ const Gradient: React.FC<
 	}, [colors]);
 
 	return (
-		//@ts-ignore
 		<LinearGradient
 			start={start}
 			end={end}
 			colors={colorsMap}
+			//@ts-ignore
 			style={style}
 		>
 			{children}

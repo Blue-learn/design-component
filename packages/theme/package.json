@@ -23,7 +23,7 @@
     "publish": "npm publish --access public"
   },
   "devDependencies": {
-    "@blue-learn/schema": "^0.0.14",
+    "@blue-learn/schema": "^0.0.15",
     "typescript": "^4.5.5"
   },
   "bugs": {
