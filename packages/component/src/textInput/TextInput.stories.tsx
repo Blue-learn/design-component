@@ -27,32 +27,9 @@ Input.args = {
 	type: inputTypeToken.default,
 	title: 'Title',
 	caption: 'This is a caption',
-	icon: (
-		<Icon
-			name={IconTokens.Chat}
-			size={IconSizeTokens.LG}
-		/>
-	),
 };
 
 Input.argTypes = {
-	type: {
-		control: { type: 'radio' },
-		options: [
-			...Object.values(inputTypeToken).filter(
-				(k) => typeof k === 'string',
-			),
-		],
-	},
-};
-
-export const InputWithIcon = Template.bind({});
-
-InputWithIcon.args = {
-	type: inputTypeToken.chat,
-};
-
-InputWithIcon.argTypes = {
 	type: {
 		control: { type: 'radio' },
 		options: [

@@ -1,7 +1,6 @@
 import {
 	ChipProps,
 	ColorTokens,
-	FontSizeTokens,
 	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
@@ -18,9 +17,9 @@ const Template = (args: ChipProps) => (
 	<Chip {...args} />
 );
 
-export const SpaceComponent = Template.bind({});
+export const ChipComponent = Template.bind({});
 
-SpaceComponent.args = {
+ChipComponent.args = {
 	data: [
 		{
 			label: 'Chip1',

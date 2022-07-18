@@ -95,9 +95,11 @@ const TextInputBase: React.FunctionComponent<
 				]}
 			>
 				<Space
-					size={icon && icon.align === 'left' ? 12 : 0}
+					size={
+						icon && icon?.align === 'left' ? 12 : 0
+					}
 				/>
-				{icon.align === 'left' &&
+				{icon?.align === 'left' &&
 					(icon ? icon : null)}
 				<TextInput
 					isDisabled={isDisabled}
@@ -116,11 +118,11 @@ const TextInputBase: React.FunctionComponent<
 					textAlignVertical='top'
 					{...props}
 				/>
-				{icon.align === 'right' &&
+				{icon?.align === 'right' &&
 					(icon ? icon : null)}
 				<Space
 					size={
-						icon && icon.align === 'right' ? 12 : 0
+						icon && icon?.align === 'right' ? 12 : 0
 					}
 				/>
 			</View>

@@ -44,7 +44,9 @@ const AvatarBase: React.FC<AvatarBaseProps> = ({
 		],
 	);
 
-	return <Image style={styleProps} source={uri} />;
+	return (
+		<Image style={styleProps} source={{ uri }} />
+	);
 };
 
 export default React.memo(AvatarBase);
