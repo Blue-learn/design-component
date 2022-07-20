@@ -51,7 +51,6 @@ AvatarComponent.argTypes = {
 	},
 	borderColor: {
 		control: 'select',
-		default: BorderRadiusTokens.BR4,
 		options: [...Object.values(ColorTokens)],
 	},
 };
