@@ -3,10 +3,7 @@ import {
 	ButtonProps,
 	ButtonTypeTokens,
 	ButtonWidthTypeToken,
-	IconAlignmentTokens,
-	IconSizeTokens,
 	IconTokens,
-	StackAlignType,
 	WIDGET,
 } from '@blue-learn/schema';
 import { CommonWidgetProps } from '../mock';
@@ -38,11 +35,12 @@ ButtonStory.args = {
 	label: 'All Buttons',
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
-	icon: {
-		name: IconTokens.Google,
-		size: IconSizeTokens.MD,
-		align: IconAlignmentTokens.left,
-	},
+	width: ButtonWidthTypeToken.CONTENT,
+	// icon: {
+	// 	name: IconTokens.Google,
+	// 	size: IconSizeTokens.MD,
+	// 	align: IconAlignmentTokens.left,
+	// },
 };
 ButtonStory.argTypes = {
 	type: {
@@ -53,7 +51,14 @@ ButtonStory.argTypes = {
 			),
 		],
 	},
+	width: {
+		control: 'select',
+		options: [
+			...Object.values(ButtonWidthTypeToken),
+		],
+	},
 	icon: {
+		default: null,
 		control: 'object',
 		options: [...Object.values(IconTokens)],
 	},
@@ -66,20 +71,10 @@ ButtonStory.argTypes = {
 			),
 		],
 	},
-	flex: {
-		control: 'select',
-		options: [...Object.values(StackAlignType)],
-	},
 	iconAlignment: {
-		control: 'radio',
-		options: ['left', 'right'],
-		default: 'left',
-	},
-	width: {
 		control: 'select',
-		options: [
-			...Object.values(ButtonWidthTypeToken),
-		],
+		options: [null, 'left', 'right'],
+		default: 'left',
 	},
 	onPress: { action: 'clicked' },
 };
