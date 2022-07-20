@@ -33,6 +33,7 @@ AvatarComponent.args = {
 	size: AvatarSizeTokens.LG,
 	borderWidth: 3,
 	borderColor: ColorTokens.Grey_100,
+	BorderRadius: BorderRadiusTokens.BR4,
 };
 
 AvatarComponent.argTypes = {
@@ -50,6 +51,7 @@ AvatarComponent.argTypes = {
 	},
 	borderColor: {
 		control: 'select',
-		options: [null, ...Object.values(ColorTokens)],
+		default: BorderRadiusTokens.BR4,
+		options: [...Object.values(ColorTokens)],
 	},
 };
