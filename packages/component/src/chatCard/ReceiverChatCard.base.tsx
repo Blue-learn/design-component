@@ -9,11 +9,12 @@ import {
 	IconTokens,
 	AvatarSizeTokens,
 	StackType,
-	StackAlignType,
 	FontFamilyTokens,
 	ImageSizeTokens,
 	IconSizeTokens,
 	PreviewData,
+	StackAlignItems,
+	StackJustifyContent,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -103,7 +104,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 		switch (file?.file_type) {
 			case 'IMAGE':
 				return (
-					<Stack alignY={StackAlignType.center}>
+					<Stack alignItems={StackAlignItems.center}>
 						<Image
 							uri={file?.file_url}
 							size={ImageSizeTokens.XXL}
@@ -134,7 +135,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Button
 							type={ButtonTypeTokens.IconElevated}
@@ -146,7 +147,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 						<Stack>
 							<Stack
 								type={StackType.row}
-								alignY={StackAlignType.center}
+								alignItems={StackAlignItems.center}
 							>
 								<Icon
 									name={IconTokens.Mic}
@@ -172,8 +173,10 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
-						alignX={StackAlignType.spaceBetween}
+						alignItems={StackAlignItems.center}
+						justifyContent={
+							StackJustifyContent.spaceBetween
+						}
 					>
 						<Icon name={IconTokens.PDF} />
 						<Space size={8} />
@@ -220,7 +223,10 @@ const ReceiverChatCardBase: React.FunctionComponent<
 				<TouchableOpacity onPress={onPressProfile}>
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
+						justifyContent={
+							StackJustifyContent.flexStart
+						}
 					>
 						<Avatar
 							uri={avatarUrl}

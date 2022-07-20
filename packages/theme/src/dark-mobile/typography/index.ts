@@ -8,7 +8,7 @@ import { typographyTypeTokensMap as typographyTypeTokensMapLight } from '../../l
 export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
 		[TypographyTypeTokens.DEFAULT]: {
-			...typographyTypeTokensMapLight['default'],
+			...typographyTypeTokensMapLight['DEFAULT'],
 			color: ColorTokens.Grey_100,
 		},
 		[TypographyTypeTokens.H6]: {
