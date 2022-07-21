@@ -208,6 +208,9 @@ const ReplyChatCardBase: React.FunctionComponent<
 						}
 						fontSize={FontSizeTokens.XS}
 						color={userLabelColor}
+						textTransform={
+							FontTransformToken.capitalize
+						}
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>

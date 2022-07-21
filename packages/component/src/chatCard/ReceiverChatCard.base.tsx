@@ -15,6 +15,7 @@ import {
 	PreviewData,
 	StackAlignItems,
 	StackJustifyContent,
+	FontTransformToken,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -238,6 +239,9 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							label={nameText}
 							color={userLabelColor}
 							fontSize={FontSizeTokens.XS}
+							textTransform={
+								FontTransformToken.capitalize
+							}
 							fontFamily={
 								FontFamilyTokens.manropeSemiBold
 							}
