@@ -9,7 +9,7 @@ import {
 import { CommonWidgetProps } from '../mock';
 
 export default {
-	title: 'Example/Button',
+	title: 'Component/Button',
 	component: Button,
 	argTypes: {
 		label: 'Default Button',

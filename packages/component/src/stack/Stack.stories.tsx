@@ -12,7 +12,7 @@ import { CommonWidgetProps } from '../mock';
 import { View } from 'react-native';
 
 export default {
-	title: 'Example/Stack',
+	title: 'Component/Stack',
 	component: Stack,
 };
 

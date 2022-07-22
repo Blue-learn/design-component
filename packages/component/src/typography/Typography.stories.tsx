@@ -12,7 +12,7 @@ import React from 'react';
 import Typography from './Typography';
 
 export default {
-	title: 'Example/typography',
+	title: 'Component/typography',
 	component: Typography,
 	argTypes: {
 		label: 'Lorem ipsum dolor sit.',

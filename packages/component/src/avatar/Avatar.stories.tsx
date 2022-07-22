@@ -9,7 +9,7 @@ import React from 'react';
 import { Avatar } from './Avatar';
 
 export default {
-	title: 'Example/Avatar',
+	title: 'Component/Avatar',
 	component: Avatar,
 	uri: 'https://reactnative.dev/img/tiny_logo.png',
 	size: AvatarSizeTokens.LG,
