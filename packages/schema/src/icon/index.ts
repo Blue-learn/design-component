@@ -57,6 +57,7 @@ export enum IconTokens {
 	Bookmark = 'bookmark',
 	BookmarkFilled = 'bookmark-filled',
 	Page = 'page',
+	Sticker = 'sticker',
 }
 
 export enum IconSizeTokens {

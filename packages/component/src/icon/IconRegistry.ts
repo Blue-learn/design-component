@@ -47,6 +47,7 @@ import Bookmark from './icon-list/Bookmark';
 import BookmarkFilled from './icon-list/BookmarkFilled';
 import Page from './icon-list/Page';
 import InfoFilled from './icon-list/InfoFilled';
+import Sticker from './icon-list/Sticker';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -94,4 +95,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Bookmark]: Bookmark,
 	[IconTokens.BookmarkFilled]: BookmarkFilled,
 	[IconTokens.Page]: Page,
+	[IconTokens.Sticker]: Sticker,
 };
