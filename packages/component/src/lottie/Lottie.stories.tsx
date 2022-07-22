@@ -7,7 +7,7 @@ import React from 'react';
 import Lottie from './Lottie';
 
 export default {
-	title: 'Example/Lottie',
+	title: 'Component/Lottie',
 	component: Lottie,
 	uri: require('./welcome.json'),
 };

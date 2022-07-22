@@ -6,7 +6,7 @@ import {
 import ChatCard from './ChatCard';
 
 export default {
-	title: 'Example/ChatCard',
+	title: 'Component/ChatCard',
 	component: ChatCard,
 	argTypes: {
 		type: ChatCardTypeTokens.sender,

@@ -25,7 +25,7 @@ const Stack: React.FC<
 	widgetItems = [],
 	renderItem,
 	alignItems = StackAlignItems.flexStart,
-	justifyContent = StackJustifyContent.spaceEvenly,
+	justifyContent = StackJustifyContent.flexStart,
 }) => {
 	return (
 		<View

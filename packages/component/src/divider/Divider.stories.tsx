@@ -8,7 +8,7 @@ import React from 'react';
 import { Divider } from './Divider';
 
 export default {
-	title: 'Example/Divider',
+	title: 'Component/Divider',
 	component: Divider,
 };
 

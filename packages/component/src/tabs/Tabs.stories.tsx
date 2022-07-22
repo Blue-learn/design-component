@@ -7,7 +7,7 @@ import { CommonWidgetProps } from '../mock';
 import Tabs from './Tabs';
 
 export default {
-	title: 'Example/Tabs',
+	title: 'Component/Tabs',
 	component: Tabs,
 };
 

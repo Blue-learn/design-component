@@ -13,6 +13,7 @@ import {
 	TextAlignTokens,
 	WidgetProps,
 	ButtonWidthTypeToken,
+	IconTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
@@ -20,6 +21,7 @@ import {
 	ActivityIndicator,
 	Pressable,
 	Platform,
+	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
@@ -145,6 +147,7 @@ const ButtonBase: React.FunctionComponent<
 			),
 		[icon, fontSize, iconName],
 	);
+
 	return (
 		<Pressable
 			onPress={handleAction}
@@ -157,17 +160,26 @@ const ButtonBase: React.FunctionComponent<
 				{(iconAlignment === 'left' ||
 					icon?.align === IconAlignmentTokens.left) &&
 					label && <Space size={8} />}
-				{label && (
-					<Typography
-						label={label}
-						color={labelColor}
-						fontSize={fontSize}
-						textAlign={TextAlignTokens.center}
-						fontFamily={
-							FontFamilyTokens.manropeSemiBold
-						}
-					/>
-				)}
+				<View
+					style={
+						(icon?.name || iconName) ===
+						IconTokens.Google
+							? { flex: 1 }
+							: {}
+					}
+				>
+					{label && (
+						<Typography
+							label={label}
+							color={labelColor}
+							fontSize={fontSize}
+							textAlign={TextAlignTokens.center}
+							fontFamily={
+								FontFamilyTokens.manropeSemiBold
+							}
+						/>
+					)}
+				</View>
 
 				{loading && (
 					<ActivityIndicator

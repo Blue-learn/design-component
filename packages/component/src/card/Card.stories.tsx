@@ -12,7 +12,7 @@ import Typography from '../typography/Typography';
 import Card from './Card';
 
 export default {
-	title: 'Example/Card',
+	title: 'Component/Card',
 	component: Card,
 };
 

@@ -41,6 +41,7 @@ const AvatarBase: React.FC<AvatarBaseProps> = ({
 			borderColor,
 			borderWidth,
 			overlap,
+			borderRadius,
 		],
 	);
 

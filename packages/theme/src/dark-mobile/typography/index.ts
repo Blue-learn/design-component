@@ -3,12 +3,12 @@ import {
 	ColorTokens,
 	TypographyTypeTokens,
 } from '@blue-learn/schema';
-import { buttonTypeTokensMap as typographyTypeTokensMapLight } from '../../light-mobile/button';
+import { typographyTypeTokensMap as typographyTypeTokensMapLight } from '../../light-mobile/typography';
 
 export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
 		[TypographyTypeTokens.DEFAULT]: {
-			...typographyTypeTokensMapLight['default'],
+			...typographyTypeTokensMapLight['DEFAULT'],
 			color: ColorTokens.Grey_100,
 		},
 		[TypographyTypeTokens.H6]: {

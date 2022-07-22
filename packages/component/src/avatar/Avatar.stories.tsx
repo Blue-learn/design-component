@@ -9,7 +9,7 @@ import React from 'react';
 import { Avatar } from './Avatar';
 
 export default {
-	title: 'Example/Avatar',
+	title: 'Component/Avatar',
 	component: Avatar,
 	uri: 'https://reactnative.dev/img/tiny_logo.png',
 	size: AvatarSizeTokens.LG,
@@ -33,6 +33,7 @@ AvatarComponent.args = {
 	size: AvatarSizeTokens.LG,
 	borderWidth: 3,
 	borderColor: ColorTokens.Grey_100,
+	BorderRadius: BorderRadiusTokens.BR4,
 };
 
 AvatarComponent.argTypes = {
@@ -50,6 +51,6 @@ AvatarComponent.argTypes = {
 	},
 	borderColor: {
 		control: 'select',
-		options: [null, ...Object.values(ColorTokens)],
+		options: [...Object.values(ColorTokens)],
 	},
 };
