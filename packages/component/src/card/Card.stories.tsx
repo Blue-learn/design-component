@@ -7,7 +7,7 @@ import {
 	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 import Typography from '../typography/Typography';
 import Card from './Card';
 
@@ -17,7 +17,7 @@ export default {
 };
 
 const Template = (args: CardProps) => {
-	return CommonWidgetProps.renderItem({
+	return MockedWidgetProps.renderItem({
 		id: 'test_id',
 		type: WIDGET.CARD,
 		props: { ...args },
@@ -27,7 +27,7 @@ const Template = (args: CardProps) => {
 export const CardComponent = Template.bind({});
 
 CardComponent.args = {
-	renderItem: CommonWidgetProps.renderItem,
+	renderItem: MockedWidgetProps.renderItem,
 	header: {
 		children: (
 			<Typography

@@ -1,19 +1,17 @@
-import { WIDGET } from './enums';
-
-type NormalWidgetItem = {
+export type WidgetItem = {
 	id: string;
-	type: WIDGET;
-	props?: any;
+	type: string;
+	position?: string;
+	props?: object;
 };
-export type WidgetItem = NormalWidgetItem;
 export type WidgetProps = {
 	renderItem?(item: WidgetItem): any;
 	isVisible?: boolean;
 	modelUpdateWrapper?(prop: Function): Function;
-	performAction?(action: TapAction): void;
-	action?: TapAction;
+	triggerAction?(action: Action): void;
+	action?: Action;
 };
-export type TapAction<DataType = any> = {
+export type Action<DataType = any> = {
 	type: string;
 	routeId?: string;
 	payload: DataType extends object

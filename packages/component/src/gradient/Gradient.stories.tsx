@@ -3,7 +3,7 @@ import {
 	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 import { View } from 'react-native';
 import Gradient from './Gradient';
 
@@ -16,7 +16,7 @@ const Template = (args: GradientProps) => {
 	/**
 	 *  Dynamic way
 	 * */
-	return CommonWidgetProps.renderItem({
+	return MockedWidgetProps.renderItem({
 		id: 'test_id',
 		type: WIDGET.GRADIENT,
 		props: { ...args },
@@ -27,7 +27,7 @@ export const LinearGradientComponent =
 	Template.bind({});
 
 LinearGradientComponent.args = {
-	renderItem: CommonWidgetProps.renderItem,
+	renderItem: MockedWidgetProps.renderItem,
 	children: [
 		<View
 			style={{

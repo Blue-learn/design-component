@@ -3,7 +3,7 @@ import {
 	TabsProps,
 	WIDGET,
 } from '@blue-learn/schema';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 import Tabs from './Tabs';
 
 export default {

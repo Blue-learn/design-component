@@ -8,7 +8,7 @@ import {
 } from '@blue-learn/schema';
 import React from 'react';
 import Stack from './Stack';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 import { View } from 'react-native';
 
 export default {
@@ -20,7 +20,7 @@ const Template = (args: StackProp) => {
 	/**
 	 *  Dynamic way
 	 * */
-	return CommonWidgetProps.renderItem({
+	return MockedWidgetProps.renderItem({
 		id: 'test_id',
 		type: WIDGET.STACK,
 		props: { ...args },
@@ -33,7 +33,7 @@ StackComponent.args = {
 	type: StackType.row,
 	justifyContent: StackJustifyContent.center,
 	alignItems: StackAlignItems.center,
-	renderItem: CommonWidgetProps.renderItem,
+	renderItem: MockedWidgetProps.renderItem,
 	children: [
 		<View
 			style={{

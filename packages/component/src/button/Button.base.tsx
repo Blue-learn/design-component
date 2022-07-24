@@ -47,7 +47,7 @@ const ButtonBase: React.FunctionComponent<
 	width = ButtonWidthTypeToken.CONTENT,
 	icon,
 	paddingHorizontal = SizeTypeTokens.XXXXL,
-	performAction,
+	triggerAction,
 	action,
 	stack = {
 		type: StackType.row,
@@ -129,8 +129,8 @@ const ButtonBase: React.FunctionComponent<
 	const handleAction = () => {
 		onPress && onPress();
 		action &&
-			performAction &&
-			performAction(action);
+			triggerAction &&
+			triggerAction(action);
 	};
 	const _renderIcon = React.useMemo(
 		() =>

@@ -9,7 +9,7 @@ import {
 	StackAlignType,
 	WIDGET,
 } from '@blue-learn/schema';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 
 export default {
 	title: 'Example/Button',
@@ -25,7 +25,7 @@ export default {
 };
 
 const Template = (args: ButtonProps) =>
-	CommonWidgetProps.renderItem({
+	MockedWidgetProps.renderItem({
 		id: 'id____',
 		type: WIDGET.BUTTON,
 		props: {
