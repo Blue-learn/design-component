@@ -7,7 +7,7 @@
     "packages/**"
   ],
   "repository": "ssh://git@github.com:Blue-learn/design-component.git",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "index.js",
   "keywords": [],
   "author": "Soumya Sethy<soumya@bluelearn.in>",
