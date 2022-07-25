@@ -3,7 +3,7 @@ import React from 'react';
 import ProgressIndicator from './ProgressIndicator';
 
 export default {
-	title: 'Example/Progress Indicator',
+	title: 'Component/Progress Indicator',
 	component: ProgressIndicator,
 };
 

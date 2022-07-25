@@ -8,7 +8,7 @@ import { View } from 'react-native';
 import Gradient from './Gradient';
 
 export default {
-	title: 'Example/Gradient',
+	title: 'Component/Gradient',
 	component: Gradient,
 };
 

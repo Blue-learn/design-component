@@ -19,7 +19,7 @@ const ThemeProvider = () => {
 		if (!_initialized) {
 			_theme =
 				themeTypes[type] ||
-				themeTypes[THEMES.LIGHT_MOBILE];
+				themeTypes[THEMES.DARK_MOBILE];
 			_initialized = true;
 		}
 	};
@@ -29,7 +29,7 @@ const ThemeProvider = () => {
 			return _theme;
 		}
 		console.warn('Theme not initialized');
-		return themeTypes[THEMES.LIGHT_MOBILE];
+		return themeTypes[THEMES.DARK_MOBILE];
 	};
 
 	return {

@@ -9,9 +9,10 @@ import {
 	IconTokens,
 	IconSizeTokens,
 	StackType,
-	StackAlignType,
 	ImageSizeTokens,
 	FontFamilyTokens,
+	StackJustifyContent,
+	StackAlignItems,
 } from '@blue-learn/schema';
 import { View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
@@ -83,7 +84,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.Gallery}
@@ -106,7 +107,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.Video}
@@ -129,7 +130,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.Mic}
@@ -152,7 +153,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.PDF}
@@ -179,8 +180,10 @@ const ReplyChatCardBase: React.FunctionComponent<
 	return (
 		<Stack
 			type={StackType.row}
-			alignX={StackAlignType.spaceBetween}
-			alignY={StackAlignType.center}
+			justifyContent={
+				StackJustifyContent.spaceBetween
+			}
+			alignItems={StackAlignItems.center}
 		>
 			<View
 				style={{
@@ -205,6 +208,9 @@ const ReplyChatCardBase: React.FunctionComponent<
 						}
 						fontSize={FontSizeTokens.XS}
 						color={userLabelColor}
+						textTransform={
+							FontTransformToken.capitalize
+						}
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>

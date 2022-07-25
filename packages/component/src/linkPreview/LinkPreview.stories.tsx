@@ -3,7 +3,7 @@ import { LinkPreviewProps } from '@blue-learn/schema';
 import LinkPreview from './LinkPreview';
 
 export default {
-	title: 'Example/Link Preview',
+	title: 'Component/Link Preview',
 	component: LinkPreview,
 	text: 'https://www.bluelearn.in',
 };
