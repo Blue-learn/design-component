@@ -2,15 +2,14 @@ import Button from './Button';
 import {
 	ButtonProps,
 	ButtonTypeTokens,
-	IconSizeTokens,
+	ButtonWidthTypeToken,
 	IconTokens,
-	StackAlignType,
 	WIDGET,
 } from '@blue-learn/schema';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 
 export default {
-	title: 'Example/Button',
+	title: 'Component/Button',
 	component: Button,
 	argTypes: {
 		label: 'Default Button',
@@ -23,7 +22,7 @@ export default {
 };
 
 const Template = (args: ButtonProps) =>
-	CommonWidgetProps.renderItem({
+	MockedWidgetProps.renderItem({
 		id: 'id____',
 		type: WIDGET.BUTTON,
 		props: {
@@ -36,10 +35,12 @@ ButtonStory.args = {
 	label: 'All Buttons',
 	loading: false,
 	type: ButtonTypeTokens.LargeFilled,
-	icon: {
-		name: IconTokens.RightArrow,
-		size: IconSizeTokens.xs,
-	},
+	width: ButtonWidthTypeToken.CONTENT,
+	// icon: {
+	// 	name: IconTokens.Google,
+	// 	size: IconSizeTokens.MD,
+	// 	align: IconAlignmentTokens.left,
+	// },
 };
 ButtonStory.argTypes = {
 	type: {
@@ -50,7 +51,14 @@ ButtonStory.argTypes = {
 			),
 		],
 	},
+	width: {
+		control: 'select',
+		options: [
+			...Object.values(ButtonWidthTypeToken),
+		],
+	},
 	icon: {
+		default: null,
 		control: 'object',
 		options: [...Object.values(IconTokens)],
 	},
@@ -63,19 +71,10 @@ ButtonStory.argTypes = {
 			),
 		],
 	},
-	flex: {
-		control: 'select',
-		options: [...Object.values(StackAlignType)],
-	},
 	iconAlignment: {
-		control: 'radio',
-		options: ['left', 'right'],
+		control: 'select',
+		options: [null, 'left', 'right'],
 		default: 'left',
-	},
-	width: {
-		control: 'radio',
-		options: ['content', 'full'],
-		default: 'content',
 	},
 	onPress: { action: 'clicked' },
 };

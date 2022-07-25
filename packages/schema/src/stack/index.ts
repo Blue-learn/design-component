@@ -1,5 +1,5 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
 import { WidgetItem } from '../types';
 
 /** @deprecated
@@ -31,7 +31,7 @@ interface StackProps {
 	alignItems?: alignItemsValues;
 	wrap?: boolean;
 	bgColor?: ColorTokens;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
 	childrenTemplate?: WidgetItem[];
 	children: JSX.Element[] | JSX.Element;
 	flexGrow?: number;
@@ -58,12 +58,30 @@ export enum StackType {
 /**
  * Allow common alignment for both x-axis and y-axis
  **/
+/** @deprecated
+ *
+ */
 export enum StackAlignType {
 	center = 'center',
 	flexStart = 'flex-start',
 	flexEnd = 'flex-end',
 	spaceBetween = 'space-between',
 	spaceEvenly = 'space-evenly',
+}
+export enum StackJustifyContent {
+	center = 'center',
+	flexStart = 'flex-start',
+	flexEnd = 'flex-end',
+	spaceBetween = 'space-between',
+	spaceAround = 'space-around',
+	spaceEvenly = 'space-evenly',
+}
+export enum StackAlignItems {
+	center = 'center',
+	flexStart = 'flex-start',
+	flexEnd = 'flex-end',
+	stretch = 'stretch',
+	baseline = 'baseline',
 }
 
 /**
@@ -73,17 +91,31 @@ export type StackProp = {
 	/** @description  row | column -> FlexDirection
 	 * */
 	type?: StackType;
+
 	/** @description  React Component -> JSX
 	 * Accepted Types -> React Component JSX.Element[], JSX.Element;
 	 * */
 	children?: JSX.Element[] | JSX.Element;
-	/** @description alignX -> Primary Axis
-	 * */
+
+	/**
+	 * @deprecated
+	 */
 	alignX?: StackAlignType;
-	/** @description alignX -> Secondary Axis
-	 * */
+
+	/**
+	 * @deprecated
+	 */
 	alignY?: StackAlignType;
+
 	/** @description  widgetItem -> used for Dynamic Render Component of WidgetItem->{id,type,props}
 	 * */
 	widgetItems?: WidgetItem[];
+
+	/** @description justifyContent -> Primary Axis same as RN View Component
+	 * */
+	justifyContent?: StackJustifyContent;
+
+	/** @description alignItems -> Secondary Axis same as RN View Component
+	 * */
+	alignItems?: StackAlignItems;
 };

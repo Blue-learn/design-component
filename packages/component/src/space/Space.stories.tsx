@@ -4,7 +4,7 @@ import { Space } from './Space';
 import { View } from 'react-native';
 
 export default {
-	title: 'Example/space',
+	title: 'Component/space',
 	component: Space,
 };
 

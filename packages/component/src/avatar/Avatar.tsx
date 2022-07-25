@@ -1,44 +1,49 @@
 import React from 'react';
-import { Image } from 'react-native';
 import {
 	AvatarProps,
-	CornerRadiusTokens,
+	AvatarTypeTokens,
+	StackAlignItems,
+	StackJustifyContent,
+	StackType,
 } from '@blue-learn/schema';
-import ThemeProvider from '@blue-learn/theme';
+import _map from 'lodash-es/map';
+import Stack from '../stack/Stack';
+import AvatarBase from './Avatar.Base';
 
 const Avatar: React.FC<AvatarProps> = ({
-	size,
 	uri,
-	borderRadius = CornerRadiusTokens.BR4,
-	borderWidth,
-	borderColor,
+	uris,
+	type = AvatarTypeTokens.SINGLE,
+	...props
 }) => {
-	const theme = ThemeProvider.getTheme();
-
-	const sizeValue = theme.avatarSize[size];
-
-	const borderRadiusValue =
-		theme.borderRadius[borderRadius];
-
-	const borderColorValue =
-		theme.colors[borderColor];
-
-	if (!uri || !size) return <></>;
+	if (!uri && type === AvatarTypeTokens.SINGLE)
+		return <></>;
+	if (!uris && type === AvatarTypeTokens.MULTIPLE)
+		return <></>;
 
 	return (
-		<Image
-			style={{
-				height: sizeValue,
-				width: sizeValue,
-				borderRadius: borderRadiusValue,
-				borderColor:
-					borderColorValue || 'rgba(0, 0, 0, 0)',
-				borderWidth,
-			}}
-			source={{
-				uri,
-			}}
-		/>
+		<Stack
+			type={StackType.row}
+			alignItems={StackAlignItems.center}
+			justifyContent={StackJustifyContent.flexStart}
+		>
+			{type === AvatarTypeTokens.SINGLE && uri ? (
+				<AvatarBase uri={uri} {...props} />
+			) : (
+				uris &&
+				type === AvatarTypeTokens.MULTIPLE &&
+				_map(
+					uris.slice(0, 3),
+					(item: string, index: number) => [
+						<AvatarBase
+							uri={item}
+							overlap={index ? true : false}
+							{...props}
+						/>,
+					],
+				)
+			)}
+		</Stack>
 	);
 };
 

@@ -20,29 +20,95 @@ export const fontFamilyTokensMap: FontFamilyTokensMap =
 
 export const fontSizeTokensMap: FontSizeTokensMap =
 	{
-		[FontSizeTokens['2xs']]: 10,
-		[FontSizeTokens['xs']]: 12,
-		[FontSizeTokens['sm']]: 14,
-		[FontSizeTokens['md']]: 16,
-		[FontSizeTokens['lg']]: 18,
-		[FontSizeTokens['xl']]: 20,
-		[FontSizeTokens['2xl']]: 24,
-		[FontSizeTokens['3xl']]: 28,
-		[FontSizeTokens['4xl']]: 32,
-		[FontSizeTokens['5xl']]: 40,
-		[FontSizeTokens['6xl']]: 48,
-		[FontSizeTokens['7xl']]: 60,
+		[FontSizeTokens.XXS]: 10,
+		[FontSizeTokens.XS]: 12,
+		[FontSizeTokens.SM]: 14,
+		[FontSizeTokens.MD]: 16,
+		[FontSizeTokens.LG]: 18,
+		[FontSizeTokens.XL]: 20,
+		[FontSizeTokens.XXL]: 24,
+		[FontSizeTokens.XXXL]: 28,
+		[FontSizeTokens.XXXXL]: 32,
+		[FontSizeTokens.XXXXXL]: 40,
+		[FontSizeTokens.XXXXXXL]: 48,
+		[FontSizeTokens.XXXXXXXL]: 60,
 	};
 
 export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
+		[TypographyTypeTokens.DEFAULT]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.H6]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XS,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H5]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H4]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.MD,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H3]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.LG,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H2]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XL,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.H1]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXL,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
+		[TypographyTypeTokens.B7]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXS,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B6]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XS,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B5]: {
+			color: ColorTokens.Grey_400,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B4]: {
+			color: ColorTokens.Grey_400,
+			fontSize: FontSizeTokens.MD,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.P5]: {
+			color: ColorTokens.Grey_300,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
 		[TypographyTypeTokens.primary]: {
 			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 		[TypographyTypeTokens.secondary]: {
 			color: ColorTokens.Grey_400,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 		[TypographyTypeTokens.placeholder]: {
 			color: ColorTokens.Grey_300,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 	};

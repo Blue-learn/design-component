@@ -1,14 +1,13 @@
 import { AvatarProps } from '../avatar';
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
-import { IconProps } from '../icon';
+import { BorderRadiusTokens } from '../borderRadius';
 import { ShadowTypeTokens } from '../shadow';
-import { SpaceTypeTokens } from '../space';
+import { SizeTypeTokens } from '../size';
 import {
 	FontFamilyTokens,
 	FontSizeTokens,
-	FontWeightTokens,
 } from '../typography';
+import { IconProps } from '../icon';
 
 export enum inputTypeToken {
 	default = 'default',
@@ -39,8 +38,7 @@ export type TextInputProps = {
 	multiline?: boolean;
 	numberOfLines?: number;
 	isDisabled?: boolean;
-	iconAlignment?: 'left' | 'right';
-	icon?: JSX.Element | JSX.Element[];
+	icon?: IconProps;
 	avatar?: AvatarProps;
 };
 
@@ -55,30 +53,28 @@ export type TextInputBaseProps = {
 	multiline?: boolean;
 	numberOfLines?: number;
 	isDisabled?: boolean;
-	iconAlignment?: 'left' | 'right';
-	icon?: JSX.Element | JSX.Element[];
+	icon?: IconProps;
 	avatar?: AvatarProps;
 	fontSize?: FontSizeTokens;
 	bgColor?: ColorTokens;
 	color?: ColorTokens;
-	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
 	borderColor?: ColorTokens;
-	paddingVertical?: SpaceTypeTokens;
-	paddingHorizontal?: SpaceTypeTokens;
+	paddingVertical?: SizeTypeTokens;
+	paddingHorizontal?: SizeTypeTokens;
 	shadow?: ShadowTypeTokens;
 };
 
 export type InputThemeProps = {
 	fontSize?: FontSizeTokens;
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
 	borderColor?: ColorTokens;
 	color?: ColorTokens;
 	placeholderTextColor?: ColorTokens;
 	bgColor?: ColorTokens;
-	paddingVertical?: SpaceTypeTokens;
-	paddingHorizontal?: SpaceTypeTokens;
+	paddingVertical?: SizeTypeTokens;
+	paddingHorizontal?: SizeTypeTokens;
 	shadow?: ShadowTypeTokens;
 };
 

@@ -1,55 +1,61 @@
 import {
 	ButtonBaseProps,
 	ColorTokens,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	FontFamilyTokens,
+	IconAlignmentTokens,
 	IconSizeTokens,
 	ShadowThemeProps,
-	SpaceTypeTokens,
-	StackAlignType,
+	SizeTypeTokens,
+	StackAlignItems,
+	StackJustifyContent,
+	StackType,
 	TextAlignTokens,
+	WidgetProps,
+	ButtonWidthTypeToken,
+	IconTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
-	StyleSheet,
+	Platform,
 	View,
 } from 'react-native';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
-
-const styles = StyleSheet.create({
-	container: {
-		alignItems: 'center',
-		flexDirection: 'row',
-	},
-});
+import { Component as Stack } from '../stack';
 
 /**
  * Raw Component with Derived props + Theme
  */
 const ButtonBase: React.FunctionComponent<
-	ButtonBaseProps
+	ButtonBaseProps & WidgetProps
 > = ({
 	onPress,
 	label,
 	loading = false,
 	bgColor = ColorTokens.Blue_600,
 	labelColor = ColorTokens.Grey_500,
-	borderRadius = CornerRadiusTokens.BR4,
-	paddingVertical = SpaceTypeTokens.LG,
+	borderRadius = BorderRadiusTokens.BR4,
+	paddingVertical = SizeTypeTokens.LG,
 	shadow,
 	borderColor,
 	fontSize,
-	iconAlignment = 'right',
+	iconAlignment,
 	iconName,
-	width = 'content',
+	width = ButtonWidthTypeToken.CONTENT,
 	icon,
-	paddingHorizontal = SpaceTypeTokens['4XL'],
-	flex = StackAlignType.center,
+	paddingHorizontal = SizeTypeTokens.XXXXL,
+	triggerAction,
+	action,
+	stack = {
+		type: StackType.row,
+		justifyContent: StackJustifyContent.center,
+		alignItems: StackAlignItems.center,
+	},
 }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
@@ -77,64 +83,92 @@ const ButtonBase: React.FunctionComponent<
 	const paddingHorizontalValue =
 		theme.space[paddingHorizontal];
 
-	return (
-		<View
-			style={
-				width === 'content'
-					? {
-							justifyContent: 'flex-start',
-							alignItems: 'flex-start',
-					  }
-					: {}
-			}
-		>
-			<Pressable
-				style={[
-					styles.container,
-					{
-						backgroundColor: backgroundColorValue,
-						borderRadius: borderRadiusValue,
-						paddingVertical: paddingValue,
-						borderColor: borderColorValue,
-						borderWidth: borderColor ? 1 : 0,
-						shadowOffset: shadowValue?.shadowOffset || {
-							height: 0,
-							width: 0,
-						},
-						shadowOpacity:
-							shadowValue?.shadowOpacity || 0,
-						shadowRadius:
-							shadowValue?.shadowRadius || 0,
-						paddingHorizontal: paddingHorizontalValue,
-						justifyContent: flex,
-					},
-				]}
-				onPress={onPress}
-			>
-				{iconAlignment === 'left' &&
-					!loading &&
-					(iconName || icon) && (
-						<>
-							<Icon
-								{...icon}
-								name={iconName || icon.name}
-								size={
-									icon?.size || IconSizeTokens[fontSize]
-								}
-								color={labelColor || icon.color}
-							/>
-							{label && <Space size={8} />}
-						</>
-					)}
+	const styleProps = React.useMemo(
+		() => ({
+			backgroundColor: backgroundColorValue,
+			borderRadius: borderRadiusValue,
+			paddingVertical: paddingValue,
+			borderColor: borderColorValue,
+			borderWidth: borderColor ? 1 : 0,
+			shadowOffset: shadowValue?.shadowOffset || {
+				height: 0,
+				width: 0,
+			},
+			shadowOpacity: shadowValue?.shadowOpacity || 0,
+			shadowRadius: shadowValue?.shadowRadius || 0,
+			paddingHorizontal: paddingHorizontalValue,
+		}),
+		[
+			borderRadiusValue,
+			borderColorValue,
+			backgroundColorValue,
+			labelColorValue,
+			paddingValue,
+			shadowValue,
+			paddingHorizontalValue,
+			width,
+		],
+	);
 
-				{label && (
-					<View
-						style={
-							flex == StackAlignType.spaceBetween
-								? { flex: 1 }
-								: {}
-						}
-					>
+	const widthStyleProps = React.useMemo(
+		() =>
+			Platform.OS === 'web'
+				? {
+						width:
+							width === ButtonWidthTypeToken.CONTENT
+								? 'fit-content'
+								: '100%',
+				  }
+				: {
+						alignSelf:
+							width === ButtonWidthTypeToken.CONTENT
+								? 'flex-start'
+								: 'stretch',
+				  },
+		[width],
+	);
+
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
+	const _renderIcon = React.useMemo(
+		() =>
+			!loading &&
+			(iconName || icon) && (
+				<Icon
+					{...icon}
+					name={iconName || icon.name}
+					size={icon?.size || IconSizeTokens[fontSize]}
+					color={labelColor || icon.color}
+				/>
+			),
+		[icon, fontSize, iconName],
+	);
+
+	return (
+		<Pressable
+			onPress={handleAction}
+			style={[styleProps, widthStyleProps]}
+		>
+			<Stack {...stack}>
+				{(iconAlignment === 'left' ||
+					icon?.align === IconAlignmentTokens.left) &&
+					_renderIcon}
+				{(iconAlignment === 'left' ||
+					icon?.align === IconAlignmentTokens.left) &&
+					label && <Space size={8} />}
+				<View
+					style={
+						(icon?.name || iconName) ===
+						IconTokens.Google
+							? { flex: 1 }
+							: {}
+					}
+				>
+					{label && (
 						<Typography
 							label={label}
 							color={labelColor}
@@ -144,8 +178,8 @@ const ButtonBase: React.FunctionComponent<
 								FontFamilyTokens.manropeSemiBold
 							}
 						/>
-					</View>
-				)}
+					)}
+				</View>
 
 				{loading && (
 					<ActivityIndicator
@@ -155,23 +189,16 @@ const ButtonBase: React.FunctionComponent<
 					/>
 				)}
 
-				{iconAlignment === 'right' &&
+				{(iconAlignment === 'right' ||
+					icon?.align === IconAlignmentTokens.right) &&
+					label && <Space size={8} />}
+				{(iconAlignment === 'right' ||
+					icon?.align === IconAlignmentTokens.right) &&
 					(iconName || icon) &&
-					!loading && (
-						<>
-							{label && <Space size={8} />}
-							<Icon
-								{...icon}
-								name={iconName || icon?.name}
-								size={
-									icon?.size || IconSizeTokens[fontSize]
-								}
-								color={labelColor || icon?.color}
-							/>
-						</>
-					)}
-			</Pressable>
-		</View>
+					!loading &&
+					_renderIcon}
+			</Stack>
+		</Pressable>
 	);
 };
 export default memo(ButtonBase);

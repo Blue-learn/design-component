@@ -11,8 +11,8 @@ const Icon: React.FunctionComponent<
 	IconProps
 > = ({
 	name,
-	size = IconSizeTokens.lg,
-	color = ColorTokens.Grey_500,
+	size = IconSizeTokens.LG,
+	color = ColorTokens.Grey_100,
 }) => {
 	/**
 	 *  logic -> base-component(...props)

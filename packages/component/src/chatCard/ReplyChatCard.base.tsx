@@ -3,15 +3,16 @@ import {
 	ColorTokens,
 	FontSizeTokens,
 	ChatCardBaseProps,
-	SpaceTypeTokens,
-	FontWeightTokens,
+	SizeTypeTokens,
 	FontTransformToken,
 	EllipsizeModeTokens,
 	IconTokens,
 	IconSizeTokens,
 	StackType,
-	StackAlignType,
 	ImageSizeTokens,
+	FontFamilyTokens,
+	StackJustifyContent,
+	StackAlignItems,
 } from '@blue-learn/schema';
 import { View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
@@ -20,6 +21,7 @@ import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Stack from '../stack/Stack';
 import Image from '../image/Image';
+import Divider from '../divider/Divider';
 
 /**
  * Raw Component with Derived props + Theme
@@ -51,7 +53,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 	const paddingVertical = theme.space[padding];
 
 	const paddingHorizontal =
-		theme.space[SpaceTypeTokens.LG];
+		theme.space[SizeTypeTokens.LG];
 
 	const renderImage = () => {
 		switch (file?.file_type) {
@@ -59,7 +61,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Image
 						uri={file.file_url}
-						size={ImageSizeTokens.sm}
+						size={ImageSizeTokens.SM}
 					/>
 				);
 			case 'VIDEO':
@@ -69,7 +71,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							? file.video_thumbnail
 							: 'https://images.unsplash.com/photo-1614671493799-293d07f5cd70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 					}
-					size={ImageSizeTokens.sm}
+					size={ImageSizeTokens.SM}
 				/>;
 			default:
 				break;
@@ -82,12 +84,12 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.Gallery}
 							color={ColorTokens.Grey_400}
-							size={IconSizeTokens['2xs']}
+							size={IconSizeTokens.XXS}
 						/>
 						<Space size={4} />
 						<Typography
@@ -96,7 +98,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							textTransform={
 								FontTransformToken.capitalize
 							}
-							fontSize={FontSizeTokens['2xs']}
+							fontSize={FontSizeTokens.XXS}
 							numberOfLines={1}
 						/>
 					</Stack>
@@ -105,12 +107,12 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.Video}
 							color={ColorTokens.Grey_400}
-							size={IconSizeTokens['2xs']}
+							size={IconSizeTokens.XXS}
 						/>
 						<Space size={4} />
 						<Typography
@@ -119,7 +121,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							textTransform={
 								FontTransformToken.capitalize
 							}
-							fontSize={FontSizeTokens['2xs']}
+							fontSize={FontSizeTokens.XXS}
 							numberOfLines={1}
 						/>
 					</Stack>
@@ -128,12 +130,12 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.Mic}
 							color={ColorTokens.Grey_400}
-							size={IconSizeTokens['2xs']}
+							size={IconSizeTokens.XXS}
 						/>
 						<Space size={4} />
 						<Typography
@@ -142,7 +144,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							textTransform={
 								FontTransformToken.capitalize
 							}
-							fontSize={FontSizeTokens['2xs']}
+							fontSize={FontSizeTokens.XXS}
 							numberOfLines={1}
 						/>
 					</Stack>
@@ -151,12 +153,12 @@ const ReplyChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Icon
 							name={IconTokens.PDF}
 							color={ColorTokens.Grey_400}
-							size={IconSizeTokens['2xs']}
+							size={IconSizeTokens.XXS}
 						/>
 						<Space size={4} />
 						<Typography
@@ -165,7 +167,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							textTransform={
 								FontTransformToken.capitalize
 							}
-							fontSize={FontSizeTokens['2xs']}
+							fontSize={FontSizeTokens.XXS}
 							numberOfLines={1}
 						/>
 					</Stack>
@@ -178,8 +180,10 @@ const ReplyChatCardBase: React.FunctionComponent<
 	return (
 		<Stack
 			type={StackType.row}
-			alignX={StackAlignType.spaceBetween}
-			alignY={StackAlignType.center}
+			justifyContent={
+				StackJustifyContent.spaceBetween
+			}
+			alignItems={StackAlignItems.center}
 		>
 			<View
 				style={{
@@ -199,9 +203,14 @@ const ReplyChatCardBase: React.FunctionComponent<
 				>
 					<Typography
 						label={nameText}
-						fontWeight={FontWeightTokens['semi-bold']}
-						fontSize={FontSizeTokens.xs}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
+						fontSize={FontSizeTokens.XS}
 						color={userLabelColor}
+						textTransform={
+							FontTransformToken.capitalize
+						}
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
@@ -210,7 +219,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						<Typography
 							label={label}
 							color={labelColor}
-							fontSize={FontSizeTokens['2xs']}
+							fontSize={FontSizeTokens.XXS}
 							ellipsizeMode={EllipsizeModeTokens.tail}
 							numberOfLines={2}
 						/>

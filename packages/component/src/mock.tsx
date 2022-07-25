@@ -1,9 +1,8 @@
 import React from 'react';
 import { WidgetItem } from '@blue-learn/schema';
-import _noop from 'lodash-es/noop';
 import _get from 'lodash-es/get';
 import { WidgetRegistry } from './registry';
-import { TapAction } from '@blue-learn/schema';
+import { Action } from '@blue-learn/schema';
 
 const renderItem = (item: WidgetItem) => {
 	const type = _get(item, 'type');
@@ -16,15 +15,17 @@ const renderItem = (item: WidgetItem) => {
 	);
 };
 
-const performAction = async (
-	action: TapAction,
-) => {
-	console.log('action performed', action);
+const triggerAction = async (action: Action) => {
+	console.log('mocked action performed', action);
 };
 
-export const CommonWidgetProps = {
+export const MockedWidgetProps = {
 	renderItem,
 	isVisible: true,
-	modelUpdateWrapper: (fn: Function) => _noop,
-	performAction,
+	triggerAction: triggerAction,
+	action: {
+		mockAction: function mockAction() {
+			console.warn('Mock Action triggered');
+		},
+	},
 };

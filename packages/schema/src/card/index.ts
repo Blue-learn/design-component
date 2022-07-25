@@ -1,7 +1,8 @@
 import { ColorTokens } from '../colors';
-import { CornerRadiusTokens } from '../cornerRadius';
+import { BorderRadiusTokens } from '../borderRadius';
+import { GradientProps } from '../gradient';
 import { ShadowTypeTokens } from '../shadow';
-import { SpaceTypeTokens } from '../space';
+import { SizeTypeTokens } from '../size';
 import { StackAlignType } from '../stack';
 import { WidgetItem } from '../types';
 
@@ -22,17 +23,20 @@ export type CardProps = {
 	 * Accepted Types -> React Component JSX.Element[], JSX.Element,WidgetItem[];
 	 * */
 	padding?: {
-		top: SpaceTypeTokens;
-		bottom: SpaceTypeTokens;
-		left: SpaceTypeTokens;
-		right: SpaceTypeTokens;
+		top: SizeTypeTokens;
+		bottom: SizeTypeTokens;
+		left: SizeTypeTokens;
+		right: SizeTypeTokens;
 	};
-	paddingHorizontal?: SpaceTypeTokens;
-	paddingVertical?: SpaceTypeTokens;
+	paddingHorizontal?: SizeTypeTokens;
+	paddingVertical?: SizeTypeTokens;
 	bgColor?: ColorTokens;
-	/** @description  bgColor -> for adding background color to the card
+	/** 
+	@description  bgColor -> for adding background color to the card
 	 */
-	borderRadius?: CornerRadiusTokens;
+	borderRadius?: BorderRadiusTokens;
+	gradient?: GradientProps;
+
 	/** @description  borderRadius -> for adding border radius to the card
 	 */
 	shadow?: ShadowTypeTokens;

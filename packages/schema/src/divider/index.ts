@@ -1,9 +1,19 @@
 import { ColorTokens } from '../colors';
-import { SpaceTypeTokens } from '../space';
+import { PaddingProps } from '../padding';
+
+export enum DividerSizeTokens {
+	SM = 'SM',
+	MD = 'MD',
+	LG = 'LG',
+}
 
 export type DividerProps = {
-	thickness: number;
-	color: ColorTokens;
-	marginVertical: SpaceTypeTokens;
-	paddingHorizontal: SpaceTypeTokens;
+	size: DividerSizeTokens;
+	type?: 'solid' | 'dashed';
+	color?: ColorTokens;
+	margin?: PaddingProps;
+};
+
+export type DividerSizeTokensMap = {
+	[key in DividerSizeTokens]: number;
 };

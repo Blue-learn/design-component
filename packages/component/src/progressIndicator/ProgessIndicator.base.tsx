@@ -4,10 +4,10 @@ import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokens,
 	ColorTokensMap,
-	CornerRadiusTokens,
+	BorderRadiusTokens,
 	ProgressIndicatorProps,
 	ProgressIndicatorThemeProps,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	StackAlignType,
 	StackType,
 } from '@blue-learn/schema';
@@ -21,8 +21,8 @@ const ProgressIndicatorBase: React.FunctionComponent<
 	size = 1,
 	activeIndex = 0,
 	color = ColorTokens.Blue_600,
-	borderRadius = CornerRadiusTokens.BR4,
-	height = SpaceTypeTokens.MD,
+	borderRadius = BorderRadiusTokens.BR4,
+	height = SizeTypeTokens.MD,
 }) => {
 	const theme = ThemeProvider.getTheme();
 

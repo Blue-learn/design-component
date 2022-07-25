@@ -8,10 +8,11 @@ import {
 	ButtonTypeTokens,
 	IconTokens,
 	StackType,
-	StackAlignType,
 	IconSizeTokens,
 	FontFamilyTokens,
 	PreviewData,
+	StackAlignItems,
+	StackJustifyContent,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -91,10 +92,10 @@ const SenderChatCardBase: React.FunctionComponent<
 		switch (file?.file_type) {
 			case 'IMAGE':
 				return (
-					<Stack alignY={StackAlignType.center}>
+					<Stack alignItems={StackAlignItems.center}>
 						<Image
 							uri={file?.file_url}
-							size={ImageSizeTokens.xxl}
+							size={ImageSizeTokens.XXL}
 						/>
 					</Stack>
 					//  {file?.file_url?.length > 0 && (
@@ -130,7 +131,7 @@ const SenderChatCardBase: React.FunctionComponent<
 									? file.video_thumbnail
 									: 'https://images.unsplash.com/photo-1614671493799-293d07f5cd70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 							}
-							size={ImageSizeTokens.xxl}
+							size={ImageSizeTokens.XXL}
 						/>
 						<View style={styles.videoPlayBtn}>
 							<Button
@@ -145,7 +146,7 @@ const SenderChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
+						alignItems={StackAlignItems.center}
 					>
 						<Button
 							type={ButtonTypeTokens.IconElevated}
@@ -157,24 +158,24 @@ const SenderChatCardBase: React.FunctionComponent<
 						<Stack>
 							<Stack
 								type={StackType.row}
-								alignY={StackAlignType.center}
+								alignItems={StackAlignItems.center}
 							>
 								<Icon
 									name={IconTokens.Mic}
-									size={IconSizeTokens.xs}
+									size={IconSizeTokens.XS}
 									color={ColorTokens.Grey_100}
 								/>
 								<Space size={4} />
 								<Typography
 									label={'Voice Message'}
-									fontSize={FontSizeTokens.xs}
+									fontSize={FontSizeTokens.XS}
 									color={ColorTokens.Grey_100}
 								/>
 							</Stack>
 							<Space size={4} />
 							<Typography
 								label={duration}
-								fontSize={FontSizeTokens['2xs']}
+								fontSize={FontSizeTokens.XXS}
 								color={ColorTokens.Grey_200}
 							/>
 						</Stack>
@@ -185,15 +186,17 @@ const SenderChatCardBase: React.FunctionComponent<
 				return (
 					<Stack
 						type={StackType.row}
-						alignY={StackAlignType.center}
-						alignX={StackAlignType.spaceBetween}
+						alignItems={StackAlignItems.center}
+						justifyContent={
+							StackJustifyContent.spaceBetween
+						}
 					>
 						<Icon name={IconTokens.PDF} />
 						<Space size={8} />
 						<Stack>
 							<Typography
 								label={file.file_name}
-								fontSize={FontSizeTokens['2xs']}
+								fontSize={FontSizeTokens.XXS}
 								color={ColorTokens.Grey_100}
 							/>
 							<Typography
@@ -202,7 +205,7 @@ const SenderChatCardBase: React.FunctionComponent<
 									' KB •' +
 									file.file_type
 								}
-								fontSize={FontSizeTokens['2xs']}
+								fontSize={FontSizeTokens.XXS}
 								color={ColorTokens.Grey_100}
 							/>
 						</Stack>
@@ -220,7 +223,7 @@ const SenderChatCardBase: React.FunctionComponent<
 	};
 
 	return (
-		<Stack alignY={StackAlignType.flexEnd}>
+		<Stack alignItems={StackAlignItems.flexEnd}>
 			<Space size={8} />
 			<View
 				style={[
@@ -239,7 +242,7 @@ const SenderChatCardBase: React.FunctionComponent<
 						<Typography
 							label={linkUrl}
 							color={ColorTokens.Blue_600}
-							fontSize={FontSizeTokens.sm}
+							fontSize={FontSizeTokens.SM}
 							textDecorationLine={
 								FontDecorationToken.underline
 							}
@@ -264,11 +267,11 @@ const SenderChatCardBase: React.FunctionComponent<
 											<Typography
 												label={label}
 												color={labelColor}
-												fontSize={FontSizeTokens.xs}
+												fontSize={FontSizeTokens.XS}
 											/>
 											<Space size={8} />
 											<Image
-												size={ImageSizeTokens.xxl}
+												size={ImageSizeTokens.XXL}
 												uri={payload.previewData?.image?.url}
 											/>
 											<Space size={8} />
@@ -279,7 +282,7 @@ const SenderChatCardBase: React.FunctionComponent<
 													fontFamily={
 														FontFamilyTokens.manropeSemiBold
 													}
-													fontSize={FontSizeTokens.xs}
+													fontSize={FontSizeTokens.XS}
 												/>
 												<Space size={4} />
 												<Typography
@@ -287,7 +290,7 @@ const SenderChatCardBase: React.FunctionComponent<
 														payload.previewData?.description
 													}
 													color={labelColor}
-													fontSize={FontSizeTokens['2xs']}
+													fontSize={FontSizeTokens.XXS}
 												/>
 											</Stack>
 										</Stack>
@@ -297,7 +300,7 @@ const SenderChatCardBase: React.FunctionComponent<
 										<Typography
 											label={label}
 											color={labelColor}
-											fontSize={FontSizeTokens.sm}
+											fontSize={FontSizeTokens.SM}
 										/>
 									);
 								}
@@ -310,7 +313,7 @@ const SenderChatCardBase: React.FunctionComponent<
 			<Typography
 				label={timeStamp}
 				color={ColorTokens.Grey_300}
-				fontSize={FontSizeTokens.xs}
+				fontSize={FontSizeTokens.XS}
 			/>
 			<Space size={8} />
 		</Stack>

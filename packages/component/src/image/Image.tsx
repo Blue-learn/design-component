@@ -1,29 +1,26 @@
 import React from 'react';
-import {
-	Image as ImageContainer,
-	Dimensions,
-} from 'react-native';
+import { Image as ImageContainer } from 'react-native';
 import {
 	AspectRatioToken,
+	BorderRadiusTokens,
 	ImageProps,
 	ImageSizeTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 
-const { width } = Dimensions.get('window');
-
 const Image: React.FunctionComponent<
 	ImageProps
 > = ({
-	size = ImageSizeTokens.lg,
 	uri,
-	borderRadius = 0,
-	aspectRatio = AspectRatioToken['1:1'],
+	size = ImageSizeTokens.LG,
+	borderRadius = BorderRadiusTokens.BR0,
+	aspectRatio = AspectRatioToken.A1_1,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
 	const sizeValue = theme.imageSize[size];
-
+	const aspectRatioValue =
+		theme.aspectRatio[aspectRatio];
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
 
@@ -35,7 +32,7 @@ const Image: React.FunctionComponent<
 				width: sizeValue,
 				height: 'auto',
 				borderRadius: borderRadiusValue,
-				aspectRatio,
+				aspectRatio: aspectRatioValue,
 			}}
 			source={{
 				uri,

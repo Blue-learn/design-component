@@ -1,6 +1,7 @@
 import {
 	TextInputProps,
 	InputThemeProps,
+	inputTypeToken,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { TextInputBase } from './TextInput.base';
@@ -12,7 +13,10 @@ import ThemeProvider from '@blue-learn/theme';
 
 const TextInput: React.FunctionComponent<
 	TextInputProps
-> = ({ type, ...props }) => {
+> = ({
+	type = inputTypeToken.default,
+	...props
+}) => {
 	/**
 	 *  logic -> base-component(...props)
 	 * */

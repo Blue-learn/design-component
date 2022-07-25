@@ -1,16 +1,18 @@
 import {
+	StackAlignItems,
 	StackAlignType,
+	StackJustifyContent,
 	StackProp,
 	StackType,
 	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import Stack from './Stack';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 import { View } from 'react-native';
 
 export default {
-	title: 'Example/Stack',
+	title: 'Component/Stack',
 	component: Stack,
 };
 
@@ -18,51 +20,20 @@ const Template = (args: StackProp) => {
 	/**
 	 *  Dynamic way
 	 * */
-	return CommonWidgetProps.renderItem({
+	return MockedWidgetProps.renderItem({
 		id: 'test_id',
 		type: WIDGET.STACK,
 		props: { ...args },
 	});
-
-	/**
-	 *  Static way
-	 * */
-	/*	return (
-		<Stack {...args}>
-			<View
-				style={{
-					backgroundColor: '#000',
-					height: 50,
-					width: 100,
-				}}
-			/>
-			<View
-				style={{
-					backgroundColor: '#000',
-					height: 10,
-					width: 120,
-					marginTop: 4,
-				}}
-			/>
-			<View
-				style={{
-					backgroundColor: '#000',
-					height: 80,
-					width: 150,
-					marginTop: 4,
-				}}
-			/>
-		</Stack>
-	);*/
 };
 
 export const StackComponent = Template.bind({});
 
 StackComponent.args = {
 	type: StackType.row,
-	alignX: StackAlignType.flexStart,
-	alignY: StackAlignType.flexStart,
-	renderItem: CommonWidgetProps.renderItem,
+	justifyContent: StackJustifyContent.center,
+	alignItems: StackAlignItems.center,
+	renderItem: MockedWidgetProps.renderItem,
 	children: [
 		<View
 			style={{
@@ -88,12 +59,14 @@ StackComponent.argTypes = {
 		control: 'select',
 		options: [...Object.values(StackType)],
 	},
-	alignX: {
+	justifyContent: {
 		control: 'select',
-		options: [...Object.values(StackAlignType)],
+		options: [
+			...Object.values(StackJustifyContent),
+		],
 	},
-	alignY: {
+	alignItems: {
 		control: 'select',
-		options: [...Object.values(StackAlignType)],
+		options: [...Object.values(StackAlignItems)],
 	},
 };

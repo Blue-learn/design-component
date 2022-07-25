@@ -12,9 +12,9 @@ import {
 	FontSizeTokens,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
-	CornerRadiusTokens,
-	SpaceTypeTokens,
-	SpaceTypeTokensMap,
+	BorderRadiusTokens,
+	SizeTypeTokens,
+	SizeTypeTokensMap,
 	FontSizeTokensMap,
 } from '@blue-learn/schema';
 import Stack from '../stack/Stack';
@@ -37,16 +37,15 @@ const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps
 > = ({
 	placeholder = 'lorem ipsum',
-	borderRadius = CornerRadiusTokens.BR1,
+	borderRadius = BorderRadiusTokens.BR1,
 	borderColor = ColorTokens.Grey_200,
 	color = ColorTokens.Grey_500,
 	isDisabled = false,
-	fontSize = FontSizeTokens.sm,
+	fontSize = FontSizeTokens.SM,
 	bgColor = ColorTokens.Transparent,
 	fontFamily = FontFamilyTokens.manropeRegular,
-	paddingVertical = SpaceTypeTokens.LG,
-	paddingHorizontal = SpaceTypeTokens.XL,
-	iconAlignment = 'right',
+	paddingVertical = SizeTypeTokens.LG,
+	paddingHorizontal = SizeTypeTokens.XL,
 	title,
 	caption,
 	icon,
@@ -59,7 +58,7 @@ const TextInputBase: React.FunctionComponent<
 	const fontFamilyMapping: FontFamilyTokensMap =
 		theme.fontFamily;
 
-	const spaceTokenMapping: SpaceTypeTokensMap =
+	const spaceTokenMapping: SizeTypeTokensMap =
 		theme.space;
 
 	const fontSizeMapping: FontSizeTokensMap =
@@ -97,10 +96,10 @@ const TextInputBase: React.FunctionComponent<
 			>
 				<Space
 					size={
-						icon && iconAlignment === 'left' ? 12 : 0
+						icon && icon?.align === 'left' ? 12 : 0
 					}
 				/>
-				{iconAlignment === 'left' &&
+				{icon?.align === 'left' &&
 					(icon ? icon : null)}
 				<TextInput
 					isDisabled={isDisabled}
@@ -119,11 +118,11 @@ const TextInputBase: React.FunctionComponent<
 					textAlignVertical='top'
 					{...props}
 				/>
-				{iconAlignment === 'right' &&
+				{icon?.align === 'right' &&
 					(icon ? icon : null)}
 				<Space
 					size={
-						icon && iconAlignment === 'right' ? 12 : 0
+						icon && icon?.align === 'right' ? 12 : 0
 					}
 				/>
 			</View>
@@ -133,7 +132,7 @@ const TextInputBase: React.FunctionComponent<
 					<Space size={8} />
 					<Typography
 						label={caption}
-						fontSize={FontSizeTokens.xs}
+						fontSize={FontSizeTokens.XS}
 						color={color}
 					/>
 				</Stack>

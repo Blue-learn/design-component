@@ -12,7 +12,7 @@ import React from 'react';
 import Typography from './Typography';
 
 export default {
-	title: 'Example/typography',
+	title: 'Component/typography',
 	component: Typography,
 	argTypes: {
 		label: 'Lorem ipsum dolor sit.',
@@ -27,9 +27,10 @@ export const Primary = Template.bind({});
 Primary.args = {
 	label:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-	fontSize: FontSizeTokens.sm,
-	fontFamily: FontFamilyTokens.manropeRegular,
-	ellipsizeMode: EllipsizeModeTokens.tail,
+	type: TypographyTypeTokens.DEFAULT,
+	textAlign: TextAlignTokens.auto,
+	textTransform: FontTransformToken.none,
+	textDecorationLine: FontDecorationToken.none,
 	numberOfLines: 0,
 };
 
@@ -38,6 +39,12 @@ Primary.argTypes = {
 		control: 'select',
 		options: [
 			...Object.values(TypographyTypeTokens),
+		],
+	},
+	ellipsizeMode: {
+		control: 'select',
+		options: [
+			...Object.values(EllipsizeModeTokens),
 		],
 	},
 	fontSize: {
@@ -64,12 +71,6 @@ Primary.argTypes = {
 		control: 'select',
 		options: [
 			...Object.values(FontDecorationToken),
-		],
-	},
-	ellipsizeMode: {
-		control: 'select',
-		options: [
-			...Object.values(EllipsizeModeTokens),
 		],
 	},
 };

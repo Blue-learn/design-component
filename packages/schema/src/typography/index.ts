@@ -14,18 +14,18 @@ export enum FontTransformToken {
 }
 
 export enum FontSizeTokens {
-	'2xs' = '2xs',
-	xs = 'xs',
-	sm = 'sm',
-	md = 'md',
-	lg = 'lg',
-	xl = 'xl',
-	'2xl' = '2xl',
-	'3xl' = '3xl',
-	'4xl' = '4xl',
-	'5xl' = '5xl',
-	'6xl' = '6xl',
-	'7xl' = '7xl',
+	XXS = 'XXS',
+	XS = 'XS',
+	SM = 'SM',
+	MD = 'MD',
+	LG = 'LG',
+	XL = 'XL',
+	XXL = 'XXL',
+	XXXL = 'XXXL',
+	XXXXL = 'XXXXl',
+	XXXXXL = 'XXXXXl',
+	XXXXXXL = 'XXXXXXl',
+	XXXXXXXL = 'XXXXXXXl',
 }
 
 export type FontSizeTokensMap = {
@@ -41,12 +41,6 @@ export enum FontFamilyTokens {
 export type FontFamilyTokensMap = {
 	[key in FontFamilyTokens]: string;
 };
-
-export enum FontWeightTokens {
-	normal = 400,
-	bold = 800,
-	semiBold = 600,
-}
 
 export enum EllipsizeModeTokens {
 	head = 'head',
@@ -64,20 +58,48 @@ export enum TextAlignTokens {
 }
 
 export enum TypographyTypeTokens {
+	/**
+	 * @description Default text color,Manrope-Regular,14px
+	 */
+	DEFAULT = 'DEFAULT',
+	/**
+	 * @description Title,Manrope-Bold,12px
+	 */
+	H6 = 'H6',
+	H5 = 'H5',
+	H4 = 'H4',
+	H3 = 'H3',
+	H2 = 'H2',
+	H1 = 'H1',
+	P5 = 'P5',
+	B7 = 'B7',
+	B6 = 'B6',
+	B5 = 'B5',
+	B4 = 'B4',
+	/**
+	 * @deprecated
+	 */
 	primary = 'primary',
+	/**
+	 * @deprecated
+	 */
 	secondary = 'secondary',
+	/**
+	 * @deprecated
+	 */
 	placeholder = 'placeholder',
 }
 
 export type TypographyThemeProps = {
 	color?: ColorTokens;
+	fontFamily?: FontFamilyTokens;
+	fontSize?: FontSizeTokens;
 };
 
 export type TypographyBaseProps = {
 	label?: String;
 	color?: ColorTokens;
 	fontSize?: FontSizeTokens;
-	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: FontDecorationToken;
 	textTransform?: FontTransformToken;
@@ -90,7 +112,6 @@ export type TypographyProps = {
 	label?: String;
 	color?: ColorTokens;
 	fontSize?: FontSizeTokens;
-	fontWeight?: FontWeightTokens;
 	fontFamily?: FontFamilyTokens;
 	textDecorationLine?: FontDecorationToken;
 	textTransform?: FontTransformToken;

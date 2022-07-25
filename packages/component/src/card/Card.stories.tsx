@@ -2,22 +2,22 @@ import {
 	ButtonTypeTokens,
 	CardProps,
 	ColorTokens,
-	SpaceTypeTokens,
+	SizeTypeTokens,
 	StackAlignType,
 	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
-import { CommonWidgetProps } from '../mock';
+import { MockedWidgetProps } from '../mock';
 import Typography from '../typography/Typography';
 import Card from './Card';
 
 export default {
-	title: 'Example/Card',
+	title: 'Component/Card',
 	component: Card,
 };
 
 const Template = (args: CardProps) => {
-	return CommonWidgetProps.renderItem({
+	return MockedWidgetProps.renderItem({
 		id: 'test_id',
 		type: WIDGET.CARD,
 		props: { ...args },
@@ -27,7 +27,7 @@ const Template = (args: CardProps) => {
 export const CardComponent = Template.bind({});
 
 CardComponent.args = {
-	renderItem: CommonWidgetProps.renderItem,
+	renderItem: MockedWidgetProps.renderItem,
 	header: {
 		children: (
 			<Typography
@@ -63,11 +63,17 @@ CardComponent.args = {
 		),
 	},
 	bgColor: ColorTokens.Grey_600,
+	gradient: {
+		colors: [
+			ColorTokens.Blue_300,
+			ColorTokens.Blue_600,
+		],
+	},
 	padding: {
-		top: SpaceTypeTokens.LG,
-		bottom: SpaceTypeTokens.LG,
-		left: SpaceTypeTokens.XL,
-		right: SpaceTypeTokens.XL,
+		top: SizeTypeTokens.LG,
+		bottom: SizeTypeTokens.LG,
+		left: SizeTypeTokens.XL,
+		right: SizeTypeTokens.XL,
 	},
 	flex: StackAlignType.flexStart,
 };
@@ -83,7 +89,7 @@ CardComponent.argTypes = {
 	paddingHorizontal: {
 		control: 'select',
 		options: [
-			...Object.values(SpaceTypeTokens).filter(
+			...Object.values(SizeTypeTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],
@@ -91,7 +97,7 @@ CardComponent.argTypes = {
 	paddingVertical: {
 		control: 'select',
 		options: [
-			...Object.values(SpaceTypeTokens).filter(
+			...Object.values(SizeTypeTokens).filter(
 				(k) => typeof k === 'string',
 			),
 		],

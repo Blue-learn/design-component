@@ -1,5 +1,7 @@
 import {
+	StackAlignItems,
 	StackAlignType,
+	StackJustifyContent,
 	StackProp,
 	StackType,
 	WidgetItem,
@@ -18,17 +20,19 @@ const Stack: React.FC<
 > = ({
 	type = StackType.column,
 	children = <></>,
-	alignX = StackAlignType.flexStart,
-	alignY = StackAlignType.flexStart,
+	alignX,
+	alignY,
 	widgetItems = [],
 	renderItem,
+	alignItems = StackAlignItems.flexStart,
+	justifyContent = StackJustifyContent.flexStart,
 }) => {
 	return (
 		<View
 			style={{
 				flexDirection: type,
-				justifyContent: alignX,
-				alignItems: alignY,
+				justifyContent: alignX || justifyContent,
+				alignItems: alignY || alignItems,
 			}}
 		>
 			{children}
