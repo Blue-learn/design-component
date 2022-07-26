@@ -16,6 +16,7 @@ import {
 	DividerSizeTokensMap,
 	LottieSizeTokensMap,
 	AspectRatioTokensMap,
+	TagTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -36,6 +37,7 @@ export type ThemeTokens = {
 	progressIndicator: ProgressIndicatorTypeTokensMap;
 	dividerSize: DividerSizeTokensMap;
 	lottieSize: LottieSizeTokensMap;
+	tag: TagTypeTokensMap;
 };
 
 export * from './light-mobile/divider';

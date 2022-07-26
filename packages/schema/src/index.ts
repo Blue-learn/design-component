@@ -23,3 +23,4 @@ export * from './chip';
 export * from './padding';
 export * from './lottie';
 export * from './gradient';
+export * from './tag';

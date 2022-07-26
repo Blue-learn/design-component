@@ -15,5 +15,6 @@ export * as ProgressIndicator from './progressIndicator';
 export * as LinkPreview from './linkPreview';
 export * as Chip from './chip';
 export * as Gradient from './gradient';
+export * as Tag from './tag';
 export * from './mock';
 export * from './registry';

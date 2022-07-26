@@ -9,6 +9,7 @@ export enum ColorTokens {
 	Grey_600 = 'grey-600',
 	Grey_700 = 'grey-700',
 	Black = 'black',
+	Black_20 = 'black-20',
 	Interaction_10 = 'interaction-10',
 	Interaction_20 = 'interaction-20',
 	Interaction_30 = 'interaction-30',
