@@ -83,6 +83,11 @@ const ButtonBase: React.FunctionComponent<
 	const paddingHorizontalValue =
 		theme.space[paddingHorizontal];
 
+	const iconDetails = {
+		...icon,
+		align: IconAlignmentTokens.right,
+	};
+
 	const styleProps = React.useMemo(
 		() => ({
 			backgroundColor: backgroundColorValue,
@@ -155,10 +160,12 @@ const ButtonBase: React.FunctionComponent<
 		>
 			<Stack {...stack}>
 				{(iconAlignment === 'left' ||
-					icon?.align === IconAlignmentTokens.left) &&
+					iconDetails?.align ===
+						IconAlignmentTokens.left) &&
 					_renderIcon}
 				{(iconAlignment === 'left' ||
-					icon?.align === IconAlignmentTokens.left) &&
+					iconDetails?.align ===
+						IconAlignmentTokens.left) &&
 					label && <Space size={8} />}
 				<View
 					style={
@@ -190,10 +197,12 @@ const ButtonBase: React.FunctionComponent<
 				)}
 
 				{(iconAlignment === 'right' ||
-					icon?.align === IconAlignmentTokens.right) &&
+					iconDetails?.align ===
+						IconAlignmentTokens.right) &&
 					label && <Space size={8} />}
 				{(iconAlignment === 'right' ||
-					icon?.align === IconAlignmentTokens.right) &&
+					iconDetails?.align ===
+						IconAlignmentTokens.right) &&
 					(iconName || icon) &&
 					!loading &&
 					_renderIcon}

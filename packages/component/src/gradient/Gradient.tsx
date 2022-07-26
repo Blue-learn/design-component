@@ -1,5 +1,4 @@
 import {
-	ColorTokens,
 	GradientProps,
 	WidgetProps,
 } from '@blue-learn/schema';
@@ -17,10 +16,7 @@ const Gradient: React.FC<
 > = ({
 	children = <></>,
 	widgetItems = [],
-	colors = [
-		ColorTokens.Blue_600,
-		ColorTokens.Blue_400,
-	],
+	colors = [],
 	start = { x: 0, y: 0 },
 	end = { x: 1, y: 0 },
 	renderItem,
@@ -34,6 +30,14 @@ const Gradient: React.FC<
 		);
 		return map;
 	}, [colors]);
+
+	// const widthProps = React.useMemo(
+	// 	() =>
+	// 		Platform.OS === 'web'
+	// 			? { width: 'fit-content' }
+	// 			: { alignSelf: 'flex-start' },
+	// 	[],
+	// );
 
 	return (
 		//@ts-ignore

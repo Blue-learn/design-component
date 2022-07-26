@@ -2,31 +2,25 @@ import {
 	CardProps,
 	ShadowThemeProps,
 	SizeTypeTokens,
+	StackAlignItems,
+	StackJustifyContent,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import ThemeProvider from '@blue-learn/theme';
 import Gradient from '../gradient/Gradient';
 
-/**
- * @description
- * Stack supports children as React Component and widgetItems as WidgetItem Type[order by children -> widgetItems]
- * Note: renderItem should be passed to render WidgetItem
- **/
 const Card: React.FC<CardProps & WidgetProps> = ({
 	header = { children: <></>, widgetItems: [] },
 	body = { children: <></>, widgetItems: [] },
 	footer = { children: <></>, widgetItems: [] },
-	flex,
+	justifyContent,
+	alignItems,
 	bgColor,
 	padding = {
-		top: SizeTypeTokens.LG,
-		right: SizeTypeTokens.LG,
-		left: SizeTypeTokens.LG,
-		bottom: SizeTypeTokens.LG,
+		vertical: SizeTypeTokens.LG,
+		horizontal: SizeTypeTokens.LG,
 	},
-	paddingHorizontal = SizeTypeTokens.LG,
-	paddingVertical = SizeTypeTokens.LG,
 	borderRadius = SizeTypeTokens.LG,
 	shadow,
 	gradient = {
@@ -47,37 +41,52 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 		theme.shadow[shadow];
 
 	const paddingTop =
-		theme.space[paddingVertical || padding.top];
+		theme.space[padding?.vertical || padding?.top];
 
 	const paddingBottom =
-		theme.space[paddingVertical || padding.bottom];
+		theme.space[
+			padding?.vertical || padding?.bottom
+		];
 
 	const paddingLeft =
-		theme.space[paddingHorizontal || padding.left];
+		theme.space[
+			padding?.horizontal || padding?.left
+		];
 
 	const paddingRight =
-		theme.space[paddingHorizontal || padding.right];
+		theme.space[
+			padding?.horizontal || padding?.right
+		];
+
+	const styleProps = React.useMemo(
+		() => ({
+			justifyContent,
+			alignItems,
+			backgroundColor: backgroundColor,
+			shadowOffset: shadowValue?.shadowOffset || {
+				height: 0,
+				width: 0,
+			},
+			shadowOpacity: shadowValue?.shadowOpacity || 0,
+			shadowRadius: shadowValue?.shadowRadius || 0,
+			paddingTop: paddingTop,
+			paddingBottom: paddingBottom,
+			paddingLeft: paddingLeft,
+			paddingRight: paddingRight,
+			borderRadius: borderRadiusValue,
+		}),
+		[
+			justifyContent,
+			alignItems,
+			shadow,
+			bgColor,
+			padding,
+			borderRadius,
+		],
+	);
 
 	return (
-		<Gradient
-			style={{
-				justifyContent: flex,
-				backgroundColor: backgroundColor,
-				shadowOffset: shadowValue?.shadowOffset || {
-					height: 0,
-					width: 0,
-				},
-				shadowOpacity:
-					shadowValue?.shadowOpacity || 0,
-				shadowRadius: shadowValue?.shadowRadius || 0,
-				paddingTop: paddingTop,
-				paddingBottom: paddingBottom,
-				paddingLeft: paddingLeft,
-				paddingRight: paddingRight,
-				borderRadius: borderRadiusValue,
-			}}
-			{...gradient}
-		>
+		<Gradient style={[styleProps]} {...gradient}>
 			{header?.children}
 			{renderItem &&
 				header?.widgetItems?.length > 0 &&

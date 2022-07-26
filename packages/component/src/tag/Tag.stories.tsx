@@ -17,9 +17,9 @@ const Template = (args: TagProps) => (
 	<Tag {...args} />
 );
 
-export const ChipComponent = Template.bind({});
+export const TagComponent = Template.bind({});
 
-ChipComponent.args = {
+TagComponent.args = {
 	label: 'Tag',
 	type: TagTypeTokens.DEFAULT,
 	icon: {
@@ -29,7 +29,7 @@ ChipComponent.args = {
 	},
 };
 
-ChipComponent.argTypes = {
+TagComponent.argTypes = {
 	type: {
 		control: 'select',
 		options: [...Object.values(TagTypeTokens)],

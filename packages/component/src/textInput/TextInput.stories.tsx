@@ -10,7 +10,7 @@ import Icon from '../icon/Icon';
 import TextInput from './TextInput';
 
 export default {
-	title: 'Component/textInput',
+	title: 'Component/TextInput',
 	component: TextInput,
 	argTypes: {
 		type: inputTypeToken.default,
