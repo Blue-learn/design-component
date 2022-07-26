@@ -17,4 +17,5 @@ export enum WIDGET {
 	GRADIENT = 'GRADIENT',
 	CHIP = 'CHIP',
 	TAG = 'TAG',
+	MEMBERCARD = 'MEMBERCARD',
 }

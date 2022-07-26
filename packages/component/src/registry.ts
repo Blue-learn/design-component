@@ -21,6 +21,7 @@ import {
 	Gradient,
 	Chip,
 	Tag,
+	MemberCard,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -42,5 +43,6 @@ const registry: WidgetRegistry = {
 	[WIDGET.GRADIENT]: Gradient,
 	[WIDGET.CHIP]: Chip,
 	[WIDGET.TAG]: Tag,
+	[WIDGET.MEMBERCARD]: MemberCard,
 };
 export { registry as WidgetRegistry };

@@ -16,5 +16,6 @@ export * as LinkPreview from './linkPreview';
 export * as Chip from './chip';
 export * as Gradient from './gradient';
 export * as Tag from './tag';
+export * as MemberCard from './memberCard';
 export * from './mock';
 export * from './registry';
