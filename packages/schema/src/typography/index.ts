@@ -76,6 +76,14 @@ export enum TypographyTypeTokens {
 	B6 = 'B6',
 	B5 = 'B5',
 	B4 = 'B4',
+	B3 = 'B3',
+	S1 = 'S1',
+	S2 = 'S2',
+	S3 = 'S3',
+	S4 = 'S4',
+	S5 = 'S5',
+	S6 = 'S6',
+	S7 = 'S7',
 	/**
 	 * @deprecated
 	 */
