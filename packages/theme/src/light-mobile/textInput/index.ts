@@ -18,6 +18,15 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 			paddingVertical: SizeTypeTokens.LG,
 			paddingHorizontal: SizeTypeTokens.XL,
 		},
+		[inputTypeToken.search]: {
+			fontSize: FontSizeTokens.SM,
+			color: ColorTokens.Grey_500,
+			bgColor: ColorTokens.White,
+			borderColor: ColorTokens.Transparent,
+			borderRadius: BorderRadiusTokens.BR4,
+			paddingVertical: SizeTypeTokens.LG,
+			paddingHorizontal: SizeTypeTokens.XL,
+		},
 		[inputTypeToken.chat]: {
 			fontSize: FontSizeTokens.SM,
 			color: ColorTokens.Grey_500,

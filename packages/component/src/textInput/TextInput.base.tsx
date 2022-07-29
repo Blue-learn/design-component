@@ -1,9 +1,5 @@
 import React, { memo } from 'react';
-import {
-	TextInput,
-	View,
-	StyleSheet,
-} from 'react-native';
+import { TextInput, View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import {
 	ColorTokensMap,
@@ -16,22 +12,18 @@ import {
 	SizeTypeTokens,
 	SizeTypeTokensMap,
 	FontSizeTokensMap,
+	IconProps,
+	StackType,
 } from '@blue-learn/schema';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
 import Space from '../space/Space';
+import Icon from '../icon/Icon';
+import _map from 'lodash-es/map';
 
 /**
  * Raw Component with Derived props + Theme
  */
-const styles = StyleSheet.create({
-	container: {
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'space-between',
-		borderWidth: 1,
-	},
-});
 
 const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps
@@ -48,7 +40,10 @@ const TextInputBase: React.FunctionComponent<
 	paddingHorizontal = SizeTypeTokens.XL,
 	title,
 	caption,
-	icon,
+	leftIcon,
+	rightIcons,
+	onChangeText,
+	value,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -66,6 +61,32 @@ const TextInputBase: React.FunctionComponent<
 
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
+
+	const paddingHorizontalValue =
+		spaceTokenMapping[paddingHorizontal];
+
+	const paddingVerticalValue =
+		spaceTokenMapping[paddingVertical];
+
+	const styleProps = React.useMemo(
+		() => ({
+			width: '100%',
+			flexDirection: 'row',
+			alignItems: 'center',
+			justifyContent: 'space-between',
+			borderWidth: 1,
+			backgroundColor: colorMapping[bgColor],
+			borderColor: colorMapping[borderColor],
+			borderRadius: borderRadiusValue,
+			paddingRight: paddingVerticalValue,
+		}),
+		[
+			bgColor,
+			borderColor,
+			borderRadius,
+			paddingVertical,
+		],
+	);
 
 	return (
 		<Stack>
@@ -85,56 +106,40 @@ const TextInputBase: React.FunctionComponent<
 				<></>
 			)}
 
-			<View
-				style={[
-					styles.container,
-					{
-						borderColor: colorMapping[borderColor],
-						borderRadius: borderRadiusValue,
-					},
-				]}
-			>
-				<Space
-					size={
-						icon && icon?.align === 'left' ? 12 : 0
-					}
-				/>
-				{icon?.align === 'left' &&
-					(icon ? icon : null)}
+			<View style={styleProps}>
+				<Space size={leftIcon ? 12 : 0} />
+				{leftIcon ? <Icon {...leftIcon} /> : null}
 				<TextInput
+					value={value}
 					isDisabled={isDisabled}
 					editable={!isDisabled}
 					placeholder={placeholder}
+					onChangeText={onChangeText}
 					style={{
 						flex: 1,
 						color: colorMapping[color],
 						fontSize: fontSizeMapping[fontSize],
 						fontFamily: fontFamilyMapping[fontFamily],
-						paddingHorizontal:
-							spaceTokenMapping[paddingHorizontal],
-						paddingVertical:
-							spaceTokenMapping[paddingVertical],
+						paddingHorizontal: paddingHorizontalValue,
+						paddingVertical: paddingVerticalValue,
 					}}
 					textAlignVertical='top'
 					{...props}
 				/>
-				{icon?.align === 'right' &&
-					(icon ? icon : null)}
-				<Space
-					size={
-						icon && icon?.align === 'right' ? 12 : 0
-					}
-				/>
+				{_map(rightIcons, (icon: IconProps) => [
+					<Space size={8} />,
+					<Icon {...icon} />,
+				])}
 			</View>
 
 			{caption ? (
-				<Stack>
-					<Space size={8} />
+				<Stack type={StackType.row}>
 					<Typography
 						label={caption}
 						fontSize={FontSizeTokens.XS}
 						color={color}
 					/>
+					<Space size={8} />
 				</Stack>
 			) : (
 				<></>

@@ -11,6 +11,7 @@ import { IconProps } from '../icon';
 
 export enum inputTypeToken {
 	default = 'default',
+	search = 'search',
 	chat = 'chat',
 	success = 'success',
 	error = 'error',
@@ -38,7 +39,8 @@ export type TextInputProps = {
 	multiline?: boolean;
 	numberOfLines?: number;
 	isDisabled?: boolean;
-	icon?: IconProps;
+	leftIcon?: IconProps;
+	rightIcons?: IconProps[];
 	avatar?: AvatarProps;
 };
 
@@ -53,7 +55,8 @@ export type TextInputBaseProps = {
 	multiline?: boolean;
 	numberOfLines?: number;
 	isDisabled?: boolean;
-	icon?: IconProps;
+	leftIcon?: IconProps;
+	rightIcons?: IconProps[];
 	avatar?: AvatarProps;
 	fontSize?: FontSizeTokens;
 	bgColor?: ColorTokens;

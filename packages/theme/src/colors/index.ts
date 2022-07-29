@@ -11,6 +11,7 @@ export const colorTokensMap: ColorTokensMap = {
 	[ColorTokens.Grey_300]: '#9395A4',
 	[ColorTokens.Grey_400]: '#656A83',
 	[ColorTokens.Grey_500]: '#31343C',
+	[ColorTokens.Grey_550]: '#2B2B2B',
 	[ColorTokens.Grey_600]: '#1E1E1E',
 	[ColorTokens.Grey_700]: '#121212',
 	[ColorTokens.Black]: '#000000',

@@ -6,6 +6,7 @@ export enum ColorTokens {
 	Grey_300 = 'grey-300',
 	Grey_400 = 'grey-400',
 	Grey_500 = 'grey-500',
+	Grey_550 = 'grey-550',
 	Grey_600 = 'grey-600',
 	Grey_700 = 'grey-700',
 	Black = 'black',
