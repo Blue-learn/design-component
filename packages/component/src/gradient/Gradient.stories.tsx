@@ -1,4 +1,5 @@
 import {
+	ColorTokens,
 	GradientProps,
 	WIDGET,
 } from '@blue-learn/schema';
@@ -28,16 +29,20 @@ export const LinearGradientComponent =
 
 LinearGradientComponent.args = {
 	renderItem: MockedWidgetProps.renderItem,
+	colors: [
+		ColorTokens.Blue_800,
+		ColorTokens.Blue_100,
+	],
 	children: [
 		<View
 			style={{
-				backgroundColor: '#000',
+				backgroundColor: '#fff000',
 				height: 50,
 				width: 100,
+				marginBottom: 20,
 			}}
 		/>,
 	],
-
 	widgetItems: [
 		{
 			id: 'button',

@@ -87,9 +87,49 @@ export const typographyTypeTokensMap: TypographyTypeTokensMap =
 			fontFamily: FontFamilyTokens.manropeRegular,
 		},
 		[TypographyTypeTokens.B4]: {
-			color: ColorTokens.Grey_400,
+			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.MD,
 			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.B3]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.LG,
+			fontFamily: FontFamilyTokens.manropeRegular,
+		},
+		[TypographyTypeTokens.S1]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXL,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
+		},
+		[TypographyTypeTokens.S2]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XL,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
+		},
+		[TypographyTypeTokens.S3]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.LG,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
+		},
+		[TypographyTypeTokens.S4]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.MD,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
+		},
+		[TypographyTypeTokens.S5]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.SM,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
+		},
+		[TypographyTypeTokens.S6]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XS,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
+		},
+		[TypographyTypeTokens.S7]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXS,
+			fontFamily: FontFamilyTokens.manropeSemiBold,
 		},
 		[TypographyTypeTokens.P5]: {
 			color: ColorTokens.Grey_300,

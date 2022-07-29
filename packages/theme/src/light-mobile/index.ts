@@ -20,6 +20,7 @@ import { chatCardTypeTokenMap } from './chatCard';
 import { progessIndicatorTypeTokensMap } from './progressIndicator';
 import { dividerSizeTypeTokensMap } from './divider';
 import { lottieSizeTokensMap } from './lottie';
+import { tagTypeTokensMap } from './tag';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
@@ -39,4 +40,5 @@ export const lightMobileTheme: ThemeTokens = {
 	progressIndicator: progessIndicatorTypeTokensMap,
 	dividerSize: dividerSizeTypeTokensMap,
 	lottieSize: lottieSizeTokensMap,
+	tag: tagTypeTokensMap,
 };

@@ -51,6 +51,38 @@ export const typographyTypeTokensMap: TypographyTypeTokensMap =
 			...typographyTypeTokensMapLight['B4'],
 			color: ColorTokens.Grey_100,
 		},
+		[TypographyTypeTokens.B3]: {
+			...typographyTypeTokensMapLight['B3'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S1]: {
+			...typographyTypeTokensMapLight['S1'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S2]: {
+			...typographyTypeTokensMapLight['S2'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S3]: {
+			...typographyTypeTokensMapLight['S3'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S4]: {
+			...typographyTypeTokensMapLight['S4'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S5]: {
+			...typographyTypeTokensMapLight['S5'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S6]: {
+			...typographyTypeTokensMapLight['S6'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.S7]: {
+			...typographyTypeTokensMapLight['S7'],
+			color: ColorTokens.Grey_100,
+		},
 		[TypographyTypeTokens.P5]: {
 			...typographyTypeTokensMapLight['P5'],
 			color: ColorTokens.Grey_300,

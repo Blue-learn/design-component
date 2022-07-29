@@ -20,6 +20,8 @@ import {
 	Lottie,
 	Gradient,
 	Chip,
+	Tag,
+	MemberCard,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -40,5 +42,7 @@ const registry: WidgetRegistry = {
 	[WIDGET.LOTTIE]: Lottie,
 	[WIDGET.GRADIENT]: Gradient,
 	[WIDGET.CHIP]: Chip,
+	[WIDGET.TAG]: Tag,
+	[WIDGET.MEMBERCARD]: MemberCard,
 };
 export { registry as WidgetRegistry };

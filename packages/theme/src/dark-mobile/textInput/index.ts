@@ -12,6 +12,11 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 			color: ColorTokens.Grey_100,
 			borderColor: ColorTokens.Grey_400,
 		},
+		[inputTypeToken.search]: {
+			...inputTypeTokensMapLight.search,
+			color: ColorTokens.Grey_100,
+			bgColor: ColorTokens.Grey_550,
+		},
 		[inputTypeToken.chat]: {
 			...inputTypeTokensMapLight.chat,
 			color: ColorTokens.Grey_100,

@@ -1,16 +1,15 @@
 import {
-	ColorTokens,
+	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	inputTypeToken,
 	TextInputProps,
 } from '@blue-learn/schema';
 import React from 'react';
-import Icon from '../icon/Icon';
 import TextInput from './TextInput';
 
 export default {
-	title: 'Component/textInput',
+	title: 'Component/TextInput',
 	component: TextInput,
 	argTypes: {
 		type: inputTypeToken.default,
@@ -27,6 +26,18 @@ Input.args = {
 	type: inputTypeToken.default,
 	title: 'Title',
 	caption: 'This is a caption',
+	leftIcon: {
+		name: IconTokens.Search,
+		size: IconSizeTokens.LG,
+		align: IconAlignmentTokens.left,
+	},
+	rightIcons: [
+		{
+			name: IconTokens.Cross,
+			size: IconSizeTokens.XL,
+			align: IconAlignmentTokens.left,
+		},
+	],
 };
 
 Input.argTypes = {

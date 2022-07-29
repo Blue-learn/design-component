@@ -3,7 +3,8 @@ import {
 	CardProps,
 	ColorTokens,
 	SizeTypeTokens,
-	StackAlignType,
+	StackAlignItems,
+	StackJustifyContent,
 	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
@@ -63,19 +64,14 @@ CardComponent.args = {
 		),
 	},
 	bgColor: ColorTokens.Grey_600,
-	gradient: {
-		colors: [
-			ColorTokens.Blue_300,
-			ColorTokens.Blue_600,
-		],
-	},
 	padding: {
 		top: SizeTypeTokens.LG,
 		bottom: SizeTypeTokens.LG,
 		left: SizeTypeTokens.XL,
 		right: SizeTypeTokens.XL,
 	},
-	flex: StackAlignType.flexStart,
+	alignItems: StackAlignItems.center,
+	justifyContent: StackJustifyContent.center,
 };
 CardComponent.argTypes = {
 	bgColor: {
@@ -86,20 +82,14 @@ CardComponent.argTypes = {
 			),
 		],
 	},
-	paddingHorizontal: {
+	alignItems: {
 		control: 'select',
-		options: [
-			...Object.values(SizeTypeTokens).filter(
-				(k) => typeof k === 'string',
-			),
-		],
+		options: [...Object.values(StackAlignItems)],
 	},
-	paddingVertical: {
+	justifyContent: {
 		control: 'select',
 		options: [
-			...Object.values(SizeTypeTokens).filter(
-				(k) => typeof k === 'string',
-			),
+			...Object.values(StackJustifyContent),
 		],
 	},
 };
