@@ -7,6 +7,7 @@ import {
 } from '@blue-learn/schema';
 import { ButtonBase } from './Button.base';
 import ThemeProvider from '@blue-learn/theme';
+import noop from 'lodash-es/noop'
 
 /**
  * Primary UI component for user interaction
@@ -16,9 +17,7 @@ const Button: React.FunctionComponent<
 	ButtonProps & WidgetProps
 > = ({
 	type = ButtonTypeTokens.LargeFilled,
-	onPress = () => {
-		console.warn('OnPress Props missing');
-	},
+	onPress = noop(),
 	...props
 }) => {
 	/**
