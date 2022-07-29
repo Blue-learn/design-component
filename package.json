@@ -7,7 +7,7 @@
     "packages/**"
   ],
   "repository": "ssh://git@github.com:Blue-learn/design-component.git",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "index.js",
   "keywords": [],
   "author": "Soumya Sethy<soumya@bluelearn.in>",
@@ -29,8 +29,8 @@
     "copy-watcher": "node chokidar.js",
     "publish": "lerna publish --canary --force-publish  --y",
     "storybook-start": "start-storybook -p 6006",
-    "storybook-build": "build-storybook",
-    "storybook-deploy": "storybook-to-ghpages"
+    "storybook-build": "build-storybook -o .out",
+    "storybook-deploy": "rm -fr .out && npm run storybook-build && echo 'components.bluelearn.in' > '.out/CNAME' && storybook-to-ghpages --existing-output-dir=.out"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

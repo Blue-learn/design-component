@@ -43,6 +43,11 @@ import Google from './icon-list/Google';
 import Messages from './icon-list/Messages';
 import Star from './icon-list/Star';
 import Sparkling from './icon-list/Sparkling';
+import Bookmark from './icon-list/Bookmark';
+import BookmarkFilled from './icon-list/BookmarkFilled';
+import Page from './icon-list/Page';
+import InfoFilled from './icon-list/InfoFilled';
+import Sticker from './icon-list/Sticker';
 import Bluelearn from './icon-list/Bluelearn';
 
 export const iconTokensMap: IconTypeTokensMap = {
@@ -70,6 +75,7 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Book]: Book,
 	[IconTokens.DoubleMessage]: DoubleMessage,
 	[IconTokens.Info]: Info,
+	[IconTokens.InfoFilled]: InfoFilled,
 	[IconTokens.Lighting]: Lighting,
 	[IconTokens.Notification]: Notification,
 	[IconTokens.Play]: Play,
@@ -87,5 +93,9 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Messages]: Messages,
 	[IconTokens.Star]: Star,
 	[IconTokens.Sparkling]: Sparkling,
+	[IconTokens.Bookmark]: Bookmark,
+	[IconTokens.BookmarkFilled]: BookmarkFilled,
+	[IconTokens.Page]: Page,
+	[IconTokens.Sticker]: Sticker,
 	[IconTokens.Bluelearn]: Bluelearn,
 };
