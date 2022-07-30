@@ -2,8 +2,6 @@ import {
 	CardProps,
 	ShadowThemeProps,
 	SizeTypeTokens,
-	StackAlignItems,
-	StackJustifyContent,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';

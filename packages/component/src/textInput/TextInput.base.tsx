@@ -14,6 +14,7 @@ import {
 	FontSizeTokensMap,
 	IconProps,
 	StackType,
+	WidgetProps,
 } from '@blue-learn/schema';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
@@ -26,7 +27,7 @@ import _map from 'lodash-es/map';
  */
 
 const TextInputBase: React.FunctionComponent<
-	TextInputBaseProps
+	TextInputBaseProps & WidgetProps
 > = ({
 	placeholder = 'lorem ipsum',
 	borderRadius = BorderRadiusTokens.BR1,
@@ -41,9 +42,10 @@ const TextInputBase: React.FunctionComponent<
 	title,
 	caption,
 	leftIcon,
-	rightIcons,
+	rightIcons = [],
 	onChangeText,
 	value,
+	renderItem,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -126,10 +128,12 @@ const TextInputBase: React.FunctionComponent<
 					textAlignVertical='top'
 					{...props}
 				/>
-				{_map(rightIcons, (icon: IconProps) => [
-					<Space size={8} />,
-					<Icon {...icon} />,
-				])}
+				<Space
+					size={rightIcons?.length > 0 ? 8 : 0}
+				/>
+				{renderItem &&
+					rightIcons?.length > 0 &&
+					rightIcons?.map(renderItem)}
 			</View>
 
 			{caption ? (

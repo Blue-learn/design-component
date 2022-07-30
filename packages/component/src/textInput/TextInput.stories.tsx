@@ -1,9 +1,12 @@
 import {
+	ButtonTypeTokens,
+	ColorTokens,
 	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	inputTypeToken,
 	TextInputProps,
+	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import TextInput from './TextInput';
@@ -33,9 +36,16 @@ Input.args = {
 	},
 	rightIcons: [
 		{
-			name: IconTokens.Cross,
-			size: IconSizeTokens.XL,
-			align: IconAlignmentTokens.left,
+			id: 'cross-icon',
+			type: WIDGET.BUTTON,
+			props: {
+				type: ButtonTypeTokens.IconGhost,
+				icon: {
+					name: IconTokens.Cross,
+					size: IconSizeTokens.LG,
+					color: ColorTokens.Grey_100,
+				},
+			},
 		},
 	],
 };
