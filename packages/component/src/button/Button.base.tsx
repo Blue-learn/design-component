@@ -84,7 +84,10 @@ const ButtonBase: React.FunctionComponent<
 		theme.space[paddingHorizontal];
 
 	const iconDetails = {
-		align: IconAlignmentTokens.right,
+		align:
+			icon?.name || iconName
+				? IconAlignmentTokens.right
+				: null,
 		...icon,
 	};
 
