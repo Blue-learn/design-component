@@ -84,8 +84,8 @@ const ButtonBase: React.FunctionComponent<
 		theme.space[paddingHorizontal];
 
 	const iconDetails = {
-		...icon,
 		align: IconAlignmentTokens.right,
+		...icon,
 	};
 
 	const styleProps = React.useMemo(
