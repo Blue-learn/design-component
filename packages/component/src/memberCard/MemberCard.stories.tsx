@@ -21,7 +21,8 @@ MemberCardComponent.args = {
 	avatar:
 		'https://reactnative.dev/img/tiny_logo.png',
 	headline: 'lorem ipsum dolor sit amet',
-	interests: ['react', 'react native'],
+	chipsTitle: 'Talk to me about',
+	chips: ['react', 'react native'],
 };
 
 MemberCardComponent.argTypes = {};
