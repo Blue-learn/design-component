@@ -1,16 +1,22 @@
 import React from 'react';
 import { memo } from 'react';
 import { View } from 'react-native';
-import { SpaceProps } from '@blue-learn/schema';
+import {
+	SizeTypeTokens,
+	SpaceProps,
+} from '@blue-learn/schema';
+import ThemeProvider from '@blue-learn/theme';
 
 const Space: React.FunctionComponent<
 	SpaceProps
-> = ({ size = 2 }) => {
+> = ({ size = SizeTypeTokens.XS }) => {
+	const theme = ThemeProvider.getTheme();
+	const sizeValue = theme.space[size];
 	return (
 		<View
 			style={{
-				width: size,
-				height: size,
+				width: sizeValue,
+				height: sizeValue,
 			}}
 		/>
 	);

@@ -21,7 +21,6 @@ import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Stack from '../stack/Stack';
 import Image from '../image/Image';
-import Divider from '../divider/Divider';
 
 /**
  * Raw Component with Derived props + Theme
@@ -91,7 +90,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={4} />
+						<Space size={SizeTypeTokens.SM} />
 						<Typography
 							label={file.file_type || label}
 							color={labelColor}
@@ -114,7 +113,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={4} />
+						<Space size={SizeTypeTokens.SM} />
 						<Typography
 							label={file.file_type || label}
 							color={labelColor}
@@ -137,7 +136,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={4} />
+						<Space size={SizeTypeTokens.SM} />
 						<Typography
 							label={'Voice Message'}
 							color={labelColor}
@@ -160,7 +159,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={4} />
+						<Space size={SizeTypeTokens.SM} />
 						<Typography
 							label={file.file_name}
 							color={labelColor}
@@ -214,7 +213,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
-					<Space size={4} />
+					<Space size={SizeTypeTokens.SM} />
 					{label ? (
 						<Typography
 							label={label}

@@ -100,14 +100,20 @@ const TextInputBase: React.FunctionComponent<
 							FontFamilyTokens.manropeSemiBold
 						}
 					/>
-					<Space size={8} />
+					<Space size={SizeTypeTokens.MD} />
 				</Stack>
 			) : (
 				<></>
 			)}
 
 			<View style={styleProps}>
-				<Space size={leftIcon ? 12 : 0} />
+				<Space
+					size={
+						leftIcon
+							? SizeTypeTokens.LG
+							: SizeTypeTokens.NONE
+					}
+				/>
 				{leftIcon ? <Icon {...leftIcon} /> : null}
 				<TextInput
 					value={value}
@@ -127,7 +133,7 @@ const TextInputBase: React.FunctionComponent<
 					{...props}
 				/>
 				{_map(rightIcons, (icon: IconProps) => [
-					<Space size={8} />,
+					<Space size={SizeTypeTokens.MD} />,
 					<Icon {...icon} />,
 				])}
 			</View>
@@ -139,7 +145,7 @@ const TextInputBase: React.FunctionComponent<
 						fontSize={FontSizeTokens.XS}
 						color={color}
 					/>
-					<Space size={8} />
+					<Space size={SizeTypeTokens.MD} />
 				</Stack>
 			) : (
 				<></>

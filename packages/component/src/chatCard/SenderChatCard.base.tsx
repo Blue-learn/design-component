@@ -13,6 +13,7 @@ import {
 	PreviewData,
 	StackAlignItems,
 	StackJustifyContent,
+	SizeTypeTokens,
 } from '@blue-learn/schema';
 import {
 	StyleSheet,
@@ -111,14 +112,14 @@ const SenderChatCardBase: React.FunctionComponent<
 					// 			},
 					// 		]}
 					// 	>
-					// 		<Space size={8} />
+					// 		<Space size={SizeTypeTokens.MD} />
 					// 		<Typography
 					// 			label={`+ ${
 					// 				file?.file_url?.length - 1
 					// 			} more`}
 					// 			color={ColorTokens.White}
 					// 		/>
-					// 		<Space size={8} />
+					// 		<Space size={SizeTypeTokens.MD} />
 					// 	</View>
 					// )}
 				);
@@ -154,7 +155,7 @@ const SenderChatCardBase: React.FunctionComponent<
 							labelColor={ColorTokens.Grey_100}
 							onPress={onPress}
 						/>
-						<Space size={8} />
+						<Space size={SizeTypeTokens.MD} />
 						<Stack>
 							<Stack
 								type={StackType.row}
@@ -165,14 +166,14 @@ const SenderChatCardBase: React.FunctionComponent<
 									size={IconSizeTokens.XS}
 									color={ColorTokens.Grey_100}
 								/>
-								<Space size={4} />
+								<Space size={SizeTypeTokens.SM} />
 								<Typography
 									label={'Voice Message'}
 									fontSize={FontSizeTokens.XS}
 									color={ColorTokens.Grey_100}
 								/>
 							</Stack>
-							<Space size={4} />
+							<Space size={SizeTypeTokens.SM} />
 							<Typography
 								label={duration}
 								fontSize={FontSizeTokens.XXS}
@@ -192,7 +193,7 @@ const SenderChatCardBase: React.FunctionComponent<
 						}
 					>
 						<Icon name={IconTokens.PDF} />
-						<Space size={8} />
+						<Space size={SizeTypeTokens.MD} />
 						<Stack>
 							<Typography
 								label={file.file_name}
@@ -209,7 +210,7 @@ const SenderChatCardBase: React.FunctionComponent<
 								color={ColorTokens.Grey_100}
 							/>
 						</Stack>
-						<Space size={8} />
+						<Space size={SizeTypeTokens.MD} />
 						<Button
 							type={ButtonTypeTokens.IconGhost}
 							onPress={onPress}
@@ -224,7 +225,7 @@ const SenderChatCardBase: React.FunctionComponent<
 
 	return (
 		<Stack alignItems={StackAlignItems.flexEnd}>
-			<Space size={8} />
+			<Space size={SizeTypeTokens.MD} />
 			<View
 				style={[
 					{
@@ -252,7 +253,11 @@ const SenderChatCardBase: React.FunctionComponent<
 				{label && (
 					<Stack>
 						<Space
-							size={file && file?.file_id ? 4 : 0}
+							size={
+								file && file?.file_id
+									? SizeTypeTokens.SM
+									: SizeTypeTokens.NONE
+							}
 						/>
 						<LinkPreview
 							text={label as string}
@@ -269,12 +274,12 @@ const SenderChatCardBase: React.FunctionComponent<
 												color={labelColor}
 												fontSize={FontSizeTokens.XS}
 											/>
-											<Space size={8} />
+											<Space size={SizeTypeTokens.MD} />
 											<Image
 												size={ImageSizeTokens.XXL}
 												uri={payload.previewData?.image?.url}
 											/>
-											<Space size={8} />
+											<Space size={SizeTypeTokens.MD} />
 											<Stack>
 												<Typography
 													label={payload.previewData?.title}
@@ -284,7 +289,7 @@ const SenderChatCardBase: React.FunctionComponent<
 													}
 													fontSize={FontSizeTokens.XS}
 												/>
-												<Space size={4} />
+												<Space size={SizeTypeTokens.SM} />
 												<Typography
 													label={
 														payload.previewData?.description
@@ -309,13 +314,13 @@ const SenderChatCardBase: React.FunctionComponent<
 					</Stack>
 				)}
 			</View>
-			<Space size={4} />
+			<Space size={SizeTypeTokens.SM} />
 			<Typography
 				label={timeStamp}
 				color={ColorTokens.Grey_300}
 				fontSize={FontSizeTokens.XS}
 			/>
-			<Space size={8} />
+			<Space size={SizeTypeTokens.MD} />
 		</Stack>
 	);
 };
