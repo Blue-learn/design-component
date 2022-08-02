@@ -25,3 +25,4 @@ export * from './lottie';
 export * from './gradient';
 export * from './tag';
 export * from './memberCard';
+export * from './icebreakerCard';
