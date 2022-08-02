@@ -5,6 +5,7 @@ import {
 	StackType,
 	StackAlignItems,
 	StackJustifyContent,
+	SizeTypeTokens,
 } from '@blue-learn/schema';
 import ChipBase from './Chip.base';
 import _map from 'lodash-es/map';
@@ -34,7 +35,9 @@ const Chip: React.FunctionComponent<
 					<ChipBase {...item} />,
 					<Space
 						size={
-							index === props?.data?.length - 1 ? 0 : 8
+							index === props?.data?.length - 1
+								? SizeTypeTokens.NONE
+								: SizeTypeTokens.MD
 						}
 					/>,
 				],
