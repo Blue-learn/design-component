@@ -8,6 +8,7 @@ import {
 	FontSizeTokens,
 } from '../typography';
 import { IconProps } from '../icon';
+import { WidgetItem } from '../types';
 
 export enum inputTypeToken {
 	default = 'default',
@@ -40,7 +41,7 @@ export type TextInputProps = {
 	numberOfLines?: number;
 	isDisabled?: boolean;
 	leftIcon?: IconProps;
-	rightIcons?: IconProps[];
+	rightIcons?: WidgetItem[];
 	avatar?: AvatarProps;
 };
 
@@ -56,7 +57,7 @@ export type TextInputBaseProps = {
 	numberOfLines?: number;
 	isDisabled?: boolean;
 	leftIcon?: IconProps;
-	rightIcons?: IconProps[];
+	rightIcons?: WidgetItem[];
 	avatar?: AvatarProps;
 	fontSize?: FontSizeTokens;
 	bgColor?: ColorTokens;
