@@ -26,3 +26,4 @@ export * from './gradient';
 export * from './tag';
 export * from './memberCard';
 export * from './icebreakerCard';
+export * from './userCard';
