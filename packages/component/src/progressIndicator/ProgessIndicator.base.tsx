@@ -49,7 +49,13 @@ const ProgressIndicatorBase: React.FunctionComponent<
 						opacity: index <= activeIndex ? 1 : 0.3,
 					}}
 				/>
-				<Space size={index + 1 == size ? 0 : 4} />
+				<Space
+					size={
+						index + 1 == size
+							? SizeTypeTokens.NONE
+							: SizeTypeTokens.SM
+					}
+				/>
 			</>
 		);
 	};

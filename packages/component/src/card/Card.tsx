@@ -6,6 +6,7 @@ import {
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import ThemeProvider from '@blue-learn/theme';
+import { View } from 'react-native';
 import Gradient from '../gradient/Gradient';
 
 const Card: React.FC<CardProps & WidgetProps> = ({
@@ -21,11 +22,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 	},
 	borderRadius = SizeTypeTokens.LG,
 	shadow,
-	gradient = {
-		colors: [],
-		start: { x: 0, y: 0 },
-		end: { x: 1, y: 0 },
-	},
+	gradient,
 	renderItem,
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -83,7 +80,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 		],
 	);
 
-	return (
+	return gradient?.colors?.length > 1 ? (
 		<Gradient style={[styleProps]} {...gradient}>
 			{header?.children}
 			{renderItem &&
@@ -98,6 +95,21 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 				footer?.widgetItems?.length > 0 &&
 				footer?.widgetItems.map(renderItem)}
 		</Gradient>
+	) : (
+		<View style={[styleProps]}>
+			{header?.children}
+			{renderItem &&
+				header?.widgetItems?.length > 0 &&
+				header?.widgetItems.map(renderItem)}
+			{body?.children}
+			{renderItem &&
+				body?.widgetItems?.length > 0 &&
+				body?.widgetItems.map(renderItem)}
+			{footer?.children}
+			{renderItem &&
+				footer?.widgetItems?.length > 0 &&
+				footer?.widgetItems.map(renderItem)}
+		</View>
 	);
 };
 

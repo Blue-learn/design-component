@@ -12,7 +12,6 @@ import {
 	SizeTypeTokens,
 	SizeTypeTokensMap,
 	FontSizeTokensMap,
-	IconProps,
 	StackType,
 	WidgetProps,
 } from '@blue-learn/schema';
@@ -102,14 +101,20 @@ const TextInputBase: React.FunctionComponent<
 							FontFamilyTokens.manropeSemiBold
 						}
 					/>
-					<Space size={8} />
+					<Space size={SizeTypeTokens.MD} />
 				</Stack>
 			) : (
 				<></>
 			)}
 
 			<View style={styleProps}>
-				<Space size={leftIcon ? 12 : 0} />
+				<Space
+					size={
+						leftIcon
+							? SizeTypeTokens.LG
+							: SizeTypeTokens.NONE
+					}
+				/>
 				{leftIcon ? <Icon {...leftIcon} /> : null}
 				<TextInput
 					value={value}
@@ -129,8 +134,13 @@ const TextInputBase: React.FunctionComponent<
 					{...props}
 				/>
 				<Space
-					size={rightIcons?.length > 0 ? 8 : 0}
+					size={
+						rightIcons?.length > 0
+							? SizeTypeTokens.MD
+							: SizeTypeTokens.NONE
+					}
 				/>
+				,
 				{renderItem &&
 					rightIcons?.length > 0 &&
 					rightIcons?.map(renderItem)}
@@ -143,7 +153,7 @@ const TextInputBase: React.FunctionComponent<
 						fontSize={FontSizeTokens.XS}
 						color={color}
 					/>
-					<Space size={8} />
+					<Space size={SizeTypeTokens.MD} />
 				</Stack>
 			) : (
 				<></>

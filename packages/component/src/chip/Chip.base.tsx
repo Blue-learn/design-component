@@ -78,7 +78,9 @@ const Chip: React.FC<ChipItemProps> = ({
 				icon?.name && (
 					<>
 						<Icon {...icon} />
-						{label && <Space size={4} />}
+						{label && (
+							<Space size={SizeTypeTokens.SM} />
+						)}
 					</>
 				)}
 			<Typography
@@ -90,7 +92,9 @@ const Chip: React.FC<ChipItemProps> = ({
 			{icon?.align === IconAlignmentTokens.right &&
 				icon?.name && (
 					<>
-						{label && <Space size={4} />}
+						{label && (
+							<Space size={SizeTypeTokens.SM} />
+						)}
 						<Icon {...icon} />
 					</>
 				)}

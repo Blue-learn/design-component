@@ -1,4 +1,7 @@
-import { SpaceProps } from '@blue-learn/schema';
+import {
+	SizeTypeTokens,
+	SpaceProps,
+} from '@blue-learn/schema';
 import React from 'react';
 import { Space } from './Space';
 import { View } from 'react-native';
@@ -8,7 +11,6 @@ export default {
 	component: Space,
 };
 
-// Use the <Stack /> once it's completed
 const Template = (args: SpaceProps) => (
 	<View style={{ flexDirection: 'row' }}>
 		<View
@@ -32,5 +34,12 @@ const Template = (args: SpaceProps) => (
 export const SpaceComponent = Template.bind({});
 
 SpaceComponent.args = {
-	size: 2,
+	size: SizeTypeTokens.SM,
+};
+
+SpaceComponent.argTypes = {
+	size: {
+		control: 'select',
+		options: [...Object.values(SizeTypeTokens)],
+	},
 };

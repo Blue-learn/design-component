@@ -84,8 +84,11 @@ const ButtonBase: React.FunctionComponent<
 		theme.space[paddingHorizontal];
 
 	const iconDetails = {
+		align:
+			icon?.name || iconName
+				? IconAlignmentTokens.right
+				: null,
 		...icon,
-		align: IconAlignmentTokens.right,
 	};
 
 	const styleProps = React.useMemo(
@@ -166,7 +169,7 @@ const ButtonBase: React.FunctionComponent<
 				{(iconAlignment === 'left' ||
 					iconDetails?.align ===
 						IconAlignmentTokens.left) &&
-					label && <Space size={8} />}
+					label && <Space size={SizeTypeTokens.MD} />}
 				<View
 					style={
 						(icon?.name || iconName) ===
@@ -199,7 +202,7 @@ const ButtonBase: React.FunctionComponent<
 				{(iconAlignment === 'right' ||
 					iconDetails?.align ===
 						IconAlignmentTokens.right) &&
-					label && <Space size={8} />}
+					label && <Space size={SizeTypeTokens.MD} />}
 				{(iconAlignment === 'right' ||
 					iconDetails?.align ===
 						IconAlignmentTokens.right) &&

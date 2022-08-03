@@ -8,6 +8,7 @@ import {
 	IconSizeTokens,
 	IconTokens,
 	MemberCardProps,
+	SizeTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
 	StackType,
@@ -30,7 +31,8 @@ const MemberCard: React.FunctionComponent<
 	subtitle,
 	location,
 	headline,
-	interests,
+	chips,
+	chipsTitle,
 	onPress,
 	cta,
 	padding,
@@ -59,7 +61,7 @@ const MemberCard: React.FunctionComponent<
 								uri={avatar}
 								size={AvatarSizeTokens.XL}
 							/>
-							<Space size={8} />
+							<Space size={SizeTypeTokens.MD} />
 							<Stack>
 								<Typography
 									label={title}
@@ -87,12 +89,12 @@ const MemberCard: React.FunctionComponent<
 			body={{
 				children: (
 					<Stack>
-						<Space size={8} />
+						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={headline}
 							type={TypographyTypeTokens.B6}
 						/>
-						<Space size={8} />
+						<Space size={SizeTypeTokens.MD} />
 					</Stack>
 				),
 			}}
@@ -100,18 +102,20 @@ const MemberCard: React.FunctionComponent<
 				children: (
 					<Stack>
 						<Typography
-							label={'Talk to me about'}
+							label={chipsTitle}
 							type={TypographyTypeTokens.H6}
 						/>
-						<Space size={4} />
+						<Space size={SizeTypeTokens.SM} />
 						<Stack type={StackType.row}>
 							{_map(
-								interests,
+								chips,
 								(item: string, index: number) => [
 									<Tag label={item} />,
 									<Space
 										size={
-											index === interests?.length - 1 ? 0 : 8
+											index === chips?.length - 1
+												? SizeTypeTokens.NONE
+												: SizeTypeTokens.MD
 										}
 									/>,
 								],

@@ -1,4 +1,5 @@
 export enum SizeTypeTokens {
+	NONE = 'NONE',
 	XS = 'XS',
 	SM = 'SM',
 	MD = 'MD',
@@ -7,10 +8,12 @@ export enum SizeTypeTokens {
 	XXL = 'XXL',
 	XXXL = 'XXXL',
 	XXXXL = 'XXXXL',
+	XXXXXL = 'XXXXXL',
+	XXXXXXL = 'XXXXXXL',
 }
 
 export type SpaceProps = {
-	size?: number;
+	size: SizeTypeTokens;
 };
 
 export type SizeTypeTokensMap = {

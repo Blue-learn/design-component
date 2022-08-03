@@ -76,7 +76,9 @@ const TagBase: React.FC<TagBaseProps> = ({
 				icon?.name && (
 					<>
 						<Icon {...icon} />
-						{label && <Space size={4} />}
+						{label && (
+							<Space size={SizeTypeTokens.SM} />
+						)}
 					</>
 				)}
 			<Typography
@@ -88,7 +90,9 @@ const TagBase: React.FC<TagBaseProps> = ({
 			{icon?.align === IconAlignmentTokens.right &&
 				icon?.name && (
 					<>
-						{label && <Space size={4} />}
+						{label && (
+							<Space size={SizeTypeTokens.SM} />
+						)}
 						<Icon {...icon} />
 					</>
 				)}
