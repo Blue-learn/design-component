@@ -32,12 +32,15 @@ const TextInput: React.FunctionComponent<
 
 	return (
 		<TextInputBase
-			onChangeText={(text) => {
+			onChangeText={(text: any) => {
 				onChangeText && onChangeText(text);
 				action &&
 					triggerAction &&
 					debounce(
-						triggerAction({ ...action, value: text }),
+						triggerAction({
+							...action,
+							...{ payload: { value: text } },
+						}),
 						300,
 					);
 			}}
