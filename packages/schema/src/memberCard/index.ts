@@ -13,5 +13,6 @@ export type MemberCardProps = {
 	onPress?: Function;
 	cta?: Function;
 	headline?: string;
-	interests?: string[];
+	chips?: string[];
+	chipsTitle?: string;
 };

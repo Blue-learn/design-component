@@ -31,7 +31,8 @@ const MemberCard: React.FunctionComponent<
 	subtitle,
 	location,
 	headline,
-	interests,
+	chips,
+	chipsTitle,
 	onPress,
 	cta,
 	padding,
@@ -101,18 +102,18 @@ const MemberCard: React.FunctionComponent<
 				children: (
 					<Stack>
 						<Typography
-							label={'Talk to me about'}
+							label={chipsTitle}
 							type={TypographyTypeTokens.H6}
 						/>
 						<Space size={SizeTypeTokens.SM} />
 						<Stack type={StackType.row}>
 							{_map(
-								interests,
+								chips,
 								(item: string, index: number) => [
 									<Tag label={item} />,
 									<Space
 										size={
-											index === interests?.length - 1
+											index === chips?.length - 1
 												? SizeTypeTokens.NONE
 												: SizeTypeTokens.MD
 										}

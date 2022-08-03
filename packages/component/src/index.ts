@@ -17,5 +17,7 @@ export * as Chip from './chip';
 export * as Gradient from './gradient';
 export * as Tag from './tag';
 export * as MemberCard from './memberCard';
+export * as IcebreakerCard from './icebreakerCard';
+export * as UserCard from './userCard';
 export * from './mock';
 export * from './registry';
