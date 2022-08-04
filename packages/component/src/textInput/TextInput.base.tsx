@@ -14,6 +14,7 @@ import {
 	FontSizeTokensMap,
 	StackType,
 	WidgetProps,
+	IconSizeTokens,
 } from '@blue-learn/schema';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
@@ -41,11 +42,11 @@ const TextInputBase: React.FunctionComponent<
 	title,
 	caption,
 	leftIcon,
+	multiline = false,
 	rightIcons = [],
 	onChangeText,
 	value,
 	renderItem,
-	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
@@ -79,7 +80,6 @@ const TextInputBase: React.FunctionComponent<
 			backgroundColor: colorMapping[bgColor],
 			borderColor: colorMapping[borderColor],
 			borderRadius: borderRadiusValue,
-			paddingRight: paddingVerticalValue,
 		}),
 		[
 			bgColor,
@@ -115,7 +115,12 @@ const TextInputBase: React.FunctionComponent<
 							: SizeTypeTokens.NONE
 					}
 				/>
-				{leftIcon ? <Icon {...leftIcon} /> : null}
+				{leftIcon ? (
+					<Icon
+						{...leftIcon}
+						size={IconSizeTokens.SM}
+					/>
+				) : null}
 				<TextInput
 					value={value}
 					isDisabled={isDisabled}
@@ -130,8 +135,9 @@ const TextInputBase: React.FunctionComponent<
 						paddingHorizontal: paddingHorizontalValue,
 						paddingVertical: paddingVerticalValue,
 					}}
-					textAlignVertical='top'
-					{...props}
+					textAlignVertical={
+						multiline ? 'top' : 'center'
+					}
 				/>
 				<Space
 					size={
@@ -140,7 +146,6 @@ const TextInputBase: React.FunctionComponent<
 							: SizeTypeTokens.NONE
 					}
 				/>
-				,
 				{renderItem &&
 					rightIcons?.length > 0 &&
 					rightIcons?.map(renderItem)}
