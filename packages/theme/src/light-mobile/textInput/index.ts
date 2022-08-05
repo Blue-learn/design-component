@@ -25,7 +25,7 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 			borderColor: ColorTokens.Transparent,
 			borderRadius: BorderRadiusTokens.BR4,
 			paddingVertical: SizeTypeTokens.LG,
-			paddingHorizontal: SizeTypeTokens.XL,
+			paddingHorizontal: SizeTypeTokens.LG,
 		},
 		[inputTypeToken.chat]: {
 			fontSize: FontSizeTokens.SM,
