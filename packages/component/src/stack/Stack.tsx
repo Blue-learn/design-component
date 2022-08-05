@@ -2,7 +2,7 @@ import {
 	StackAlignItems,
 	StackFlexWrap,
 	StackJustifyContent,
-	StackProp,
+	StackProps,
 	StackType,
 	WidgetProps,
 } from '@blue-learn/schema';
@@ -15,7 +15,7 @@ import { View } from 'react-native';
  * Note: renderItem should be passed to render WidgetItem
  **/
 const Stack: React.FC<
-	StackProp & WidgetProps
+	StackProps & WidgetProps
 > = ({
 	type = StackType.column,
 	children = <></>,
