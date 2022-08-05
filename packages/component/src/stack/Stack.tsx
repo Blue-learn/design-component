@@ -1,10 +1,9 @@
 import {
 	StackAlignItems,
-	StackAlignType,
+	StackFlexWrap,
 	StackJustifyContent,
-	StackProp,
+	StackProps,
 	StackType,
-	WidgetItem,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
@@ -16,7 +15,7 @@ import { View } from 'react-native';
  * Note: renderItem should be passed to render WidgetItem
  **/
 const Stack: React.FC<
-	StackProp & WidgetProps
+	StackProps & WidgetProps
 > = ({
 	type = StackType.column,
 	children = <></>,
@@ -26,6 +25,7 @@ const Stack: React.FC<
 	renderItem,
 	alignItems = StackAlignItems.flexStart,
 	justifyContent = StackJustifyContent.flexStart,
+	flexWrap = StackFlexWrap.nowrap,
 }) => {
 	return (
 		<View
@@ -33,6 +33,7 @@ const Stack: React.FC<
 				flexDirection: type,
 				justifyContent: alignX || justifyContent,
 				alignItems: alignY || alignItems,
+				flexWrap,
 			}}
 		>
 			{children}

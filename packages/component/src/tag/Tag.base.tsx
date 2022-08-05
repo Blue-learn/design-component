@@ -3,6 +3,7 @@ import {
 	SizeTypeTokens,
 	IconAlignmentTokens,
 	TagBaseProps,
+	FontTransformToken,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { View, Platform } from 'react-native';
@@ -54,6 +55,7 @@ const TagBase: React.FC<TagBaseProps> = ({
 			alignItems: 'center',
 			backgroundColor: backgroundColor,
 			borderRadius: borderRadiusValue,
+			marginVertical: paddingTop / 2,
 			paddingTop: paddingTop,
 			paddingBottom: paddingBottom,
 			paddingLeft: paddingLeft,
@@ -84,6 +86,7 @@ const TagBase: React.FC<TagBaseProps> = ({
 			<Typography
 				label={label}
 				fontSize={fontSize}
+				textTransform={FontTransformToken.capitalize}
 				fontFamily={FontFamilyTokens.manropeSemiBold}
 				color={labelColor}
 			/>
