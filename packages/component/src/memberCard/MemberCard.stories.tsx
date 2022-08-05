@@ -22,7 +22,18 @@ MemberCardComponent.args = {
 		'https://reactnative.dev/img/tiny_logo.png',
 	headline: 'lorem ipsum dolor sit amet',
 	chipsTitle: 'Talk to me about',
-	chips: ['react', 'react native'],
+	location: 'Bangalore, India',
+	chips: [
+		'aiml',
+		'anime',
+		'art',
+		'commerce',
+		'content_creation',
+		'crypto',
+		'entrepreneurship',
+		'internships',
+		'uiux',
+	],
 };
 
 MemberCardComponent.argTypes = {};

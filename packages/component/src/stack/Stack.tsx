@@ -1,10 +1,9 @@
 import {
 	StackAlignItems,
-	StackAlignType,
+	StackFlexWrap,
 	StackJustifyContent,
 	StackProp,
 	StackType,
-	WidgetItem,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
@@ -26,6 +25,7 @@ const Stack: React.FC<
 	renderItem,
 	alignItems = StackAlignItems.flexStart,
 	justifyContent = StackJustifyContent.flexStart,
+	flexWrap = StackFlexWrap.nowrap,
 }) => {
 	return (
 		<View
@@ -33,6 +33,7 @@ const Stack: React.FC<
 				flexDirection: type,
 				justifyContent: alignX || justifyContent,
 				alignItems: alignY || alignItems,
+				flexWrap,
 			}}
 		>
 			{children}

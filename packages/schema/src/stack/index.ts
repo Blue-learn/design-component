@@ -84,6 +84,12 @@ export enum StackAlignItems {
 	baseline = 'baseline',
 }
 
+export enum StackFlexWrap {
+	wrap = 'wrap',
+	nowrap = 'nowrap',
+	wrapReverse = 'wrap-reverse',
+}
+
 /**
  * New Props for Stack Component
  **/
@@ -118,4 +124,8 @@ export type StackProp = {
 	/** @description alignItems -> Secondary Axis same as RN View Component
 	 * */
 	alignItems?: StackAlignItems;
+	/** @description flexWrap controls whether children can wrap around after they hit the end of a flex container.
+	 * */
+
+	flexWrap?: StackFlexWrap;
 };

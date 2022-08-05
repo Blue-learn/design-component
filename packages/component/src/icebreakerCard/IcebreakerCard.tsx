@@ -6,7 +6,8 @@ import {
 	IcebreakerCardProps,
 	IconTokens,
 	SizeTypeTokens,
-	StackAlignItems,
+	StackJustifyContent,
+	StackType,
 	TypographyTypeTokens,
 } from '@blue-learn/schema';
 import Card from '../card/Card';
@@ -45,7 +46,10 @@ const IcebreakerCard: React.FunctionComponent<
 			}}
 			footer={{
 				children: (
-					<Stack alignItems={StackAlignItems.flexEnd}>
+					<Stack
+						type={StackType.row}
+						justifyContent={StackJustifyContent.flexEnd}
+					>
 						<Button
 							type={ButtonTypeTokens.SmallElevated}
 							icon={{ name: IconTokens.Chat }}
