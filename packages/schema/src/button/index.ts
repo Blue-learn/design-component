@@ -5,7 +5,7 @@ import { ShadowTypeTokens } from '../shadow';
 import { SizeTypeTokens } from '../size';
 import {
 	StackAlignType,
-	StackProp,
+	StackProps,
 } from '../stack';
 import { FontSizeTokens } from '../typography';
 
@@ -97,7 +97,7 @@ export type ButtonBaseProps = {
 	 * Button flex accepts the stack align types
 	 */
 	flex?: StackAlignType;
-	stack?: StackProp;
+	stack?: StackProps;
 };
 
 export type ButtonThemeProps = {

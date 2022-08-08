@@ -4,12 +4,12 @@ import {
 	BorderRadiusTokens,
 	ButtonTypeTokens,
 	ColorTokens,
-	FontSizeTokens,
 	IconSizeTokens,
 	IconTokens,
 	MemberCardProps,
 	SizeTypeTokens,
 	StackAlignItems,
+	StackFlexWrap,
 	StackJustifyContent,
 	StackType,
 	TypographyTypeTokens,
@@ -22,6 +22,7 @@ import Space from '../space/Space';
 import _map from 'lodash-es/map';
 import Tag from '../tag/Tag';
 import Button from '../button/Button';
+import Icon from '../icon/Icon';
 
 const MemberCard: React.FunctionComponent<
 	MemberCardProps
@@ -39,6 +40,18 @@ const MemberCard: React.FunctionComponent<
 	borderRadius = BorderRadiusTokens.BR2,
 }) => {
 	if (!title) return <></>;
+	const interestToString = (interest: string) => {
+		if (interest && interest !== null) {
+			let temp = interest
+				.replace(/_/g, ' ')
+				.toLowerCase();
+			return (
+				temp.charAt(0).toUpperCase() + temp.slice(1)
+			);
+		} else {
+			return ' ';
+		}
+	};
 
 	return (
 		<Card
@@ -67,11 +80,32 @@ const MemberCard: React.FunctionComponent<
 									label={title}
 									type={TypographyTypeTokens.H4}
 								/>
-								<Typography
-									label={subtitle}
-									type={TypographyTypeTokens.B4}
-									fontSize={FontSizeTokens.XS}
-								/>
+								<Stack
+									type={StackType.row}
+									alignItems={StackAlignItems.center}
+								>
+									{location ? (
+										<Icon
+											name={IconTokens.LocationPin}
+											size={IconSizeTokens.XS}
+											color={ColorTokens.Grey_200}
+										/>
+									) : (
+										<></>
+									)}
+									<Space
+										size={
+											location
+												? SizeTypeTokens.SM
+												: SizeTypeTokens.NONE
+										}
+									/>
+									<Typography
+										label={location ? location : subtitle}
+										type={TypographyTypeTokens.B6}
+										color={ColorTokens.Grey_200}
+									/>
+								</Stack>
 							</Stack>
 						</Stack>
 						<Button
@@ -105,12 +139,15 @@ const MemberCard: React.FunctionComponent<
 							label={chipsTitle}
 							type={TypographyTypeTokens.H6}
 						/>
-						<Space size={SizeTypeTokens.SM} />
-						<Stack type={StackType.row}>
+						<Space size={SizeTypeTokens.XS} />
+						<Stack
+							type={StackType.row}
+							flexWrap={StackFlexWrap.wrap}
+						>
 							{_map(
 								chips,
 								(item: string, index: number) => [
-									<Tag label={item} />,
+									<Tag label={interestToString(item)} />,
 									<Space
 										size={
 											index === chips?.length - 1

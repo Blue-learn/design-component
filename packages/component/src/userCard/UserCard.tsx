@@ -55,6 +55,7 @@ const UserCard: React.FunctionComponent<
 									<Icon
 										name={IconTokens.LocationPin}
 										size={IconSizeTokens.XS}
+										color={ColorTokens.Grey_200}
 									/>
 									<Space size={SizeTypeTokens.SM} />
 									<Typography

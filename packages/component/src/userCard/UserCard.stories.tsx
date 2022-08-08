@@ -18,7 +18,7 @@ UserCardCompoent.args = {
 	subtitle: 'Software Engineer',
 	avatar:
 		'https://reactnative.dev/img/tiny_logo.png',
-	// location: 'Bangalore, India',
+	location: 'Bangalore, India',
 };
 
 UserCardCompoent.argTypes = {};

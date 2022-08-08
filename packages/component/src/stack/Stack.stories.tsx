@@ -1,8 +1,7 @@
 import {
 	StackAlignItems,
-	StackAlignType,
 	StackJustifyContent,
-	StackProp,
+	StackProps,
 	StackType,
 	WIDGET,
 } from '@blue-learn/schema';
@@ -16,7 +15,7 @@ export default {
 	component: Stack,
 };
 
-const Template = (args: StackProp) => {
+const Template = (args: StackProps) => {
 	/**
 	 *  Dynamic way
 	 * */
