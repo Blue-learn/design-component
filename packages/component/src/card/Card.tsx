@@ -6,7 +6,7 @@ import {
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import ThemeProvider from '@blue-learn/theme';
-import { View } from 'react-native';
+import { View, Pressable } from 'react-native';
 import Gradient from '../gradient/Gradient';
 
 const Card: React.FC<CardProps & WidgetProps> = ({
@@ -23,6 +23,9 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 	borderRadius = SizeTypeTokens.LG,
 	shadow,
 	gradient,
+	onPress,
+	action,
+	triggerAction,
 	renderItem,
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -79,37 +82,42 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 			borderRadius,
 		],
 	);
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
+	const child = [
+		header?.children,
+		renderItem &&
+			header?.widgetItems?.length > 0 &&
+			header?.widgetItems.map(renderItem),
+		body?.children,
+		renderItem &&
+			body?.widgetItems?.length > 0 &&
+			body?.widgetItems.map(renderItem),
+		footer?.children,
+		renderItem &&
+			footer?.widgetItems?.length > 0 &&
+			footer?.widgetItems.map(renderItem),
+	];
 
-	return gradient?.colors?.length > 1 ? (
-		<Gradient style={[styleProps]} {...gradient}>
-			{header?.children}
-			{renderItem &&
-				header?.widgetItems?.length > 0 &&
-				header?.widgetItems.map(renderItem)}
-			{body?.children}
-			{renderItem &&
-				body?.widgetItems?.length > 0 &&
-				body?.widgetItems.map(renderItem)}
-			{footer?.children}
-			{renderItem &&
-				footer?.widgetItems?.length > 0 &&
-				footer?.widgetItems.map(renderItem)}
-		</Gradient>
+	const childWithBackground =
+		gradient?.colors?.length > 1 ? (
+			<Gradient style={[styleProps]} {...gradient}>
+				{child}
+			</Gradient>
+		) : (
+			<View style={[styleProps]}>{child}</View>
+		);
+
+	return onPress ? (
+		<Pressable onPress={handleAction}>
+			{childWithBackground}
+		</Pressable>
 	) : (
-		<View style={[styleProps]}>
-			{header?.children}
-			{renderItem &&
-				header?.widgetItems?.length > 0 &&
-				header?.widgetItems.map(renderItem)}
-			{body?.children}
-			{renderItem &&
-				body?.widgetItems?.length > 0 &&
-				body?.widgetItems.map(renderItem)}
-			{footer?.children}
-			{renderItem &&
-				footer?.widgetItems?.length > 0 &&
-				footer?.widgetItems.map(renderItem)}
-		</View>
+		childWithBackground
 	);
 };
 

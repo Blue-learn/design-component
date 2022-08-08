@@ -111,6 +111,7 @@ const MemberCard: React.FunctionComponent<
 						<Button
 							type={ButtonTypeTokens.IconFilled}
 							labelColor={ColorTokens.Grey_500}
+							onPress={cta}
 							icon={{
 								name: IconTokens.Chat,
 								size: IconSizeTokens.XL,

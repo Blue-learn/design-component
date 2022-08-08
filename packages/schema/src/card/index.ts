@@ -15,6 +15,7 @@ export type CardItemRenderType = {
 };
 
 export type CardProps = {
+	onPress?: Function;
 	header?: CardItemRenderType;
 	body?: CardItemRenderType;
 	footer?: CardItemRenderType;
