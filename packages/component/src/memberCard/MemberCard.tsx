@@ -57,6 +57,8 @@ const MemberCard: React.FunctionComponent<
 		<Card
 			bgColor={ColorTokens.Grey_600}
 			borderRadius={borderRadius}
+			onPress={onPress}
+			padding={padding}
 			header={{
 				children: (
 					<Stack
@@ -111,6 +113,7 @@ const MemberCard: React.FunctionComponent<
 						<Button
 							type={ButtonTypeTokens.IconFilled}
 							labelColor={ColorTokens.Grey_500}
+							onPress={cta}
 							icon={{
 								name: IconTokens.Chat,
 								size: IconSizeTokens.XL,
