@@ -57,6 +57,8 @@ const MemberCard: React.FunctionComponent<
 		<Card
 			bgColor={ColorTokens.Grey_600}
 			borderRadius={borderRadius}
+			onPress={onPress}
+			padding={padding}
 			header={{
 				children: (
 					<Stack
