@@ -37,6 +37,7 @@ const MemberCard: React.FunctionComponent<
 	onPress,
 	cta,
 	padding,
+	bgColor = ColorTokens.Grey_600,
 	borderRadius = BorderRadiusTokens.BR2,
 }) => {
 	if (!title) return <></>;
@@ -55,7 +56,7 @@ const MemberCard: React.FunctionComponent<
 
 	return (
 		<Card
-			bgColor={ColorTokens.Grey_600}
+			bgColor={bgColor}
 			borderRadius={borderRadius}
 			onPress={onPress}
 			padding={padding}
