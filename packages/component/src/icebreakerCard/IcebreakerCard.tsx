@@ -19,12 +19,20 @@ import Space from '../space/Space';
 
 const IcebreakerCard: React.FunctionComponent<
 	IcebreakerCardProps
-> = ({ title, subtitle, onPress, ctaText }) => {
+> = ({
+	title,
+	subtitle,
+	onPress,
+	ctaText,
+	gradient,
+	bgColor = ColorTokens.Grey_600,
+}) => {
 	if (!title) return <></>;
 
 	return (
 		<Card
-			bgColor={ColorTokens.Grey_600}
+			gradient={gradient}
+			bgColor={bgColor}
 			borderRadius={BorderRadiusTokens.BR2}
 			padding={{
 				vertical: SizeTypeTokens.XL,
