@@ -67,6 +67,7 @@ export enum IconTokens {
 	Page = 'page',
 	Sticker = 'sticker',
 	Bluelearn = 'bluelearn',
+	TwoUsers = 'two-users',
 }
 
 export enum IconSizeTokens {
