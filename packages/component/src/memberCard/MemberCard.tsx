@@ -125,20 +125,22 @@ const MemberCard: React.FunctionComponent<
 				),
 			}}
 			body={{
-				children: (
+				children: headline ? (
 					<Stack>
 						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={headline}
 							type={TypographyTypeTokens.B6}
 						/>
-						<Space size={SizeTypeTokens.MD} />
 					</Stack>
+				) : (
+					<></>
 				),
 			}}
 			footer={{
 				children: (
 					<Stack>
+						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={chipsTitle}
 							type={TypographyTypeTokens.H6}
