@@ -68,6 +68,7 @@ export enum IconTokens {
 	Sticker = 'sticker',
 	Bluelearn = 'bluelearn',
 	TwoUsers = 'two-users',
+	Check = 'check',
 }
 
 export enum IconSizeTokens {

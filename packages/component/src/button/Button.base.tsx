@@ -178,17 +178,15 @@ const ButtonBase: React.FunctionComponent<
 							: {}
 					}
 				>
-					{label && (
-						<Typography
-							label={label}
-							color={labelColor}
-							fontSize={fontSize}
-							textAlign={TextAlignTokens.center}
-							fontFamily={
-								FontFamilyTokens.manropeSemiBold
-							}
-						/>
-					)}
+					<Typography
+						label={label ? label : ''}
+						color={labelColor}
+						fontSize={fontSize}
+						textAlign={TextAlignTokens.center}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
+					/>
 				</View>
 
 				{loading && (
