@@ -37,6 +37,7 @@ const MemberCard: React.FunctionComponent<
 	onPress,
 	cta,
 	padding,
+	bgColor = ColorTokens.Grey_600,
 	borderRadius = BorderRadiusTokens.BR2,
 }) => {
 	if (!title) return <></>;
@@ -55,8 +56,10 @@ const MemberCard: React.FunctionComponent<
 
 	return (
 		<Card
-			bgColor={ColorTokens.Grey_600}
+			bgColor={bgColor}
 			borderRadius={borderRadius}
+			onPress={onPress}
+			padding={padding}
 			header={{
 				children: (
 					<Stack
@@ -111,6 +114,7 @@ const MemberCard: React.FunctionComponent<
 						<Button
 							type={ButtonTypeTokens.IconFilled}
 							labelColor={ColorTokens.Grey_500}
+							onPress={cta}
 							icon={{
 								name: IconTokens.Chat,
 								size: IconSizeTokens.XL,
@@ -121,20 +125,22 @@ const MemberCard: React.FunctionComponent<
 				),
 			}}
 			body={{
-				children: (
+				children: headline ? (
 					<Stack>
 						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={headline}
 							type={TypographyTypeTokens.B6}
 						/>
-						<Space size={SizeTypeTokens.MD} />
 					</Stack>
+				) : (
+					<></>
 				),
 			}}
 			footer={{
 				children: (
 					<Stack>
+						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={chipsTitle}
 							type={TypographyTypeTokens.H6}

@@ -137,7 +137,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SizeTypeTokens.SM,
 			fontSize: FontSizeTokens.XS,
-			paddingHorizontal: SizeTypeTokens.XL,
+			paddingHorizontal: SizeTypeTokens.SM,
 		},
 		[ButtonTypeTokens.IconGhost]: {
 			borderRadius: BorderRadiusTokens.BR4,
