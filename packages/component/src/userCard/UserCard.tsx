@@ -22,11 +22,18 @@ import Divider from '../divider/Divider';
 
 const UserCard: React.FunctionComponent<
 	UserCardProps
-> = ({ title, subtitle, avatar, location }) => {
+> = ({
+	title,
+	subtitle,
+	avatar,
+	location,
+	onPress,
+}) => {
 	if (!title) return <></>;
 
 	return (
 		<Card
+			onPress={onPress}
 			padding={{
 				top: SizeTypeTokens.LG,
 			}}
