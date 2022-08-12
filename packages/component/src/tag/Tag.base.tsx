@@ -23,6 +23,10 @@ const TagBase: React.FC<TagBaseProps> = ({
 		horizontal: SizeTypeTokens.MD,
 		vertical: SizeTypeTokens.SM,
 	},
+	margin = {
+		right: SizeTypeTokens.LG,
+		bottom: SizeTypeTokens.LG,
+	},
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -49,13 +53,17 @@ const TagBase: React.FC<TagBaseProps> = ({
 			padding?.horizontal || padding?.right
 		];
 
+	const marginRight = theme.space[margin?.right];
+	const marginBottom = theme.space[margin?.bottom];
+
 	const styleProps = React.useMemo(
 		() => ({
 			flexDirection: 'row',
 			alignItems: 'center',
 			backgroundColor: backgroundColor,
 			borderRadius: borderRadiusValue,
-			marginVertical: paddingTop / 2,
+			marginBottom: marginBottom / 2,
+			marginRight: marginRight / 2,
 			paddingTop: paddingTop,
 			paddingBottom: paddingBottom,
 			paddingLeft: paddingLeft,

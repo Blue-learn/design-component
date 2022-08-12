@@ -152,16 +152,12 @@ const MemberCard: React.FunctionComponent<
 						>
 							{_map(
 								chips,
-								(item: string, index: number) => [
-									<Tag label={interestToString(item)} />,
-									<Space
-										size={
-											index === chips?.length - 1
-												? SizeTypeTokens.NONE
-												: SizeTypeTokens.MD
-										}
-									/>,
-								],
+								(item: string, index: number) => (
+									<Tag
+										key={index}
+										label={interestToString(item)}
+									/>
+								),
 							)}
 						</Stack>
 					</Stack>
