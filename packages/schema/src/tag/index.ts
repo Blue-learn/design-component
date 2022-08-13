@@ -17,6 +17,7 @@ export type TagProps = {
 	 * Default Icon null
 	 */
 	icon?: IconProps;
+	margin?: PaddingProps;
 };
 
 export type TagBaseProps = {
@@ -33,6 +34,7 @@ export type TagBaseProps = {
 	bgColor: ColorTokens;
 	fontSize: FontSizeTokens;
 	padding?: PaddingProps;
+	margin?: PaddingProps;
 };
 
 export type TagThemeProps = {

@@ -36,6 +36,7 @@ const Avatar: React.FC<AvatarProps> = ({
 					uris.slice(0, 3),
 					(item: string, index: number) => [
 						<AvatarBase
+							key={index}
 							uri={item}
 							overlap={index ? true : false}
 							{...props}
