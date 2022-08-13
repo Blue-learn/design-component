@@ -1,9 +1,13 @@
-import { MemberCardProps } from '@blue-learn/schema';
+import {
+	MemberCardProps,
+	WIDGET,
+} from '@blue-learn/schema';
 import React from 'react';
 import MemberCard from './MemberCard';
+import * as Mock from './MemberCard.mock';
 
 export default {
-	title: 'Component/MemberCard',
+	title: WIDGET.MEMBERCARD,
 	component: MemberCard,
 };
 
@@ -16,24 +20,7 @@ export const MemberCardComponent = Template.bind(
 );
 
 MemberCardComponent.args = {
-	title: 'Saidatta Sahu',
-	subtitle: 'Software Engineer',
-	avatar:
-		'https://reactnative.dev/img/tiny_logo.png',
-	headline: 'lorem ipsum dolor sit amet',
-	chipsTitle: 'Talk to me about',
-	location: 'Bangalore, India',
-	chips: [
-		'aiml',
-		'anime',
-		'art',
-		'commerce',
-		'content_creation',
-		'crypto',
-		'entrepreneurship',
-		'internships',
-		'uiux',
-	],
+	...Mock.args,
 };
 
 MemberCardComponent.argTypes = {};

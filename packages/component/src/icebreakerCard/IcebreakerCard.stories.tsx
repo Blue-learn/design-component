@@ -1,9 +1,13 @@
-import { IcebreakerCardProps } from '@blue-learn/schema';
+import {
+	IcebreakerCardProps,
+	WIDGET,
+} from '@blue-learn/schema';
 import React from 'react';
 import IcebreakerCard from './IcebreakerCard';
+import * as Mock from './IcebreakerCard.mock';
 
 export default {
-	title: 'Component/IcebreakerCard',
+	title: WIDGET.ICEBREAKERCARD,
 	component: IcebreakerCard,
 };
 
@@ -11,13 +15,12 @@ const Template = (args: IcebreakerCardProps) => (
 	<IcebreakerCard {...args} />
 );
 
-export const IcebreakerCardCompoent =
-	Template.bind({});
+export const Component = Template.bind({});
 
-IcebreakerCardCompoent.args = {
-	title: 'Saidatta Sahu',
-	subtitle: 'Software Engineer',
-	ctaText: 'Reply',
+Component.args = {
+	...Mock.args,
 };
 
-IcebreakerCardCompoent.argTypes = {};
+Component.argTypes = {
+	...Mock.argTypes,
+};

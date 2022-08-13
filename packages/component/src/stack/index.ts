@@ -1,2 +1,3 @@
 import Stack from './Stack';
-export { Stack as Component };
+import * as Mock from './Stack.mock';
+export { Stack as Component, Mock };

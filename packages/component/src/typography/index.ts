@@ -1,2 +1,3 @@
 import Typography from './Typography';
-export { Typography as Component };
+import * as Mock from './Typography.mock';
+export { Typography as Component, Mock };

@@ -1,9 +1,13 @@
-import { ProgressIndicatorProps } from '@blue-learn/schema';
+import {
+	ProgressIndicatorProps,
+	WIDGET,
+} from '@blue-learn/schema';
 import React from 'react';
 import ProgressIndicator from './ProgressIndicator';
+import * as Mock from './ProgressIndicator.mock';
 
 export default {
-	title: 'Component/Progress Indicator',
+	title: WIDGET.PROGRESSINDICATOR,
 	component: ProgressIndicator,
 };
 
@@ -15,6 +19,5 @@ export const ProgessIndicatorComponent =
 	Template.bind({});
 
 ProgessIndicatorComponent.args = {
-	size: 3,
-	activeIndex: 1,
+	...Mock.args,
 };

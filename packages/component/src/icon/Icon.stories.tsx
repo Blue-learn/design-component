@@ -1,15 +1,13 @@
 import {
-	ButtonProps,
-	ColorTokens,
 	IconProps,
-	IconSizeTokens,
-	IconTokens,
+	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import Icon from './Icon';
+import * as Mock from './Icon.mock';
 
 export default {
-	title: 'Component/Icon',
+	title: WIDGET.ICON,
 	component: Icon,
 	color: '#fff',
 };
@@ -18,23 +16,12 @@ const Template = (args: IconProps) => (
 	<Icon {...args} />
 );
 
-export const IconComponent = Template.bind({});
+export const Component = Template.bind({});
 
-IconComponent.args = {
-	name: 'chat',
+Component.args = {
+	...Mock.args,
 };
 
-IconComponent.argTypes = {
-	name: {
-		control: 'select',
-		options: [...Object.values(IconTokens)],
-	},
-	size: {
-		control: 'select',
-		options: [...Object.values(IconSizeTokens)],
-	},
-	color: {
-		control: 'select',
-		options: [...Object.values(ColorTokens)],
-	},
+Component.argTypes = {
+	...Mock.argTypes,
 };

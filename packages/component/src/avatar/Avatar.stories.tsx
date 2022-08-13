@@ -1,56 +1,25 @@
 import {
 	AvatarProps,
-	AvatarSizeTokens,
-	ColorTokens,
-	BorderRadiusTokens,
-	AvatarTypeTokens,
+	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import { Avatar } from './Avatar';
+import * as Mock from './Avatar.mock';
 
 export default {
-	title: 'Component/Avatar',
+	title: WIDGET.AVATAR,
 	component: Avatar,
-	uri: 'https://reactnative.dev/img/tiny_logo.png',
-	size: AvatarSizeTokens.LG,
+	...Mock.args,
 };
 
 const Template = (args: AvatarProps) => (
 	<Avatar {...args} />
 );
 
-export const AvatarComponent = Template.bind({});
+export const Component = Template.bind({});
 
-AvatarComponent.args = {
-	uris: [
-		'https://reactnative.dev/img/tiny_logo.png',
-		'https://reactnative.dev/img/tiny_logo.png',
-		'https://reactnative.dev/img/tiny_logo.png',
-		'https://reactnative.dev/img/tiny_logo.png',
-	],
-	uri: 'https://reactnative.dev/img/tiny_logo.png',
-	type: AvatarTypeTokens.MULTIPLE,
-	size: AvatarSizeTokens.LG,
-	borderWidth: 3,
-	borderColor: ColorTokens.Grey_100,
-	BorderRadius: BorderRadiusTokens.BR4,
-};
+Component.args = Mock.args;
 
-AvatarComponent.argTypes = {
-	size: {
-		control: 'select',
-		options: [...Object.values(AvatarSizeTokens)],
-	},
-	type: {
-		control: 'select',
-		options: [...Object.values(AvatarTypeTokens)],
-	},
-	borderRadius: {
-		control: 'select',
-		options: [...Object.values(BorderRadiusTokens)],
-	},
-	borderColor: {
-		control: 'select',
-		options: [...Object.values(ColorTokens)],
-	},
+Component.argTypes = {
+	...Mock.argTypes,
 };

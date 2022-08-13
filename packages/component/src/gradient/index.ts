@@ -1,2 +1,3 @@
 import Gradient from './Gradient';
-export { Gradient as Component };
+import * as Mock from './Gradient.mock';
+export { Gradient as Component, Mock };

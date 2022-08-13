@@ -1,12 +1,7 @@
-import {
-	IconAlignmentTokens,
-	IconSizeTokens,
-	IconTokens,
-	TagProps,
-	TagTypeTokens,
-} from '@blue-learn/schema';
+import { TagProps } from '@blue-learn/schema';
 import React from 'react';
 import Tag from './Tag';
+import * as Mock from './Tag.mock';
 
 export default {
 	title: 'Component/Tag',
@@ -20,18 +15,9 @@ const Template = (args: TagProps) => (
 export const TagComponent = Template.bind({});
 
 TagComponent.args = {
-	label: 'Tag',
-	type: TagTypeTokens.DEFAULT,
-	icon: {
-		name: IconTokens.Fire,
-		size: IconSizeTokens.XS,
-		align: IconAlignmentTokens.left,
-	},
+	...Mock.args,
 };
 
 TagComponent.argTypes = {
-	type: {
-		control: 'select',
-		options: [...Object.values(TagTypeTokens)],
-	},
+	...Mock.argTypes,
 };

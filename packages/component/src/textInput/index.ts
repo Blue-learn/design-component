@@ -1,2 +1,3 @@
 import TextInput from './TextInput';
-export { TextInput as Component };
+import * as Mock from './TextInput.mock'
+export { TextInput as Component, Mock };

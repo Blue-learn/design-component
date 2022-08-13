@@ -1,3 +1,4 @@
 import Lottie from './Lottie';
+import * as Mock from './Lottie.mock';
 
-export { Lottie as Component };
+export { Lottie as Component, Mock };

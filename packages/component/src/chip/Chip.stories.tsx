@@ -1,47 +1,21 @@
 import {
 	ChipProps,
-	ColorTokens,
-	IconAlignmentTokens,
-	IconSizeTokens,
-	IconTokens,
+	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import Chip from './Chip';
+import * as Mock from './Chip.mock';
 
 export default {
-	title: 'Component/Chip',
+	title: WIDGET.CHIP,
 	component: Chip,
+	...Mock.args,
 };
 
 const Template = (args: ChipProps) => (
 	<Chip {...args} />
 );
 
-export const ChipComponent = Template.bind({});
+export const Component = Template.bind({});
 
-ChipComponent.args = {
-	data: [
-		{
-			label: 'Chip1',
-			bgColor: ColorTokens.Black,
-			labelColor: ColorTokens.Grey_100,
-			icon: {
-				name: IconTokens.Sparkling,
-				color: ColorTokens.Grey_100,
-				size: IconSizeTokens.XXS,
-				align: IconAlignmentTokens.left,
-			},
-		},
-		{
-			label: 'Chip2',
-			bgColor: ColorTokens.Grey_600,
-			labelColor: ColorTokens.Grey_100,
-			icon: {
-				name: IconTokens.Sparkling,
-				color: ColorTokens.Grey_100,
-				size: IconSizeTokens.XXS,
-				align: IconAlignmentTokens.left,
-			},
-		},
-	],
-};
+Component.args = Mock.args;

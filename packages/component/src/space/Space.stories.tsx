@@ -1,13 +1,14 @@
 import {
-	SizeTypeTokens,
 	SpaceProps,
+	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import { Space } from './Space';
 import { View } from 'react-native';
+import * as Mock from './Space.mock';
 
 export default {
-	title: 'Component/Space',
+	title: WIDGET.SPACE,
 	component: Space,
 };
 
@@ -34,12 +35,9 @@ const Template = (args: SpaceProps) => (
 export const SpaceComponent = Template.bind({});
 
 SpaceComponent.args = {
-	size: SizeTypeTokens.SM,
+	...Mock.args,
 };
 
 SpaceComponent.argTypes = {
-	size: {
-		control: 'select',
-		options: [...Object.values(SizeTypeTokens)],
-	},
+	...Mock.argTypes,
 };

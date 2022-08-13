@@ -1,2 +1,3 @@
 import Card from './Card';
-export { Card as Component };
+import * as Mock from './Card.mock';
+export { Card as Component, Mock };

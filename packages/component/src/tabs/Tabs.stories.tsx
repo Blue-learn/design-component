@@ -3,28 +3,18 @@ import {
 	TabsProps,
 	WIDGET,
 } from '@blue-learn/schema';
-import { MockedWidgetProps } from '../mock';
 import Tabs from './Tabs';
+import * as Mock from './Tabs.mock';
 
 export default {
-	title: 'Component/Tabs',
+	title: WIDGET.TABS,
 	component: Tabs,
 };
 
 const Template = (args: TabsProps) => {
-	console.log(args);
-	let props = {
-		...args,
-		options: [
-			{ label: 'Tab 1' },
-			{ label: 'Tab 2' },
-		],
-		components: [
-			'Tab 1 contents',
-			'Tab 2 contents',
-		],
-	};
-	return <Tabs {...props} />;
+	return <Tabs {...args} />;
 };
 
-export const TabbedView = Template.bind({});
+export const TabbedView = Template.bind({
+	...Mock.args,
+});

@@ -21,5 +21,6 @@ export type Action<DataType = any> = {
 export type WidgetRegistry = {
 	[key: string]: {
 		Component?: any;
+		Mock?: { args?: any; argsType?: any };
 	};
 };

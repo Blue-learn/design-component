@@ -1,39 +1,27 @@
 import {
-	AspectRatioToken,
 	LottieProps,
-	LottieSizeTokens,
+	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
 import Lottie from './Lottie';
+import * as Mock from './Lottie.mock';
 
 export default {
-	title: 'Component/Lottie',
+	title: WIDGET.LOTTIE,
 	component: Lottie,
-	uri: require('./welcome.json'),
+	...Mock.args,
 };
 
 const Template = (args: LottieProps) => (
 	<Lottie {...args} />
 );
 
-export const LottieComponent = Template.bind({});
+export const Component = Template.bind({});
 
-LottieComponent.args = {
-	uri: require('./welcome.json'),
-	size: LottieSizeTokens.XXL,
+Component.args = {
+	...Mock.args,
 };
 
-LottieComponent.argTypes = {
-	size: {
-		control: 'select',
-		options: [...Object.values(LottieSizeTokens)],
-	},
-	aspectRatio: {
-		control: 'select',
-		options: [
-			...Object.values(AspectRatioToken).filter(
-				(k) => typeof k === 'string',
-			),
-		],
-	},
+Component.argTypes = {
+	...Mock.argTypes,
 };

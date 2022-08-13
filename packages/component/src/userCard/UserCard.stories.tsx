@@ -1,9 +1,13 @@
-import { UserCardProps } from '@blue-learn/schema';
+import {
+	UserCardProps,
+	WIDGET,
+} from '@blue-learn/schema';
 import React from 'react';
 import UserCard from './UserCard';
+import * as Mock from './UserCard.mock';
 
 export default {
-	title: 'Component/UserCard',
+	title: WIDGET.USERCARD,
 	component: UserCard,
 };
 
@@ -11,14 +15,10 @@ const Template = (args: UserCardProps) => (
 	<UserCard {...args} />
 );
 
-export const UserCardCompoent = Template.bind({});
+export const Component = Template.bind({});
 
-UserCardCompoent.args = {
-	title: 'Saidatta Sahu',
-	subtitle: 'Software Engineer',
-	avatar:
-		'https://reactnative.dev/img/tiny_logo.png',
-	location: 'Bangalore, India',
+Component.args = {
+	...Mock.args,
 };
 
-UserCardCompoent.argTypes = {};
+Component.argTypes = { ...Mock.argTypes };

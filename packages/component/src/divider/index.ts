@@ -1,2 +1,3 @@
 import Divider from './Divider';
-export { Divider as Component };
+import * as Mock from './Divider.mock';
+export { Divider as Component, Mock };
