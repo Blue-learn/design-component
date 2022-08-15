@@ -52,26 +52,26 @@ const LinkPreview = ({
 			return;
 		}
 
-		const fetchData = async () => {
-			setData(undefined);
-			const newData = await getPreviewData(
-				text,
-				requestTimeout,
-			);
-			// Set data only if component is still mounted
-			/* istanbul ignore next */
-			if (!isCancelled) {
-				// No need to cover LayoutAnimation
-				/* istanbul ignore next */
-				if (enableAnimation) {
-					LayoutAnimation.easeInEaseOut();
-				}
-				setData(newData);
-				onPreviewDataFetched?.(newData);
-			}
-		};
+		// const fetchData = async () => {
+		// 	setData(undefined);
+		// 	const newData = await getPreviewData(
+		// 		text,
+		// 		requestTimeout,
+		// 	);
+		// 	// Set data only if component is still mounted
+		// 	/* istanbul ignore next */
+		// 	if (!isCancelled) {
+		// 		// No need to cover LayoutAnimation
+		// 		/* istanbul ignore next */
+		// 		if (enableAnimation) {
+		// 			LayoutAnimation.easeInEaseOut();
+		// 		}
+		// 		setData(newData);
+		// 		onPreviewDataFetched?.(newData);
+		// 	}
+		// };
 
-		fetchData();
+		// fetchData();
 		return () => {
 			isCancelled = true;
 		};
