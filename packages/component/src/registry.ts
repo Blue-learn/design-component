@@ -24,6 +24,7 @@ import {
 	MemberCard,
 	IcebreakerCard,
 	UserCard,
+	NewsCard,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -48,5 +49,6 @@ const registry: WidgetRegistry = {
 	[WIDGET.MEMBERCARD]: MemberCard,
 	[WIDGET.ICEBREAKERCARD]: IcebreakerCard,
 	[WIDGET.USERCARD]: UserCard,
+	[WIDGET.NEWSCARD]: NewsCard,
 };
 export { registry as WidgetRegistry };

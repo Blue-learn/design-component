@@ -14,6 +14,8 @@ const Image: React.FunctionComponent<
 	uri,
 	size = ImageSizeTokens.LG,
 	borderRadius = BorderRadiusTokens.BR0,
+	borderBottomRadius,
+	borderTopRadius,
 	aspectRatio = AspectRatioToken.A1_1,
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -23,6 +25,10 @@ const Image: React.FunctionComponent<
 		theme.aspectRatio[aspectRatio];
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
+	const borderTopRadiusValue =
+		theme.borderRadius[borderTopRadius];
+	const borderBottomRadiusValue =
+		theme.borderRadius[borderBottomRadius];
 
 	if (!uri || !size) return <></>;
 
@@ -32,6 +38,12 @@ const Image: React.FunctionComponent<
 				width: sizeValue,
 				height: 'auto',
 				borderRadius: borderRadiusValue,
+				borderTopLeftRadius: borderTopRadiusValue,
+				borderTopRightRadius: borderTopRadiusValue,
+				borderBottomLeftRadius:
+					borderBottomRadiusValue,
+				borderBottomRightRadius:
+					borderBottomRadiusValue,
 				aspectRatio: aspectRatioValue,
 			}}
 			source={{

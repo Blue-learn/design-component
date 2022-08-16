@@ -51,6 +51,9 @@ import Sticker from './icon-list/Sticker';
 import Bluelearn from './icon-list/Bluelearn';
 import TwoUsers from './icon-list/TwoUsers';
 import Check from './icon-list/Check';
+import Dot from './icon-list/Dot';
+import BulbFilled from './icon-list/BulbFilled';
+import BulbOutline from './icon-list/BulbOutlne';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -102,4 +105,7 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Bluelearn]: Bluelearn,
 	[IconTokens.TwoUsers]: TwoUsers,
 	[IconTokens.Check]: Check,
+	[IconTokens.Dot]: Dot,
+	[IconTokens.BulbFilled]: BulbFilled,
+	[IconTokens.BulbOutline]: BulbOutline,
 };

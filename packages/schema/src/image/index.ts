@@ -12,10 +12,13 @@ export interface ImageProps {
 	size: ImageSizeTokens;
 	uri: string;
 	borderRadius?: BorderRadiusTokens;
+	borderTopRadius?: BorderRadiusTokens;
+	borderBottomRadius?: BorderRadiusTokens;
 	aspectRatio?: AspectRatioToken;
 }
 
 export enum ImageSizeTokens {
+	XXS = 'XXS',
 	XS = 'XS',
 	SM = 'SM',
 	MD = 'MD',
