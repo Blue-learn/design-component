@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import {
 	AspectRatioToken,
 	BorderRadiusTokens,
@@ -107,8 +107,14 @@ const NewsCard: React.FunctionComponent<
 								) : (
 									<></>
 								),
-								<Space size={SizeTypeTokens.LG} />,
-								source?.name ? (
+								<Space
+									size={
+										source && source?.name
+											? SizeTypeTokens.LG
+											: SizeTypeTokens.NONE
+									}
+								/>,
+								source && source?.name ? (
 									<Stack
 										type={StackType.row}
 										alignItems={StackAlignItems.center}
@@ -158,7 +164,7 @@ const NewsCard: React.FunctionComponent<
 								>
 									<Button
 										type={ButtonTypeTokens.IconGhost}
-										onPress={likeAction}
+										action={likeAction}
 										icon={{
 											name:
 												likeState === LikeStateTokens.SELECTED
@@ -169,7 +175,7 @@ const NewsCard: React.FunctionComponent<
 									/>
 									<Button
 										type={ButtonTypeTokens.SmallGhost}
-										onPress={discussAction}
+										action={discussAction}
 										label={discussActionLabel}
 										icon={{
 											name: IconTokens.DoubleMessage,
@@ -178,7 +184,7 @@ const NewsCard: React.FunctionComponent<
 									/>
 									<Button
 										type={ButtonTypeTokens.IconGhost}
-										onPress={MoreAction}
+										action={MoreAction}
 										icon={{
 											name: IconTokens.ThreeDots,
 											size: IconSizeTokens.LG,

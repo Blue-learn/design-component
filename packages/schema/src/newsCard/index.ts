@@ -1,6 +1,7 @@
 import { ColorTokens } from '../colors';
 import { BorderRadiusTokens } from '../borderRadius';
 import { PaddingProps } from '../padding';
+import { Action } from '../types';
 
 export interface SourceProps {
 	name: string;
@@ -25,8 +26,8 @@ export type NewsCardProps = {
 	timeStamp?: string;
 	likeState?: LikeStateTokens;
 	onPress?: Function;
-	likeAction?: Function;
-	discussAction?: Function;
+	likeAction?: Action;
+	discussAction?: Action;
 	discussActionLabel?: string;
-	MoreAction?: Function;
+	MoreAction?: Action;
 };
