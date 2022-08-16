@@ -48,23 +48,34 @@ const NewsCard: React.FunctionComponent<
 	discussAction,
 	discussActionLabel,
 	MoreAction,
+	triggerAction,
+	action,
 }) => {
 	if (!title) return <></>;
+
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
 
 	return (
 		<Card
 			bgColor={bgColor}
 			borderRadius={borderRadius}
-			onPress={onPress}
+			onPress={handleAction}
 			padding={padding}
 			header={{
-				children: (
+				children: imageURL ? (
 					<Image
 						uri={imageURL}
 						size={ImageSizeTokens.FULL}
 						aspectRatio={AspectRatioToken.A16_9}
 						borderTopRadius={borderRadius}
 					/>
+				) : (
+					<></>
 				),
 			}}
 			body={{
@@ -79,13 +90,23 @@ const NewsCard: React.FunctionComponent<
 									type={TypographyTypeTokens.H5}
 									numberOfLines={1}
 								/>,
-								<Space size={SizeTypeTokens.MD} />,
-								<Typography
-									label={subtitle}
-									type={TypographyTypeTokens.B6}
-									color={ColorTokens.Grey_200}
-									numberOfLines={2}
+								<Space
+									size={
+										subtitle
+											? SizeTypeTokens.MD
+											: SizeTypeTokens.NONE
+									}
 								/>,
+								subtitle ? (
+									<Typography
+										label={subtitle}
+										type={TypographyTypeTokens.B6}
+										color={ColorTokens.Grey_200}
+										numberOfLines={2}
+									/>
+								) : (
+									<></>
+								),
 								<Space size={SizeTypeTokens.LG} />,
 								source?.name ? (
 									<Stack
