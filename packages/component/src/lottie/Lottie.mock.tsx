@@ -3,7 +3,6 @@ import {
 	LottieProps,
 	LottieSizeTokens,
 } from '@blue-learn/schema';
-import React from 'react';
 
 export const args: LottieProps = {
 	uri: require('./welcome.json'),
