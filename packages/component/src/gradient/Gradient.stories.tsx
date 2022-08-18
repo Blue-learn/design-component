@@ -29,3 +29,5 @@ Component.args = {
 	...Mock.args,
 	renderItem: MockedWidgetProps.renderItem,
 };
+
+Component.argTypes = Mock.argTypes;
