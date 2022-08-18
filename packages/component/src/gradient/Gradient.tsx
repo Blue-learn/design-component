@@ -25,22 +25,14 @@ const Gradient: React.FC<
 	const theme = ThemeProvider.getTheme();
 
 	const colorsMap = React.useMemo(() => {
-		const map = colors.map(
-			(color) => theme.colors[color],
-		);
-		return map;
+		if (typeof(colors)!=='string'&& colors.length > 1) {
+			const map = colors.map(color => theme.colors[color]);
+			return map;
+		}	
+		else if(typeof(colors)==='string') return theme.gradientColor[colors]
 	}, [colors]);
 
-	// const widthProps = React.useMemo(
-	// 	() =>
-	// 		Platform.OS === 'web'
-	// 			? { width: 'fit-content' }
-	// 			: { alignSelf: 'flex-start' },
-	// 	[],
-	// );
-
 	return (
-		//@ts-ignore
 		<LinearGradient
 			start={start}
 			end={end}

@@ -1,5 +1,6 @@
 import {
 	ColorTokens,
+	GradientColorTokens,
 	GradientProps,
 	WIDGET,
 } from '@blue-learn/schema';
@@ -7,10 +8,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 export const args: GradientProps = {
-	colors: [
-		ColorTokens.Blue_800,
-		ColorTokens.Blue_100,
-	],
+	colors: GradientColorTokens.LG10,
 	children: [
 		<View
 			style={{
@@ -31,4 +29,12 @@ export const args: GradientProps = {
 		},
 	],
 };
-export const argTypes = {};
+
+export const argTypes = {
+	colors: {
+		control: 'select',
+		options: [
+			...Object.values(GradientColorTokens),
+		],
+	},
+};

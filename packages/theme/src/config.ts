@@ -17,10 +17,12 @@ import {
 	LottieSizeTokensMap,
 	AspectRatioTokensMap,
 	TagTypeTokensMap,
+	GradientColorTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
 	colors: ColorTokensMap;
+	gradientColor: GradientColorTokensMap;
 	button: ButtonTypeTokensMap;
 	borderRadius: BorderRadiusTokensMap;
 	space: SizeTypeTokensMap;

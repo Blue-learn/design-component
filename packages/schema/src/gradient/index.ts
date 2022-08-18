@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { ColorTokens } from '../colors';
+import { ColorTokens, GradientColorTokens } from '../colors';
 import { WidgetItem } from '../types';
 
 export type GradientCoordinates = {
@@ -18,7 +18,7 @@ export type GradientProps = {
 	/** @description widgetItem -> used for Dynamic Render Component of WidgetItem->{id,type,props}
 	 * */
 	widgetItems?: WidgetItem[];
-	colors?: ColorTokens[];
+	colors?: GradientColorTokens | ColorTokens[];
 	start?: GradientCoordinates;
 	end?: GradientCoordinates;
 	style?: any;

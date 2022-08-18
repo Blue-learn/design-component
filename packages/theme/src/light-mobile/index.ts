@@ -1,5 +1,5 @@
 import { ThemeTokens } from '../config';
-import { colorTokensMap } from '../colors';
+import { colorTokensMap, gradientColorTokensMap } from '../colors';
 import { buttonTypeTokensMap } from './button';
 import { borderRadiusTypeTokensMap } from './borderRadius';
 import { sizeTypeTokensMap } from './space';
@@ -24,6 +24,7 @@ import { tagTypeTokensMap } from './tag';
 
 export const lightMobileTheme: ThemeTokens = {
 	colors: colorTokensMap,
+	gradientColor:gradientColorTokensMap,
 	button: buttonTypeTokensMap,
 	borderRadius: borderRadiusTypeTokensMap,
 	space: sizeTypeTokensMap,
