@@ -35,9 +35,7 @@ yarn storybook-deploy
 
 ## Steps for adding a new component
 1. Create a new folder for that component in `packages/component/src` then add parent file `component.tsx` and base file `component.base.tsx` for that component as per requirement and add stories file `component.stories.tsx` and mock file `component.mock.tsx` inside that folder to render that component in storybook.
-<br/>
-2. Create Schema for that component inside `packages/schema/src` and define schema for base as well as parent component as per requirement.
- <br/>  
+2. Create Schema for that component inside `packages/schema/src` and define schema for base as well as parent component as per requirement. 
 3. Create theme for that component inside `packages/theme/src/light-mobile`.First define attributes for `light theme` and then change the color and as per requirement for `dark theme` in `packages/theme/src/dark-mobile`
 
 ## Steps for adding a new SVG Icon
