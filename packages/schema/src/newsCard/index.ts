@@ -15,6 +15,7 @@ export enum LikeStateTokens {
 
 export type NewsCardProps = {
 	padding?: PaddingProps;
+	margin?: PaddingProps;
 	bgColor?: ColorTokens;
 	borderRadius?: BorderRadiusTokens;
 

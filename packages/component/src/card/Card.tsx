@@ -25,6 +25,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 	gradient,
 	onPress,
 	action,
+	margin,
 	triggerAction,
 	renderItem,
 }) => {
@@ -56,6 +57,20 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 			padding?.horizontal || padding?.right
 		];
 
+	const marginLeft =
+		theme.space[margin?.horizontal || margin?.left];
+
+	const marginRight =
+		theme.space[
+			margin?.horizontal || margin?.right
+		];
+
+	const marginTop =
+		theme.space[margin?.vertical || margin?.top];
+
+	const marginBottom =
+		theme.space[margin?.vertical || margin?.bottom];
+
 	const styleProps = React.useMemo(
 		() => ({
 			justifyContent,
@@ -67,11 +82,15 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 			},
 			shadowOpacity: shadowValue?.shadowOpacity || 0,
 			shadowRadius: shadowValue?.shadowRadius || 0,
-			paddingTop: paddingTop,
-			paddingBottom: paddingBottom,
-			paddingLeft: paddingLeft,
-			paddingRight: paddingRight,
 			borderRadius: borderRadiusValue,
+			paddingTop,
+			paddingBottom,
+			paddingLeft,
+			paddingRight,
+			marginTop,
+			marginBottom,
+			marginLeft,
+			marginRight,
 		}),
 		[
 			justifyContent,
@@ -79,6 +98,7 @@ const Card: React.FC<CardProps & WidgetProps> = ({
 			shadow,
 			bgColor,
 			padding,
+			margin,
 			borderRadius,
 		],
 	);
