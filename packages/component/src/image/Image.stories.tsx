@@ -9,7 +9,6 @@ import * as Mock from './Image.mock';
 export default {
 	title: WIDGET.IMAGE,
 	component: Image,
-	...Mock.args,
 };
 
 const Template = (args: ImageProps) => (

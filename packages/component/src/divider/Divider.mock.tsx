@@ -1,11 +1,8 @@
 import {
 	ColorTokens,
-	DividerProps,
 	SizeTypeTokens,
 	DividerSizeTokens,
 } from '@blue-learn/schema';
-import React from 'react';
-import { Divider } from './Divider';
 
 export const args = {
 	size: DividerSizeTokens.MD,

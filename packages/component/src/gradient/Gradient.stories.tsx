@@ -2,7 +2,6 @@ import {
 	GradientProps,
 	WIDGET,
 } from '@blue-learn/schema';
-import React from 'react';
 import { MockedWidgetProps } from '../mock';
 import Gradient from './Gradient';
 import * as Mock from './Gradient.mock';

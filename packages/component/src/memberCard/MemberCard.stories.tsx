@@ -15,12 +15,10 @@ const Template = (args: MemberCardProps) => (
 	<MemberCard {...args} />
 );
 
-export const MemberCardComponent = Template.bind(
-	{},
-);
+export const Component = Template.bind({});
 
-MemberCardComponent.args = {
+Component.args = {
 	...Mock.args,
 };
 
-MemberCardComponent.argTypes = {};
+Component.argTypes = {};

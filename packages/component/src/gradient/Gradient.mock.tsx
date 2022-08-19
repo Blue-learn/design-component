@@ -1,5 +1,4 @@
 import {
-	ColorTokens,
 	GradientColorTokens,
 	GradientProps,
 	WIDGET,

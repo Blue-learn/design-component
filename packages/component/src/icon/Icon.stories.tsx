@@ -9,7 +9,6 @@ import * as Mock from './Icon.mock';
 export default {
 	title: WIDGET.ICON,
 	component: Icon,
-	color: '#fff',
 };
 
 const Template = (args: IconProps) => (

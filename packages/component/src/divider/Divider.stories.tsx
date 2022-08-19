@@ -1,10 +1,13 @@
-import { DividerProps } from '@blue-learn/schema';
+import {
+	DividerProps,
+	WIDGET,
+} from '@blue-learn/schema';
 import React from 'react';
 import { Divider } from './Divider';
 import * as Mock from './Divider.mock';
 
 export default {
-	title: 'Component/Divider',
+	title: WIDGET.DIVIDER,
 	component: Divider,
 };
 
@@ -12,12 +15,12 @@ const Template = (args: DividerProps) => (
 	<Divider {...args} />
 );
 
-export const DividerComponent = Template.bind({});
+export const Component = Template.bind({});
 
-DividerComponent.args = {
+Component.args = {
 	...Mock.args,
 };
 
-DividerComponent.argTypes = {
+Component.argTypes = {
 	...Mock.argTypes,
 };

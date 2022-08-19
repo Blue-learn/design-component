@@ -4,7 +4,6 @@ import {
 	StackProps,
 	StackType,
 	WIDGET,
-	WidgetProps,
 } from '@blue-learn/schema';
 import React from 'react';
 import { View } from 'react-native';

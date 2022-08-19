@@ -8,8 +8,6 @@ import {
 	FontFamilyTokens,
 	TypographyTypeTokens,
 } from '@blue-learn/schema';
-import React from 'react';
-import Typography from './Typography';
 
 export const args: TypographyProps = {
 	label:

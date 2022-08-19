@@ -15,14 +15,12 @@ const Template = (args: NewsCardProps) => (
 	<NewsCard {...args} />
 );
 
-export const NewsCardComponent = Template.bind(
-	{},
-);
+export const Component = Template.bind({});
 
-NewsCardComponent.args = {
+Component.args = {
 	...Mock.args,
 };
 
-NewsCardComponent.argTypes = {
+Component.argTypes = {
 	...Mock.argTypes,
 };
