@@ -29,4 +29,14 @@ export const tagTypeTokensMap: TagTypeTokensMap =
 				vertical: SizeTypeTokens.SM,
 			},
 		},
+		[TagTypeTokens.GRADIENT]: {
+			fontSize: FontSizeTokens.XS,
+			labelColor: ColorTokens.Grey_500,
+			bgColor: ColorTokens.Grey_50,
+			borderRadius: BorderRadiusTokens.BR4,
+			padding: {
+				horizontal: SizeTypeTokens.MD,
+				vertical: SizeTypeTokens.SM,
+			},
+		},
 	};

@@ -1,4 +1,7 @@
-import { ColorTokens } from '../colors';
+import {
+	ColorTokens,
+	GradientColorTokens,
+} from '../colors';
 import { BorderRadiusTokens } from '../borderRadius';
 import { IconProps } from '../icon';
 import { PaddingProps } from '../padding';
@@ -17,6 +20,7 @@ export type TagProps = {
 	 * Default Icon null
 	 */
 	icon?: IconProps;
+	gradinetColor?: GradientColorTokens;
 	margin?: PaddingProps;
 };
 
@@ -29,6 +33,7 @@ export type TagBaseProps = {
 	 * Default Icon null
 	 */
 	icon?: IconProps;
+	gradinetColor?: GradientColorTokens;
 	borderRadius: BorderRadiusTokens;
 	labelColor: ColorTokens;
 	bgColor: ColorTokens;
@@ -48,6 +53,7 @@ export type TagThemeProps = {
 export enum TagTypeTokens {
 	DEFAULT = 'DEFAULT',
 	SECONDARY = 'SECONDARY',
+	GRADIENT = 'GRADIENT',
 }
 
 /**

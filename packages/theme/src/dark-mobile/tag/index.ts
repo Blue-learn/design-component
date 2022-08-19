@@ -17,4 +17,9 @@ export const tagTypeTokensMap: TagTypeTokensMap =
 			labelColor: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Black,
 		},
+		[TagTypeTokens.GRADIENT]: {
+			...tagTypeTokensMapLight['GRADIENT'],
+			labelColor: ColorTokens.Grey_100,
+			bgColor: ColorTokens.Grey_700,
+		},
 	};

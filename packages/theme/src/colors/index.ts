@@ -175,15 +175,50 @@ export const colorTokensMap: ColorTokensMap = {
 	[ColorTokens.Google]: '#4285F4',
 };
 
-export const gradientColorTokensMap: GradientColorTokensMap = {
-	[GradientColorTokens.LG1]: ['#5200BB','#390083'],
-	[GradientColorTokens.LG2]: ['#0040BB', '#002D85'],
-	[GradientColorTokens.LG3]: ['#007D99', '#0A5869'],
-	[GradientColorTokens.LG4]: ['#008561', '#006449'],
-	[GradientColorTokens.LG5]: ['#0C890A', '#096507'],
-	[GradientColorTokens.LG6]: ['#9A7C0F', '#6E590B'],
-	[GradientColorTokens.LG7]: ['#8C4438', '#6C2519'],
-	[GradientColorTokens.LG8]: ['#755151', '#583636'],
-	[GradientColorTokens.LG9]: ['#A56B13', '#734A0D'],
-	[GradientColorTokens.LG10]: ['#BD233D', '#841629'],
-}
+export const gradientColorTokensMap: GradientColorTokensMap =
+	{
+		[GradientColorTokens.LG1]: [
+			'#5200BB',
+			'#390083',
+		],
+		[GradientColorTokens.LG2]: [
+			'#0040BB',
+			'#002D85',
+		],
+		[GradientColorTokens.LG3]: [
+			'#007D99',
+			'#0A5869',
+		],
+		[GradientColorTokens.LG4]: [
+			'#008561',
+			'#006449',
+		],
+		[GradientColorTokens.LG5]: [
+			'#0C890A',
+			'#096507',
+		],
+		[GradientColorTokens.LG6]: [
+			'#9A7C0F',
+			'#6E590B',
+		],
+		[GradientColorTokens.LG7]: [
+			'#8C4438',
+			'#6C2519',
+		],
+		[GradientColorTokens.LG8]: [
+			'#755151',
+			'#583636',
+		],
+		[GradientColorTokens.LG9]: [
+			'#A56B13',
+			'#734A0D',
+		],
+		[GradientColorTokens.LG10]: [
+			'#BD233D',
+			'#841629',
+		],
+		[GradientColorTokens.LG11]: [
+			'#FBDA61',
+			'#FF5ACD',
+		],
+	};

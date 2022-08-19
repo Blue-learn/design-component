@@ -1,12 +1,11 @@
 import {
+	GradientColorTokens,
 	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	TagProps,
 	TagTypeTokens,
 } from '@blue-learn/schema';
-import React from 'react';
-import Tag from './Tag';
 
 export const args: TagProps = {
 	label: 'Tag',
@@ -22,5 +21,12 @@ export const argTypes = {
 	type: {
 		control: 'select',
 		options: [...Object.values(TagTypeTokens)],
+	},
+	gradinetColor: {
+		control: 'select',
+		options: [
+			null,
+			...Object.values(GradientColorTokens),
+		],
 	},
 };
