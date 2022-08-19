@@ -48,23 +48,31 @@ const IcebreakerCard: React.FunctionComponent<
 						/>
 						<Space size={SizeTypeTokens.SM} />
 						<Typography label={subtitle} />
-						<Space size={SizeTypeTokens.MD} />
+						<Space
+							size={
+								ctaText
+									? SizeTypeTokens.MD
+									: SizeTypeTokens.NONE
+							}
+						/>
 					</Stack>
 				),
 			}}
 			footer={{
-				children: (
+				children: ctaText ? (
 					<Stack
 						type={StackType.row}
 						justifyContent={StackJustifyContent.flexEnd}
 					>
 						<Button
-							type={ButtonTypeTokens.SmallElevated}
+							type={ButtonTypeTokens.SmallSoftFilled}
 							icon={{ name: IconTokens.Chat }}
 							label={ctaText}
 							onPress={onPress}
 						/>
 					</Stack>
+				) : (
+					<></>
 				),
 			}}
 		/>

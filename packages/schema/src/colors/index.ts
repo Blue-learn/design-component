@@ -231,8 +231,9 @@ export enum GradientColorTokens {
 	LG8 = 'LG8',
 	LG9 = 'LG9',
 	LG10 = 'LG10',
+	LG11 = 'LG11',
 }
- 
- export type GradientColorTokensMap = {
+
+export type GradientColorTokensMap = {
 	[key in GradientColorTokens]: string[];
 };

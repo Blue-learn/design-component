@@ -5,15 +5,17 @@ import {
 	TagBaseProps,
 	FontTransformToken,
 } from '@blue-learn/schema';
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { View, Platform } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
+import Gradient from '../gradient/Gradient';
 
 const TagBase: React.FC<TagBaseProps> = ({
 	label = 'Tag',
+	gradinetColor,
 	bgColor,
 	labelColor,
 	borderRadius,
@@ -59,11 +61,11 @@ const TagBase: React.FC<TagBaseProps> = ({
 	const styleProps = React.useMemo(
 		() => ({
 			flexDirection: 'row',
+			justifyContent: 'center',
 			alignItems: 'center',
 			backgroundColor: backgroundColor,
 			borderRadius: borderRadiusValue,
-			marginBottom: marginBottom / 2,
-			marginRight: marginRight / 2,
+			margin: 1,
 			paddingTop: paddingTop,
 			paddingBottom: paddingBottom,
 			paddingLeft: paddingLeft,
@@ -75,39 +77,68 @@ const TagBase: React.FC<TagBaseProps> = ({
 	const widthProps = React.useMemo(
 		() =>
 			Platform.OS === 'web'
-				? { width: 'fit-content' }
-				: { alignSelf: 'flex-start' },
+				? {
+						width: 'fit-content',
+						marginRight,
+						marginBottom,
+				  }
+				: {
+						alignSelf: 'flex-start',
+						marginRight,
+						marginBottom,
+				  },
 		[],
 	);
 
-	return (
-		<View style={[styleProps, widthProps]}>
-			{icon?.align === IconAlignmentTokens.left &&
-				icon?.name && (
-					<>
-						<Icon {...icon} />
-						{label && (
-							<Space size={SizeTypeTokens.SM} />
-						)}
-					</>
-				)}
-			<Typography
-				label={label}
-				fontSize={fontSize}
-				textTransform={FontTransformToken.capitalize}
-				fontFamily={FontFamilyTokens.manropeSemiBold}
-				color={labelColor}
-			/>
-			{icon?.align === IconAlignmentTokens.right &&
-				icon?.name && (
-					<>
-						{label && (
-							<Space size={SizeTypeTokens.SM} />
-						)}
-						<Icon {...icon} />
-					</>
-				)}
-		</View>
+	const children = useMemo(
+		() => (
+			<View style={[styleProps]}>
+				{icon?.align === IconAlignmentTokens.left &&
+					icon?.name && (
+						<>
+							<Icon {...icon} />
+							{label && (
+								<Space size={SizeTypeTokens.SM} />
+							)}
+						</>
+					)}
+				<Typography
+					label={label}
+					fontSize={fontSize}
+					textTransform={FontTransformToken.capitalize}
+					fontFamily={FontFamilyTokens.manropeSemiBold}
+					color={labelColor}
+				/>
+				{icon?.align === IconAlignmentTokens.right &&
+					icon?.name && (
+						<>
+							{label && (
+								<Space size={SizeTypeTokens.SM} />
+							)}
+							<Icon {...icon} />
+						</>
+					)}
+			</View>
+		),
+		[label, icon, backgroundColor],
+	);
+
+	return gradinetColor ? (
+		<Gradient
+			colors={gradinetColor}
+			start={{ x: 0, y: 0 }}
+			end={{ x: 1, y: 0 }}
+			style={[
+				widthProps,
+				{
+					borderRadius: borderRadiusValue,
+				},
+			]}
+		>
+			{children}
+		</Gradient>
+	) : (
+		<View style={widthProps}>{children}</View>
 	);
 };
 
