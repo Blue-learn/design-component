@@ -14,7 +14,7 @@ yarn setup
 
 Install all the dependencies that are available inside components, schema and theme using
 ```sh
-npm install --legacy-peer-deps
+yarn setup
 ```
 
 Build all the three packages(i.e component,schema,theme) using 
