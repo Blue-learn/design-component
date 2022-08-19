@@ -69,9 +69,13 @@ export enum IconTokens {
 	Bluelearn = 'bluelearn',
 	TwoUsers = 'two-users',
 	Check = 'check',
-	Dot = 'Dot',
+	Dot = 'dot',
 	BulbFilled = 'bulb-filled',
 	BulbOutline = 'bulb-outline',
+	Delete = 'delete',
+	AddUser = 'add-user',
+	CheckCircle = 'check-circle',
+	Clock = 'clock',
 }
 
 export enum IconSizeTokens {

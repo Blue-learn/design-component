@@ -13,7 +13,7 @@ export const args: IconProps = {
 export const argTypes = {
 	name: {
 		control: 'select',
-		options: [...Object.values(IconTokens)],
+		options: [...Object.values(IconTokens)].sort(),
 	},
 	size: {
 		control: 'select',

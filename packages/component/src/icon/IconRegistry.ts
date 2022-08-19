@@ -54,6 +54,10 @@ import Check from './icon-list/Check';
 import Dot from './icon-list/Dot';
 import BulbFilled from './icon-list/BulbFilled';
 import BulbOutline from './icon-list/BulbOutlne';
+import CheckCircle from './icon-list/CheckCircle';
+import Clock from './icon-list/Clock';
+import Delete from './icon-list/Delete';
+import AddUser from './icon-list/AddUser';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -108,4 +112,8 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Dot]: Dot,
 	[IconTokens.BulbFilled]: BulbFilled,
 	[IconTokens.BulbOutline]: BulbOutline,
+	[IconTokens.CheckCircle]: CheckCircle,
+	[IconTokens.Clock]: Clock,
+	[IconTokens.Delete]: Delete,
+	[IconTokens.AddUser]: AddUser,
 };
