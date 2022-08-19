@@ -23,4 +23,6 @@ NewsCardComponent.args = {
 	...Mock.args,
 };
 
-NewsCardComponent.argTypes = {};
+NewsCardComponent.argTypes = {
+	...Mock.argTypes,
+};

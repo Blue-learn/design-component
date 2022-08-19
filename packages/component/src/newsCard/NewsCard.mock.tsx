@@ -20,4 +20,9 @@ export const args: NewsCardProps = {
 	discussActionLabel: 'Discuss',
 };
 
-export const argTypes = {};
+export const argTypes = {
+	likeState: {
+		control: 'select',
+		options: [...Object.values(LikeStateTokens)],
+	},
+};
