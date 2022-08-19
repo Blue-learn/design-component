@@ -9,7 +9,6 @@ import * as Mock from './Lottie.mock';
 export default {
 	title: WIDGET.LOTTIE,
 	component: Lottie,
-	...Mock.args,
 };
 
 const Template = (args: LottieProps) => (

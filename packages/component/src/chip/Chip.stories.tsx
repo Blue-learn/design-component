@@ -9,7 +9,6 @@ import * as Mock from './Chip.mock';
 export default {
 	title: WIDGET.CHIP,
 	component: Chip,
-	...Mock.args,
 };
 
 const Template = (args: ChipProps) => (
@@ -18,4 +17,10 @@ const Template = (args: ChipProps) => (
 
 export const Component = Template.bind({});
 
-Component.args = Mock.args;
+Component.args = {
+	...Mock.args,
+};
+
+Component.argTypes = {
+	...Mock.argTypes,
+};

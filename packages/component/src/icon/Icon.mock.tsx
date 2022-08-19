@@ -4,7 +4,6 @@ import {
 	IconSizeTokens,
 	IconTokens,
 } from '@blue-learn/schema';
-import React from 'react';
 
 export const args: IconProps = {
 	name: 'chat',

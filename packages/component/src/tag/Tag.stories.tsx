@@ -1,10 +1,13 @@
-import { TagProps } from '@blue-learn/schema';
+import {
+	TagProps,
+	WIDGET,
+} from '@blue-learn/schema';
 import React from 'react';
 import Tag from './Tag';
 import * as Mock from './Tag.mock';
 
 export default {
-	title: 'Component/Tag',
+	title: WIDGET.TAG,
 	component: Tag,
 };
 
@@ -12,12 +15,12 @@ const Template = (args: TagProps) => (
 	<Tag {...args} />
 );
 
-export const TagComponent = Template.bind({});
+export const Component = Template.bind({});
 
-TagComponent.args = {
+Component.args = {
 	...Mock.args,
 };
 
-TagComponent.argTypes = {
+Component.argTypes = {
 	...Mock.argTypes,
 };

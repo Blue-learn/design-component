@@ -14,7 +14,6 @@ import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
-import Stack from '../stack/Stack';
 
 /**
  * @description

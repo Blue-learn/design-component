@@ -9,20 +9,17 @@ import * as Mock from './Typography.mock';
 export default {
 	title: WIDGET.TEXT,
 	component: Typography,
-	argTypes: {
-		label: 'Lorem ipsum dolor sit.',
-	},
 };
 
 const Template = (args: TypographyProps) => (
 	<Typography {...args} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Component = Template.bind({});
+Component.args = {
 	...Mock.args,
 };
 
-Primary.argTypes = {
+Component.argTypes = {
 	...Mock.argTypes,
 };

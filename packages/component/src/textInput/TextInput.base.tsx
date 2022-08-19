@@ -12,7 +12,6 @@ import {
 	SizeTypeTokens,
 	SizeTypeTokensMap,
 	FontSizeTokensMap,
-	StackType,
 	WidgetProps,
 	IconSizeTokens,
 } from '@blue-learn/schema';
@@ -152,13 +151,13 @@ const TextInputBase: React.FunctionComponent<
 			</View>
 
 			{caption ? (
-				<Stack type={StackType.row}>
+				<Stack>
+					<Space size={SizeTypeTokens.MD} />
 					<Typography
 						label={caption}
 						fontSize={FontSizeTokens.XS}
 						color={color}
 					/>
-					<Space size={SizeTypeTokens.MD} />
 				</Stack>
 			) : (
 				<></>

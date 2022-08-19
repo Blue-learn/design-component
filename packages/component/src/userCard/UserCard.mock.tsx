@@ -1,4 +1,3 @@
-import React from 'react';
 import { UserCardProps } from '@blue-learn/schema';
 
 export const args: UserCardProps = {

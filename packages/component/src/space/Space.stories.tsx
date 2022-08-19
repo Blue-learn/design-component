@@ -32,12 +32,12 @@ const Template = (args: SpaceProps) => (
 	</View>
 );
 
-export const SpaceComponent = Template.bind({});
+export const Component = Template.bind({});
 
-SpaceComponent.args = {
+Component.args = {
 	...Mock.args,
 };
 
-SpaceComponent.argTypes = {
+Component.argTypes = {
 	...Mock.argTypes,
 };

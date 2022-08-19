@@ -2,36 +2,25 @@ import React from 'react';
 import {
 	ChatCardProps,
 	ChatCardTypeTokens,
+	WIDGET,
 } from '@blue-learn/schema';
 import ChatCard from './ChatCard';
+import { Mock } from '.';
 
 export default {
-	title: 'Component/ChatCard',
+	title: WIDGET.CHATCARD,
 	component: ChatCard,
-	argTypes: {
-		type: ChatCardTypeTokens.sender,
-	},
 };
 
 const Template = (args: ChatCardProps) => (
 	<ChatCard {...args} />
 );
 
-export const TextBox = Template.bind({});
-TextBox.args = {
-	label:
-		'This link https://github.com/flyerhq can be extracted from the text',
-	type: ChatCardTypeTokens.receiver,
-	timeStamp: '12:00 AM',
+export const Component = Template.bind({});
+Component.args = {
+	...Mock.args,
 };
 
-TextBox.argTypes = {
-	type: {
-		control: 'radio',
-		options: [
-			...Object.values(ChatCardTypeTokens).filter(
-				(k) => typeof k === 'string',
-			),
-		],
-	},
+Component.argTypes = {
+	...Mock.argTypes,
 };

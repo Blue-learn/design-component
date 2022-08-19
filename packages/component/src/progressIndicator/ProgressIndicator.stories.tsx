@@ -15,9 +15,8 @@ const Template = (
 	args: ProgressIndicatorProps,
 ) => <ProgressIndicator {...args} />;
 
-export const ProgessIndicatorComponent =
-	Template.bind({});
+export const Component = Template.bind({});
 
-ProgessIndicatorComponent.args = {
+Component.args = {
 	...Mock.args,
 };
