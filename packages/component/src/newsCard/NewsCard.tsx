@@ -35,6 +35,9 @@ const NewsCard: React.FunctionComponent<
 		horizontal: SizeTypeTokens.NONE,
 		bottom: SizeTypeTokens.MD,
 	},
+	margin = {
+		bottom: SizeTypeTokens.XL,
+	},
 	bgColor = ColorTokens.Grey_600,
 	borderRadius = BorderRadiusTokens.BR1,
 	imageURL,
@@ -66,6 +69,7 @@ const NewsCard: React.FunctionComponent<
 			borderRadius={borderRadius}
 			onPress={handleAction}
 			padding={padding}
+			margin={margin}
 			header={{
 				children: imageURL ? (
 					<Image

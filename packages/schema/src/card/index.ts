@@ -23,6 +23,8 @@ export type CardProps = {
 	 * Accepted Types -> React Component JSX.Element[], JSX.Element,WidgetItem[];
 	 * */
 	padding?: PaddingProps;
+	margin?: PaddingProps;
+
 	bgColor?: ColorTokens;
 	/** 
 	@description  bgColor -> for adding background color to the card
