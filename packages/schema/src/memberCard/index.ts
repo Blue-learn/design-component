@@ -6,9 +6,9 @@ export type MemberCardProps = {
 	padding?: PaddingProps;
 	bgColor?: ColorTokens;
 	borderRadius?: BorderRadiusTokens;
-	avatar?: string;
-	title?: string;
-	subtitle?: string;
+	avatar: string;
+	title: string;
+	subtitle: string | null;
 	location?: string;
 	onPress?: Function;
 	cta?: Function;

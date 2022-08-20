@@ -13,6 +13,7 @@ import {
 	StackJustifyContent,
 	StackType,
 	TypographyTypeTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
@@ -25,7 +26,7 @@ import Button from '../button/Button';
 import Icon from '../icon/Icon';
 
 const MemberCard: React.FunctionComponent<
-	MemberCardProps
+	MemberCardProps & WidgetProps
 > = ({
 	avatar,
 	title,
@@ -39,6 +40,8 @@ const MemberCard: React.FunctionComponent<
 	padding,
 	bgColor = ColorTokens.Grey_600,
 	borderRadius = BorderRadiusTokens.BR2,
+	action,
+	triggerAction,
 }) => {
 	if (!title) return <></>;
 	const interestToString = (interest: string) => {
@@ -54,11 +57,18 @@ const MemberCard: React.FunctionComponent<
 		}
 	};
 
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
+
 	return (
 		<Card
 			bgColor={bgColor}
 			borderRadius={borderRadius}
-			onPress={onPress}
+			onPress={handleAction}
 			padding={padding}
 			header={{
 				children: (
@@ -145,7 +155,7 @@ const MemberCard: React.FunctionComponent<
 							label={chipsTitle}
 							type={TypographyTypeTokens.H6}
 						/>
-						<Space size={SizeTypeTokens.XS} />
+						<Space size={SizeTypeTokens.SM} />
 						<Stack
 							type={StackType.row}
 							flexWrap={StackFlexWrap.wrap}
@@ -156,6 +166,10 @@ const MemberCard: React.FunctionComponent<
 									<Tag
 										key={index}
 										label={interestToString(item)}
+										margin={{
+											right: SizeTypeTokens.SM,
+											bottom: SizeTypeTokens.SM,
+										}}
 									/>
 								),
 							)}

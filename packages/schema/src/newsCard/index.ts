@@ -22,8 +22,8 @@ export type NewsCardProps = {
 	imageURL?: string;
 	URL?: string;
 	title: string;
-	subtitle?: string;
-	source?: SourceProps;
+	subtitle: string | null;
+	source: SourceProps | null;
 	timeStamp?: string;
 	likeState?: LikeStateTokens;
 	onPress?: Function;

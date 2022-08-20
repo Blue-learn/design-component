@@ -25,10 +25,7 @@ const TagBase: React.FC<TagBaseProps> = ({
 		horizontal: SizeTypeTokens.MD,
 		vertical: SizeTypeTokens.SM,
 	},
-	margin = {
-		right: SizeTypeTokens.LG,
-		bottom: SizeTypeTokens.LG,
-	},
+	margin,
 }) => {
 	const theme = ThemeProvider.getTheme();
 

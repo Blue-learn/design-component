@@ -10,6 +10,7 @@ import {
 	IconTokens,
 	IconSizeTokens,
 	DividerSizeTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
@@ -21,19 +22,28 @@ import Icon from '../icon/Icon';
 import Divider from '../divider/Divider';
 
 const UserCard: React.FunctionComponent<
-	UserCardProps
+	UserCardProps & WidgetProps
 > = ({
 	title,
 	subtitle,
 	avatar,
 	location,
 	onPress,
+	action,
+	triggerAction,
 }) => {
 	if (!title) return <></>;
 
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
+
 	return (
 		<Card
-			onPress={onPress}
+			onPress={handleAction}
 			padding={{
 				top: SizeTypeTokens.LG,
 			}}
