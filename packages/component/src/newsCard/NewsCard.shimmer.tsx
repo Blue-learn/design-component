@@ -9,10 +9,10 @@ const NewsCardShimmer: React.FunctionComponent =
 	() => {
 		return (
 			<Shimmer
-				height={400}
+				height={180}
 				width={'100%'}
 				borderRadius={BorderRadiusTokens.BR1}
-				backgroundColor={ColorTokens.Grey_600}
+				backgroundColor={ColorTokens.Grey_200}
 			/>
 		);
 	};
