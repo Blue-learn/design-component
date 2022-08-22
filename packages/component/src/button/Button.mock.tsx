@@ -1,17 +1,10 @@
 import {
-	AvatarProps,
-	AvatarSizeTokens,
-	AvatarTypeTokens,
-	BorderRadiusTokens,
 	ButtonProps,
 	ButtonTypeTokens,
 	ButtonWidthTypeToken,
-	ColorTokens,
 	IconTokens,
-	WidgetItem,
 	WidgetProps,
 } from '@blue-learn/schema';
-import {MockedWidgetProps} from "../mock";
 
 export const args: ButtonProps & WidgetProps = {
 	label: 'All Buttons',

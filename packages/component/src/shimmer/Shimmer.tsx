@@ -5,10 +5,12 @@ import React, {
 } from 'react';
 import { Animated, Easing } from 'react-native';
 import { ShimmerProps } from '@blue-learn/schema';
+import ThemeProvider from '@blue-learn/theme';
 
 const Shimmer: React.FunctionComponent<
 	ShimmerProps
 > = (props) => {
+	const theme = ThemeProvider.getTheme();
 	const fadeAnim = useRef(
 		new Animated.Value(0.5),
 	).current;
@@ -39,8 +41,11 @@ const Shimmer: React.FunctionComponent<
 		<Animated.View
 			style={{
 				...props,
+				borderRadius:
+					theme.borderRadius[props.borderRadius] || 12,
 				backgroundColor:
-					props.backgroundColor || '#EDEDED',
+					theme.colors[props.backgroundColor] ||
+					'#EDEDED',
 				opacity: fadeAnim,
 			}}
 		/>

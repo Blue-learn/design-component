@@ -125,6 +125,9 @@ const TextInputBase: React.FunctionComponent<
 					isDisabled={isDisabled}
 					editable={!isDisabled}
 					placeholder={placeholder}
+					placeholderTextColor={
+						colorMapping[ColorTokens.Grey_300]
+					}
 					onChangeText={onChangeText}
 					style={{
 						flex: 1,

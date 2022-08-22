@@ -5,11 +5,8 @@ import {
 	IconSizeTokens,
 	IconTokens,
 	inputTypeToken,
-	TextInputProps,
 	WIDGET,
 } from '@blue-learn/schema';
-import React from 'react';
-import TextInput from './TextInput';
 
 export const args = {
 	type: inputTypeToken.default,

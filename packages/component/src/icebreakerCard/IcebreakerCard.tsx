@@ -9,6 +9,7 @@ import {
 	StackJustifyContent,
 	StackType,
 	TypographyTypeTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
@@ -18,7 +19,7 @@ import Button from '../button/Button';
 import Space from '../space/Space';
 
 const IcebreakerCard: React.FunctionComponent<
-	IcebreakerCardProps
+	IcebreakerCardProps & WidgetProps
 > = ({
 	title,
 	subtitle,
@@ -26,8 +27,17 @@ const IcebreakerCard: React.FunctionComponent<
 	ctaText,
 	gradient,
 	bgColor = ColorTokens.Grey_600,
+	action,
+	triggerAction,
 }) => {
 	if (!title) return <></>;
+
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
 
 	return (
 		<Card
@@ -65,10 +75,11 @@ const IcebreakerCard: React.FunctionComponent<
 						justifyContent={StackJustifyContent.flexEnd}
 					>
 						<Button
-							type={ButtonTypeTokens.SmallSoftFilled}
+							type={ButtonTypeTokens.SmallOutline}
 							icon={{ name: IconTokens.Chat }}
+							labelColor={ColorTokens.Grey_50}
 							label={ctaText}
-							onPress={onPress}
+							onPress={handleAction}
 						/>
 					</Stack>
 				) : (

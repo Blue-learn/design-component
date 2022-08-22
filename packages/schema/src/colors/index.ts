@@ -221,17 +221,22 @@ export type ColorTokensMap = {
 };
 
 export enum GradientColorTokens {
-	LG1 = 'LG1',
-	LG2 = 'LG2',
-	LG3 = 'LG3',
-	LG4 = 'LG4',
-	LG5 = 'LG5',
-	LG6 = 'LG6',
-	LG7 = 'LG7',
-	LG8 = 'LG8',
-	LG9 = 'LG9',
-	LG10 = 'LG10',
-	LG11 = 'LG11',
+	D_1 = 'D_1',
+	D_2 = 'D_2',
+	D_3 = 'D_3',
+	D_4 = 'D_4',
+	D_5 = 'D_5',
+	D_6 = 'D_6',
+	D_7 = 'D_7',
+	D_8 = 'D_8',
+	D_9 = 'D_9',
+	D_10 = 'D_10',
+	IB_1 = 'IB_1',
+	IB_2 = 'IB_2',
+	IB_3 = 'IB_3',
+	IB_4 = 'IB_4',
+	IB_5 = 'IB_5',
+	IB_6 = 'IB_6',
 }
 
 export type GradientColorTokensMap = {

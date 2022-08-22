@@ -7,7 +7,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 export const args: GradientProps = {
-	colors: GradientColorTokens.LG10,
+	colors: GradientColorTokens.D_10,
 	children: [
 		<View
 			style={{

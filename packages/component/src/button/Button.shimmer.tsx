@@ -1,3 +1,4 @@
+import { BorderRadiusTokens } from '@blue-learn/schema';
 import React from 'react';
 import { Shimmer } from '../shimmer/Shimmer';
 
@@ -7,7 +8,7 @@ const ButtonShimmer: React.FunctionComponent =
 			<Shimmer
 				height={48}
 				width={'100%'}
-				borderRadius={25}
+				borderRadius={BorderRadiusTokens.BR4}
 			/>
 		);
 	};
