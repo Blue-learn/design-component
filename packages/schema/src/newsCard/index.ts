@@ -30,6 +30,6 @@ export type NewsCardProps = {
 	onPress?: Function;
 	likeAction?: Action;
 	discussAction?: Action;
-	discussActionLabel?: string;
 	MoreAction?: Action;
+	discussActionLabel?: string;
 };

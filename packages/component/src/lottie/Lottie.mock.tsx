@@ -5,7 +5,7 @@ import {
 } from '@blue-learn/schema';
 
 export const args: LottieProps = {
-	uri: require('./welcome.json'),
+	uri: require('./assets/welcome.json'),
 	size: LottieSizeTokens.XXL,
 };
 

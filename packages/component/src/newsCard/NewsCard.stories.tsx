@@ -5,6 +5,7 @@ import {
 import React from 'react';
 import NewsCard from './NewsCard';
 import * as Mock from './NewsCard.mock';
+import NewsCardShimmer from './NewsCard.shimmer';
 
 export default {
 	title: WIDGET.NEWSCARD,
@@ -24,3 +25,7 @@ Component.args = {
 Component.argTypes = {
 	...Mock.argTypes,
 };
+
+const ShimmerTemplate = () => <NewsCardShimmer />;
+
+export const Shimmer = ShimmerTemplate.bind({});
