@@ -5,6 +5,7 @@ import {
 	ButtonTypeTokens,
 	ColorTokens,
 	DividerSizeTokens,
+	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	ImageSizeTokens,
@@ -21,7 +22,6 @@ import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
 import Space from '../space/Space';
-import _map from 'lodash-es/map';
 import Button from '../button/Button';
 import Image from '../image/Image';
 import Divider from '../divider/Divider';
@@ -186,6 +186,7 @@ const NewsCard: React.FunctionComponent<
 										icon={{
 											name: IconTokens.DoubleMessage,
 											size: IconSizeTokens.XL,
+											align: IconAlignmentTokens.left,
 										}}
 										onPress={() =>
 											triggerAction(discussAction)
