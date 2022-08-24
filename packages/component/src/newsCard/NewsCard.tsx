@@ -194,7 +194,7 @@ const NewsCard: React.FunctionComponent<
 									<Button
 										type={ButtonTypeTokens.IconGhost}
 										icon={{
-											name: IconTokens.ThreeDots,
+											name: IconTokens.Share,
 											size: IconSizeTokens.LG,
 										}}
 										onPress={() =>
