@@ -168,7 +168,10 @@ const NewsCard: React.FunctionComponent<
 								>
 									<Button
 										type={ButtonTypeTokens.IconGhost}
-										action={likeAction}
+										onPress={() =>
+											triggerAction(likeAction)
+										}
+										// action={likeAction}
 										icon={{
 											name:
 												likeState === LikeStateTokens.SELECTED
@@ -179,20 +182,24 @@ const NewsCard: React.FunctionComponent<
 									/>
 									<Button
 										type={ButtonTypeTokens.SmallGhost}
-										action={discussAction}
 										label={discussActionLabel}
 										icon={{
 											name: IconTokens.DoubleMessage,
 											size: IconSizeTokens.XL,
 										}}
+										onPress={() =>
+											triggerAction(discussAction)
+										}
 									/>
 									<Button
 										type={ButtonTypeTokens.IconGhost}
-										action={MoreAction}
 										icon={{
 											name: IconTokens.ThreeDots,
 											size: IconSizeTokens.LG,
 										}}
+										onPress={() =>
+											triggerAction(MoreAction)
+										}
 									/>
 								</Stack>
 							),
