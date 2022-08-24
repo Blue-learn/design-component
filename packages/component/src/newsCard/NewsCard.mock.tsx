@@ -14,7 +14,8 @@ export const args: NewsCardProps = {
 	source: {
 		image:
 			'https://reactnative.dev/img/tiny_logo.png',
-		name: 'India Today',
+		title: 'India Today',
+		link: '',
 	},
 	likeState: LikeStateTokens.NOT_SELECTED,
 	discussActionLabel: 'Discuss',

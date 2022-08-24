@@ -4,8 +4,9 @@ import { PaddingProps } from '../padding';
 import { Action } from '../types';
 
 export interface SourceProps {
-	name: string;
+	title: string;
 	image?: string;
+	link: string;
 }
 
 export enum LikeStateTokens {

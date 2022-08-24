@@ -113,12 +113,12 @@ const NewsCard: React.FunctionComponent<
 								),
 								<Space
 									size={
-										source && source?.name
+										source && source?.title
 											? SizeTypeTokens.LG
 											: SizeTypeTokens.NONE
 									}
 								/>,
-								source && source?.name ? (
+								source && source?.title ? (
 									<Stack
 										type={StackType.row}
 										alignItems={StackAlignItems.center}
@@ -130,7 +130,7 @@ const NewsCard: React.FunctionComponent<
 										/>
 										<Space size={SizeTypeTokens.SM} />
 										<Typography
-											label={source?.name}
+											label={source?.title}
 											type={TypographyTypeTokens.B7}
 										/>
 										<Space size={SizeTypeTokens.SM} />
@@ -204,5 +204,10 @@ const NewsCard: React.FunctionComponent<
 	);
 };
 
-export default React.memo(NewsCard);
+export default React.memo(
+	NewsCard,
+	(prevProps, nextProps) => {
+		return prevProps === nextProps;
+	},
+);
 export { NewsCard };
