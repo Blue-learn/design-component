@@ -15,6 +15,7 @@ import {
 	TypographyTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
+import { View } from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
@@ -79,48 +80,62 @@ const MemberCard: React.FunctionComponent<
 							StackJustifyContent.spaceBetween
 						}
 					>
-						<Stack
-							type={StackType.row}
-							alignItems={StackAlignItems.center}
+						<View
+							style={{
+								flex: 1,
+							}}
 						>
-							<Avatar
-								uri={avatar}
-								size={AvatarSizeTokens.XL}
-							/>
-							<Space size={SizeTypeTokens.MD} />
-							<Stack>
-								<Typography
-									label={title}
-									type={TypographyTypeTokens.H4}
+							<Stack
+								type={StackType.row}
+								alignItems={StackAlignItems.center}
+							>
+								<Avatar
+									uri={avatar}
+									size={AvatarSizeTokens.XL}
 								/>
-								<Stack
-									type={StackType.row}
-									alignItems={StackAlignItems.center}
+								<Space size={SizeTypeTokens.MD} />
+
+								<View
+									style={{
+										flex: 1,
+									}}
 								>
-									{location ? (
-										<Icon
-											name={IconTokens.LocationPin}
-											size={IconSizeTokens.XS}
-											color={ColorTokens.Grey_200}
-										/>
-									) : (
-										<></>
-									)}
-									<Space
-										size={
-											location
-												? SizeTypeTokens.SM
-												: SizeTypeTokens.NONE
-										}
-									/>
 									<Typography
-										label={location ? location : subtitle}
-										type={TypographyTypeTokens.B6}
-										color={ColorTokens.Grey_200}
+										label={title}
+										type={TypographyTypeTokens.H4}
+										numberOfLines={1}
 									/>
-								</Stack>
+									<Space size={SizeTypeTokens.SM} />
+									<Stack
+										type={StackType.row}
+										alignItems={StackAlignItems.center}
+									>
+										{location ? (
+											<Icon
+												name={IconTokens.LocationPin}
+												size={IconSizeTokens.XS}
+												color={ColorTokens.Grey_200}
+											/>
+										) : (
+											<></>
+										)}
+										<Space
+											size={
+												location
+													? SizeTypeTokens.SM
+													: SizeTypeTokens.NONE
+											}
+										/>
+										<Typography
+											label={location ? location : subtitle}
+											type={TypographyTypeTokens.B6}
+											color={ColorTokens.Grey_200}
+											numberOfLines={1}
+										/>
+									</Stack>
+								</View>
 							</Stack>
-						</Stack>
+						</View>
 						<Button
 							type={ButtonTypeTokens.IconFilled}
 							labelColor={ColorTokens.Grey_500}
