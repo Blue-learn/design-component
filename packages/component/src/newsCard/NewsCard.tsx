@@ -92,7 +92,7 @@ const NewsCard: React.FunctionComponent<
 								<Typography
 									label={title}
 									type={TypographyTypeTokens.H5}
-									numberOfLines={1}
+									numberOfLines={2}
 								/>,
 								<Space
 									size={
@@ -186,7 +186,6 @@ const NewsCard: React.FunctionComponent<
 										icon={{
 											name: IconTokens.DoubleMessage,
 											size: IconSizeTokens.XL,
-											align: IconAlignmentTokens.left,
 										}}
 										onPress={() =>
 											triggerAction(discussAction)
