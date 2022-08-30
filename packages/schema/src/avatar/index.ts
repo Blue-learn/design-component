@@ -31,7 +31,7 @@ export enum AvatarSizeTokens {
 	LG = 'LG',
 	XL = 'XL',
 	XXL = 'XXL',
-	XXXL = 'XXL',
+	XXXL = 'XXXL',
 }
 
 export type AvatarTypeTokensMap = {
