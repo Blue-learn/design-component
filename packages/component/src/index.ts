@@ -20,5 +20,6 @@ export * as MemberCard from './memberCard';
 export * as IcebreakerCard from './icebreakerCard';
 export * as UserCard from './userCard';
 export * as NewsCard from './newsCard';
+export * as DiscussionCard from './discussionCard';
 export * from './mock';
 export * from './registry';

@@ -7,6 +7,7 @@ import {
 
 export const colorTokensMap: ColorTokensMap = {
 	[ColorTokens.White]: '#FFFFFF',
+	[ColorTokens.White_20]: '#FFFFFF20',
 	[ColorTokens.Grey_50]: '#F2F3F7',
 	[ColorTokens.Grey_100]: '#E8E9ED',
 	[ColorTokens.Grey_200]: '#C5C8D2',
