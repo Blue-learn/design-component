@@ -1,7 +1,6 @@
 import {
+	ButtonTypeTokens,
 	ColorTokens,
-	FontSizeTokens,
-	SizeTypeTokens,
 	TabsProps,
 } from '@blue-learn/schema';
 import React, { memo, useState } from 'react';
@@ -10,7 +9,7 @@ import {
 	StyleSheet,
 	View,
 } from 'react-native';
-import ButtonBase from '../button/Button.base';
+import Button from '../button/Button';
 
 // const reducer = (
 // 	state,
@@ -54,19 +53,11 @@ const Tabs: React.FunctionComponent<
 	return (
 		<>
 			<ScrollView horizontal style={styles.menuBar}>
-				{options.map(({ label, disabled }, i) => {
-					const isActive = i == activeTab;
+				{options?.map(({ label, disabled }, i) => {
 					return (
-						<ButtonBase
-							paddingHorizontal={SizeTypeTokens.XL}
-							paddingVertical={SizeTypeTokens.MD}
-							labelColor={ColorTokens.Grey_500}
-							fontSize={FontSizeTokens.MD}
-							bgColor={
-								isActive
-									? ColorTokens.Blue_100
-									: ColorTokens.Transparent
-							}
+						<Button
+							type={ButtonTypeTokens.MediumGhost}
+							labelColor={ColorTokens.Grey_100}
 							label={label}
 							onPress={() => {
 								if (disabled) return;

@@ -1,11 +1,15 @@
 import React from 'react';
 import { TabsProps } from '@blue-learn/schema';
+import Typography from '../typography/Typography';
 
 export const args: TabsProps = {
 	options: [
 		{ label: 'Tab 1' },
 		{ label: 'Tab 2' },
 	],
-	components: ['Tab 1 contents', 'Tab 2 contents'],
+	components: [
+		<Typography label={'1st Tab'} />,
+		<Typography label={'2nd Tab'} />,
+	],
 };
 export const argTypes = {};

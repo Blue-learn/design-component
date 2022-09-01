@@ -11,10 +11,16 @@ export default {
 	component: Tabs,
 };
 
-const Template = (args: TabsProps) => {
-	return <Tabs {...args} />;
+const Template = (args: TabsProps) => (
+	<Tabs {...args} />
+);
+
+export const Component = Template.bind({});
+
+Component.args = {
+	...Mock.args,
 };
 
-export const TabbedView = Template.bind({
-	...Mock.args,
-});
+Component.argTypes = {
+	...Mock.argTypes,
+};
