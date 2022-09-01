@@ -46,7 +46,11 @@ const AvatarBase: React.FC<AvatarBaseProps> = ({
 	);
 
 	return (
-		<Image style={styleProps} source={{ uri }} />
+		<Image
+			referrerPolicy='no-referrer'
+			style={styleProps}
+			source={{ uri }}
+		/>
 	);
 };
 
