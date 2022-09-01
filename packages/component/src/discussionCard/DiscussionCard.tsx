@@ -19,7 +19,10 @@ import {
 	TypographyTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
-import { View } from 'react-native';
+import {
+	View,
+	TouchableOpacity,
+} from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
@@ -47,6 +50,7 @@ const DicussionCard: React.FunctionComponent<
 	action,
 	gradientColor = GradientColorTokens.D_5,
 	margin,
+	profileAction,
 	triggerAction,
 }) => {
 	if (!title) return <></>;
@@ -83,10 +87,13 @@ const DicussionCard: React.FunctionComponent<
 									StackJustifyContent.spaceBetween
 								}
 							>
-								<View
+								<TouchableOpacity
 									style={{
 										flex: 1,
 									}}
+									onPress={() =>
+										triggerAction(profileAction)
+									}
 								>
 									<Stack
 										type={StackType.row}
@@ -103,7 +110,7 @@ const DicussionCard: React.FunctionComponent<
 											numberOfLines={1}
 										/>
 									</Stack>
-								</View>
+								</TouchableOpacity>
 								{_map(
 									tags?.slice(0, 3),
 									(item: TagProps, index: number) => [
@@ -227,6 +234,7 @@ const DicussionCard: React.FunctionComponent<
 								}}
 							>
 								<Button
+									onPress={handleAction}
 									type={ButtonTypeTokens.SmallGhost}
 									labelColor={ColorTokens.Grey_50}
 									label={ctaText}
