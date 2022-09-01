@@ -28,3 +28,4 @@ export * from './memberCard';
 export * from './icebreakerCard';
 export * from './userCard';
 export * from './newsCard';
+export * from './discussionCard';
