@@ -3,6 +3,11 @@ import { PaddingProps } from '../padding';
 import { TagProps } from '../tag';
 import { Action } from '../types';
 
+export enum SeenStateTokens {
+	SEEN = 'SEEN',
+	UNSEEN = 'UNSEEN',
+}
+
 export type DiscussionCardProps = {
 	gradientColor?: GradientColorTokens;
 	margin?: PaddingProps;
@@ -11,7 +16,7 @@ export type DiscussionCardProps = {
 	 */
 	userLabel: string;
 	userAvatarURL: string;
-	tag?: TagProps[];
+	tags?: TagProps[];
 	/**
 	 * body
 	 */
@@ -21,6 +26,7 @@ export type DiscussionCardProps = {
 	/**
 	 * Footer
 	 */
+	state: SeenStateTokens;
 	participants?: string[];
 	participantsLabel?: string;
 	ctaText?: string;

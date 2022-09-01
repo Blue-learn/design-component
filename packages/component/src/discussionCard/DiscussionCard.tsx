@@ -9,6 +9,7 @@ import {
 	DividerSizeTokens,
 	FontTransformToken,
 	GradientColorTokens,
+	SeenStateTokens,
 	SizeTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
@@ -33,13 +34,14 @@ const DicussionCard: React.FunctionComponent<
 	DiscussionCardProps & WidgetProps
 > = ({
 	userLabel,
+	state = SeenStateTokens.UNSEEN,
 	userAvatarURL,
 	title,
 	subtitle,
 	clubTitle,
 	participantsLabel,
 	participants,
-	tag,
+	tags,
 	onPress,
 	ctaText,
 	action,
@@ -101,14 +103,14 @@ const DicussionCard: React.FunctionComponent<
 									</Stack>
 								</View>
 								{_map(
-									tag?.slice(0, 3),
+									tags?.slice(0, 3),
 									(item: TagProps, index: number) => [
 										<Tag
 											key={index}
 											{...item}
 											margin={{
 												right:
-													index !== tag?.length - 1
+													index !== tags?.length - 1
 														? SizeTypeTokens.SM
 														: SizeTypeTokens.NONE,
 											}}
@@ -117,25 +119,40 @@ const DicussionCard: React.FunctionComponent<
 								)}
 							</Stack>
 							<Space size={SizeTypeTokens.MD} />
-
-							<Typography
-								label={title}
-								type={TypographyTypeTokens.H4}
-								textTransform={
-									FontTransformToken.capitalize
+							<View
+								style={
+									state === SeenStateTokens.SEEN
+										? { opacity: 0.7 }
+										: { opacity: 1 }
 								}
-								numberOfLines={2}
-							/>
+							>
+								<Typography
+									label={title}
+									type={TypographyTypeTokens.H4}
+									textTransform={
+										FontTransformToken.capitalize
+									}
+									numberOfLines={2}
+								/>
+							</View>
 
 							{subtitle ? (
 								[
 									<Space size={SizeTypeTokens.MD} />,
-									<Typography
-										label={subtitle}
-										numberOfLines={2}
-										type={TypographyTypeTokens.B6}
-										color={ColorTokens.Grey_200}
-									/>,
+									<View
+										style={
+											state === SeenStateTokens.SEEN
+												? { opacity: 0.7 }
+												: { opacity: 1 }
+										}
+									>
+										<Typography
+											label={subtitle}
+											numberOfLines={2}
+											type={TypographyTypeTokens.B6}
+											color={ColorTokens.Grey_200}
+										/>
+									</View>,
 								]
 							) : (
 								<></>
