@@ -34,6 +34,7 @@ const Image: React.FunctionComponent<
 
 	return (
 		<ImageContainer
+			referrerPolicy='no-referrer'
 			style={{
 				width: sizeValue,
 				height: 'auto',

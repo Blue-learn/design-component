@@ -46,6 +46,7 @@ const DicussionCard: React.FunctionComponent<
 	ctaText,
 	action,
 	gradientColor = GradientColorTokens.D_5,
+	margin,
 	triggerAction,
 }) => {
 	if (!title) return <></>;
@@ -71,6 +72,7 @@ const DicussionCard: React.FunctionComponent<
 					vertical: SizeTypeTokens.XL,
 					horizontal: SizeTypeTokens.MD,
 				}}
+				margin={margin}
 				header={{
 					children: (
 						<View>
@@ -193,26 +195,43 @@ const DicussionCard: React.FunctionComponent<
 								StackJustifyContent.spaceBetween
 							}
 						>
-							<Stack
-								type={StackType.row}
-								alignItems={StackAlignItems.center}
+							{participants?.length > 0 ? (
+								<Stack
+									type={StackType.row}
+									alignItems={StackAlignItems.center}
+								>
+									{participants?.length > 2 ? (
+										<Avatar
+											size={AvatarSizeTokens.XS}
+											type={AvatarTypeTokens.MULTIPLE}
+											uris={participants}
+										/>
+									) : (
+										<></>
+									)}
+									<Space size={SizeTypeTokens.SM} />
+									<Typography
+										label={participantsLabel}
+										type={TypographyTypeTokens.S6}
+									/>
+								</Stack>
+							) : (
+								<></>
+							)}
+
+							<View
+								style={{
+									flex: 1,
+									flexDirection: 'row',
+									justifyContent: 'flex-end',
+								}}
 							>
-								<Avatar
-									size={AvatarSizeTokens.XS}
-									type={AvatarTypeTokens.MULTIPLE}
-									uris={participants}
+								<Button
+									type={ButtonTypeTokens.SmallGhost}
+									labelColor={ColorTokens.Grey_50}
+									label={ctaText}
 								/>
-								<Space size={SizeTypeTokens.SM} />
-								<Typography
-									label={participantsLabel}
-									type={TypographyTypeTokens.S6}
-								/>
-							</Stack>
-							<Button
-								type={ButtonTypeTokens.SmallGhost}
-								labelColor={ColorTokens.Grey_50}
-								label={ctaText}
-							/>
+							</View>
 						</Stack>
 					) : (
 						<></>
