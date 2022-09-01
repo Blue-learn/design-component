@@ -1,5 +1,6 @@
 export enum ColorTokens {
 	White = 'white',
+	White_20 = 'white_20',
 	Grey_50 = 'grey-50',
 	Grey_100 = 'grey-100',
 	Grey_200 = 'grey-200',

@@ -9,13 +9,13 @@ export type DiscussionCardProps = {
 	/**
 	 * Header
 	 */
-	userLabel?: string;
-	userAvatarURL?: string;
+	userLabel: string;
+	userAvatarURL: string;
 	tag?: TagProps[];
 	/**
 	 * body
 	 */
-	title?: string;
+	title: string;
 	subtitle?: string;
 	clubTitle?: string;
 	/**

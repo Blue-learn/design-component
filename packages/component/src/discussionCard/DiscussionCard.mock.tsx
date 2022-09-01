@@ -22,11 +22,21 @@ export const args = {
 				align: IconAlignmentTokens.left,
 			},
 		},
+		{
+			type: TagTypeTokens.SECONDARY,
+			label: 'New',
+			icon: {
+				name: IconTokens.Sparkling,
+				size: IconSizeTokens.XS,
+				align: IconAlignmentTokens.left,
+			},
+		},
 	],
 	clubTitle: 'Startup Club',
 	title:
 		'Figma config 2022: What’s new in Figma lorem ipsum?',
-	subTitle: 'Subtitle Lorem Ipsums',
+	subtitle:
+		'This is the description of the Card. It can go upto 2 lines and then three dots lorem ipsum dolor sit amet',
 	participants: [
 		'https://reactnative.dev/img/tiny_logo.png',
 		'https://reactnative.dev/img/tiny_logo.png',
@@ -36,4 +46,12 @@ export const args = {
 	ctaText: '9+ Messages ->',
 };
 
-export const argTypes = {};
+export const argTypes = {
+	gradientColor: {
+		control: 'select',
+		options: [
+			null,
+			...Object.values(GradientColorTokens),
+		],
+	},
+};

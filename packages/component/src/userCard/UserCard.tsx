@@ -58,7 +58,7 @@ const UserCard: React.FunctionComponent<
 							size={AvatarSizeTokens.MD}
 						/>
 						<Space size={SizeTypeTokens.MD} />
-						<Stack>
+						<Stack alignItems={StackAlignItems.center}>
 							<Typography
 								label={title}
 								type={TypographyTypeTokens.S5}
