@@ -63,7 +63,7 @@ const DicussionCard: React.FunctionComponent<
 	};
 
 	if (!title || !userLabel || !userAvatarURL)
-		return;
+		return <></>;
 	else
 		return (
 			<Card

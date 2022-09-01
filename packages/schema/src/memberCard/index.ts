@@ -1,6 +1,7 @@
 import { ColorTokens } from '../colors';
 import { BorderRadiusTokens } from '../borderRadius';
 import { PaddingProps } from '../padding';
+import { Action } from '../types';
 
 export type MemberCardProps = {
 	padding?: PaddingProps;
@@ -15,4 +16,6 @@ export type MemberCardProps = {
 	headline?: string;
 	chips?: string[];
 	chipsTitle?: string;
+	ctaAction?: Action;
+	margin?: PaddingProps;
 };
