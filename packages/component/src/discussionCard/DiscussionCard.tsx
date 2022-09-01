@@ -9,7 +9,7 @@ import {
 	DividerSizeTokens,
 	FontTransformToken,
 	GradientColorTokens,
-	SeenStateTokens,
+	DiscussionStateTokens,
 	SizeTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
@@ -34,7 +34,7 @@ const DicussionCard: React.FunctionComponent<
 	DiscussionCardProps & WidgetProps
 > = ({
 	userLabel,
-	state = SeenStateTokens.UNSEEN,
+	state = DiscussionStateTokens.UNSEEN,
 	userAvatarURL,
 	title,
 	subtitle,
@@ -121,7 +121,7 @@ const DicussionCard: React.FunctionComponent<
 							<Space size={SizeTypeTokens.MD} />
 							<View
 								style={
-									state === SeenStateTokens.SEEN
+									state === DiscussionStateTokens.SEEN
 										? { opacity: 0.7 }
 										: { opacity: 1 }
 								}
@@ -141,7 +141,7 @@ const DicussionCard: React.FunctionComponent<
 									<Space size={SizeTypeTokens.MD} />,
 									<View
 										style={
-											state === SeenStateTokens.SEEN
+											state === DiscussionStateTokens.SEEN
 												? { opacity: 0.7 }
 												: { opacity: 1 }
 										}

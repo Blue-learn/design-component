@@ -3,7 +3,7 @@ import { PaddingProps } from '../padding';
 import { TagProps } from '../tag';
 import { Action } from '../types';
 
-export enum SeenStateTokens {
+export enum DiscussionStateTokens {
 	SEEN = 'SEEN',
 	UNSEEN = 'UNSEEN',
 }
@@ -26,7 +26,7 @@ export type DiscussionCardProps = {
 	/**
 	 * Footer
 	 */
-	state: SeenStateTokens;
+	state: DiscussionStateTokens;
 	participants?: string[];
 	participantsLabel?: string;
 	ctaText?: string;

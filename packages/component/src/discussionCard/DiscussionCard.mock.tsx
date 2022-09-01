@@ -3,13 +3,13 @@ import {
 	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
-	SeenStateTokens,
+	DiscussionStateTokens,
 	TagTypeTokens,
 } from '@blue-learn/schema';
 
 export const args = {
 	gradientColor: GradientColorTokens.D_5,
-	state: SeenStateTokens.UNSEEN,
+	state: DiscussionStateTokens.UNSEEN,
 
 	userLabel: 'Saidatta Sahu',
 	userAvatarURL:
@@ -58,6 +58,8 @@ export const argTypes = {
 	},
 	state: {
 		control: 'select',
-		options: [...Object.values(SeenStateTokens)],
+		options: [
+			...Object.values(DiscussionStateTokens),
+		],
 	},
 };
