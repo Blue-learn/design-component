@@ -5,7 +5,7 @@ import {
 import React from 'react';
 import { Shimmer } from '../shimmer/Shimmer';
 
-const NewsCardShimmer: React.FunctionComponent =
+const DiscussionCardShimmer: React.FunctionComponent =
 	() => {
 		return (
 			<Shimmer
@@ -17,4 +17,4 @@ const NewsCardShimmer: React.FunctionComponent =
 		);
 	};
 
-export default NewsCardShimmer;
+export default DiscussionCardShimmer;

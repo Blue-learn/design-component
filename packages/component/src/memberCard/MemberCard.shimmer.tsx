@@ -5,11 +5,11 @@ import {
 import React from 'react';
 import { Shimmer } from '../shimmer/Shimmer';
 
-const NewsCardShimmer: React.FunctionComponent =
+const MemberCardShimmer: React.FunctionComponent =
 	() => {
 		return (
 			<Shimmer
-				height={180}
+				height={160}
 				width={'100%'}
 				borderRadius={BorderRadiusTokens.BR1}
 				backgroundColor={ColorTokens.Grey_600}
@@ -17,4 +17,4 @@ const NewsCardShimmer: React.FunctionComponent =
 		);
 	};
 
-export default NewsCardShimmer;
+export default MemberCardShimmer;
