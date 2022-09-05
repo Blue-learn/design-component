@@ -1,21 +1,21 @@
 import React from 'react';
 import {
-	ColorTokens,
-	UserCardProps,
-	SizeTypeTokens,
-	TypographyTypeTokens,
 	AvatarSizeTokens,
+	ColorTokens,
+	DividerSizeTokens,
+	FontTransformToken,
+	IconSizeTokens,
+	IconTokens,
+	SizeTypeTokens,
 	StackAlignItems,
 	StackType,
-	IconTokens,
-	IconSizeTokens,
-	DividerSizeTokens,
+	TypographyTypeTokens,
+	UserCardProps,
 	WidgetProps,
 } from '@blue-learn/schema';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
-import _map from 'lodash-es/map';
 import Space from '../space/Space';
 import Avatar from '../avatar/Avatar';
 import Icon from '../icon/Icon';
@@ -58,9 +58,12 @@ const UserCard: React.FunctionComponent<
 							size={AvatarSizeTokens.MD}
 						/>
 						<Space size={SizeTypeTokens.MD} />
-						<Stack alignItems={StackAlignItems.center}>
+						<Stack>
 							<Typography
 								label={title}
+								textTransform={
+									FontTransformToken.capitalize
+								}
 								type={TypographyTypeTokens.S5}
 							/>
 							<Space size={SizeTypeTokens.SM} />
@@ -84,6 +87,7 @@ const UserCard: React.FunctionComponent<
 							) : (
 								<Typography
 									label={subtitle}
+									numberOfLines={1}
 									type={TypographyTypeTokens.B6}
 									color={ColorTokens.Grey_200}
 								/>

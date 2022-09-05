@@ -38,22 +38,24 @@ const TypographyBase: React.FunctionComponent<
 	const fontSizeMapping: FontSizeTokensMap =
 		theme.fontSize;
 
-	return (
-		<Text
-			style={{
-				fontFamily: fontFamilyMapping[fontFamily],
-				color: colorMapping[color],
-				fontSize: fontSizeMapping[fontSize],
-				textTransform: textTransform,
-				textDecorationLine: textDecorationLine,
-				textAlign: textAlign,
-			}}
-			numberOfLines={numberOfLines}
-			{...props}
-		>
-			{label}
-		</Text>
-	);
+	if (!label) return <></>;
+	else
+		return (
+			<Text
+				style={{
+					fontFamily: fontFamilyMapping[fontFamily],
+					color: colorMapping[color],
+					fontSize: fontSizeMapping[fontSize],
+					textTransform: textTransform,
+					textDecorationLine: textDecorationLine,
+					textAlign: textAlign,
+				}}
+				numberOfLines={numberOfLines}
+				{...props}
+			>
+				{label}
+			</Text>
+		);
 };
 export default memo(TypographyBase);
 export { TypographyBase };

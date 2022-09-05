@@ -1,12 +1,13 @@
 import {
-	ChipItemProps,
-	ColorTokens,
 	BorderRadiusTokens,
+	ChipItemProps,
+	ChipStateTokens,
+	ColorTokens,
 	FontFamilyTokens,
 	FontSizeTokens,
+	IconAlignmentTokens,
 	IconTokens,
 	SizeTypeTokens,
-	IconAlignmentTokens,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
 import { View } from 'react-native';
@@ -24,7 +25,8 @@ const Chip: React.FC<ChipItemProps> = ({
 	label = 'Chip',
 	bgColor = ColorTokens.Grey_600,
 	labelColor = ColorTokens.Grey_100,
-	fontSize = FontSizeTokens.XXS,
+	fontSize = FontSizeTokens.XS,
+	state = ChipStateTokens.DEFAULT,
 	borderRadius = BorderRadiusTokens.BR4,
 	icon = {
 		name: IconTokens.Sparkling,
@@ -40,7 +42,10 @@ const Chip: React.FC<ChipItemProps> = ({
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
 
-	const backgroundColor = theme.colors[bgColor];
+	const backgroundColor =
+		state === ChipStateTokens.DEFAULT
+			? theme.colors[bgColor]
+			: theme.colors[ColorTokens.Blue_300];
 
 	const paddingTop =
 		theme.space[padding?.vertical || padding?.top];
@@ -86,7 +91,11 @@ const Chip: React.FC<ChipItemProps> = ({
 				label={label}
 				fontSize={fontSize}
 				fontFamily={FontFamilyTokens.manropeSemiBold}
-				color={labelColor}
+				color={
+					state === ChipStateTokens.DEFAULT
+						? labelColor
+						: ColorTokens.Grey_500
+				}
 			/>
 			{icon?.align === IconAlignmentTokens.right &&
 				icon?.name && (

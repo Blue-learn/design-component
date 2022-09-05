@@ -1,6 +1,7 @@
 import {
 	AvatarSizeTokens,
 	ChipProps,
+	ChipStateTokens,
 	ColorTokens,
 	IconAlignmentTokens,
 	IconSizeTokens,
@@ -16,8 +17,7 @@ export const args: ChipProps = {
 	data: [
 		{
 			label: 'Chip1',
-			bgColor: ColorTokens.Black,
-			labelColor: ColorTokens.Grey_100,
+			state: ChipStateTokens.DEFAULT,
 			icon: {
 				name: IconTokens.Sparkling,
 				color: ColorTokens.Grey_100,
@@ -27,8 +27,7 @@ export const args: ChipProps = {
 		},
 		{
 			label: 'Chip2',
-			bgColor: ColorTokens.Grey_600,
-			labelColor: ColorTokens.Grey_100,
+			state: ChipStateTokens.ACTIVE,
 			icon: {
 				name: IconTokens.Sparkling,
 				color: ColorTokens.Grey_100,
