@@ -29,3 +29,5 @@ export * from './icebreakerCard';
 export * from './userCard';
 export * from './newsCard';
 export * from './discussionCard';
+export * from './feedCard';
+export * from './commentCard';
