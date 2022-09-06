@@ -60,7 +60,11 @@ const UserCard: React.FunctionComponent<
 							size={AvatarSizeTokens.MD}
 						/>
 						<Space size={SizeTypeTokens.MD} />
-						<Stack>
+						<View
+							style={{
+								flex: 1,
+							}}
+						>
 							<Stack
 								type={StackType.row}
 								alignItems={StackAlignItems.center}
@@ -80,8 +84,8 @@ const UserCard: React.FunctionComponent<
 								</View>
 								{title_secondary ? (
 									<Typography
-										label={'      ' + title_secondary}
-										type={TypographyTypeTokens.B5}
+										label={title_secondary}
+										type={TypographyTypeTokens.B7}
 										color={ColorTokens.Grey_200}
 									/>
 								) : (
@@ -114,7 +118,7 @@ const UserCard: React.FunctionComponent<
 									color={ColorTokens.Grey_200}
 								/>
 							)}
-						</Stack>
+						</View>
 					</Stack>
 				),
 			}}
