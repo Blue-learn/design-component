@@ -8,11 +8,13 @@ import {
 	IconTokens,
 	SizeTypeTokens,
 	StackAlignItems,
+	StackJustifyContent,
 	StackType,
 	TypographyTypeTokens,
 	UserCardProps,
 	WidgetProps,
 } from '@blue-learn/schema';
+import { View } from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
@@ -25,11 +27,13 @@ const UserCard: React.FunctionComponent<
 	UserCardProps & WidgetProps
 > = ({
 	title,
+	title_secondary,
 	subtitle,
 	avatar,
 	location,
 	onPress,
 	action,
+	padding = { top: SizeTypeTokens.LG },
 	triggerAction,
 }) => {
 	if (!title) return <></>;
@@ -44,9 +48,7 @@ const UserCard: React.FunctionComponent<
 	return (
 		<Card
 			onPress={handleAction}
-			padding={{
-				top: SizeTypeTokens.LG,
-			}}
+			padding={padding}
 			header={{
 				children: (
 					<Stack
@@ -59,13 +61,33 @@ const UserCard: React.FunctionComponent<
 						/>
 						<Space size={SizeTypeTokens.MD} />
 						<Stack>
-							<Typography
-								label={title}
-								textTransform={
-									FontTransformToken.capitalize
+							<Stack
+								type={StackType.row}
+								alignItems={StackAlignItems.center}
+								justifyContent={
+									StackJustifyContent.spaceBetween
 								}
-								type={TypographyTypeTokens.S5}
-							/>
+							>
+								<View style={{ flex: 1 }}>
+									<Typography
+										label={title}
+										numberOfLines={1}
+										textTransform={
+											FontTransformToken.capitalize
+										}
+										type={TypographyTypeTokens.S5}
+									/>
+								</View>
+								{title_secondary ? (
+									<Typography
+										label={'      ' + title_secondary}
+										type={TypographyTypeTokens.B5}
+										color={ColorTokens.Grey_200}
+									/>
+								) : (
+									<></>
+								)}
+							</Stack>
 							<Space size={SizeTypeTokens.SM} />
 							{location ? (
 								<Stack
@@ -97,10 +119,14 @@ const UserCard: React.FunctionComponent<
 				),
 			}}
 			footer={{
-				children: [
-					<Space size={SizeTypeTokens.LG} />,
-					<Divider size={DividerSizeTokens.SM} />,
-				],
+				children: !title_secondary ? (
+					[
+						<Space size={SizeTypeTokens.LG} />,
+						<Divider size={DividerSizeTokens.SM} />,
+					]
+				) : (
+					<></>
+				),
 			}}
 		/>
 	);
