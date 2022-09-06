@@ -7,7 +7,7 @@ import {
 
 export const imageTypeTokensMap: ImageTypeTokensMap =
 	{
-		[ImageSizeTokens.XXS]: 16,
+		[ImageSizeTokens.XXS]: 20,
 		[ImageSizeTokens.XS]: 24,
 		[ImageSizeTokens.SM]: 36,
 		[ImageSizeTokens.MD]: 48,
