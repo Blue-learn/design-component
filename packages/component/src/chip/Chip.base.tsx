@@ -6,36 +6,41 @@ import {
 	FontFamilyTokens,
 	FontSizeTokens,
 	IconAlignmentTokens,
-	IconTokens,
+	ImageSizeTokens,
 	SizeTypeTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
-import { View } from 'react-native';
+import { Pressable } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
+import { Image } from '../image/Image';
 
 /**
  * @description
  * Stack supports children as React Component and widgetItems as WidgetItem Type[order by children -> widgetItems]
  * Note: renderItem should be passed to render WidgetItem
  **/
-const Chip: React.FC<ChipItemProps> = ({
+const Chip: React.FC<
+	ChipItemProps & WidgetProps
+> = ({
 	label = 'Chip',
 	bgColor = ColorTokens.Grey_600,
 	labelColor = ColorTokens.Grey_100,
 	fontSize = FontSizeTokens.XS,
 	state = ChipStateTokens.DEFAULT,
 	borderRadius = BorderRadiusTokens.BR4,
-	icon = {
-		name: IconTokens.Sparkling,
-		align: IconAlignmentTokens.left,
-	},
+	icon,
+	image,
 	padding = {
 		horizontal: SizeTypeTokens.MD,
 		vertical: SizeTypeTokens.SM,
 	},
+	onPress,
+	action,
+	triggerAction,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -65,8 +70,20 @@ const Chip: React.FC<ChipItemProps> = ({
 			padding?.horizontal || padding?.right
 		];
 
+	const labelColorValue =
+		state === ChipStateTokens.DEFAULT
+			? labelColor
+			: ColorTokens.Grey_500;
+
+	const handleAction = () => {
+		onPress && onPress();
+		action &&
+			triggerAction &&
+			triggerAction(action);
+	};
+
 	return (
-		<View
+		<Pressable
 			style={{
 				flexDirection: 'row',
 				alignItems: 'center',
@@ -77,25 +94,36 @@ const Chip: React.FC<ChipItemProps> = ({
 				paddingLeft: paddingLeft,
 				paddingRight: paddingRight,
 			}}
+			onPress={handleAction}
 		>
 			{icon?.align === IconAlignmentTokens.left &&
 				icon?.name && (
 					<>
-						<Icon {...icon} />
+						<Icon
+							{...icon}
+							color={icon?.color || labelColorValue}
+						/>
 						{label && (
 							<Space size={SizeTypeTokens.SM} />
 						)}
 					</>
 				)}
+
+			{image && image?.uri
+				? [
+						<Image
+							size={image?.size || ImageSizeTokens.XXS}
+							{...image}
+						/>,
+						<Space size={SizeTypeTokens.SM} />,
+				  ]
+				: null}
+
 			<Typography
 				label={label}
 				fontSize={fontSize}
 				fontFamily={FontFamilyTokens.manropeSemiBold}
-				color={
-					state === ChipStateTokens.DEFAULT
-						? labelColor
-						: ColorTokens.Grey_500
-				}
+				color={labelColorValue}
 			/>
 			{icon?.align === IconAlignmentTokens.right &&
 				icon?.name && (
@@ -103,10 +131,13 @@ const Chip: React.FC<ChipItemProps> = ({
 						{label && (
 							<Space size={SizeTypeTokens.SM} />
 						)}
-						<Icon {...icon} />
+						<Icon
+							{...icon}
+							color={icon?.color || labelColorValue}
+						/>
 					</>
 				)}
-		</View>
+		</Pressable>
 	);
 };
 

@@ -4,6 +4,7 @@ import { IconProps } from '../icon';
 import { OpacityTypeTokens } from '../opacity';
 import { PaddingProps } from '../padding';
 import { FontSizeTokens } from '../typography';
+import { ImageProps } from '../image';
 
 export enum ChipStateTokens {
 	DEFAULT = 'DEFAULT',
@@ -16,6 +17,7 @@ export type ChipItemProps = {
 	/**
 	 * Default Icon null
 	 */
+	image?: ImageProps;
 	icon?: IconProps;
 	bgColor?: ColorTokens;
 	labelColor?: ColorTokens;
@@ -23,6 +25,7 @@ export type ChipItemProps = {
 	borderRadius?: BorderRadiusTokens;
 	opacity?: OpacityTypeTokens;
 	padding?: PaddingProps;
+	onPress?: Function;
 };
 
 export type ChipProps = {
