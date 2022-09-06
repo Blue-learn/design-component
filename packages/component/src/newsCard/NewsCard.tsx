@@ -5,7 +5,6 @@ import {
 	ButtonTypeTokens,
 	ColorTokens,
 	DividerSizeTokens,
-	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	ImageSizeTokens,
@@ -53,6 +52,9 @@ const NewsCard: React.FunctionComponent<
 	MoreAction,
 	triggerAction,
 	action,
+	onPressLike,
+	onPressDiscuss,
+	onPressMore,
 }) => {
 	if (!title) return <></>;
 
@@ -168,10 +170,11 @@ const NewsCard: React.FunctionComponent<
 								>
 									<Button
 										type={ButtonTypeTokens.IconGhost}
-										onPress={() =>
-											triggerAction(likeAction)
-										}
-										// action={likeAction}
+										onPress={() => {
+											if (onPressLike) onPressLike();
+											if (likeAction)
+												triggerAction(likeAction);
+										}}
 										icon={{
 											name:
 												likeState === LikeStateTokens.SELECTED
@@ -187,9 +190,11 @@ const NewsCard: React.FunctionComponent<
 											name: IconTokens.DoubleMessage,
 											size: IconSizeTokens.XL,
 										}}
-										onPress={() =>
-											triggerAction(discussAction)
-										}
+										onPress={() => {
+											if (onPressDiscuss) onPressDiscuss();
+											if (discussAction)
+												triggerAction(discussAction);
+										}}
 									/>
 									<Button
 										type={ButtonTypeTokens.IconGhost}
@@ -197,9 +202,11 @@ const NewsCard: React.FunctionComponent<
 											name: IconTokens.Share,
 											size: IconSizeTokens.LG,
 										}}
-										onPress={() =>
-											triggerAction(MoreAction)
-										}
+										onPress={() => {
+											if (onPressMore) onPressMore();
+											if (MoreAction)
+												triggerAction(MoreAction);
+										}}
 									/>
 								</Stack>
 							),
