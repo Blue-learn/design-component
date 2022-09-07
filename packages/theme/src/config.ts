@@ -18,6 +18,7 @@ import {
 	AspectRatioTokensMap,
 	TagTypeTokensMap,
 	GradientColorTokensMap,
+	ChipTypeTokensMap,
 } from '@blue-learn/schema';
 
 export type ThemeTokens = {
@@ -40,13 +41,16 @@ export type ThemeTokens = {
 	dividerSize: DividerSizeTokensMap;
 	lottieSize: LottieSizeTokensMap;
 	tag: TagTypeTokensMap;
+	chip: ChipTypeTokensMap;
 };
 
 export * from './light-mobile/divider';
+
 export enum THEMES {
 	LIGHT_MOBILE = 'light-mobile',
 	DARK_MOBILE = 'dark-mobile',
 }
+
 export type Theme = {
 	[key in THEMES]: ThemeTokens;
 };

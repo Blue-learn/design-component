@@ -1,16 +1,11 @@
 import React, { memo } from 'react';
 import {
 	ChipProps,
-	ChipItemProps,
-	StackType,
-	StackAlignItems,
-	StackJustifyContent,
-	SizeTypeTokens,
+	ChipThemeProps,
+	ChipTypeTokens,
 } from '@blue-learn/schema';
 import ChipBase from './Chip.base';
-import _map from 'lodash-es/map';
-import Stack from '../stack/Stack';
-import Space from '../space/Space';
+import ThemeProvider from '@blue-learn/theme';
 
 /**
  * Primary UI component for user interaction
@@ -18,31 +13,20 @@ import Space from '../space/Space';
 
 const Chip: React.FunctionComponent<
 	ChipProps
-> = ({ ...props }) => {
+> = ({
+	type = ChipTypeTokens.SMALL_UNSELECTED,
+	...props
+}) => {
 	/**
 	 *  logic -> base-component(...props)
 	 * */
 
+	const theme = ThemeProvider.getTheme();
+	const chipThemeProps: ChipThemeProps =
+		theme.chip[type];
+
 	return (
-		<Stack
-			type={StackType.row}
-			alignItems={StackAlignItems.center}
-			justifyContent={StackJustifyContent.flexStart}
-		>
-			{_map(
-				props.data,
-				(item: ChipItemProps, index: number) => [
-					<ChipBase {...item} />,
-					<Space
-						size={
-							index === props?.data?.length - 1
-								? SizeTypeTokens.NONE
-								: SizeTypeTokens.MD
-						}
-					/>,
-				],
-			)}
-		</Stack>
+		<ChipBase {...props} {...chipThemeProps} />
 	);
 };
 

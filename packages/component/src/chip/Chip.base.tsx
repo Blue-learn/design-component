@@ -1,43 +1,34 @@
 import {
-	BorderRadiusTokens,
-	ChipItemProps,
-	ChipStateTokens,
-	ColorTokens,
+	ChipBaseProps,
 	FontFamilyTokens,
-	FontSizeTokens,
 	IconAlignmentTokens,
 	ImageSizeTokens,
 	SizeTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
-import { Pressable } from 'react-native';
+import {
+	Pressable,
+	Platform,
+} from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import { Image } from '../image/Image';
 
-/**
- * @description
- * Stack supports children as React Component and widgetItems as WidgetItem Type[order by children -> widgetItems]
- * Note: renderItem should be passed to render WidgetItem
- **/
 const Chip: React.FC<
-	ChipItemProps & WidgetProps
+	ChipBaseProps & WidgetProps
 > = ({
 	label = 'Chip',
-	bgColor = ColorTokens.Grey_600,
-	labelColor = ColorTokens.Grey_100,
-	fontSize = FontSizeTokens.XS,
-	state = ChipStateTokens.DEFAULT,
-	borderRadius = BorderRadiusTokens.BR4,
+	borderColor,
+	labelColor,
+	fontSize,
+	borderRadius,
 	icon,
 	image,
-	padding = {
-		horizontal: SizeTypeTokens.MD,
-		vertical: SizeTypeTokens.SM,
-	},
+	padding,
+	margin,
 	onPress,
 	action,
 	triggerAction,
@@ -47,10 +38,8 @@ const Chip: React.FC<
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
 
-	const backgroundColor =
-		state === ChipStateTokens.DEFAULT
-			? theme.colors[bgColor]
-			: theme.colors[ColorTokens.Blue_300];
+	const borderColorValue =
+		theme.colors[borderColor];
 
 	const paddingTop =
 		theme.space[padding?.vertical || padding?.top];
@@ -70,10 +59,8 @@ const Chip: React.FC<
 			padding?.horizontal || padding?.right
 		];
 
-	const labelColorValue =
-		state === ChipStateTokens.DEFAULT
-			? labelColor
-			: ColorTokens.Grey_500;
+	const marginRight = theme.space[margin?.right];
+	const marginBottom = theme.space[margin?.bottom];
 
 	const handleAction = () => {
 		onPress && onPress();
@@ -82,18 +69,38 @@ const Chip: React.FC<
 			triggerAction(action);
 	};
 
+	const widthProps = React.useMemo(
+		() =>
+			Platform.OS === 'web'
+				? {
+						width: 'fit-content',
+						marginRight,
+						marginBottom,
+				  }
+				: {
+						alignSelf: 'flex-start',
+						marginRight,
+						marginBottom,
+				  },
+		[],
+	);
+
 	return (
 		<Pressable
-			style={{
-				flexDirection: 'row',
-				alignItems: 'center',
-				backgroundColor: backgroundColor,
-				borderRadius: borderRadiusValue,
-				paddingTop: paddingTop,
-				paddingBottom: paddingBottom,
-				paddingLeft: paddingLeft,
-				paddingRight: paddingRight,
-			}}
+			style={[
+				{
+					flexDirection: 'row',
+					alignItems: 'center',
+					borderColor: borderColorValue,
+					borderRadius: borderRadiusValue,
+					borderWidth: 1,
+					paddingTop: paddingTop,
+					paddingBottom: paddingBottom,
+					paddingLeft: paddingLeft,
+					paddingRight: paddingRight,
+				},
+				widthProps,
+			]}
 			onPress={handleAction}
 		>
 			{icon?.align === IconAlignmentTokens.left &&
@@ -101,14 +108,13 @@ const Chip: React.FC<
 					<>
 						<Icon
 							{...icon}
-							color={icon?.color || labelColorValue}
+							color={icon?.color || labelColor}
 						/>
 						{label && (
 							<Space size={SizeTypeTokens.SM} />
 						)}
 					</>
 				)}
-
 			{image && image?.uri
 				? [
 						<Image
@@ -118,12 +124,11 @@ const Chip: React.FC<
 						<Space size={SizeTypeTokens.SM} />,
 				  ]
 				: null}
-
 			<Typography
 				label={label}
 				fontSize={fontSize}
 				fontFamily={FontFamilyTokens.manropeSemiBold}
-				color={labelColorValue}
+				color={labelColor}
 			/>
 			{icon?.align === IconAlignmentTokens.right &&
 				icon?.name && (
@@ -133,7 +138,7 @@ const Chip: React.FC<
 						)}
 						<Icon
 							{...icon}
-							color={icon?.color || labelColorValue}
+							color={icon?.color || labelColor}
 						/>
 					</>
 				)}
