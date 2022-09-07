@@ -77,6 +77,8 @@ export enum IconTokens {
 	CheckCircle = 'check-circle',
 	Clock = 'clock',
 	UserClock = 'user-clock',
+	Like = 'like',
+	LikeFilled = 'like-filled',
 }
 
 export enum IconSizeTokens {

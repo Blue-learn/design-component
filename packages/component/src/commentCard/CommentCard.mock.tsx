@@ -1,3 +1,5 @@
+import { LikeStateTokens } from '@blue-learn/schema';
+
 export const args = {
 	user: {
 		avatar:
@@ -8,6 +10,12 @@ export const args = {
 		'This is an example of comment on a post.',
 	likeCount: 4,
 	time: '5 day',
+	likeState: LikeStateTokens.NOT_SELECTED,
 };
 
-export const argTypes = {};
+export const argTypes = {
+	likeState: {
+		control: 'select',
+		options: [...Object.values(LikeStateTokens)],
+	},
+};

@@ -59,6 +59,8 @@ import Clock from './icon-list/Clock';
 import Delete from './icon-list/Delete';
 import AddUser from './icon-list/AddUser';
 import UserClock from './icon-list/UserClock';
+import Like from './icon-list/Like';
+import LikeFilled from './icon-list/LikeFilled';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -118,4 +120,6 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Delete]: Delete,
 	[IconTokens.AddUser]: AddUser,
 	[IconTokens.UserClock]: UserClock,
+	[IconTokens.Like]: Like,
+	[IconTokens.LikeFilled]: LikeFilled,
 };
