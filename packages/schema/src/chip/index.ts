@@ -6,28 +6,49 @@ import { PaddingProps } from '../padding';
 import { FontSizeTokens } from '../typography';
 import { ImageProps } from '../image';
 
-export enum ChipStateTokens {
-	DEFAULT = 'DEFAULT',
-	ACTIVE = 'ACTIVE',
+export enum ChipTypeTokens {
+	SMALL_SELECTED = 'SMALL_SELECTED',
+	SMALL_UNSELECTED = 'SMALL_UNSELECTED',
+	MEDIUM_SELECTED = 'MEDIUM_SELECTED',
+	MEDIUM_UNSELECTED = 'MEDIUM_UNSELECTED',
 }
 
-export type ChipItemProps = {
-	state?: ChipStateTokens;
+export type ChipProps = {
+	type?: ChipTypeTokens;
+	label?: String;
+	margin?: PaddingProps;
+	image?: ImageProps;
+	icon?: IconProps;
+	onPress?: Function;
+};
+
+export type ChipBaseProps = {
+	type?: ChipTypeTokens;
 	label?: String;
 	/**
 	 * Default Icon null
 	 */
 	image?: ImageProps;
 	icon?: IconProps;
-	bgColor?: ColorTokens;
+	onPress?: Function;
+
+	borderColor?: ColorTokens;
 	labelColor?: ColorTokens;
 	fontSize?: FontSizeTokens;
 	borderRadius?: BorderRadiusTokens;
 	opacity?: OpacityTypeTokens;
 	padding?: PaddingProps;
-	onPress?: Function;
+	margin?: PaddingProps;
 };
 
-export type ChipProps = {
-	data?: ChipItemProps[];
+export type ChipThemeProps = {
+	fontSize?: FontSizeTokens;
+	borderRadius?: BorderRadiusTokens;
+	borderColor?: ColorTokens;
+	labelColor?: ColorTokens;
+	padding?: PaddingProps;
+};
+
+export type ChipTypeTokensMap = {
+	[key in ChipTypeTokens]: ChipThemeProps;
 };
