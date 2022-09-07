@@ -21,6 +21,6 @@ export type CommentCardProps = {
 	 * Footer
 	 */
 	likeState?: LikeStateTokens;
-	likeCount?: number;
+	likeCount?: string;
 	onPressLike?: Function;
 };

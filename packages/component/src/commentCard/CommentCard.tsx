@@ -126,10 +126,7 @@ const CommentCard: React.FunctionComponent<
 										: IconTokens.Like,
 								align: IconAlignmentTokens.left,
 							}}
-							label={
-								likeCount +
-								(likeCount > 1 ? ' Likes' : ' Like')
-							}
+							label={likeCount}
 							onPress={onPressLike}
 						/>,
 						<Space size={SizeTypeTokens.SM} />,
