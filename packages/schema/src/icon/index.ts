@@ -79,6 +79,7 @@ export enum IconTokens {
 	UserClock = 'user-clock',
 	Like = 'like',
 	LikeFilled = 'like-filled',
+	Comment = 'comment',
 }
 
 export enum IconSizeTokens {
