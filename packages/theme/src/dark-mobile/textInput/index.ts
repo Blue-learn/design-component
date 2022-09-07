@@ -22,6 +22,11 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 			color: ColorTokens.Grey_100,
 			bgColor: ColorTokens.Grey_600,
 		},
+		[inputTypeToken.comment]: {
+			...inputTypeTokensMapLight.comment,
+			color: ColorTokens.Grey_100,
+			bgColor: ColorTokens.Grey_600,
+		},
 		[inputTypeToken.success]: {
 			...inputTypeTokensMapLight.success,
 			color: ColorTokens.Grey_100,
