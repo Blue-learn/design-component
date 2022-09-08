@@ -2,6 +2,8 @@ import {
 	TypographyTypeTokensMap,
 	ColorTokens,
 	TypographyTypeTokens,
+	FontSizeTokens,
+	FontFamilyTokens,
 } from '@blue-learn/schema';
 import { typographyTypeTokensMap as typographyTypeTokensMapLight } from '../../light-mobile/typography';
 
@@ -9,6 +11,10 @@ export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
 		[TypographyTypeTokens.DEFAULT]: {
 			...typographyTypeTokensMapLight['DEFAULT'],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.H7]: {
+			...typographyTypeTokensMapLight['H7'],
 			color: ColorTokens.Grey_100,
 		},
 		[TypographyTypeTokens.H6]: {

@@ -41,6 +41,11 @@ export const typographyTypeTokensMap: TypographyTypeTokensMap =
 			fontSize: FontSizeTokens.SM,
 			fontFamily: FontFamilyTokens.manropeRegular,
 		},
+		[TypographyTypeTokens.H7]: {
+			color: ColorTokens.Grey_500,
+			fontSize: FontSizeTokens.XXS,
+			fontFamily: FontFamilyTokens.manropeBold,
+		},
 		[TypographyTypeTokens.H6]: {
 			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.XS,

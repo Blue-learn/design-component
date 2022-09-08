@@ -15,12 +15,12 @@ export type TagProps = {
 	/**
 	 * default lable tag
 	 */
-	label?: String;
+	label: String;
 	/**
 	 * Default Icon null
 	 */
 	icon?: IconProps;
-	gradinetColor?: GradientColorTokens;
+	gradientColor?: GradientColorTokens;
 	margin?: PaddingProps;
 };
 
@@ -28,12 +28,12 @@ export type TagBaseProps = {
 	/**
 	 * default lable tag
 	 */
-	label?: String;
+	label: String;
 	/**
 	 * Default Icon null
 	 */
 	icon?: IconProps;
-	gradinetColor?: GradientColorTokens;
+	gradientColor?: GradientColorTokens;
 	borderRadius: BorderRadiusTokens;
 	labelColor: ColorTokens;
 	bgColor: ColorTokens;

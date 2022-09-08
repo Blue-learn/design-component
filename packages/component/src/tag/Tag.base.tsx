@@ -3,7 +3,6 @@ import {
 	SizeTypeTokens,
 	IconAlignmentTokens,
 	TagBaseProps,
-	FontTransformToken,
 } from '@blue-learn/schema';
 import React, { memo, useMemo } from 'react';
 import { View, Platform } from 'react-native';
@@ -15,7 +14,7 @@ import Gradient from '../gradient/Gradient';
 
 const TagBase: React.FC<TagBaseProps> = ({
 	label = 'Tag',
-	gradinetColor,
+	gradientColor,
 	bgColor,
 	labelColor,
 	borderRadius,
@@ -102,7 +101,6 @@ const TagBase: React.FC<TagBaseProps> = ({
 				<Typography
 					label={label}
 					fontSize={fontSize}
-					textTransform={FontTransformToken.capitalize}
 					fontFamily={FontFamilyTokens.manropeSemiBold}
 					color={labelColor}
 				/>
@@ -120,23 +118,25 @@ const TagBase: React.FC<TagBaseProps> = ({
 		[label, icon, backgroundColor],
 	);
 
-	return gradinetColor ? (
-		<Gradient
-			colors={gradinetColor}
-			start={{ x: 0, y: 0 }}
-			end={{ x: 1, y: 0 }}
-			style={[
-				widthProps,
-				{
-					borderRadius: borderRadiusValue,
-				},
-			]}
-		>
-			{children}
-		</Gradient>
-	) : (
-		<View style={widthProps}>{children}</View>
-	);
+	if (!label) return null;
+	else
+		return gradientColor ? (
+			<Gradient
+				colors={gradientColor}
+				start={{ x: 0, y: 0 }}
+				end={{ x: 1, y: 0 }}
+				style={[
+					widthProps,
+					{
+						borderRadius: borderRadiusValue,
+					},
+				]}
+			>
+				{children}
+			</Gradient>
+		) : (
+			<View style={widthProps}>{children}</View>
+		);
 };
 
 export default memo(TagBase);
