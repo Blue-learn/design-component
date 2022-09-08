@@ -49,11 +49,10 @@ const MemberCard: React.FunctionComponent<
 	triggerAction,
 }) => {
 	if (!title) return <></>;
+
 	const interestToString = (interest: string) => {
 		if (interest && interest !== null) {
-			let temp = interest
-				.replace(/_/g, ' ')
-				.toLowerCase();
+			let temp = interest.replace(/_/g, ' ');
 			return (
 				temp.charAt(0).toUpperCase() + temp.slice(1)
 			);
@@ -181,7 +180,7 @@ const MemberCard: React.FunctionComponent<
 						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={chipsTitle}
-							type={TypographyTypeTokens.H6}
+							type={TypographyTypeTokens.H7}
 						/>
 						<Space size={SizeTypeTokens.SM} />
 						<Stack

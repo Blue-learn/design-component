@@ -22,7 +22,7 @@ export const argTypes = {
 		control: 'select',
 		options: [...Object.values(TagTypeTokens)],
 	},
-	gradinetColor: {
+	gradientColor: {
 		control: 'select',
 		options: [
 			null,

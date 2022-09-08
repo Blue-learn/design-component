@@ -65,6 +65,7 @@ export enum TypographyTypeTokens {
 	/**
 	 * @description Title,Manrope-Bold,12px
 	 */
+	H7 = 'H7',
 	H6 = 'H6',
 	H5 = 'H5',
 	H4 = 'H4',

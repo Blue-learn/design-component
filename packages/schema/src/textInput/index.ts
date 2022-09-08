@@ -13,6 +13,7 @@ import { WidgetItem } from '../types';
 export enum inputTypeToken {
 	default = 'default',
 	search = 'search',
+	comment = 'comment',
 	chat = 'chat',
 	success = 'success',
 	error = 'error',

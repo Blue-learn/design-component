@@ -36,6 +36,15 @@ export const inputTypeTokensMap: InputTypeTokensMap =
 			paddingVertical: SizeTypeTokens.LG,
 			paddingHorizontal: SizeTypeTokens.XL,
 		},
+		[inputTypeToken.comment]: {
+			fontSize: FontSizeTokens.SM,
+			color: ColorTokens.Grey_500,
+			bgColor: ColorTokens.Grey_50,
+			borderColor: ColorTokens.Transparent,
+			borderRadius: BorderRadiusTokens.BR0,
+			paddingVertical: SizeTypeTokens.LG,
+			paddingHorizontal: SizeTypeTokens.MD,
+		},
 		[inputTypeToken.success]: {
 			fontSize: FontSizeTokens.SM,
 			color: ColorTokens.Grey_500,

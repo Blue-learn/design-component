@@ -1,7 +1,7 @@
 import {
+	AvatarSizeTokens,
 	ButtonTypeTokens,
 	ColorTokens,
-	IconAlignmentTokens,
 	IconSizeTokens,
 	IconTokens,
 	inputTypeToken,
@@ -12,10 +12,14 @@ export const args = {
 	type: inputTypeToken.default,
 	title: 'Title',
 	caption: 'This is a caption',
-	leftIcon: {
-		name: IconTokens.Search,
-		size: IconSizeTokens.LG,
-		align: IconAlignmentTokens.left,
+	// leftIcon: {
+	// 	name: IconTokens.Search,
+	// 	size: IconSizeTokens.LG,
+	// 	align: IconAlignmentTokens.left,
+	// },
+	avatar: {
+		uri: 'https://reactnative.dev/img/tiny_logo.png',
+		size: AvatarSizeTokens.MD,
 	},
 	rightIcons: [
 		{

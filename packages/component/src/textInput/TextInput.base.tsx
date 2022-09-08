@@ -2,24 +2,25 @@ import React, { memo } from 'react';
 import { TextInput, View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import {
-	ColorTokensMap,
-	TextInputBaseProps,
+	AvatarSizeTokens,
+	BorderRadiusTokens,
 	ColorTokens,
-	FontSizeTokens,
+	ColorTokensMap,
 	FontFamilyTokens,
 	FontFamilyTokensMap,
-	BorderRadiusTokens,
+	FontSizeTokens,
+	FontSizeTokensMap,
+	IconSizeTokens,
 	SizeTypeTokens,
 	SizeTypeTokensMap,
-	FontSizeTokensMap,
+	TextInputBaseProps,
 	WidgetProps,
-	IconSizeTokens,
 } from '@blue-learn/schema';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
 import Space from '../space/Space';
 import Icon from '../icon/Icon';
-import _map from 'lodash-es/map';
+import { Avatar } from '../avatar/Avatar';
 
 /**
  * Raw Component with Derived props + Theme
@@ -28,7 +29,7 @@ import _map from 'lodash-es/map';
 const TextInputBase: React.FunctionComponent<
 	TextInputBaseProps & WidgetProps
 > = ({
-	placeholder = 'lorem ipsum',
+	placeholder = 'Type here',
 	borderRadius = BorderRadiusTokens.BR1,
 	borderColor = ColorTokens.Grey_200,
 	color = ColorTokens.Grey_500,
@@ -45,6 +46,7 @@ const TextInputBase: React.FunctionComponent<
 	rightIcons = [],
 	onChangeText,
 	value,
+	avatar,
 	renderItem,
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -75,7 +77,7 @@ const TextInputBase: React.FunctionComponent<
 			flexDirection: 'row',
 			alignItems: 'center',
 			justifyContent: 'space-between',
-			borderWidth: 1,
+			borderWidth: avatar ? 0 : 1,
 			backgroundColor: colorMapping[bgColor],
 			borderColor: colorMapping[borderColor],
 			borderRadius: borderRadiusValue,
@@ -109,7 +111,7 @@ const TextInputBase: React.FunctionComponent<
 			<View style={styleProps}>
 				<Space
 					size={
-						leftIcon
+						leftIcon || avatar
 							? SizeTypeTokens.LG
 							: SizeTypeTokens.NONE
 					}
@@ -120,6 +122,14 @@ const TextInputBase: React.FunctionComponent<
 						size={IconSizeTokens.SM}
 					/>
 				) : null}
+				{avatar ? (
+					<Avatar
+						{...avatar}
+						size={AvatarSizeTokens.MD || avatar?.size}
+					/>
+				) : (
+					<></>
+				)}
 				<TextInput
 					value={value}
 					isDisabled={isDisabled}
