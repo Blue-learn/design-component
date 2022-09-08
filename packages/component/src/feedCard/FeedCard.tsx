@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-	ColorTokens,
+	DividerSizeTokens,
 	FeedCardProps,
 	ImageSizeTokens,
 	SizeTypeTokens,
@@ -14,6 +14,8 @@ import Image from '../image/Image';
 import { UserCard } from '../userCard/UserCard';
 import { Typography } from '../typography/Typography';
 import { Stack } from '../stack/Stack';
+import { Divider } from '../divider/Divider';
+import { Space } from '../space/Space';
 
 const FeedCard: React.FunctionComponent<
 	FeedCardProps & WidgetProps
@@ -23,7 +25,7 @@ const FeedCard: React.FunctionComponent<
 		bottom: SizeTypeTokens.MD,
 	},
 	margin = {
-		bottom: SizeTypeTokens.XL,
+		top: SizeTypeTokens.XL,
 	},
 	user,
 	imageURL,
@@ -33,6 +35,7 @@ const FeedCard: React.FunctionComponent<
 	leftWidgets,
 	rightWidgets,
 	action,
+	renderItem,
 }) => {
 	if (!title) return <></>;
 
@@ -45,7 +48,6 @@ const FeedCard: React.FunctionComponent<
 
 	return (
 		<Card
-			bgColor={ColorTokens.Transparent}
 			onPress={handleAction}
 			padding={padding}
 			margin={margin}
@@ -65,7 +67,8 @@ const FeedCard: React.FunctionComponent<
 				children: [
 					<Card
 						padding={{
-							vertical: SizeTypeTokens.LG,
+							top: SizeTypeTokens.LG,
+							bottom: SizeTypeTokens.MD,
 							horizontal: SizeTypeTokens.XL,
 						}}
 						body={{
@@ -80,21 +83,46 @@ const FeedCard: React.FunctionComponent<
 					) : (
 						<></>
 					),
+					<Space
+						size={
+							imageURL
+								? SizeTypeTokens.MD
+								: SizeTypeTokens.NONE
+						}
+					/>,
 				],
 			}}
 			footer={{
-				children: (
-					<Stack
-						type={StackType.row}
-						alignItems={StackAlignItems.center}
-						justifyContent={
-							StackJustifyContent.spaceBetween
-						}
-					>
-						<Stack widgetItems={leftWidgets} />
-						<Stack widgetItems={rightWidgets} />
-					</Stack>
-				),
+				children: [
+					<Card
+						padding={{
+							vertical: SizeTypeTokens.MD,
+							horizontal: SizeTypeTokens.XL,
+						}}
+						body={{
+							children: (
+								<Stack
+									type={StackType.row}
+									alignItems={StackAlignItems.center}
+									justifyContent={
+										StackJustifyContent.spaceBetween
+									}
+								>
+									{renderItem &&
+										leftWidgets &&
+										renderItem(leftWidgets)}
+									{renderItem &&
+										leftWidgets &&
+										renderItem(rightWidgets)}
+								</Stack>
+							),
+						}}
+					/>,
+					<Divider
+						size={DividerSizeTokens.SM}
+						margin={{ vertical: SizeTypeTokens.MD }}
+					/>,
+				],
 			}}
 		/>
 	);
