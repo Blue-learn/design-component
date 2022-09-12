@@ -207,15 +207,11 @@ const DicussionCard: React.FunctionComponent<
 									type={StackType.row}
 									alignItems={StackAlignItems.center}
 								>
-									{participants?.length > 2 ? (
-										<Avatar
-											size={AvatarSizeTokens.XS}
-											type={AvatarTypeTokens.MULTIPLE}
-											uris={participants}
-										/>
-									) : (
-										<></>
-									)}
+									<Avatar
+										size={AvatarSizeTokens.XS}
+										type={AvatarTypeTokens.MULTIPLE}
+										uris={participants}
+									/>
 									<Space size={SizeTypeTokens.SM} />
 									<Typography
 										label={participantsLabel}
