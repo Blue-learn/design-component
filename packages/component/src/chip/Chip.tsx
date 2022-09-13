@@ -3,6 +3,7 @@ import {
 	ChipProps,
 	ChipThemeProps,
 	ChipTypeTokens,
+	WidgetProps,
 } from '@blue-learn/schema';
 import ChipBase from './Chip.base';
 import ThemeProvider from '@blue-learn/theme';
@@ -12,7 +13,7 @@ import ThemeProvider from '@blue-learn/theme';
  */
 
 const Chip: React.FunctionComponent<
-	ChipProps
+	ChipProps & WidgetProps
 > = ({
 	type = ChipTypeTokens.SMALL_UNSELECTED,
 	...props
