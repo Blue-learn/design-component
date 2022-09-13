@@ -17,7 +17,7 @@ export type FeedCardProps = {
 	/**
 	 * Footer
 	 */
-	leftWidgets?: WidgetItem;
+	leftWidgets?: WidgetItem[];
 	leftActions?: Action[];
 	rightWidgets?: WidgetItem;
 	rightActions?: Action[];

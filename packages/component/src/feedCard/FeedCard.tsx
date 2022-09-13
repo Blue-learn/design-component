@@ -32,7 +32,7 @@ const FeedCard: React.FunctionComponent<
 	title,
 	onPress,
 	triggerAction,
-	leftWidgets,
+	leftWidgets = [],
 	rightWidgets,
 	action,
 	renderItem,
@@ -108,9 +108,19 @@ const FeedCard: React.FunctionComponent<
 										StackJustifyContent.spaceBetween
 									}
 								>
-									{renderItem &&
-										leftWidgets &&
-										renderItem(leftWidgets)}
+									<Stack
+										type={StackType.row}
+										alignItems={StackAlignItems.center}
+										justifyContent={
+											StackJustifyContent.flexStart
+										}
+									>
+										{renderItem &&
+											leftWidgets.length > 0 &&
+											leftWidgets.map((widget) =>
+												renderItem({ ...widget }),
+											)}
+									</Stack>
 									{renderItem &&
 										leftWidgets &&
 										renderItem(rightWidgets)}
