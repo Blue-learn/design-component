@@ -23,7 +23,7 @@ export const args = {
 	},
 	rightIcons: [
 		{
-			id: 'cross-icon',
+			id: 'cross',
 			type: WIDGET.BUTTON,
 			props: {
 				type: ButtonTypeTokens.IconGhost,

@@ -13,6 +13,8 @@ import {
 	IconSizeTokens,
 	SizeTypeTokens,
 	SizeTypeTokensMap,
+	StackAlignItems,
+	StackType,
 	TextInputBaseProps,
 	WidgetProps,
 } from '@blue-learn/schema';
@@ -158,9 +160,14 @@ const TextInputBase: React.FunctionComponent<
 							: SizeTypeTokens.NONE
 					}
 				/>
-				{renderItem &&
-					rightIcons?.length > 0 &&
-					rightIcons?.map(renderItem)}
+				<Stack
+					type={StackType.row}
+					alignItems={StackAlignItems.center}
+				>
+					{renderItem &&
+						rightIcons?.length > 0 &&
+						rightIcons?.map(renderItem)}
+				</Stack>
 			</View>
 
 			{caption ? (
