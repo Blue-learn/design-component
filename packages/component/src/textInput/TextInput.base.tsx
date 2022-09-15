@@ -50,6 +50,8 @@ const TextInputBase: React.FunctionComponent<
 	value,
 	avatar,
 	renderItem,
+	action,
+	triggerAction,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	const colorMapping: ColorTokensMap =
@@ -91,6 +93,19 @@ const TextInputBase: React.FunctionComponent<
 			paddingVertical,
 		],
 	);
+
+	const handleTextChange = (text: string) => {
+		onChangeText && onChangeText(text);
+		action &&
+			triggerAction &&
+			triggerAction({
+				...action,
+				payload: {
+					...action.payload,
+					text,
+				},
+			});
+	};
 
 	return (
 		<Stack>
@@ -140,7 +155,7 @@ const TextInputBase: React.FunctionComponent<
 					placeholderTextColor={
 						colorMapping[ColorTokens.Grey_300]
 					}
-					onChangeText={onChangeText}
+					onChangeText={handleTextChange}
 					style={{
 						flex: 1,
 						color: colorMapping[color],

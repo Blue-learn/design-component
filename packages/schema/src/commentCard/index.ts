@@ -2,6 +2,7 @@ import { PaddingProps } from '../padding';
 import { UserCardProps } from '../userCard';
 import { ColorTokens } from '../colors';
 import { LikeStateTokens } from '../newsCard';
+import { Action } from '../types';
 
 export type CommentCardProps = {
 	margin?: PaddingProps;
@@ -11,7 +12,6 @@ export type CommentCardProps = {
 	 * Header
 	 */
 	user: UserCardProps;
-	onPressProfile?: Function;
 	time?: string;
 	/**
 	 * body
@@ -22,5 +22,6 @@ export type CommentCardProps = {
 	 */
 	likeState?: LikeStateTokens;
 	likeCount?: string;
-	onPressLike?: Function;
+	likeAction?: Action;
+	profileAction?: Action;
 };
