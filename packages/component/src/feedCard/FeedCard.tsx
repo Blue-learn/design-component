@@ -128,10 +128,14 @@ const FeedCard: React.FunctionComponent<
 							),
 						}}
 					/>,
-					<Divider
-						size={DividerSizeTokens.SM}
-						margin={{ vertical: SizeTypeTokens.MD }}
-					/>,
+					leftWidgets?.length > 0 || rightWidgets ? (
+						<Divider
+							size={DividerSizeTokens.SM}
+							margin={{ vertical: SizeTypeTokens.MD }}
+						/>
+					) : (
+						<></>
+					),
 				],
 			}}
 		/>

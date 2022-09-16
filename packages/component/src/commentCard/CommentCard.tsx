@@ -34,9 +34,10 @@ const CommentCard: React.FunctionComponent<
 	title,
 	time,
 	bgColor = ColorTokens.Grey_600,
-	action,
-	likeAction,
+	onPressProfile,
 	profileAction,
+	likeAction,
+	onPressLike,
 	likeState = LikeStateTokens.NOT_SELECTED,
 	likeCount,
 	triggerAction,
@@ -65,7 +66,9 @@ const CommentCard: React.FunctionComponent<
 										>
 											<TouchableOpacity
 												onPress={() => {
-													triggerAction(profileAction);
+													if (profileAction)
+														triggerAction(profileAction);
+													if (onPressProfile) onPressProfile();
 												}}
 												style={{
 													flex: 1,
@@ -121,7 +124,8 @@ const CommentCard: React.FunctionComponent<
 							}}
 							label={likeCount}
 							onPress={() => {
-								triggerAction(likeAction);
+								if (likeAction) triggerAction(likeAction);
+								if (onPressLike) onPressLike();
 							}}
 						/>,
 						<Space size={SizeTypeTokens.SM} />,
