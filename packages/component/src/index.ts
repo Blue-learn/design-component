@@ -23,5 +23,6 @@ export * as NewsCard from './newsCard';
 export * as DiscussionCard from './discussionCard';
 export * as FeedCard from './feedCard';
 export * as CommentCard from './commentCard';
+export * as Grid from './grid';
 export * from './mock';
 export * from './registry';

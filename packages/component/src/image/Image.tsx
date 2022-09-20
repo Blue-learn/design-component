@@ -17,6 +17,7 @@ const Image: React.FunctionComponent<
 	borderBottomRadius,
 	borderTopRadius,
 	aspectRatio = AspectRatioToken.A1_1,
+	borderColor,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -29,6 +30,8 @@ const Image: React.FunctionComponent<
 		theme.borderRadius[borderTopRadius];
 	const borderBottomRadiusValue =
 		theme.borderRadius[borderBottomRadius];
+	const borderColorValue =
+		theme.colors[borderColor];
 
 	if (!uri || !size) return <></>;
 
@@ -45,7 +48,9 @@ const Image: React.FunctionComponent<
 					borderBottomRadiusValue,
 				borderBottomRightRadius:
 					borderBottomRadiusValue,
+				borderWidth: borderColor ? 3 : 0,
 				aspectRatio: aspectRatioValue,
+				borderColor: borderColorValue,
 			}}
 			source={{
 				uri,

@@ -1,4 +1,5 @@
 import { BorderRadiusTokens } from '../borderRadius';
+import { ColorTokens } from '../colors';
 
 export enum AspectRatioToken {
 	A16_9 = 'A16_9',
@@ -8,9 +9,11 @@ export enum AspectRatioToken {
 	A1_1 = 'A1_1',
 	A2_1 = 'A2_1',
 }
+
 export interface ImageProps {
 	size: ImageSizeTokens;
 	uri: string;
+	borderColor?: ColorTokens;
 	borderRadius?: BorderRadiusTokens;
 	borderTopRadius?: BorderRadiusTokens;
 	borderBottomRadius?: BorderRadiusTokens;

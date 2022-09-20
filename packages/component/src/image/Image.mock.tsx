@@ -1,6 +1,7 @@
 import {
 	AspectRatioToken,
 	BorderRadiusTokens,
+	ColorTokens,
 	ImageSizeTokens,
 } from '@blue-learn/schema';
 
@@ -35,5 +36,9 @@ export const argTypes = {
 	borderBottomRadius: {
 		control: 'select',
 		options: [...Object.values(BorderRadiusTokens)],
+	},
+	borderColor: {
+		control: 'select',
+		options: [...Object.values(ColorTokens)],
 	},
 };
