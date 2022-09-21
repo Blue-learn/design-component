@@ -3,6 +3,7 @@ import {
 	BorderRadiusTokens,
 	ColorTokens,
 	ImageSizeTokens,
+	ResizeModeToken,
 } from '@blue-learn/schema';
 
 export const args = {
@@ -40,5 +41,9 @@ export const argTypes = {
 	borderColor: {
 		control: 'select',
 		options: [...Object.values(ColorTokens)],
+	},
+	resizeMode: {
+		control: 'select',
+		options: [...Object.values(ResizeModeToken)],
 	},
 };

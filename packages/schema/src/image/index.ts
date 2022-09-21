@@ -10,6 +10,14 @@ export enum AspectRatioToken {
 	A2_1 = 'A2_1',
 }
 
+export enum ResizeModeToken {
+	COVER = 'cover',
+	CONTAIN = 'contain',
+	STRETCH = 'stretch',
+	REPEAT = 'repeat',
+	CENTER = 'center',
+}
+
 export interface ImageProps {
 	size: ImageSizeTokens;
 	uri: string;
@@ -18,6 +26,7 @@ export interface ImageProps {
 	borderTopRadius?: BorderRadiusTokens;
 	borderBottomRadius?: BorderRadiusTokens;
 	aspectRatio?: AspectRatioToken;
+	resizeMode?: ResizeModeToken;
 }
 
 export enum ImageSizeTokens {
