@@ -122,7 +122,7 @@ const FeedCard: React.FunctionComponent<
 											)}
 									</Stack>
 									{renderItem &&
-										leftWidgets &&
+										rightWidgets &&
 										renderItem(rightWidgets)}
 								</Stack>
 							),
