@@ -13,7 +13,7 @@ export const args = {
 				type: WIDGET.IMAGE,
 				props: {
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
-					size: ImageSizeTokens.LG,
+					size: ImageSizeTokens.FULL,
 				},
 			},
 		},
@@ -23,7 +23,7 @@ export const args = {
 				type: WIDGET.IMAGE,
 				props: {
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
-					size: ImageSizeTokens.LG,
+					size: ImageSizeTokens.FULL,
 				},
 			},
 		},
@@ -33,7 +33,7 @@ export const args = {
 				type: WIDGET.IMAGE,
 				props: {
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
-					size: ImageSizeTokens.LG,
+					size: ImageSizeTokens.FULL,
 				},
 			},
 		},
@@ -43,7 +43,7 @@ export const args = {
 				type: WIDGET.IMAGE,
 				props: {
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
-					size: ImageSizeTokens.LG,
+					size: ImageSizeTokens.FULL,
 				},
 			},
 		},
@@ -53,17 +53,17 @@ export const args = {
 				type: WIDGET.IMAGE,
 				props: {
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
-					size: ImageSizeTokens.LG,
+					size: ImageSizeTokens.FULL,
 				},
 			},
 		},
 		{
-			state: GridStateTokens.NOT_SELECTED,
+			state: GridStateTokens.SELECTED,
 			item: {
 				type: WIDGET.IMAGE,
 				props: {
 					uri: 'https://reactnative.dev/img/tiny_logo.png',
-					size: ImageSizeTokens.LG,
+					size: ImageSizeTokens.FULL,
 				},
 			},
 		},

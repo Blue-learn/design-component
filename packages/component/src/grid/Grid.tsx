@@ -6,14 +6,16 @@ import {
 	IconSizeTokens,
 	IconTokens,
 	SizeTypeTokens,
-	StackType,
 	WidgetProps,
 } from '@blue-learn/schema';
 import React, { memo } from 'react';
-import { FlatList, View } from 'react-native';
+import {
+	FlatList,
+	View,
+	Dimensions,
+} from 'react-native';
 import { Icon } from '../icon/Icon';
 import ThemeProvider from '@blue-learn/theme';
-import { Stack } from '../stack/Stack';
 import { Space } from '../space/Space';
 
 /**
@@ -25,45 +27,52 @@ import { Space } from '../space/Space';
 const RenderWidgetItem = ({
 	item,
 	renderItem,
+	numColumns,
 }: {
 	item: GridItemProps;
 	renderItem: Function;
+	numColumns: number;
 }) => {
 	const theme = ThemeProvider.getTheme();
 	return (
-		<Stack>
-			<View>
-				{item.state === GridStateTokens.SELECTED ? (
-					<View
-						style={{
-							alignSelf: 'flex-start',
-							position: 'absolute',
-							height: 20,
-							width: 20,
-							right: -5,
-							top: -5,
-							borderRadius: 10,
-							alignItems: 'center',
-							justifyContent: 'center',
-							zIndex: 200,
-							backgroundColor:
-								theme.colors[ColorTokens.Blue_300],
-						}}
-					>
-						<Icon
-							name={IconTokens.Check}
-							size={IconSizeTokens.XXS}
-							color={ColorTokens.Grey_500}
-						/>
-					</View>
-				) : (
-					<></>
-				)}
-				{renderItem &&
-					item?.item &&
-					renderItem(item?.item)}
-			</View>
-		</Stack>
+		<View
+			style={{
+				width:
+					Dimensions.get('window').width / numColumns -
+					theme.space[SizeTypeTokens.XL],
+				marginRight: theme.space[SizeTypeTokens.MD],
+			}}
+		>
+			{item.state === GridStateTokens.SELECTED ? (
+				<View
+					style={{
+						alignSelf: 'flex-start',
+						position: 'absolute',
+						height: 20,
+						width: 20,
+						right: -5,
+						top: -5,
+						borderRadius: 10,
+						alignItems: 'center',
+						justifyContent: 'center',
+						zIndex: 200,
+						backgroundColor:
+							theme.colors[ColorTokens.Blue_300],
+					}}
+				>
+					<Icon
+						name={IconTokens.Check}
+						size={IconSizeTokens.XXS}
+						color={ColorTokens.Grey_500}
+					/>
+				</View>
+			) : (
+				<></>
+			)}
+			{renderItem &&
+				item?.item &&
+				renderItem(item?.item)}
+		</View>
 	);
 };
 
@@ -73,7 +82,6 @@ const Grid: React.FC<GridProps & WidgetProps> = ({
 	renderItem,
 }) => {
 	if (data.length === 0) return <></>;
-
 	return (
 		<FlatList
 			data={data}
@@ -85,13 +93,11 @@ const Grid: React.FC<GridProps & WidgetProps> = ({
 				<Space size={SizeTypeTokens.LG} />
 			)}
 			renderItem={(item) => (
-				<Stack type={StackType.row}>
-					<RenderWidgetItem
-						{...item}
-						renderItem={renderItem}
-					/>
-					<Space size={SizeTypeTokens.LG} />
-				</Stack>
+				<RenderWidgetItem
+					{...item}
+					renderItem={renderItem}
+					numColumns={numColumns}
+				/>
 			)}
 			keyExtractor={(item, index) =>
 				index.toString()
