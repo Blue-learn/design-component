@@ -3,6 +3,7 @@ import {
 	DividerSizeTokens,
 	FeedCardProps,
 	ImageSizeTokens,
+	ResizeModeToken,
 	SizeTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
@@ -79,6 +80,7 @@ const FeedCard: React.FunctionComponent<
 						<Image
 							uri={imageURL}
 							size={ImageSizeTokens.FULL}
+							resizeMode={ResizeModeToken.CONTAIN}
 						/>
 					) : (
 						<></>
@@ -93,50 +95,55 @@ const FeedCard: React.FunctionComponent<
 				],
 			}}
 			footer={{
-				children: [
-					<Card
-						padding={{
-							vertical: SizeTypeTokens.MD,
-							horizontal: SizeTypeTokens.XL,
-						}}
-						body={{
-							children: (
-								<Stack
-									type={StackType.row}
-									alignItems={StackAlignItems.center}
-									justifyContent={
-										StackJustifyContent.spaceBetween
-									}
-								>
-									<Stack
-										type={StackType.row}
-										alignItems={StackAlignItems.center}
-										justifyContent={
-											StackJustifyContent.flexStart
-										}
-									>
-										{renderItem &&
-											leftWidgets.length > 0 &&
-											leftWidgets.map((widget) =>
-												renderItem({ ...widget }),
-											)}
-									</Stack>
-									{renderItem &&
-										rightWidgets &&
-										renderItem(rightWidgets)}
-								</Stack>
-							),
-						}}
-					/>,
+				children:
 					leftWidgets?.length > 0 || rightWidgets ? (
-						<Divider
-							size={DividerSizeTokens.SM}
-							margin={{ vertical: SizeTypeTokens.MD }}
-						/>
+						[
+							<Card
+								padding={{
+									vertical: SizeTypeTokens.MD,
+									horizontal: SizeTypeTokens.XL,
+								}}
+								body={{
+									children: (
+										<Stack
+											type={StackType.row}
+											alignItems={StackAlignItems.center}
+											justifyContent={
+												StackJustifyContent.spaceBetween
+											}
+										>
+											<Stack
+												type={StackType.row}
+												alignItems={StackAlignItems.center}
+												justifyContent={
+													StackJustifyContent.flexStart
+												}
+											>
+												{renderItem &&
+													leftWidgets.length > 0 &&
+													leftWidgets.map((widget) =>
+														renderItem({ ...widget }),
+													)}
+											</Stack>
+											{renderItem &&
+												rightWidgets &&
+												renderItem(rightWidgets)}
+										</Stack>
+									),
+								}}
+							/>,
+							leftWidgets?.length > 0 || rightWidgets ? (
+								<Divider
+									size={DividerSizeTokens.SM}
+									margin={{ vertical: SizeTypeTokens.MD }}
+								/>
+							) : (
+								<></>
+							),
+						]
 					) : (
 						<></>
 					),
-				],
 			}}
 		/>
 	);
