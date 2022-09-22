@@ -121,7 +121,7 @@ const Chip: React.FC<
 							size={image?.size || ImageSizeTokens.XXS}
 							{...image}
 						/>,
-						<Space size={SizeTypeTokens.SM} />,
+						label && <Space size={SizeTypeTokens.SM} />,
 				  ]
 				: null}
 			<Typography
