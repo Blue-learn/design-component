@@ -2,7 +2,7 @@ import React from 'react';
 import FastImage from 'react-native-fast-image';
 import {
 	Platform,
-	Image as ImageContainer,
+	Image as RImage,
 } from 'react-native';
 import {
 	AspectRatioToken,
@@ -27,7 +27,6 @@ const Image: React.FunctionComponent<
 	resizeMode = ResizeModeToken.COVER,
 }) => {
 	const theme = ThemeProvider.getTheme();
-
 	const sizeValue = theme.imageSize[size];
 	const aspectRatioValue =
 		theme.aspectRatio[aspectRatio];
@@ -68,19 +67,7 @@ const Image: React.FunctionComponent<
 			aspectRatioValue,
 		],
 	);
-
-	if (Platform.OS === 'web') {
-		return (
-			<ImageContainer
-				referrerPolicy='no-referrer'
-				style={styleProps}
-				source={{
-					uri,
-				}}
-				resizeMode={resizeMode}
-			/>
-		);
-	} else
+	if (Platform?.OS !== 'web') {
 		return (
 			<FastImage
 				style={styleProps}
@@ -93,6 +80,16 @@ const Image: React.FunctionComponent<
 						? FastImage.resizeMode.contain
 						: FastImage.resizeMode.cover
 				}
+			/>
+		);
+	} else
+		return (
+			<RImage
+				style={styleProps}
+				source={{
+					uri: uri,
+				}}
+				resizeMode={resizeMode}
 			/>
 		);
 };

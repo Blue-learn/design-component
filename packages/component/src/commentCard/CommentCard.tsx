@@ -71,7 +71,7 @@ const CommentCard: React.FunctionComponent<
 													if (onPressProfile) onPressProfile();
 												}}
 												style={{
-													flex: 1,
+													maxWidth: '85%',
 												}}
 											>
 												<Stack
