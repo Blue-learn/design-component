@@ -1,5 +1,9 @@
 import React from 'react';
-import { Image as ImageContainer } from 'react-native';
+import FastImage from 'react-native-fast-image';
+import {
+	Platform,
+	Image as ImageContainer,
+} from 'react-native';
 import {
 	AspectRatioToken,
 	BorderRadiusTokens,
@@ -38,31 +42,59 @@ const Image: React.FunctionComponent<
 
 	if (!uri || !size) return <></>;
 
-	return (
-		<ImageContainer
-			referrerPolicy='no-referrer'
-			style={{
-				width: sizeValue,
-				height: 'auto',
-				borderRadius: borderRadiusValue,
-				borderTopLeftRadius: borderTopRadiusValue,
-				borderTopRightRadius: borderTopRadiusValue,
-				borderBottomLeftRadius:
-					borderBottomRadiusValue,
-				borderBottomRightRadius:
-					borderBottomRadiusValue,
-				borderWidth: borderColor ? 3 : 0,
-				aspectRatio: aspectRatioValue,
-				borderColor: borderColorValue,
-				backgroundColor:
-					theme.colors[ColorTokens.Grey_700],
-			}}
-			source={{
-				uri,
-			}}
-			resizeMode={resizeMode}
-		/>
+	const styleProps = React.useMemo(
+		() => ({
+			width: sizeValue,
+			height: 'auto',
+			borderRadius: borderRadiusValue,
+			borderTopLeftRadius: borderTopRadiusValue,
+			borderTopRightRadius: borderTopRadiusValue,
+			borderBottomLeftRadius:
+				borderBottomRadiusValue,
+			borderBottomRightRadius:
+				borderBottomRadiusValue,
+			borderWidth: borderColor ? 3 : 0,
+			aspectRatio: aspectRatioValue,
+			borderColor: borderColorValue,
+			backgroundColor:
+				theme.colors[ColorTokens.Grey_700],
+		}),
+		[
+			sizeValue,
+			borderRadiusValue,
+			borderColorValue,
+			borderTopRadiusValue,
+			borderBottomRadiusValue,
+			aspectRatioValue,
+		],
 	);
+
+	if (Platform.OS === 'web') {
+		return (
+			<ImageContainer
+				referrerPolicy='no-referrer'
+				style={styleProps}
+				source={{
+					uri,
+				}}
+				resizeMode={resizeMode}
+			/>
+		);
+	} else
+		return (
+			<FastImage
+				style={styleProps}
+				source={{
+					uri: uri,
+					priority: FastImage.priority.normal,
+				}}
+				resizeMode={
+					resizeMode === ResizeModeToken.CONTAIN
+						? FastImage.resizeMode.contain
+						: FastImage.resizeMode.cover
+				}
+			/>
+		);
 };
 
 export default React.memo(Image);
