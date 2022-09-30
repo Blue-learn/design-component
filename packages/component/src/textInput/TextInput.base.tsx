@@ -163,6 +163,7 @@ const TextInputBase: React.FunctionComponent<
 						fontFamily: fontFamilyMapping[fontFamily],
 						paddingHorizontal: paddingHorizontalValue,
 						paddingVertical: paddingVerticalValue,
+						outlineWidth: 0,
 					}}
 					textAlignVertical={
 						multiline ? 'top' : 'center'
