@@ -1,4 +1,5 @@
 import {
+	ActiveStateTokens,
 	AvatarProps,
 	AvatarSizeTokens,
 	AvatarTypeTokens,
@@ -37,5 +38,9 @@ export const argTypes = {
 	borderColor: {
 		control: 'select',
 		options: [...Object.values(ColorTokens)],
+	},
+	active: {
+		control: 'select',
+		options: [...Object.values(ActiveStateTokens)],
 	},
 };

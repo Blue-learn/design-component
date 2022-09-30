@@ -1,10 +1,12 @@
 import React from 'react';
 import {
+	ActiveStateTokens,
 	AvatarBaseProps,
 	BorderRadiusTokens,
+	ColorTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 
 const AvatarBase: React.FC<AvatarBaseProps> = ({
 	size,
@@ -13,6 +15,7 @@ const AvatarBase: React.FC<AvatarBaseProps> = ({
 	borderWidth,
 	borderColor,
 	overlap = false,
+	active,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -45,12 +48,34 @@ const AvatarBase: React.FC<AvatarBaseProps> = ({
 		],
 	);
 
+	const activeStyleProps = React.useMemo(
+		() => ({
+			position: 'absolute',
+			left: sizeValue / 2 + sizeValue / 4,
+			top: sizeValue / 2 + sizeValue / 8,
+			width: sizeValue / 4,
+			height: sizeValue / 4,
+			borderRadius: sizeValue / 8,
+			borderWidth: 2,
+			borderColor: borderColorValue,
+			backgroundColor:
+				theme.colors[ColorTokens.Success_100],
+		}),
+		[sizeValue, borderColor],
+	);
+
 	return (
-		<Image
-			referrerPolicy='no-referrer'
-			style={styleProps}
-			source={{ uri }}
-		/>
+		<>
+			<Image
+				referrerPolicy='no-referrer'
+				style={styleProps}
+				source={{ uri }}
+			/>
+			{active &&
+				active === ActiveStateTokens.ACTIVE && (
+					<View style={activeStyleProps} />
+				)}
+		</>
 	);
 };
 

@@ -5,6 +5,12 @@ export enum AvatarTypeTokens {
 	SINGLE = 'SINGLE',
 	MULTIPLE = 'MULTIPLE',
 }
+
+export enum ActiveStateTokens {
+	ACTIVE = 'ACTIVE',
+	INACTIVE = 'INACTIVE',
+}
+
 export interface AvatarProps {
 	size: AvatarSizeTokens;
 	uri?: string;
@@ -13,6 +19,7 @@ export interface AvatarProps {
 	borderColor?: ColorTokens;
 	borderWidth?: number;
 	type?: AvatarTypeTokens;
+	active?: ActiveStateTokens;
 }
 
 export interface AvatarBaseProps {
@@ -22,6 +29,7 @@ export interface AvatarBaseProps {
 	borderRadius?: BorderRadiusTokens;
 	borderColor?: ColorTokens;
 	borderWidth?: number;
+	active?: ActiveStateTokens;
 }
 
 export enum AvatarSizeTokens {
