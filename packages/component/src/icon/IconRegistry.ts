@@ -67,6 +67,7 @@ import Circle from './icon-list/Circle';
 import Diamond from './icon-list/Diamond';
 import Link from './icon-list/Link';
 import Gift from './icon-list/Gift';
+import CheckFilled from './icon-list/CheckFilled';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -134,4 +135,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Diamond]: Diamond,
 	[IconTokens.Link]: Link,
 	[IconTokens.Gift]: Gift,
+	[IconTokens.CheckFilled]: CheckFilled,
 };

@@ -85,6 +85,7 @@ export enum IconTokens {
 	Diamond = 'diamond',
 	Gift = 'gift',
 	Circle = 'circle',
+	CheckFilled = 'check-filled',
 }
 
 export enum IconSizeTokens {
