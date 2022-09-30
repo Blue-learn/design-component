@@ -62,6 +62,11 @@ import UserClock from './icon-list/UserClock';
 import Like from './icon-list/Like';
 import LikeFilled from './icon-list/LikeFilled';
 import Comment from './icon-list/Comment';
+import StarOutline from './icon-list/StarOutline';
+import Circle from './icon-list/Circle';
+import Diamond from './icon-list/Diamond';
+import Link from './icon-list/Link';
+import Gift from './icon-list/Gift';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -124,4 +129,9 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Like]: Like,
 	[IconTokens.LikeFilled]: LikeFilled,
 	[IconTokens.Comment]: Comment,
+	[IconTokens.Circle]: Circle,
+	[IconTokens.StarOutline]: StarOutline,
+	[IconTokens.Diamond]: Diamond,
+	[IconTokens.Link]: Link,
+	[IconTokens.Gift]: Gift,
 };

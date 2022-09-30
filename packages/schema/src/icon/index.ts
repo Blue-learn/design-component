@@ -80,6 +80,11 @@ export enum IconTokens {
 	Like = 'like',
 	LikeFilled = 'like-filled',
 	Comment = 'comment',
+	StarOutline = 'star-outline',
+	Link = 'link',
+	Diamond = 'diamond',
+	Gift = 'gift',
+	Circle = 'circle',
 }
 
 export enum IconSizeTokens {
