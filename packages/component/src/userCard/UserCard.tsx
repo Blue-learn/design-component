@@ -36,7 +36,7 @@ const UserCard: React.FunctionComponent<
 	padding = { top: SizeTypeTokens.LG },
 	triggerAction,
 }) => {
-	if (!title) return <></>;
+	// if (!title) return <></>;
 
 	const handleAction = () => {
 		onPress && onPress();
