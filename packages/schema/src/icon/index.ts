@@ -87,6 +87,9 @@ export enum IconTokens {
 	Circle = 'circle',
 	CheckFilled = 'check-filled',
 	InvertedComma = 'inverted-comma',
+	WarningInfo = 'warning-info',
+	Online = 'online',
+	EmptyCircle = "EmptyCircle"
 }
 
 export enum IconSizeTokens {
