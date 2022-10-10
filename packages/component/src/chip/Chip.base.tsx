@@ -117,7 +117,7 @@ const Chip: React.FC<
 			]}
 			onPress={handleAction}
 		>
-			{factor && (
+			{factor > 0 && (
 				<View
 					style={{
 						borderTopLeftRadius: borderRadiusValue,
