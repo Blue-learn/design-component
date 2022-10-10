@@ -8,8 +8,9 @@ import {
 	ProgressIndicatorProps,
 	ProgressIndicatorThemeProps,
 	SizeTypeTokens,
-	StackAlignType,
 	StackType,
+	StackAlignItems,
+	StackJustifyContent,
 } from '@blue-learn/schema';
 import Stack from '../stack/Stack';
 import Space from '../space/Space';
@@ -63,8 +64,10 @@ const ProgressIndicatorBase: React.FunctionComponent<
 	return (
 		<Stack
 			type={StackType.row}
-			alignY={StackAlignType.center}
-			alignX={StackAlignType.spaceBetween}
+			alignItems={StackAlignItems.center}
+			justifyContent={
+				StackJustifyContent.spaceBetween
+			}
 		>
 			{Array.from({ length: size }).map(
 				renderIndicator,
