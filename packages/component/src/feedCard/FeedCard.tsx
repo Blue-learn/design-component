@@ -38,7 +38,7 @@ const FeedCard: React.FunctionComponent<
 	action,
 	renderItem,
 }) => {
-	if (!title) return <></>;
+	// if (!title) return <></>;
 
 	const handleAction = () => {
 		onPress && onPress();
@@ -53,15 +53,13 @@ const FeedCard: React.FunctionComponent<
 			padding={padding}
 			margin={margin}
 			header={{
-				children: user?.title ? (
+				children: (
 					<UserCard
 						padding={{
 							horizontal: SizeTypeTokens.XL,
 						}}
 						{...user}
 					/>
-				) : (
-					<></>
 				),
 			}}
 			body={{
