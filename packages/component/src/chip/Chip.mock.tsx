@@ -11,6 +11,7 @@ export const args: ChipProps = {
 		size: ImageSizeTokens.XXS,
 		uri: 'https://reactnative.dev/img/tiny_logo.png',
 	},
+	factor: 0.5,
 };
 
 export const argTypes = {

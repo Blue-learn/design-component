@@ -20,6 +20,7 @@ export type ChipProps = {
 	image?: ImageProps;
 	icon?: IconProps;
 	onPress?: Function;
+	factor?: number;
 };
 
 export type ChipBaseProps = {
@@ -39,6 +40,7 @@ export type ChipBaseProps = {
 	opacity?: OpacityTypeTokens;
 	padding?: PaddingProps;
 	margin?: PaddingProps;
+	factor?: number;
 };
 
 export type ChipThemeProps = {

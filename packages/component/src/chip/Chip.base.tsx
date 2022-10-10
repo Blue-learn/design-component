@@ -1,15 +1,17 @@
 import {
 	ChipBaseProps,
+	ColorTokens,
 	FontFamilyTokens,
 	IconAlignmentTokens,
 	ImageSizeTokens,
 	SizeTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import {
 	Pressable,
 	Platform,
+	View,
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
@@ -32,8 +34,15 @@ const Chip: React.FC<
 	onPress,
 	action,
 	triggerAction,
+	factor,
 }) => {
 	const theme = ThemeProvider.getTheme();
+
+	const [layout, setLayout] = useState<{
+		width: number;
+	}>({
+		width: 0,
+	});
 
 	const borderRadiusValue =
 		theme.borderRadius[borderRadius];
@@ -87,6 +96,11 @@ const Chip: React.FC<
 
 	return (
 		<Pressable
+			onLayout={(data) => {
+				setLayout({
+					width: data.nativeEvent.layout.width,
+				});
+			}}
 			style={[
 				{
 					flexDirection: 'row',
@@ -103,6 +117,21 @@ const Chip: React.FC<
 			]}
 			onPress={handleAction}
 		>
+			{factor && (
+				<View
+					style={{
+						borderTopLeftRadius: borderRadiusValue,
+						borderBottomLeftRadius: borderRadiusValue,
+						position: 'absolute',
+						backgroundColor:
+							theme.colors[ColorTokens.Blue_800],
+						width: factor * layout.width,
+						height: '100%',
+						top: 0,
+						left: 0,
+					}}
+				/>
+			)}
 			{icon?.align === IconAlignmentTokens.left &&
 				icon?.name && (
 					<>
@@ -124,12 +153,15 @@ const Chip: React.FC<
 						label && <Space size={SizeTypeTokens.SM} />,
 				  ]
 				: null}
-			<Typography
-				label={label}
-				fontSize={fontSize}
-				fontFamily={FontFamilyTokens.manropeSemiBold}
-				color={labelColor}
-			/>
+			<View style={{ zIndex: 2 }}>
+				<Typography
+					label={label}
+					fontSize={fontSize}
+					fontFamily={FontFamilyTokens.manropeSemiBold}
+					color={labelColor}
+				/>
+			</View>
+
 			{icon?.align === IconAlignmentTokens.right &&
 				icon?.name && (
 					<>
