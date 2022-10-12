@@ -40,8 +40,10 @@ const Chip: React.FC<
 
 	const [layout, setLayout] = useState<{
 		width: number;
+		height: number;
 	}>({
 		width: 0,
+		height: 0,
 	});
 
 	const borderRadiusValue =
@@ -99,6 +101,7 @@ const Chip: React.FC<
 			onLayout={(data) => {
 				setLayout({
 					width: data.nativeEvent.layout.width,
+					height: data.nativeEvent.layout.height,
 				});
 			}}
 			style={[
@@ -126,7 +129,7 @@ const Chip: React.FC<
 						backgroundColor:
 							theme.colors[ColorTokens.Blue_800],
 						width: factor * layout.width,
-						height: '100%',
+						height: layout.height,
 						top: 0,
 						left: 0,
 					}}
