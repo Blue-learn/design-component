@@ -123,13 +123,15 @@ const Chip: React.FC<
 			{factor > 0 && (
 				<View
 					style={{
+						borderRadius:
+							factor > 0.83 ? borderRadiusValue : 0,
 						borderTopLeftRadius: borderRadiusValue,
 						borderBottomLeftRadius: borderRadiusValue,
 						position: 'absolute',
 						backgroundColor:
 							theme.colors[ColorTokens.Blue_800],
 						width: factor * layout.width,
-						height: layout.height,
+						height: layout.height - 2,
 						top: 0,
 						left: 0,
 					}}
