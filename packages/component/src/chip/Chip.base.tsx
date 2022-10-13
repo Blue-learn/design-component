@@ -22,7 +22,7 @@ import { Image } from '../image/Image';
 const Chip: React.FC<
 	ChipBaseProps & WidgetProps
 > = ({
-	label = 'Chip',
+	label,
 	borderColor,
 	labelColor,
 	fontSize,
@@ -96,91 +96,97 @@ const Chip: React.FC<
 		[],
 	);
 
-	return (
-		<Pressable
-			onLayout={(data) => {
-				setLayout({
-					width: data.nativeEvent.layout.width,
-					height: data.nativeEvent.layout.height,
-				});
-			}}
-			style={[
-				{
-					flexDirection: 'row',
-					alignItems: 'center',
-					borderColor: borderColorValue,
-					borderRadius: borderRadiusValue,
-					borderWidth: 1,
-					paddingTop: paddingTop,
-					paddingBottom: paddingBottom,
-					paddingLeft: paddingLeft,
-					paddingRight: paddingRight,
-				},
-				widthProps,
-			]}
-			onPress={handleAction}
-		>
-			{factor > 0 && (
-				<View
-					style={{
-						borderRadius:
-							factor > 0.83 ? borderRadiusValue : 0,
-						borderTopLeftRadius: borderRadiusValue,
-						borderBottomLeftRadius: borderRadiusValue,
-						position: 'absolute',
-						backgroundColor:
-							theme.colors[ColorTokens.Blue_800],
-						width: factor * layout.width,
-						height: layout.height - 2,
-						top: 0,
-						left: 0,
-					}}
-				/>
-			)}
-			{icon?.align === IconAlignmentTokens.left &&
-				icon?.name && (
-					<>
-						<Icon
-							{...icon}
-							color={icon?.color || labelColor}
-						/>
-						{label && (
-							<Space size={SizeTypeTokens.SM} />
-						)}
-					</>
+	if (!label) return <></>;
+	else
+		return (
+			<Pressable
+				onLayout={(data) => {
+					setLayout({
+						width: data.nativeEvent.layout.width,
+						height: data.nativeEvent.layout.height,
+					});
+				}}
+				style={[
+					{
+						flexDirection: 'row',
+						alignItems: 'center',
+						borderColor: borderColorValue,
+						borderRadius: borderRadiusValue,
+						borderWidth: 1,
+						paddingTop: paddingTop,
+						paddingBottom: paddingBottom,
+						paddingLeft: paddingLeft,
+						paddingRight: paddingRight,
+					},
+					widthProps,
+				]}
+				onPress={handleAction}
+			>
+				{factor > 0 && (
+					<View
+						style={{
+							borderRadius:
+								factor > 0.83 ? borderRadiusValue : 0,
+							borderTopLeftRadius: borderRadiusValue,
+							borderBottomLeftRadius: borderRadiusValue,
+							position: 'absolute',
+							backgroundColor:
+								theme.colors[ColorTokens.Blue_800],
+							width: factor * layout.width,
+							height: layout.height - 2,
+							top: 0,
+							left: 0,
+						}}
+					/>
 				)}
-			{image && image?.uri
-				? [
-						<Image
-							size={image?.size || ImageSizeTokens.XXS}
-							{...image}
-						/>,
-						label && <Space size={SizeTypeTokens.SM} />,
-				  ]
-				: null}
-			<View style={{ zIndex: 2 }}>
-				<Typography
-					label={label}
-					fontSize={fontSize}
-					fontFamily={FontFamilyTokens.manropeSemiBold}
-					color={labelColor}
-				/>
-			</View>
+				{icon?.align === IconAlignmentTokens.left &&
+					icon?.name && (
+						<>
+							<Icon
+								{...icon}
+								color={icon?.color || labelColor}
+							/>
+							{label && (
+								<Space size={SizeTypeTokens.SM} />
+							)}
+						</>
+					)}
+				{image && image?.uri
+					? [
+							<Image
+								size={image?.size || ImageSizeTokens.XXS}
+								{...image}
+							/>,
+							label && (
+								<Space size={SizeTypeTokens.MD} />
+							),
+					  ]
+					: null}
+				<View style={{ zIndex: 2 }}>
+					<Typography
+						label={label}
+						fontSize={fontSize}
+						fontFamily={
+							FontFamilyTokens.manropeSemiBold
+						}
+						color={labelColor}
+					/>
+				</View>
 
-			{icon?.align === IconAlignmentTokens.right &&
-				icon?.name && (
-					<>
-						{label && (
-							<Space size={SizeTypeTokens.SM} />
-						)}
-						<Icon
-							{...icon}
-							color={icon?.color || labelColor}
-						/>
-					</>
-				)}
-		</Pressable>
-	);
+				{icon?.align === IconAlignmentTokens.right &&
+					icon?.name && (
+						<>
+							{label && (
+								<Space size={SizeTypeTokens.SM} />
+							)}
+							<Icon
+								{...icon}
+								color={icon?.color || labelColor}
+							/>
+						</>
+					)}
+			</Pressable>
+		);
 };
 
 export default memo(Chip);
