@@ -132,7 +132,10 @@ const Chip: React.FC<
 							position: 'absolute',
 							backgroundColor:
 								theme.colors[ColorTokens.Blue_800],
-							width: factor * layout.width,
+							width:
+								factor > 0.17
+									? factor * layout.width
+									: 0.17 * layout.width,
 							height: layout.height - 2,
 							top: 0,
 							left: 0,
