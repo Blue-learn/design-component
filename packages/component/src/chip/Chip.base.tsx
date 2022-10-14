@@ -126,16 +126,18 @@ const Chip: React.FC<
 					<View
 						style={{
 							borderRadius:
-								factor > 0.83 ? borderRadiusValue : 0,
+								factor > 0.85 ? borderRadiusValue : 0,
 							borderTopLeftRadius: borderRadiusValue,
 							borderBottomLeftRadius: borderRadiusValue,
 							position: 'absolute',
 							backgroundColor:
 								theme.colors[ColorTokens.Blue_800],
 							width:
-								factor > 0.17
-									? factor * layout.width
-									: 0.17 * layout.width,
+								factor >= 1
+									? layout.width - 2
+									: factor > 0.19
+									? factor * layout.width - 2
+									: 0.19 * layout.width,
 							height: layout.height - 2,
 							top: 0,
 							left: 0,
