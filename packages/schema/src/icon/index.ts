@@ -89,7 +89,8 @@ export enum IconTokens {
 	InvertedComma = 'inverted-comma',
 	WarningInfo = 'warning-info',
 	Online = 'online',
-	EmptyCircle = "EmptyCircle"
+	EmptyCircle = 'EmptyCircle',
+	PositiveVote = 'PositiveVote',
 }
 
 export enum IconSizeTokens {
