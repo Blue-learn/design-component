@@ -106,7 +106,9 @@ const DicussionCard: React.FunctionComponent<
 										<Space size={SizeTypeTokens.MD} />
 										<Typography
 											label={userLabel}
-											type={TypographyTypeTokens.S6}
+											type={
+												TypographyTypeTokens.SUBHEADING_XS
+											}
 											numberOfLines={1}
 										/>
 									</Stack>
@@ -137,7 +139,7 @@ const DicussionCard: React.FunctionComponent<
 							>
 								<Typography
 									label={title}
-									type={TypographyTypeTokens.H4}
+									type={TypographyTypeTokens.HEADING_MD}
 									textTransform={
 										FontTransformToken.capitalize
 									}
@@ -158,8 +160,9 @@ const DicussionCard: React.FunctionComponent<
 										<Typography
 											label={subtitle}
 											numberOfLines={2}
-											type={TypographyTypeTokens.B6}
-											color={ColorTokens.Grey_200}
+											type={
+												TypographyTypeTokens.HEADING_XS_SECONDARY
+											}
 										/>
 									</View>,
 								]
@@ -215,7 +218,9 @@ const DicussionCard: React.FunctionComponent<
 									<Space size={SizeTypeTokens.SM} />
 									<Typography
 										label={participantsLabel}
-										type={TypographyTypeTokens.S6}
+										type={
+											TypographyTypeTokens.SUBHEADING_XS
+										}
 									/>
 								</Stack>
 							) : (

@@ -86,7 +86,9 @@ const CommentCard: React.FunctionComponent<
 													<Typography
 														label={user?.title}
 														numberOfLines={1}
-														type={TypographyTypeTokens.S5}
+														type={
+															TypographyTypeTokens.SUBHEADING_SM
+														}
 													/>
 												</Stack>
 											</TouchableOpacity>
@@ -94,8 +96,9 @@ const CommentCard: React.FunctionComponent<
 											{time ? (
 												<Typography
 													label={time}
-													type={TypographyTypeTokens.B6}
-													color={ColorTokens.Grey_200}
+													type={
+														TypographyTypeTokens.BODY_XS_SECONDARY
+													}
 												/>
 											) : (
 												<></>

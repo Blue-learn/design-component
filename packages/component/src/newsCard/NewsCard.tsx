@@ -93,7 +93,7 @@ const NewsCard: React.FunctionComponent<
 								<Space size={SizeTypeTokens.LG} />,
 								<Typography
 									label={title}
-									type={TypographyTypeTokens.H5}
+									type={TypographyTypeTokens.HEADING_SM}
 									numberOfLines={2}
 								/>,
 								<Space
@@ -106,8 +106,9 @@ const NewsCard: React.FunctionComponent<
 								subtitle ? (
 									<Typography
 										label={subtitle}
-										type={TypographyTypeTokens.B6}
-										color={ColorTokens.Grey_200}
+										type={
+											TypographyTypeTokens.BODY_XS_SECONDARY
+										}
 										numberOfLines={2}
 									/>
 								) : (
@@ -133,7 +134,7 @@ const NewsCard: React.FunctionComponent<
 										<Space size={SizeTypeTokens.SM} />
 										<Typography
 											label={source?.title}
-											type={TypographyTypeTokens.B7}
+											type={TypographyTypeTokens.BODY_2XS}
 										/>
 										<Space size={SizeTypeTokens.SM} />
 										<Icon
@@ -144,7 +145,7 @@ const NewsCard: React.FunctionComponent<
 										<Space size={SizeTypeTokens.SM} />
 										<Typography
 											label={timeStamp}
-											type={TypographyTypeTokens.B7}
+											type={TypographyTypeTokens.BODY_2XS}
 											color={ColorTokens.Grey_200}
 										/>
 									</Stack>
@@ -155,7 +156,7 @@ const NewsCard: React.FunctionComponent<
 								<Divider
 									size={DividerSizeTokens.SM}
 									margin={{ vertical: SizeTypeTokens.SM }}
-									color={ColorTokens.Grey_550}
+									color={ColorTokens.Grey_600}
 								/>,
 							],
 						}}

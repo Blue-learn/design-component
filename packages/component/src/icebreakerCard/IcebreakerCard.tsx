@@ -14,7 +14,6 @@ import {
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
-import _map from 'lodash-es/map';
 import Button from '../button/Button';
 import Space from '../space/Space';
 
@@ -53,8 +52,9 @@ const IcebreakerCard: React.FunctionComponent<
 					<Stack>
 						<Typography
 							label={title}
-							type={TypographyTypeTokens.S6}
-							color={ColorTokens.Grey_200}
+							type={
+								TypographyTypeTokens.SUBHEADING_XS_SECONDARY
+							}
 						/>
 						<Space size={SizeTypeTokens.SM} />
 						<Typography label={subtitle} />

@@ -2,107 +2,429 @@ import {
 	TypographyTypeTokensMap,
 	ColorTokens,
 	TypographyTypeTokens,
-	FontSizeTokens,
-	FontFamilyTokens,
 } from '@blue-learn/schema';
 import { typographyTypeTokensMap as typographyTypeTokensMapLight } from '../../light-mobile/typography';
 
 export const typographyTypeTokensMap: TypographyTypeTokensMap =
 	{
 		[TypographyTypeTokens.DEFAULT]: {
-			...typographyTypeTokensMapLight['DEFAULT'],
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.DEFAULT
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H7]: {
-			...typographyTypeTokensMapLight['H7'],
+		[TypographyTypeTokens.HEADING]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H6]: {
-			...typographyTypeTokensMapLight['H6'],
+		[TypographyTypeTokens.SUBHEADING]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H5]: {
-			...typographyTypeTokensMapLight['H5'],
+
+		[TypographyTypeTokens.BODY_2XS]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_2XS
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H4]: {
-			...typographyTypeTokensMapLight['H4'],
+		[TypographyTypeTokens.BODY_XS]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_XS
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H3]: {
-			...typographyTypeTokensMapLight['H3'],
+		[TypographyTypeTokens.BODY_SM]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_SM
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H2]: {
-			...typographyTypeTokensMapLight['H2'],
+		[TypographyTypeTokens.BODY_MD]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_MD
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.H1]: {
-			...typographyTypeTokensMapLight['H1'],
+		[TypographyTypeTokens.BODY_LG]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_LG
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.B7]: {
-			...typographyTypeTokensMapLight['B7'],
+		[TypographyTypeTokens.BODY_XL]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_XL
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.B6]: {
-			...typographyTypeTokensMapLight['B6'],
+		[TypographyTypeTokens.BODY_2XL]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_2XL
+			],
 			color: ColorTokens.Grey_100,
 		},
-		[TypographyTypeTokens.B5]: {
-			...typographyTypeTokensMapLight['B5'],
+		[TypographyTypeTokens.BODY_2XS_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_2XS_SECONDARY
+			],
 			color: ColorTokens.Grey_200,
 		},
-		[TypographyTypeTokens.B4]: {
-			...typographyTypeTokensMapLight['B4'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.B3]: {
-			...typographyTypeTokensMapLight['B3'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S1]: {
-			...typographyTypeTokensMapLight['S1'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S2]: {
-			...typographyTypeTokensMapLight['S2'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S3]: {
-			...typographyTypeTokensMapLight['S3'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S4]: {
-			...typographyTypeTokensMapLight['S4'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S5]: {
-			...typographyTypeTokensMapLight['S5'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S6]: {
-			...typographyTypeTokensMapLight['S6'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.S7]: {
-			...typographyTypeTokensMapLight['S7'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.P5]: {
-			...typographyTypeTokensMapLight['P5'],
-			color: ColorTokens.Grey_300,
-		},
-		[TypographyTypeTokens.primary]: {
-			...typographyTypeTokensMapLight['primary'],
-			color: ColorTokens.Grey_100,
-		},
-		[TypographyTypeTokens.secondary]: {
-			...typographyTypeTokensMapLight['secondary'],
+		[TypographyTypeTokens.BODY_XS_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_XS_SECONDARY
+			],
 			color: ColorTokens.Grey_200,
 		},
-		[TypographyTypeTokens.placeholder]: {
-			...typographyTypeTokensMapLight['placeholder'],
+		[TypographyTypeTokens.BODY_SM_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_SM_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.BODY_MD_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_MD_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.BODY_LG_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_LG_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.BODY_XL_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_XL_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.BODY_2XL_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_2XL_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.BODY_2XS_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_2XS_PLACEHOLDER
+			],
 			color: ColorTokens.Grey_300,
 		},
+		[TypographyTypeTokens.BODY_XS_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_XS_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.BODY_SM_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_SM_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.BODY_MD_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_MD_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.BODY_LG_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_LG_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.BODY_XL_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_XL_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.BODY_2XL_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.BODY_2XL_SECONDARY
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.HEADING_2XS]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_2XS
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.HEADING_XS]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_XS
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.HEADING_SM]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_SM
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.HEADING_MD]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_MD
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.HEADING_LG]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_LG
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.HEADING_XL]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_XL
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.HEADING_2XL]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_2XL
+			],
+			color: ColorTokens.Grey_100,
+		},
+
+		[TypographyTypeTokens.HEADING_2XS_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_2XS_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_XS_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_XS_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_SM_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_SM_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_MD_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_MD_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_LG_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_LG_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_XL_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_XL_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_2XL_SECONDARY]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_2XL_SECONDARY
+			],
+			color: ColorTokens.Grey_200,
+		},
+		[TypographyTypeTokens.HEADING_2XS_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.HEADING_2XS_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.HEADING_XS_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_XS_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.HEADING_SM_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_SM_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.HEADING_MD_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_MD_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.HEADING_LG_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_LG_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.HEADING_XL_PLACEHOLDER]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.HEADING_XL_PLACEHOLDER
+			],
+			color: ColorTokens.Grey_300,
+		},
+		[TypographyTypeTokens.HEADING_2XL_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.HEADING_2XL_SECONDARY
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_2XS]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_2XS
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_XS]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_XS
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_SM]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_SM
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_MD]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_MD
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_LG]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_LG
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_XL]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_XL
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_2XL]: {
+			...typographyTypeTokensMapLight[
+				TypographyTypeTokens.SUBHEADING_2XL
+			],
+			color: ColorTokens.Grey_100,
+		},
+		[TypographyTypeTokens.SUBHEADING_2XS_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_2XS_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_XS_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_XS_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_SM_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_SM_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_MD_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_MD_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_LG_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_LG_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_XL_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_XL_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_2XL_SECONDARY]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_2XL_SECONDARY
+				],
+				color: ColorTokens.Grey_200,
+			},
+		[TypographyTypeTokens.SUBHEADING_2XS_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens
+						.SUBHEADING_2XS_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_XS_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens
+						.SUBHEADING_XS_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_SM_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens
+						.SUBHEADING_SM_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_MD_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens
+						.SUBHEADING_MD_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_LG_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens
+						.SUBHEADING_LG_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_XL_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens
+						.SUBHEADING_XL_PLACEHOLDER
+				],
+				color: ColorTokens.Grey_300,
+			},
+		[TypographyTypeTokens.SUBHEADING_2XL_PLACEHOLDER]:
+			{
+				...typographyTypeTokensMapLight[
+					TypographyTypeTokens.SUBHEADING_2XL_SECONDARY
+				],
+				color: ColorTokens.Grey_300,
+			},
 	};
