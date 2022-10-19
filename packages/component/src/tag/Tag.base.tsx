@@ -101,7 +101,7 @@ const TagBase: React.FC<TagBaseProps> = ({
 				<Typography
 					label={label}
 					fontSize={fontSize}
-					fontFamily={FontFamilyTokens.manropeSemiBold}
+					fontFamily={FontFamilyTokens.InterSemiBold}
 					color={labelColor}
 				/>
 				{icon?.align === IconAlignmentTokens.right &&

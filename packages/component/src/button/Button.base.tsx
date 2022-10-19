@@ -183,9 +183,7 @@ const ButtonBase: React.FunctionComponent<
 						color={labelColor}
 						fontSize={fontSize}
 						textAlign={TextAlignTokens.center}
-						fontFamily={
-							FontFamilyTokens.manropeSemiBold
-						}
+						fontFamily={FontFamilyTokens.InterSemiBold}
 					/>
 				</View>
 

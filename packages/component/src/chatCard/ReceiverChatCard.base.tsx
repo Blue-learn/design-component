@@ -243,9 +243,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 							textTransform={
 								FontTransformToken.capitalize
 							}
-							fontFamily={
-								FontFamilyTokens.manropeSemiBold
-							}
+							fontFamily={FontFamilyTokens.InterSemiBold}
 						/>
 						<Space size={SizeTypeTokens.MD} />
 					</Stack>
@@ -303,7 +301,7 @@ const ReceiverChatCardBase: React.FunctionComponent<
 													label={payload.previewData?.title}
 													color={labelColor}
 													fontFamily={
-														FontFamilyTokens.manropeSemiBold
+														FontFamilyTokens.InterSemiBold
 													}
 													fontSize={FontSizeTokens.XS}
 												/>

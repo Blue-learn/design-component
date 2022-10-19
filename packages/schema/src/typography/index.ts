@@ -33,9 +33,9 @@ export type FontSizeTokensMap = {
 };
 
 export enum FontFamilyTokens {
-	manropeSemiBold = 'Manrope-SemiBold',
-	manropeBold = 'Manrope-Bold',
-	manropeRegular = 'Manrope-Regular',
+	InterSemiBold = 'Inter-SemiBold',
+	InterBold = 'Inter-Bold',
+	InterRegular = 'Inter-Regular',
 }
 
 export type FontFamilyTokensMap = {
