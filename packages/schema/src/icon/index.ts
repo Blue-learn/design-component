@@ -91,6 +91,7 @@ export enum IconTokens {
 	Online = 'online',
 	EmptyCircle = 'EmptyCircle',
 	Work = 'work',
+	PositiveVote = 'PositiveVote',
 }
 
 export enum IconSizeTokens {
