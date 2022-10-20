@@ -52,6 +52,8 @@ export type ButtonProps = {
 	 *
 	 */
 	flex?: StackAlignType;
+
+	bgColor?: ColorTokens;
 };
 
 export enum ButtonWidthTypeToken {

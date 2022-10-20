@@ -30,6 +30,7 @@ import {
 	CommentCard,
 	Grid,
 } from './index';
+import Work from './icon/icon-list/Work';
 
 const registry: WidgetRegistry = {
 	[WIDGET.TEXT]: Typography,
