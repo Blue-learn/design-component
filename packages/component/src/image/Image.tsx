@@ -56,7 +56,7 @@ const Image: React.FunctionComponent<
 			aspectRatio: aspectRatioValue,
 			borderColor: borderColorValue,
 			backgroundColor:
-				theme.colors[ColorTokens.Grey_700],
+				theme.colors[ColorTokens.Grey_50],
 		}),
 		[
 			sizeValue,
