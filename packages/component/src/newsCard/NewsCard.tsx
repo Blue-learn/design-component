@@ -37,7 +37,7 @@ const NewsCard: React.FunctionComponent<
 	margin = {
 		bottom: SizeTypeTokens.XL,
 	},
-	bgColor = ColorTokens.Grey_600,
+	bgColor = ColorTokens.Grey_50,
 	borderRadius = BorderRadiusTokens.BR1,
 	imageURL,
 	title,
@@ -140,13 +140,14 @@ const NewsCard: React.FunctionComponent<
 										<Icon
 											name={IconTokens.Dot}
 											size={IconSizeTokens.XXS}
-											color={ColorTokens.Grey_300}
+											color={ColorTokens.Grey_500}
 										/>
 										<Space size={SizeTypeTokens.SM} />
 										<Typography
 											label={timeStamp}
-											type={TypographyTypeTokens.BODY_2XS}
-											color={ColorTokens.Grey_200}
+											type={
+												TypographyTypeTokens.BODY_2XS_SECONDARY
+											}
 										/>
 									</Stack>
 								) : (
@@ -156,7 +157,6 @@ const NewsCard: React.FunctionComponent<
 								<Divider
 									size={DividerSizeTokens.SM}
 									margin={{ vertical: SizeTypeTokens.SM }}
-									color={ColorTokens.Grey_600}
 								/>,
 							],
 						}}

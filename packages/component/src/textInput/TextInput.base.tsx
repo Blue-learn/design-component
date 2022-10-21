@@ -34,7 +34,7 @@ const TextInputBase: React.FunctionComponent<
 	placeholder = 'Type here',
 	borderRadius = BorderRadiusTokens.BR1,
 	borderColor = ColorTokens.Grey_200,
-	color = ColorTokens.Grey_500,
+	color = ColorTokens.Grey_800,
 	isDisabled = false,
 	fontSize = FontSizeTokens.SM,
 	bgColor = ColorTokens.Transparent,
@@ -151,7 +151,7 @@ const TextInputBase: React.FunctionComponent<
 					editable={!isDisabled}
 					placeholder={placeholder}
 					placeholderTextColor={
-						colorMapping[ColorTokens.Grey_300]
+						colorMapping[ColorTokens.Grey_500]
 					}
 					onChangeText={handleTextChange}
 					style={{

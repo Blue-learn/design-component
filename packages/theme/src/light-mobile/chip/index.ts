@@ -12,8 +12,8 @@ export const chipTypeTokensMap: ChipTypeTokensMap =
 		[ChipTypeTokens.SMALL_SELECTED]: {
 			borderRadius: BorderRadiusTokens.BR4,
 			fontSize: FontSizeTokens.XS,
-			borderColor: ColorTokens.Blue_300,
-			labelColor: ColorTokens.Grey_300,
+			borderColor: ColorTokens.Primary_50,
+			labelColor: ColorTokens.Primary_500,
 			padding: {
 				vertical: SizeTypeTokens.SM,
 				horizontal: SizeTypeTokens.LG,
@@ -22,8 +22,8 @@ export const chipTypeTokensMap: ChipTypeTokensMap =
 		[ChipTypeTokens.SMALL_UNSELECTED]: {
 			borderRadius: BorderRadiusTokens.BR4,
 			fontSize: FontSizeTokens.XS,
-			borderColor: ColorTokens.Grey_500,
-			labelColor: ColorTokens.Grey_100,
+			borderColor: ColorTokens.Grey_100,
+			labelColor: ColorTokens.Grey_800,
 			padding: {
 				vertical: SizeTypeTokens.SM,
 				horizontal: SizeTypeTokens.LG,
@@ -32,8 +32,8 @@ export const chipTypeTokensMap: ChipTypeTokensMap =
 		[ChipTypeTokens.MEDIUM_SELECTED]: {
 			borderRadius: BorderRadiusTokens.BR4,
 			fontSize: FontSizeTokens.SM,
-			borderColor: ColorTokens.Blue_300,
-			labelColor: ColorTokens.Grey_300,
+			borderColor: ColorTokens.Primary_50,
+			labelColor: ColorTokens.Primary_500,
 			padding: {
 				vertical: SizeTypeTokens.MD,
 				horizontal: SizeTypeTokens.XXXL,
@@ -42,8 +42,8 @@ export const chipTypeTokensMap: ChipTypeTokensMap =
 		[ChipTypeTokens.MEDIUM_UNSELECTED]: {
 			borderRadius: BorderRadiusTokens.BR4,
 			fontSize: FontSizeTokens.SM,
-			borderColor: ColorTokens.Blue_300,
-			labelColor: ColorTokens.Grey_300,
+			borderColor: ColorTokens.Grey_100,
+			labelColor: ColorTokens.Grey_800,
 			padding: {
 				vertical: SizeTypeTokens.MD,
 				horizontal: SizeTypeTokens.XXXL,

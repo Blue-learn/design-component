@@ -8,14 +8,12 @@ import {
 	DiscussionCardProps,
 	DividerSizeTokens,
 	FontTransformToken,
-	GradientColorTokens,
 	DiscussionStateTokens,
 	SizeTypeTokens,
 	StackAlignItems,
 	StackJustifyContent,
 	StackType,
 	TagProps,
-	TagTypeTokens,
 	TypographyTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
@@ -33,7 +31,7 @@ import Avatar from '../avatar/Avatar';
 import Tag from '../tag/Tag';
 import Divider from '../divider/Divider';
 
-const DicussionCard: React.FunctionComponent<
+const DiscussionCard: React.FunctionComponent<
 	DiscussionCardProps & WidgetProps
 > = ({
 	userLabel,
@@ -48,7 +46,6 @@ const DicussionCard: React.FunctionComponent<
 	onPress,
 	ctaText,
 	action,
-	gradientColor = GradientColorTokens.D_5,
 	margin,
 	profileAction,
 	triggerAction,
@@ -68,9 +65,7 @@ const DicussionCard: React.FunctionComponent<
 		return (
 			<Card
 				onPress={handleAction}
-				gradient={{
-					colors: gradientColor,
-				}}
+				bgColor={ColorTokens.Grey_50}
 				borderRadius={BorderRadiusTokens.BR2}
 				padding={{
 					vertical: SizeTypeTokens.XL,
@@ -139,7 +134,9 @@ const DicussionCard: React.FunctionComponent<
 							>
 								<Typography
 									label={title}
-									type={TypographyTypeTokens.HEADING_MD}
+									type={
+										TypographyTypeTokens.HEADING_MD_SECONDARY
+									}
 									textTransform={
 										FontTransformToken.capitalize
 									}
@@ -161,7 +158,7 @@ const DicussionCard: React.FunctionComponent<
 											label={subtitle}
 											numberOfLines={2}
 											type={
-												TypographyTypeTokens.HEADING_XS_SECONDARY
+												TypographyTypeTokens.BODY_XS_SECONDARY
 											}
 										/>
 									</View>,
@@ -178,7 +175,6 @@ const DicussionCard: React.FunctionComponent<
 											bottom: SizeTypeTokens.NONE,
 										}}
 										label={clubTitle}
-										type={TagTypeTokens.SECONDARY}
 									/>,
 								]
 							) : (
@@ -213,13 +209,15 @@ const DicussionCard: React.FunctionComponent<
 									<Avatar
 										size={AvatarSizeTokens.XS}
 										type={AvatarTypeTokens.MULTIPLE}
+										borderColor={ColorTokens.Grey_50}
+										borderWidth={1.5}
 										uris={participants}
 									/>
 									<Space size={SizeTypeTokens.SM} />
 									<Typography
 										label={participantsLabel}
 										type={
-											TypographyTypeTokens.SUBHEADING_XS
+											TypographyTypeTokens.SUBHEADING_XS_SECONDARY
 										}
 									/>
 								</Stack>
@@ -250,5 +248,5 @@ const DicussionCard: React.FunctionComponent<
 		);
 };
 
-export default React.memo(DicussionCard);
-export { DicussionCard };
+export default React.memo(DiscussionCard);
+export { DiscussionCard };

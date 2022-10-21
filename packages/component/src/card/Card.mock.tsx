@@ -45,7 +45,7 @@ export const args: CardProps = {
 			/>
 		),
 	},
-	bgColor: ColorTokens.Grey_600,
+	bgColor: ColorTokens.Grey_50,
 	padding: {
 		top: SizeTypeTokens.LG,
 		bottom: SizeTypeTokens.LG,

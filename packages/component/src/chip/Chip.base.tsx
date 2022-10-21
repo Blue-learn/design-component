@@ -111,8 +111,9 @@ const Chip: React.FC<
 						flexDirection: 'row',
 						alignItems: 'center',
 						borderColor: borderColorValue,
+						backgroundColor: borderColorValue,
 						borderRadius: borderRadiusValue,
-						borderWidth: 1,
+						borderWidth: 0,
 						paddingTop: paddingTop,
 						paddingBottom: paddingBottom,
 						paddingLeft: paddingLeft,
@@ -122,7 +123,7 @@ const Chip: React.FC<
 				]}
 				onPress={handleAction}
 			>
-				{factor > 0 && (
+				{factor > 0 && factor < 1 && (
 					<View
 						style={{
 							borderRadius:
@@ -131,14 +132,14 @@ const Chip: React.FC<
 							borderBottomLeftRadius: borderRadiusValue,
 							position: 'absolute',
 							backgroundColor:
-								theme.colors[ColorTokens.Blue_800],
+								theme.colors[ColorTokens.Primary_50],
 							width:
 								factor >= 1
-									? layout.width - 2
+									? layout.width
 									: factor > 0.19
-									? factor * layout.width - 2
+									? factor * layout.width
 									: 0.19 * layout.width,
-							height: layout.height - 2,
+							height: layout.height,
 							top: 0,
 							left: 0,
 						}}

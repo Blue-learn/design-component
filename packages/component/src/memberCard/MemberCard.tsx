@@ -42,7 +42,7 @@ const MemberCard: React.FunctionComponent<
 	onPress,
 	cta,
 	padding,
-	bgColor = ColorTokens.Grey_600,
+	bgColor = ColorTokens.Grey_50,
 	borderRadius = BorderRadiusTokens.BR2,
 	action,
 	ctaAction,
@@ -118,7 +118,7 @@ const MemberCard: React.FunctionComponent<
 											<Icon
 												name={IconTokens.LocationPin}
 												size={IconSizeTokens.XS}
-												color={ColorTokens.Grey_200}
+												color={ColorTokens.Grey_700}
 											/>
 										) : (
 											<></>
@@ -143,7 +143,7 @@ const MemberCard: React.FunctionComponent<
 						</View>
 						<Button
 							type={ButtonTypeTokens.IconFilled}
-							labelColor={ColorTokens.Grey_500}
+							labelColor={ColorTokens.Grey_50}
 							onPress={() => {
 								if (cta) {
 									cta();
