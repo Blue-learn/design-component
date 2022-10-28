@@ -90,6 +90,7 @@ export enum IconTokens {
 	WarningInfo = 'warning-info',
 	Online = 'online',
 	EmptyCircle = 'EmptyCircle',
+	Work = 'work',
 	PositiveVote = 'PositiveVote',
 }
 

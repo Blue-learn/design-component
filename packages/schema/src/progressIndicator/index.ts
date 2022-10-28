@@ -12,6 +12,7 @@ export type ProgressIndicatorProps = {
 	activeIndex?: number;
 	flex?: StackAlignType;
 	type?: ProgressIndicatorTypeTokens;
+	color?: ColorTokens;
 };
 
 /**

@@ -71,8 +71,9 @@ import CheckFilled from './icon-list/CheckFilled';
 import InvertedComma from './icon-list/InvertedComma';
 import Online from './icon-list/Online';
 import WarningInfo from './icon-list/WarningInfo';
-import EmptyCircle from './icon-list/EmptyCircle';
 import PositiveVote from './icon-list/PositiveVote';
+import Work from './icon-list/Work';
+import EmptyCircle from './icon-list/EmptyCircle';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -145,5 +146,6 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Online]: Online,
 	[IconTokens.WarningInfo]: WarningInfo,
 	[IconTokens.EmptyCircle]: EmptyCircle,
+	[IconTokens.Work]: Work,
 	[IconTokens.PositiveVote]: PositiveVote,
 };

@@ -135,7 +135,7 @@ const Chip: React.FC<
 								theme.colors[ColorTokens.Primary_50],
 							width:
 								factor >= 1
-									? layout.width
+									? layout.width - 3
 									: factor > 0.19
 									? factor * layout.width
 									: 0.19 * layout.width,
