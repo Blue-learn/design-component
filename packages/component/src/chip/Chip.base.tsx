@@ -123,7 +123,7 @@ const Chip: React.FC<
 				]}
 				onPress={handleAction}
 			>
-				{factor > 0 && factor < 1 && (
+				{factor > 0 && factor <= 1 && (
 					<View
 						style={{
 							borderRadius:
@@ -135,7 +135,7 @@ const Chip: React.FC<
 								theme.colors[ColorTokens.Primary_50],
 							width:
 								factor >= 1
-									? layout.width - 3
+									? layout.width
 									: factor > 0.19
 									? factor * layout.width
 									: 0.19 * layout.width,
