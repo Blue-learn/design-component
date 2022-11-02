@@ -8,17 +8,7 @@ export const args: MemberCardProps = {
 	headline: 'lorem ipsum dolor sit amet',
 	chipsTitle: 'Talk to me about',
 	location: 'Bangalore, India',
-	chips: [
-		'aiml',
-		'anime',
-		'art',
-		'commerce',
-		'content_creation',
-		'crypto',
-		'entrepreneurship',
-		'internships',
-		'uiux',
-	],
+	chips: ['aiml', 'anime', 'art', 'commerce'],
 };
 
 export const argTypes = {};

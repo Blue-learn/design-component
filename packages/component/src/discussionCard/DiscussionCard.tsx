@@ -235,7 +235,11 @@ const DiscussionCard: React.FunctionComponent<
 								<Button
 									onPress={handleAction}
 									type={ButtonTypeTokens.SmallGhost}
-									labelColor={ColorTokens.Grey_50}
+									labelColor={
+										ctaText.includes('->')
+											? ColorTokens.Primary_500
+											: ColorTokens.Grey_700
+									}
 									label={ctaText}
 								/>
 							</View>
