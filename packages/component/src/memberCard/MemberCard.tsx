@@ -194,6 +194,7 @@ const MemberCard: React.FunctionComponent<
 									<Tag
 										key={index}
 										label={interestToString(item)}
+										bgColor={ColorTokens.Grey_100}
 										margin={{
 											right: SizeTypeTokens.SM,
 											bottom: SizeTypeTokens.SM,

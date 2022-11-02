@@ -9,8 +9,8 @@ import {
 } from '@blue-learn/schema';
 import React, { memo, useState } from 'react';
 import {
-	Pressable,
 	Platform,
+	Pressable,
 	View,
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
@@ -132,7 +132,7 @@ const Chip: React.FC<
 							borderBottomLeftRadius: borderRadiusValue,
 							position: 'absolute',
 							backgroundColor:
-								theme.colors[ColorTokens.Primary_50],
+								theme.colors[ColorTokens.Primary_100],
 							width:
 								factor >= 1
 									? layout.width
@@ -164,7 +164,13 @@ const Chip: React.FC<
 								{...image}
 							/>,
 							label && (
-								<Space size={SizeTypeTokens.MD} />
+								<Space
+									size={
+										image?.size === ImageSizeTokens.XXXS
+											? SizeTypeTokens.SM
+											: SizeTypeTokens.MD
+									}
+								/>
 							),
 					  ]
 					: null}

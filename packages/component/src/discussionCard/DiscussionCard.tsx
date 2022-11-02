@@ -4,13 +4,17 @@ import {
 	AvatarTypeTokens,
 	BorderRadiusTokens,
 	ButtonTypeTokens,
+	ChipTypeTokens,
 	ColorTokens,
 	DiscussionCardProps,
+	DiscussionStateTokens,
 	DividerSizeTokens,
 	FontTransformToken,
-	DiscussionStateTokens,
+	ImageSizeTokens,
 	SizeTypeTokens,
+	Skill,
 	StackAlignItems,
+	StackFlexWrap,
 	StackJustifyContent,
 	StackType,
 	TagProps,
@@ -18,8 +22,8 @@ import {
 	WidgetProps,
 } from '@blue-learn/schema';
 import {
-	View,
 	TouchableOpacity,
+	View,
 } from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
@@ -30,6 +34,7 @@ import Space from '../space/Space';
 import Avatar from '../avatar/Avatar';
 import Tag from '../tag/Tag';
 import Divider from '../divider/Divider';
+import Chip from '../chip/Chip';
 
 const DiscussionCard: React.FunctionComponent<
 	DiscussionCardProps & WidgetProps
@@ -40,6 +45,7 @@ const DiscussionCard: React.FunctionComponent<
 	title,
 	subtitle,
 	clubTitle,
+	skills,
 	participantsLabel,
 	participants,
 	tags,
@@ -69,7 +75,7 @@ const DiscussionCard: React.FunctionComponent<
 				borderRadius={BorderRadiusTokens.BR2}
 				padding={{
 					vertical: SizeTypeTokens.XL,
-					horizontal: SizeTypeTokens.MD,
+					horizontal: SizeTypeTokens.LG,
 				}}
 				margin={margin}
 				header={{
@@ -113,13 +119,13 @@ const DiscussionCard: React.FunctionComponent<
 									(item: TagProps, index: number) => [
 										<Tag
 											key={index}
-											{...item}
 											margin={{
 												right:
 													index !== tags?.length - 1
 														? SizeTypeTokens.SM
 														: SizeTypeTokens.NONE,
 											}}
+											{...item}
 										/>,
 									],
 								)}
@@ -180,6 +186,42 @@ const DiscussionCard: React.FunctionComponent<
 							) : (
 								<></>
 							)}
+							{skills && skills?.length > 0 ? (
+								[
+									<Space size={SizeTypeTokens.MD} />,
+									<Stack
+										type={StackType.row}
+										alignItems={StackAlignItems.center}
+										flexWrap={StackFlexWrap.wrap}
+									>
+										{_map(
+											skills?.slice(0, 5),
+											(item: Skill, index: number) => [
+												<Chip
+													key={item.skill_id}
+													label={item.skill}
+													image={{
+														uri: item?.skill_image,
+														size: ImageSizeTokens.XXXS,
+													}}
+													margin={{
+														right:
+															index !== skills?.length - 1
+																? SizeTypeTokens.MD
+																: SizeTypeTokens.NONE,
+														bottom: SizeTypeTokens.MD,
+													}}
+													type={
+														ChipTypeTokens.SMALL_UNSELECTED
+													}
+												/>,
+											],
+										)}
+									</Stack>,
+								]
+							) : (
+								<></>
+							)}
 						</View>
 					),
 				}}
@@ -187,8 +229,14 @@ const DiscussionCard: React.FunctionComponent<
 					children: (
 						<Divider
 							size={DividerSizeTokens.SM}
-							margin={{ vertical: SizeTypeTokens.LG }}
-							color={ColorTokens.White_20}
+							margin={{
+								top:
+									skills?.length > 0
+										? SizeTypeTokens.SM
+										: SizeTypeTokens.MD,
+								bottom: SizeTypeTokens.MD,
+							}}
+							color={ColorTokens.Grey_100}
 						/>
 					),
 				}}

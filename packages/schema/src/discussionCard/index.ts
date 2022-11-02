@@ -8,6 +8,14 @@ export enum DiscussionStateTokens {
 	UNSEEN = 'UNSEEN',
 }
 
+export type Skill = {
+	skill: string;
+	skill_id: number;
+	confidence: number;
+	skill_image: string;
+	fk_student_id: number;
+};
+
 export type DiscussionCardProps = {
 	gradientColor?: GradientColorTokens;
 	margin?: PaddingProps;
@@ -23,6 +31,7 @@ export type DiscussionCardProps = {
 	title: string;
 	subtitle?: string;
 	clubTitle?: string;
+	skills?: Skill[];
 	/**
 	 * Footer
 	 */

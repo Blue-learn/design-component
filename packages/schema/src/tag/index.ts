@@ -21,6 +21,7 @@ export type TagProps = {
 	 */
 	icon?: IconProps;
 	gradientColor?: GradientColorTokens;
+	bgColor?: ColorTokens;
 	margin?: PaddingProps;
 };
 

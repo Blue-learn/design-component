@@ -11,8 +11,8 @@ export const tagTypeTokensMap: TagTypeTokensMap =
 	{
 		[TagTypeTokens.DEFAULT]: {
 			fontSize: FontSizeTokens.XXS,
-			labelColor: ColorTokens.Grey_700,
-			bgColor: ColorTokens.Grey_100,
+			labelColor: ColorTokens.Grey_800,
+			bgColor: ColorTokens.Secondary_100,
 			borderRadius: BorderRadiusTokens.BR4,
 			padding: {
 				horizontal: SizeTypeTokens.MD,

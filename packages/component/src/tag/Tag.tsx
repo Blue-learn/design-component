@@ -3,6 +3,7 @@ import {
 	TagThemeProps,
 	TagTypeTokens,
 	TagProps,
+	ColorTokens,
 } from '@blue-learn/schema';
 import TagBase from './Tag.base';
 import ThemeProvider from '@blue-learn/theme';
@@ -13,6 +14,7 @@ import ThemeProvider from '@blue-learn/theme';
 
 const Tag: React.FunctionComponent<TagProps> = ({
 	type = TagTypeTokens.DEFAULT,
+	bgColor = ColorTokens.Secondary_100,
 	...props
 }) => {
 	/**
@@ -23,7 +25,13 @@ const Tag: React.FunctionComponent<TagProps> = ({
 	const tagThemeProps: TagThemeProps =
 		theme.tag[type];
 
-	return <TagBase {...props} {...tagThemeProps} />;
+	return (
+		<TagBase
+			{...props}
+			{...tagThemeProps}
+			bgColor={bgColor}
+		/>
+	);
 };
 
 export default memo(Tag);
