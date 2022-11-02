@@ -60,15 +60,17 @@ const InfoCard: React.FunctionComponent<
 								label={title}
 								type={TypographyTypeTokens.HEADING_SM}
 							/>
-							<Button
-								icon={{
-									name: IconTokens.Cross,
-									size: IconSizeTokens.LG,
-								}}
-								type={ButtonTypeTokens.IconGhost}
-								labelColor={ColorTokens.Grey_800}
-								onPress={handleAction}
-							/>
+							{onPress && (
+								<Button
+									icon={{
+										name: IconTokens.Cross,
+										size: IconSizeTokens.LG,
+									}}
+									type={ButtonTypeTokens.IconGhost}
+									labelColor={ColorTokens.Grey_800}
+									onPress={handleAction}
+								/>
+							)}
 						</View>
 
 						<Space size={SizeTypeTokens.LG} />
