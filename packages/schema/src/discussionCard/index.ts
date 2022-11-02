@@ -11,9 +11,7 @@ export enum DiscussionStateTokens {
 export type Skill = {
 	skill: string;
 	skill_id: number;
-	confidence: number;
 	skill_image: string;
-	fk_student_id: number;
 };
 
 export type DiscussionCardProps = {

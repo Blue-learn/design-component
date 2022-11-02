@@ -1,5 +1,6 @@
 import {
 	ChipBaseProps,
+	ChipHighlightTokens,
 	ColorTokens,
 	FontFamilyTokens,
 	IconAlignmentTokens,
@@ -35,6 +36,7 @@ const Chip: React.FC<
 	action,
 	triggerAction,
 	factor,
+	highlight,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -110,10 +112,15 @@ const Chip: React.FC<
 					{
 						flexDirection: 'row',
 						alignItems: 'center',
-						borderColor: borderColorValue,
+						borderColor:
+							theme.colors[ColorTokens.Primary_500],
 						backgroundColor: borderColorValue,
 						borderRadius: borderRadiusValue,
-						borderWidth: 0,
+						borderWidth:
+							highlight ===
+							ChipHighlightTokens.HIGHLIGHTED
+								? 1
+								: 0,
 						paddingTop: paddingTop,
 						paddingBottom: paddingBottom,
 						paddingLeft: paddingLeft,
