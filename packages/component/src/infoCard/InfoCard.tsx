@@ -27,8 +27,6 @@ const InfoCard: React.FunctionComponent<
 	action,
 	triggerAction,
 }) => {
-	if (!title) return <></>;
-
 	const handleAction = () => {
 		onPress && onPress();
 		action &&
@@ -47,33 +45,42 @@ const InfoCard: React.FunctionComponent<
 			header={{
 				children: (
 					<Stack>
-						<View
-							style={{
-								flex: 1,
-								width: '100%',
-								alignItems: 'center',
-								flexDirection: 'row',
-								justifyContent: 'space-between',
-							}}
-						>
-							<Typography
-								label={title}
-								type={TypographyTypeTokens.HEADING_SM}
-							/>
-							{onPress && (
-								<Button
-									icon={{
-										name: IconTokens.Cross,
-										size: IconSizeTokens.LG,
-									}}
-									type={ButtonTypeTokens.IconGhost}
-									labelColor={ColorTokens.Grey_800}
-									onPress={handleAction}
+						{title ? (
+							<View
+								style={{
+									flex: 1,
+									width: '100%',
+									alignItems: 'center',
+									flexDirection: 'row',
+									justifyContent: 'space-between',
+								}}
+							>
+								<Typography
+									label={title}
+									type={TypographyTypeTokens.HEADING_SM}
 								/>
-							)}
-						</View>
-
-						<Space size={SizeTypeTokens.LG} />
+								{onPress && (
+									<Button
+										icon={{
+											name: IconTokens.Cross,
+											size: IconSizeTokens.LG,
+										}}
+										type={ButtonTypeTokens.IconGhost}
+										labelColor={ColorTokens.Grey_800}
+										onPress={handleAction}
+									/>
+								)}
+							</View>
+						) : (
+							<></>
+						)}
+						<Space
+							size={
+								title
+									? SizeTypeTokens.LG
+									: SizeTypeTokens.NONE
+							}
+						/>
 						<Typography
 							label={subtitle}
 							type={
