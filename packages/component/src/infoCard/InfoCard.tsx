@@ -48,7 +48,6 @@ const InfoCard: React.FunctionComponent<
 						{title ? (
 							<View
 								style={{
-									flex: 1,
 									width: '100%',
 									alignItems: 'center',
 									flexDirection: 'row',
