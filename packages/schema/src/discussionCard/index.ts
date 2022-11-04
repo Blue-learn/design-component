@@ -22,6 +22,7 @@ export type DiscussionCardProps = {
 	 */
 	userLabel: string;
 	userAvatarURL: string;
+	timeStamp?: string;
 	tags?: TagProps[];
 	/**
 	 * body

@@ -42,6 +42,7 @@ const DiscussionCard: React.FunctionComponent<
 	userLabel,
 	state = DiscussionStateTokens.UNSEEN,
 	userAvatarURL,
+	timeStamp,
 	title,
 	subtitle,
 	clubTitle,
@@ -74,7 +75,10 @@ const DiscussionCard: React.FunctionComponent<
 				bgColor={ColorTokens.Grey_50}
 				borderRadius={BorderRadiusTokens.BR2}
 				padding={{
-					vertical: SizeTypeTokens.XL,
+					top: SizeTypeTokens.XL,
+					bottom: ctaText
+						? SizeTypeTokens.XL
+						: SizeTypeTokens.MD,
 					horizontal: SizeTypeTokens.LG,
 				}}
 				margin={margin}
@@ -105,13 +109,21 @@ const DiscussionCard: React.FunctionComponent<
 											size={AvatarSizeTokens.XS}
 										/>
 										<Space size={SizeTypeTokens.MD} />
-										<Typography
-											label={userLabel}
-											type={
-												TypographyTypeTokens.SUBHEADING_XS
-											}
-											numberOfLines={1}
-										/>
+										<Stack>
+											<Typography
+												label={userLabel}
+												type={
+													TypographyTypeTokens.SUBHEADING_XS
+												}
+												numberOfLines={1}
+											/>
+											<Typography
+												type={
+													TypographyTypeTokens.BODY_2XS_SECONDARY
+												}
+												label={timeStamp ? timeStamp : ''}
+											/>
+										</Stack>
 									</Stack>
 								</TouchableOpacity>
 								{_map(
@@ -226,7 +238,7 @@ const DiscussionCard: React.FunctionComponent<
 					),
 				}}
 				body={{
-					children: (
+					children: ctaText ? (
 						<Divider
 							size={DividerSizeTokens.SM}
 							margin={{
@@ -238,6 +250,8 @@ const DiscussionCard: React.FunctionComponent<
 							}}
 							color={ColorTokens.Grey_100}
 						/>
+					) : (
+						<></>
 					),
 				}}
 				footer={{
