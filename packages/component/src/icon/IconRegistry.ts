@@ -74,6 +74,8 @@ import WarningInfo from './icon-list/WarningInfo';
 import PositiveVote from './icon-list/PositiveVote';
 import Work from './icon-list/Work';
 import EmptyCircle from './icon-list/EmptyCircle';
+import Sort from './icon-list/Sort';
+import Filter from './icon-list/Filter';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -148,4 +150,6 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.EmptyCircle]: EmptyCircle,
 	[IconTokens.Work]: Work,
 	[IconTokens.PositiveVote]: PositiveVote,
+	[IconTokens.Sort]: Sort,
+	[IconTokens.Filter]: Filter,
 };

@@ -92,6 +92,8 @@ export enum IconTokens {
 	EmptyCircle = 'EmptyCircle',
 	Work = 'work',
 	PositiveVote = 'PositiveVote',
+	Filter = 'filter',
+	Sort = 'sort',
 }
 
 export enum IconSizeTokens {
