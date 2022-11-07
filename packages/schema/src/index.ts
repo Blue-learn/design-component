@@ -33,3 +33,4 @@ export * from './feedCard';
 export * from './commentCard';
 export * from './grid';
 export * from './infoCard';
+export * from './applicantCard';
