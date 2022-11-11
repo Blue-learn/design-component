@@ -39,5 +39,6 @@ export type DiscussionCardProps = {
 	participantsLabel?: string;
 	ctaText?: string;
 	profileAction?: Action;
+	onPressProfile?: Function;
 	onPress?: Function;
 };

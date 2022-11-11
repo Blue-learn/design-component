@@ -56,6 +56,7 @@ const DiscussionCard: React.FunctionComponent<
 	margin,
 	profileAction,
 	triggerAction,
+	onPressProfile,
 }) => {
 	if (!title) return <></>;
 
@@ -96,9 +97,11 @@ const DiscussionCard: React.FunctionComponent<
 									style={{
 										flex: 1,
 									}}
-									onPress={() =>
-										triggerAction(profileAction)
-									}
+									onPress={() => {
+										if (onPressProfile) onPressProfile();
+										if (profileAction)
+											triggerAction(profileAction);
+									}}
 								>
 									<Stack
 										type={StackType.row}
