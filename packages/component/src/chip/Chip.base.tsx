@@ -185,7 +185,9 @@ const Chip: React.FC<
 					<Typography
 						label={label}
 						fontSize={fontSize}
-						fontFamily={FontFamilyTokens.InterSemiBold}
+						fontFamily={
+							FontFamilyTokens.ManropeSemiBold
+						}
 						color={labelColor}
 					/>
 				</View>

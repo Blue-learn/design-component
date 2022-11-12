@@ -38,7 +38,7 @@ const TextInputBase: React.FunctionComponent<
 	isDisabled = false,
 	fontSize = FontSizeTokens.SM,
 	bgColor = ColorTokens.Transparent,
-	fontFamily = FontFamilyTokens.InterRegular,
+	fontFamily = FontFamilyTokens.ManropeRegular,
 	paddingVertical = SizeTypeTokens.LG,
 	paddingHorizontal = SizeTypeTokens.XL,
 	title,
@@ -115,7 +115,9 @@ const TextInputBase: React.FunctionComponent<
 						label={title}
 						fontSize={fontSize}
 						color={color}
-						fontFamily={FontFamilyTokens.InterSemiBold}
+						fontFamily={
+							FontFamilyTokens.ManropeSemiBold
+						}
 					/>
 					<Space size={SizeTypeTokens.MD} />
 				</Stack>
