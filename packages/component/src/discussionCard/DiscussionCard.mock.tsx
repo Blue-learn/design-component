@@ -64,6 +64,7 @@ export const args = {
 	],
 	participantsLabel: ' 12 Participants',
 	ctaText: '9+ Messages ->',
+	timeStamp: '2 day',
 };
 
 export const argTypes = {

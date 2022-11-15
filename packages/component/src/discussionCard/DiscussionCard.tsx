@@ -96,6 +96,7 @@ const DiscussionCard: React.FunctionComponent<
 								<TouchableOpacity
 									style={{
 										flex: 1,
+										flexDirection: 'row',
 									}}
 									onPress={() => {
 										if (onPressProfile) onPressProfile();
@@ -103,31 +104,30 @@ const DiscussionCard: React.FunctionComponent<
 											triggerAction(profileAction);
 									}}
 								>
-									<Stack
-										type={StackType.row}
-										alignItems={StackAlignItems.center}
+									<Avatar
+										uri={userAvatarURL}
+										size={AvatarSizeTokens.XS}
+									/>
+									<Space size={SizeTypeTokens.MD} />
+									<View
+										style={{
+											flex: 1,
+										}}
 									>
-										<Avatar
-											uri={userAvatarURL}
-											size={AvatarSizeTokens.XS}
+										<Typography
+											label={userLabel}
+											type={
+												TypographyTypeTokens.SUBHEADING_XS
+											}
+											numberOfLines={1}
 										/>
-										<Space size={SizeTypeTokens.MD} />
-										<Stack>
-											<Typography
-												label={userLabel}
-												type={
-													TypographyTypeTokens.SUBHEADING_XS
-												}
-												numberOfLines={1}
-											/>
-											<Typography
-												type={
-													TypographyTypeTokens.BODY_2XS_SECONDARY
-												}
-												label={timeStamp ? timeStamp : ''}
-											/>
-										</Stack>
-									</Stack>
+										<Typography
+											type={
+												TypographyTypeTokens.BODY_2XS_SECONDARY
+											}
+											label={timeStamp ? timeStamp : ''}
+										/>
+									</View>
 								</TouchableOpacity>
 								{_map(
 									tags?.slice(0, 3),
