@@ -184,7 +184,7 @@ const ButtonBase: React.FunctionComponent<
 						fontSize={fontSize}
 						textAlign={TextAlignTokens.center}
 						fontFamily={
-							FontFamilyTokens.manropeSemiBold
+							FontFamilyTokens.ManropeSemiBold
 						}
 					/>
 				</View>

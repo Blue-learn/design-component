@@ -203,7 +203,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 					<Typography
 						label={nameText}
 						fontFamily={
-							FontFamilyTokens.manropeSemiBold
+							FontFamilyTokens.ManropeSemiBold
 						}
 						fontSize={FontSizeTokens.XS}
 						color={userLabelColor}

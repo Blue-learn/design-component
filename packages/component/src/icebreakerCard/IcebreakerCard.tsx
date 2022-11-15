@@ -14,7 +14,6 @@ import {
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
-import _map from 'lodash-es/map';
 import Button from '../button/Button';
 import Space from '../space/Space';
 
@@ -53,11 +52,14 @@ const IcebreakerCard: React.FunctionComponent<
 					<Stack>
 						<Typography
 							label={title}
-							type={TypographyTypeTokens.S6}
-							color={ColorTokens.Grey_200}
+							type={TypographyTypeTokens.SUBHEADING_XS}
+							color={ColorTokens.Grey_300}
 						/>
 						<Space size={SizeTypeTokens.SM} />
-						<Typography label={subtitle} />
+						<Typography
+							label={subtitle}
+							color={ColorTokens.Grey_50}
+						/>
 						<Space
 							size={
 								ctaText
@@ -75,9 +77,10 @@ const IcebreakerCard: React.FunctionComponent<
 						justifyContent={StackJustifyContent.flexEnd}
 					>
 						<Button
-							type={ButtonTypeTokens.SmallOutline}
+							type={ButtonTypeTokens.SmallFilled}
 							icon={{ name: IconTokens.Chat }}
-							labelColor={ColorTokens.Grey_50}
+							bgColor={ColorTokens.Primary_100}
+							labelColor={ColorTokens.Grey_800}
 							label={ctaText}
 							onPress={handleAction}
 						/>

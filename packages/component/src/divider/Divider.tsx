@@ -10,7 +10,7 @@ import { View } from 'react-native';
 const Divider: React.FunctionComponent<
 	DividerProps
 > = ({
-	color = ColorTokens.Grey_600,
+	color = ColorTokens.Grey_100,
 	size = DividerSizeTokens.SM,
 	margin,
 }) => {

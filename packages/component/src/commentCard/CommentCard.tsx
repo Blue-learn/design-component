@@ -33,7 +33,7 @@ const CommentCard: React.FunctionComponent<
 	margin,
 	title,
 	time,
-	bgColor = ColorTokens.Grey_600,
+	bgColor = ColorTokens.Grey_100,
 	onPressProfile,
 	profileAction,
 	likeAction,
@@ -86,7 +86,9 @@ const CommentCard: React.FunctionComponent<
 													<Typography
 														label={user?.title}
 														numberOfLines={1}
-														type={TypographyTypeTokens.S5}
+														type={
+															TypographyTypeTokens.SUBHEADING_SM
+														}
 													/>
 												</Stack>
 											</TouchableOpacity>
@@ -94,8 +96,9 @@ const CommentCard: React.FunctionComponent<
 											{time ? (
 												<Typography
 													label={time}
-													type={TypographyTypeTokens.B6}
-													color={ColorTokens.Grey_200}
+													type={
+														TypographyTypeTokens.BODY_XS_SECONDARY
+													}
 												/>
 											) : (
 												<></>
@@ -114,7 +117,7 @@ const CommentCard: React.FunctionComponent<
 						<Space size={SizeTypeTokens.MD} />,
 						<Button
 							type={ButtonTypeTokens.SmallGhost}
-							labelColor={ColorTokens.Grey_50}
+							labelColor={ColorTokens.Grey_700}
 							icon={{
 								name:
 									likeState === LikeStateTokens.SELECTED

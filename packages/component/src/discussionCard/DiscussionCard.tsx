@@ -4,24 +4,26 @@ import {
 	AvatarTypeTokens,
 	BorderRadiusTokens,
 	ButtonTypeTokens,
+	ChipTypeTokens,
 	ColorTokens,
 	DiscussionCardProps,
+	DiscussionStateTokens,
 	DividerSizeTokens,
 	FontTransformToken,
-	GradientColorTokens,
-	DiscussionStateTokens,
+	ImageSizeTokens,
 	SizeTypeTokens,
+	Skill,
 	StackAlignItems,
+	StackFlexWrap,
 	StackJustifyContent,
 	StackType,
 	TagProps,
-	TagTypeTokens,
 	TypographyTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
 import {
-	View,
 	TouchableOpacity,
+	View,
 } from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
@@ -32,26 +34,29 @@ import Space from '../space/Space';
 import Avatar from '../avatar/Avatar';
 import Tag from '../tag/Tag';
 import Divider from '../divider/Divider';
+import Chip from '../chip/Chip';
 
-const DicussionCard: React.FunctionComponent<
+const DiscussionCard: React.FunctionComponent<
 	DiscussionCardProps & WidgetProps
 > = ({
 	userLabel,
 	state = DiscussionStateTokens.UNSEEN,
 	userAvatarURL,
+	timeStamp,
 	title,
 	subtitle,
 	clubTitle,
+	skills,
 	participantsLabel,
 	participants,
 	tags,
 	onPress,
 	ctaText,
 	action,
-	gradientColor = GradientColorTokens.D_5,
 	margin,
 	profileAction,
 	triggerAction,
+	onPressProfile,
 }) => {
 	if (!title) return <></>;
 
@@ -68,13 +73,14 @@ const DicussionCard: React.FunctionComponent<
 		return (
 			<Card
 				onPress={handleAction}
-				gradient={{
-					colors: gradientColor,
-				}}
+				bgColor={ColorTokens.Grey_50}
 				borderRadius={BorderRadiusTokens.BR2}
 				padding={{
-					vertical: SizeTypeTokens.XL,
-					horizontal: SizeTypeTokens.MD,
+					top: SizeTypeTokens.XL,
+					bottom: ctaText
+						? SizeTypeTokens.XL
+						: SizeTypeTokens.MD,
+					horizontal: SizeTypeTokens.LG,
 				}}
 				margin={margin}
 				header={{
@@ -91,9 +97,11 @@ const DicussionCard: React.FunctionComponent<
 									style={{
 										flex: 1,
 									}}
-									onPress={() =>
-										triggerAction(profileAction)
-									}
+									onPress={() => {
+										if (onPressProfile) onPressProfile();
+										if (profileAction)
+											triggerAction(profileAction);
+									}}
 								>
 									<Stack
 										type={StackType.row}
@@ -104,11 +112,21 @@ const DicussionCard: React.FunctionComponent<
 											size={AvatarSizeTokens.XS}
 										/>
 										<Space size={SizeTypeTokens.MD} />
-										<Typography
-											label={userLabel}
-											type={TypographyTypeTokens.S6}
-											numberOfLines={1}
-										/>
+										<Stack>
+											<Typography
+												label={userLabel}
+												type={
+													TypographyTypeTokens.SUBHEADING_XS
+												}
+												numberOfLines={1}
+											/>
+											<Typography
+												type={
+													TypographyTypeTokens.BODY_2XS_SECONDARY
+												}
+												label={timeStamp ? timeStamp : ''}
+											/>
+										</Stack>
 									</Stack>
 								</TouchableOpacity>
 								{_map(
@@ -116,13 +134,13 @@ const DicussionCard: React.FunctionComponent<
 									(item: TagProps, index: number) => [
 										<Tag
 											key={index}
-											{...item}
 											margin={{
 												right:
 													index !== tags?.length - 1
 														? SizeTypeTokens.SM
 														: SizeTypeTokens.NONE,
 											}}
+											{...item}
 										/>,
 									],
 								)}
@@ -137,7 +155,9 @@ const DicussionCard: React.FunctionComponent<
 							>
 								<Typography
 									label={title}
-									type={TypographyTypeTokens.H4}
+									type={
+										TypographyTypeTokens.HEADING_MD_SECONDARY
+									}
 									textTransform={
 										FontTransformToken.capitalize
 									}
@@ -158,8 +178,9 @@ const DicussionCard: React.FunctionComponent<
 										<Typography
 											label={subtitle}
 											numberOfLines={2}
-											type={TypographyTypeTokens.B6}
-											color={ColorTokens.Grey_200}
+											type={
+												TypographyTypeTokens.BODY_XS_SECONDARY
+											}
 										/>
 									</View>,
 								]
@@ -175,8 +196,43 @@ const DicussionCard: React.FunctionComponent<
 											bottom: SizeTypeTokens.NONE,
 										}}
 										label={clubTitle}
-										type={TagTypeTokens.SECONDARY}
 									/>,
+								]
+							) : (
+								<></>
+							)}
+							{skills && skills?.length > 0 ? (
+								[
+									<Space size={SizeTypeTokens.MD} />,
+									<Stack
+										type={StackType.row}
+										alignItems={StackAlignItems.center}
+										flexWrap={StackFlexWrap.wrap}
+									>
+										{_map(
+											skills?.slice(0, 5),
+											(item: Skill, index: number) => [
+												<Chip
+													key={item.skill_id}
+													label={item.skill}
+													image={{
+														uri: item?.skill_image,
+														size: ImageSizeTokens.XXXS,
+													}}
+													margin={{
+														right:
+															index !== skills?.length - 1
+																? SizeTypeTokens.MD
+																: SizeTypeTokens.NONE,
+														bottom: SizeTypeTokens.MD,
+													}}
+													type={
+														ChipTypeTokens.SMALL_UNSELECTED
+													}
+												/>,
+											],
+										)}
+									</Stack>,
 								]
 							) : (
 								<></>
@@ -185,12 +241,20 @@ const DicussionCard: React.FunctionComponent<
 					),
 				}}
 				body={{
-					children: (
+					children: ctaText ? (
 						<Divider
 							size={DividerSizeTokens.SM}
-							margin={{ vertical: SizeTypeTokens.LG }}
-							color={ColorTokens.White_20}
+							margin={{
+								top:
+									skills?.length > 0
+										? SizeTypeTokens.SM
+										: SizeTypeTokens.MD,
+								bottom: SizeTypeTokens.MD,
+							}}
+							color={ColorTokens.Grey_100}
 						/>
+					) : (
+						<></>
 					),
 				}}
 				footer={{
@@ -210,12 +274,16 @@ const DicussionCard: React.FunctionComponent<
 									<Avatar
 										size={AvatarSizeTokens.XS}
 										type={AvatarTypeTokens.MULTIPLE}
+										borderColor={ColorTokens.Grey_50}
+										borderWidth={1.5}
 										uris={participants}
 									/>
 									<Space size={SizeTypeTokens.SM} />
 									<Typography
 										label={participantsLabel}
-										type={TypographyTypeTokens.S6}
+										type={
+											TypographyTypeTokens.SUBHEADING_XS_SECONDARY
+										}
 									/>
 								</Stack>
 							) : (
@@ -232,7 +300,11 @@ const DicussionCard: React.FunctionComponent<
 								<Button
 									onPress={handleAction}
 									type={ButtonTypeTokens.SmallGhost}
-									labelColor={ColorTokens.Grey_50}
+									labelColor={
+										ctaText.includes('->')
+											? ColorTokens.Primary_500
+											: ColorTokens.Grey_700
+									}
 									label={ctaText}
 								/>
 							</View>
@@ -245,5 +317,5 @@ const DicussionCard: React.FunctionComponent<
 		);
 };
 
-export default React.memo(DicussionCard);
-export { DicussionCard };
+export default React.memo(DiscussionCard);
+export { DiscussionCard };

@@ -42,7 +42,7 @@ const MemberCard: React.FunctionComponent<
 	onPress,
 	cta,
 	padding,
-	bgColor = ColorTokens.Grey_600,
+	bgColor = ColorTokens.Grey_50,
 	borderRadius = BorderRadiusTokens.BR2,
 	action,
 	ctaAction,
@@ -106,7 +106,7 @@ const MemberCard: React.FunctionComponent<
 								>
 									<Typography
 										label={title}
-										type={TypographyTypeTokens.H4}
+										type={TypographyTypeTokens.HEADING_MD}
 										numberOfLines={1}
 									/>
 									<Space size={SizeTypeTokens.SM} />
@@ -118,7 +118,7 @@ const MemberCard: React.FunctionComponent<
 											<Icon
 												name={IconTokens.LocationPin}
 												size={IconSizeTokens.XS}
-												color={ColorTokens.Grey_200}
+												color={ColorTokens.Grey_700}
 											/>
 										) : (
 											<></>
@@ -132,8 +132,9 @@ const MemberCard: React.FunctionComponent<
 										/>
 										<Typography
 											label={location ? location : subtitle}
-											type={TypographyTypeTokens.B6}
-											color={ColorTokens.Grey_200}
+											type={
+												TypographyTypeTokens.BODY_XS_SECONDARY
+											}
 											numberOfLines={1}
 										/>
 									</Stack>
@@ -142,7 +143,7 @@ const MemberCard: React.FunctionComponent<
 						</View>
 						<Button
 							type={ButtonTypeTokens.IconFilled}
-							labelColor={ColorTokens.Grey_500}
+							labelColor={ColorTokens.Grey_50}
 							onPress={() => {
 								if (cta) {
 									cta();
@@ -167,7 +168,7 @@ const MemberCard: React.FunctionComponent<
 						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={headline}
-							type={TypographyTypeTokens.B6}
+							type={TypographyTypeTokens.BODY_XS}
 						/>
 					</Stack>
 				) : (
@@ -180,7 +181,7 @@ const MemberCard: React.FunctionComponent<
 						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={chipsTitle}
-							type={TypographyTypeTokens.H7}
+							type={TypographyTypeTokens.HEADING_2XS}
 						/>
 						<Space size={SizeTypeTokens.SM} />
 						<Stack
@@ -193,6 +194,7 @@ const MemberCard: React.FunctionComponent<
 									<Tag
 										key={index}
 										label={interestToString(item)}
+										bgColor={ColorTokens.Grey_100}
 										margin={{
 											right: SizeTypeTokens.SM,
 											bottom: SizeTypeTokens.SM,

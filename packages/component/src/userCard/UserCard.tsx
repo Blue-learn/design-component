@@ -79,14 +79,17 @@ const UserCard: React.FunctionComponent<
 										textTransform={
 											FontTransformToken.capitalize
 										}
-										type={TypographyTypeTokens.S5}
+										type={
+											TypographyTypeTokens.SUBHEADING_SM
+										}
 									/>
 								</View>
 								{title_secondary ? (
 									<Typography
 										label={title_secondary}
-										type={TypographyTypeTokens.B7}
-										color={ColorTokens.Grey_200}
+										type={
+											TypographyTypeTokens.BODY_2XS_SECONDARY
+										}
 									/>
 								) : (
 									<></>
@@ -101,21 +104,23 @@ const UserCard: React.FunctionComponent<
 									<Icon
 										name={IconTokens.LocationPin}
 										size={IconSizeTokens.XS}
-										color={ColorTokens.Grey_200}
+										color={ColorTokens.Grey_700}
 									/>
 									<Space size={SizeTypeTokens.SM} />
 									<Typography
 										label={location}
-										type={TypographyTypeTokens.B6}
-										color={ColorTokens.Grey_200}
+										type={
+											TypographyTypeTokens.BODY_XS_SECONDARY
+										}
 									/>
 								</Stack>
 							) : (
 								<Typography
 									label={subtitle}
 									numberOfLines={1}
-									type={TypographyTypeTokens.B6}
-									color={ColorTokens.Grey_200}
+									type={
+										TypographyTypeTokens.BODY_XS_SECONDARY
+									}
 								/>
 							)}
 						</View>

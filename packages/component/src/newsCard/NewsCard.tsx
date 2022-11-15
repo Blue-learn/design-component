@@ -37,7 +37,7 @@ const NewsCard: React.FunctionComponent<
 	margin = {
 		bottom: SizeTypeTokens.XL,
 	},
-	bgColor = ColorTokens.Grey_600,
+	bgColor = ColorTokens.Grey_50,
 	borderRadius = BorderRadiusTokens.BR1,
 	imageURL,
 	title,
@@ -93,7 +93,7 @@ const NewsCard: React.FunctionComponent<
 								<Space size={SizeTypeTokens.LG} />,
 								<Typography
 									label={title}
-									type={TypographyTypeTokens.H5}
+									type={TypographyTypeTokens.HEADING_SM}
 									numberOfLines={2}
 								/>,
 								<Space
@@ -106,8 +106,9 @@ const NewsCard: React.FunctionComponent<
 								subtitle ? (
 									<Typography
 										label={subtitle}
-										type={TypographyTypeTokens.B6}
-										color={ColorTokens.Grey_200}
+										type={
+											TypographyTypeTokens.BODY_XS_SECONDARY
+										}
 										numberOfLines={2}
 									/>
 								) : (
@@ -133,19 +134,20 @@ const NewsCard: React.FunctionComponent<
 										<Space size={SizeTypeTokens.SM} />
 										<Typography
 											label={source?.title}
-											type={TypographyTypeTokens.B7}
+											type={TypographyTypeTokens.BODY_2XS}
 										/>
 										<Space size={SizeTypeTokens.SM} />
 										<Icon
 											name={IconTokens.Dot}
 											size={IconSizeTokens.XXS}
-											color={ColorTokens.Grey_300}
+											color={ColorTokens.Grey_500}
 										/>
 										<Space size={SizeTypeTokens.SM} />
 										<Typography
 											label={timeStamp}
-											type={TypographyTypeTokens.B7}
-											color={ColorTokens.Grey_200}
+											type={
+												TypographyTypeTokens.BODY_2XS_SECONDARY
+											}
 										/>
 									</Stack>
 								) : (
@@ -155,7 +157,6 @@ const NewsCard: React.FunctionComponent<
 								<Divider
 									size={DividerSizeTokens.SM}
 									margin={{ vertical: SizeTypeTokens.SM }}
-									color={ColorTokens.Grey_550}
 								/>,
 							],
 						}}

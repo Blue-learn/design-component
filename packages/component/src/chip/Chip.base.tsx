@@ -1,5 +1,6 @@
 import {
 	ChipBaseProps,
+	ChipHighlightTokens,
 	ColorTokens,
 	FontFamilyTokens,
 	IconAlignmentTokens,
@@ -9,8 +10,8 @@ import {
 } from '@blue-learn/schema';
 import React, { memo, useState } from 'react';
 import {
-	Pressable,
 	Platform,
+	Pressable,
 	View,
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
@@ -35,6 +36,7 @@ const Chip: React.FC<
 	action,
 	triggerAction,
 	factor,
+	highlight,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -110,9 +112,15 @@ const Chip: React.FC<
 					{
 						flexDirection: 'row',
 						alignItems: 'center',
-						borderColor: borderColorValue,
+						borderColor:
+							theme.colors[ColorTokens.Primary_500],
+						backgroundColor: borderColorValue,
 						borderRadius: borderRadiusValue,
-						borderWidth: 1,
+						borderWidth:
+							highlight ===
+							ChipHighlightTokens.HIGHLIGHTED
+								? 1
+								: 0,
 						paddingTop: paddingTop,
 						paddingBottom: paddingBottom,
 						paddingLeft: paddingLeft,
@@ -122,7 +130,7 @@ const Chip: React.FC<
 				]}
 				onPress={handleAction}
 			>
-				{factor > 0 && (
+				{factor > 0 && factor <= 1 && (
 					<View
 						style={{
 							borderRadius:
@@ -131,14 +139,14 @@ const Chip: React.FC<
 							borderBottomLeftRadius: borderRadiusValue,
 							position: 'absolute',
 							backgroundColor:
-								theme.colors[ColorTokens.Blue_800],
+								theme.colors[ColorTokens.Primary_100],
 							width:
 								factor >= 1
-									? layout.width - 3
+									? layout.width
 									: factor > 0.19
-									? factor * layout.width - 2
+									? factor * layout.width
 									: 0.19 * layout.width,
-							height: layout.height - 2,
+							height: layout.height,
 							top: 0,
 							left: 0,
 						}}
@@ -163,7 +171,13 @@ const Chip: React.FC<
 								{...image}
 							/>,
 							label && (
-								<Space size={SizeTypeTokens.MD} />
+								<Space
+									size={
+										image?.size === ImageSizeTokens.XXXS
+											? SizeTypeTokens.SM
+											: SizeTypeTokens.MD
+									}
+								/>
 							),
 					  ]
 					: null}
@@ -172,7 +186,7 @@ const Chip: React.FC<
 						label={label}
 						fontSize={fontSize}
 						fontFamily={
-							FontFamilyTokens.manropeSemiBold
+							FontFamilyTokens.ManropeSemiBold
 						}
 						color={labelColor}
 					/>

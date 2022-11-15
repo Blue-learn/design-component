@@ -18,7 +18,7 @@ export const args: AvatarProps = {
 	type: AvatarTypeTokens.MULTIPLE,
 	size: AvatarSizeTokens.LG,
 	borderWidth: 3,
-	borderColor: ColorTokens.Grey_100,
+	borderColor: ColorTokens.Grey_50,
 	borderRadius: BorderRadiusTokens.BR4,
 };
 

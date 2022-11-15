@@ -30,6 +30,7 @@ export interface ImageProps {
 }
 
 export enum ImageSizeTokens {
+	XXXS = 'XXXS',
 	XXS = 'XXS',
 	XS = 'XS',
 	SM = 'SM',

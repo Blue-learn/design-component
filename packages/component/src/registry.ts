@@ -29,8 +29,8 @@ import {
 	FeedCard,
 	CommentCard,
 	Grid,
+	InfoCard,
 } from './index';
-import Work from './icon/icon-list/Work';
 
 const registry: WidgetRegistry = {
 	[WIDGET.TEXT]: Typography,
@@ -59,6 +59,7 @@ const registry: WidgetRegistry = {
 	[WIDGET.FEEDCARD]: FeedCard,
 	[WIDGET.COMMENTCARD]: CommentCard,
 	[WIDGET.GRID]: Grid,
+	[WIDGET.INFOCARD]: InfoCard,
 };
 
 export { registry as WidgetRegistry };

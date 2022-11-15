@@ -285,7 +285,7 @@ const SenderChatCardBase: React.FunctionComponent<
 													label={payload.previewData?.title}
 													color={labelColor}
 													fontFamily={
-														FontFamilyTokens.manropeSemiBold
+														FontFamilyTokens.ManropeSemiBold
 													}
 													fontSize={FontSizeTokens.XS}
 												/>

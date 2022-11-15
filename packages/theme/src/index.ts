@@ -5,6 +5,7 @@ import {
 } from './config';
 import { darkMobileTheme } from './dark-mobile';
 import { lightMobileTheme } from './light-mobile';
+
 export * from './config';
 
 const themeTypes: Theme = {
@@ -19,7 +20,7 @@ const ThemeProvider = () => {
 		if (!_initialized) {
 			_theme =
 				themeTypes[type] ||
-				themeTypes[THEMES.DARK_MOBILE];
+				themeTypes[THEMES.LIGHT_MOBILE];
 			_initialized = true;
 		}
 	};
@@ -27,9 +28,8 @@ const ThemeProvider = () => {
 	const getTheme = (): ThemeTokens => {
 		if (_initialized) {
 			return _theme;
-		}
-		console.warn('Theme not initialized');
-		return themeTypes[THEMES.DARK_MOBILE];
+		} else console.warn('Theme not initialized');
+		return themeTypes[THEMES.LIGHT_MOBILE];
 	};
 
 	return {

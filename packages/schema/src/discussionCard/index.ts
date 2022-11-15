@@ -8,6 +8,12 @@ export enum DiscussionStateTokens {
 	UNSEEN = 'UNSEEN',
 }
 
+export type Skill = {
+	skill: string;
+	skill_id: number;
+	skill_image: string;
+};
+
 export type DiscussionCardProps = {
 	gradientColor?: GradientColorTokens;
 	margin?: PaddingProps;
@@ -16,6 +22,7 @@ export type DiscussionCardProps = {
 	 */
 	userLabel: string;
 	userAvatarURL: string;
+	timeStamp?: string;
 	tags?: TagProps[];
 	/**
 	 * body
@@ -23,6 +30,7 @@ export type DiscussionCardProps = {
 	title: string;
 	subtitle?: string;
 	clubTitle?: string;
+	skills?: Skill[];
 	/**
 	 * Footer
 	 */
@@ -31,5 +39,6 @@ export type DiscussionCardProps = {
 	participantsLabel?: string;
 	ctaText?: string;
 	profileAction?: Action;
+	onPressProfile?: Function;
 	onPress?: Function;
 };

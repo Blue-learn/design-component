@@ -13,6 +13,11 @@ export enum ChipTypeTokens {
 	MEDIUM_UNSELECTED = 'MEDIUM_UNSELECTED',
 }
 
+export enum ChipHighlightTokens {
+	HIGHLIGHTED = 'HIGHLIGHTED',
+	NOT_HIGHLIGHTED = 'NOT_HIGHLIGHTED',
+}
+
 export type ChipProps = {
 	type?: ChipTypeTokens;
 	label?: String;
@@ -21,6 +26,7 @@ export type ChipProps = {
 	icon?: IconProps;
 	onPress?: Function;
 	factor?: number;
+	highlight?: ChipHighlightTokens;
 };
 
 export type ChipBaseProps = {
@@ -41,6 +47,7 @@ export type ChipBaseProps = {
 	padding?: PaddingProps;
 	margin?: PaddingProps;
 	factor?: number;
+	highlight?: ChipHighlightTokens;
 };
 
 export type ChipThemeProps = {
