@@ -25,5 +25,6 @@ export * as FeedCard from './feedCard';
 export * as CommentCard from './commentCard';
 export * as Grid from './grid';
 export * as InfoCard from './infoCard';
+export * as ApplicantCard from './applicantCard';
 export * from './mock';
 export * from './registry';

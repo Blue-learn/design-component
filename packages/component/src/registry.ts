@@ -30,6 +30,7 @@ import {
 	CommentCard,
 	Grid,
 	InfoCard,
+	ApplicantCard,
 } from './index';
 
 const registry: WidgetRegistry = {
@@ -60,6 +61,7 @@ const registry: WidgetRegistry = {
 	[WIDGET.COMMENTCARD]: CommentCard,
 	[WIDGET.GRID]: Grid,
 	[WIDGET.INFOCARD]: InfoCard,
+	[WIDGET.APPLICANTCARD]: ApplicantCard,
 };
 
 export { registry as WidgetRegistry };

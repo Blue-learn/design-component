@@ -77,7 +77,7 @@ const ApplicantCard: React.FunctionComponent<
 					<View
 						style={{
 							borderLeftWidth:
-								state === ApplicationStateTokens.SEEN
+								state === ApplicationStateTokens.UNSEEN
 									? 4
 									: 0,
 							borderColor:
@@ -86,7 +86,7 @@ const ApplicantCard: React.FunctionComponent<
 								theme.borderRadius[borderRadius],
 							paddingVertical: 12,
 							paddingLeft:
-								state === ApplicationStateTokens.SEEN
+								state === ApplicationStateTokens.UNSEEN
 									? 8
 									: 12,
 							paddingRight: 12,
@@ -138,36 +138,42 @@ const ApplicantCard: React.FunctionComponent<
 													}
 												}}
 											>
-												<View
-													style={{
-														position: 'absolute',
-														zIndex: 5,
-														right: -2,
-														top: -2,
-														width: 18,
-														height: 18,
-														borderRadius: 9,
-														borderWidth: 2,
-														borderColor:
-															theme.colors[ColorTokens.Grey_50],
-														justifyContent: 'center',
-														backgroundColor:
-															theme.colors[
-																ColorTokens.Error_100
-															],
-													}}
-												>
-													<Typography
-														label={
-															unreadCount < 10
-																? unreadCount.toString()
-																: '9+'
-														}
-														textAlign={TextAlignTokens.center}
-														type={TypographyTypeTokens.BODY_2XS}
-														color={ColorTokens.Grey_50}
-													/>
-												</View>
+												{unreadCount > 0 ? (
+													<View
+														style={{
+															position: 'absolute',
+															zIndex: 5,
+															right: -2,
+															top: -2,
+															width: 18,
+															height: 18,
+															borderRadius: 9,
+															borderWidth: 2,
+															borderColor:
+																theme.colors[ColorTokens.Grey_50],
+															justifyContent: 'center',
+															backgroundColor:
+																theme.colors[
+																	ColorTokens.Error_100
+																],
+														}}
+													>
+														<Typography
+															label={
+																unreadCount < 10
+																	? unreadCount.toString()
+																	: '9+'
+															}
+															textAlign={TextAlignTokens.center}
+															type={
+																TypographyTypeTokens.BODY_2XS
+															}
+															color={ColorTokens.Grey_50}
+														/>
+													</View>
+												) : (
+													<></>
+												)}
 												<Button
 													type={ButtonTypeTokens.IconGhost}
 													labelColor={ColorTokens.Grey_800}
