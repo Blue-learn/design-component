@@ -41,6 +41,7 @@ const DiscussionCard: React.FunctionComponent<
 > = ({
 	userLabel,
 	state = DiscussionStateTokens.UNSEEN,
+	bgColor = ColorTokens.Grey_50,
 	userAvatarURL,
 	timeStamp,
 	title,
@@ -73,7 +74,7 @@ const DiscussionCard: React.FunctionComponent<
 		return (
 			<Card
 				onPress={handleAction}
-				bgColor={ColorTokens.Grey_50}
+				bgColor={bgColor}
 				borderRadius={BorderRadiusTokens.BR2}
 				padding={{
 					top: SizeTypeTokens.XL,

@@ -1,4 +1,7 @@
-import { GradientColorTokens } from '../colors';
+import {
+	ColorTokens,
+	GradientColorTokens,
+} from '../colors';
 import { PaddingProps } from '../padding';
 import { TagProps } from '../tag';
 import { Action } from '../types';
@@ -15,6 +18,7 @@ export type Skill = {
 };
 
 export type DiscussionCardProps = {
+	bgColor?: ColorTokens;
 	gradientColor?: GradientColorTokens;
 	margin?: PaddingProps;
 	/**

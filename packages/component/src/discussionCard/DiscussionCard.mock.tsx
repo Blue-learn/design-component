@@ -75,6 +75,10 @@ export const argTypes = {
 			...Object.values(GradientColorTokens),
 		],
 	},
+	bgColor: {
+		control: 'select',
+		options: [...Object.values(ColorTokens)],
+	},
 	state: {
 		control: 'select',
 		options: [
