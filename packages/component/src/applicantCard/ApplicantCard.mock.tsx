@@ -13,6 +13,9 @@ export const args: ApplicantCardProps = {
 		'https://reactnative.dev/img/tiny_logo.png',
 	unreadCount: 2,
 	state: ApplicationStateTokens.SEEN,
+	chatCTA: () => {
+		console.log('Chat CTA');
+	},
 };
 
 export const argTypes = {

@@ -64,7 +64,6 @@ const ApplicantCard: React.FunctionComponent<
 		}),
 		[projectImage],
 	);
-
 	return (
 		<Card
 			bgColor={bgColor}
@@ -131,13 +130,7 @@ const ApplicantCard: React.FunctionComponent<
 												type={TypographyTypeTokens.HEADING_MD}
 												numberOfLines={1}
 											/>
-											<Pressable
-												onPress={() => {
-													if (chatCTA) {
-														chatCTA();
-													}
-												}}
-											>
+											<Pressable onPress={chatCTA}>
 												{unreadCount > 0 ? (
 													<View
 														style={{
@@ -181,6 +174,7 @@ const ApplicantCard: React.FunctionComponent<
 														name: IconTokens.Chat,
 														size: IconSizeTokens.XL,
 													}}
+													onPress={chatCTA}
 												/>
 											</Pressable>
 										</Stack>
