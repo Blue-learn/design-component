@@ -12,7 +12,7 @@ const ApplicantCardShimmer: React.FunctionComponent =
 				height={160}
 				width={'100%'}
 				borderRadius={BorderRadiusTokens.BR1}
-				backgroundColor={ColorTokens.Grey_600}
+				backgroundColor={ColorTokens.Grey_200}
 			/>
 		);
 	};

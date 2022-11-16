@@ -12,7 +12,7 @@ const FeedCardShimmer: React.FunctionComponent =
 				height={250}
 				width={'100%'}
 				borderRadius={BorderRadiusTokens.BR1}
-				backgroundColor={ColorTokens.Grey_600}
+				backgroundColor={ColorTokens.Grey_200}
 			/>
 		);
 	};
