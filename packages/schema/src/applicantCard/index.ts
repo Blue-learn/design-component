@@ -22,4 +22,6 @@ export type ApplicantCardProps = {
 	projectCTA?: Function;
 	projectTitle?: string;
 	projectImage?: string;
+	status?: string;
+	applicationUpdateStatus?: string;
 };

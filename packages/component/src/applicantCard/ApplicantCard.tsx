@@ -28,6 +28,7 @@ import Avatar from '../avatar/Avatar';
 import Space from '../space/Space';
 import Button from '../button/Button';
 import ThemeProvider from '@blue-learn/theme';
+import { Icon } from '../icon/Icon';
 
 const ApplicantCard: React.FunctionComponent<
 	ApplicantCardProps & WidgetProps
@@ -51,6 +52,8 @@ const ApplicantCard: React.FunctionComponent<
 	},
 	bgColor = ColorTokens.Grey_50,
 	borderRadius = BorderRadiusTokens.BR2,
+	status,
+	applicationUpdateStatus,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	if (!title) return <></>;
@@ -219,6 +222,54 @@ const ApplicantCard: React.FunctionComponent<
 								/>
 							</View>
 						</Pressable>
+						<Space size={SizeTypeTokens.XL} />
+						{status || applicationUpdateStatus ? (
+							<View
+								style={{
+									alignSelf: 'flex-end',
+									flexDirection: 'row',
+									alignItems: 'center',
+								}}
+							>
+								{status ? (
+									<Typography
+										type={
+											TypographyTypeTokens.SUBHEADING_2XS
+										}
+										label={status}
+										color={
+											status?.toLowerCase()?.includes('good')
+												? ColorTokens.Accent_900
+												: status
+														?.toLowerCase()
+														?.includes('reject')
+												? ColorTokens.Error_200
+												: ColorTokens.Grey_600
+										}
+									/>
+								) : (
+									<></>
+								)}
+								<Space size={SizeTypeTokens.SM} />
+								{status ? (
+									<Icon
+										name={IconTokens.Dot}
+										size={IconSizeTokens.XXS}
+										color={ColorTokens.Grey_600}
+									/>
+								) : (
+									<></>
+								)}
+								<Space size={SizeTypeTokens.SM} />
+								<Typography
+									type={TypographyTypeTokens.BODY_2XS}
+									label={applicationUpdateStatus}
+									color={ColorTokens.Grey_600}
+								/>
+							</View>
+						) : (
+							<></>
+						)}
 					</View>
 				),
 			}}
