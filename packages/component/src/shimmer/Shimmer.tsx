@@ -43,9 +43,9 @@ const Shimmer: React.FunctionComponent<
 				...props,
 				borderRadius:
 					theme.borderRadius[props.borderRadius] || 12,
-				backgroundColor:
-					theme.colors[props.backgroundColor] ||
-					'#E3E3E3',
+				backgroundColor: props?.backgroundColor
+					? theme.colors[props.backgroundColor]
+					: '#E3E3E3',
 				opacity: fadeAnim,
 			}}
 		/>

@@ -3,16 +3,17 @@ import {
 	WIDGET,
 } from '@blue-learn/schema';
 import React from 'react';
-import DicussionCard from './DiscussionCard';
+import DiscussionCard from './DiscussionCard';
 import * as Mock from './DiscussionCard.mock';
+import DiscussionCardShimmer from './DiscussionCard.shimmer';
 
 export default {
 	title: WIDGET.DISCUSSIONCARD,
-	component: DicussionCard,
+	component: DiscussionCard,
 };
 
 const Template = (args: DiscussionCardProps) => (
-	<DicussionCard {...args} />
+	<DiscussionCard {...args} />
 );
 
 export const Component = Template.bind({});
@@ -24,3 +25,9 @@ Component.args = {
 Component.argTypes = {
 	...Mock.argTypes,
 };
+
+const ShimmerTemplate = () => (
+	<DiscussionCardShimmer />
+);
+
+export const Shimmer = ShimmerTemplate.bind({});
