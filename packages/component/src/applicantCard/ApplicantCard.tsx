@@ -222,7 +222,13 @@ const ApplicantCard: React.FunctionComponent<
 								/>
 							</View>
 						</Pressable>
-						<Space size={SizeTypeTokens.XL} />
+						<Space
+							size={
+								status || applicationUpdateStatus
+									? SizeTypeTokens.XL
+									: SizeTypeTokens.NONE
+							}
+						/>
 						{status || applicationUpdateStatus ? (
 							<View
 								style={{
