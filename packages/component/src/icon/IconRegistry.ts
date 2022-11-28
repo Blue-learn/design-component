@@ -76,6 +76,12 @@ import Work from './icon-list/Work';
 import EmptyCircle from './icon-list/EmptyCircle';
 import Sort from './icon-list/Sort';
 import Filter from './icon-list/Filter';
+import GroupFilled from './icon-list/GroupFilled';
+import GroupOutline from './icon-list/GroupOutline';
+import HomeOutline from './icon-list/HomeOutline';
+import HomeFilled from './icon-list/HomeFilled';
+import WorkFilled from './icon-list/WorkFilled';
+import NotificationFilled from './icon-list/NotificationFilled';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -152,4 +158,11 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.PositiveVote]: PositiveVote,
 	[IconTokens.Sort]: Sort,
 	[IconTokens.Filter]: Filter,
+	[IconTokens.GroupOutline]: GroupOutline,
+	[IconTokens.GroupFilled]: GroupFilled,
+	[IconTokens.HomeFilled]: HomeFilled,
+	[IconTokens.HomeOutline]: HomeOutline,
+	[IconTokens.WorkFilled]: WorkFilled,
+	[IconTokens.NotificationFilled]:
+		NotificationFilled,
 };

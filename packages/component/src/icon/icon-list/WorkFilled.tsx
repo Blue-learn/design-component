@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { Path } from 'react-native-svg';
 
-function Calendar(props) {
+function WorkFilled(props) {
 	return (
 		<Svg
 			width={props.size}
@@ -12,15 +12,15 @@ function Calendar(props) {
 			{...props}
 		>
 			<Path
-				d='M8 2v3M16 2v3M3.5 9.09h17M21 8.5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z'
+				d='M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z'
+				fill={props.color}
 				stroke={props.color}
 				strokeWidth={2}
-				strokeMiterlimit={10}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
 			<Path
-				d='M15.895 14.5h.009M12.196 14.5h.009M8.495 14.5h.008'
+				d='M16 7V4c0-.118-.21-.786-.586-.87A6.892 6.892 0 0014 3h-4c-.53 0-1.04.047-1.414.13C8.21 3.214 8 3.882 8 4v3'
 				stroke={props.color}
 				strokeWidth={2}
 				strokeLinecap='round'
@@ -30,4 +30,4 @@ function Calendar(props) {
 	);
 }
 
-export default Calendar;
+export default WorkFilled;
