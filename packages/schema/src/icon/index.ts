@@ -48,6 +48,7 @@ export enum IconTokens {
 	InfoStatic = 'info-static',
 	Lighting = 'lighting',
 	Notification = 'notification',
+	NotificationFilled = 'notification-filled',
 	Download = 'download',
 	Mic = 'mic',
 	PDF = 'pdf',
@@ -91,9 +92,14 @@ export enum IconTokens {
 	Online = 'online',
 	EmptyCircle = 'EmptyCircle',
 	Work = 'work',
+	WorkFilled = 'work-filled',
 	PositiveVote = 'PositiveVote',
 	Filter = 'filter',
 	Sort = 'sort',
+	GroupOutline = 'group-outline',
+	GroupFilled = 'group-filled',
+	HomeOutline = 'home-outline',
+	HomeFilled = 'home-filled',
 }
 
 export enum IconSizeTokens {

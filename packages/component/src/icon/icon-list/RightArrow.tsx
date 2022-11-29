@@ -1,22 +1,24 @@
-import * as React from "react"
-import Svg, { Path } from "react-native-svg"
+import * as React from 'react';
+import Svg, { Path, G } from 'react-native-svg';
 
 function RightArrow(props) {
-    return (
-        <Svg
-            width={props.size}
-            height={props.size}
-            viewBox="0 0 10 9"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            {...props}
-        >
-            <Path
-                d="M.917 3.917h6.918L5.718 1.373a.584.584 0 01.898-.746l2.917 3.5c.02.027.037.057.052.087 0 .03 0 .047.04.076.027.067.041.138.042.21a.583.583 0 01-.041.21c0 .03 0 .047-.04.076a.694.694 0 01-.053.087l-2.917 3.5a.583.583 0 01-.898-.746l2.117-2.544H.917a.583.583 0 010-1.166z"
-                fill={props.color}
-            />
-        </Svg>
-    )
+	return (
+		<Svg
+			width={props.size}
+			height={props.size}
+			viewBox='0 0 24 24'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+			{...props}
+		>
+			<G clipPath='url(#clip0_361_4990)'>
+				<Path
+					d='M5 11h11.86l-3.63-4.36a1.001 1.001 0 011.54-1.28l5 6c.034.048.064.098.09.15 0 .05 0 .08.07.13A1 1 0 0120 12a1 1 0 01-.07.36c0 .05 0 .08-.07.13a1.198 1.198 0 01-.09.15l-5 6a1 1 0 01-1.41.13.997.997 0 01-.13-1.41L16.86 13H5a1 1 0 010-2z'
+					fill={props.color}
+				/>
+			</G>
+		</Svg>
+	);
 }
 
-export default RightArrow
+export default RightArrow;
