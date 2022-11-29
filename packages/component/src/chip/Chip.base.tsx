@@ -8,7 +8,7 @@ import {
 	SizeTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
-import React, { memo, useState } from 'react';
+import React, {memo, useState} from 'react';
 import {
 	Platform,
 	Pressable,
@@ -18,26 +18,24 @@ import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
-import { Image } from '../image/Image';
+import {Image} from '../image/Image';
 
-const Chip: React.FC<
-	ChipBaseProps & WidgetProps
-> = ({
-	label,
-	borderColor,
-	labelColor,
-	fontSize,
-	borderRadius,
-	icon,
-	image,
-	padding,
-	margin,
-	onPress,
-	action,
-	triggerAction,
-	factor,
-	highlight,
-}) => {
+const Chip: React.FC<ChipBaseProps & WidgetProps> = ({
+	                                                     label,
+	                                                     borderColor,
+	                                                     labelColor,
+	                                                     fontSize,
+	                                                     borderRadius,
+	                                                     icon,
+	                                                     image,
+	                                                     padding,
+	                                                     margin,
+	                                                     onPress,
+	                                                     action,
+	                                                     triggerAction,
+	                                                     factor,
+	                                                     highlight,
+                                                     }) => {
 	const theme = ThemeProvider.getTheme();
 
 	const [layout, setLayout] = useState<{
@@ -59,18 +57,18 @@ const Chip: React.FC<
 
 	const paddingBottom =
 		theme.space[
-			padding?.vertical || padding?.bottom
-		];
+		padding?.vertical || padding?.bottom
+			];
 
 	const paddingLeft =
 		theme.space[
-			padding?.horizontal || padding?.left
-		];
+		padding?.horizontal || padding?.left
+			];
 
 	const paddingRight =
 		theme.space[
-			padding?.horizontal || padding?.right
-		];
+		padding?.horizontal || padding?.right
+			];
 
 	const marginRight = theme.space[margin?.right];
 	const marginBottom = theme.space[margin?.bottom];
@@ -78,23 +76,23 @@ const Chip: React.FC<
 	const handleAction = () => {
 		onPress && onPress();
 		action &&
-			triggerAction &&
-			triggerAction(action);
+		triggerAction &&
+		triggerAction(action);
 	};
 
 	const widthProps = React.useMemo(
 		() =>
 			Platform.OS === 'web'
 				? {
-						width: 'fit-content',
-						marginRight,
-						marginBottom,
-				  }
+					width: 'fit-content',
+					marginRight,
+					marginBottom,
+				}
 				: {
-						alignSelf: 'flex-start',
-						marginRight,
-						marginBottom,
-				  },
+					alignSelf: 'flex-start',
+					marginRight,
+					marginBottom,
+				},
 		[],
 	);
 
@@ -144,8 +142,8 @@ const Chip: React.FC<
 								factor >= 1
 									? layout.width
 									: factor > 0.19
-									? factor * layout.width
-									: 0.19 * layout.width,
+										? factor * layout.width
+										: 0.19 * layout.width,
 							height: layout.height,
 							top: 0,
 							left: 0,
@@ -160,33 +158,33 @@ const Chip: React.FC<
 								color={icon?.color || labelColor}
 							/>
 							{label && (
-								<Space size={SizeTypeTokens.SM} />
+								<Space size={SizeTypeTokens.SM}/>
 							)}
 						</>
 					)}
 				{image && image?.uri
 					? [
-							<Image
-								size={image?.size || ImageSizeTokens.XXS}
-								{...image}
-							/>,
-							label && (
-								<Space
-									size={
-										image?.size === ImageSizeTokens.XXXS
-											? SizeTypeTokens.SM
-											: SizeTypeTokens.MD
-									}
-								/>
-							),
-					  ]
+						<Image
+							size={image?.size || ImageSizeTokens.XXS}
+							{...image}
+						/>,
+						label && (
+							<Space
+								size={
+									image?.size === ImageSizeTokens.XXXS
+										? SizeTypeTokens.SM
+										: SizeTypeTokens.MD
+								}
+							/>
+						),
+					]
 					: null}
-				<View style={{ zIndex: 2 }}>
+				<View style={{zIndex: 2}}>
 					<Typography
 						label={label}
 						fontSize={fontSize}
 						fontFamily={
-							FontFamilyTokens.ManropeSemiBold
+							FontFamilyTokens.InterSemiBold
 						}
 						color={labelColor}
 					/>
@@ -196,7 +194,7 @@ const Chip: React.FC<
 					icon?.name && (
 						<>
 							{label && (
-								<Space size={SizeTypeTokens.SM} />
+								<Space size={SizeTypeTokens.SM}/>
 							)}
 							<Icon
 								{...icon}
@@ -209,4 +207,4 @@ const Chip: React.FC<
 };
 
 export default memo(Chip);
-export { Chip };
+export {Chip};

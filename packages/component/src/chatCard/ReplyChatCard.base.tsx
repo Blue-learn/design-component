@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import {
 	ColorTokens,
 	FontSizeTokens,
@@ -14,9 +14,9 @@ import {
 	StackJustifyContent,
 	StackAlignItems,
 } from '@blue-learn/schema';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
-import { Typography } from '../typography/Typography';
+import {Typography} from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Stack from '../stack/Stack';
@@ -25,18 +25,16 @@ import Image from '../image/Image';
 /**
  * Raw Component with Derived props + Theme
  */
-const ReplyChatCardBase: React.FunctionComponent<
-	ChatCardBaseProps
-> = ({
-	label = 'Are bro how was the video? Hope you had fun watching it. It was wildd',
-	bgColor,
-	labelColor,
-	userLabelColor,
-	borderRadius,
-	padding,
-	nameText = 'lorem ipsum',
-	file,
-}) => {
+const ReplyChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
+	                                                                       label = 'Are bro how was the video? Hope you had fun watching it. It was wildd',
+	                                                                       bgColor,
+	                                                                       labelColor,
+	                                                                       userLabelColor,
+	                                                                       borderRadius,
+	                                                                       padding,
+	                                                                       nameText = 'lorem ipsum',
+	                                                                       file,
+                                                                       }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
@@ -90,7 +88,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={SizeTypeTokens.SM} />
+						<Space size={SizeTypeTokens.SM}/>
 						<Typography
 							label={file.file_type || label}
 							color={labelColor}
@@ -113,7 +111,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={SizeTypeTokens.SM} />
+						<Space size={SizeTypeTokens.SM}/>
 						<Typography
 							label={file.file_type || label}
 							color={labelColor}
@@ -136,7 +134,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={SizeTypeTokens.SM} />
+						<Space size={SizeTypeTokens.SM}/>
 						<Typography
 							label={'Voice Message'}
 							color={labelColor}
@@ -159,7 +157,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 							color={ColorTokens.Grey_400}
 							size={IconSizeTokens.XXS}
 						/>
-						<Space size={SizeTypeTokens.SM} />
+						<Space size={SizeTypeTokens.SM}/>
 						<Typography
 							label={file.file_name}
 							color={labelColor}
@@ -203,7 +201,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 					<Typography
 						label={nameText}
 						fontFamily={
-							FontFamilyTokens.ManropeSemiBold
+							FontFamilyTokens.InterSemiBold
 						}
 						fontSize={FontSizeTokens.XS}
 						color={userLabelColor}
@@ -213,7 +211,7 @@ const ReplyChatCardBase: React.FunctionComponent<
 						ellipsizeMode={EllipsizeModeTokens.tail}
 						numberOfLines={1}
 					/>
-					<Space size={SizeTypeTokens.SM} />
+					<Space size={SizeTypeTokens.SM}/>
 					{label ? (
 						<Typography
 							label={label}
@@ -232,4 +230,4 @@ const ReplyChatCardBase: React.FunctionComponent<
 	);
 };
 export default memo(ReplyChatCardBase);
-export { ReplyChatCardBase };
+export {ReplyChatCardBase};

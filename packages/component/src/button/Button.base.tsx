@@ -16,7 +16,7 @@ import {
 	IconTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import {
 	ActivityIndicator,
 	Pressable,
@@ -26,37 +26,35 @@ import {
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
-import { Component as Stack } from '../stack';
+import {Component as Stack} from '../stack';
 
 /**
  * Raw Component with Derived props + Theme
  */
-const ButtonBase: React.FunctionComponent<
-	ButtonBaseProps & WidgetProps
-> = ({
-	onPress,
-	label,
-	loading = false,
-	bgColor = ColorTokens.Blue_600,
-	labelColor = ColorTokens.Grey_500,
-	borderRadius = BorderRadiusTokens.BR4,
-	paddingVertical = SizeTypeTokens.LG,
-	shadow,
-	borderColor,
-	fontSize,
-	iconAlignment,
-	iconName,
-	width = ButtonWidthTypeToken.CONTENT,
-	icon,
-	paddingHorizontal = SizeTypeTokens.XXXXL,
-	triggerAction,
-	action,
-	stack = {
-		type: StackType.row,
-		justifyContent: StackJustifyContent.center,
-		alignItems: StackAlignItems.center,
-	},
-}) => {
+const ButtonBase: React.FunctionComponent<ButtonBaseProps & WidgetProps> = ({
+	                                                                            onPress,
+	                                                                            label,
+	                                                                            loading = false,
+	                                                                            bgColor = ColorTokens.Blue_600,
+	                                                                            labelColor = ColorTokens.Grey_500,
+	                                                                            borderRadius = BorderRadiusTokens.BR4,
+	                                                                            paddingVertical = SizeTypeTokens.LG,
+	                                                                            shadow,
+	                                                                            borderColor,
+	                                                                            fontSize,
+	                                                                            iconAlignment,
+	                                                                            iconName,
+	                                                                            width = ButtonWidthTypeToken.CONTENT,
+	                                                                            icon,
+	                                                                            paddingHorizontal = SizeTypeTokens.XXXXL,
+	                                                                            triggerAction,
+	                                                                            action,
+	                                                                            stack = {
+		                                                                            type: StackType.row,
+		                                                                            justifyContent: StackJustifyContent.center,
+		                                                                            alignItems: StackAlignItems.center,
+	                                                                            },
+                                                                            }) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
@@ -122,25 +120,25 @@ const ButtonBase: React.FunctionComponent<
 		() =>
 			Platform.OS === 'web'
 				? {
-						width:
-							width === ButtonWidthTypeToken.CONTENT
-								? 'fit-content'
-								: '100%',
-				  }
+					width:
+						width === ButtonWidthTypeToken.CONTENT
+							? 'fit-content'
+							: '100%',
+				}
 				: {
-						alignSelf:
-							width === ButtonWidthTypeToken.CONTENT
-								? 'flex-start'
-								: 'stretch',
-				  },
+					alignSelf:
+						width === ButtonWidthTypeToken.CONTENT
+							? 'flex-start'
+							: 'stretch',
+				},
 		[width],
 	);
 
 	const handleAction = () => {
 		onPress && onPress();
 		action &&
-			triggerAction &&
-			triggerAction(action);
+		triggerAction &&
+		triggerAction(action);
 	};
 	const _renderIcon = React.useMemo(
 		() =>
@@ -163,18 +161,18 @@ const ButtonBase: React.FunctionComponent<
 		>
 			<Stack {...stack}>
 				{(iconAlignment === 'left' ||
-					iconDetails?.align ===
+						iconDetails?.align ===
 						IconAlignmentTokens.left) &&
 					_renderIcon}
 				{(iconAlignment === 'left' ||
-					iconDetails?.align ===
+						iconDetails?.align ===
 						IconAlignmentTokens.left) &&
-					label && <Space size={SizeTypeTokens.MD} />}
+					label && <Space size={SizeTypeTokens.MD}/>}
 				<View
 					style={
 						(icon?.name || iconName) ===
 						IconTokens.Google
-							? { flex: 1 }
+							? {flex: 1}
 							: {}
 					}
 				>
@@ -184,25 +182,25 @@ const ButtonBase: React.FunctionComponent<
 						fontSize={fontSize}
 						textAlign={TextAlignTokens.center}
 						fontFamily={
-							FontFamilyTokens.ManropeSemiBold
+							FontFamilyTokens.InterSemiBold
 						}
 					/>
 				</View>
 
 				{loading && (
 					<ActivityIndicator
-						style={{ marginLeft: label ? 8 : 0 }}
+						style={{marginLeft: label ? 8 : 0}}
 						animating
 						color={labelColorValue}
 					/>
 				)}
 
 				{(iconAlignment === 'right' ||
-					iconDetails?.align ===
+						iconDetails?.align ===
 						IconAlignmentTokens.right) &&
-					label && <Space size={SizeTypeTokens.MD} />}
+					label && <Space size={SizeTypeTokens.MD}/>}
 				{(iconAlignment === 'right' ||
-					iconDetails?.align ===
+						iconDetails?.align ===
 						IconAlignmentTokens.right) &&
 					(iconName || icon) &&
 					!loading &&
@@ -212,4 +210,4 @@ const ButtonBase: React.FunctionComponent<
 	);
 };
 export default memo(ButtonBase);
-export { ButtonBase };
+export {ButtonBase};

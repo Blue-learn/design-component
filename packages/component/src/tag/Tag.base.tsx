@@ -4,8 +4,8 @@ import {
 	IconAlignmentTokens,
 	TagBaseProps,
 } from '@blue-learn/schema';
-import React, { memo, useMemo } from 'react';
-import { View, Platform } from 'react-native';
+import React, {memo, useMemo} from 'react';
+import {View, Platform} from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
@@ -13,19 +13,19 @@ import Space from '../space/Space';
 import Gradient from '../gradient/Gradient';
 
 const TagBase: React.FC<TagBaseProps> = ({
-	label = 'Tag',
-	gradientColor,
-	bgColor,
-	labelColor,
-	borderRadius,
-	fontSize,
-	icon,
-	padding = {
-		horizontal: SizeTypeTokens.MD,
-		vertical: SizeTypeTokens.SM,
-	},
-	margin,
-}) => {
+	                                         label = 'Tag',
+	                                         gradientColor,
+	                                         bgColor,
+	                                         labelColor,
+	                                         borderRadius,
+	                                         fontSize,
+	                                         icon,
+	                                         padding = {
+		                                         horizontal: SizeTypeTokens.MD,
+		                                         vertical: SizeTypeTokens.SM,
+	                                         },
+	                                         margin,
+                                         }) => {
 	const theme = ThemeProvider.getTheme();
 
 	const borderRadiusValue =
@@ -38,18 +38,18 @@ const TagBase: React.FC<TagBaseProps> = ({
 
 	const paddingBottom =
 		theme.space[
-			padding?.vertical || padding?.bottom
-		];
+		padding?.vertical || padding?.bottom
+			];
 
 	const paddingLeft =
 		theme.space[
-			padding?.horizontal || padding?.left
-		];
+		padding?.horizontal || padding?.left
+			];
 
 	const paddingRight =
 		theme.space[
-			padding?.horizontal || padding?.right
-		];
+		padding?.horizontal || padding?.right
+			];
 
 	const marginRight = theme.space[margin?.right];
 	const marginBottom = theme.space[margin?.bottom];
@@ -74,15 +74,15 @@ const TagBase: React.FC<TagBaseProps> = ({
 		() =>
 			Platform.OS === 'web'
 				? {
-						width: 'fit-content',
-						marginRight,
-						marginBottom,
-				  }
+					width: 'fit-content',
+					marginRight,
+					marginBottom,
+				}
 				: {
-						alignSelf: 'flex-start',
-						marginRight,
-						marginBottom,
-				  },
+					alignSelf: 'flex-start',
+					marginRight,
+					marginBottom,
+				},
 		[],
 	);
 
@@ -94,21 +94,21 @@ const TagBase: React.FC<TagBaseProps> = ({
 						<>
 							<Icon {...icon} />
 							{label && (
-								<Space size={SizeTypeTokens.SM} />
+								<Space size={SizeTypeTokens.SM}/>
 							)}
 						</>
 					)}
 				<Typography
 					label={label}
 					fontSize={fontSize}
-					fontFamily={FontFamilyTokens.ManropeSemiBold}
+					fontFamily={FontFamilyTokens.InterSemiBold}
 					color={labelColor}
 				/>
 				{icon?.align === IconAlignmentTokens.right &&
 					icon?.name && (
 						<>
 							{label && (
-								<Space size={SizeTypeTokens.SM} />
+								<Space size={SizeTypeTokens.SM}/>
 							)}
 							<Icon {...icon} />
 						</>
@@ -123,8 +123,8 @@ const TagBase: React.FC<TagBaseProps> = ({
 		return gradientColor ? (
 			<Gradient
 				colors={gradientColor}
-				start={{ x: 0, y: 0 }}
-				end={{ x: 1, y: 0 }}
+				start={{x: 0, y: 0}}
+				end={{x: 1, y: 0}}
 				style={[
 					widthProps,
 					{
@@ -140,4 +140,4 @@ const TagBase: React.FC<TagBaseProps> = ({
 };
 
 export default memo(TagBase);
-export { TagBase };
+export {TagBase};
