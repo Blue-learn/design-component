@@ -15,14 +15,14 @@ function WorkFilled(props) {
 				d='M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z'
 				fill={props.color}
 				stroke={props.color}
-				strokeWidth={2}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
 			<Path
 				d='M16 7V4c0-.118-.21-.786-.586-.87A6.892 6.892 0 0014 3h-4c-.53 0-1.04.047-1.414.13C8.21 3.214 8 3.882 8 4v3'
 				stroke={props.color}
-				strokeWidth={2}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

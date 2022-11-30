@@ -14,7 +14,7 @@ function Calendar(props) {
 			<Path
 				d='M8 2v3M16 2v3M3.5 9.09h17M21 8.5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z'
 				stroke={props.color}
-				strokeWidth={2}
+				strokeWidth={1.5}
 				strokeMiterlimit={10}
 				strokeLinecap='round'
 				strokeLinejoin='round'
@@ -22,7 +22,7 @@ function Calendar(props) {
 			<Path
 				d='M15.895 14.5h.009M12.196 14.5h.009M8.495 14.5h.008'
 				stroke={props.color}
-				strokeWidth={2}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
