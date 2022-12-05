@@ -25,7 +25,7 @@ const IcebreakerCard: React.FunctionComponent<
 	onPress,
 	ctaText,
 	gradient,
-	bgColor = ColorTokens.Grey_600,
+	bgColor = ColorTokens.Primary_50,
 	action,
 	triggerAction,
 }) => {
@@ -53,12 +53,12 @@ const IcebreakerCard: React.FunctionComponent<
 						<Typography
 							label={title}
 							type={TypographyTypeTokens.SUBHEADING_XS}
-							color={ColorTokens.Grey_300}
+							color={ColorTokens.Grey_500}
 						/>
 						<Space size={SizeTypeTokens.SM} />
 						<Typography
 							label={subtitle}
-							color={ColorTokens.Grey_50}
+							type={TypographyTypeTokens.BODY_SM}
 						/>
 						<Space
 							size={
@@ -79,7 +79,7 @@ const IcebreakerCard: React.FunctionComponent<
 						<Button
 							type={ButtonTypeTokens.SmallFilled}
 							icon={{ name: IconTokens.Chat }}
-							bgColor={ColorTokens.Primary_100}
+							bgColor={ColorTokens.Grey_50}
 							labelColor={ColorTokens.Grey_800}
 							label={ctaText}
 							onPress={handleAction}

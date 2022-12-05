@@ -9,7 +9,6 @@ import {
 	DiscussionCardProps,
 	DiscussionStateTokens,
 	DividerSizeTokens,
-	FontTransformToken,
 	ImageSizeTokens,
 	SizeTypeTokens,
 	Skill,
@@ -158,9 +157,6 @@ const DiscussionCard: React.FunctionComponent<
 									label={title}
 									type={
 										TypographyTypeTokens.HEADING_MD_SECONDARY
-									}
-									textTransform={
-										FontTransformToken.capitalize
 									}
 									numberOfLines={2}
 								/>
