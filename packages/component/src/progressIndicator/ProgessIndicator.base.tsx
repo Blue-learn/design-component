@@ -21,7 +21,7 @@ const ProgressIndicatorBase: React.FunctionComponent<
 > = ({
 	size = 1,
 	activeIndex = 0,
-	color = ColorTokens.Blue_600,
+	color = ColorTokens.Primary_500,
 	borderRadius = BorderRadiusTokens.BR4,
 	height = SizeTypeTokens.MD,
 }) => {

@@ -100,6 +100,10 @@ export enum IconTokens {
 	GroupFilled = 'group-filled',
 	HomeOutline = 'home-outline',
 	HomeFilled = 'home-filled',
+	Phone = 'phone',
+	Whatsapp = 'whatsapp',
+	InfoOutline = 'info-outline',
+	Guideline = 'guideline',
 }
 
 export enum IconSizeTokens {

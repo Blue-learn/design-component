@@ -82,6 +82,10 @@ import HomeOutline from './icon-list/HomeOutline';
 import HomeFilled from './icon-list/HomeFilled';
 import WorkFilled from './icon-list/WorkFilled';
 import NotificationFilled from './icon-list/NotificationFilled';
+import InfoOutline from './icon-list/InfoOutline';
+import Phone from './icon-list/Phone';
+import WhatsApp from './icon-list/WhatsApp';
+import Guideline from './icon-list/Guideline';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -165,4 +169,8 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.WorkFilled]: WorkFilled,
 	[IconTokens.NotificationFilled]:
 		NotificationFilled,
+	[IconTokens.InfoOutline]: InfoOutline,
+	[IconTokens.Phone]: Phone,
+	[IconTokens.Whatsapp]: WhatsApp,
+	[IconTokens.Guideline]: Guideline,
 };

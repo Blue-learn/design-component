@@ -9,7 +9,7 @@ import {
 export const progessIndicatorTypeTokensMap: ProgressIndicatorTypeTokensMap =
 	{
 		[ProgressIndicatorTypeTokens.default]: {
-			color: ColorTokens.Blue_600,
+			color: ColorTokens.Primary_500,
 			borderRadius: BorderRadiusTokens.BR4,
 			height: SizeTypeTokens.MD,
 		},
