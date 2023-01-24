@@ -192,36 +192,47 @@ const ApplicantCard: React.FunctionComponent<
 								</Stack>
 							</View>
 						</Stack>
-						<Space size={SizeTypeTokens.XL} />
-						<Pressable
-							onPress={projectCTA}
-							style={{
-								borderRadius: 8,
-								backgroundColor:
-									theme.colors[ColorTokens.Grey_100],
-								flexDirection: 'row',
-								alignItems: 'center',
-								justifyContent: 'space-between',
-							}}
-						>
-							<Image
-								style={styleProps}
-								source={{
-									uri: projectImage,
+						<Space
+							size={
+								projectImage && projectTitle
+									? SizeTypeTokens.XL
+									: SizeTypeTokens.NONE
+							}
+						/>
+						{projectImage && projectTitle ? (
+							<Pressable
+								onPress={projectCTA}
+								style={{
+									borderRadius: 8,
+									backgroundColor:
+										theme.colors[ColorTokens.Grey_100],
+									flexDirection: 'row',
+									alignItems: 'center',
+									justifyContent: 'space-between',
 								}}
-							/>
-							<Space size={SizeTypeTokens.LG} />
-							<View
-								style={{ flex: 1, paddingVertical: 4 }}
 							>
-								<Typography
-									type={
-										TypographyTypeTokens.SUBHEADING_XS_SECONDARY
-									}
-									label={projectTitle}
+								<Image
+									style={styleProps}
+									source={{
+										uri: projectImage,
+									}}
 								/>
-							</View>
-						</Pressable>
+								<Space size={SizeTypeTokens.LG} />
+								<View
+									style={{ flex: 1, paddingVertical: 4 }}
+								>
+									<Typography
+										type={
+											TypographyTypeTokens.SUBHEADING_XS_SECONDARY
+										}
+										label={projectTitle}
+									/>
+								</View>
+							</Pressable>
+						) : (
+							<></>
+						)}
+
 						<Space
 							size={
 								status || applicationUpdateStatus
