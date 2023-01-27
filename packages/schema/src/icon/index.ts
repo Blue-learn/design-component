@@ -104,6 +104,9 @@ export enum IconTokens {
 	Whatsapp = 'whatsapp',
 	InfoOutline = 'info-outline',
 	Guideline = 'guideline',
+	Money = 'money',
+	Save = 'save',
+	Camera = 'camera',
 }
 
 export enum IconSizeTokens {
