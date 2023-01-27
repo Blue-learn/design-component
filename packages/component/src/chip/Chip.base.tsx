@@ -3,7 +3,6 @@ import {
 	ChipHighlightTokens,
 	ColorTokens,
 	FontFamilyTokens,
-	FontSizeTokens,
 	IconAlignmentTokens,
 	ImageSizeTokens,
 	SizeTypeTokens,
@@ -126,8 +125,6 @@ const Chip: React.FC<
 						paddingBottom: paddingBottom,
 						paddingLeft: paddingLeft,
 						paddingRight: paddingRight,
-						height:
-							fontSize === FontSizeTokens.XS ? 24 : 36,
 					},
 					widthProps,
 				]}
@@ -170,7 +167,7 @@ const Chip: React.FC<
 				{image && image?.uri
 					? [
 							<Image
-								size={image?.size || ImageSizeTokens.XXS}
+								size={image?.size || ImageSizeTokens.XXXS}
 								{...image}
 							/>,
 							label && (
@@ -192,19 +189,25 @@ const Chip: React.FC<
 						color={labelColor}
 					/>
 				</View>
-
-				{icon?.align === IconAlignmentTokens.right &&
-					icon?.name && (
-						<>
-							{label && (
-								<Space size={SizeTypeTokens.SM} />
-							)}
-							<Icon
-								{...icon}
-								color={icon?.color || labelColor}
-							/>
-						</>
-					)}
+				<View
+					style={{
+						zIndex: 2,
+						flexDirection: 'row',
+					}}
+				>
+					{icon?.align === IconAlignmentTokens.right &&
+						icon?.name && (
+							<>
+								{label && (
+									<Space size={SizeTypeTokens.SM} />
+								)}
+								<Icon
+									{...icon}
+									color={icon?.color || labelColor}
+								/>
+							</>
+						)}
+				</View>
 			</Pressable>
 		);
 };

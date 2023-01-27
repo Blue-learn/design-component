@@ -181,4 +181,28 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			shadow: ShadowTypeTokens.E1,
 			paddingHorizontal: SizeTypeTokens.LG,
 		},
+		[ButtonTypeTokens.LargeDisabled]: {
+			borderRadius: BorderRadiusTokens.BR4,
+			labelColor: ColorTokens.Grey_500,
+			bgColor: ColorTokens.Grey_200,
+			paddingVertical: SizeTypeTokens.LG,
+			fontSize: FontSizeTokens.MD,
+			paddingHorizontal: SizeTypeTokens.XXXXL,
+		},
+		[ButtonTypeTokens.MediumDisabled]: {
+			borderRadius: BorderRadiusTokens.BR4,
+			labelColor: ColorTokens.Grey_500,
+			bgColor: ColorTokens.Grey_200,
+			paddingVertical: SizeTypeTokens.MD,
+			fontSize: FontSizeTokens.SM,
+			paddingHorizontal: SizeTypeTokens.XXXL,
+		},
+		[ButtonTypeTokens.SmallDisabled]: {
+			borderRadius: BorderRadiusTokens.BR4,
+			labelColor: ColorTokens.Grey_500,
+			bgColor: ColorTokens.Grey_200,
+			paddingVertical: SizeTypeTokens.SM,
+			fontSize: FontSizeTokens.XS,
+			paddingHorizontal: SizeTypeTokens.XL,
+		},
 	};
