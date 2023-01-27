@@ -183,7 +183,7 @@ const ButtonBase: React.FunctionComponent<
 						color={labelColor}
 						fontSize={fontSize}
 						textAlign={TextAlignTokens.center}
-						fontFamily={FontFamilyTokens.InterSemiBold}
+						fontFamily={FontFamilyTokens.InterMedium}
 					/>
 				</View>
 
