@@ -36,6 +36,7 @@ export enum FontFamilyTokens {
 	InterSemiBold = 'Inter-SemiBold',
 	InterBold = 'Inter-Bold',
 	InterRegular = 'Inter-Regular',
+	InterMedium = 'Inter-Medium',
 }
 
 export type FontFamilyTokensMap = {

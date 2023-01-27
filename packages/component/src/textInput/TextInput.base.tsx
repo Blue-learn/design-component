@@ -115,7 +115,7 @@ const TextInputBase: React.FunctionComponent<
 						label={title}
 						fontSize={fontSize}
 						color={color}
-						fontFamily={FontFamilyTokens.InterSemiBold}
+						fontFamily={FontFamilyTokens.InterMedium}
 					/>
 					<Space size={SizeTypeTokens.MD} />
 				</Stack>

@@ -12,6 +12,8 @@ export const fontFamilyTokensMap: FontFamilyTokensMap =
 	{
 		[FontFamilyTokens.InterRegular]:
 			FontFamilyTokens.InterRegular,
+		[FontFamilyTokens.InterMedium]:
+			FontFamilyTokens.InterMedium,
 		[FontFamilyTokens.InterSemiBold]:
 			FontFamilyTokens.InterSemiBold,
 		[FontFamilyTokens.InterBold]:
@@ -44,12 +46,12 @@ export const typographyTypeTokensMap: TypographyTypeTokensMap =
 		[TypographyTypeTokens.HEADING]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.SM,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.SUBHEADING]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.SM,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 
 		[TypographyTypeTokens.BODY_2XS]: {
@@ -161,228 +163,228 @@ export const typographyTypeTokensMap: TypographyTypeTokensMap =
 		[TypographyTypeTokens.HEADING_2XS]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XXS,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_XS]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XS,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_SM]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.SM,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_MD]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.MD,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_LG]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.LG,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_XL]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XL,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_2XL]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XXL,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_2XS_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.XXS,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_XS_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.XS,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_SM_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.SM,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_MD_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.MD,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_LG_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.LG,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_XL_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.XL,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_2XL_SECONDARY]: {
 			color: ColorTokens.Grey_700,
 			fontSize: FontSizeTokens.XXL,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_2XS_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.XXS,
-				fontFamily: FontFamilyTokens.InterBold,
+				fontFamily: FontFamilyTokens.InterSemiBold,
 			},
 		[TypographyTypeTokens.HEADING_XS_PLACEHOLDER]: {
 			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.XS,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_SM_PLACEHOLDER]: {
 			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.SM,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_MD_PLACEHOLDER]: {
 			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.MD,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_LG_PLACEHOLDER]: {
 			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.LG,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_XL_PLACEHOLDER]: {
 			color: ColorTokens.Grey_500,
 			fontSize: FontSizeTokens.XL,
-			fontFamily: FontFamilyTokens.InterBold,
+			fontFamily: FontFamilyTokens.InterSemiBold,
 		},
 		[TypographyTypeTokens.HEADING_2XL_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.XXL,
-				fontFamily: FontFamilyTokens.InterBold,
+				fontFamily: FontFamilyTokens.InterSemiBold,
 			},
 
 		[TypographyTypeTokens.SUBHEADING_2XL]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XXL,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_XL]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XL,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_LG]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.LG,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_MD]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.MD,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_SM]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.SM,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_XS]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XS,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_2XS]: {
 			color: ColorTokens.Grey_800,
 			fontSize: FontSizeTokens.XXS,
-			fontFamily: FontFamilyTokens.InterSemiBold,
+			fontFamily: FontFamilyTokens.InterMedium,
 		},
 		[TypographyTypeTokens.SUBHEADING_2XL_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.XXL,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_XL_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.XL,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_LG_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.LG,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_MD_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.MD,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_SM_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.SM,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_XS_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.XS,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_2XS_SECONDARY]:
 			{
 				color: ColorTokens.Grey_700,
 				fontSize: FontSizeTokens.XXS,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_2XL_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.XXL,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_XL_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.XL,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_LG_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.LG,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_MD_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.MD,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_SM_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.SM,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_XS_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.XS,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 		[TypographyTypeTokens.SUBHEADING_2XS_PLACEHOLDER]:
 			{
 				color: ColorTokens.Grey_500,
 				fontSize: FontSizeTokens.XXS,
-				fontFamily: FontFamilyTokens.InterSemiBold,
+				fontFamily: FontFamilyTokens.InterMedium,
 			},
 	};

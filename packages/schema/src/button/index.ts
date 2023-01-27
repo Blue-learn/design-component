@@ -60,6 +60,7 @@ export enum ButtonWidthTypeToken {
 	FULL = 'FULL',
 	CONTENT = 'CONTENT',
 }
+
 /**
  * Only exposed to Main Component as Base props
  */
@@ -136,6 +137,9 @@ export enum ButtonTypeTokens {
 	SmallElevated = 'small-elevated',
 	IconElevated = 'icon-elevated',
 	GoogleLargeFilled = 'google-large-filled',
+	LargeDisabled = 'large-disabled',
+	MediumDisabled = 'medium-disabled',
+	SmallDisabled = 'small-disabled',
 	// FloatingAction = 'floating-action',
 	// Interaction = 'interaction',
 }

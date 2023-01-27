@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import {
 	ColorTokens,
 	BorderRadiusTokens,
@@ -24,7 +24,7 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
-import {Typography} from '../typography/Typography';
+import { Typography } from '../typography/Typography';
 import Button from '../button/Button';
 import Stack from '../stack/Stack';
 import Space from '../space/Space';
@@ -70,22 +70,24 @@ const styles = StyleSheet.create({
 /**
  * Raw Component with Derived props + Theme
  */
-const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
-	                                                                          label,
-	                                                                          bgColor,
-	                                                                          labelColor,
-	                                                                          userLabelColor,
-	                                                                          borderRadius,
-	                                                                          padding,
-	                                                                          avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
-	                                                                          nameText = 'lorem ipsum',
-	                                                                          timeStamp,
-	                                                                          file,
-	                                                                          linkUrl,
-	                                                                          onPress,
-	                                                                          onPressProfile,
-	                                                                          duration,
-                                                                          }) => {
+const ReceiverChatCardBase: React.FunctionComponent<
+	ChatCardBaseProps
+> = ({
+	label,
+	bgColor,
+	labelColor,
+	userLabelColor,
+	borderRadius,
+	padding,
+	avatarUrl = 'https://reactnative.dev/img/tiny_logo.png',
+	nameText = 'lorem ipsum',
+	timeStamp,
+	file,
+	linkUrl,
+	onPress,
+	onPressProfile,
+	duration,
+}) => {
 	/**
 	 * use type, size, buttonThemePros, colorMapping to full customise base component
 	 * */
@@ -143,7 +145,7 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 							labelColor={ColorTokens.Grey_500}
 							onPress={onPress}
 						/>
-						<Space size={SizeTypeTokens.MD}/>
+						<Space size={SizeTypeTokens.MD} />
 						<Stack>
 							<Stack
 								type={StackType.row}
@@ -153,13 +155,13 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 									name={IconTokens.Mic}
 									size={IconSizeTokens.XS}
 								/>
-								<Space size={SizeTypeTokens.SM}/>
+								<Space size={SizeTypeTokens.SM} />
 								<Typography
 									label={'Voice Message'}
 									fontSize={FontSizeTokens.XS}
 								/>
 							</Stack>
-							<Space size={SizeTypeTokens.SM}/>
+							<Space size={SizeTypeTokens.SM} />
 							<Typography
 								label={duration}
 								fontSize={FontSizeTokens.XXS}
@@ -178,8 +180,8 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 							StackJustifyContent.spaceBetween
 						}
 					>
-						<Icon name={IconTokens.PDF}/>
-						<Space size={SizeTypeTokens.MD}/>
+						<Icon name={IconTokens.PDF} />
+						<Space size={SizeTypeTokens.MD} />
 						<Stack>
 							<Typography
 								label={file.file_name}
@@ -196,7 +198,7 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 								color={ColorTokens.Grey_500}
 							/>
 						</Stack>
-						<Space size={SizeTypeTokens.MD}/>
+						<Space size={SizeTypeTokens.MD} />
 						<Button
 							type={ButtonTypeTokens.IconGhost}
 							onPress={onPress}
@@ -210,7 +212,7 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 
 	return (
 		<Stack>
-			<Space size={SizeTypeTokens.MD}/>
+			<Space size={SizeTypeTokens.MD} />
 			<View
 				style={[
 					{
@@ -233,7 +235,7 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 							size={AvatarSizeTokens.SM}
 							borderRadius={BorderRadiusTokens.BR4}
 						/>
-						<Space size={SizeTypeTokens.MD}/>
+						<Space size={SizeTypeTokens.MD} />
 						<Typography
 							label={nameText}
 							color={userLabelColor}
@@ -241,13 +243,13 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 							textTransform={
 								FontTransformToken.capitalize
 							}
-							fontFamily={FontFamilyTokens.InterSemiBold}
+							fontFamily={FontFamilyTokens.InterMedium}
 						/>
-						<Space size={SizeTypeTokens.MD}/>
+						<Space size={SizeTypeTokens.MD} />
 					</Stack>
 				</TouchableOpacity>
 
-				<Space size={SizeTypeTokens.MD}/>
+				<Space size={SizeTypeTokens.MD} />
 				<TouchableOpacity onPress={onPress}>
 					{renderSwitch()}
 				</TouchableOpacity>
@@ -288,22 +290,22 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 												color={labelColor}
 												fontSize={FontSizeTokens.XS}
 											/>
-											<Space size={SizeTypeTokens.MD}/>
+											<Space size={SizeTypeTokens.MD} />
 											<Image
 												size={ImageSizeTokens.XXL}
 												uri={payload.previewData?.image?.url}
 											/>
-											<Space size={SizeTypeTokens.MD}/>
+											<Space size={SizeTypeTokens.MD} />
 											<Stack>
 												<Typography
 													label={payload.previewData?.title}
 													color={labelColor}
 													fontFamily={
-														FontFamilyTokens.InterSemiBold
+														FontFamilyTokens.InterMedium
 													}
 													fontSize={FontSizeTokens.XS}
 												/>
-												<Space size={SizeTypeTokens.SM}/>
+												<Space size={SizeTypeTokens.SM} />
 												<Typography
 													label={
 														payload.previewData?.description
@@ -328,19 +330,19 @@ const ReceiverChatCardBase: React.FunctionComponent<ChatCardBaseProps> = ({
 					</Stack>
 				)}
 			</View>
-			<Space size={SizeTypeTokens.SM}/>
+			<Space size={SizeTypeTokens.SM} />
 			<Typography
 				label={timeStamp}
 				color={ColorTokens.Grey_300}
 				fontSize={FontSizeTokens.XS}
 			/>
-			<Space size={SizeTypeTokens.MD}/>
+			<Space size={SizeTypeTokens.MD} />
 		</Stack>
 	);
 };
 
 export default memo(ReceiverChatCardBase);
-export {ReceiverChatCardBase};
+export { ReceiverChatCardBase };
 
 // {file?.file_url?.length > 0 && (
 // 	render a image[0]

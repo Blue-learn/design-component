@@ -86,6 +86,9 @@ import InfoOutline from './icon-list/InfoOutline';
 import Phone from './icon-list/Phone';
 import WhatsApp from './icon-list/WhatsApp';
 import Guideline from './icon-list/Guideline';
+import Camera from './icon-list/Camera';
+import Money from './icon-list/Money';
+import Save from './icon-list/Save';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -173,4 +176,7 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Phone]: Phone,
 	[IconTokens.Whatsapp]: WhatsApp,
 	[IconTokens.Guideline]: Guideline,
+	[IconTokens.Camera]: Camera,
+	[IconTokens.Money]: Money,
+	[IconTokens.Save]: Save,
 };

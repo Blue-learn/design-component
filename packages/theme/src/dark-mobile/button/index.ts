@@ -12,6 +12,27 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 				'google-large-filled'
 			],
 		},
+		[ButtonTypeTokens.LargeDisabled]: {
+			...buttonTypeTokensMapLight[
+				ButtonTypeTokens.LargeDisabled
+			],
+			labelColor: ColorTokens.Grey_200,
+			bgColor: ColorTokens.Grey_600,
+		},
+		[ButtonTypeTokens.MediumDisabled]: {
+			...buttonTypeTokensMapLight[
+				ButtonTypeTokens.MediumDisabled
+			],
+			labelColor: ColorTokens.Grey_200,
+			bgColor: ColorTokens.Grey_600,
+		},
+		[ButtonTypeTokens.SmallDisabled]: {
+			...buttonTypeTokensMapLight[
+				ButtonTypeTokens.SmallDisabled
+			],
+			labelColor: ColorTokens.Grey_200,
+			bgColor: ColorTokens.Grey_600,
+		},
 		[ButtonTypeTokens.LargeFilled]: {
 			...buttonTypeTokensMapLight['large-filled'],
 			labelColor: ColorTokens.Grey_500,

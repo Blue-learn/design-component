@@ -18,3 +18,7 @@ in each @font-face declaration to match the weight and style of the Web font fil
     src: url('./Inter-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('./Inter-Medium.ttf') format('truetype');
+}

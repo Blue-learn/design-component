@@ -1,36 +1,25 @@
-import Button from './Button';
 import {
 	ButtonProps,
 	WIDGET,
 } from '@blue-learn/schema';
-import { MockedWidgetProps } from '../mock';
+import React from 'react';
 import * as Mock from './Button.mock';
+import { Button } from './Button';
 
 export default {
 	title: WIDGET.BUTTON,
 	component: Button,
-	argTypes: {
-		label: 'Default Button',
-	},
-	parameters: {
-		actions: {
-			handles: ['click .btn'],
-		},
-	},
+	...Mock.args,
 };
 
-const Template = (args: ButtonProps) =>
-	MockedWidgetProps.renderItem({
-		id: WIDGET.BUTTON,
-		type: WIDGET.BUTTON,
-		props: {
-			...args,
-		},
-	});
+const Template = (args: ButtonProps) => (
+	<Button {...args} />
+);
 
 export const Component = Template.bind({});
-Component.args = {
-	...Mock.args,
-	renderItem: MockedWidgetProps.renderItem,
+
+Component.args = Mock.args;
+
+Component.argTypes = {
+	...Mock.argTypes,
 };
-Component.argTypes = Mock.argTypes;
