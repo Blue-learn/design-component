@@ -89,6 +89,7 @@ import Guideline from './icon-list/Guideline';
 import Camera from './icon-list/Camera';
 import Money from './icon-list/Money';
 import Save from './icon-list/Save';
+import NorthWestArrow from './icon-list/NorthWestArrow';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -179,4 +180,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Camera]: Camera,
 	[IconTokens.Money]: Money,
 	[IconTokens.Save]: Save,
+	[IconTokens.NorthWestArrow]: NorthWestArrow,
 };

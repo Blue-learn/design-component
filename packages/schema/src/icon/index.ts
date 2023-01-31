@@ -107,6 +107,7 @@ export enum IconTokens {
 	Money = 'money',
 	Save = 'save',
 	Camera = 'camera',
+	NorthWestArrow = 'north-west-arrow',
 }
 
 export enum IconSizeTokens {
