@@ -19,7 +19,6 @@ import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
 import {
 	ActivityIndicator,
-	Pressable,
 	Platform,
 	View,
 } from 'react-native';
@@ -27,6 +26,7 @@ import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Typography from '../typography/Typography';
 import { Component as Stack } from '../stack';
+import Ripple from './Ripple';
 
 /**
  * Raw Component with Derived props + Theme
@@ -157,7 +157,7 @@ const ButtonBase: React.FunctionComponent<
 	);
 
 	return (
-		<Pressable
+		<Ripple
 			onPress={handleAction}
 			style={[styleProps, widthStyleProps]}
 		>
@@ -206,7 +206,7 @@ const ButtonBase: React.FunctionComponent<
 					!loading &&
 					_renderIcon}
 			</Stack>
-		</Pressable>
+		</Ripple>
 	);
 };
 export default memo(ButtonBase);
