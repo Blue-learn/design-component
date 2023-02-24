@@ -1,10 +1,12 @@
 import {
-	ButtonBaseProps,
-	ColorTokens,
 	BorderRadiusTokens,
+	ButtonBaseProps,
+	ButtonWidthTypeToken,
+	ColorTokens,
 	FontFamilyTokens,
 	IconAlignmentTokens,
 	IconSizeTokens,
+	IconTokens,
 	ShadowThemeProps,
 	SizeTypeTokens,
 	StackAlignItems,
@@ -12,8 +14,6 @@ import {
 	StackType,
 	TextAlignTokens,
 	WidgetProps,
-	ButtonWidthTypeToken,
-	IconTokens,
 } from '@blue-learn/schema';
 import ThemeProvider from '@blue-learn/theme';
 import React, { memo } from 'react';
@@ -158,6 +158,17 @@ const ButtonBase: React.FunctionComponent<
 
 	return (
 		<Ripple
+			rippleColor={
+				bgColor === ColorTokens.Transparent
+					? '#00000040'
+					: '#FFFFFF'
+			}
+			disabled={Platform.OS === 'web'}
+			rippleContainerBorderRadius={
+				borderRadius === BorderRadiusTokens.BR4
+					? 100
+					: 0
+			}
 			onPress={handleAction}
 			style={[styleProps, widthStyleProps]}
 		>

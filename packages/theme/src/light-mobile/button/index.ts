@@ -116,7 +116,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			paddingHorizontal: SizeTypeTokens.LG,
 		},
 		[ButtonTypeTokens.LargeGhost]: {
-			borderRadius: BorderRadiusTokens.BR4,
+			borderRadius: BorderRadiusTokens.BR1,
 			labelColor: ColorTokens.Primary_500,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SizeTypeTokens.LG,
@@ -124,7 +124,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			paddingHorizontal: SizeTypeTokens.XXXXL,
 		},
 		[ButtonTypeTokens.MediumGhost]: {
-			borderRadius: BorderRadiusTokens.BR4,
+			borderRadius: BorderRadiusTokens.BR1,
 			labelColor: ColorTokens.Primary_500,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SizeTypeTokens.MD,
@@ -132,7 +132,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			paddingHorizontal: SizeTypeTokens.XXXL,
 		},
 		[ButtonTypeTokens.SmallGhost]: {
-			borderRadius: BorderRadiusTokens.BR4,
+			borderRadius: BorderRadiusTokens.BR1,
 			labelColor: ColorTokens.Primary_500,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SizeTypeTokens.SM,
@@ -140,7 +140,7 @@ export const buttonTypeTokensMap: ButtonTypeTokensMap =
 			paddingHorizontal: SizeTypeTokens.SM,
 		},
 		[ButtonTypeTokens.IconGhost]: {
-			borderRadius: BorderRadiusTokens.BR4,
+			borderRadius: BorderRadiusTokens.BR1,
 			labelColor: ColorTokens.Primary_500,
 			bgColor: ColorTokens.Transparent,
 			paddingVertical: SizeTypeTokens.SM,
