@@ -108,6 +108,8 @@ export enum IconTokens {
 	Save = 'save',
 	Camera = 'camera',
 	NorthWestArrow = 'north-west-arrow',
+	ExternalLink = 'external-link',
+	Earth = 'earth',
 }
 
 export enum IconSizeTokens {
