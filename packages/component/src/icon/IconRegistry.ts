@@ -92,6 +92,7 @@ import Save from './icon-list/Save';
 import NorthWestArrow from './icon-list/NorthWestArrow';
 import Earth from './icon-list/Earth';
 import ExternalLink from './icon-list/ExternalLink';
+import AddChat from './icon-list/AddChat';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -185,4 +186,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.NorthWestArrow]: NorthWestArrow,
 	[IconTokens.ExternalLink]: ExternalLink,
 	[IconTokens.Earth]: Earth,
+	[IconTokens.AddChat]: AddChat,
 };

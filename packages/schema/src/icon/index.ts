@@ -110,6 +110,7 @@ export enum IconTokens {
 	NorthWestArrow = 'north-west-arrow',
 	ExternalLink = 'external-link',
 	Earth = 'earth',
+	AddChat = 'add-chat',
 }
 
 export enum IconSizeTokens {
