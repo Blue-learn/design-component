@@ -112,6 +112,8 @@ export enum IconTokens {
 	Earth = 'earth',
 	AddChat = 'add-chat',
 	Confetti = 'confetti',
+	CameraOutline = 'camera-outline',
+	Document = 'document',
 }
 
 export enum IconSizeTokens {

@@ -94,6 +94,8 @@ import Earth from './icon-list/Earth';
 import ExternalLink from './icon-list/ExternalLink';
 import AddChat from './icon-list/AddChat';
 import Confetti from './icon-list/Confetti';
+import CameraOutline from './icon-list/CameraOutline';
+import Document from './icon-list/Document';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -189,4 +191,6 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Earth]: Earth,
 	[IconTokens.AddChat]: AddChat,
 	[IconTokens.Confetti]: Confetti,
+	[IconTokens.CameraOutline]: CameraOutline,
+	[IconTokens.Document]: Document,
 };
