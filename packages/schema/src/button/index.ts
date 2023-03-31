@@ -114,7 +114,6 @@ export type ButtonThemeProps = {
 	paddingHorizontal: SizeTypeTokens;
 };
 
-//--todo add more Diff Combination for Button
 export enum ButtonTypeTokens {
 	LargeFilled = 'large-filled',
 	MediumFilled = 'medium-filled',
