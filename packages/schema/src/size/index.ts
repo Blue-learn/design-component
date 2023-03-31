@@ -3,6 +3,7 @@ export enum SizeTypeTokens {
 	XS = 'XS',
 	SM = 'SM',
 	MD = 'MD',
+	ML = 'ML',
 	LG = 'LG',
 	XL = 'XL',
 	XXL = 'XXL',
