@@ -18,7 +18,7 @@ import {
 const TypographyBase: React.FunctionComponent<
 	TypographyBaseProps
 > = ({
-	label = 'Lorem ipsum dolor sit amet',
+	label,
 	color,
 	fontSize,
 	fontFamily,
@@ -27,6 +27,7 @@ const TypographyBase: React.FunctionComponent<
 	textAlign = TextAlignTokens.auto,
 	ellipsizeMode,
 	numberOfLines = 0,
+	lineHeight,
 	...props
 }) => {
 	const theme = ThemeProvider.getTheme();
@@ -49,6 +50,7 @@ const TypographyBase: React.FunctionComponent<
 					textTransform: textTransform,
 					textDecorationLine: textDecorationLine,
 					textAlign: textAlign,
+					lineHeight: lineHeight ? lineHeight : '145%',
 				}}
 				numberOfLines={numberOfLines}
 				{...props}

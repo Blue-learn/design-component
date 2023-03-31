@@ -161,6 +161,7 @@ export type TypographyBaseProps = {
 	ellipsizeMode?: EllipsizeModeTokens;
 	numberOfLines?: number;
 	textAlign?: TextAlignTokens;
+	lineHeight?: number;
 };
 
 export type TypographyProps = {
@@ -174,6 +175,7 @@ export type TypographyProps = {
 	numberOfLines?: number;
 	textAlign?: TextAlignTokens;
 	type?: TypographyTypeTokens;
+	lineHeight?: number;
 };
 
 export type TypographyTypeTokensMap = {

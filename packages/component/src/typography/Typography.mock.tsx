@@ -11,7 +11,7 @@ import {
 
 export const args: TypographyProps = {
 	label:
-		'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		'Lorem ipsum dolor sit amet consecrate radicalising elite.',
 	type: TypographyTypeTokens.DEFAULT,
 	textAlign: TextAlignTokens.auto,
 	textTransform: FontTransformToken.none,
@@ -43,6 +43,9 @@ export const argTypes = {
 	fontFamily: {
 		control: 'select',
 		options: [...Object.values(FontFamilyTokens)],
+	},
+	lineHeight: {
+		control: 'number',
 	},
 	textAlign: {
 		control: 'select',
