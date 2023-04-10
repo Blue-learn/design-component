@@ -24,6 +24,7 @@ export type TagProps = {
 	icon?: IconProps;
 	gradientColor?: GradientColorTokens;
 	bgColor?: ColorTokens;
+	labelColor?: ColorTokens;
 	margin?: PaddingProps;
 };
 
@@ -55,8 +56,15 @@ export type TagThemeProps = {
 };
 
 export enum TagTypeTokens {
-	DEFAULT = 'DEFAULT',
+	SM = 'SM',
+	MD = 'MD',
+	/**
+	 * @deprecated
+	 */
 	SECONDARY = 'SECONDARY',
+	/**
+	 * @deprecated
+	 */
 	GRADIENT = 'GRADIENT',
 }
 
