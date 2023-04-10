@@ -3,6 +3,7 @@ import {
 	SizeTypeTokens,
 	IconAlignmentTokens,
 	TagBaseProps,
+	ImageSizeTokens,
 } from '@blue-learn/schema';
 import React, { memo, useMemo } from 'react';
 import { View, Platform } from 'react-native';
@@ -11,6 +12,7 @@ import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Gradient from '../gradient/Gradient';
+import { Image } from '../image/Image';
 
 const TagBase: React.FC<TagBaseProps> = ({
 	label = 'Tag',
@@ -25,6 +27,7 @@ const TagBase: React.FC<TagBaseProps> = ({
 		vertical: SizeTypeTokens.SM,
 	},
 	margin,
+	image,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -98,6 +101,23 @@ const TagBase: React.FC<TagBaseProps> = ({
 							)}
 						</>
 					)}
+				{image && image?.uri
+					? [
+							<Image
+								size={image?.size || ImageSizeTokens.XXXS}
+								{...image}
+							/>,
+							label && (
+								<Space
+									size={
+										image?.size === ImageSizeTokens.XXXS
+											? SizeTypeTokens.SM
+											: SizeTypeTokens.MD
+									}
+								/>
+							),
+					  ]
+					: null}
 				<Typography
 					label={label}
 					fontSize={fontSize}

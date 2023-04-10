@@ -6,6 +6,7 @@ import { BorderRadiusTokens } from '../borderRadius';
 import { IconProps } from '../icon';
 import { PaddingProps } from '../padding';
 import { FontSizeTokens } from '../typography';
+import { ImageProps } from '../image';
 
 export type TagProps = {
 	/**
@@ -19,6 +20,7 @@ export type TagProps = {
 	/**
 	 * Default Icon null
 	 */
+	image?: ImageProps;
 	icon?: IconProps;
 	gradientColor?: GradientColorTokens;
 	bgColor?: ColorTokens;
@@ -33,6 +35,7 @@ export type TagBaseProps = {
 	/**
 	 * Default Icon null
 	 */
+	image?: ImageProps;
 	icon?: IconProps;
 	gradientColor?: GradientColorTokens;
 	borderRadius: BorderRadiusTokens;
