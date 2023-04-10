@@ -2,9 +2,10 @@ import {
 	GradientColorTokens,
 	DiscussionStateTokens,
 	ColorTokens,
+	DiscussionCardProps,
 } from '@blue-learn/schema';
 
-export const args = {
+export const args: DiscussionCardProps = {
 	gradientColor: GradientColorTokens.D_5,
 	state: DiscussionStateTokens.UNSEEN,
 
@@ -65,6 +66,8 @@ export const args = {
 	participantsLabel: ' 12 Participants',
 	ctaText: '9+ Messages ->',
 	timeStamp: '2 day',
+	onPress: () => {},
+	onPressProfile: () => {},
 };
 
 export const argTypes = {
