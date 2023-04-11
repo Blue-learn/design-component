@@ -63,6 +63,7 @@ export const args: DiscussionCardProps = {
 		'https://reactnative.dev/img/tiny_logo.png',
 		'https://reactnative.dev/img/tiny_logo.png',
 	],
+	clubTitle: 'Design Club',
 	participantsLabel: ' 12 Participants',
 	ctaText: '9+ Messages ->',
 	timeStamp: '2 day',

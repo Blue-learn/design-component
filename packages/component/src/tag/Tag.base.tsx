@@ -131,7 +131,13 @@ const TagBase: React.FC<TagBaseProps> = ({
 					)}
 			</View>
 		),
-		[label, icon, backgroundColor],
+		[
+			label,
+			icon,
+			backgroundColor,
+			labelColor,
+			image,
+		],
 	);
 
 	if (!label) return null;
