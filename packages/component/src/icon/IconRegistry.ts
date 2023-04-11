@@ -99,6 +99,7 @@ import Document from './icon-list/Document';
 import TwoUsersFilled from './icon-list/TwoUsersFilled';
 import DiscussionOutline from './icon-list/DiscussionOutline';
 import DiscussionFilled from './icon-list/DiscussionFilled';
+import CalendarFilled from './icon-list/CalendarFilled';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -200,4 +201,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.DiscussionOutline]:
 		DiscussionOutline,
 	[IconTokens.TwoUsersFilled]: TwoUsersFilled,
+	[IconTokens.calendarFilled]: CalendarFilled,
 };
