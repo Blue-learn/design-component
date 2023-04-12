@@ -1,0 +1,23 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          node-version: 16
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+          scope: "@blue-learn"
+      - run: |
+          git config user.name "BL-GitBot"
+          git config user.email "github@bluelearn.in"
+      - run: npm run build
+      - run: npm run publish
