@@ -20,3 +20,7 @@ export const Component = Template.bind({});
 Component.args = {
 	...Mock.args,
 };
+
+Component.argTypes = {
+	...Mock.argTypes,
+};

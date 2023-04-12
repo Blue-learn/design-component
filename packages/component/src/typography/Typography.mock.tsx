@@ -7,6 +7,7 @@ import {
 	TextAlignTokens,
 	FontFamilyTokens,
 	TypographyTypeTokens,
+	ColorTokens,
 } from '@blue-learn/schema';
 
 export const args: TypographyProps = {
@@ -43,6 +44,10 @@ export const argTypes = {
 	fontFamily: {
 		control: 'select',
 		options: [...Object.values(FontFamilyTokens)],
+	},
+	color: {
+		control: 'select',
+		options: [...Object.values(ColorTokens)],
 	},
 	lineHeight: {
 		control: 'number',

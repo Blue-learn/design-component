@@ -69,6 +69,8 @@ export enum IconTokens {
 	Sticker = 'sticker',
 	Bluelearn = 'bluelearn',
 	TwoUsers = 'two-users',
+
+	TwoUsersFilled = 'two-users-filled',
 	Check = 'check',
 	Dot = 'dot',
 	BulbFilled = 'bulb-filled',
@@ -114,6 +116,9 @@ export enum IconTokens {
 	Confetti = 'confetti',
 	CameraOutline = 'camera-outline',
 	Document = 'document',
+	DiscussionFilled = 'discussion-filled',
+	DiscussionOutline = 'discussion-outline',
+	calendarFilled = 'calendar-filled',
 }
 
 export enum IconSizeTokens {

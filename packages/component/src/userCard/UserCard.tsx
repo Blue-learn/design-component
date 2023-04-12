@@ -119,7 +119,7 @@ const UserCard: React.FunctionComponent<
 									label={subtitle}
 									numberOfLines={1}
 									type={
-										TypographyTypeTokens.BODY_XS_SECONDARY
+										TypographyTypeTokens.BODY_XS_PLACEHOLDER
 									}
 								/>
 							)}

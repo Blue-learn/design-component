@@ -1,4 +1,9 @@
-import { MemberCardProps } from '@blue-learn/schema';
+import {
+	BorderRadiusTokens,
+	ColorTokens,
+	MemberCardProps,
+	SizeTypeTokens,
+} from '@blue-learn/schema';
 
 export const args: MemberCardProps = {
 	title: 'Saidatta Sahu',
@@ -9,6 +14,17 @@ export const args: MemberCardProps = {
 	chipsTitle: 'Talk to me about',
 	location: 'Bangalore, India',
 	chips: ['aiml', 'anime', 'art', 'commerce'],
+	margin: {
+		bottom: SizeTypeTokens.XL,
+	},
+	padding: {
+		vertical: SizeTypeTokens.LG,
+		horizontal: SizeTypeTokens.LG,
+	},
+	bgColor: ColorTokens.Grey_50,
+	borderRadius: BorderRadiusTokens.BR2,
+	onPress: () => {},
+	cta: () => {},
 };
 
 export const argTypes = {};
