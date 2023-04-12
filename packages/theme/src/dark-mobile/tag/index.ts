@@ -7,10 +7,15 @@ import { tagTypeTokensMap as tagTypeTokensMapLight } from '../../light-mobile/ta
 
 export const tagTypeTokensMap: TagTypeTokensMap =
 	{
-		[TagTypeTokens.DEFAULT]: {
-			...tagTypeTokensMapLight['DEFAULT'],
+		[TagTypeTokens.SM]: {
+			...tagTypeTokensMapLight[TagTypeTokens.SM],
 			labelColor: ColorTokens.Grey_200,
 			bgColor: ColorTokens.Grey_500,
+		},
+		[TagTypeTokens.MD]: {
+			...tagTypeTokensMapLight[TagTypeTokens.MD],
+			labelColor: ColorTokens.Grey_100,
+			bgColor: ColorTokens.Grey_700,
 		},
 		[TagTypeTokens.SECONDARY]: {
 			...tagTypeTokensMapLight['SECONDARY'],

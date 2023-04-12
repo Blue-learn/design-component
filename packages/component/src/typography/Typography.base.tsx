@@ -50,7 +50,9 @@ const TypographyBase: React.FunctionComponent<
 					textTransform: textTransform,
 					textDecorationLine: textDecorationLine,
 					textAlign: textAlign,
-					lineHeight: lineHeight ? lineHeight : '145%',
+					lineHeight: lineHeight
+						? lineHeight
+						: fontSizeMapping[fontSize] * 1.45,
 				}}
 				numberOfLines={numberOfLines}
 				{...props}

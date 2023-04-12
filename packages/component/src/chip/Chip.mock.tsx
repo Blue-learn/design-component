@@ -5,6 +5,7 @@ import {
 	IconAlignmentTokens,
 	IconTokens,
 	ImageSizeTokens,
+	SizeTypeTokens,
 } from '@blue-learn/schema';
 
 export const args: ChipProps = {
@@ -20,6 +21,11 @@ export const args: ChipProps = {
 		name: IconTokens.Cross,
 		align: IconAlignmentTokens.right,
 	},
+	margin: {
+		right: SizeTypeTokens.LG,
+		bottom: SizeTypeTokens.MD,
+	},
+	onPress: () => {},
 };
 
 export const argTypes = {

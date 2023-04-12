@@ -15,8 +15,12 @@ export const args: ApplicantCardProps = {
 	state: ApplicationStateTokens.SEEN,
 	status: 'Rejected',
 	applicationUpdateStatus: 'Applied 2 days ago',
+	onPress: () => {},
 	chatCTA: () => {
 		console.log('Chat CTA');
+	},
+	projectCTA: () => {
+		console.log('Project CTA');
 	},
 };
 

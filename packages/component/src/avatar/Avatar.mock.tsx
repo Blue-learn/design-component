@@ -20,6 +20,7 @@ export const args: AvatarProps = {
 	borderWidth: 3,
 	borderColor: ColorTokens.Grey_50,
 	borderRadius: BorderRadiusTokens.BR4,
+	active: ActiveStateTokens.ACTIVE,
 };
 
 export const argTypes = {

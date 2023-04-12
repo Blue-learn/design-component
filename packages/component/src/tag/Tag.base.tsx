@@ -1,16 +1,18 @@
 import {
 	FontFamilyTokens,
-	SizeTypeTokens,
 	IconAlignmentTokens,
+	ImageSizeTokens,
+	SizeTypeTokens,
 	TagBaseProps,
 } from '@blue-learn/schema';
 import React, { memo, useMemo } from 'react';
-import { View, Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 import ThemeProvider from '@blue-learn/theme';
 import Typography from '../typography/Typography';
 import Icon from '../icon/Icon';
 import Space from '../space/Space';
 import Gradient from '../gradient/Gradient';
+import { Image } from '../image/Image';
 
 const TagBase: React.FC<TagBaseProps> = ({
 	label = 'Tag',
@@ -25,6 +27,7 @@ const TagBase: React.FC<TagBaseProps> = ({
 		vertical: SizeTypeTokens.SM,
 	},
 	margin,
+	image,
 }) => {
 	const theme = ThemeProvider.getTheme();
 
@@ -61,7 +64,6 @@ const TagBase: React.FC<TagBaseProps> = ({
 			alignItems: 'center',
 			backgroundColor: backgroundColor,
 			borderRadius: borderRadiusValue,
-			margin: 1,
 			paddingTop: paddingTop,
 			paddingBottom: paddingBottom,
 			paddingLeft: paddingLeft,
@@ -93,11 +95,24 @@ const TagBase: React.FC<TagBaseProps> = ({
 					icon?.name && (
 						<>
 							<Icon {...icon} />
-							{label && (
-								<Space size={SizeTypeTokens.SM} />
-							)}
+							{label && [
+								<Space size={SizeTypeTokens.SM} />,
+								<Space size={SizeTypeTokens.XS} />,
+							]}
 						</>
 					)}
+				{image && image?.uri
+					? [
+							<Image
+								size={image?.size || ImageSizeTokens.XXXS}
+								{...image}
+							/>,
+							label && [
+								<Space size={SizeTypeTokens.SM} />,
+								<Space size={SizeTypeTokens.XS} />,
+							],
+					  ]
+					: null}
 				<Typography
 					label={label}
 					fontSize={fontSize}
@@ -107,15 +122,22 @@ const TagBase: React.FC<TagBaseProps> = ({
 				{icon?.align === IconAlignmentTokens.right &&
 					icon?.name && (
 						<>
-							{label && (
-								<Space size={SizeTypeTokens.SM} />
-							)}
+							{label && [
+								<Space size={SizeTypeTokens.SM} />,
+								<Space size={SizeTypeTokens.XS} />,
+							]}
 							<Icon {...icon} />
 						</>
 					)}
 			</View>
 		),
-		[label, icon, backgroundColor],
+		[
+			label,
+			icon,
+			backgroundColor,
+			labelColor,
+			image,
+		],
 	);
 
 	if (!label) return null;

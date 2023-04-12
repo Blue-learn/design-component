@@ -1,4 +1,7 @@
-import { UserCardProps } from '@blue-learn/schema';
+import {
+	SizeTypeTokens,
+	UserCardProps,
+} from '@blue-learn/schema';
 
 export const args: UserCardProps = {
 	title: 'Saidatta Sahu',
@@ -7,6 +10,11 @@ export const args: UserCardProps = {
 	avatar:
 		'https://reactnative.dev/img/tiny_logo.png',
 	location: 'Bangalore, India',
+	padding: {
+		vertical: SizeTypeTokens.MD,
+		horizontal: SizeTypeTokens.LG,
+	},
+	onPress: () => {},
 };
 
 export const argTypes = {};
