@@ -1,6 +1,7 @@
 import {
 	ApplicantCardProps,
 	ApplicationSeenTokens,
+	ColorTokens,
 } from '@blue-learn/schema';
 
 export const args: ApplicantCardProps = {
@@ -19,7 +20,8 @@ export const args: ApplicantCardProps = {
 	state: ApplicationSeenTokens.SEEN,
 	powState: ApplicationSeenTokens.SEEN,
 	assignmentState: ApplicationSeenTokens.SEEN,
-	status: 'Rejected',
+	tagColor: ColorTokens.Accent_100,
+	status: 'Good Fit',
 	onPress: () => {},
 };
 
@@ -41,5 +43,9 @@ export const argTypes = {
 		options: [
 			...Object.values(ApplicationSeenTokens),
 		],
+	},
+	tagColor: {
+		control: 'select',
+		options: [...Object.values(ColorTokens)],
 	},
 };

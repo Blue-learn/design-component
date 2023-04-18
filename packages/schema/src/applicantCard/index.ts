@@ -15,6 +15,7 @@ export type ApplicantCardProps = {
 	state?: ApplicationSeenTokens;
 	powState?: ApplicationSeenTokens;
 	assignmentState?: ApplicationSeenTokens;
+	tagColor?: ColorTokens;
 	status?: string;
 	avatar: string;
 	title: string;

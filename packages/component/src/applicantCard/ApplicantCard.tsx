@@ -17,7 +17,7 @@ import {
 	TypographyTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
@@ -50,6 +50,7 @@ const ApplicantCard: React.FunctionComponent<
 	status,
 	powState,
 	assignmentState,
+	tagColor,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	if (!title) return <></>;
@@ -67,6 +68,25 @@ const ApplicantCard: React.FunctionComponent<
 		}),
 		[],
 	);
+
+	const containerStyleProps = React.useMemo(
+		() => ({
+			borderLeftWidth:
+				state === ApplicationSeenTokens.UNSEEN
+					? 4
+					: 0,
+			borderColor:
+				theme.colors[ColorTokens.Primary_500],
+			borderRadius: theme.borderRadius[borderRadius],
+			paddingVertical: 12,
+			paddingRight: 12,
+			paddingLeft:
+				state === ApplicationSeenTokens.UNSEEN
+					? 8
+					: 12,
+		}),
+		[state, borderRadius],
+	);
 	return (
 		<Card
 			bgColor={bgColor}
@@ -76,33 +96,8 @@ const ApplicantCard: React.FunctionComponent<
 			margin={margin}
 			header={{
 				children: (
-					<View
-						style={{
-							borderLeftWidth:
-								state === ApplicationSeenTokens.UNSEEN
-									? 4
-									: 0,
-							borderColor:
-								theme.colors[ColorTokens.Primary_500],
-							borderRadius:
-								theme.borderRadius[borderRadius],
-							paddingVertical: 12,
-							paddingRight: 12,
-							paddingLeft:
-								state === ApplicationSeenTokens.UNSEEN
-									? 8
-									: 12,
-						}}
-					>
-						<View
-							style={{
-								position: 'absolute',
-								zIndex: 5,
-								right: -6,
-								top: -6,
-								flexDirection: 'row',
-							}}
-						>
+					<View style={containerStyleProps}>
+						<View style={styles.tagContainer}>
 							{powState ===
 								ApplicationSeenTokens.UNSEEN && (
 								<View style={tagStyleProps}>
@@ -146,7 +141,7 @@ const ApplicantCard: React.FunctionComponent<
 								StackJustifyContent.spaceBetween
 							}
 						>
-							<View style={{ flex: 1 }}>
+							<View style={styles.flexContainer}>
 								<Stack
 									type={StackType.row}
 									alignItems={StackAlignItems.center}
@@ -157,7 +152,7 @@ const ApplicantCard: React.FunctionComponent<
 									/>
 									<Space size={SizeTypeTokens.MD} />
 
-									<View style={{ flex: 1 }}>
+									<View style={styles.flexContainer}>
 										<Stack
 											type={StackType.row}
 											alignItems={StackAlignItems.center}
@@ -168,7 +163,12 @@ const ApplicantCard: React.FunctionComponent<
 												numberOfLines={1}
 											/>
 											<Space size={SizeTypeTokens.MD} />
-											<Tag label={status} />
+											<Tag
+												label={status}
+												bgColor={
+													tagColor || ColorTokens.Secondary_100
+												}
+											/>
 										</Stack>
 										<Typography
 											label={subtitle}
@@ -211,6 +211,19 @@ const ApplicantCard: React.FunctionComponent<
 		/>
 	);
 };
+
+const styles = StyleSheet.create({
+	tagContainer: {
+		position: 'absolute',
+		zIndex: 5,
+		right: -6,
+		top: -6,
+		flexDirection: 'row',
+	},
+	flexContainer: {
+		flex: 1,
+	},
+});
 
 export default React.memo(ApplicantCard);
 export { ApplicantCard };
