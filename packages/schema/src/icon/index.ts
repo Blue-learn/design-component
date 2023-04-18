@@ -118,8 +118,11 @@ export enum IconTokens {
 	Document = 'document',
 	DiscussionFilled = 'discussion-filled',
 	DiscussionOutline = 'discussion-outline',
-	calendarFilled = 'calendar-filled',
+	CalendarFilled = 'calendar-filled',
 	UpArrow = 'up-arrow',
+	Assignment = 'assignment',
+	DocumentFilled = 'document-filled',
+	POW = 'proof-of-work',
 }
 
 export enum IconSizeTokens {
