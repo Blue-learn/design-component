@@ -119,6 +119,7 @@ export enum IconTokens {
 	DiscussionFilled = 'discussion-filled',
 	DiscussionOutline = 'discussion-outline',
 	calendarFilled = 'calendar-filled',
+	UpArrow = 'up-arrow',
 }
 
 export enum IconSizeTokens {
