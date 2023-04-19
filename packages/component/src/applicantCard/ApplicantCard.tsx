@@ -1,11 +1,12 @@
 import React from 'react';
 import {
 	ApplicantCardProps,
-	ApplicationStateTokens,
+	ApplicationSeenTokens,
 	AvatarSizeTokens,
 	BorderRadiusTokens,
-	ButtonTypeTokens,
 	ColorTokens,
+	DividerSizeTokens,
+	FontTransformToken,
 	IconSizeTokens,
 	IconTokens,
 	SizeTypeTokens,
@@ -16,19 +17,16 @@ import {
 	TypographyTypeTokens,
 	WidgetProps,
 } from '@blue-learn/schema';
-import {
-	Image,
-	Pressable,
-	View,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Card from '../card/Card';
 import Stack from '../stack/Stack';
 import Typography from '../typography/Typography';
 import Avatar from '../avatar/Avatar';
 import Space from '../space/Space';
-import Button from '../button/Button';
 import ThemeProvider from '@blue-learn/theme';
-import { Icon } from '../icon/Icon';
+import { Divider } from '../divider/Divider';
+import Tag from '../tag/Tag';
+import Icon from '../icon/Icon';
 
 const ApplicantCard: React.FunctionComponent<
 	ApplicantCardProps & WidgetProps
@@ -36,36 +34,58 @@ const ApplicantCard: React.FunctionComponent<
 	avatar,
 	title,
 	subtitle,
+	description,
 	margin = {
 		bottom: SizeTypeTokens.XL,
 	},
 	onPress,
-	chatCTA,
 	unreadCount,
-	projectTitle,
-	projectImage,
-	projectCTA,
 	state,
 	padding = {
 		vertical: SizeTypeTokens.NONE,
 		horizontal: SizeTypeTokens.NONE,
 	},
 	bgColor = ColorTokens.Grey_50,
-	borderRadius = BorderRadiusTokens.BR2,
+	borderRadius = BorderRadiusTokens.BR1,
 	status,
-	applicationUpdateStatus,
+	powState,
+	assignmentState,
+	tagColor,
 }) => {
 	const theme = ThemeProvider.getTheme();
 	if (!title) return <></>;
-	const styleProps = React.useMemo(
+
+	const tagStyleProps = React.useMemo(
 		() => ({
-			width: 56,
-			height: 'auto',
-			borderTopLeftRadius: 8,
-			borderBottomLeftRadius: 8,
-			aspectRatio: 1.5,
+			width: 16,
+			height: 16,
+			borderRadius: 8,
+			justifyContent: 'center',
+			alignItems: 'center',
+			marginLeft: 2,
+			backgroundColor:
+				theme.colors[ColorTokens.Primary_400],
 		}),
-		[projectImage],
+		[],
+	);
+
+	const containerStyleProps = React.useMemo(
+		() => ({
+			borderLeftWidth:
+				state === ApplicationSeenTokens.UNSEEN
+					? 4
+					: 0,
+			borderColor:
+				theme.colors[ColorTokens.Primary_500],
+			borderRadius: theme.borderRadius[borderRadius],
+			paddingVertical: 12,
+			paddingRight: 12,
+			paddingLeft:
+				state === ApplicationSeenTokens.UNSEEN
+					? 8
+					: 12,
+		}),
+		[state, borderRadius],
 	);
 	return (
 		<Card
@@ -76,24 +96,44 @@ const ApplicantCard: React.FunctionComponent<
 			margin={margin}
 			header={{
 				children: (
-					<View
-						style={{
-							borderLeftWidth:
-								state === ApplicationStateTokens.UNSEEN
-									? 4
-									: 0,
-							borderColor:
-								theme.colors[ColorTokens.Primary_500],
-							borderRadius:
-								theme.borderRadius[borderRadius],
-							paddingVertical: 12,
-							paddingLeft:
-								state === ApplicationStateTokens.UNSEEN
-									? 8
-									: 12,
-							paddingRight: 12,
-						}}
-					>
+					<View style={containerStyleProps}>
+						<View style={styles.tagContainer}>
+							{powState ===
+								ApplicationSeenTokens.UNSEEN && (
+								<View style={tagStyleProps}>
+									<Icon
+										name={IconTokens.POW}
+										size={IconSizeTokens.XXS}
+										color={ColorTokens.Grey_50}
+									/>
+								</View>
+							)}
+							{assignmentState ===
+								ApplicationSeenTokens.UNSEEN && (
+								<View style={tagStyleProps}>
+									<Icon
+										name={IconTokens.Assignment}
+										size={IconSizeTokens.XXS}
+										color={ColorTokens.Grey_50}
+									/>
+								</View>
+							)}
+							{unreadCount > 0 && (
+								<View style={tagStyleProps}>
+									<Typography
+										label={
+											unreadCount < 10
+												? unreadCount.toString()
+												: '9+'
+										}
+										textAlign={TextAlignTokens.center}
+										type={TypographyTypeTokens.BODY_2XS}
+										color={ColorTokens.Grey_50}
+									/>
+								</View>
+							)}
+						</View>
+
 						<Stack
 							type={StackType.row}
 							alignItems={StackAlignItems.center}
@@ -101,11 +141,7 @@ const ApplicantCard: React.FunctionComponent<
 								StackJustifyContent.spaceBetween
 							}
 						>
-							<View
-								style={{
-									flex: 1,
-								}}
-							>
+							<View style={styles.flexContainer}>
 								<Stack
 									type={StackType.row}
 									alignItems={StackAlignItems.center}
@@ -116,16 +152,9 @@ const ApplicantCard: React.FunctionComponent<
 									/>
 									<Space size={SizeTypeTokens.MD} />
 
-									<View
-										style={{
-											flex: 1,
-										}}
-									>
+									<View style={styles.flexContainer}>
 										<Stack
 											type={StackType.row}
-											justifyContent={
-												StackJustifyContent.spaceBetween
-											}
 											alignItems={StackAlignItems.center}
 										>
 											<Typography
@@ -133,53 +162,13 @@ const ApplicantCard: React.FunctionComponent<
 												type={TypographyTypeTokens.HEADING_MD}
 												numberOfLines={1}
 											/>
-											<Pressable onPress={chatCTA}>
-												{unreadCount > 0 ? (
-													<View
-														style={{
-															position: 'absolute',
-															zIndex: 5,
-															right: -2,
-															top: -2,
-															width: 18,
-															height: 18,
-															borderRadius: 9,
-															borderWidth: 2,
-															borderColor:
-																theme.colors[ColorTokens.Grey_50],
-															justifyContent: 'center',
-															backgroundColor:
-																theme.colors[
-																	ColorTokens.Error_100
-																],
-														}}
-													>
-														<Typography
-															label={
-																unreadCount < 10
-																	? unreadCount.toString()
-																	: '9+'
-															}
-															textAlign={TextAlignTokens.center}
-															type={
-																TypographyTypeTokens.BODY_2XS
-															}
-															color={ColorTokens.Grey_50}
-														/>
-													</View>
-												) : (
-													<></>
-												)}
-												<Button
-													type={ButtonTypeTokens.IconGhost}
-													labelColor={ColorTokens.Grey_800}
-													icon={{
-														name: IconTokens.Chat,
-														size: IconSizeTokens.XL,
-													}}
-													onPress={chatCTA}
-												/>
-											</Pressable>
+											<Space size={SizeTypeTokens.MD} />
+											<Tag
+												label={status}
+												bgColor={
+													tagColor || ColorTokens.Secondary_100
+												}
+											/>
 										</Stack>
 										<Typography
 											label={subtitle}
@@ -192,107 +181,49 @@ const ApplicantCard: React.FunctionComponent<
 								</Stack>
 							</View>
 						</Stack>
-						<Space
-							size={
-								projectImage && projectTitle
-									? SizeTypeTokens.XL
-									: SizeTypeTokens.NONE
+						<Divider
+							size={DividerSizeTokens.SM}
+							margin={{ vertical: SizeTypeTokens.XL }}
+						/>
+						<Typography
+							type={
+								TypographyTypeTokens.BODY_2XS_PLACEHOLDER
+							}
+							textTransform={
+								FontTransformToken.uppercase
+							}
+							label={
+								'Top things to know about ' +
+								title.trim().split(' ')[0] +
+								' :'
 							}
 						/>
-						{projectImage && projectTitle ? (
-							<Pressable
-								onPress={projectCTA}
-								style={{
-									borderRadius: 8,
-									backgroundColor:
-										theme.colors[ColorTokens.Grey_100],
-									flexDirection: 'row',
-									alignItems: 'center',
-									justifyContent: 'space-between',
-								}}
-							>
-								<Image
-									style={styleProps}
-									source={{
-										uri: projectImage,
-									}}
-								/>
-								<Space size={SizeTypeTokens.LG} />
-								<View
-									style={{ flex: 1, paddingVertical: 4 }}
-								>
-									<Typography
-										type={
-											TypographyTypeTokens.SUBHEADING_XS_SECONDARY
-										}
-										label={projectTitle}
-									/>
-								</View>
-							</Pressable>
-						) : (
-							<></>
-						)}
-
-						<Space
-							size={
-								status || applicationUpdateStatus
-									? SizeTypeTokens.XL
-									: SizeTypeTokens.NONE
+						<Space size={SizeTypeTokens.SM} />
+						<Typography
+							type={
+								TypographyTypeTokens.BODY_XS_SECONDARY
 							}
+							label={description}
 						/>
-						{status || applicationUpdateStatus ? (
-							<View
-								style={{
-									alignSelf: 'flex-end',
-									flexDirection: 'row',
-									alignItems: 'center',
-								}}
-							>
-								{status ? (
-									<Typography
-										type={
-											TypographyTypeTokens.SUBHEADING_2XS
-										}
-										label={status}
-										color={
-											status?.toLowerCase()?.includes('good')
-												? ColorTokens.Accent_900
-												: status
-														?.toLowerCase()
-														?.includes('reject')
-												? ColorTokens.Error_200
-												: ColorTokens.Grey_600
-										}
-									/>
-								) : (
-									<></>
-								)}
-								<Space size={SizeTypeTokens.SM} />
-								{status ? (
-									<Icon
-										name={IconTokens.Dot}
-										size={IconSizeTokens.XXS}
-										color={ColorTokens.Grey_600}
-									/>
-								) : (
-									<></>
-								)}
-								<Space size={SizeTypeTokens.SM} />
-								<Typography
-									type={TypographyTypeTokens.BODY_2XS}
-									label={applicationUpdateStatus}
-									color={ColorTokens.Grey_600}
-								/>
-							</View>
-						) : (
-							<></>
-						)}
 					</View>
 				),
 			}}
 		/>
 	);
 };
+
+const styles = StyleSheet.create({
+	tagContainer: {
+		position: 'absolute',
+		zIndex: 5,
+		right: -6,
+		top: -6,
+		flexDirection: 'row',
+	},
+	flexContainer: {
+		flex: 1,
+	},
+});
 
 export default React.memo(ApplicantCard);
 export { ApplicantCard };

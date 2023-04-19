@@ -101,6 +101,9 @@ import DiscussionOutline from './icon-list/DiscussionOutline';
 import DiscussionFilled from './icon-list/DiscussionFilled';
 import CalendarFilled from './icon-list/CalendarFilled';
 import UpArrow from './icon-list/UpArrow';
+import POW from './icon-list/POW';
+import DocumentFilled from './icon-list/DocumentFilled';
+import Assignment from './icon-list/Assignment';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -202,6 +205,9 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.DiscussionOutline]:
 		DiscussionOutline,
 	[IconTokens.TwoUsersFilled]: TwoUsersFilled,
-	[IconTokens.calendarFilled]: CalendarFilled,
+	[IconTokens.CalendarFilled]: CalendarFilled,
 	[IconTokens.UpArrow]: UpArrow,
+	[IconTokens.POW]: POW,
+	[IconTokens.Assignment]: Assignment,
+	[IconTokens.DocumentFilled]: DocumentFilled,
 };
