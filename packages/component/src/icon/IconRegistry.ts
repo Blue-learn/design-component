@@ -104,6 +104,10 @@ import UpArrow from './icon-list/UpArrow';
 import POW from './icon-list/POW';
 import DocumentFilled from './icon-list/DocumentFilled';
 import Assignment from './icon-list/Assignment';
+import QuestionMark from './icon-list/QuestionMark';
+import Refresh from './icon-list/Refresh';
+import LocationAim from './icon-list/LocationAim';
+import Lock from './icon-list/Lock';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -210,4 +214,8 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.POW]: POW,
 	[IconTokens.Assignment]: Assignment,
 	[IconTokens.DocumentFilled]: DocumentFilled,
+	[IconTokens.QuestionMark]: QuestionMark,
+	[IconTokens.Lock]: Lock,
+	[IconTokens.Refresh]: Refresh,
+	[IconTokens.LocationAim]: LocationAim,
 };

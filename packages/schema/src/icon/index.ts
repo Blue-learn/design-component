@@ -123,6 +123,10 @@ export enum IconTokens {
 	Assignment = 'assignment',
 	DocumentFilled = 'document-filled',
 	POW = 'proof-of-work',
+	Lock = 'lock',
+	QuestionMark = 'question-mark',
+	Refresh = 'refresh',
+	LocationAim = 'location-aim',
 }
 
 export enum IconSizeTokens {
