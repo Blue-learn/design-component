@@ -69,7 +69,6 @@ export enum IconTokens {
 	Sticker = 'sticker',
 	Bluelearn = 'bluelearn',
 	TwoUsers = 'two-users',
-
 	TwoUsersFilled = 'two-users-filled',
 	Check = 'check',
 	Dot = 'dot',
@@ -128,6 +127,8 @@ export enum IconTokens {
 	Refresh = 'refresh',
 	LocationAim = 'location-aim',
 	Apple = 'apple',
+	Smile = 'smile',
+	Hat = 'hat',
 }
 
 export enum IconSizeTokens {
