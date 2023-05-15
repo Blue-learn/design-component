@@ -108,6 +108,7 @@ import QuestionMark from './icon-list/QuestionMark';
 import Refresh from './icon-list/Refresh';
 import LocationAim from './icon-list/LocationAim';
 import Lock from './icon-list/Lock';
+import Apple from './icon-list/Apple';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -218,4 +219,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Lock]: Lock,
 	[IconTokens.Refresh]: Refresh,
 	[IconTokens.LocationAim]: LocationAim,
+	[IconTokens.Apple]: Apple,
 };

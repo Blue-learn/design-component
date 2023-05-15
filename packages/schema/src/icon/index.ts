@@ -127,6 +127,7 @@ export enum IconTokens {
 	QuestionMark = 'question-mark',
 	Refresh = 'refresh',
 	LocationAim = 'location-aim',
+	Apple = 'apple',
 }
 
 export enum IconSizeTokens {
