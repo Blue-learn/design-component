@@ -1,6 +1,6 @@
 {
 		"name": "@blue-learn/component",
-		"version": "0.0.62",
+		"version": "0.0.63",
 		"main": "lib/index.js",
 		"types": "lib/index.d.ts",
 		"repository": "ssh://git@github.com:Blue-learn/design-component.git",
@@ -13,7 +13,7 @@
 				"publish": "npm publish --access public"
 		},
 		"devDependencies": {
-				"@blue-learn/schema": "^0.0.62",
+				"@blue-learn/schema": "^0.0.63",
 				"@blue-learn/theme": "^0.0.59",
 				"@types/react": "^17.0.38",
 				"react": "^17.0.2",
