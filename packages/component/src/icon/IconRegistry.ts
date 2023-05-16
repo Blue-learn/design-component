@@ -104,6 +104,25 @@ import UpArrow from './icon-list/UpArrow';
 import POW from './icon-list/POW';
 import DocumentFilled from './icon-list/DocumentFilled';
 import Assignment from './icon-list/Assignment';
+import QuestionMark from './icon-list/QuestionMark';
+import Refresh from './icon-list/Refresh';
+import LocationAim from './icon-list/LocationAim';
+import Lock from './icon-list/Lock';
+import Apple from './icon-list/Apple';
+import Hat from './icon-list/Hat';
+import Smile from './icon-list/Smile';
+import POWAdded from './icon-list/POWAdded';
+import POWAdd from './icon-list/POWAdd';
+import POWRequested from './icon-list/POWRequested';
+import POWView from './icon-list/POWView';
+import AssignmentAdd from './icon-list/AssignmentAdd';
+import AssignmentAdded from './icon-list/AssignmentAdded';
+import AssignmentReminder from './icon-list/AssignmentReminder';
+import AssignmentRequested from './icon-list/AssignmentRequested';
+import AssignmentView from './icon-list/AssignmentView';
+import LocationFilled from './icon-list/LocationFilled';
+import NotEqual from './icon-list/NotEqual';
+import EditOutline from './icon-list/EditOutline';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -208,6 +227,27 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.CalendarFilled]: CalendarFilled,
 	[IconTokens.UpArrow]: UpArrow,
 	[IconTokens.POW]: POW,
+	[IconTokens.POWAdd]: POWAdd,
+	[IconTokens.POWAdded]: POWAdded,
+	[IconTokens.POWRequested]: POWRequested,
+	[IconTokens.POWView]: POWView,
 	[IconTokens.Assignment]: Assignment,
+	[IconTokens.AssignmentAdd]: AssignmentAdd,
+	[IconTokens.AssignmentAdded]: AssignmentAdded,
+	[IconTokens.AssignmentReminder]:
+		AssignmentReminder,
+	[IconTokens.AssignmentRequested]:
+		AssignmentRequested,
+	[IconTokens.AssignmentView]: AssignmentView,
 	[IconTokens.DocumentFilled]: DocumentFilled,
+	[IconTokens.QuestionMark]: QuestionMark,
+	[IconTokens.Lock]: Lock,
+	[IconTokens.Refresh]: Refresh,
+	[IconTokens.LocationAim]: LocationAim,
+	[IconTokens.Apple]: Apple,
+	[IconTokens.Hat]: Hat,
+	[IconTokens.Smile]: Smile,
+	[IconTokens.LocationFilled]: LocationFilled,
+	[IconTokens.NotEqual]: NotEqual,
+	[IconTokens.EditOutline]: EditOutline,
 };

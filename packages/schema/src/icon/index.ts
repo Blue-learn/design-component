@@ -69,7 +69,6 @@ export enum IconTokens {
 	Sticker = 'sticker',
 	Bluelearn = 'bluelearn',
 	TwoUsers = 'two-users',
-
 	TwoUsersFilled = 'two-users-filled',
 	Check = 'check',
 	Dot = 'dot',
@@ -123,6 +122,25 @@ export enum IconTokens {
 	Assignment = 'assignment',
 	DocumentFilled = 'document-filled',
 	POW = 'proof-of-work',
+	Lock = 'lock',
+	QuestionMark = 'question-mark',
+	Refresh = 'refresh',
+	LocationAim = 'location-aim',
+	Apple = 'apple',
+	Smile = 'smile',
+	Hat = 'hat',
+	POWRequested = 'proof-of-work-requested',
+	POWView = 'proof-of-work-view',
+	POWAdd = 'proof-of-work-add',
+	POWAdded = 'proof-of-work-added',
+	AssignmentRequested = 'assignment-requested',
+	AssignmentView = 'assignment-view',
+	AssignmentAdd = 'assignment-add',
+	AssignmentAdded = 'assignment-added',
+	AssignmentReminder = 'assignment-reminder',
+	NotEqual = 'not-equal',
+	LocationFilled = 'location-filled',
+	EditOutline = 'edit-outline',
 }
 
 export enum IconSizeTokens {

@@ -1,30 +1,32 @@
-import * as React from "react"
-import Svg, { Path } from "react-native-svg"
+import * as React from 'react';
+import Svg, { Path } from 'react-native-svg';
 
 function LocationPin(props) {
-    return (
-    <Svg
-        width={props.size}
-        height={props.size}
-        viewBox="0 0 12 14"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        {...props}
-    >
-        <Path
-            d="M7.667 6a1.667 1.667 0 10-3.334 0 1.667 1.667 0 003.334 0z"
-            stroke={props.color}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        />
-        <Path
-            d="M6 13c-.8 0-5-3.401-5-6.958C1 3.258 3.238 1 6 1c2.761 0 5 2.258 5 5.042C11 9.6 6.799 13 6 13z"
-            stroke={props.color}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        />
-    </Svg>
-    )
+	return (
+		<Svg
+			width={props.size}
+			height={props.size}
+			viewBox='0 0 24 24'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+			{...props}
+		>
+			<Path
+				d='M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z'
+				stroke={props.color}
+				strokeWidth={1.5}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<Path
+				d='M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z'
+				stroke={props.color}
+				strokeWidth={1.5}
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+		</Svg>
+	);
 }
 
-export default LocationPin
+export default LocationPin;

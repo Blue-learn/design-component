@@ -7,7 +7,6 @@ import {
 import {
 	AspectRatioToken,
 	BorderRadiusTokens,
-	ColorTokens,
 	ImageProps,
 	ImageSizeTokens,
 	ResizeModeToken,
@@ -55,8 +54,6 @@ const Image: React.FunctionComponent<
 			borderWidth: borderColor ? 3 : 0,
 			aspectRatio: aspectRatioValue,
 			borderColor: borderColorValue,
-			backgroundColor:
-				theme.colors[ColorTokens.Grey_50],
 		}),
 		[
 			sizeValue,
