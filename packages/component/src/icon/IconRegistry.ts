@@ -120,6 +120,9 @@ import AssignmentAdded from './icon-list/AssignmentAdded';
 import AssignmentReminder from './icon-list/AssignmentReminder';
 import AssignmentRequested from './icon-list/AssignmentRequested';
 import AssignmentView from './icon-list/AssignmentView';
+import LocationFilled from './icon-list/LocationFilled';
+import NotEqual from './icon-list/NotEqual';
+import EditOutline from './icon-list/EditOutline';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -244,4 +247,7 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Apple]: Apple,
 	[IconTokens.Hat]: Hat,
 	[IconTokens.Smile]: Smile,
+	[IconTokens.LocationFilled]: LocationFilled,
+	[IconTokens.NotEqual]: NotEqual,
+	[IconTokens.EditOutline]: EditOutline,
 };

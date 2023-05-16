@@ -138,6 +138,9 @@ export enum IconTokens {
 	AssignmentAdd = 'assignment-add',
 	AssignmentAdded = 'assignment-added',
 	AssignmentReminder = 'assignment-reminder',
+	NotEqual = 'not-equal',
+	LocationFilled = 'location-filled',
+	EditOutline = 'edit-outline',
 }
 
 export enum IconSizeTokens {
