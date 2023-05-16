@@ -6,14 +6,17 @@ function Check(props) {
 		<Svg
 			width={props.size}
 			height={props.size}
-			viewBox='0 0 14 14'
+			viewBox='0 0 24 24'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 			{...props}
 		>
 			<Path
-				d='M4.551 12.48a1.482 1.482 0 01-1.05-.436L.327 8.871a.875.875 0 010-1.237.875.875 0 011.237 0L4.55 10.62l7.903-7.903a.875.875 0 011.237 0 .875.875 0 010 1.237l-8.09 8.09a1.482 1.482 0 01-1.05.435z'
-				fill={props.color}
+				d='M20 6L9 17L4 12'
+				stroke={props.color}
+				strokeWidth={2}
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 		</Svg>
 	);

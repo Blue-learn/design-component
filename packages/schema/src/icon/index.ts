@@ -129,6 +129,15 @@ export enum IconTokens {
 	Apple = 'apple',
 	Smile = 'smile',
 	Hat = 'hat',
+	POWRequested = 'proof-of-work-requested',
+	POWView = 'proof-of-work-view',
+	POWAdd = 'proof-of-work-add',
+	POWAdded = 'proof-of-work-added',
+	AssignmentRequested = 'assignment-requested',
+	AssignmentView = 'assignment-view',
+	AssignmentAdd = 'assignment-add',
+	AssignmentAdded = 'assignment-added',
+	AssignmentReminder = 'assignment-reminder',
 }
 
 export enum IconSizeTokens {
