@@ -12,7 +12,7 @@ export const chipTypeTokensMap: ChipTypeTokensMap =
 		[ChipTypeTokens.SMALL_SELECTED]: {
 			borderRadius: BorderRadiusTokens.BR4,
 			fontSize: FontSizeTokens.XS,
-			borderColor: ColorTokens.Primary_50,
+			borderColor: ColorTokens.Primary_100,
 			labelColor: ColorTokens.Grey_800,
 			padding: {
 				vertical: SizeTypeTokens.SM,
@@ -32,7 +32,7 @@ export const chipTypeTokensMap: ChipTypeTokensMap =
 		[ChipTypeTokens.MEDIUM_SELECTED]: {
 			borderRadius: BorderRadiusTokens.BR4,
 			fontSize: FontSizeTokens.XS,
-			borderColor: ColorTokens.Primary_50,
+			borderColor: ColorTokens.Primary_100,
 			labelColor: ColorTokens.Grey_800,
 			padding: {
 				vertical: SizeTypeTokens.MD,
