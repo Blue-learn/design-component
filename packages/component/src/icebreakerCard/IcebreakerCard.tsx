@@ -59,6 +59,7 @@ const IcebreakerCard: React.FunctionComponent<
 						<Typography
 							label={subtitle}
 							type={TypographyTypeTokens.BODY_SM}
+							numberOfLines={3}
 						/>
 						<Space
 							size={

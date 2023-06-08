@@ -31,9 +31,9 @@ export const tagTypeTokensMap: TagTypeTokensMap =
 		},
 		[TagTypeTokens.SECONDARY]: {
 			fontSize: FontSizeTokens.XXS,
-			labelColor: ColorTokens.Grey_100,
-			bgColor: ColorTokens.Black_20,
-			borderRadius: BorderRadiusTokens.BR4,
+			labelColor: ColorTokens.Grey_800,
+			bgColor: ColorTokens.Accent_100,
+			borderRadius: BorderRadiusTokens.BR1,
 			padding: {
 				horizontal: SizeTypeTokens.MD,
 				vertical: SizeTypeTokens.SM,
