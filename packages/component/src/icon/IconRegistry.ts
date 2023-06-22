@@ -132,6 +132,12 @@ import Insights from './icon-list/Insights';
 import HeartFilled from './icon-list/HeartFilled';
 import HeartOutline from './icon-list/HeartOutline';
 import ClockFilled from './icon-list/ClockFilled';
+import UpvoteFilled from './icon-list/UpvoteFilled';
+import UpvoteOutline from './icon-list/UpvoteOutline';
+import DownvoteOutline from './icon-list/DownvoteOutline';
+import DownvoteFilled from './icon-list/DownvoteFlled';
+import Reply from './icon-list/Reply';
+import ThreeDotsHorizontal from './icon-list/ThreeDotsHorizontal';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -268,4 +274,11 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.HeartFilled]: HeartFilled,
 	[IconTokens.HeartOutline]: HeartOutline,
 	[IconTokens.ClockFilled]: ClockFilled,
+	[IconTokens.UpvoteFilled]: UpvoteFilled,
+	[IconTokens.UpvoteOutline]: UpvoteOutline,
+	[IconTokens.DownvoteFilled]: DownvoteFilled,
+	[IconTokens.DownvoteOutline]: DownvoteOutline,
+	[IconTokens.Reply]: Reply,
+	[IconTokens.ThreeDotsHorizontal]:
+		ThreeDotsHorizontal,
 };

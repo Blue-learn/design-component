@@ -150,6 +150,12 @@ export enum IconTokens {
 	HeartOutline = 'heart-outline',
 	Insight = 'insight',
 	ClockFilled = 'clock-filled',
+	UpvoteFilled = 'upvote-filled',
+	UpvoteOutline = 'upvote-outline',
+	DownvoteFilled = 'downvote-filled',
+	DownvoteOutline = 'downvote-outline',
+	Reply = 'reply',
+	ThreeDotsHorizontal = 'three-dots-horizontal',
 }
 
 export enum IconSizeTokens {
