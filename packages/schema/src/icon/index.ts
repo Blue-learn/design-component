@@ -141,6 +141,23 @@ export enum IconTokens {
 	NotEqual = 'not-equal',
 	LocationFilled = 'location-filled',
 	EditOutline = 'edit-outline',
+	LeftChevron = 'left-chevron',
+	RightChevron = 'right-chevron',
+	CircleFilled = 'circle-filled',
+	Square = 'square',
+	Triangle = 'triangle',
+	HeartFilled = 'heart-filled',
+	HeartOutline = 'heart-outline',
+	Insight = 'insight',
+	ClockFilled = 'clock-filled',
+	UpvoteFilled = 'upvote-filled',
+	UpvoteOutline = 'upvote-outline',
+	DownvoteFilled = 'downvote-filled',
+	DownvoteOutline = 'downvote-outline',
+	Reply = 'reply',
+	ThreeDotsHorizontal = 'three-dots-horizontal',
+	Poll = 'poll',
+	Text = 'text',
 }
 
 export enum IconSizeTokens {
