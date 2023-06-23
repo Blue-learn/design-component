@@ -51,7 +51,7 @@ import Sticker from './icon-list/Sticker';
 import Bluelearn from './icon-list/Bluelearn';
 import TwoUsers from './icon-list/TwoUsers';
 import Check from './icon-list/Check';
-import Dot from './icon-list/Dot';
+import Dot from './icon-list/CircleFilled';
 import BulbFilled from './icon-list/BulbFilled';
 import BulbOutline from './icon-list/BulbOutlne';
 import CheckCircle from './icon-list/CheckCircle';
@@ -123,6 +123,23 @@ import AssignmentView from './icon-list/AssignmentView';
 import LocationFilled from './icon-list/LocationFilled';
 import NotEqual from './icon-list/NotEqual';
 import EditOutline from './icon-list/EditOutline';
+import Square from './icon-list/Square';
+import LeftChevron from './icon-list/LeftChevron';
+import RightChevron from './icon-list/RightChevron';
+import Triangle from './icon-list/Triangle';
+import CircleFilled from './icon-list/CircleFilled';
+import Insights from './icon-list/Insights';
+import HeartFilled from './icon-list/HeartFilled';
+import HeartOutline from './icon-list/HeartOutline';
+import ClockFilled from './icon-list/ClockFilled';
+import UpvoteFilled from './icon-list/UpvoteFilled';
+import UpvoteOutline from './icon-list/UpvoteOutline';
+import DownvoteOutline from './icon-list/DownvoteOutline';
+import DownvoteFilled from './icon-list/DownvoteFlled';
+import Reply from './icon-list/Reply';
+import ThreeDotsHorizontal from './icon-list/ThreeDotsHorizontal';
+import Poll from './icon-list/Poll';
+import Text from './icon-list/Text';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -250,4 +267,22 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.LocationFilled]: LocationFilled,
 	[IconTokens.NotEqual]: NotEqual,
 	[IconTokens.EditOutline]: EditOutline,
+	[IconTokens.Square]: Square,
+	[IconTokens.LeftChevron]: LeftChevron,
+	[IconTokens.RightChevron]: RightChevron,
+	[IconTokens.Triangle]: Triangle,
+	[IconTokens.CircleFilled]: CircleFilled,
+	[IconTokens.Insight]: Insights,
+	[IconTokens.HeartFilled]: HeartFilled,
+	[IconTokens.HeartOutline]: HeartOutline,
+	[IconTokens.ClockFilled]: ClockFilled,
+	[IconTokens.UpvoteFilled]: UpvoteFilled,
+	[IconTokens.UpvoteOutline]: UpvoteOutline,
+	[IconTokens.DownvoteFilled]: DownvoteFilled,
+	[IconTokens.DownvoteOutline]: DownvoteOutline,
+	[IconTokens.Reply]: Reply,
+	[IconTokens.ThreeDotsHorizontal]:
+		ThreeDotsHorizontal,
+	[IconTokens.Poll]: Poll,
+	[IconTokens.Text]: Text,
 };
