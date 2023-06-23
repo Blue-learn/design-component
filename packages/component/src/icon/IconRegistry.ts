@@ -139,6 +139,7 @@ import DownvoteFilled from './icon-list/DownvoteFlled';
 import Reply from './icon-list/Reply';
 import ThreeDotsHorizontal from './icon-list/ThreeDotsHorizontal';
 import Poll from './icon-list/Poll';
+import Text from './icon-list/Text';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -283,4 +284,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.ThreeDotsHorizontal]:
 		ThreeDotsHorizontal,
 	[IconTokens.Poll]: Poll,
+	[IconTokens.Text]: Text,
 };
