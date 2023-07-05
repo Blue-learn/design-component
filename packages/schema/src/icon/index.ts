@@ -38,6 +38,7 @@ export enum IconTokens {
 	Plus = 'plus',
 	Shuffle = 'shuffle',
 	MinusCircle = 'minus-circle',
+	Minus = 'minus',
 	Calendar = 'calendar',
 	Cake = 'cake',
 	BriefCase = 'briefcase',

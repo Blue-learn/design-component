@@ -140,6 +140,7 @@ import Reply from './icon-list/Reply';
 import ThreeDotsHorizontal from './icon-list/ThreeDotsHorizontal';
 import Poll from './icon-list/Poll';
 import Text from './icon-list/Text';
+import Minus from './icon-list/Minus';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -285,4 +286,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 		ThreeDotsHorizontal,
 	[IconTokens.Poll]: Poll,
 	[IconTokens.Text]: Text,
+	[IconTokens.Minus]: Minus,
 };
