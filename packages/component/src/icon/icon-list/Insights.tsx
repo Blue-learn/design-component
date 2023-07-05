@@ -14,21 +14,25 @@ function Insights(props) {
 			<Path
 				d='M6.5 11L6.5 21'
 				stroke={props.color}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 			/>
 			<Path
 				d='M10.5 4L10.5 21'
 				stroke={props.color}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 			/>
 			<Path
 				d='M14.5 15L14.5 21'
 				stroke={props.color}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 			/>
 			<Path
 				d='M18.5 8L18.5 21'
 				stroke={props.color}
+				strokeWidth={1.5}
 				strokeLinecap='round'
 			/>
 		</Svg>
