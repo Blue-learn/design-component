@@ -123,6 +123,7 @@ export enum IconTokens {
 	Assignment = 'assignment',
 	DocumentFilled = 'document-filled',
 	POW = 'proof-of-work',
+	POWOutline = 'proof-of-work-outline',
 	Lock = 'lock',
 	QuestionMark = 'question-mark',
 	Refresh = 'refresh',

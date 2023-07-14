@@ -142,6 +142,7 @@ import Poll from './icon-list/Poll';
 import Text from './icon-list/Text';
 import Minus from './icon-list/Minus';
 import Previous from './icon-list/Previous';
+import POWOutline from './icon-list/POWOutline';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -289,4 +290,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Text]: Text,
 	[IconTokens.Minus]: Minus,
 	[IconTokens.Previous]: Previous,
+	[IconTokens.POWOutline]: POWOutline,
 };
