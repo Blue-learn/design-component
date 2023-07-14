@@ -159,6 +159,7 @@ export enum IconTokens {
 	ThreeDotsHorizontal = 'three-dots-horizontal',
 	Poll = 'poll',
 	Text = 'text',
+	Previous = 'previous',
 }
 
 export enum IconSizeTokens {
