@@ -1,37 +1,37 @@
 {
-  "name": "@blue-learn/theme",
-  "version": "0.0.60",
-  "description": "> TODO: description",
-  "author": "soumyasethy <soumya@bluelearn.in>",
-  "homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
-  "license": "ISC",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": "ssh://git@github.com:Blue-learn/design-component.git",
-  "scripts": {
-    "setup": "npm i --legacy-peer-deps",
-    "build": "tsc",
-    "dev": "tsc -w",
-    "copy": "sh scripts/copy-dev.sh",
-    "version-bump": "npm version patch",
-    "publish": "npm publish --access public"
-  },
-  "devDependencies": {
-    "@blue-learn/schema": "^0.0.61",
-    "typescript": "^4.5.5"
-  },
-  "bugs": {
-    "url": "https://github.com/Blue-learn/design-component/issues"
-  },
-  "gitHead": "857fd575bbf509d7713cee0212d517f37af3b46d",
-  "publishConfig": {
-    "access": "public"
-  }
+		"name": "@blue-learn/theme",
+		"version": "0.0.61",
+		"description": "> TODO: description",
+		"author": "soumyasethy <soumya@bluelearn.in>",
+		"homepage": "https://github.com/Blue-learn/design-component/tree/main/packages/theme#readme",
+		"license": "ISC",
+		"main": "lib/index.js",
+		"types": "lib/index.d.ts",
+		"directories": {
+				"lib": "lib",
+				"test": "__tests__"
+		},
+		"files": [
+				"lib"
+		],
+		"repository": "ssh://git@github.com:Blue-learn/design-component.git",
+		"scripts": {
+				"setup": "npm i --legacy-peer-deps",
+				"build": "tsc",
+				"dev": "tsc -w",
+				"copy": "sh scripts/copy-dev.sh",
+				"version-bump": "npm version patch",
+				"publish": "npm publish --access public"
+		},
+		"devDependencies": {
+				"@blue-learn/schema": "^0.0.65",
+				"typescript": "^4.5.5"
+		},
+		"bugs": {
+				"url": "https://github.com/Blue-learn/design-component/issues"
+		},
+		"gitHead": "857fd575bbf509d7713cee0212d517f37af3b46d",
+		"publishConfig": {
+				"access": "public"
+		}
 }
