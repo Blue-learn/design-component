@@ -38,6 +38,7 @@ export enum IconTokens {
 	Plus = 'plus',
 	Shuffle = 'shuffle',
 	MinusCircle = 'minus-circle',
+	Minus = 'minus',
 	Calendar = 'calendar',
 	Cake = 'cake',
 	BriefCase = 'briefcase',
@@ -158,6 +159,7 @@ export enum IconTokens {
 	ThreeDotsHorizontal = 'three-dots-horizontal',
 	Poll = 'poll',
 	Text = 'text',
+	Previous = 'previous',
 }
 
 export enum IconSizeTokens {
