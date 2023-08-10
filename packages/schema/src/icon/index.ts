@@ -110,6 +110,7 @@ export enum IconTokens {
 	Save = 'save',
 	Camera = 'camera',
 	NorthWestArrow = 'north-west-arrow',
+	NorthEastArrow = 'north-east-arrow',
 	ExternalLink = 'external-link',
 	Earth = 'earth',
 	AddChat = 'add-chat',

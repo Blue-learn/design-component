@@ -144,6 +144,7 @@ import Minus from './icon-list/Minus';
 import Previous from './icon-list/Previous';
 import POWOutline from './icon-list/POWOutline';
 import HideKeyboard from './icon-list/HideKeyboard';
+import NorthEastArrow from './icon-list/NorthEastArrow';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -293,4 +294,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Previous]: Previous,
 	[IconTokens.POWOutline]: POWOutline,
 	[IconTokens.HideKeyboard]: HideKeyboard,
+	[IconTokens.NorthEastArrow]: NorthEastArrow,
 };
