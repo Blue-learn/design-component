@@ -143,6 +143,7 @@ import Text from './icon-list/Text';
 import Minus from './icon-list/Minus';
 import Previous from './icon-list/Previous';
 import POWOutline from './icon-list/POWOutline';
+import HideKeyboard from './icon-list/HideKeyboard';
 
 export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Chat]: Chat,
@@ -291,4 +292,5 @@ export const iconTokensMap: IconTypeTokensMap = {
 	[IconTokens.Minus]: Minus,
 	[IconTokens.Previous]: Previous,
 	[IconTokens.POWOutline]: POWOutline,
+	[IconTokens.HideKeyboard]: HideKeyboard,
 };

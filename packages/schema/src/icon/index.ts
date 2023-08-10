@@ -161,6 +161,7 @@ export enum IconTokens {
 	Poll = 'poll',
 	Text = 'text',
 	Previous = 'previous',
+	HideKeyboard = 'hide-keyboard',
 }
 
 export enum IconSizeTokens {
