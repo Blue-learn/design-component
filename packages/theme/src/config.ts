@@ -8,13 +8,11 @@ import {
 	InputTypeTokensMap,
 	ShadowTypeTokensMap,
 	ImageTypeTokensMap,
-	ChatCardTypeTokensMap,
 	TypographyTypeTokensMap,
 	ProgressIndicatorTypeTokensMap,
 	BorderRadiusTokensMap,
 	SizeTypeTokensMap,
 	DividerSizeTokensMap,
-	LottieSizeTokensMap,
 	AspectRatioTokensMap,
 	TagTypeTokensMap,
 	GradientColorTokensMap,
@@ -35,11 +33,9 @@ export type ThemeTokens = {
 	avatarSize: AvatarTypeTokensMap;
 	imageSize: ImageTypeTokensMap;
 	aspectRatio: AspectRatioTokensMap;
-	chatCard: ChatCardTypeTokensMap;
 	typography: TypographyTypeTokensMap;
 	progressIndicator: ProgressIndicatorTypeTokensMap;
 	dividerSize: DividerSizeTokensMap;
-	lottieSize: LottieSizeTokensMap;
 	tag: TagTypeTokensMap;
 	chip: ChipTypeTokensMap;
 };
