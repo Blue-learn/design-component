@@ -1,6 +1,6 @@
 {
 		"name": "@blue-learn/component",
-		"version": "0.0.71",
+		"version": "0.0.71-1",
 		"main": "lib/index.js",
 		"types": "lib/index.d.ts",
 		"repository": "ssh://git@github.com:Blue-learn/design-component.git",
@@ -36,7 +36,7 @@
 				"prop-types": "^15.8.1",
 				"react-native-fast-image": "^8.6.1",
 				"react-native-linear-gradient": "^2.5.6",
-				"react-native-svg": "^12.4.3",
+				"react-native-svg": "^14.1.0",
 				"react-native-svg-web": "^1.0.9",
 				"react-native-web-linear-gradient": "^1.1.2"
 		}
