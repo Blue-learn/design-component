@@ -1,6 +1,6 @@
 {
 		"name": "@blue-learn/component",
-		"version": "0.0.71-1",
+		"version": "0.0.72",
 		"main": "lib/index.js",
 		"types": "lib/index.d.ts",
 		"repository": "ssh://git@github.com:Blue-learn/design-component.git",
