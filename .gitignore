@@ -16,3 +16,6 @@ package-lock.json
 *.pem
 *.key
 .DS_Store
+
+# --- test tooling (added when setting up the Jest suite) ---
+/coverage/
