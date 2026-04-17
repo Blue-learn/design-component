@@ -8,3 +8,11 @@ yarn.lock
 package-lock.json
 .DS_Store
 /storybook-static/
+
+# --- environment / secrets (added by quality remediation) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
