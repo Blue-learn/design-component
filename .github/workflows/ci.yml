@@ -53,7 +53,7 @@ jobs:
         run: npm run --if-present typecheck
 
       - name: Test
-        run: npm run --if-present test
+        run: npm run --if-present test:coverage
 
       - name: Build
         run: npm run --if-present build
