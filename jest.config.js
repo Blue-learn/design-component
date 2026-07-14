@@ -94,6 +94,9 @@ module.exports = {
 	// statement maps for, even though the enums are exercised at runtime by
 	// packages/schema/src/__tests__/*.ts - a known instrumentation gap, not
 	// a signal that schema is untested.
+	// Coverage threshold, enforced in CI. The numbers track the suite's
+	// measured baseline: raise them as coverage improves, and treat a drop below
+	// the threshold as a regression to fix rather than a number to lower.
 	coverageThreshold: {
 		global: {
 			statements: 28,
