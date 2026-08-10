@@ -24,7 +24,7 @@
 				"publish": "npm publish --access public"
 		},
 		"devDependencies": {
-				"typescript": "^4.5.5"
+				"typescript": "^7.0.2"
 		},
 		"bugs": {
 				"url": "https://github.com/Blue-learn/design-component/issues"
