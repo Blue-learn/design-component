@@ -61,7 +61,7 @@
     "babel-plugin-react-native-web": "^0.17.5",
     "chokidar": "^3.5.3",
     "copy-webpack-plugin": "^6.4.1",
-    "eslint": "^9.39.5",
+    "eslint": "^10.8.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
