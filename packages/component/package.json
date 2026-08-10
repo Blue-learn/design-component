@@ -15,8 +15,8 @@
 		"devDependencies": {
 				"@blue-learn/schema": "^0.0.71",
 				"@blue-learn/theme": "^0.0.71",
-				"@types/react": "^17.0.38",
-				"react": "^17.0.2",
+				"@types/react": "^19.2.18",
+				"react": "^19.2.8",
 				"react-native": "^0.69.0",
 				"typescript": "^4.5.5"
 		},
